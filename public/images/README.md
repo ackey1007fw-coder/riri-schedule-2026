@@ -9,6 +9,15 @@ Main paths:
 - `riri-zine-01.jpg` through `riri-zine-04.jpg`
 - `showroom-card.jpg`
 
+Gallery paths:
+
+- `gallery/riri-01.jpg` through `gallery/riri-12.jpg`
+
+The current gallery can also display selected Google Drive photos directly.
+If you want to make the site fully independent later, download those selected
+photos and replace the Drive URLs in `src/data/photos.ts` with the local paths
+above.
+
 Event paths:
 
 - `event-yofukashi-campus.jpg`
