@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { LinksSection } from "./components/LinksSection";
 import { NextEvent } from "./components/NextEvent";
+import { PhotoGallerySection } from "./components/PhotoGallerySection";
 import { ProfileSection } from "./components/ProfileSection";
 import { ScheduleSection } from "./components/ScheduleSection";
 import { ShowroomSection } from "./components/ShowroomSection";
@@ -80,6 +81,7 @@ function App() {
           allEvents={events}
           monthKeys={monthKeys}
         />
+        <PhotoGallerySection />
         <BirthdayCountdown />
         <ShowroomSection />
         <ProfileSection />
