@@ -26,6 +26,7 @@ export function Photo({
           src={src}
           alt={alt}
           loading={loading}
+          referrerPolicy="no-referrer"
           className={`absolute inset-0 h-full w-full object-cover ${imageClassName}`}
           onError={() => setFailed(true)}
         />
