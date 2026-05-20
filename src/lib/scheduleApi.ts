@@ -1,6 +1,7 @@
 import { fallbackEvents } from "../data/fallbackEvents";
 import { fallbackMediaLinks, fallbackSocialLinks } from "../data/fallbackLinks";
 import type { EventCategory, EventLink, ScheduleEvent, SocialLink } from "../types";
+import { resolveEventImage } from "./eventImages";
 import type {
   ScheduleApiEvent,
   ScheduleApiLink,
@@ -95,7 +96,7 @@ function normalizeEvent(event: ScheduleApiEvent): ScheduleEvent | null {
     endAt: event.endAt || event.startAt,
     displayDate: event.displayDate || event.startAt,
     venue: event.venue || event.location || undefined,
-    image: event.image || "/images/event-placeholder.jpg",
+    image: resolveEventImage(event.id, event.image, category),
     summary: event.summary || event.description || "",
     badges: event.badges ?? [],
     links,
