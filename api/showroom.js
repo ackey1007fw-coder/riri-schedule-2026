@@ -10,31 +10,30 @@ const decodeHtml = (value = "") =>
     .replace(/&nbsp;/g, " ")
     .trim();
 
-const readValueAfterLabel = (textItems, label) => {
-  const index = textItems.findIndex((item) => item === label);
-  if (index === -1) {
-    return undefined;
-  }
+const cleanText = (html) =>
+  decodeHtml(
+    html
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, "\n")
+  )
+    .split("\n")
+    .map((item) => item.replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .join("\n");
 
-  return textItems.slice(index + 1).find((item) => item && item !== "-");
-};
+const matchText = (text, pattern) => text.match(pattern)?.[1]?.trim();
 
 const parseShowroomProfile = (html) => {
-  const textItems = html
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, "\n")
-    .split("\n")
-    .map((item) => decodeHtml(item).replace(/\s+/g, " "))
-    .filter(Boolean);
+  const text = cleanText(html);
 
   return {
-    roomName: readValueAfterLabel(textItems, "Room") || "夏凪里季",
-    followers: readValueAfterLabel(textItems, "Follower"),
-    roomLevel: readValueAfterLabel(textItems, "Room Level"),
-    showRank: readValueAfterLabel(textItems, "SHOW rank"),
-    category: readValueAfterLabel(textItems, "Category"),
-    nextShow: readValueAfterLabel(textItems, "Show"),
+    roomName: matchText(text, /##\s*([^\n]+)/) || "夏凪里季 #フレキャン2025",
+    followers: matchText(text, /([\d,]+)\s*Followers/i),
+    roomLevel: matchText(text, /Room Level\s*\n\s*([\d,]+)/i),
+    showRank: matchText(text, /SHOW rank\s*\n\s*([A-Z])/i),
+    category: matchText(text, /Category\s*\n\s*([^\n]+)/i),
+    nextShow: matchText(text, /Show\s*:\s*([^\n]+)/i),
     updatedAt: new Date().toISOString()
   };
 };
