@@ -30,6 +30,7 @@ export function AvatarGallery() {
               alt={avatar.name}
               className="aspect-square border border-rosefog/15"
               imageClassName="object-contain p-4"
+              loading="eager"
             />
             <div className="mt-3 flex min-h-10 items-center justify-between gap-2">
               <p className="text-sm font-bold leading-5 text-ink">{avatar.name}</p>
