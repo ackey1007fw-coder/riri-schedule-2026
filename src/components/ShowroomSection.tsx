@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from "react";
 import { Radio, Sparkles } from "lucide-react";
 import { profile } from "../data/profile";
 import { ExternalButton } from "./ExternalButton";
@@ -5,20 +6,76 @@ import { Photo } from "./Photo";
 import { SectionHeader } from "./SectionHeader";
 import { AvatarGallery } from "./AvatarGallery";
 
+type ShowroomApiData = {
+  followers?: string;
+  roomLevel?: string;
+  showRank?: string;
+  nextShow?: string;
+  updatedAt?: string;
+};
+
+const fallbackValue = (label: string) =>
+  profile.showroom.stats.find((stat) => stat.label === label)?.value ?? "-";
+
 export function ShowroomSection() {
+  const [showroomData, setShowroomData] = useState<ShowroomApiData | null>(null);
+
+  useEffect(() => {
+    let active = true;
+
+    fetch("/api/showroom")
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data: ShowroomApiData | null) => {
+        if (active && data) {
+          setShowroomData(data);
+        }
+      })
+      .catch(() => {
+        if (active) {
+          setShowroomData(null);
+        }
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const stats = useMemo(
+    () => [
+      {
+        label: "次回配信",
+        value: showroomData?.nextShow || fallbackValue("次回配信")
+      },
+      {
+        label: "フォロワー",
+        value: showroomData?.followers || fallbackValue("フォロワー")
+      },
+      {
+        label: "ルームLv",
+        value: showroomData?.roomLevel || fallbackValue("ルームLv")
+      },
+      {
+        label: "SHOWランク",
+        value: showroomData?.showRank || fallbackValue("SHOWランク")
+      }
+    ],
+    [showroomData]
+  );
+
   return (
     <section id="showroom" className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           kicker="SHOWROOM"
           title="ライブ配信で応援する"
-          copy="ルーム情報、配信の見どころ、アバターをひとつのエリアに整理しました。"
+          copy="ルーム情報、配信の見どころ、アバターをひとつのエリアに整理しました。公開されているSHOWROOM情報はできるだけ自動で反映します。"
         />
 
         <div className="mb-12 grid overflow-hidden border border-rosefog/25 bg-porcelain lg:grid-cols-[0.9fr_1.1fr]">
           <Photo
             src={profile.showroom.image}
-            alt="SHOWROOM card"
+            alt="夏凪里季 SHOWROOM"
             className="min-h-[320px] lg:min-h-[480px]"
           />
           <div className="p-6 sm:p-8 lg:p-10">
@@ -42,9 +99,11 @@ export function ShowroomSection() {
             </p>
 
             <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {profile.showroom.stats.map((stat) => (
+              {stats.map((stat) => (
                 <div key={stat.label} className="border border-white bg-white p-4">
-                  <p className="font-display text-3xl text-ink">{stat.value}</p>
+                  <p className="font-display text-2xl text-ink sm:text-3xl">
+                    {stat.value}
+                  </p>
                   <p className="mt-2 text-xs font-bold text-ink/55">{stat.label}</p>
                 </div>
               ))}
