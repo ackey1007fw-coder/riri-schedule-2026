@@ -1,5 +1,10 @@
+const showroomAsset = (url: string) =>
+  `/api/showroom-image?url=${encodeURIComponent(url)}`;
+
 const showroomAvatar = (id: string, version: string) =>
-  `https://image.showroom-cdn.com/showroom-prod/image/avatar/${id}.png?v=${version}`;
+  showroomAsset(
+    `https://image.showroom-cdn.com/showroom-prod/image/avatar/${id}.png?v=${version}`
+  );
 
 export const profile = {
   theme: "Riri Schedule 2026",
@@ -35,8 +40,9 @@ export const profile = {
   showroom: {
     roomName: "夏凪里季",
     tagline: "#フレキャン2025 | Entry No.306",
-    image:
-      "https://image.showroom-cdn.com/showroom-prod/image/room/cover/55d2ef24f81c0ade2fd985f3144696638393b41ef2d56b6e721de2ebcbdc94ea_l.jpeg?v=1749278230",
+    image: showroomAsset(
+      "https://image.showroom-cdn.com/showroom-prod/image/room/cover/55d2ef24f81c0ade2fd985f3144696638393b41ef2d56b6e721de2ebcbdc94ea_l.jpeg?v=1749278230"
+    ),
     url: "https://www.showroom-live.com/room/profile?room_id=550336",
     stats: [
       { label: "次回配信", value: "未定" },
