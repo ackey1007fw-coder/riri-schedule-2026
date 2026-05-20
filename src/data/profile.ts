@@ -1,3 +1,6 @@
+const showroomAvatar = (id: string, version: string) =>
+  `https://image.showroom-cdn.com/showroom-prod/image/avatar/${id}.png?v=${version}`;
+
 export const profile = {
   theme: "Riri Schedule 2026",
   name: "夏凪 里季",
@@ -32,10 +35,11 @@ export const profile = {
   showroom: {
     roomName: "夏凪里季",
     tagline: "#フレキャン2025 | Entry No.306",
-    image: "/images/showroom-card.jpg",
+    image:
+      "https://image.showroom-cdn.com/showroom-prod/image/room/cover/55d2ef24f81c0ade2fd985f3144696638393b41ef2d56b6e721de2ebcbdc94ea_l.jpeg?v=1749278230",
     url: "https://www.showroom-live.com/room/profile?room_id=550336",
     stats: [
-      { label: "まいにち配信", value: "362日目" },
+      { label: "次回配信", value: "SHOWROOMで確認" },
       { label: "フォロワー", value: "915" },
       { label: "ルームLv", value: "151" },
       { label: "SHOWランク", value: "B" }
@@ -44,16 +48,50 @@ export const profile = {
       "朝の配信やイベント前の近況をチェック。コメント、フォロー、ギフトで日々の活動を応援できます。"
   },
   avatars: [
-    { name: "おばけりりたん", image: "/images/avatar-obake-riritan.png" },
-    { name: "金ぐりり", image: "/images/avatar-kinguriri.png", featured: true },
-    { name: "ちびりり", image: "/images/avatar-chibiriri.png" },
-    { name: "とりり", image: "/images/avatar-toriri.png" },
-    { name: "りりわん", image: "/images/avatar-ririwan.png" },
-    { name: "こうもりり", image: "/images/avatar-komoriri.png" },
-    { name: "ひまわりり", image: "/images/avatar-himawariri.png" },
-    { name: "なつりり", image: "/images/avatar-natsuriri.png" },
-    { name: "サーフィンサンサン", image: "/images/avatar-surfing.png" },
-    { name: "サンサン", image: "/images/avatar-sansan.png" },
-    { name: "しょきりり", image: "/images/avatar-shokiriri.png" }
+    {
+      name: "おばけりりたん",
+      image: showroomAvatar("1000244", "1738408017")
+    },
+    {
+      name: "金ぐりり",
+      image: showroomAvatar("1000090", "1725810395"),
+      featured: true
+    },
+    {
+      name: "ちびりり",
+      image: showroomAvatar("1000363", "1740022425")
+    },
+    {
+      name: "とりり",
+      image: showroomAvatar("1001254", "1741230010")
+    },
+    {
+      name: "りりわん",
+      image: showroomAvatar("1001493", "1741410070")
+    },
+    {
+      name: "こうもりり",
+      image: showroomAvatar("1001679", "1743654799")
+    },
+    {
+      name: "ひまわりり",
+      image: showroomAvatar("1003280", "1747962189")
+    },
+    {
+      name: "なつりり",
+      image: showroomAvatar("1003281", "1747962247")
+    },
+    {
+      name: "サーフィンサンサン",
+      image: showroomAvatar("1003282", "1747962336")
+    },
+    {
+      name: "サンサン",
+      image: showroomAvatar("1003283", "1747962380")
+    },
+    {
+      name: "しょきりり",
+      image: showroomAvatar("1004174", "1750928252")
+    }
   ]
 };
