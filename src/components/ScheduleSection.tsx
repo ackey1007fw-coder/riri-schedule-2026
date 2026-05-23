@@ -24,11 +24,11 @@ export function ScheduleSection({
         <SectionHeader
           kicker="Schedule"
           title="カードとカレンダーで見る出演予定"
-          copy="直近の応援先はカードで、日付の流れはカレンダーで。スマホでは縦に読み進めやすい順番にしています。"
+          copy="直近の応援先はカードで大きく、日付の流れはカレンダーで確認できます。スマホでも縦に読み進めやすい構成です。"
         />
 
         <div className="mb-12">
-          <div className="mb-5 flex items-end justify-between gap-4">
+          <div className="mb-5 flex items-end justify-between gap-4 border-b border-champagne/25 pb-4">
             <div>
               <p className="text-xs font-bold uppercase text-champagne">
                 Upcoming
@@ -51,7 +51,7 @@ export function ScheduleSection({
         </div>
 
         <div className="mb-12">
-          <div className="mb-5 flex items-end justify-between gap-4">
+          <div className="mb-5 flex items-end justify-between gap-4 border-b border-rosefog/25 pb-4">
             <div>
               <p className="text-xs font-bold uppercase text-champagne">Archive</p>
               <h3 className="mt-1 font-display text-3xl text-ink">
@@ -72,7 +72,7 @@ export function ScheduleSection({
         </div>
 
         <div>
-          <div className="mb-5 flex items-end justify-between gap-4">
+          <div className="mb-5 flex items-end justify-between gap-4 border-b border-champagne/25 pb-4">
             <div>
               <p className="text-xs font-bold uppercase text-champagne">Calendar</p>
               <h3 className="mt-1 font-display text-3xl text-ink">
