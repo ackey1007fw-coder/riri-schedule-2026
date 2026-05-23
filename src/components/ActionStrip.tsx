@@ -1,4 +1,4 @@
-import { ArrowDown, Images, Ticket, Video } from "lucide-react";
+import { ArrowDown, Images, Ticket } from "lucide-react";
 import type { ScheduleEvent, SocialLink } from "../types";
 
 type ActionStripProps = {
@@ -15,7 +15,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
   const items = [
     {
       label: "次の出演",
-      title: nextEvent?.shortTitle ?? "スケジュールを確認",
+      title: nextEvent?.shortTitle ?? "スケジュールを見る",
       copy: nextEvent?.displayDate ?? "新しい予定をカードとカレンダーで確認できます。",
       href: "#next",
       Icon: ArrowDown,
@@ -24,7 +24,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
     {
       label: "チケット予約",
       title: ticketLink?.label ?? "予約リンクを確認",
-      copy: "重要イベントは早めに席を押さえる導線を前面に出しています。",
+      copy: "重要イベントは、予約や詳細リンクへすぐ進めるようにしています。",
       href: ticketLink?.url ?? "#schedule",
       Icon: Ticket,
       external: Boolean(ticketLink)
@@ -32,24 +32,30 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
     {
       label: "SNSを見る",
       title: instagram?.handle ?? "更新をチェック",
-      copy: "写真、告知、配信のお知らせをまとめて追えます。",
+      copy: "写真、告知、配信のお知らせをまとめて追える入口です。",
       href: instagram?.url ?? "#links",
-      Icon: instagram ? Images : Video,
+      Icon: Images,
       external: Boolean(instagram)
     }
   ];
 
   return (
-    <section className="bg-white">
-      <div className="mx-auto grid max-w-7xl gap-px border-x border-rosefog/20 bg-rosefog/20 sm:grid-cols-3">
-        {items.map((item) => {
+    <section className="relative z-20 -mt-8 bg-transparent px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-px overflow-hidden border border-white/70 bg-rosefog/20 shadow-paper backdrop-blur sm:grid-cols-3">
+        {items.map((item, index) => {
           const content = (
             <>
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-champagne/50 bg-porcelain text-champagne">
+              <span
+                className={`flex h-12 w-12 shrink-0 items-center justify-center border ${
+                  index === 1
+                    ? "border-champagne bg-champagne text-white"
+                    : "border-champagne/45 bg-white text-champagne"
+                }`}
+              >
                 <item.Icon className="h-5 w-5" aria-hidden="true" />
               </span>
               <span className="min-w-0">
-                <span className="block text-xs font-bold uppercase text-champagne">
+                <span className="block text-xs font-black uppercase text-champagne">
                   {item.label}
                 </span>
                 <span className="mt-1 block font-display text-xl leading-tight text-ink">
@@ -68,7 +74,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-32 gap-4 bg-white p-5 transition hover:bg-porcelain"
+              className="flex min-h-36 gap-4 bg-white/92 p-5 transition hover:bg-white sm:min-h-40"
             >
               {content}
             </a>
@@ -76,7 +82,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
             <a
               key={item.label}
               href={item.href}
-              className="flex min-h-32 gap-4 bg-white p-5 transition hover:bg-porcelain"
+              className="flex min-h-36 gap-4 bg-white/92 p-5 transition hover:bg-white sm:min-h-40"
             >
               {content}
             </a>
