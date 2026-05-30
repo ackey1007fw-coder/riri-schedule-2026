@@ -33,10 +33,10 @@ export const profile = {
     { label: "性格", value: "ESFJ（領事官）" }
   ],
   gallery: [
-    driveImage("1MhtYW0KPCOf0E4NITJwUZGlSgj4k3JDQ"),
-    driveImage("1D9t__MTdyoBzSHyK9-gxTWetikuHYnZ7"),
-    driveImage("1tX415Tt5YTCCh9gjnzThVU9djIKP0t-1"),
-    driveImage("1eIuhuqSpiFrztLnHS9vT3zFXYV-d6vn8")
+    "/images/riri-zine-01.jpg",
+    "/images/riri-zine-02.jpg",
+    "/images/riri-zine-03.jpg",
+    "/images/riri-zine-04.jpg"
   ],
   showroom: {
     roomName: "夏凪里季",
@@ -46,11 +46,11 @@ export const profile = {
     ),
     url: "https://www.showroom-live.com/room/profile?room_id=550336",
     stats: [
-      { label: "まいにち配信", value: "359日目" },
+      { label: "まいにち配信", value: "377日目" },
       { label: "次回配信", value: "未定" },
-      { label: "フォロワー", value: "912" },
-      { label: "ルームLv", value: "150" },
-      { label: "SHOWランク", value: "B-5" }
+      { label: "フォロワー", value: "905" },
+      { label: "ルームLv", value: "157" },
+      { label: "SHOWランク", value: "B" }
     ],
     message:
       "朝の配信やイベント前の近況をチェック。コメント、フォロー、ギフトで日々の活動を応援できます。"
