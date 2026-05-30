@@ -9,64 +9,64 @@ const showroomAvatar = (id: string, version = "110") =>
 
 export const profile = {
   theme: "Riri Schedule 2026",
-  name: "å¤åª éå­£",
-  kana: "ãªã¤ãªã ãã",
+  name: "夏凪 里季",
+  kana: "なつなぎ りり",
   romaji: "Natsunagi Riri",
   fanScheduleLabel: "Fan Schedule",
-  catchCopy: "éææã®ããç¬é¡ã¨ã¾ã£ãããªè¡¨ç¾åã§ãæ¬¡ã®èå°ã¸ã",
+  catchCopy: "透明感のある笑顔とまっすぐな表現力で、次の舞台へ。",
   intro:
-    "åºæ¼äºå®ãéä¿¡ãSNSããã­ãã£ã¼ã«ãã²ã¨ã¤ã«ã¾ã¨ããå¿æ´ã¹ã±ã¸ã¥ã¼ã«ã§ãã",
+    "出演予定、配信、SNS、プロフィールをひとつにまとめた応援スケジュールです。",
   heroImage: driveImage("1-tnOZvazIjzWiOBCrzVdUhaY9mFXCkNp", "w2200"),
   portraitImage: driveImage("15cmlhmXNpJRzztleLn_Q_97ft1Gffr4j", "w1800"),
   birthday: "2006-06-24",
   birthdayMonthDay: "06-24",
-  birthdayLabel: "6æ24æ¥",
-  fanName: "ãã®ã¤ããµãã¼",
+  birthdayLabel: "6月24日",
+  fanName: "ナギイチサマー",
   facts: [
-    { label: "å¤§å­¦", value: "éå±±å­¦é¢å¤§å­¦ 2å¹´ç" },
-    { label: "åºèº«", value: "ä¸éççã¾ããç¥å¥å·çè²ã¡" },
-    { label: "èº«é·", value: "163cm" },
-    { label: "å¤¢", value: "ä¸çä¸­ã®äººã®å¿ãåããå½¹èã«ãªããã¨" },
-    { label: "é¨æ´»", value: "é¸ä¸é¨ï¼ãã¼ãã«ï¼ããã³ã¹é¨" },
-    { label: "è¶£å³", value: "æ°ç¬ãæ ç»éè³ãã¹ãã¼ãããèå­ä½ã" },
-    { label: "ç¹æ", value: "è¡¨æç­ãåãããã¨" },
-    { label: "æ§æ ¼", value: "ESFJï¼é äºå®ï¼" }
+    { label: "大学", value: "青山学院大学 2年生" },
+    { label: "出身", value: "三重県生まれ、神奈川県育ち" },
+    { label: "身長", value: "163cm" },
+    { label: "夢", value: "世界中の人の心を動かす役者になること" },
+    { label: "部活", value: "陸上部（ハードル）、ダンス部" },
+    { label: "趣味", value: "数独、映画鑑賞、スポーツ、お菓子作り" },
+    { label: "特技", value: "表情筋を動かすこと" },
+    { label: "性格", value: "ESFJ（領事官）" }
   ],
   gallery: [
-    "/images/riri-zine-01.jpg",
-    "/images/riri-zine-02.jpg",
-    "/images/riri-zine-03.jpg",
-    "/images/riri-zine-04.jpg"
+    driveImage("1MhtYW0KPCOf0E4NITJwUZGlSgj4k3JDQ"),
+    driveImage("1D9t__MTdyoBzSHyK9-gxTWetikuHYnZ7"),
+    driveImage("1tX415Tt5YTCCh9gjnzThVU9djIKP0t-1"),
+    driveImage("1eIuhuqSpiFrztLnHS9vT3zFXYV-d6vn8")
   ],
   showroom: {
-    roomName: "å¤åªéå­£",
-    tagline: "#ãã¬ã­ã£ã³2025 | Entry No.306",
+    roomName: "夏凪里季",
+    tagline: "#フレキャン2025 | Entry No.306",
     image: showroomAsset(
       "https://static.showroom-live.com/image/room/cover/79fff63b1c4bdbb2fa1bf0507b410abbc3ce07d36111ac3ff3867633fb0d3c80_s.jpeg?v=1779283160"
     ),
     url: "https://www.showroom-live.com/room/profile?room_id=550336",
     stats: [
-      { label: "ã¾ãã«ã¡éä¿¡", value: "377æ¥ç®" },
-      { label: "æ¬¡åéä¿¡", value: "æªå®" },
-      { label: "ãã©ã­ã¯ã¼", value: "905" },
-      { label: "ã«ã¼ã Lv", value: "157" },
-      { label: "SHOWã©ã³ã¯", value: "B" }
+      { label: "まいにち配信", value: "359日目" },
+      { label: "次回配信", value: "未定" },
+      { label: "フォロワー", value: "912" },
+      { label: "ルームLv", value: "150" },
+      { label: "SHOWランク", value: "B-5" }
     ],
     message:
-      "æã®éä¿¡ãã¤ãã³ãåã®è¿æ³ããã§ãã¯ãã³ã¡ã³ãããã©ã­ã¼ãã®ããã§æ¥ãã®æ´»åãå¿æ´ã§ãã¾ãã"
+      "朝の配信やイベント前の近況をチェック。コメント、フォロー、ギフトで日々の活動を応援できます。"
   },
   avatars: [
-    { name: "ããã¢ãã¿ã¼ 01", image: showroomAvatar("1141864"), featured: true },
-    { name: "ããã¢ãã¿ã¼ 02", image: showroomAvatar("1139413") },
-    { name: "ããã¢ãã¿ã¼ 03", image: showroomAvatar("1139155") },
-    { name: "ããã¢ãã¿ã¼ 04", image: showroomAvatar("1137154") },
-    { name: "ããã¢ãã¿ã¼ 05", image: showroomAvatar("1136628") },
-    { name: "ããã¢ãã¿ã¼ 06", image: showroomAvatar("1135709") },
-    { name: "ããã¢ãã¿ã¼ 07", image: showroomAvatar("1135202") },
-    { name: "ããã¢ãã¿ã¼ 08", image: showroomAvatar("1133559") },
-    { name: "ããã¢ãã¿ã¼ 09", image: showroomAvatar("1133436") },
-    { name: "ããã¢ãã¿ã¼ 10", image: showroomAvatar("1132347") },
-    { name: "ããã¢ãã¿ã¼ 11", image: showroomAvatar("1131522") },
-    { name: "ããã¢ãã¿ã¼ 12", image: showroomAvatar("1130485") }
+    { name: "おばけりりたん", image: showroomAvatar("1141864"), featured: true },
+    { name: "金ぐりり", image: showroomAvatar("1139413") },
+    { name: "ちびりり", image: showroomAvatar("1139155") },
+    { name: "とりり", image: showroomAvatar("1137154") },
+    { name: "りりわん", image: showroomAvatar("1136628") },
+    { name: "こうもりり", image: showroomAvatar("1135709") },
+    { name: "ひまわりり", image: showroomAvatar("1135202") },
+    { name: "なつりり", image: showroomAvatar("1133559") },
+    { name: "サーフィンサンサン", image: showroomAvatar("1133436") },
+    { name: "サンサン", image: showroomAvatar("1132347") },
+    { name: "しょきりり", image: showroomAvatar("1131522") },
+    { name: "カルアと里季", image: showroomAvatar("1130485") }
   ]
 };
