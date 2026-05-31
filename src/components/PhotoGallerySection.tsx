@@ -21,12 +21,12 @@ export function PhotoGallerySection() {
           <SectionHeader
             kicker="Photo Gallery"
             title="写真で見る Riri"
-            copy="大きな写真と小さなカットを組み合わせて、出演情報の合間にも表情や雰囲気を楽しめるギャラリーです。"
+            copy="舞台、配信、日々の一枚。大きな写真と小さなカットで、さまざまな表情を楽しめます。"
           />
           <div className="flex flex-col gap-3 border-y border-champagne/30 py-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3 text-sm font-bold text-ink/70">
               <Images className="h-5 w-5 text-champagne" aria-hidden="true" />
-              <span>Driveの写真から選んで差し替えできます</span>
+              <span>Riri Schedule Photo Selection</span>
             </div>
             <a
               href="#profile"
@@ -39,7 +39,7 @@ export function PhotoGallerySection() {
         </div>
 
         <div className="mt-8 grid gap-3 lg:grid-cols-[1.08fr_0.92fr]">
-          <article className="group relative min-h-[520px] overflow-hidden border border-champagne/40 bg-porcelain shadow-paper sm:min-h-[620px]">
+          <article className="group relative min-h-[440px] overflow-hidden border border-champagne/40 bg-porcelain shadow-paper sm:min-h-[620px]">
             <Photo
               src={featuredPhoto.src}
               alt={featuredPhoto.alt}
@@ -61,7 +61,7 @@ export function PhotoGallerySection() {
               <article
                 key={photo.src}
                 className={`group relative overflow-hidden border border-rosefog/20 bg-porcelain ${
-                  index === 1 || index === 6 ? "row-span-2 min-h-[260px]" : "min-h-[170px]"
+                  index === 1 || index === 4 ? "row-span-2 min-h-[260px]" : "min-h-[170px]"
                 }`}
               >
                 <Photo
