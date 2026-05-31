@@ -44,14 +44,14 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
         className="absolute inset-0 -z-20 h-full w-full"
         imageClassName="object-[62%_18%] sm:object-[68%_20%]"
       />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(255,250,252,0.98)_0%,rgba(255,250,252,0.9)_34%,rgba(255,250,252,0.45)_61%,rgba(255,250,252,0.08)_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-56 bg-[linear-gradient(180deg,rgba(255,250,252,0),#fffafc_82%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,250,252,0.05)_0%,rgba(255,250,252,0.2)_38%,rgba(255,250,252,0.96)_78%,#fffafc_100%)] sm:bg-[linear-gradient(90deg,rgba(255,250,252,0.98)_0%,rgba(255,250,252,0.9)_34%,rgba(255,250,252,0.45)_61%,rgba(255,250,252,0.08)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 hidden h-56 bg-[linear-gradient(180deg,rgba(255,250,252,0),#fffafc_82%)] sm:block" />
       <div className="absolute left-4 top-24 hidden h-[58svh] w-px bg-champagne/50 sm:block lg:left-8" />
       <p className="absolute left-6 top-24 hidden origin-left rotate-90 text-[11px] font-black uppercase tracking-[0.22em] text-champagne sm:block lg:left-10">
         Fan Schedule / Riri 2026
       </p>
 
-      <div className="mx-auto flex min-h-[94svh] max-w-7xl flex-col justify-end px-4 pb-8 pt-24 sm:px-6 lg:px-8">
+      <div className="mx-auto flex min-h-[94svh] max-w-7xl flex-col justify-end px-4 pb-6 pt-28 sm:px-6 sm:pb-8 sm:pt-24 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <div className="max-w-3xl pb-6">
             <p className="gold-kicker mb-5 inline-flex px-3 py-2 text-xs font-bold uppercase">
@@ -63,7 +63,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
             <p className="mt-4 font-display text-2xl text-ink/65 sm:text-3xl">
               {profile.romaji}
             </p>
-            <p className="mt-7 max-w-xl text-lg leading-9 text-ink/78 sm:text-xl">
+            <p className="mt-6 max-w-xl text-base leading-8 text-ink/78 sm:mt-7 sm:text-xl sm:leading-9">
               {profile.catchCopy}
             </p>
             <p className="mt-3 max-w-xl leading-8 text-ink/62">{profile.intro}</p>
