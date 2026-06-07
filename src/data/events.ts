@@ -5,24 +5,6 @@ const driveImage = (id: string) =>
 
 export const events: ScheduleEvent[] = [
   {
-    id: "showroom-dreamisland-2026-06-04",
-    title: "SHOWROOM「夢の国に遅びに行こう！テーマパークペアチケット＆駅中広告ポスター掃載権獲得イベント！」",
-    shortTitle: "夢の国イベント",
-    category: "event",
-    startAt: "2026-06-04T18:00:00+09:00",
-    endAt: "2026-06-10T21:59:00+09:00",
-    displayDate: "2026年6月4日（木）18:00～6月4日（木）21:59",
-    image: driveImage("1hg7CCMX-vtLQo1CajCz0rc8_FZCddz-W"),
-    summary: "SHOWROOMのイベントでランキング1位になると、夢のテーマパークへのペアチケットをプレゼント！お姉ちゃんと一緒に行けるよう、配信を見て全力で応援しよう。",
-    badges: ["SHOWROOM", "イベント", "6/4～6/10", "ランキング"],
-    links: [
-      { label: "イベントページ", url: "https://www.showroom-live.com/event/dreamisland6", kind: "stream" },
-      { label: "SHOWROOMへ", url: "https://www.showroom-live.com/room/profile?room_id=550336", kind: "stream" }
-    ],
-    isImportant: true
-  },
-
-  {
     id: "yofukashi-campus-2026-05-09",
     title: "みつきとななこの夜ふかしキャンパス vol.2 春の新学期わくわくSP",
     shortTitle: "夜ふかしキャンパス",
@@ -104,6 +86,32 @@ export const events: ScheduleEvent[] = [
         label: "KAIGYAC STAGE X",
         url: "https://x.com/kaigyacstage",
         kind: "sns"
+      }
+    ],
+    isImportant: true
+  },
+  {
+    id: "showroom-dreamisland-2026-06-04",
+    title: "SHOWROOM「夢の国に遊びに行こう！テーマパークペアチケット＆駅中広告ポスター掲載権獲得イベント！」",
+    shortTitle: "夢の国イベント",
+    category: "event",
+    startAt: "2026-06-04T18:00:00+09:00",
+    endAt: "2026-06-10T21:59:00+09:00",
+    displayDate: "2026年6月4日（木）18:00〜6月10日（水）21:59",
+    image: driveImage("1hg7CCMX-vtLQo1CajCz0rc8_FZCddz-W"),
+    summary:
+      "SHOWROOMのイベントでランキング1位になると夢のテーマパークへのペアチケットをプレゼント！6月10日まで配信を見て全力で応援しよう。",
+    badges: ["SHOWROOM", "開催中", "6/4〜6/10", "ランキング"],
+    links: [
+      {
+        label: "イベントページ",
+        url: "https://www.showroom-live.com/event/dreamisland6",
+        kind: "stream"
+      },
+      {
+        label: "SHOWROOMへ",
+        url: "https://www.showroom-live.com/room/profile?room_id=550336",
+        kind: "stream"
       }
     ],
     isImportant: true
