@@ -13,7 +13,7 @@ export const events: ScheduleEvent[] = [
     endAt: "2026-05-09T19:45:00+09:00",
     displayDate: "2026年5月9日（土）17:00から",
     venue: "WALLOP押上スタジオ",
-    image: driveImage("1A8rODe-N__YMWSjNEL5hNeT0U5gaT7Ka"),
+    image: driveImage("1z0veS6fXz4uDGKBA1yIgA5LwXy-76-Ts"),
     summary:
       "公開収録と特典会を予定。公開収録は17:00から18:00、特典会は18:15から19:45です。",
     badges: ["ラジオ", "公開収録", "特典会", "終了"],
@@ -39,7 +39,7 @@ export const events: ScheduleEvent[] = [
     endAt: "2026-05-17T20:30:00+09:00",
     displayDate: "2026年5月14日（木）から5月17日（日）",
     venue: "萬劇場（大塚）",
-    image: driveImage("1AzWL5zxhUWd2l4_Clk6SfR-eNsjwuRmg"),
+    image: driveImage("1mZ_vw0sGLn3ZVH0jZxkFsqrJv0JDzM6L"),
     summary:
       "初挑戦の舞台出演。5月16日はSpecial Live公演、5月17日は千秋楽。現地チケットと配信チケットがあります。",
     badges: ["舞台", "配信あり", "終了"],
@@ -71,7 +71,7 @@ export const events: ScheduleEvent[] = [
     endAt: "2026-06-02T21:00:00+09:00",
     displayDate: "2026年5月29日（金）から6月2日（火）",
     venue: "西荻窪 遊空間がざびぃ",
-    image: driveImage("1hPMNv9kiFKfBKgp7CLfjv7zJBtTOKCx_"),
+    image: driveImage("1n2lx06MSHGiWl01kAbp65IWHu8WgdRez"),
     summary:
       "音楽と演劇が合わさった公演。Asideとして出演予定。全8回公演、前売券は6,000円です。",
     badges: ["舞台", "全8回", "アイトキ", "終了"],
@@ -193,7 +193,7 @@ export const events: ScheduleEvent[] = [
     startAt: "2026-04-12T23:30:00+09:00",
     endAt: "2026-04-13T00:00:00+09:00",
     displayDate: "2026年4月12日（日）23:30から24:00",
-    image: driveImage("1YC7lBN-STmcpdGYX-Q7fBt1cBj1YUgGn"),
+    image: driveImage("1dFatJ0AvjJwil-hw_SFT_xE7O5-M7wIZ"),
     summary:
       "青学周辺のおすすめグルメなどを語ったラジオ出演回。声の魅力を楽しめる放送です。",
     badges: ["ラジオ", "放送済み", "radiko"],
