@@ -1,47 +1,20 @@
 export type GalleryPhoto = {
   src: string;
   alt: string;
-  label: string;
-  tone: "hero" | "portrait" | "stage" | "casual";
-  featured?: boolean;
 };
 
+// メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
-  {
-    src: "/images/event-theoridea.jpg",
-    alt: "舞台『テオリデア』の衣装姿の夏凪里季さん",
-    label: "Stage",
-    tone: "hero",
-    featured: true
-  },
-  {
-    src: "/images/riri-portrait.jpg",
-    alt: "愛犬カルアちゃんと寄り添う夏凪里季さん",
-    label: "Kalua",
-    tone: "portrait"
-  },
-  {
-    src: "/images/event-imacampus.jpg",
-    alt: "グルメを手に笑顔の夏凪里季さん",
-    label: "Gourmet",
-    tone: "casual"
-  },
-  {
-    src: "/images/riri-zine-01.jpg",
-    alt: "ピースサインで笑う夏凪里季さん",
-    label: "Smile",
-    tone: "portrait"
-  },
-  {
-    src: "/images/riri-zine-04.jpg",
-    alt: "舞台のカーテンコールで花束を持つ夏凪里季さん",
-    label: "Curtain",
-    tone: "stage"
-  },
-  {
-    src: "/images/event-fukurow.jpg",
-    alt: "おでかけ先でのスナップの夏凪里季さん",
-    label: "Style",
-    tone: "casual"
-  }
+  { src: "/images/gallery/g01.jpg", alt: "舞台『月シア別冊』ステージ上の夏凪里季さん" },
+  { src: "/images/gallery/g02.jpg", alt: "舞台『テオリデア』の衣装姿の夏凪里季さん" },
+  { src: "/images/gallery/g03.jpg", alt: "愛犬カルアちゃんと寄り添う夏凪里季さん" },
+  { src: "/images/gallery/g04.jpg", alt: "ケーキを手に笑顔の夏凪里季さん" },
+  { src: "/images/gallery/g05.jpg", alt: "おでかけ先でのポートレートの夏凪里季さん" },
+  { src: "/images/gallery/g06.jpg", alt: "舞台のカーテンコールで花束を持つ夏凪里季さん" },
+  { src: "/images/gallery/g07.jpg", alt: "ピースサインで笑う夏凪里季さん" },
+  { src: "/images/gallery/g08.jpg", alt: "舞台『月シア別冊』でのオフショットの夏凪里季さん" },
+  { src: "/images/gallery/g09.jpg", alt: "ピクニックでアイスを楽しむ夏凪里季さん" },
+  { src: "/images/gallery/g10.jpg", alt: "舞台衣装でのオフショットの夏凪里季さん" },
+  { src: "/images/gallery/g11.jpg", alt: "スイーツを前に笑顔の夏凪里季さん" },
+  { src: "/images/gallery/g12.jpg", alt: "ナチュラルなポートレートの夏凪里季さん" }
 ];

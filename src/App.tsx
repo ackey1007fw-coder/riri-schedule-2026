@@ -9,6 +9,7 @@ import { InterviewSection } from "./components/InterviewSection";
 import { LinksSection } from "./components/LinksSection";
 import { MobileActionDock } from "./components/MobileActionDock";
 import { NextEvent } from "./components/NextEvent";
+import { PhotoStrip } from "./components/PhotoStrip";
 import { PhotoGallerySection } from "./components/PhotoGallerySection";
 import { ProfileSection } from "./components/ProfileSection";
 import { ScheduleSection } from "./components/ScheduleSection";
@@ -80,6 +81,7 @@ function App() {
         <BirthdayBanner />
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
         <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
+        <PhotoStrip />
         <NextEvent event={nextEvent} />
         <ScheduleSection
           upcomingEvents={upcomingEvents}

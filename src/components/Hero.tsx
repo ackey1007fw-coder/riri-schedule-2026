@@ -42,7 +42,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
         alt={`${profile.name} hero`}
         loading="eager"
         className="absolute inset-0 -z-20 h-full w-full"
-        imageClassName="object-[62%_18%] sm:object-[68%_20%]"
+        imageClassName="object-[50%_18%] sm:object-[50%_22%]"
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,250,252,0.05)_0%,rgba(255,250,252,0.2)_38%,rgba(255,250,252,0.96)_78%,#fffafc_100%)] sm:bg-[linear-gradient(90deg,rgba(255,250,252,0.98)_0%,rgba(255,250,252,0.9)_34%,rgba(255,250,252,0.45)_61%,rgba(255,250,252,0.08)_100%)]" />
       <div className="absolute inset-x-0 bottom-0 -z-10 hidden h-56 bg-[linear-gradient(180deg,rgba(255,250,252,0),#fffafc_82%)] sm:block" />

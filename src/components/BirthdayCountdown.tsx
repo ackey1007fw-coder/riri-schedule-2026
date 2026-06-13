@@ -67,6 +67,7 @@ export function BirthdayCountdown() {
               className={`min-h-[190px] border border-white shadow-sm ${
                 index === 0 || index === 3 ? "sm:row-span-2 sm:min-h-[396px]" : ""
               }`}
+              imageClassName="object-top"
             />
           ))}
         </div>

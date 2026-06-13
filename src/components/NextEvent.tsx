@@ -36,7 +36,7 @@ export function NextEvent({ event }: NextEventProps) {
               src={event.image}
               alt={event.title}
               className="absolute inset-0 h-full w-full"
-              imageClassName="transition duration-700 hover:scale-[1.025]"
+              imageClassName="object-top transition duration-700 hover:scale-[1.025]"
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(49,42,46,0.02),rgba(49,42,46,0.52))]" />
             <div className="absolute left-4 top-4 border border-white/50 bg-white/18 px-3 py-2 text-xs font-black uppercase text-white backdrop-blur">

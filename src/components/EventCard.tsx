@@ -31,6 +31,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
         src={event.image}
         alt={event.title}
         className={`${compact ? "h-44 sm:h-full" : "h-56 sm:h-full"} min-h-full`}
+        imageClassName="object-top"
       />
 
       <div className={`${compact ? "p-5" : "p-6"} flex flex-col`}>
