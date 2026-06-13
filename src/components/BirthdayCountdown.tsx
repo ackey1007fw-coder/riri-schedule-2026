@@ -64,7 +64,7 @@ export function BirthdayCountdown() {
               src={src}
               alt={`${profile.name} gallery ${index + 1}`}
               loading="lazy"
-              className="w-full border border-white shadow-sm"
+              className="h-auto w-full border border-white shadow-sm"
             />
           ))}
         </div>
