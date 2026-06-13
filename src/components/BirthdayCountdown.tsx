@@ -2,7 +2,6 @@ import { Gift, Heart } from "lucide-react";
 import { useEffect, useState } from "react";
 import { profile } from "../data/profile";
 import { getBirthdayCountdown } from "../lib/date";
-import { Photo } from "./Photo";
 import { SectionHeader } from "./SectionHeader";
 
 export function BirthdayCountdown() {
@@ -58,16 +57,14 @@ export function BirthdayCountdown() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:pt-16">
+        <div className="columns-2 gap-3 lg:pt-16 [&>img]:mb-3 [&>img]:break-inside-avoid">
           {profile.gallery.map((src, index) => (
-            <Photo
+            <img
               key={src}
               src={src}
               alt={`${profile.name} gallery ${index + 1}`}
-              className={`min-h-[190px] border border-white shadow-sm ${
-                index === 0 || index === 3 ? "sm:row-span-2 sm:min-h-[396px]" : ""
-              }`}
-              imageClassName="object-top"
+              loading="lazy"
+              className="w-full border border-white shadow-sm"
             />
           ))}
         </div>

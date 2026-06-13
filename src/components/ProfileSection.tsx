@@ -1,6 +1,5 @@
 import { HeartHandshake, Star } from "lucide-react";
 import { profile } from "../data/profile";
-import { Photo } from "./Photo";
 import { SectionHeader } from "./SectionHeader";
 
 export function ProfileSection() {
@@ -26,11 +25,14 @@ export function ProfileSection() {
         </div>
 
         <div className="grid gap-5 lg:grid-cols-[0.88fr_1.12fr]">
-          <Photo
-            src={profile.portraitImage}
-            alt={`${profile.name} portrait`}
-            className="min-h-[420px] border border-white shadow-sm"
-          />
+          <div className="relative border border-white bg-porcelain shadow-sm lg:min-h-[420px]">
+            <img
+              src={profile.portraitImage}
+              alt={`${profile.name} portrait`}
+              loading="lazy"
+              className="block w-full object-cover object-top lg:absolute lg:inset-0 lg:h-full"
+            />
+          </div>
           <div className="grid gap-3">
             {profile.facts.map((fact) => (
               <div key={fact.label} className="grid grid-cols-[88px_1fr] border border-rosefog/20 bg-white">
