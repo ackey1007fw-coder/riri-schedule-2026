@@ -1,8 +1,5 @@
 import type { ScheduleEvent } from "../types";
 
-const driveImage = (id: string) =>
-  `https://drive.google.com/thumbnail?id=${id}&sz=w1600`;
-
 export const events: ScheduleEvent[] = [
   {
     id: "yofukashi-campus-2026-05-09",
@@ -13,9 +10,9 @@ export const events: ScheduleEvent[] = [
     endAt: "2026-05-09T19:45:00+09:00",
     displayDate: "2026年5月9日（土）17:00から",
     venue: "WALLOP押上スタジオ",
-    image: driveImage("1z0veS6fXz4uDGKBA1yIgA5LwXy-76-Ts"),
+    image: "/images/event-yofukashi.jpg",
     summary:
-      "公開収録と特典会を予定。公開収録は17:00から18:00、特典会は18:15から19:45です。",
+      "WALLOP押上スタジオでの公開収録と特典会に出演。リスナーとの距離が近い、にぎやかな一夜になりました。",
     badges: ["ラジオ", "公開収録", "特典会", "終了"],
     links: [
       {
@@ -39,9 +36,9 @@ export const events: ScheduleEvent[] = [
     endAt: "2026-05-17T20:30:00+09:00",
     displayDate: "2026年5月14日（木）から5月17日（日）",
     venue: "萬劇場（大塚）",
-    image: driveImage("1mZ_vw0sGLn3ZVH0jZxkFsqrJv0JDzM6L"),
+    image: "/images/event-theoridea.jpg",
     summary:
-      "初挑戦の舞台出演。5月16日はSpecial Live公演、5月17日は千秋楽。現地チケットと配信チケットがあります。",
+      "初挑戦となった舞台『ギリシャ神話戦記テオリデア』。青い衣装をまとい、アトランティスを巡る物語を全力で演じ切りました。",
     badges: ["舞台", "配信あり", "終了"],
     links: [
       {
@@ -71,9 +68,9 @@ export const events: ScheduleEvent[] = [
     endAt: "2026-06-02T21:00:00+09:00",
     displayDate: "2026年5月29日（金）から6月2日（火）",
     venue: "西荻窪 遊空間がざびぃ",
-    image: driveImage("1n2lx06MSHGiWl01kAbp65IWHu8WgdRez"),
+    image: "/images/event-aitoki.jpg",
     summary:
-      "音楽と演劇が合わさった公演。Asideとして出演予定。全8回公演、前売券は6,000円です。",
+      "音楽と演劇が溶け合う公演にAsideとして出演。歌と芝居の両方で魅せた、全8回の濃密なステージでした。",
     badges: ["舞台", "全8回", "アイトキ", "終了"],
     links: [
       {
@@ -97,7 +94,7 @@ export const events: ScheduleEvent[] = [
     startAt: "2026-06-04T18:00:00+09:00",
     endAt: "2026-06-10T21:59:00+09:00",
     displayDate: "2026年6月4日（木）18:00〜6月10日（水）21:59",
-    image: driveImage("1R8gptDr0DxZ71Ncuw8koDmgKo-lDjoYi"),
+    image: "/images/event-yumenokuni.jpg",
     summary:
       "SHOWROOMのランキングイベント。テーマパークのペアチケットと駅中広告ポスター掲載権をかけて開催されました。たくさんの応援をありがとうございました。",
     badges: ["SHOWROOM", "6/4〜6/10", "ランキング", "終了"],
@@ -122,9 +119,9 @@ export const events: ScheduleEvent[] = [
     startAt: "2026-06-24T00:00:00+09:00",
     endAt: "2026-06-24T23:59:59+09:00",
     displayDate: "2026年6月24日（水）",
-    image: driveImage("1CIpjLx59X7Rj3atjiqIT1Pqv44ojE3l4"),
+    image: "/images/event-birthday.jpg",
     summary:
-      "SNSやSHOWROOMでお祝いの気持ちを届けたい日。カウントダウンと一緒に準備できます。",
+      "りりちゃんがハタチを迎える特別な日。SNSやSHOWROOMで、お祝いの気持ちを一緒に届けましょう。",
     badges: ["特別", "Birthday"],
     links: [
       {
@@ -148,9 +145,9 @@ export const events: ScheduleEvent[] = [
     endAt: "2026-04-21T21:00:00+09:00",
     displayDate: "2026年4月21日（火）",
     venue: "曙橋スタジオ",
-    image: driveImage("1uaNFIH1HkefOjn06tXwSJZvq8eIGjLBA"),
+    image: "/images/event-fukurow.jpg",
     summary:
-      "公開収録、チェキ会、特典会に出演。アーカイブがある場合は遠方からもチェックできます。",
+      "ふくろうFMの番組公開収録に出演。チェキ会・特典会もあり、ファンと直接ふれあえる時間になりました。",
     badges: ["ラジオ", "公開収録", "特典会", "アーカイブ"],
     links: [
       {
@@ -173,9 +170,9 @@ export const events: ScheduleEvent[] = [
     startAt: "2026-04-16T12:00:00+09:00",
     endAt: "2026-04-16T13:30:00+09:00",
     displayDate: "2026年4月16日（木）12:00から13:30",
-    image: driveImage("1Ld4snjp67PdiNIrN_jDCxjQ-leTV7yMx"),
+    image: "/images/event-tvk.jpg",
     summary:
-      "SHOWROOMイベントの特典として生放送テレビ出演。お天気コーナーに登場しました。",
+      "SHOWROOMイベントの特典として実現した生放送テレビ出演。お天気コーナーに元気いっぱい登場しました。",
     badges: ["テレビ", "生放送", "お天気"],
     links: [
       {
@@ -193,9 +190,9 @@ export const events: ScheduleEvent[] = [
     startAt: "2026-04-12T23:30:00+09:00",
     endAt: "2026-04-13T00:00:00+09:00",
     displayDate: "2026年4月12日（日）23:30から24:00",
-    image: driveImage("1dFatJ0AvjJwil-hw_SFT_xE7O5-M7wIZ"),
+    image: "/images/event-imacampus.jpg",
     summary:
-      "青学周辺のおすすめグルメなどを語ったラジオ出演回。声の魅力を楽しめる放送です。",
+      "青山学院大学の周辺グルメなどを語ったMBSラジオ出演回。トークと弾ける笑顔、声の魅力をたっぷり楽しめます。",
     badges: ["ラジオ", "放送済み", "radiko"],
     links: [
       {
@@ -213,7 +210,7 @@ export const events: ScheduleEvent[] = [
     startAt: "2026-04-08T10:00:00+09:00",
     endAt: "2026-04-08T23:59:59+09:00",
     displayDate: "2026年4月8日（水）",
-    image: driveImage("1Amj4Ddj1QaQpv2IXO9qw2vHwS0wMXwGv"),
+    image: "/images/event-steenz.jpg",
     summary:
       "コンテストでの受賞や、青山学院大学生としての素顔、役者を目指す想いが読めるインタビュー記事です。",
     badges: ["WEB", "インタビュー", "公開中"],
@@ -234,7 +231,7 @@ export const events: ScheduleEvent[] = [
     endAt: "2026-03-14T16:00:00+09:00",
     displayDate: "2026年3月14日（土）11:00から16:00",
     venue: "東京都立川市 屋外施設",
-    image: driveImage("1D9t__MTdyoBzSHyK9-gxTWetikuHYnZ7"),
+    image: "/images/event-kyanly.jpg",
     summary:
       "スポーツデーとチェキ撮影会に出演。ランウェイ姿はKYANLYの動画でもチェックできます。",
     badges: ["イベント", "運動会", "チェキ会"],

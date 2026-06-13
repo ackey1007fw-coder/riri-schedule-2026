@@ -1,9 +1,6 @@
 const showroomAsset = (url: string) =>
   `/api/showroom-image?url=${encodeURIComponent(url)}`;
 
-const driveImage = (id: string, size = "w1600") =>
-  `https://drive.google.com/thumbnail?id=${id}&sz=${size}`;
-
 const showroomAvatar = (id: string, version = "110") =>
   showroomAsset(`https://static.showroom-live.com/image/avatar/${id}.png?v=${version}`);
 
@@ -16,8 +13,8 @@ export const profile = {
   catchCopy: "透明感のある笑顔とまっすぐな表現力で、次の舞台へ。",
   intro:
     "出演予定、配信、SNS、プロフィールをひとつにまとめた応援スケジュールです。",
-  heroImage: driveImage("1-tnOZvazIjzWiOBCrzVdUhaY9mFXCkNp", "w2200"),
-  portraitImage: driveImage("15cmlhmXNpJRzztleLn_Q_97ft1Gffr4j", "w1800"),
+  heroImage: "/images/riri-hero.jpg",
+  portraitImage: "/images/riri-portrait.jpg",
   birthday: "2006-06-24",
   birthdayMonthDay: "06-24",
   birthdayLabel: "6月24日",

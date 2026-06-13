@@ -6,45 +6,42 @@ export type GalleryPhoto = {
   featured?: boolean;
 };
 
-const driveImage = (id: string) =>
-  `https://drive.google.com/thumbnail?id=${id}&sz=w1600`;
-
 export const galleryPhotos: GalleryPhoto[] = [
   {
-    src: driveImage("1AzWL5zxhUWd2l4_Clk6SfR-eNsjwuRmg"),
-    alt: "夏凪里季さんのギャラリー写真",
-    label: "Cover",
+    src: "/images/event-theoridea.jpg",
+    alt: "舞台『テオリデア』の衣装姿の夏凪里季さん",
+    label: "Stage",
     tone: "hero",
     featured: true
   },
   {
-    src: driveImage("1hPMNv9kiFKfBKgp7CLfjv7zJBtTOKCx_"),
-    alt: "夏凪里季さんの笑顔の写真",
-    label: "Portrait",
+    src: "/images/riri-portrait.jpg",
+    alt: "愛犬カルアちゃんと寄り添う夏凪里季さん",
+    label: "Kalua",
     tone: "portrait"
   },
   {
-    src: driveImage("1rUFypXYABEcyRUaxhie6o_jaNBTAWR16"),
-    alt: "夏凪里季さんの舞台写真",
-    label: "Moment",
+    src: "/images/event-imacampus.jpg",
+    alt: "グルメを手に笑顔の夏凪里季さん",
+    label: "Gourmet",
     tone: "casual"
   },
   {
-    src: driveImage("1uaNFIH1HkefOjn06tXwSJZvq8eIGjLBA"),
-    alt: "夏凪里季さんのポートレート",
-    label: "Scene",
-    tone: "stage"
-  },
-  {
-    src: driveImage("1R8gptDr0DxZ71Ncuw8koDmgKo-lDjoYi"),
-    alt: "夏凪里季さんの日常の写真",
-    label: "Style",
+    src: "/images/riri-zine-01.jpg",
+    alt: "ピースサインで笑う夏凪里季さん",
+    label: "Smile",
     tone: "portrait"
   },
   {
-    src: driveImage("1FM8cYikXk6Z2TtAoHCpBkq_XOT_AmqbS"),
-    alt: "夏凪里季さんの自然な表情の写真",
-    label: "Smile",
+    src: "/images/riri-zine-04.jpg",
+    alt: "舞台のカーテンコールで花束を持つ夏凪里季さん",
+    label: "Curtain",
+    tone: "stage"
+  },
+  {
+    src: "/images/event-fukurow.jpg",
+    alt: "おでかけ先でのスナップの夏凪里季さん",
+    label: "Style",
     tone: "casual"
   }
 ];
