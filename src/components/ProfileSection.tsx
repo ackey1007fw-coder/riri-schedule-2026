@@ -30,7 +30,7 @@ export function ProfileSection() {
               src={profile.portraitImage}
               alt={`${profile.name} portrait`}
               loading="lazy"
-              className="block w-full object-cover object-top lg:absolute lg:inset-0 lg:h-full"
+              className="block h-auto w-full object-contain lg:absolute lg:inset-0 lg:h-full lg:object-cover lg:object-top"
             />
           </div>
           <div className="grid gap-3">
