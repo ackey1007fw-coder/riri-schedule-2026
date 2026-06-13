@@ -47,11 +47,11 @@ export const profile = {
     ),
     url: "https://www.showroom-live.com/room/profile?room_id=550336",
     stats: [
-      { label: "まいにち配信", value: "377日目" },
+      { label: "まいにち配信", value: "400日目" },
       { label: "次回配信", value: "未定" },
-      { label: "フォロワー", value: "905" },
-      { label: "ルームLv", value: "157" },
-      { label: "SHOWランク", value: "B" }
+      { label: "フォロワー", value: "933" },
+      { label: "ルームLv", value: "174" },
+      { label: "SHOWランク", value: "C" }
     ],
     message:
       "朝の配信やイベント前の近況をチェック。コメント、フォロー、ギフトで日々の活動を応援できます。"

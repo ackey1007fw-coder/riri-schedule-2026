@@ -25,7 +25,7 @@ async function fromHtml() {
   return {followerCount:g(/follower_num["\s:>]+(\d+)/i),roomLevel:g(/room_level["\s:>]+(\d+)/i),showRank:g(/league_name["\s:>"']+([ A-Z][-\d]*)/i),streakDays:g(/live_continuous_days["\s:]+(\d+)/i),source:'html'};
 }
 
-module.exports=async(req,res)=>{
+export default async function handler(req,res){
   res.setHeader('Access-Control-Allow-Origin','*');
   res.setHeader('Cache-Control','s-maxage=300,stale-while-revalidate=600');
   if(req.method==='OPTIONS') return res.status(200).end();
