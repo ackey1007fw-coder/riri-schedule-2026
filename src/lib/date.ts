@@ -71,26 +71,35 @@ export type CountdownParts = {
   hours: number;
   minutes: number;
   seconds: number;
+  targetYear: number;
   targetLabel: string;
   isBirthdayToday: boolean;
+  /** その誕生日で迎える年齢（birthYear 指定時のみ算出） */
+  turningAge?: number;
 };
 
 export const getBirthdayCountdown = (
   monthDay: string,
   now = new Date(),
+  birthYear?: number,
 ): CountdownParts => {
   const [month, day] = monthDay.split("-").map(Number);
   const isBirthdayToday =
     now.getMonth() + 1 === month && now.getDate() === day;
+  const ageAt = (year: number) =>
+    birthYear === undefined ? undefined : year - birthYear;
 
   if (isBirthdayToday) {
+    const targetYear = now.getFullYear();
     return {
       days: 0,
       hours: 0,
       minutes: 0,
       seconds: 0,
-      targetLabel: `${now.getFullYear()}年${month}月${day}日`,
-      isBirthdayToday: true
+      targetYear,
+      targetLabel: `${targetYear}年${month}月${day}日`,
+      isBirthdayToday: true,
+      turningAge: ageAt(targetYear)
     };
   }
 
@@ -106,13 +115,16 @@ export const getBirthdayCountdown = (
   const hours = Math.floor((secondsTotal % 86400) / 3600);
   const minutes = Math.floor((secondsTotal % 3600) / 60);
   const seconds = secondsTotal % 60;
+  const targetYear = target.getFullYear();
 
   return {
     days,
     hours,
     minutes,
     seconds,
-    targetLabel: `${target.getFullYear()}年${month}月${day}日`,
-    isBirthdayToday: false
+    targetYear,
+    targetLabel: `${targetYear}年${month}月${day}日`,
+    isBirthdayToday: false,
+    turningAge: ageAt(targetYear)
   };
 };

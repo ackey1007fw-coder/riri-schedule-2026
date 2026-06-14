@@ -4,18 +4,29 @@ import { profile } from "../data/profile";
 import { getBirthdayCountdown } from "../lib/date";
 import { SectionHeader } from "./SectionHeader";
 
+const birthYear = Number(profile.birthday.slice(0, 4));
+
 export function BirthdayCountdown() {
   const [countdown, setCountdown] = useState(() =>
-    getBirthdayCountdown(profile.birthdayMonthDay),
+    getBirthdayCountdown(profile.birthdayMonthDay, new Date(), birthYear),
   );
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setCountdown(getBirthdayCountdown(profile.birthdayMonthDay));
+      setCountdown(
+        getBirthdayCountdown(profile.birthdayMonthDay, new Date(), birthYear),
+      );
     }, 1000);
 
     return () => window.clearInterval(timer);
   }, []);
+
+  const ageLabel =
+    countdown.turningAge === undefined
+      ? ""
+      : countdown.turningAge === 20
+        ? "20歳（ハタチ）"
+        : `${countdown.turningAge}歳`;
 
   const values = [
     { label: "日", value: countdown.days },
@@ -31,12 +42,17 @@ export function BirthdayCountdown() {
           <SectionHeader
             kicker="Birthday Countdown"
             title="お誕生日までのカウントダウン"
-            copy={`${profile.birthdayLabel}に向けて、SNS投稿やSHOWROOMでのお祝い準備を見える場所に。`}
+            copy={`${profile.birthdayLabel}${
+              ageLabel ? `・${ageLabel}の記念日` : ""
+            }に向けて、SNS投稿やSHOWROOMでのお祝い準備を見える場所に。`}
           />
           <div className="border border-champagne/40 bg-white p-5 shadow-paper sm:p-6">
             <div className="mb-5 flex items-center gap-3 text-champagne">
               <Gift className="h-5 w-5" aria-hidden="true" />
-              <p className="text-sm font-bold">{countdown.targetLabel}</p>
+              <p className="text-sm font-bold">
+                {countdown.targetLabel}
+                {ageLabel ? `・${ageLabel}` : ""}
+              </p>
             </div>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
               {values.map((item) => (

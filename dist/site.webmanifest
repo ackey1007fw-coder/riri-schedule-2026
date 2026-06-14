@@ -1,0 +1,18 @@
+{
+  "name": "Riri Schedule 2026",
+  "short_name": "Riri Schedule",
+  "description": "夏凪里季さんの出演情報、SHOWROOM、SNSリンクをまとめた応援スケジュールです。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fffafc",
+  "theme_color": "#fffafc",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

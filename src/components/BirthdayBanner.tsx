@@ -6,14 +6,18 @@ import { getBirthdayCountdown } from "../lib/date";
 // 誕生日のこの日数以内になったらトップにバナーを表示する
 const SHOW_WITHIN_DAYS = 31;
 
+const birthYear = Number(profile.birthday.slice(0, 4));
+
 export function BirthdayBanner() {
   const [countdown, setCountdown] = useState(() =>
-    getBirthdayCountdown(profile.birthdayMonthDay),
+    getBirthdayCountdown(profile.birthdayMonthDay, new Date(), birthYear),
   );
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setCountdown(getBirthdayCountdown(profile.birthdayMonthDay));
+      setCountdown(
+        getBirthdayCountdown(profile.birthdayMonthDay, new Date(), birthYear),
+      );
     }, 1000);
 
     return () => window.clearInterval(timer);
@@ -21,6 +25,13 @@ export function BirthdayBanner() {
 
   const isUpcoming =
     countdown.isBirthdayToday || countdown.days <= SHOW_WITHIN_DAYS;
+
+  const ageLabel =
+    countdown.turningAge === undefined
+      ? ""
+      : countdown.turningAge === 20
+        ? "20歳（ハタチ）"
+        : `${countdown.turningAge}歳`;
 
   if (!isUpcoming) {
     return null;
@@ -53,8 +64,12 @@ export function BirthdayBanner() {
             </span>
             <span className="block font-display text-lg leading-tight sm:text-xl">
               {countdown.isBirthdayToday
-                ? `Happy Birthday！${profile.birthdayLabel}🎉`
-                : `${profile.birthdayLabel}まであと ${countdown.days} 日`}
+                ? `Happy Birthday！${profile.birthdayLabel}${
+                    ageLabel ? `・${ageLabel}` : ""
+                  }🎉`
+                : `${profile.birthdayLabel}${
+                    ageLabel ? `・${ageLabel}` : ""
+                  }まであと ${countdown.days} 日`}
             </span>
           </span>
         </div>
