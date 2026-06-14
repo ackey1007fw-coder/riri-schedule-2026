@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { Radio, Sparkles } from "lucide-react";
 import { profile } from "../data/profile";
 import { ExternalButton } from "./ExternalButton";
-import { Photo } from "./Photo";
 import { SectionHeader } from "./SectionHeader";
 import { AvatarGallery } from "./AvatarGallery";
 
@@ -50,7 +49,14 @@ export function ShowroomSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader kicker="SHOWROOM" title="ライブ配信で応援する" copy="ルーム情報、配信の見どころ、アバターをひとつのエリアに整理しました。公開されているSHOWROOM情報はできるだけ自動で反映します。" />
         <div className="mb-12 grid overflow-hidden border border-rosefog/25 bg-porcelain lg:grid-cols-[0.9fr_1.1fr]">
-          <Photo src={profile.showroom.image} alt="夏凪里季 SHOWROOM" className="min-h-[320px] lg:min-h-[480px]" loading="eager" />
+          <div className="relative bg-porcelain lg:min-h-[480px]">
+            <img
+              src={profile.showroom.image}
+              alt="夏凪里季 SHOWROOM"
+              loading="eager"
+              className="block w-full object-cover lg:absolute lg:inset-0 lg:h-full"
+            />
+          </div>
           <div className="p-6 sm:p-8 lg:p-10">
             <div className="mb-6 flex items-center gap-3 text-champagne">
               <span className="grid h-11 w-11 place-items-center border border-champagne/50 bg-white"><Radio className="h-5 w-5" aria-hidden="true" /></span>

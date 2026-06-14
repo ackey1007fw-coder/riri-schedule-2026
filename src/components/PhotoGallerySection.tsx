@@ -15,7 +15,7 @@ export function PhotoGallerySection() {
           <div className="flex flex-col gap-3 border-y border-champagne/30 py-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3 text-sm font-bold text-ink/70">
               <Images className="h-5 w-5 text-champagne" aria-hidden="true" />
-              <span>Riri Schedule Photo Selection</span>
+              <span>Photo Selection（{galleryPhotos.length}枚）</span>
             </div>
             <a
               href="#profile"
@@ -27,7 +27,7 @@ export function PhotoGallerySection() {
           </div>
         </div>
 
-        <div className="mt-10 columns-2 gap-3 sm:columns-3 lg:columns-4 [&>figure]:mb-3 [&>figure]:break-inside-avoid">
+        <div className="mt-10 columns-2 gap-4 sm:columns-3 lg:columns-4 [&>figure]:mb-4 [&>figure]:break-inside-avoid">
           {galleryPhotos.map((photo) => (
             <figure
               key={photo.src}

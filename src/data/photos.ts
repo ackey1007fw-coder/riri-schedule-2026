@@ -16,5 +16,13 @@ export const galleryPhotos: GalleryPhoto[] = [
   { src: "/images/gallery/g09.jpg", alt: "ピクニックでアイスを楽しむ夏凪里季さん" },
   { src: "/images/gallery/g10.jpg", alt: "舞台衣装でのオフショットの夏凪里季さん" },
   { src: "/images/gallery/g11.jpg", alt: "スイーツを前に笑顔の夏凪里季さん" },
-  { src: "/images/gallery/g12.jpg", alt: "ナチュラルなポートレートの夏凪里季さん" }
+  { src: "/images/gallery/g12.jpg", alt: "ナチュラルなポートレートの夏凪里季さん" },
+  { src: "/images/gallery/g13.jpg", alt: "やわらかな表情のポートレートの夏凪里季さん" },
+  { src: "/images/gallery/g14.jpg", alt: "舞台『テオリデア』の衣装で笑う夏凪里季さん" },
+  { src: "/images/gallery/g15.jpg", alt: "愛犬カルアちゃんを抱っこする夏凪里季さん" },
+  { src: "/images/gallery/g16.jpg", alt: "舞台『月シア別冊』のキャストとの記念写真" },
+  { src: "/images/gallery/g17.jpg", alt: "パフェを手にした夏凪里季さん" },
+  { src: "/images/gallery/g18.jpg", alt: "舞台の楽屋でのオフショットの夏凪里季さん" },
+  { src: "/images/gallery/g19.jpg", alt: "シャツ姿でピースサインの夏凪里季さん" },
+  { src: "/images/gallery/g20.jpg", alt: "舞台『月シア別冊』キャストとのオフショット" }
 ];
