@@ -66,7 +66,7 @@ export const interviewLinks: SocialLink[] = [
   {
     label: "steenz",
     handle: "2026年4月8日",
-    url: "https://steenz.jp/19003/",
+    url: "https://steenz.jp/56146/",
     description: "安藤サクラに憧れて、役者への道を前進中。毎朝6時からのライブ配信「6時の女」として話題のインタビュー記事。",
     kind: "web"
   },
