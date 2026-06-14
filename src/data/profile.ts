@@ -54,17 +54,17 @@ export const profile = {
       "朝の配信やイベント前の近況をチェック。コメント、フォロー、ギフトで日々の活動を応援できます。"
   },
   avatars: [
-    { name: "おばけりりたん", image: showroomAvatar("1141864"), featured: true },
-    { name: "金ぐりり",       image: showroomAvatar("1139413") },
-    { name: "ちびりり",       image: showroomAvatar("1139155") },
-    { name: "とりり",         image: showroomAvatar("1137154") },
-    { name: "りりわん",       image: showroomAvatar("1136628") },
-    { name: "こうもりり",     image: showroomAvatar("1135709") },
-    { name: "ひまわりり",     image: showroomAvatar("1135202") },
-    { name: "なつりり",       image: showroomAvatar("1133559") },
-    { name: "サーフィンサンサン", image: showroomAvatar("1133436") },
-    { name: "サンサン",       image: showroomAvatar("1132347") },
-    { name: "しょきりり",     image: showroomAvatar("1131522") },
-    { name: "カルアと里季",   image: showroomAvatar("1130485") }
+    { name: "カルアと里季",   image: showroomAvatar("1141864"), featured: true },
+    { name: "おばけりりたん", image: showroomAvatar("1139413") },
+    { name: "金ぐりり",       image: showroomAvatar("1139155") },
+    { name: "ちびりり",       image: showroomAvatar("1137154") },
+    { name: "とりり",         image: showroomAvatar("1136628") },
+    { name: "りりわん",       image: showroomAvatar("1135709") },
+    { name: "こうもりり",     image: showroomAvatar("1135202") },
+    { name: "ひまわりり",     image: showroomAvatar("1133559") },
+    { name: "なつりり",       image: showroomAvatar("1133436") },
+    { name: "サーフィンサンサン", image: showroomAvatar("1132347") },
+    { name: "サンサン",       image: showroomAvatar("1131522") },
+    { name: "しょきりり",     image: showroomAvatar("1130485") }
   ]
 };
