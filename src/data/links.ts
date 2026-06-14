@@ -73,7 +73,7 @@ export const interviewLinks: SocialLink[] = [
   {
     label: "モデルプレス",
     handle: "2025年9月22日",
-    url: "https://mdpr.jp/news/detail/4475025",
+    url: "https://mdpr.jp/news/detail/4646978",
     description: "注目の日本一可愛い新入生候補。フレキャン2025エントリー時のインタビュー記事。",
     kind: "web"
   }
