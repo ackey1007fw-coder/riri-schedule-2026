@@ -10,6 +10,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
   const ticketLink =
     nextEvent?.links.find((link) => link.kind === "ticket") ??
     nextEvent?.links[0];
+  const hasTicket = ticketLink?.kind === "ticket";
   const instagram = socialLinks.find((link) => link.kind === "instagram");
 
   const items = [
@@ -22,7 +23,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
       external: false
     },
     {
-      label: "チケット予約",
+      label: hasTicket ? "チケット予約" : "関連リンク",
       title: ticketLink?.label ?? "予約リンクを確認",
       copy: "重要イベントは、予約や詳細リンクへすぐ進めるようにしています。",
       href: ticketLink?.url ?? "#schedule",

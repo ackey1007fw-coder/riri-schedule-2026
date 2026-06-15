@@ -72,7 +72,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
               <ExternalButton href={ticketLink.url} variant="gold" className="px-5">
                 <span className="inline-flex items-center gap-2">
                   <Ticket className="h-4 w-4" aria-hidden="true" />
-                  チケット予約
+                  {ticketLink.kind === "ticket" ? "チケット予約" : ticketLink.label}
                 </span>
               </ExternalButton>
             )}

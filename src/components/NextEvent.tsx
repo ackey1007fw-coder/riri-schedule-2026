@@ -11,7 +11,44 @@ type NextEventProps = {
 
 export function NextEvent({ event }: NextEventProps) {
   if (!event) {
-    return null;
+    return (
+      <section id="next" className="relative overflow-hidden bg-porcelain py-16 sm:py-24">
+        <div className="absolute inset-x-0 top-0 h-px bg-champagne/40" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            kicker="Next Appearance"
+            title="次に見るべき出演情報"
+            copy="ファンが最初に迷わないよう、直近の予定と予約導線を大きくまとめています。"
+          />
+          <article className="zine-panel border border-champagne/70 bg-white p-8 text-center sm:p-12">
+            <p className="inline-flex items-center gap-2 text-xs font-black uppercase text-champagne">
+              <Clock3 className="h-4 w-4" aria-hidden="true" />
+              Coming soon
+            </p>
+            <h3 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-4xl">
+              次の予定は調整中です
+            </h3>
+            <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-ink/70">
+              新しい出演やイベントが決まり次第ここに掲載します。最新の近況はSHOWROOMの配信やSNSでチェックできます。
+            </p>
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+              <a
+                href="#schedule"
+                className="inline-flex min-h-12 items-center justify-center border border-ink bg-ink px-5 py-3 text-sm font-bold text-white transition hover:bg-[#4a3942]"
+              >
+                これまでの予定を見る
+              </a>
+              <a
+                href="#showroom"
+                className="inline-flex min-h-12 items-center justify-center border border-rosefog/40 bg-porcelain px-5 py-3 text-sm font-bold text-ink transition hover:bg-white"
+              >
+                SHOWROOMで近況を見る
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    );
   }
 
   const meta = categoryMeta[event.category];

@@ -7534,6 +7534,7 @@ const Video = createLucideIcon("Video", [
 ]);
 function ActionStrip({ nextEvent, socialLinks: socialLinks2 }) {
   const ticketLink = (nextEvent == null ? void 0 : nextEvent.links.find((link) => link.kind === "ticket")) ?? (nextEvent == null ? void 0 : nextEvent.links[0]);
+  const hasTicket = (ticketLink == null ? void 0 : ticketLink.kind) === "ticket";
   const instagram = socialLinks2.find((link) => link.kind === "instagram");
   const items = [
     {
@@ -7545,7 +7546,7 @@ function ActionStrip({ nextEvent, socialLinks: socialLinks2 }) {
       external: false
     },
     {
-      label: "チケット予約",
+      label: hasTicket ? "チケット予約" : "関連リンク",
       title: (ticketLink == null ? void 0 : ticketLink.label) ?? "予約リンクを確認",
       copy: "重要イベントは、予約や詳細リンクへすぐ進めるようにしています。",
       href: (ticketLink == null ? void 0 : ticketLink.url) ?? "#schedule",
@@ -8004,7 +8005,7 @@ function Hero({ nextEvent, socialLinks: socialLinks2 }) {
             ),
             ticketLink && /* @__PURE__ */ jsxRuntimeExports.jsx(ExternalButton, { href: ticketLink.url, variant: "gold", className: "px-5", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-2", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(Ticket, { className: "h-4 w-4", "aria-hidden": "true" }),
-              "チケット予約"
+              ticketLink.kind === "ticket" ? "チケット予約" : ticketLink.label
             ] }) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs(
               "a",
@@ -8293,7 +8294,45 @@ function Badge({ children, category, strong = false }) {
 }
 function NextEvent({ event }) {
   if (!event) {
-    return null;
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { id: "next", className: "relative overflow-hidden bg-porcelain py-16 sm:py-24", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-x-0 top-0 h-px bg-champagne/40" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          SectionHeader,
+          {
+            kicker: "Next Appearance",
+            title: "次に見るべき出演情報",
+            copy: "ファンが最初に迷わないよう、直近の予定と予約導線を大きくまとめています。"
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("article", { className: "zine-panel border border-champagne/70 bg-white p-8 text-center sm:p-12", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "inline-flex items-center gap-2 text-xs font-black uppercase text-champagne", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Clock3, { className: "h-4 w-4", "aria-hidden": "true" }),
+            "Coming soon"
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 font-display text-3xl leading-tight text-ink sm:text-4xl", children: "次の予定は調整中です" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mx-auto mt-4 max-w-xl text-base leading-8 text-ink/70", children: "新しい出演やイベントが決まり次第ここに掲載します。最新の近況はSHOWROOMの配信やSNSでチェックできます。" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex flex-col justify-center gap-3 sm:flex-row", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "a",
+              {
+                href: "#schedule",
+                className: "inline-flex min-h-12 items-center justify-center border border-ink bg-ink px-5 py-3 text-sm font-bold text-white transition hover:bg-[#4a3942]",
+                children: "これまでの予定を見る"
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "a",
+              {
+                href: "#showroom",
+                className: "inline-flex min-h-12 items-center justify-center border border-rosefog/40 bg-porcelain px-5 py-3 text-sm font-bold text-ink transition hover:bg-white",
+                children: "SHOWROOMで近況を見る"
+              }
+            )
+          ] })
+        ] })
+      ] })
+    ] });
   }
   const meta = categoryMeta[event.category];
   const Icon2 = meta.Icon;

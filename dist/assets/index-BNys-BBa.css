@@ -1701,6 +1701,10 @@ img {
     justify-content: space-between;
   }
 
+  .sm\:p-12 {
+    padding: 3rem;
+  }
+
   .sm\:p-6 {
     padding: 1.5rem;
   }
