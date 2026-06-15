@@ -47,6 +47,51 @@ export const highlights: Highlight[] = [
     link: { label: "モデルプレスで読む", url: "https://mdpr.jp/news/detail/4646978" }
   },
   {
+    id: "adidas-cm-2025-03",
+    year: "2025",
+    date: "2025年3月",
+    category: "CM",
+    title: "adidas CM",
+    description:
+      "adidas のCMに出演。SNSなどさまざまな広告で使用されました。",
+  },
+  {
+    id: "googlepixel-au-cm-2025-02",
+    year: "2025",
+    date: "2025年2月",
+    category: "CM",
+    title: "Google Pixel／au「ニッポンもしも写真部 東京篇」CM",
+    description:
+      "Google Pixel × au のCM「ニッポンもしも写真部 東京篇」に、スタンドインとして参加しました。",
+  },
+  {
+    id: "comdot-haikei-mv-2024-05",
+    year: "2024",
+    date: "2024年5月",
+    category: "MV",
+    title: "コムドット『拝啓、俺たちへ』MV",
+    description:
+      "コムドットの1st single『拝啓、俺たちへ』のMV制作に参加しました。",
+  },
+  {
+    id: "meiyo-hope-mv-2024-04",
+    year: "2024",
+    date: "2024年4月",
+    category: "MV",
+    title: "meiyo『HOPE!HOPE!HOPE!』MV",
+    description:
+      "meiyo の新曲MV『HOPE!HOPE!HOPE!』に出演。クレジットにも名前が掲載されました。",
+  },
+  {
+    id: "hotpepper-beauty-cm-2024-02",
+    year: "2024",
+    date: "2024年2月",
+    category: "CM",
+    title: "ホットペッパービューティー「学割」新CM",
+    description:
+      "ホットペッパービューティー「学割」の新CM（情報篇・クーポン篇の2種類）に出演しました。",
+  },
+  {
     id: "bakasemaishi-2023-11",
     year: "2023",
     date: "2023年11月",
