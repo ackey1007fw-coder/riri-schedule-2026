@@ -54,7 +54,10 @@ export const profile = {
       "朝の配信やイベント前の近況をチェック。コメント、フォロー、ギフトで日々の活動を応援できます。"
   },
   avatars: [
-    { name: "カルアと里季",   image: showroomAvatar("1141864"), featured: true },
+    { name: "テオリデアのヘルメスりりたん", image: "/images/avatar-hermes-riritan.jpg", featured: true },
+    { name: "カルア",                 image: "/images/avatar-kalua.jpg" },
+    { name: "お昼寝カルア",            image: "/images/avatar-kalua-nap.jpg" },
+    { name: "カルアと里季",   image: showroomAvatar("1141864") },
     { name: "おばけりりたん", image: showroomAvatar("1139413") },
     { name: "金ぐりり",       image: showroomAvatar("1139155") },
     { name: "ちびりり",       image: showroomAvatar("1137154") },
