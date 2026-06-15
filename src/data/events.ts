@@ -2,6 +2,28 @@ import type { ScheduleEvent } from "../types";
 
 export const events: ScheduleEvent[] = [
   {
+    id: "goudou-birthday-2026-07-19",
+    title: "夏凪里季×小峰萌楓 合同誕生祭",
+    shortTitle: "合同誕生祭",
+    category: "event",
+    startAt: "2026-07-19T14:00:00+09:00",
+    endAt: "2026-07-19T17:00:00+09:00",
+    displayDate: "2026年7月19日 14:00〜17:00",
+    venue: "都内某所",
+    image: "/images/event-birthday.jpg",
+    summary:
+      "フレキャン2025に出場した夏凪里季さんと、小峰萌楓さん（#ミスサークル2025）の合同誕生祭。今年最初で最後の合同誕生祭として開催されます。",
+    badges: ["合同誕生祭", "小峰萌楓", "要申込"],
+    links: [
+      {
+        label: "参加申込フォーム",
+        url: "https://docs.google.com/forms/d/18IAVxuYrpUE2UmYG-unogWLEMN5X4Kjr-UV5ObOshIl/viewform",
+        kind: "info"
+      }
+    ],
+    isImportant: true
+  },
+  {
     id: "yofukashi-campus-2026-05-09",
     title: "みつきとななこの夜ふかしキャンパス vol.2 春の新学期わくわくSP",
     shortTitle: "夜ふかしキャンパス",
