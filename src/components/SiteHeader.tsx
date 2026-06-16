@@ -5,6 +5,7 @@ import type { SocialLink } from "../types";
 const navItems = [
   { label: "次の出演", href: "#next" },
   { label: "スケジュール", href: "#schedule" },
+  { label: "これまでの歩み", href: "#highlights" },
   { label: "SHOWROOM", href: "#showroom" },
   { label: "プロフィール", href: "#profile" }
 ];
