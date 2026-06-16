@@ -7,7 +7,7 @@ export const petProfile = {
   imageNote: "りりちゃんに抱っこされるカルアちゃん。",
   ririImage: "/images/riri-portrait.jpg",
   lead:
-    "りりちゃんのそばにいる、やさしい存在。活動の合間の癒やしとして、プロフィールにも少しだけ紹介します。",
+    "りりちゃんのそばにいる、やさしい家族。ふとした瞬間に癒やしをくれる存在です。",
   notes: [
     { label: "なまえ", value: "カルアちゃん" },
     { label: "犬種", value: "ポメラニアンコーギー" },

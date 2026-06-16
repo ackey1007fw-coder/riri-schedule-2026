@@ -18,7 +18,7 @@ export function HighlightsSection() {
         <SectionHeader
           kicker="Highlights"
           title="これまでの歩み"
-          copy="出演・受賞・メディア掲載など、これまでの活動をまとめています。"
+          copy="ドラマ、MV、CM、舞台に受賞まで。里季ちゃんがこれまで歩んできた道のり。"
         />
 
         <div className="grid gap-3 md:grid-cols-2">

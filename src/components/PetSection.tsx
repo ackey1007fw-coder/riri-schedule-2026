@@ -68,7 +68,7 @@ export function PetSection() {
 
             <div className="flex items-start gap-3 border border-champagne/35 bg-porcelain p-4 text-sm font-bold leading-7 text-ink/70">
               <Heart className="mt-1 h-4 w-4 shrink-0 text-rosefog" aria-hidden="true" />
-              応援スケジュールの中に、活動だけでなく人柄が伝わる小さな場所として置いています。
+              活動の合間にほっと一息。里季ちゃんの素顔がのぞくひとときです。
             </div>
           </div>
         </div>

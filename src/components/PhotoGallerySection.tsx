@@ -77,7 +77,7 @@ export function PhotoGallerySection() {
           <SectionHeader
             kicker="Photo Gallery"
             title="写真で見る Riri"
-            copy="舞台、配信、日常の一枚まで。写真は切り抜かず、表情や空気感がそのまま伝わるように並べています。"
+            copy="舞台に立つ姿から、配信や日常のふとした表情まで。里季ちゃんのいろんな瞬間をどうぞ。"
           />
           <div className="flex flex-col gap-3 border-y border-champagne/30 py-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3 text-sm font-bold text-ink/70">

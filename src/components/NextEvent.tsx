@@ -18,7 +18,7 @@ export function NextEvent({ event }: NextEventProps) {
           <SectionHeader
             kicker="Next Appearance"
             title="次に見るべき出演情報"
-            copy="ファンが最初に迷わないよう、直近の予定と予約導線を大きくまとめています。"
+            copy="次に会えるのはいつ？ いちばん近い予定をここでチェック。"
           />
           <article className="zine-panel border border-champagne/70 bg-white p-8 text-center sm:p-12">
             <p className="inline-flex items-center gap-2 text-xs font-black uppercase text-champagne">
@@ -63,7 +63,7 @@ export function NextEvent({ event }: NextEventProps) {
         <SectionHeader
           kicker="Next Appearance"
           title="次に見るべき出演情報"
-          copy="ファンが最初に迷わないよう、直近の予定と予約導線を大きくまとめています。"
+          copy="次に会えるのはいつ？ いちばん近い予定をここでチェック。"
         />
 
         <article className="zine-panel grid overflow-hidden border border-champagne/70 bg-white lg:grid-cols-[1.12fr_0.88fr]">

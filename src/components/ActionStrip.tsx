@@ -17,7 +17,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
     {
       label: "次の出演",
       title: nextEvent?.shortTitle ?? "スケジュールを見る",
-      copy: nextEvent?.displayDate ?? "新しい予定をカードとカレンダーで確認できます。",
+      copy: nextEvent?.displayDate ?? "これからの予定をカレンダーでチェック。",
       href: "#next",
       Icon: ArrowDown,
       external: false
@@ -25,7 +25,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
     {
       label: hasTicket ? "チケット予約" : "関連リンク",
       title: ticketLink?.label ?? "予約リンクを確認",
-      copy: "重要イベントは、予約や詳細リンクへすぐ進めるようにしています。",
+      copy: "予約や詳細は、このボタンからすぐに。",
       href: ticketLink?.url ?? "#schedule",
       Icon: Ticket,
       external: Boolean(ticketLink)
@@ -33,7 +33,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
     {
       label: "SNSを見る",
       title: instagram?.handle ?? "更新をチェック",
-      copy: "写真、告知、配信のお知らせをまとめて追える入口です。",
+      copy: "最新の写真や告知をチェックしよう。",
       href: instagram?.url ?? "#links",
       Icon: Images,
       external: Boolean(instagram)

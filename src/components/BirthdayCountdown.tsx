@@ -44,7 +44,7 @@ export function BirthdayCountdown() {
             title="お誕生日までのカウントダウン"
             copy={`${profile.birthdayLabel}${
               ageLabel ? `・${ageLabel}の記念日` : ""
-            }に向けて、SNS投稿やSHOWROOMでのお祝い準備を見える場所に。`}
+            }まで、あと少し。SNSやSHOWROOMで一緒にお祝いしよう。`}
           />
           <div className="border border-champagne/40 bg-white p-5 shadow-paper sm:p-6">
             <div className="mb-5 flex items-center gap-3 text-champagne">

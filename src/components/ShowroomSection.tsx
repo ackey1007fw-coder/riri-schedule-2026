@@ -47,7 +47,7 @@ export function ShowroomSection() {
   return (
     <section id="showroom" className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader kicker="SHOWROOM" title="ライブ配信で応援する" copy="ルーム情報、配信の見どころ、アバターをひとつのエリアに整理しました。公開されているSHOWROOM情報はできるだけ自動で反映します。" />
+        <SectionHeader kicker="SHOWROOM" title="ライブ配信で応援する" copy="毎日の配信で会えるSHOWROOM。ルームの最新情報やアバターはこちらから。" />
         <div className="mb-12 grid overflow-hidden border border-rosefog/25 bg-porcelain lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative bg-porcelain lg:min-h-[480px]">
             <img

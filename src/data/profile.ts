@@ -12,7 +12,7 @@ export const profile = {
   fanScheduleLabel: "Fan Schedule",
   catchCopy: "透明感のある笑顔とまっすぐな表現力で、次の舞台へ。",
   intro:
-    "出演予定、配信、SNS、プロフィールをひとつにまとめた応援スケジュールです。",
+    "出演予定も、配信も、SNSも。里季ちゃんを応援する人のための場所です。",
   heroImage: "/images/riri-hero.jpg",
   portraitImage: "/images/riri-profile.jpg",
   birthday: "2006-06-24",
