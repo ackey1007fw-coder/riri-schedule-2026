@@ -18,13 +18,18 @@ export function HighlightsSection() {
         <SectionHeader
           kicker="Highlights"
           title="これまでの歩み"
-          copy="2025年やそれ以前の出演・受賞・メディア掲載など、これまでの活動をまとめています。"
+          copy="出演・受賞・メディア掲載など、これまでの活動をまとめています。"
         />
 
         <div className="grid gap-3 md:grid-cols-2">
           {sortedHighlights.map((item) => {
-            const body = (
-              <>
+            const links = item.links ?? (item.link ? [item.link] : []);
+
+            return (
+              <article
+                key={item.id}
+                className="flex min-h-36 flex-col border border-champagne/40 bg-white p-5"
+              >
                 {item.image && (
                   <img
                     src={item.image}
@@ -48,40 +53,32 @@ export function HighlightsSection() {
                       </span>
                       <span>{item.category}</span>
                     </p>
-                    <h3 className="mt-2 flex items-center gap-2 font-display text-2xl leading-tight text-ink">
+                    <h3 className="mt-2 font-display text-2xl leading-tight text-ink">
                       {item.title}
-                      {item.link && (
-                        <ArrowUpRight
-                          className="h-4 w-4 shrink-0 text-champagne"
-                          aria-hidden="true"
-                        />
-                      )}
                     </h3>
                     <p className="mt-3 text-sm leading-7 text-ink/70">
                       {item.description}
                     </p>
                   </div>
                 </div>
-              </>
-            );
 
-            const className =
-              "flex min-h-36 flex-col border border-champagne/40 bg-white p-5 transition";
-
-            return item.link ? (
-              <a
-                key={item.id}
-                href={item.link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${className} hover:-translate-y-1 hover:shadow-paper`}
-              >
-                {body}
-              </a>
-            ) : (
-              <div key={item.id} className={className}>
-                {body}
-              </div>
+                {links.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {links.map((link) => (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 border border-rosefog/40 bg-porcelain px-3 py-1.5 text-xs font-bold text-ink transition hover:border-champagne hover:bg-white"
+                      >
+                        {link.label}
+                        <ArrowUpRight className="h-3.5 w-3.5 text-champagne" aria-hidden="true" />
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </article>
             );
           })}
         </div>

@@ -23,9 +23,27 @@ export type Highlight = {
   description: string;
   image?: string;
   link?: { label: string; url: string };
+  links?: { label: string; url: string }[];
 };
 
 export const highlights: Highlight[] = [
+  {
+    id: "souzokurei-horror-2026-01",
+    year: "2026",
+    date: "2026年1月",
+    category: "受賞",
+    title: "ホラーチャンネル『相続霊』出演・SHOWROOM審査員特別賞",
+    description:
+      "ホラーチャンネル『相続霊』に出演。SHOWROOMのガチイベントでは審査員特別賞に選ばれました。",
+    links: [
+      { label: "SHOWROOMイベント", url: "https://www.showroom-live.com/event/horrorchannel202601" },
+      { label: "ショート①", url: "https://youtube.com/shorts/iHj6nt29iQ0" },
+      { label: "ショート②", url: "https://youtube.com/shorts/7OvjwMz_kP8" },
+      { label: "ショート③", url: "https://youtube.com/shorts/xAf7HiWkcUc" },
+      { label: "ショート④", url: "https://youtube.com/shorts/u7z5dBzJ9s0" },
+      { label: "ショート⑤", url: "https://youtube.com/shorts/pv8Li6_Mxfo" }
+    ]
+  },
   {
     id: "frecam-2025-award",
     year: "2025",
