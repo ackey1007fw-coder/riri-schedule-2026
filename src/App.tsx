@@ -10,6 +10,7 @@ import { Hero } from "./components/Hero";
 import { HighlightsSection } from "./components/HighlightsSection";
 import { InterviewSection } from "./components/InterviewSection";
 import { LinksSection } from "./components/LinksSection";
+import { MagazineSpread } from "./components/MagazineSpread";
 import { MobileActionDock } from "./components/MobileActionDock";
 import { NextEvent } from "./components/NextEvent";
 import { NewsBar } from "./components/NewsBar";
@@ -90,6 +91,7 @@ function App() {
         <BirthdayBanner />
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
         <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
+        <MagazineSpread nextEvent={nextEvent} />
         <CharmSection />
         <Slideshow />
         <NextEvent event={nextEvent} />
