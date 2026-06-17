@@ -12,12 +12,12 @@ export const events: ScheduleEvent[] = [
     venue: "都内某所",
     image: "/images/event-goudou-birthday.jpg",
     summary:
-      "フレキャン2025に出場した夏凪里季さんと、小峰萌楓さん（#ミスサークル2025）の合同誕生祭。今年最初で最後の合同誕生祭として開催されます。",
-    badges: ["合同誕生祭", "小峰萌楓", "要申込"],
+      "フレキャン2025の夏凪里季さん（20歳）と、小峰萌楓さん（#ミスサークル2025・23歳）の合同生誕祭。20歳と23歳のお祝いを一緒に楽しむ、今年最初で最後の合同誕生祭です。",
+    badges: ["合同生誕祭", "小峰萌楓", "要予約"],
     links: [
       {
-        label: "参加申込フォーム",
-        url: "https://docs.google.com/forms/d/18IAVxuYrpUE2UmYG-unogWLEMN5X4Kjr-UV5ObOshlI/viewform",
+        label: "予約フォーム",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSctRg6ClNuC-GphfGOZQ24n4W1CsR8KiiHTNxBEow8axhM6og/viewform",
         kind: "info"
       }
     ],

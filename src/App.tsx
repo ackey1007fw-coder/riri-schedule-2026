@@ -11,6 +11,7 @@ import { InterviewSection } from "./components/InterviewSection";
 import { LinksSection } from "./components/LinksSection";
 import { MobileActionDock } from "./components/MobileActionDock";
 import { NextEvent } from "./components/NextEvent";
+import { NewsBar } from "./components/NewsBar";
 import { PetSection } from "./components/PetSection";
 import { Slideshow } from "./components/Slideshow";
 import { PhotoGallerySection } from "./components/PhotoGallerySection";
@@ -77,6 +78,7 @@ function App() {
   return (
     <div className="min-h-screen bg-porcelain pb-24 text-ink md:pb-0">
       <SiteHeader socialLinks={socialLinks} />
+      <NewsBar />
       <main>
         {isLoading && (
           <div className="bg-ink px-4 py-2 text-center text-xs font-bold text-white">
