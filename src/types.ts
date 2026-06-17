@@ -19,6 +19,8 @@ export type ScheduleEvent = {
   category: EventCategory;
   startAt: string;
   endAt?: string;
+  /** 公演日が飛び飛びの場合の実施日リスト（"YYYY-MM-DD"）。カレンダー表示に使用 */
+  dates?: string[];
   displayDate: string;
   venue?: string;
   image: string;

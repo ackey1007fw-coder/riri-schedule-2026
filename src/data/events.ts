@@ -8,6 +8,14 @@ export const events: ScheduleEvent[] = [
     category: "stage",
     startAt: "2026-08-18T19:30:00+09:00",
     endAt: "2026-08-29T21:30:00+09:00",
+    dates: [
+      "2026-08-18",
+      "2026-08-22",
+      "2026-08-23",
+      "2026-08-25",
+      "2026-08-28",
+      "2026-08-29"
+    ],
     displayDate: "2026年8月18日(火)〜29日(土)・全6公演",
     venue: "荻窪（詳細未公開）",
     image: "/images/riri-portrait.jpg",

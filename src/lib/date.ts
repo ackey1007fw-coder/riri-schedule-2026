@@ -60,6 +60,10 @@ export const getEventsForDay = (
   const key = `${monthKey}-${String(day).padStart(2, "0")}`;
 
   return events.filter((event) => {
+    // 公演日が飛び飛びのイベント(dates指定)は、その日だけ表示
+    if (event.dates && event.dates.length > 0) {
+      return event.dates.includes(key);
+    }
     const start = toDateKey(event.startAt);
     const end = toDateKey(event.endAt ?? event.startAt);
     return key >= start && key <= end;
