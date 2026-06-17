@@ -11,7 +11,7 @@ export function ProfileSection() {
           <SectionHeader
             kicker="Profile"
             title="プロフィール"
-            copy="初めて見る人にも、いつも応援している人にも分かりやすく。活動の軸と人柄が伝わる情報を整理しています。"
+            copy="大学のこと、舞台への想い、好きなものまで。里季ちゃんの素顔が見えるプロフィールです。"
           />
           <div className="border border-champagne/40 bg-white p-5 shadow-paper">
             <div className="mb-4 flex items-center gap-3">

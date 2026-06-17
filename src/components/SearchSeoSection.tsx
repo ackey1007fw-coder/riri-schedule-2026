@@ -33,10 +33,9 @@ export function SearchSeoSection() {
               夏凪里季さんを応援するためのFan Schedule
             </h2>
             <p className="mt-5 leading-8 text-ink/70">
-              このサイトは、夏凪里季さんの出演情報、舞台、フレキャン関連情報、
-              SHOWROOM、SNSリンク、プロフィールを応援者目線で見やすくまとめた
-              応援スケジュールです。次に見る予定、チケット予約、配信、SNS告知へ
-              スマホからすぐ移動できるように整理しています。
+              夏凪里季さんの出演情報・舞台・フレキャン関連・SHOWROOM・SNS・
+              プロフィールを、応援する人の目線でまとめたFan Schedule。
+              次の予定もチケットも配信も、スマホからすぐにたどれます。
             </p>
           </div>
 
