@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { events } from "../data/events";
+import { searchFaqs } from "../data/searchFaq";
 
 // events.ts の内容を schema.org Event の構造化データ(JSON-LD)として
 // 実行時に <head> へ出力する。データを足すだけで検索向けにも反映される。
@@ -32,9 +33,23 @@ export function StructuredData() {
       return node;
     });
 
+    const faqPage = {
+      "@type": "FAQPage",
+      "@id": `${BASE}/#faq`,
+      mainEntity: searchFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+          url: `${BASE}${faq.href}`
+        }
+      }))
+    };
+
     const payload = JSON.stringify({
       "@context": "https://schema.org",
-      "@graph": graph,
+      "@graph": [...graph, faqPage],
     });
 
     document.getElementById(SCRIPT_ID)?.remove();
