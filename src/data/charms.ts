@@ -18,17 +18,17 @@ export const charmPhotos = [
 export const charmPoints = [
   {
     label: "Smile",
-    title: "かわいい、だけで終わらない",
-    copy: "やわらかい笑顔の奥に、舞台へ向かうまっすぐさがある。"
+    title: "やわらかい笑顔",
+    copy: "見ているとふっと安心する、明るくあたたかい雰囲気。"
   },
   {
     label: "Stage",
-    title: "表情で引き込む",
-    copy: "写真でも配信でも、ふとした表情にその場の空気が残る。"
+    title: "役者としての横顔",
+    copy: "舞台にドラマにMV。役に入り込む表情で引き込む。"
   },
   {
     label: "Support",
-    title: "応援しやすい人",
-    copy: "次の予定、SNS、SHOWROOMまで、今できる応援にすぐ進める。"
+    title: "いちばん近くで応援",
+    copy: "次の出演も毎日の配信も、ここからすぐ追える。"
   }
 ];
