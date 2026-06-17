@@ -2,6 +2,22 @@ import type { ScheduleEvent } from "../types";
 
 export const events: ScheduleEvent[] = [
   {
+    id: "stage-ogikubo-2026-08",
+    title: "舞台出演（詳細は後日発表）",
+    shortTitle: "8月の舞台",
+    category: "stage",
+    startAt: "2026-08-18T19:30:00+09:00",
+    endAt: "2026-08-29T21:30:00+09:00",
+    displayDate: "2026年8月18日(火)〜29日(土)・全6公演",
+    venue: "荻窪（詳細未公開）",
+    image: "/images/riri-portrait.jpg",
+    summary:
+      "8月に荻窪で上演される舞台に出演（全6公演）。8/18(火)19:30｜8/22(土)12:00｜8/23(日)15:30｜8/25(火)14:00｜8/28(金)19:30｜8/29(土)19:30。作品タイトルや会場などの詳細は後日発表予定です。",
+    badges: ["舞台", "全6公演", "詳細は後日発表"],
+    links: [],
+    isImportant: true
+  },
+  {
     id: "goudou-birthday-2026-07-19",
     title: "夏凪里季×小峰萌楓 合同誕生祭",
     shortTitle: "合同誕生祭",
