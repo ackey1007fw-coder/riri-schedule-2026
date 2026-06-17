@@ -1,5 +1,6 @@
 import { HeartHandshake, Star } from "lucide-react";
 import { profile } from "../data/profile";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { SectionHeader } from "./SectionHeader";
 
 export function ProfileSection() {
@@ -27,7 +28,10 @@ export function ProfileSection() {
         <div className="grid gap-5 lg:grid-cols-[0.88fr_1.12fr]">
           <div className="relative border border-white bg-porcelain shadow-sm lg:min-h-[420px]">
             <img
-              src={profile.portraitImage}
+              {...getResponsiveImageProps(
+                profile.portraitImage,
+                "(min-width: 1024px) 34vw, 100vw",
+              )}
               alt={`${profile.name} portrait`}
               loading="lazy"
               className="block h-auto w-full object-contain lg:absolute lg:inset-0 lg:h-full lg:object-cover lg:object-top"

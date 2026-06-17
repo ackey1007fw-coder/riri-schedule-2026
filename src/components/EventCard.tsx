@@ -1,6 +1,7 @@
 import { CalendarDays, CalendarPlus, MapPin } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
 import { isEventPast } from "../lib/date";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { googleCalendarUrl } from "../lib/share";
 import type { ScheduleEvent } from "../types";
 import { Badge } from "./Badge";
@@ -31,7 +32,12 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
 
       <div className="relative bg-porcelain">
         <img
-          src={event.image}
+          {...getResponsiveImageProps(
+            event.image,
+            compact
+              ? "(min-width: 640px) 160px, 100vw"
+              : "(min-width: 640px) 220px, 100vw",
+          )}
           alt={event.title}
           loading="lazy"
           className="block w-full object-cover object-top sm:absolute sm:inset-0 sm:h-full"

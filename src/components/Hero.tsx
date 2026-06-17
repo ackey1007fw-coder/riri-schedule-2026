@@ -1,5 +1,6 @@
 import { CalendarCheck, MessageCircleHeart, Ticket, Users } from "lucide-react";
 import { profile } from "../data/profile";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 import type { ScheduleEvent, SocialLink } from "../types";
 import { ExternalButton } from "./ExternalButton";
 
@@ -35,9 +36,13 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
         {/* 写真パネル（モバイルは上、デスクトップは右） */}
         <div className="relative order-1 overflow-hidden lg:order-2 lg:min-h-[90svh]">
           <img
-            src={profile.heroImage}
+            {...getResponsiveImageProps(
+              profile.heroImage,
+              "(min-width: 1024px) 50vw, 100vw",
+            )}
             alt={profile.name}
             loading="eager"
+            fetchPriority="high"
             className="block w-full object-cover object-[50%_20%] lg:absolute lg:inset-0 lg:h-full"
           />
           <p className="absolute right-4 top-4 hidden border border-white/60 bg-white/30 px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-ink backdrop-blur lg:block">

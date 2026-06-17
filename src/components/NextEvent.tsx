@@ -1,5 +1,6 @@
 import { CalendarPlus, Clock3, MapPin, Ticket } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { googleCalendarUrl } from "../lib/share";
 import type { ScheduleEvent } from "../types";
 import { Badge } from "./Badge";
@@ -70,7 +71,10 @@ export function NextEvent({ event }: NextEventProps) {
         <article className="zine-panel grid overflow-hidden border border-champagne/70 bg-white lg:grid-cols-[1.12fr_0.88fr]">
           <div className="relative overflow-hidden bg-ink lg:min-h-[560px]">
             <img
-              src={event.image}
+              {...getResponsiveImageProps(
+                event.image,
+                "(min-width: 1024px) 58vw, 100vw",
+              )}
               alt={event.title}
               className="block w-full object-cover object-top transition duration-700 hover:scale-[1.025] lg:absolute lg:inset-0 lg:h-full"
             />

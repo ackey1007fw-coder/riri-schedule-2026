@@ -1,5 +1,6 @@
 import { ArrowUpRight, Sparkles, Trophy } from "lucide-react";
 import { highlights } from "../data/highlights";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { SectionHeader } from "./SectionHeader";
 
 // 年の降順 → 同年内は配列の並び順を維持
@@ -32,7 +33,10 @@ export function HighlightsSection() {
               >
                 {item.image && (
                   <img
-                    src={item.image}
+                    {...getResponsiveImageProps(
+                      item.image,
+                      "(min-width: 768px) 50vw, 100vw",
+                    )}
                     alt={item.title}
                     loading="lazy"
                     className="mb-4 block w-full border border-white"

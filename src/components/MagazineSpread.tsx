@@ -1,6 +1,7 @@
 import { ArrowRight, CalendarDays, Camera, Radio } from "lucide-react";
 import { galleryPhotos } from "../data/photos";
 import { profile } from "../data/profile";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 import type { ScheduleEvent } from "../types";
 
 type MagazineSpreadProps = {
@@ -28,7 +29,10 @@ export function MagazineSpread({ nextEvent }: MagazineSpreadProps) {
             <div className="grid gap-3 p-3 sm:grid-cols-[1.15fr_0.85fr] sm:gap-4 sm:p-4">
               <figure className="relative overflow-hidden border border-white bg-porcelain">
                 <img
-                  src={featurePhotos[0]}
+                  {...getResponsiveImageProps(
+                    featurePhotos[0],
+                    "(min-width: 1024px) 55vw, 100vw",
+                  )}
                   alt={featureAlts[0]}
                   loading="lazy"
                   className="block w-full sm:h-[620px] sm:object-cover sm:object-[50%_18%]"
@@ -44,7 +48,10 @@ export function MagazineSpread({ nextEvent }: MagazineSpreadProps) {
                     className="relative overflow-hidden border border-white bg-porcelain"
                   >
                     <img
-                      src={src}
+                      {...getResponsiveImageProps(
+                        src,
+                        "(min-width: 1024px) 28vw, 50vw",
+                      )}
                       alt={featureAlts[index + 1]}
                       loading="lazy"
                       className="block w-full sm:h-[302px] sm:object-cover"

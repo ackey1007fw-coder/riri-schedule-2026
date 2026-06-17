@@ -1,4 +1,5 @@
 import { charmPhotos, charmPoints } from "../data/charms";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 
 export function CharmSection() {
   return (
@@ -27,7 +28,10 @@ export function CharmSection() {
                 className="border border-white bg-white p-1.5 shadow-sm"
               >
                 <img
-                  src={photo.src}
+                  {...getResponsiveImageProps(
+                    photo.src,
+                    "(min-width: 1024px) 22vw, 33vw",
+                  )}
                   alt={photo.alt}
                   loading="lazy"
                   className="block w-full"

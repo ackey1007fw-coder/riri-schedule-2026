@@ -10,6 +10,7 @@ import {
   X
 } from "lucide-react";
 import { galleryPhotos, galleryUpdate } from "../data/photos";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { SectionHeader } from "./SectionHeader";
 
 const wrapIndex = (index: number) =>
@@ -127,7 +128,10 @@ export function PhotoGallerySection() {
                 aria-label={`${photo.alt}を大きく表示`}
               >
                 <img
-                  src={photo.src}
+                  {...getResponsiveImageProps(
+                    photo.src,
+                    "(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw",
+                  )}
                   alt={photo.alt}
                   loading="lazy"
                   className="block w-full transition duration-500 group-hover:scale-[1.02]"
@@ -189,7 +193,7 @@ export function PhotoGallerySection() {
                 <ChevronLeft className="h-6 w-6" aria-hidden="true" />
               </button>
               <img
-                src={selectedPhoto.src}
+                {...getResponsiveImageProps(selectedPhoto.src, "100vw")}
                 alt={selectedPhoto.alt}
                 className="max-h-[74vh] w-auto max-w-full object-contain shadow-paper"
               />

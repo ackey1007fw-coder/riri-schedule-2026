@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { galleryPhotos } from "../data/photos";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 
 // トップ付近の自動送りスライドショー。
 // 開いた時点で自動再生され、写真はトリミングせず全体表示（object-contain）。
@@ -66,7 +67,7 @@ export function Slideshow() {
         <div className="relative grid h-[56vh] place-items-center overflow-hidden border border-white bg-white sm:h-[64vh]">
           <img
             key={index}
-            src={photo.src}
+            {...getResponsiveImageProps(photo.src, "(min-width: 1024px) 896px, 100vw")}
             alt={photo.alt}
             loading="lazy"
             className="max-h-full w-auto max-w-full object-contain"

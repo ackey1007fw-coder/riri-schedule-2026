@@ -1,6 +1,7 @@
 import { Heart, PawPrint, Sparkles } from "lucide-react";
 import { petProfile } from "../data/pet";
 import { profile } from "../data/profile";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { SectionHeader } from "./SectionHeader";
 
 export function PetSection() {
@@ -27,7 +28,10 @@ export function PetSection() {
         <div className="mt-10 grid gap-4 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6">
           <figure className="border border-rosefog/20 bg-porcelain p-3 shadow-sm">
             <img
-              src={petProfile.ririImage}
+              {...getResponsiveImageProps(
+                petProfile.ririImage,
+                "(min-width: 1024px) 54vw, 100vw",
+              )}
               alt={`${profile.name} profile photo`}
               loading="lazy"
               className="h-auto w-full border border-white bg-white"
@@ -42,7 +46,10 @@ export function PetSection() {
             <figure className="border border-champagne/35 bg-porcelain p-5 shadow-paper">
               <div className="mx-auto grid aspect-square max-w-[360px] place-items-center border border-white bg-white p-8">
                 <img
-                  src={petProfile.image}
+                  {...getResponsiveImageProps(
+                    petProfile.image,
+                    "(min-width: 1024px) 360px, 80vw",
+                  )}
                   alt="カルアちゃん"
                   loading="lazy"
                   className="h-auto max-h-full w-full object-contain"

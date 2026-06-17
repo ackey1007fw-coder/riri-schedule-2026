@@ -2,6 +2,7 @@ import { Gift, Heart } from "lucide-react";
 import { useEffect, useState } from "react";
 import { profile } from "../data/profile";
 import { getBirthdayCountdown } from "../lib/date";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { SectionHeader } from "./SectionHeader";
 
 const birthYear = Number(profile.birthday.slice(0, 4));
@@ -77,7 +78,10 @@ export function BirthdayCountdown() {
           {profile.gallery.map((src, index) => (
             <img
               key={src}
-              src={src}
+              {...getResponsiveImageProps(
+                src,
+                "(min-width: 1024px) 25vw, 50vw",
+              )}
               alt={`${profile.name} gallery ${index + 1}`}
               loading="lazy"
               className="h-auto w-full border border-white shadow-sm"

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getResponsiveImageProps } from "../lib/responsiveImage";
 
 type PhotoProps = {
   src: string;
@@ -23,7 +24,7 @@ export function Photo({
     >
       {!failed && (
         <img
-          src={src}
+          {...getResponsiveImageProps(src, "100vw")}
           alt={alt}
           loading={loading}
           referrerPolicy="no-referrer"
