@@ -39,7 +39,7 @@ export const imageManifest = {
   "/images/gallery/g23.jpg": {"width":2202,"height":2934,"widths":[360,480,720,960,1280,1600,2202]},
   "/images/gallery/g24.jpg": {"width":3240,"height":4320,"widths":[360,480,720,960,1280,1600,3240]},
   "/images/pet-kalua.jpg": {"width":1200,"height":1600,"widths":[360,480,720,960,1200]},
-  "/images/riri-hero.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]},
+  "/images/riri-hero.jpg": {"width":3240,"height":4320,"widths":[360,480,720,960,1280,1600,3240]},
   "/images/riri-portrait.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]},
   "/images/riri-profile.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]},
   "/images/riri-zine-01.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]},
