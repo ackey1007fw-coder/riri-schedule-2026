@@ -29,12 +29,15 @@ export const galleryPhotos: GalleryPhoto[] = [
   { src: "/images/gallery/g22.jpg", alt: "移動中の車内で撮ったセルフィーの夏凪里季さん" },
   { src: "/images/gallery/g23.jpg", alt: "ピクニックでアイスクリームを囲む夏凪里季さんたち" },
   { src: "/images/gallery/g24.jpg", alt: "ピクニックで大きなアイスクリームを持って笑う夏凪里季さん" },
-  { src: "/images/gallery/g25.jpg", alt: "チェック柄シャツでポニーテールのセルフィーの夏凪里季さん" }
+  { src: "/images/gallery/g25.jpg", alt: "チェック柄シャツでポニーテールのセルフィーの夏凪里季さん" },
+  { src: "/images/gallery/g26.jpg", alt: "新宿のレストラン アカシアの店頭" },
+  { src: "/images/gallery/g27.jpg", alt: "レストラン アカシアでロールキャベツシチューを前にする夏凪里季さん" },
+  { src: "/images/gallery/g28.jpg", alt: "レストラン アカシアで頬杖をつく夏凪里季さん" }
 ];
 
 // 最新の更新お知らせ（Instagram更新時にここを書き換える）
 export const galleryUpdate = {
   date: "2026.6.18",
-  note: "新しい写真が届きました",
-  url: "https://www.instagram.com/__ririri__24"
+  note: "新宿のレストラン アカシアでロールキャベツシチュー",
+  url: "https://www.instagram.com/p/DZuYXoLiZ2z/"
 };
