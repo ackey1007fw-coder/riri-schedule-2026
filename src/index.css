@@ -131,6 +131,19 @@ img {
   outline-offset: 2px;
 }
 
+/* カード共通のホバー挙動（やわらかく浮く）。レイアウトは動かさない。
+   hoverできる端末のみ適用 → スマホでタップ後に浮いたまま固まる問題を防ぐ。 */
+.riri-lift {
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+@media (hover: hover) {
+  .riri-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 50px rgba(94, 62, 81, 0.12);
+  }
+}
+
 
 .avatar-card::after {
   pointer-events: none;

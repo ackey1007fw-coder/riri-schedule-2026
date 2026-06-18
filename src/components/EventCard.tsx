@@ -20,7 +20,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
 
   return (
     <article
-      className={`group relative grid overflow-hidden border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-paper ${
+      className={`riri-lift group relative grid overflow-hidden border bg-white shadow-sm ${
         event.isImportant || isNext
           ? "border-champagne/70"
           : "border-rosefog/25"
