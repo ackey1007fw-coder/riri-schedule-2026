@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.6.18",
+    label: "Instagram",
+    text: "新宿「レストラン アカシア」でロールキャベツシチュー",
+    url: "https://www.instagram.com/p/DZuYXoLiZ2z/"
+  },
+  {
     date: "2026.6.16",
     label: "X",
     text: "7/19 小峰萌楓ちゃんと合同生誕祭！20歳＆23歳のお祝い・予約受付中",

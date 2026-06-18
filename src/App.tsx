@@ -25,6 +25,7 @@ import { ShowroomSection } from "./components/ShowroomSection";
 import { SiteHeader } from "./components/SiteHeader";
 import { StructuredData } from "./components/StructuredData";
 import { SupportersSection } from "./components/SupportersSection";
+import { TodayDashboard } from "./components/TodayDashboard";
 import {
   getMonthKeysFromEvents,
   isEventPast,
@@ -91,6 +92,7 @@ function App() {
         <BirthdayBanner />
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
         <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
+        <TodayDashboard events={events} socialLinks={socialLinks} />
         <MagazineSpread nextEvent={nextEvent} />
         <CharmSection />
         <Slideshow />
