@@ -124,6 +124,13 @@ img {
   }
 }
 
+/* サイト全体で一貫した、やわらかいフォーカスリング（キーボード操作時のみ）。
+   :where() で詳細度0 → 各コンポーネント側の focus スタイルを上書きしない。 */
+:where(a, button, summary, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid rgba(215, 173, 98, 0.9);
+  outline-offset: 2px;
+}
+
 
 .avatar-card::after {
   pointer-events: none;
