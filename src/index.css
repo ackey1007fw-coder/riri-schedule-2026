@@ -111,10 +111,84 @@ img {
     border-color 280ms ease;
 }
 
+.riri-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+  font-weight: 700;
+  text-align: center;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    color 220ms ease;
+}
+
+.riri-button-primary {
+  border-color: #312a2e;
+  background: #312a2e;
+  color: white;
+}
+
+.riri-button-gold {
+  border-color: #d7ad62;
+  background: #d7ad62;
+  color: white;
+  box-shadow: 0 12px 24px rgba(215, 173, 98, 0.18);
+}
+
+.riri-button-soft {
+  border-color: rgba(242, 184, 205, 0.48);
+  background: rgba(255, 255, 255, 0.9);
+  color: #312a2e;
+}
+
+.riri-button-rose {
+  border-color: #f2b8cd;
+  background: #f2b8cd;
+  color: #312a2e;
+}
+
+.riri-button-ghost {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
 @media (hover: hover) {
   .riri-lift:hover {
     transform: translateY(-3px);
     box-shadow: 0 16px 36px rgba(94, 62, 81, 0.13);
+  }
+
+  .riri-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(94, 62, 81, 0.13);
+  }
+
+  .riri-button-primary:hover {
+    background: #4a3942;
+  }
+
+  .riri-button-gold:hover {
+    background: #c99a47;
+  }
+
+  .riri-button-soft:hover {
+    border-color: #d7ad62;
+    background: #fffafc;
+  }
+
+  .riri-button-rose:hover {
+    background: #f8dce8;
+  }
+
+  .riri-button-ghost:hover {
+    background: rgba(255, 255, 255, 0.3);
   }
 }
 

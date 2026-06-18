@@ -27,6 +27,7 @@ export function Photo({
           {...getResponsiveImageProps(src, "100vw")}
           alt={alt}
           loading={loading}
+          decoding="async"
           referrerPolicy="no-referrer"
           className={`absolute inset-0 h-full w-full object-cover ${imageClassName}`}
           onError={() => setFailed(true)}

@@ -47,7 +47,7 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
             href={showroom.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-10 items-center justify-center border border-champagne bg-champagne px-3 text-xs font-bold text-white shadow-button transition hover:bg-[#c99a47] sm:min-h-11 sm:px-4 sm:text-sm"
+            className="riri-button riri-button-gold min-h-10 px-3 text-xs sm:min-h-11 sm:px-4 sm:text-sm"
           >
             SHOWROOM
           </a>

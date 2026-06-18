@@ -36,13 +36,13 @@ export function NextEvent({ event }: NextEventProps) {
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <a
                 href="#schedule"
-                className="inline-flex min-h-12 items-center justify-center border border-ink bg-ink px-5 py-3 text-sm font-bold text-white transition hover:bg-[#4a3942]"
+                className="riri-button riri-button-primary min-h-12 px-5 py-3 text-sm"
               >
                 これまでの予定を見る
               </a>
               <a
                 href="#showroom"
-                className="inline-flex min-h-12 items-center justify-center border border-rosefog/40 bg-porcelain px-5 py-3 text-sm font-bold text-ink transition hover:bg-white"
+                className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
               >
                 SHOWROOMで近況を見る
               </a>
@@ -142,14 +142,14 @@ export function NextEvent({ event }: NextEventProps) {
                 href={googleCalendarUrl(event)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center justify-center gap-2 border border-champagne/60 bg-white px-4 py-3 text-sm font-bold text-ink transition hover:border-champagne hover:bg-porcelain"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 <CalendarPlus className="h-4 w-4 text-champagne" aria-hidden="true" />
                 カレンダーに追加
               </a>
               <a
                 href="#schedule"
-                className="inline-flex min-h-12 items-center justify-center border border-rosefog/40 bg-porcelain px-4 py-3 text-sm font-bold text-ink transition hover:bg-white"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 ほかの予定も見る
               </a>

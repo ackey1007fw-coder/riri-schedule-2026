@@ -86,7 +86,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-36 gap-4 bg-white/92 p-5 transition hover:bg-white sm:min-h-40"
+              className="riri-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
             >
               {content}
             </a>
@@ -94,7 +94,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
             <a
               key={index}
               href={item.href}
-              className="flex min-h-36 gap-4 bg-white/92 p-5 transition hover:bg-white sm:min-h-40"
+              className="riri-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
             >
               {content}
             </a>

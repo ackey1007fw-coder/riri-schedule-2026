@@ -84,6 +84,7 @@ function App() {
     <div className="min-h-screen bg-porcelain pb-24 text-ink md:pb-0">
       <SiteHeader socialLinks={socialLinks} />
       <NewsBar />
+      <QuickNav />
       <main>
         {isLoading && (
           <div className="bg-ink px-4 py-2 text-center text-xs font-bold text-white">
@@ -91,7 +92,6 @@ function App() {
           </div>
         )}
         <BirthdayBanner />
-        <QuickNav />
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
         <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
         <TodayDashboard events={events} socialLinks={socialLinks} />

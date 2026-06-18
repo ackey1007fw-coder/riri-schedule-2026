@@ -71,7 +71,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#next"
-                className="inline-flex min-h-12 items-center justify-center gap-2 border border-ink bg-ink px-5 py-3 text-sm font-bold text-white shadow-paper transition hover:-translate-y-0.5 hover:bg-[#4a3942]"
+                className="riri-button riri-button-primary min-h-12 px-5 py-3 text-sm shadow-paper"
               >
                 <CalendarCheck className="h-4 w-4" aria-hidden="true" />
                 次の出演を見る
@@ -89,21 +89,21 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
             <div className="flex flex-wrap gap-2">
               <a
                 href="#showroom"
-                className="inline-flex min-h-12 items-center justify-center gap-2 border border-rosefog/40 bg-white px-4 py-3 text-sm font-bold text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-champagne"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm shadow-sm"
               >
                 <Radio className="h-4 w-4 text-champagne" aria-hidden="true" />
                 SHOWROOM
               </a>
               <a
                 href="#gallery"
-                className="inline-flex min-h-12 items-center justify-center gap-2 border border-rosefog/40 bg-white px-4 py-3 text-sm font-bold text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-champagne"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm shadow-sm"
               >
                 <Images className="h-4 w-4 text-champagne" aria-hidden="true" />
                 写真を見る
               </a>
               <a
                 href="#links"
-                className="inline-flex min-h-12 items-center justify-center gap-2 border border-rosefog/40 bg-white px-4 py-3 text-sm font-bold text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-champagne"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm shadow-sm"
               >
                 <MessageCircleHeart className="h-4 w-4 text-champagne" aria-hidden="true" />
                 SNSを見る

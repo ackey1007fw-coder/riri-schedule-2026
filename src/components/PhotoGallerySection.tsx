@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import {
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
+  ChevronUp,
   Images,
   Instagram,
   Pause,
@@ -19,6 +21,8 @@ const wrapIndex = (index: number) =>
 export function PhotoGallerySection() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+  const visiblePhotos = showAll ? galleryPhotos : galleryPhotos.slice(0, 12);
 
   const selectedPhoto =
     selectedIndex === null ? null : galleryPhotos[selectedIndex];
@@ -115,8 +119,11 @@ export function PhotoGallerySection() {
           </span>
         </a>
 
-        <div className="mt-6 columns-2 gap-4 sm:columns-3 lg:columns-4 [&>figure]:mb-4 [&>figure]:break-inside-avoid">
-          {galleryPhotos.map((photo, index) => (
+        <div
+          id="photo-selection"
+          className="mt-6 columns-2 gap-4 sm:columns-3 lg:columns-4 [&>figure]:mb-4 [&>figure]:break-inside-avoid"
+        >
+          {visiblePhotos.map((photo, index) => (
             <figure
               key={photo.src}
               className="photo-gallery-card riri-card overflow-hidden border-rosefog/15 bg-porcelain"
@@ -134,17 +141,38 @@ export function PhotoGallerySection() {
                   )}
                   alt={photo.alt}
                   loading="lazy"
+                  decoding="async"
                   className="photo-gallery-image block w-full"
                 />
               </button>
             </figure>
           ))}
         </div>
+        {galleryPhotos.length > 12 && (
+          <div className="mt-7 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll((current) => !current)}
+              className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+              aria-expanded={showAll}
+              aria-controls="photo-selection"
+            >
+              {showAll ? (
+                <ChevronUp className="h-4 w-4 text-champagne" aria-hidden="true" />
+              ) : (
+                <ChevronDown className="h-4 w-4 text-champagne" aria-hidden="true" />
+              )}
+              {showAll
+                ? "写真をコンパクトに戻す"
+                : `残り${galleryPhotos.length - 12}枚も見る`}
+            </button>
+          </div>
+        )}
       </div>
 
       {selectedPhoto && selectedIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-ink/95 px-3 py-4 text-white sm:px-6"
+          className="fixed inset-0 z-[80] animate-[riri-fade_180ms_ease-out] bg-ink/95 px-3 py-4 text-white sm:px-6"
           role="dialog"
           aria-modal="true"
           aria-label="写真スライドショー"

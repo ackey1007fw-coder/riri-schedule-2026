@@ -40,6 +40,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
           )}
           alt={event.title}
           loading="lazy"
+          decoding="async"
           className="block w-full object-cover object-top sm:absolute sm:inset-0 sm:h-full"
         />
       </div>
@@ -103,7 +104,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
                 href={googleCalendarUrl(event)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center justify-center gap-2 border border-champagne/60 bg-white px-4 py-3 text-sm font-bold text-ink transition hover:border-champagne hover:bg-porcelain"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 <CalendarPlus className="h-4 w-4 text-champagne" aria-hidden="true" />
                 カレンダー

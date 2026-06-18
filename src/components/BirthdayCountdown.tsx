@@ -158,7 +158,7 @@ export function BirthdayCountdown() {
                 <button
                   type="button"
                   onClick={celebrate}
-                  className="riri-lift inline-flex min-h-11 items-center gap-2 rounded-md border border-champagne/60 bg-white px-4 py-2 text-sm font-bold text-ink hover:border-champagne focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
+                  className="riri-button riri-button-soft min-h-11 rounded-md px-4 py-2 text-sm"
                   aria-label="お祝いのキラキラを贈る"
                 >
                   <PartyPopper
@@ -182,6 +182,7 @@ export function BirthdayCountdown() {
               )}
               alt={`${profile.name} gallery ${index + 1}`}
               loading="lazy"
+              decoding="async"
               className="birthday-photo h-auto w-full rounded-md border border-white shadow-sm"
             />
           ))}

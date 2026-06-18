@@ -1,4 +1,5 @@
 import type { ScheduleEvent } from "../types";
+import { ChevronDown } from "lucide-react";
 import { CalendarView } from "./CalendarView";
 import { EventCard } from "./EventCard";
 import { SectionHeader } from "./SectionHeader";
@@ -50,26 +51,33 @@ export function ScheduleSection({
           </div>
         </div>
 
-        <div className="mb-12">
-          <div className="mb-5 flex items-end justify-between gap-4 border-b border-rosefog/25 pb-4">
+        <details className="group mb-12 border-y border-rosefog/25">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 marker:hidden">
             <div>
               <p className="text-xs font-bold uppercase text-champagne">Archive</p>
               <h3 className="mt-1 font-display text-3xl text-ink">
                 終了済みイベント
               </h3>
+              <p className="mt-2 text-sm leading-6 text-ink/55">
+                これまでの出演実績を、必要なときだけ開いて確認できます。
+              </p>
             </div>
-            <span className="border border-rosefog/30 bg-porcelain px-3 py-2 text-xs font-bold text-ink/62">
+            <span className="flex shrink-0 items-center gap-2 border border-rosefog/30 bg-porcelain px-3 py-2 text-xs font-bold text-ink/62">
               {pastEvents.length}件
+              <ChevronDown
+                className="h-4 w-4 text-champagne transition group-open:rotate-180"
+                aria-hidden="true"
+              />
             </span>
-          </div>
-          <div className="grid gap-5 lg:grid-cols-2">
+          </summary>
+          <div className="grid gap-5 pb-8 pt-2 lg:grid-cols-2">
             {pastEvents.map((event) => (
               <div key={event.id} id={`event-${event.id}`} className="scroll-mt-24">
                 <EventCard event={event} compact />
               </div>
             ))}
           </div>
-        </div>
+        </details>
 
         <div id="calendar" className="scroll-mt-32">
           <div className="mb-5 flex items-end justify-between gap-4 border-b border-champagne/25 pb-4">
