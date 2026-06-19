@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { ChevronDown, ChevronUp, History } from "lucide-react";
 import { getCalendarCells, getEventsForDay, formatMonthTitle } from "../lib/date";
 import { categoryMeta } from "../lib/eventMeta";
 import type { ScheduleEvent } from "../types";
@@ -9,22 +11,67 @@ type CalendarViewProps = {
 
 const weekDays = ["日", "月", "火", "水", "木", "金", "土"];
 
+const currentMonthKey = () => {
+  const parts = new Intl.DateTimeFormat("en", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit"
+  }).formatToParts(new Date());
+  const year = parts.find((part) => part.type === "year")?.value;
+  const month = parts.find((part) => part.type === "month")?.value;
+  return `${year}-${month}`;
+};
+
 export function CalendarView({ events, monthKeys }: CalendarViewProps) {
+  const [showPastMonths, setShowPastMonths] = useState(false);
+  const thisMonth = currentMonthKey();
+  const pastMonthKeys = monthKeys.filter((monthKey) => monthKey < thisMonth);
+  const currentAndFutureMonthKeys = monthKeys.filter(
+    (monthKey) => monthKey >= thisMonth,
+  );
+  const defaultMonthKeys = currentAndFutureMonthKeys.length
+    ? currentAndFutureMonthKeys
+    : monthKeys.slice(-1);
+  const visibleMonthKeys = showPastMonths ? monthKeys : defaultMonthKeys;
+
   return (
-    <div className="grid gap-6 xl:grid-cols-3">
-      {monthKeys.map((monthKey) => {
-        const monthEvents = events.filter((event) => {
-          if (event.dates?.length) {
-            return event.dates.some((date) => date.startsWith(monthKey));
-          }
+    <div>
+      {pastMonthKeys.length > 0 && (
+        <div className="mb-5 flex justify-end">
+          <button
+            type="button"
+            onClick={() => setShowPastMonths((current) => !current)}
+            className="riri-button riri-button-soft min-h-10 px-4 py-2 text-xs sm:text-sm"
+            aria-expanded={showPastMonths}
+            aria-controls="schedule-calendar-months"
+          >
+            <History className="h-4 w-4 text-champagne" aria-hidden="true" />
+            {showPastMonths
+              ? "過去の月を閉じる"
+              : `過去${pastMonthKeys.length}か月も見る`}
+            {showPastMonths ? (
+              <ChevronUp className="h-4 w-4 text-champagne" aria-hidden="true" />
+            ) : (
+              <ChevronDown className="h-4 w-4 text-champagne" aria-hidden="true" />
+            )}
+          </button>
+        </div>
+      )}
 
-          const startMonth = event.startAt.slice(0, 7);
-          const endMonth = (event.endAt ?? event.startAt).slice(0, 7);
-          return monthKey >= startMonth && monthKey <= endMonth;
-        });
+      <div id="schedule-calendar-months" className="grid gap-6 xl:grid-cols-3">
+        {visibleMonthKeys.map((monthKey) => {
+          const monthEvents = events.filter((event) => {
+            if (event.dates?.length) {
+              return event.dates.some((date) => date.startsWith(monthKey));
+            }
 
-        return (
-        <section key={monthKey} className="riri-card border-rosefog/25 bg-white">
+            const startMonth = event.startAt.slice(0, 7);
+            const endMonth = (event.endAt ?? event.startAt).slice(0, 7);
+            return monthKey >= startMonth && monthKey <= endMonth;
+          });
+
+          return (
+            <section key={monthKey} className="riri-card border-rosefog/25 bg-white">
           <div className="border-b border-rosefog/20 bg-porcelain px-4 py-4">
             <h3 className="font-display text-2xl text-ink">
               {formatMonthTitle(monthKey)}
@@ -100,9 +147,10 @@ export function CalendarView({ events, monthKeys }: CalendarViewProps) {
               );
             })}
           </div>
-        </section>
-        );
-      })}
+            </section>
+          );
+        })}
+      </div>
     </div>
   );
 }

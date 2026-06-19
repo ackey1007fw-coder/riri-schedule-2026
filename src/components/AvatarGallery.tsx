@@ -1,10 +1,15 @@
 import { useState } from "react";
-import { Crown } from "lucide-react";
+import { ChevronDown, ChevronUp, Crown } from "lucide-react";
 import { profile } from "../data/profile";
 import { Photo } from "./Photo";
 
 export function AvatarGallery() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  const initialCount = 8;
+  const visibleAvatars = showAll
+    ? profile.avatars
+    : profile.avatars.slice(0, initialCount);
 
   const animateAvatar = (index: number) => {
     setActiveIndex(null);
@@ -27,8 +32,11 @@ export function AvatarGallery() {
         </span>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-        {profile.avatars.map((avatar, index) => (
+      <div
+        id="avatar-gallery-list"
+        className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+      >
+        {visibleAvatars.map((avatar, index) => (
           <button
             type="button"
             key={avatar.name}
@@ -45,7 +53,7 @@ export function AvatarGallery() {
                 alt={avatar.name}
                 className="aspect-square border border-rosefog/15"
                 imageClassName="object-contain p-4"
-                loading="eager"
+                loading={index < 4 ? "eager" : "lazy"}
               />
             </div>
             <div className="mt-3 flex min-h-10 items-center justify-between gap-2">
@@ -57,6 +65,27 @@ export function AvatarGallery() {
           </button>
         ))}
       </div>
+
+      {profile.avatars.length > initialCount && (
+        <div className="mt-6 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowAll((current) => !current)}
+            className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+            aria-expanded={showAll}
+            aria-controls="avatar-gallery-list"
+          >
+            {showAll ? (
+              <ChevronUp className="h-4 w-4 text-champagne" aria-hidden="true" />
+            ) : (
+              <ChevronDown className="h-4 w-4 text-champagne" aria-hidden="true" />
+            )}
+            {showAll
+              ? "アバターをコンパクトに戻す"
+              : `残り${profile.avatars.length - initialCount}種も見る`}
+          </button>
+        </div>
+      )}
     </div>
   );
 }

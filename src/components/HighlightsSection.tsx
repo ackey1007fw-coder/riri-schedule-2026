@@ -1,4 +1,11 @@
-import { ArrowUpRight, Sparkles, Trophy } from "lucide-react";
+import { useState } from "react";
+import {
+  ArrowUpRight,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  Trophy
+} from "lucide-react";
 import { highlights } from "../data/highlights";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { SectionHeader } from "./SectionHeader";
@@ -9,6 +16,12 @@ const sortedHighlights = [...highlights].sort((a, b) =>
 );
 
 export function HighlightsSection() {
+  const [showAll, setShowAll] = useState(false);
+  const initialCount = 4;
+  const visibleHighlights = showAll
+    ? sortedHighlights
+    : sortedHighlights.slice(0, initialCount);
+
   if (sortedHighlights.length === 0) {
     return null;
   }
@@ -22,8 +35,8 @@ export function HighlightsSection() {
           copy="ドラマ、MV、CM、舞台に受賞まで。里季ちゃんがこれまで歩んできた道のり。"
         />
 
-        <div className="grid gap-3 md:grid-cols-2">
-          {sortedHighlights.map((item) => {
+        <div id="highlight-list" className="grid gap-3 md:grid-cols-2">
+          {visibleHighlights.map((item) => {
             const links = item.links ?? (item.link ? [item.link] : []);
 
             return (
@@ -86,6 +99,27 @@ export function HighlightsSection() {
             );
           })}
         </div>
+
+        {sortedHighlights.length > initialCount && (
+          <div className="mt-7 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll((current) => !current)}
+              className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+              aria-expanded={showAll}
+              aria-controls="highlight-list"
+            >
+              {showAll ? (
+                <ChevronUp className="h-4 w-4 text-champagne" aria-hidden="true" />
+              ) : (
+                <ChevronDown className="h-4 w-4 text-champagne" aria-hidden="true" />
+              )}
+              {showAll
+                ? "歩みをコンパクトに戻す"
+                : `過去の活動をあと${sortedHighlights.length - initialCount}件見る`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

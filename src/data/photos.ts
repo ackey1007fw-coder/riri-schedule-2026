@@ -36,9 +36,15 @@ export const galleryPhotos: GalleryPhoto[] = [
   { src: "/images/gallery/g29.jpg", alt: "麻辣湯を前にサムズアップで笑う夏凪里季さん" }
 ];
 
-// 最新の更新お知らせ（Instagram更新時にここを書き換える）
-export const galleryUpdate = {
+// 最新のギャラリー更新お知らせ
+export const galleryUpdate: {
+  date: string;
+  platform: "X" | "Instagram";
+  note: string;
+  url: string;
+} = {
   date: "2026.6.19",
+  platform: "X",
   note: "「麻辣湯に野菜は要らない」笑顔のセルフィー",
   url: "https://x.com/frecam2025_0306/status/2067775746735820830"
 };

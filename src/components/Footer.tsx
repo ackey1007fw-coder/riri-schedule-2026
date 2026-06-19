@@ -1,4 +1,5 @@
 import { Share2 } from "lucide-react";
+import { news } from "../data/news";
 import { profile } from "../data/profile";
 import { SITE_URL, xShareUrl } from "../lib/share";
 import type { SocialLink } from "../types";
@@ -11,6 +12,9 @@ type FooterProps = {
 
 export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
   const year = new Date().getFullYear();
+  const displayUpdatedAt = updatedAt
+    ? new Date(updatedAt).toLocaleString("ja-JP")
+    : news[0]?.date ?? "—";
 
   return (
     <footer className="border-t border-rosefog/20 bg-ink px-4 py-12 text-white sm:px-6 lg:px-8">
@@ -22,8 +26,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
               {profile.theme}｜非公式の応援スケジュール（ファン制作）
             </p>
             <p className="mt-4 text-xs text-white/45">
-              最終更新：
-              {updatedAt ? new Date(updatedAt).toLocaleString("ja-JP") : "—"}
+              掲載情報更新：{displayUpdatedAt}
               （データ: {source === "sheets" ? "Google Sheets" : "内蔵データ"}）
             </p>
           </div>

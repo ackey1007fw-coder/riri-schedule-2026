@@ -250,6 +250,7 @@ img {
 
 .quick-nav-scroll {
   scrollbar-width: none;
+  scroll-snap-type: x proximity;
 }
 
 .quick-nav-scroll::-webkit-scrollbar {

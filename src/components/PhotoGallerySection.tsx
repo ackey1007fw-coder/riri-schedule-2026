@@ -6,6 +6,7 @@ import {
   ChevronUp,
   Images,
   Instagram,
+  MessageCircle,
   Pause,
   Play,
   Sparkles,
@@ -27,6 +28,8 @@ export function PhotoGallerySection() {
 
   const selectedPhoto =
     selectedIndex === null ? null : galleryPhotos[selectedIndex];
+  const GalleryUpdateIcon =
+    galleryUpdate.platform === "Instagram" ? Instagram : MessageCircle;
 
   const openPhoto = (index: number) => {
     setSelectedIndex(index);
@@ -108,14 +111,14 @@ export function PhotoGallerySection() {
           className="riri-lift mt-6 flex items-center gap-3 border border-champagne/40 bg-white px-4 py-3 text-sm font-bold text-ink hover:border-champagne hover:bg-porcelain"
         >
           <span className="grid h-9 w-9 shrink-0 place-items-center border border-champagne/50 bg-porcelain text-champagne">
-            <Instagram className="h-4 w-4" aria-hidden="true" />
+            <GalleryUpdateIcon className="h-4 w-4" aria-hidden="true" />
           </span>
           <span className="min-w-0">
             <span className="block text-[11px] font-black uppercase tracking-wide text-champagne">
               New ・ {galleryUpdate.date}
             </span>
             <span className="block leading-snug">
-              {galleryUpdate.note} — Instagramで見る
+              {galleryUpdate.note} — {galleryUpdate.platform}で見る
             </span>
           </span>
         </a>
