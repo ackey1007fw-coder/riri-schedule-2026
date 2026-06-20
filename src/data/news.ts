@@ -10,7 +10,7 @@ export const news: NewsItem[] = [
   {
     date: "2026.6.20",
     label: "X",
-    text: "Xに新しいポストが届きました",
+    text: "「JRさん頑張りすぎてない⁉️」過剰謝罪にゆるっとツッコミ",
     url: "https://x.com/frecam2025_0306/status/2068251058242240805"
   },
   {
