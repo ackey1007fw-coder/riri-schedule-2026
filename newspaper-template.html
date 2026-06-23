@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>見学新聞 テンプレート（枠だけ）</title>
+<style>
+  :root{
+    --ink:#1a1a1a;        /* 枠の色 */
+    --line:#c9c9c9;       /* 書く時のうすいガイド線 */
+    --pic:#eef4fb;        /* 絵・写真マスのうすい色 */
+    --gap:3mm;            /* マスのすきま */
+    --bw:1.4mm;           /* 外わくの太さ */
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#777; }
+
+  /* 画面で見るとき用の余白 */
+  .page-wrap{
+    display:flex; justify-content:center; padding:8mm;
+  }
+
+  /* A4 横（中身が空っぽの“わく”） */
+  .paper{
+    width:297mm; height:210mm;
+    background:#fff;
+    border:var(--bw) solid var(--ink);
+    padding:6mm;
+    display:grid;
+    grid-template-columns: 1fr 34mm;   /* 左=記事エリア / 右=題字エリア */
+    gap:var(--gap);
+  }
+
+  /* ───────── 右の題字（タイトル）スペース ───────── */
+  .masthead{
+    border:1mm solid var(--ink);
+    display:grid;
+    grid-template-rows: 26mm 1fr;      /* 上=名前/日づけ枠 / 下=大きな題字枠 */
+  }
+  .byline{ border-bottom:1mm solid var(--ink); }
+  .title-space{}                       /* ここに新聞名をタテ書き */
+
+  /* ───────── 左の記事エリア ───────── */
+  .grid{
+    display:grid;
+    gap:var(--gap);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "art1 pic1"
+      "art1 art2"
+      "pic2 art2"
+      "pic2 art3";
+  }
+  .cell{ border:0.8mm solid var(--ink); }
+
+  .a-art1{ grid-area:art1; }
+  .a-pic1{ grid-area:pic1; }
+  .a-art2{ grid-area:art2; }
+  .a-pic2{ grid-area:pic2; }
+  .a-art3{ grid-area:art3; }
+
+  /* 記事マス：タテ書き用のうすいガイド線（右→左の列） */
+  .article{
+    background:
+      repeating-linear-gradient(
+        to left,
+        transparent 0, transparent 7.5mm,
+        var(--line) 7.5mm, var(--line) calc(7.5mm + 0.2mm)
+      );
+  }
+
+  /* 絵・写真マス */
+  .picture{ background:var(--pic); }
+
+  /* 印刷設定：A4横・余白なし・色を残す */
+  @page{ size:A4 landscape; margin:0; }
+  @media print{
+    html,body{ background:#fff; }
+    .page-wrap{ padding:0; }
+    .paper{ border-width:1.2mm; }
+    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
+</style>
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="paper">
+
+      <!-- 左：記事＋絵のマス -->
+      <div class="grid">
+        <div class="cell article a-art1"></div>
+        <div class="cell picture a-pic1"></div>
+        <div class="cell article a-art2"></div>
+        <div class="cell picture a-pic2"></div>
+        <div class="cell article a-art3"></div>
+      </div>
+
+      <!-- 右：題字（タイトル）スペース -->
+      <div class="masthead">
+        <div class="byline"></div>
+        <div class="title-space"></div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
