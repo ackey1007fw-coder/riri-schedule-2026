@@ -56,7 +56,8 @@ export const galleryPhotos: GalleryPhoto[] = [
   { src: "/images/gallery/g30.jpg", alt: "黒ジャケットの夏コーデでほほえむ夏凪里季さん（今日の夏凪）" },
   { src: "/images/gallery/g31.jpg", alt: "久しぶりのピンクネイルを見せる夏凪里季さん" },
   { src: "/images/gallery/g32.jpg", alt: "けいかさんの一日店長イベントでチェキスタッフを務めた夏凪里季さんとの集合写真" },
-  { src: "/images/gallery/g33.jpg", alt: "シャンパングラスを手にした夏凪里季さん（20歳前日・今日まではノンアル）" }
+  { src: "/images/gallery/g33.jpg", alt: "シャンパングラスを手にした夏凪里季さん（20歳前日・今日まではノンアル）" },
+  { src: "/images/gallery/g52.jpg", alt: "ステーキ店でハンバーグを前に猫の手ポーズでおどける夏凪里季さん" }
 ];
 
 // 最新のギャラリー更新お知らせ
