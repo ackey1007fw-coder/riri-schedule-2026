@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.6.25",
+    label: "X",
+    text: "「たくさんのお祝いありがとうございます🥹💕」20歳のお祝いへの感謝ポスト",
+    url: "https://x.com/frecam2025_0306/status/2069937553705419224"
+  },
+  {
     date: "2026.6.24",
     label: "Instagramストーリー",
     text: "「20歳になりました✨」振袖姿で南天を手にした記念ショット",

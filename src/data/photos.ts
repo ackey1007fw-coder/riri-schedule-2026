@@ -5,6 +5,8 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.6.25 20歳のお祝いへの感謝ポスト。振袖姿の後ろ姿と「20」バルーン。
+  { src: "/images/gallery/g55.jpg", alt: "20歳のバルーンを手に振袖姿で後ろ姿を見せる夏凪里季さん" },
   // 2026.6.24 20歳のお誕生日。振袖姿の記念ポートレート（ご本人X投稿／インスタストーリー）。
   { src: "/images/gallery/g54.jpg", alt: "振袖姿で南天の枝を手に振り返る、20歳になった夏凪里季さん（インスタストーリー）" },
   { src: "/images/gallery/g53.jpg", alt: "振袖姿で赤い和傘を手に、20歳の誕生日を迎えた夏凪里季さんの記念ポートレート" },
@@ -70,8 +72,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.6.24",
+  date: "2026.6.25",
   platform: "X",
-  note: "「ハタチになりました㊗️🎂✨️」20歳記念の振袖ポートレート",
-  url: "https://x.com/frecam2025_0306/status/2069622787602538770"
+  note: "「たくさんのお祝いありがとうございます🥹💕」20歳のお祝いへの感謝ポスト",
+  url: "https://x.com/frecam2025_0306/status/2069937553705419224"
 };
