@@ -209,7 +209,7 @@ export function PhotoGallerySection() {
 
       {selectedPhoto && selectedIndex !== null && (
         <div
-          className="fixed inset-0 z-[80] animate-[riri-fade_180ms_ease-out] bg-ink/95 px-3 py-4 text-white sm:px-6"
+          className="fixed inset-0 z-[999] h-[100dvh] overscroll-contain bg-ink px-3 py-4 text-white sm:px-6"
           role="dialog"
           aria-modal="true"
           aria-label="写真スライドショー"

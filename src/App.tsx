@@ -138,9 +138,7 @@ function App() {
         <SectionReveal>
           <HighlightsSection />
         </SectionReveal>
-        <SectionReveal>
-          <PhotoGallerySection />
-        </SectionReveal>
+        <PhotoGallerySection />
         <SectionReveal>
           <BirthdayCountdown />
         </SectionReveal>
