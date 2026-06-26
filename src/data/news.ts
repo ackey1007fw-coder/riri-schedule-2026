@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.6.26",
+    label: "TikTok",
+    text: "「可愛い子に吹いてる風はここから？」ピンクのパーカーで笑顔のショート動画",
+    url: "https://vt.tiktok.com/ZSCMCTCn4/"
+  },
+  {
     date: "2026.6.25",
     label: "ファンルーム",
     text: "「新作飲んだ♪」スターバックスの新作ドリンクを楽しむ近況（ナギイチサマーの集い）",
