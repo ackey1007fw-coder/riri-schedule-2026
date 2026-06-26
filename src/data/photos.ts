@@ -5,6 +5,8 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.6.26 TikTok「可愛い子に吹いてる風はここから？」のサムネ
+  { src: "/images/gallery/g57.jpg", alt: "ピンクのパーカーで目を閉じて笑う夏凪里季さん（TikTok「可愛い子に吹いてる風はここから？」）" },
   // 2026.6.24-25 20歳のお誕生日・お礼。振袖姿の記念ポートレート（ご本人X投稿／インスタストーリー）。
   { src: "/images/gallery/g55.jpg", alt: "水色〜黄色のグラデーション着物で、シルバーの「20」バルーンを掲げる後ろ姿の夏凪里季さん（20歳記念）" },
   { src: "/images/gallery/g54.jpg", alt: "振袖姿で南天の枝を手に振り返る、20歳になった夏凪里季さん（インスタストーリー）" },
@@ -69,12 +71,12 @@ export const galleryPhotos: GalleryPhoto[] = [
 // 最新のギャラリー更新お知らせ
 export const galleryUpdate: {
   date: string;
-  platform: "X" | "Instagram";
+  platform: "X" | "Instagram" | "TikTok";
   note: string;
   url: string;
 } = {
-  date: "2026.6.25",
-  platform: "X",
-  note: "「たくさんのお祝いありがとうございます🥹💕」20歳バルーンの記念ショット",
-  url: "https://x.com/frecam2025_0306/status/2069937553705419224"
+  date: "2026.6.26",
+  platform: "TikTok",
+  note: "「可愛い子に吹いてる風はここから？」ピンクのパーカーで笑う最新TikTok",
+  url: "https://vt.tiktok.com/ZSCMCTCn4/"
 };

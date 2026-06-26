@@ -20,6 +20,8 @@ import { NextEvent } from "./components/NextEvent";
 import { NewsBar } from "./components/NewsBar";
 import { PetSection } from "./components/PetSection";
 import { QuickNav } from "./components/QuickNav";
+import { ScrollToTop } from "./components/ScrollToTop";
+import { SectionReveal } from "./components/SectionReveal";
 import { Slideshow } from "./components/Slideshow";
 import { PhotoGallerySection } from "./components/PhotoGallerySection";
 import { ProfileSection } from "./components/ProfileSection";
@@ -59,22 +61,28 @@ function App() {
     };
   }, []);
 
-  const normalizedSchedule = useMemo(() => schedule, [schedule]);
-
-  if (!normalizedSchedule) {
+  if (!schedule) {
     return (
       <div className="grid min-h-screen place-items-center bg-porcelain px-6 text-center text-ink">
-        <div>
-          <p className="mb-3 text-xs font-bold uppercase text-champagne">
-            Riri Schedule 2026
-          </p>
-          <p className="font-display text-3xl">Fan Scheduleを準備中です</p>
+        <div className="flex flex-col items-center gap-5">
+          <div className="riri-skeleton h-16 w-16 rounded-full" />
+          <div>
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-champagne">
+              Riri Schedule 2026
+            </p>
+            <p className="font-display text-3xl">Fan Scheduleを準備中です</p>
+          </div>
+          <div className="mt-2 flex gap-3">
+            <div className="riri-skeleton h-3 w-20 rounded" />
+            <div className="riri-skeleton h-3 w-16 rounded" />
+            <div className="riri-skeleton h-3 w-24 rounded" />
+          </div>
         </div>
       </div>
     );
   }
 
-  const { events, socialLinks, mediaLinks, source, updatedAt } = normalizedSchedule;
+  const { events, socialLinks, mediaLinks, source, updatedAt } = schedule;
   const now = new Date();
   const upcomingEvents = sortEventsAsc(
     events.filter((event) => !isEventPast(event, now)),
@@ -103,36 +111,71 @@ function App() {
         <BirthdayCelebration />
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
         <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
-        <TodayDashboard events={events} socialLinks={socialLinks} />
-        <MagazineSpread nextEvent={nextEvent} />
-        <CharmSection />
+        <SectionReveal>
+          <TodayDashboard events={events} socialLinks={socialLinks} />
+        </SectionReveal>
+        <SectionReveal>
+          <MagazineSpread nextEvent={nextEvent} />
+        </SectionReveal>
+        <SectionReveal>
+          <CharmSection />
+        </SectionReveal>
         <Slideshow />
-        <ClipSection />
-        <NextEvent event={nextEvent} />
-        <ScheduleSection
-          upcomingEvents={upcomingEvents}
-          pastEvents={pastEvents}
-          allEvents={events}
-          monthKeys={monthKeys}
-        />
-        <HighlightsSection />
-        <PhotoGallerySection />
-        <BirthdayCountdown />
-        <ShowroomSection />
-        <ProfileSection />
-        <PetSection />
-        <InterviewSection />
-        <FanLetterSection />
-        <SupportersSection />
+        <SectionReveal>
+          <ClipSection />
+        </SectionReveal>
+        <SectionReveal>
+          <NextEvent event={nextEvent} />
+        </SectionReveal>
+        <SectionReveal>
+          <ScheduleSection
+            upcomingEvents={upcomingEvents}
+            pastEvents={pastEvents}
+            allEvents={events}
+            monthKeys={monthKeys}
+          />
+        </SectionReveal>
+        <SectionReveal>
+          <HighlightsSection />
+        </SectionReveal>
+        <SectionReveal>
+          <PhotoGallerySection />
+        </SectionReveal>
+        <SectionReveal>
+          <BirthdayCountdown />
+        </SectionReveal>
+        <SectionReveal>
+          <ShowroomSection />
+        </SectionReveal>
+        <SectionReveal>
+          <ProfileSection />
+        </SectionReveal>
+        <SectionReveal>
+          <PetSection />
+        </SectionReveal>
+        <SectionReveal>
+          <InterviewSection />
+        </SectionReveal>
+        <SectionReveal>
+          <FanLetterSection />
+        </SectionReveal>
+        <SectionReveal>
+          <SupportersSection />
+        </SectionReveal>
         <SearchSeoSection />
-        <LinksSection socialLinks={socialLinks} mediaLinks={mediaLinks} />
-        <ShareSection />
+        <SectionReveal>
+          <LinksSection socialLinks={socialLinks} mediaLinks={mediaLinks} />
+        </SectionReveal>
+        <SectionReveal>
+          <ShareSection />
+        </SectionReveal>
       </main>
       <Footer
         socialLinks={socialLinks}
         source={source}
         updatedAt={updatedAt}
       />
+      <ScrollToTop />
       <MobileActionDock nextEvent={nextEvent} socialLinks={socialLinks} />
       <StructuredData />
       <Analytics />

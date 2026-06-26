@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { shuffle, showcasePhotos } from "../lib/showcasePhotos";
@@ -33,6 +33,25 @@ export function Slideshow() {
     return () => window.clearInterval(timer);
   }, [playing, count]);
 
+  const touchStart = useRef(0);
+  const touchStartY = useRef(0);
+
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStart.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  }, []);
+
+  const onTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      const dx = e.changedTouches[0].clientX - touchStart.current;
+      const dy = e.changedTouches[0].clientY - touchStartY.current;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        go(dx < 0 ? 1 : -1);
+      }
+    },
+    [go],
+  );
+
   if (count === 0) return null;
 
   const photo = photos[index];
@@ -66,7 +85,11 @@ export function Slideshow() {
           </div>
         </div>
 
-        <div className="relative grid h-[56vh] place-items-center overflow-hidden border border-white bg-white sm:h-[64vh]">
+        <div
+          className="relative grid h-[56vh] place-items-center overflow-hidden border border-white bg-white sm:h-[64vh]"
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
           <img
             key={index}
             {...getResponsiveImageProps(photo.src, "(min-width: 1024px) 896px, 100vw")}

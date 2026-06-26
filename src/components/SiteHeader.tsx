@@ -1,14 +1,43 @@
+import { useEffect, useState } from "react";
 import { CalendarDays } from "lucide-react";
 import { profile } from "../data/profile";
 import type { SocialLink } from "../types";
 
 const navItems = [
-  { label: "次の出演", href: "#next" },
-  { label: "スケジュール", href: "#schedule" },
-  { label: "これまでの歩み", href: "#highlights" },
-  { label: "SHOWROOM", href: "#showroom" },
-  { label: "プロフィール", href: "#profile" }
+  { label: "次の出演", href: "#next", id: "next" },
+  { label: "スケジュール", href: "#schedule", id: "schedule" },
+  { label: "これまでの歩み", href: "#highlights", id: "highlights" },
+  { label: "SHOWROOM", href: "#showroom", id: "showroom" },
+  { label: "プロフィール", href: "#profile", id: "profile" }
 ];
+
+function useActiveSection() {
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const ids = navItems.map((item) => item.id);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length > 0) {
+          setActive(visible[0].target.id);
+        }
+      },
+      { rootMargin: "-80px 0px -40% 0px", threshold: 0 },
+    );
+
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return active;
+}
 
 type SiteHeaderProps = {
   socialLinks: SocialLink[];
@@ -16,6 +45,7 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ socialLinks }: SiteHeaderProps) {
   const showroom = socialLinks.find((link) => link.kind === "showroom");
+  const activeSection = useActiveSection();
 
   return (
     <header className="sticky top-0 z-50 border-b border-rosefog/20 bg-porcelain/88 backdrop-blur-xl">
@@ -36,7 +66,15 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
 
         <nav className="hidden items-center gap-5 text-sm font-semibold text-ink/70 md:flex">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="hover:text-ink">
+            <a
+              key={item.href}
+              href={item.href}
+              className={`transition-colors ${
+                activeSection === item.id
+                  ? "text-champagne"
+                  : "hover:text-ink"
+              }`}
+            >
               {item.label}
             </a>
           ))}

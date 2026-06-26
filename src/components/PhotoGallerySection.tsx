@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ChevronDown,
   ChevronLeft,
@@ -18,6 +18,30 @@ import { SectionHeader } from "./SectionHeader";
 
 const wrapIndex = (index: number) =>
   (index + galleryPhotos.length) % galleryPhotos.length;
+
+function useSwipe(onLeft: () => void, onRight: () => void) {
+  const startX = useRef(0);
+  const startY = useRef(0);
+
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    startX.current = e.touches[0].clientX;
+    startY.current = e.touches[0].clientY;
+  }, []);
+
+  const onTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      const dx = e.changedTouches[0].clientX - startX.current;
+      const dy = e.changedTouches[0].clientY - startY.current;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        if (dx < 0) onLeft();
+        else onRight();
+      }
+    },
+    [onLeft, onRight],
+  );
+
+  return { onTouchStart, onTouchEnd };
+}
 
 export function PhotoGallerySection() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -72,6 +96,8 @@ export function PhotoGallerySection() {
     const timer = window.setInterval(showNext, 3800);
     return () => window.clearInterval(timer);
   }, [isPlaying, selectedIndex, showNext]);
+
+  const swipeHandlers = useSwipe(showNext, showPrevious);
 
   useEffect(() => {
     document.body.style.overflow = selectedIndex === null ? "" : "hidden";
@@ -222,7 +248,11 @@ export function PhotoGallerySection() {
               </div>
             </div>
 
-            <div className="relative mt-4 grid min-h-0 flex-1 place-items-center">
+            <div
+              className="relative mt-4 grid min-h-0 flex-1 place-items-center"
+              onTouchStart={swipeHandlers.onTouchStart}
+              onTouchEnd={swipeHandlers.onTouchEnd}
+            >
               <button
                 type="button"
                 onClick={showPrevious}

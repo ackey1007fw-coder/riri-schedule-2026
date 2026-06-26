@@ -13,6 +13,14 @@ export type VideoClip = {
 
 export const clips: VideoClip[] = [
   {
+    src: "/videos/tiktok-2026-06-26.mp4",
+    platform: "TikTok",
+    title: "可愛い子に吹いてる風はここから？",
+    caption: "ピンクのパーカーで笑う夏凪里季さん。#06 #女子大生",
+    date: "2026.6.26",
+    url: "https://vt.tiktok.com/ZSCMCTCn4/"
+  },
+  {
     src: "/videos/tiktok-2026-06-25.mp4",
     platform: "TikTok",
     title: "疲れてるんならやめれば？",
