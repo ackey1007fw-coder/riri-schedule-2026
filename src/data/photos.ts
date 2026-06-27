@@ -5,6 +5,9 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.6.27 X「初めてのお酒🍻1杯で赤くなった」
+  { src: "/images/gallery/g58.jpg", alt: "居酒屋で初めてのお酒（SUNTORYのグラス）を掲げる夏凪里季さん。黒スウェットに赤い「iii」ロゴ" },
+  { src: "/images/gallery/g59.jpg", alt: "グラスを口に当ててお酒を飲む夏凪里季さん。ほんのり頰が赤くなった横顔" },
   // 2026.6.26 TikTok「可愛い子に吹いてる風はここから？」のサムネ
   { src: "/images/gallery/g57.jpg", alt: "ピンクのパーカーで目を閉じて笑う夏凪里季さん（TikTok「可愛い子に吹いてる風はここから？」）" },
   // 2026.6.24-25 20歳のお誕生日・お礼。振袖姿の記念ポートレート（ご本人X投稿／インスタストーリー）。
@@ -75,8 +78,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.6.26",
-  platform: "TikTok",
-  note: "「可愛い子に吹いてる風はここから？」ピンクのパーカーで笑う最新TikTok",
-  url: "https://vt.tiktok.com/ZSCMCTCn4/"
+  date: "2026.6.27",
+  platform: "X",
+  note: "「初めてのお酒🍻1杯で赤くなった」居酒屋での初お酒セルフィー",
+  url: "https://x.com/frecam2025_0306/status/2070815544035651856"
 };
