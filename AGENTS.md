@@ -28,9 +28,48 @@ npm run dev   # http://127.0.0.1:5173 でローカル確認
 ## データの場所（ここを編集する）
 - `src/data/events.ts` … 出演・イベント一覧。**実際に画面に出る元データ**（`VITE_SCHEDULE_API_URL` 未設定時の fallback 経路で events.ts がそのまま使われる）。
 - `src/data/profile.ts` … プロフィール、`heroImage` / `portraitImage` / `gallery`、SHOWROOM統計のフォールバック値、アバター。
-- `src/data/photos.ts` … フォトギャラリー（メイソンリー）の写真。
+- `src/data/news.ts` … トップのお知らせバー。新しいものを**配列の先頭**に追加。
+- `src/data/photos.ts` … フォトギャラリー（メイソンリー）の写真＋ `galleryUpdate`（ギャラリー更新お知らせ）。
+- `src/data/clips.ts` … TikTok / Instagram のショート動画。ミュート自動ループで表示。新しいものを**配列の先頭**に追加。
+- `src/data/highlights.ts` … これまでの歩み（受賞・メディア・舞台など）。
 - `src/lib/eventImages.ts` … API経路用の画像マップ（ローカルパスで統一済み）。
 - `api/showroom.js` … SHOWROOM統計のリアルタイム取得（`room_id=550336`）。
+
+## SNS 投稿を追加する手順（チェックリスト）
+
+りりがSNS（X / Instagram / TikTok）に新しい投稿をしたとき、以下を更新する。
+
+### 1. 画像を配置
+- 写真を `public/images/gallery/g{次の番号}.jpg` に保存。
+- 番号は既存の最大値 +1 の連番（`ls public/images/gallery/ | sort -V | tail -1` で確認）。
+- 動画がある場合は `public/videos/` にも配置（命名: `tiktok-YYYY-MM-DD.mp4` / `instagram-YYYY-MM-DD.mp4`）。
+
+### 2. `src/data/news.ts` — お知らせ追加
+- 配列の**先頭**に追加。
+- `date`: `"YYYY.M.D"` 形式（例: `"2026.6.27"`）。
+- `label`: `"X"` / `"Instagram"` / `"TikTok"` など出どころ。
+- `text`: 投稿の引用テキスト＋簡潔な説明。
+- `url`: 元の投稿URL。
+
+### 3. `src/data/photos.ts` — ギャラリー追加
+- `galleryPhotos` 配列の**先頭**に追加。
+- `src`: `/images/gallery/g{番号}.jpg`。
+- `alt`: 写真の内容を具体的に書く（アクセシビリティ用）。
+- `galleryUpdate` オブジェクトも最新投稿の情報に更新する。
+
+### 4. `src/data/clips.ts` — 動画追加（動画がある場合のみ）
+- `clips` 配列の**先頭**に追加。
+- `src`: `/videos/tiktok-YYYY-MM-DD.mp4` など。
+- `platform`: `"TikTok"` / `"Instagram"`。
+- `title`: 投稿のキャプション。
+- `caption`: 一言説明。
+- `bgm`: BGMがあれば記載（任意）。
+- `url`: 元の投稿URL。
+
+### 5. 確認 → コミット → PR → マージ
+- `npx tsc --noEmit` で型チェック。
+- コミット → push → PR作成 → main にマージ。
+- Vercel が自動デプロイ → https://riri-schedule-2026.vercel.app/ に反映。
 
 ## 画像の扱い（重要）
 - **画像はすべてリポジトリ内 `public/images/` に自己ホスト**。Google Drive のサムネ直リンクは本番で失敗しやすいので**使わない**。参照は `/images/...`。
