@@ -9,6 +9,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.6.27",
+    label: "Instagram",
+    text: "「20♡」大学のお友達が20歳のお祝いをしてくれました✨️ バースデープレートと花束の誕生日パーティー",
+    url: "https://www.instagram.com/p/DaFlCneidrP/"
+  },
+  {
+    date: "2026.6.27",
     label: "X",
     text: "「初めてのお酒🍻1杯で赤くなった🙂‍↕️」居酒屋で人生初のお酒を楽しむセルフィー2枚",
     url: "https://x.com/frecam2025_0306/status/2070815544035651856"

@@ -5,6 +5,10 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.6.27 Instagram「20♡」大学のお友達が20歳のお祝い
+  { src: "/images/gallery/g60.jpg", alt: "「Riri Happy 20th Birthday」のバースデープレート。マカロンやケーキ、キャンドルと黄色いバラの花束" },
+  { src: "/images/gallery/g61.jpg", alt: "白いレースのトップスでバースデープレートの前に座り笑顔の夏凪里季さん（20歳の誕生日パーティー）" },
+  { src: "/images/gallery/g62.jpg", alt: "黄色いバラの花束を抱え、CHARLES & KEITHのプレゼントと一緒に笑顔の夏凪里季さん" },
   // 2026.6.27 X「初めてのお酒🍻1杯で赤くなった」
   { src: "/images/gallery/g58.jpg", alt: "居酒屋で初めてのお酒（SUNTORYのグラス）を掲げる夏凪里季さん。黒スウェットに赤い「iii」ロゴ" },
   { src: "/images/gallery/g59.jpg", alt: "グラスを口に当ててお酒を飲む夏凪里季さん。ほんのり頰が赤くなった横顔" },
@@ -79,7 +83,7 @@ export const galleryUpdate: {
   url: string;
 } = {
   date: "2026.6.27",
-  platform: "X",
-  note: "「初めてのお酒🍻1杯で赤くなった」居酒屋での初お酒セルフィー",
-  url: "https://x.com/frecam2025_0306/status/2070815544035651856"
+  platform: "Instagram",
+  note: "「20♡」大学のお友達が20歳のお祝い🎂 バースデープレート＆花束の誕生日パーティー",
+  url: "https://www.instagram.com/p/DaFlCneidrP/"
 };
