@@ -13,6 +13,14 @@ export type VideoClip = {
 
 export const clips: VideoClip[] = [
   {
+    src: "/videos/tiktok-2026-06-27.mp4",
+    platform: "TikTok",
+    title: "階段を登ったら、、、",
+    caption: "愛犬カルアちゃんが階段の上からひょっこり。つぶらな瞳がたまらない🐶",
+    date: "2026.6.27",
+    url: "https://vt.tiktok.com/ZSCkNCo4k/"
+  },
+  {
     src: "/videos/tiktok-2026-06-26.mp4",
     platform: "TikTok",
     title: "可愛い子に吹いてる風はここから？",

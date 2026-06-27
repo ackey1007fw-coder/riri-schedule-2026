@@ -9,6 +9,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.6.27",
+    label: "TikTok",
+    text: "「階段を登ったら、、、」愛犬カルアちゃんが階段の上からひょっこり顔を出すショート動画",
+    url: "https://vt.tiktok.com/ZSCkNCo4k/"
+  },
+  {
+    date: "2026.6.27",
     label: "Instagram",
     text: "「20♡」大学のお友達が20歳のお祝いをしてくれました✨️ バースデープレートと花束の誕生日パーティー",
     url: "https://www.instagram.com/p/DaFlCneidrP/"

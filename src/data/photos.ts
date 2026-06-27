@@ -5,6 +5,8 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.6.27 TikTok「階段を登ったら、、、」カルアちゃん
+  { src: "/images/gallery/g63.jpg", alt: "階段の上から顔をのぞかせる愛犬カルアちゃん（TikTok「階段を登ったら、、、」）" },
   // 2026.6.27 Instagram「20♡」大学のお友達が20歳のお祝い
   { src: "/images/gallery/g60.jpg", alt: "「Riri Happy 20th Birthday」のバースデープレート。マカロンやケーキ、キャンドルと黄色いバラの花束" },
   { src: "/images/gallery/g61.jpg", alt: "白いレースのトップスでバースデープレートの前に座り笑顔の夏凪里季さん（20歳の誕生日パーティー）" },
@@ -83,7 +85,7 @@ export const galleryUpdate: {
   url: string;
 } = {
   date: "2026.6.27",
-  platform: "Instagram",
-  note: "「20♡」大学のお友達が20歳のお祝い🎂 バースデープレート＆花束の誕生日パーティー",
-  url: "https://www.instagram.com/p/DaFlCneidrP/"
+  platform: "TikTok",
+  note: "「階段を登ったら、、、」愛犬カルアちゃんがひょっこり🐶",
+  url: "https://vt.tiktok.com/ZSCkNCo4k/"
 };
