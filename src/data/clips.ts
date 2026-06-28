@@ -13,6 +13,14 @@ export type VideoClip = {
 
 export const clips: VideoClip[] = [
   {
+    src: "/videos/tiktok-2026-06-28.mp4",
+    platform: "TikTok",
+    title: "犬って人間の4倍の速度で時間が進んでるらしい",
+    caption: "車内で愛犬カルアちゃんを抱きしめる夏凪里季さん。一瞬一瞬を大切に🐶",
+    date: "2026.6.28",
+    url: "https://vt.tiktok.com/ZSCSgjvth/"
+  },
+  {
     src: "/videos/tiktok-2026-06-27.mp4",
     platform: "TikTok",
     title: "階段を登ったら、、、",
