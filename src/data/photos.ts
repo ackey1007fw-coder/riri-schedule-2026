@@ -5,6 +5,8 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.6.28 TikTok「犬って人間の4倍の速度で時間が進んでるらしい」カルアちゃんと一緒
+  { src: "/images/gallery/g64.jpg", alt: "車内で愛犬カルアちゃんを抱きしめて笑顔の夏凪里季さん（TikTok「犬って人間の4倍の速度で…」）" },
   // 2026.6.27 TikTok「階段を登ったら、、、」カルアちゃん
   { src: "/images/gallery/g63.jpg", alt: "階段の上から顔をのぞかせる愛犬カルアちゃん（TikTok「階段を登ったら、、、」）" },
   // 2026.6.27 Instagram「20♡」大学のお友達が20歳のお祝い
@@ -84,8 +86,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.6.27",
+  date: "2026.6.28",
   platform: "TikTok",
-  note: "「階段を登ったら、、、」愛犬カルアちゃんがひょっこり🐶",
-  url: "https://vt.tiktok.com/ZSCkNCo4k/"
+  note: "「犬って人間の4倍の速度で…」カルアちゃんを抱きしめるショート動画🐶",
+  url: "https://vt.tiktok.com/ZSCSgjvth/"
 };
