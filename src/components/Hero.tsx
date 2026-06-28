@@ -1,4 +1,4 @@
-import { CalendarCheck, MessageCircleHeart, Ticket } from "lucide-react";
+﻿import { CalendarCheck, MessageCircleHeart, Ticket } from "lucide-react";
 import { profile } from "../data/profile";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import type { ScheduleEvent, SocialLink } from "../types";
@@ -70,7 +70,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#next"
-                className="riri-button riri-button-primary min-h-12 px-5 py-3 text-sm shadow-paper"
+                className="yukako-button yukako-button-primary min-h-12 px-5 py-3 text-sm shadow-paper"
               >
                 <CalendarCheck className="h-4 w-4" aria-hidden="true" />
                 公演情報を見る
@@ -87,7 +87,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
             <div className="flex flex-wrap gap-2">
               <a
                 href="#links"
-                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm shadow-sm"
+                className="yukako-button yukako-button-soft min-h-12 px-4 py-3 text-sm shadow-sm"
               >
                 <MessageCircleHeart className="h-4 w-4 text-champagne" aria-hidden="true" />
                 SNSを見る

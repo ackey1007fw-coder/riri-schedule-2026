@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { CalendarDays } from "lucide-react";
 import { profile } from "../data/profile";
 import type { SocialLink } from "../types";
@@ -85,7 +85,7 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
             href={showroom.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="riri-button riri-button-gold min-h-10 shrink-0 px-3 text-xs sm:min-h-11 sm:px-4 sm:text-sm"
+            className="yukako-button yukako-button-gold min-h-10 shrink-0 px-3 text-xs sm:min-h-11 sm:px-4 sm:text-sm"
           >
             <span className="hidden min-[430px]:inline">SHOWROOM</span>
             <span className="min-[430px]:hidden">SR</span>
@@ -95,7 +95,7 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
             href={socialLinks[0].url}
             target="_blank"
             rel="noopener noreferrer"
-            className="riri-button riri-button-gold min-h-10 shrink-0 px-3 text-xs sm:min-h-11 sm:px-4 sm:text-sm"
+            className="yukako-button yukako-button-gold min-h-10 shrink-0 px-3 text-xs sm:min-h-11 sm:px-4 sm:text-sm"
           >
             {socialLinks[0].label}
           </a>

@@ -1,24 +1,16 @@
 import type { EventCategory } from "../types";
 
 const eventImageById: Record<string, string> = {
-  "yofukashi-campus-2026-05-09": "/images/event-yofukashi.jpg",
-  "theoridea-2026-05-14": "/images/event-theoridea.jpg",
-  "aitoki-2026-05-29": "/images/event-aitoki.jpg",
-  "birthday-2026-06-24": "/images/event-birthday.jpg",
-  "fukurow-fm-2026-04-21": "/images/event-fukurow.jpg",
-  "tvk-nekohita-2026-04-16": "/images/event-tvk.jpg",
-  "imacampus-2026-04-12": "/images/event-imacampus.jpg",
-  "steenz-2026-04-08": "/images/event-steenz.jpg",
-  "kyanly-2026-03-14": "/images/event-kyanly.jpg"
+  "yukajet-gojet-2026-07": "/images/yukako-stage-front.jpg"
 };
 
 const eventImageByCategory: Record<EventCategory, string> = {
-  stage: "/images/event-theoridea.jpg",
-  radio: "/images/event-yofukashi.jpg",
-  tv: "/images/event-tvk.jpg",
-  event: "/images/event-kyanly.jpg",
-  web: "/images/event-steenz.jpg",
-  birthday: "/images/event-birthday.jpg"
+  stage: "/images/yukako-stage-front.jpg",
+  radio: "/images/yukako-portrait.jpg",
+  tv: "/images/yukako-shuichi-event.jpg",
+  event: "/images/yukako-cruise-captain.jpg",
+  web: "/images/yukako-portrait.jpg",
+  birthday: "/images/yukako-casual-braids.jpg"
 };
 
 export function resolveEventImage(
@@ -27,7 +19,7 @@ export function resolveEventImage(
   category: EventCategory
 ) {
   if (eventImageById[eventId]) return eventImageById[eventId];
-  if (image && !image.startsWith("/images/event-") && image !== "/images/event-placeholder.jpg") {
+  if (image) {
     return image;
   }
 

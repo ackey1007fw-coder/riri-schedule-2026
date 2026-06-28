@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -87,7 +87,7 @@ img {
   backdrop-filter: blur(14px);
 }
 
-@keyframes riri-fade {
+@keyframes yukako-fade {
   from {
     opacity: 0;
   }
@@ -105,8 +105,8 @@ img {
 
 /* カード共通のホバー挙動（やわらかく浮く）。レイアウトは動かさない。
    hoverできる端末のみ適用 → スマホでタップ後に浮いたまま固まる問題を防ぐ。
-   見た目(角丸・ベース影)を .riri-card と揃えて、サイト全体のカードを統一する。 */
-.riri-lift {
+   見た目(角丸・ベース影)を .yukako-card と揃えて、サイト全体のカードを統一する。 */
+.yukako-lift {
   border-radius: 6px;
   box-shadow: 0 4px 16px rgba(94, 62, 81, 0.06);
   transition:
@@ -117,7 +117,7 @@ img {
 
 /* 画像読み込み中のスケルトン（やわらかく光るプレースホルダー）。
    画像の背面に敷くだけなので、読み込めたら画像が覆って自然に消える。 */
-.riri-skeleton {
+.yukako-skeleton {
   background-image: linear-gradient(
     100deg,
     rgba(242, 184, 205, 0.10) 28%,
@@ -125,10 +125,10 @@ img {
     rgba(242, 184, 205, 0.10) 72%
   );
   background-size: 200% 100%;
-  animation: riri-shimmer 1.5s ease-in-out infinite;
+  animation: yukako-shimmer 1.5s ease-in-out infinite;
 }
 
-@keyframes riri-shimmer {
+@keyframes yukako-shimmer {
   0% {
     background-position: 200% 0;
   }
@@ -138,7 +138,7 @@ img {
 }
 
 /* 特別配信バナー：シャンパンゴールド〜ピンクの華やかなグラデーションが流れる */
-.riri-special-banner {
+.yukako-special-banner {
   position: relative;
   overflow: hidden;
   background: linear-gradient(
@@ -150,10 +150,10 @@ img {
     #f3c6dd 100%
   );
   background-size: 220% 100%;
-  animation: riri-special-flow 6s ease-in-out infinite;
+  animation: yukako-special-flow 6s ease-in-out infinite;
 }
 
-.riri-special-banner::after {
+.yukako-special-banner::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -164,11 +164,11 @@ img {
     rgba(255, 255, 255, 0) 62%
   );
   background-size: 220% 100%;
-  animation: riri-special-sheen 4.5s ease-in-out infinite;
+  animation: yukako-special-sheen 4.5s ease-in-out infinite;
   pointer-events: none;
 }
 
-@keyframes riri-special-flow {
+@keyframes yukako-special-flow {
   0%,
   100% {
     background-position: 0% 0;
@@ -178,7 +178,7 @@ img {
   }
 }
 
-@keyframes riri-special-sheen {
+@keyframes yukako-special-sheen {
   0% {
     background-position: 220% 0;
   }
@@ -188,11 +188,11 @@ img {
   }
 }
 
-.riri-special-twinkle {
-  animation: riri-special-twinkle 2.4s ease-in-out infinite;
+.yukako-special-twinkle {
+  animation: yukako-special-twinkle 2.4s ease-in-out infinite;
 }
 
-@keyframes riri-special-twinkle {
+@keyframes yukako-special-twinkle {
   0%,
   100% {
     opacity: 0.55;
@@ -204,7 +204,7 @@ img {
   }
 }
 
-.riri-button {
+.yukako-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -221,82 +221,82 @@ img {
     color 220ms ease;
 }
 
-.riri-button-primary {
+.yukako-button-primary {
   border-color: #312a2e;
   background: #312a2e;
   color: white;
 }
 
-.riri-button-gold {
+.yukako-button-gold {
   border-color: #d7ad62;
   background: #d7ad62;
   color: white;
   box-shadow: 0 12px 24px rgba(215, 173, 98, 0.18);
 }
 
-.riri-button-soft {
+.yukako-button-soft {
   border-color: rgba(242, 184, 205, 0.48);
   background: rgba(255, 255, 255, 0.9);
   color: #312a2e;
 }
 
-.riri-button-rose {
+.yukako-button-rose {
   border-color: #f2b8cd;
   background: #f2b8cd;
   color: #312a2e;
 }
 
-.riri-button-ghost {
+.yukako-button-ghost {
   border-color: rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.2);
   color: white;
 }
 
 @media (hover: hover) {
-  .riri-lift:hover {
+  .yukako-lift:hover {
     transform: translateY(-3px);
     box-shadow: 0 16px 36px rgba(94, 62, 81, 0.13);
   }
 
-  .riri-button:hover {
+  .yukako-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 24px rgba(94, 62, 81, 0.13);
   }
 
-  .riri-button-primary:hover {
+  .yukako-button-primary:hover {
     background: #4a3942;
   }
 
-  .riri-button-gold:hover {
+  .yukako-button-gold:hover {
     background: #c99a47;
   }
 
-  .riri-button-soft:hover {
+  .yukako-button-soft:hover {
     border-color: #d7ad62;
     background: #fffafc;
   }
 
-  .riri-button-rose:hover {
+  .yukako-button-rose:hover {
     background: #f8dce8;
   }
 
-  .riri-button-ghost:hover {
+  .yukako-button-ghost:hover {
     background: rgba(255, 255, 255, 0.3);
   }
 }
 
-.riri-card {
+.yukako-card {
   border-width: 1px;
   border-style: solid;
   border-radius: 6px;
   box-shadow: 0 4px 16px rgba(94, 62, 81, 0.06);
 }
 
-.riri-card.shadow-paper {
+.yukako-card.shadow-paper {
   box-shadow: 0 18px 50px rgba(94, 62, 81, 0.12);
 }
 
-.riri-card-interactive {
+.yukako-card-interactive {
   transition:
     transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1),
     box-shadow 280ms ease,
@@ -304,7 +304,7 @@ img {
 }
 
 @media (hover: hover) {
-  .riri-card-interactive:hover,
+  .yukako-card-interactive:hover,
   .photo-gallery-card:hover,
   .avatar-card:hover {
     transform: translateY(-3px);

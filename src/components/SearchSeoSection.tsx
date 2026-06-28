@@ -1,4 +1,4 @@
-import {
+﻿import {
   ArrowRight,
   CalendarDays,
   ChevronDown,
@@ -90,7 +90,7 @@ export function SearchSeoSection() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="riri-lift group flex min-h-36 flex-col justify-between border border-rosefog/25 bg-porcelain p-4 hover:border-champagne hover:bg-white"
+                  className="yukako-lift group flex min-h-36 flex-col justify-between border border-rosefog/25 bg-porcelain p-4 hover:border-champagne hover:bg-white"
                 >
                   <span>
                     <span className="text-[11px] font-black uppercase tracking-wide text-champagne">

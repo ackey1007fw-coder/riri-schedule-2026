@@ -1,4 +1,4 @@
-import { ArrowUpRight, CalendarDays, Images, Ticket } from "lucide-react";
+﻿import { ArrowUpRight, CalendarDays, Images, Ticket } from "lucide-react";
 import type { ScheduleEvent, SocialLink } from "../types";
 
 type ActionStripProps = {
@@ -85,7 +85,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="riri-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
+              className="yukako-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
             >
               {content}
             </a>
@@ -93,7 +93,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
             <a
               key={index}
               href={item.href}
-              className="riri-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
+              className="yukako-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
             >
               {content}
             </a>

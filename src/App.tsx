@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { ActionStrip } from "./components/ActionStrip";
 import { Footer } from "./components/Footer";
@@ -48,7 +48,7 @@ function App() {
     return (
       <div className="grid min-h-screen place-items-center bg-porcelain px-6 text-center text-ink">
         <div className="flex flex-col items-center gap-5">
-          <div className="riri-skeleton h-16 w-16 rounded-full" />
+          <div className="yukako-skeleton h-16 w-16 rounded-full" />
           <div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-champagne">
               Yukako Schedule 2026
@@ -56,9 +56,9 @@ function App() {
             <p className="font-display text-3xl">スケジュールを準備中です</p>
           </div>
           <div className="mt-2 flex gap-3">
-            <div className="riri-skeleton h-3 w-20 rounded" />
-            <div className="riri-skeleton h-3 w-16 rounded" />
-            <div className="riri-skeleton h-3 w-24 rounded" />
+            <div className="yukako-skeleton h-3 w-20 rounded" />
+            <div className="yukako-skeleton h-3 w-16 rounded" />
+            <div className="yukako-skeleton h-3 w-24 rounded" />
           </div>
         </div>
       </div>

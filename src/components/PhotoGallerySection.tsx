@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+﻿import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ChevronDown,
   ChevronLeft,
@@ -134,7 +134,7 @@ export function PhotoGallerySection() {
           href={galleryUpdate.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="riri-lift mt-6 flex items-center gap-3 border border-champagne/40 bg-white px-4 py-3 text-sm font-bold text-ink hover:border-champagne hover:bg-porcelain"
+          className="yukako-lift mt-6 flex items-center gap-3 border border-champagne/40 bg-white px-4 py-3 text-sm font-bold text-ink hover:border-champagne hover:bg-porcelain"
         >
           <span className="grid h-9 w-9 shrink-0 place-items-center border border-champagne/50 bg-porcelain text-champagne">
             <GalleryUpdateIcon className="h-4 w-4" aria-hidden="true" />
@@ -156,8 +156,8 @@ export function PhotoGallerySection() {
           {visiblePhotos.map((photo, index) => (
             <figure
               key={photo.src}
-              className={`photo-gallery-card riri-card overflow-hidden border-rosefog/15 bg-porcelain ${
-                loaded[photo.src] ? "" : "riri-skeleton"
+              className={`photo-gallery-card yukako-card overflow-hidden border-rosefog/15 bg-porcelain ${
+                loaded[photo.src] ? "" : "yukako-skeleton"
               }`}
             >
               <button
@@ -190,7 +190,7 @@ export function PhotoGallerySection() {
             <button
               type="button"
               onClick={() => setShowAll((current) => !current)}
-              className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+              className="yukako-button yukako-button-soft min-h-12 px-5 py-3 text-sm"
               aria-expanded={showAll}
               aria-controls="photo-selection"
             >

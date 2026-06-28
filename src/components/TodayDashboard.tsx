@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import {
   ArrowRight,
   CalendarDays,
@@ -151,7 +151,7 @@ export function TodayDashboard({
         </div>
 
         <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="riri-card riri-card-interactive border-champagne/50 bg-white p-5 shadow-paper sm:p-7">
+          <div className="yukako-card yukako-card-interactive border-champagne/50 bg-white p-5 shadow-paper sm:p-7">
             <div className="flex items-center gap-3">
               <span className="grid h-11 w-11 place-items-center border border-champagne/50 bg-porcelain text-champagne">
                 {primary?.kind === "stream" ? (
@@ -183,7 +183,7 @@ export function TodayDashboard({
                   href={primary.href}
                   target={primary.href.startsWith("#") ? undefined : "_blank"}
                   rel={primary.href.startsWith("#") ? undefined : "noopener noreferrer"}
-                  className="riri-button riri-button-primary mt-7 min-h-12 w-full px-5 py-3 text-sm sm:w-auto"
+                  className="yukako-button yukako-button-primary mt-7 min-h-12 w-full px-5 py-3 text-sm sm:w-auto"
                 >
                   {primary.kind === "stream" ? "配信を見る" : "予定の詳細を見る"}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -196,7 +196,7 @@ export function TodayDashboard({
             )}
           </div>
 
-          <div className="riri-card riri-card-interactive border-rosefog/25 bg-white p-5 sm:p-7">
+          <div className="yukako-card yukako-card-interactive border-rosefog/25 bg-white p-5 sm:p-7">
             <p className="flex items-center gap-2 text-sm font-black text-ink">
               <Sparkles className="h-4 w-4 text-champagne" aria-hidden="true" />
               今週の応援予定
@@ -228,7 +228,7 @@ export function TodayDashboard({
         </div>
 
         <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_auto]">
-          <div className="riri-card riri-card-interactive border-rosefog/25 bg-white p-5">
+          <div className="yukako-card yukako-card-interactive border-rosefog/25 bg-white p-5">
             <p className="text-xs font-black uppercase tracking-[0.16em] text-champagne">
               Latest Updates
             </p>
@@ -251,7 +251,7 @@ export function TodayDashboard({
             <button
               type="button"
               onClick={() => downloadScheduleCalendar(events)}
-              className="riri-button riri-button-soft min-h-14 px-4 py-3 text-sm"
+              className="yukako-button yukako-button-soft min-h-14 px-4 py-3 text-sm"
             >
               <Download className="h-4 w-4 text-champagne" aria-hidden="true" />
               今後の予定を保存
@@ -260,7 +260,7 @@ export function TodayDashboard({
               href={showroom}
               target="_blank"
               rel="noopener noreferrer"
-              className="riri-button riri-button-rose min-h-14 px-4 py-3 text-sm"
+              className="yukako-button yukako-button-rose min-h-14 px-4 py-3 text-sm"
             >
               <Radio className="h-4 w-4" aria-hidden="true" />
               SHOWROOMへ

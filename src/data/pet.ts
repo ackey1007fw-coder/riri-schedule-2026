@@ -5,7 +5,7 @@ export const petProfile = {
   gender: "",
   image: "",
   imageNote: "",
-  ririImage: "",
+  profileImage: "",
   lead: "",
   notes: [] as { label: string; value: string }[]
 };
