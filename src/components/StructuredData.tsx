@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { events } from "../data/events";
+import { profile } from "../data/profile";
 import { searchFaqs } from "../data/searchFaq";
 
 // events.ts の内容を schema.org Event の構造化データ(JSON-LD)として
@@ -47,9 +48,34 @@ export function StructuredData() {
       }))
     };
 
+    const website = {
+      "@type": "WebSite",
+      "@id": `${BASE}/#website`,
+      name: "Yukako Schedule 2026",
+      alternateName: ["吉井優花子 応援スケジュール", "吉井優花子 活動情報", "秋田の優花子"],
+      url: BASE,
+      inLanguage: "ja",
+      description: "吉井優花子さんのプロフィール、舞台、SHOWROOM、SNS、#ゆかJET 公演情報を整理する応援ページです。"
+    };
+
+    const person = {
+      "@type": "Person",
+      "@id": PERSON_ID,
+      name: profile.name.replace(/\s/g, ""),
+      alternateName: ["吉井 優花子", profile.kana, profile.romaji, ...profile.aliases],
+      url: BASE,
+      image: toAbsolute(profile.portraitImage),
+      birthDate: profile.birthday,
+      birthPlace: "秋田県秋田市",
+      height: "161 cm",
+      jobTitle: ["俳優", "タレント", "モデル", "ライバー"],
+      description: "秋田県秋田市出身。舞台、テレビ、CM、モデル、SHOWROOM配信、プロデュース公演などで活動。",
+      sameAs: profile.sources.map((source) => source.url)
+    };
+
     const payload = JSON.stringify({
       "@context": "https://schema.org",
-      "@graph": [...graph, faqPage],
+      "@graph": [website, person, ...graph, faqPage],
     });
 
     document.getElementById(SCRIPT_ID)?.remove();

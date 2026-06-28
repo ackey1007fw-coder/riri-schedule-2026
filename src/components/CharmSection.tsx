@@ -13,7 +13,7 @@ export function CharmSection() {
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
             <p className="mb-4 inline-flex border border-champagne/45 bg-white/70 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] text-champagne backdrop-blur">
-              Riri Mood
+              Yukako Mood
             </p>
             <h2 className="font-display text-4xl leading-[1.15] text-ink sm:text-5xl">
               笑顔の奥に、
@@ -22,7 +22,7 @@ export function CharmSection() {
             </h2>
             <p className="mt-6 max-w-xl leading-8 text-ink/68">
               ふっと安心するやわらかさと、舞台へ向かう芯の強さ。
-              里季ちゃんの空気がそのまま伝わる一枚たちです。
+              優花子さんの表情や活動の空気が伝わる一枚たちです。
             </p>
           </div>
 

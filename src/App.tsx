@@ -14,6 +14,7 @@ import { ProfileSection } from "./components/ProfileSection";
 import { ScheduleSection } from "./components/ScheduleSection";
 import { SearchSeoSection } from "./components/SearchSeoSection";
 import { ShareSection } from "./components/ShareSection";
+import { ShowroomSection } from "./components/ShowroomSection";
 import { SiteHeader } from "./components/SiteHeader";
 import { StructuredData } from "./components/StructuredData";
 import {
@@ -104,6 +105,9 @@ function App() {
         </SectionReveal>
         <SectionReveal>
           <ProfileSection />
+        </SectionReveal>
+        <SectionReveal>
+          <ShowroomSection />
         </SectionReveal>
         <SearchSeoSection />
         <SectionReveal>

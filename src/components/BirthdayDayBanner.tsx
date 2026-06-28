@@ -24,11 +24,11 @@ export function BirthdayDayBanner() {
     <a
       href="#birthday"
       className="block bg-[linear-gradient(90deg,#f8dce8,#fdeef4_45%,#fbe7d8)] text-ink"
-      aria-label="今日は夏凪里季さんのお誕生日。お祝いへ"
+      aria-label="今日は吉井優花子さんのお誕生日。お祝いへ"
     >
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 py-2.5 text-sm font-black tracking-wide sm:px-6 lg:px-8">
         <PartyPopper className="h-4 w-4 text-champagne" aria-hidden="true" />
-        <span>HAPPY BIRTHDAY 夏凪里季！</span>
+        <span>HAPPY BIRTHDAY 吉井優花子！</span>
         <span className="text-champagne">20歳（ハタチ）おめでとう🎂🌻</span>
         <span className="text-ink/70 underline underline-offset-4">お祝いする →</span>
       </div>

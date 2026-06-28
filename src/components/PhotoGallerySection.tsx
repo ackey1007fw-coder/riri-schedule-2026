@@ -112,8 +112,8 @@ export function PhotoGallerySection() {
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <SectionHeader
             kicker="Photo Gallery"
-            title="写真で見る Riri"
-            copy="舞台に立つ姿から、配信や日常のふとした表情まで。里季ちゃんのいろんな瞬間をどうぞ。"
+            title="写真で見る Yukako"
+            copy="舞台に立つ姿から、配信や日常のふとした表情まで。優花子さんのいろんな瞬間をどうぞ。"
           />
           <div className="flex flex-col gap-3 border-y border-champagne/30 py-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3 text-sm font-bold text-ink/70">
@@ -218,7 +218,7 @@ export function PhotoGallerySection() {
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-champagne">
-                  Riri Photo
+                  Yukako Photo
                 </p>
                 <p className="truncate text-sm font-semibold text-white/75">
                   {selectedPhoto.alt}

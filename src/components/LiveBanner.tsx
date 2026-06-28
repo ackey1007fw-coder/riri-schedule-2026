@@ -1,17 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { CalendarClock, Radio } from "lucide-react";
 import { profile } from "../data/profile";
-import {
-  specialStream,
-  streamSchedule,
-  type StreamSlot
-} from "../data/streamSchedule";
+import { specialStream, streamSchedule } from "../data/streamSchedule";
 
 // ページ最上部のステータスバー。
 // ・配信中 → 赤「配信中！」
 // ・今日に配信予定あり → ピンク「今日の配信は HH:MM〜 予定」
 // ・どちらも無ければ非表示
-// すべて自動（/api/showroom を定期確認、予定は手入力＋フレキャン自動取得をマージ）。
+// すべて自動（/api/showroom を定期確認、予定は手入力とSHOWROOMの次回配信を参照）。
 const POLL_MS = 60000;
 
 const todayKey = () =>
@@ -41,7 +37,6 @@ const todayTimeFromNextShow = (nextShow?: string): string | null => {
 export function LiveBanner() {
   const [isLive, setIsLive] = useState(false);
   const [nextShow, setNextShow] = useState<string | undefined>(undefined);
-  const [autoSlots, setAutoSlots] = useState<StreamSlot[]>([]);
 
   useEffect(() => {
     let active = true;
@@ -61,25 +56,18 @@ export function LiveBanner() {
     checkLive();
     const timer = window.setInterval(checkLive, POLL_MS);
 
-    fetch("/api/frecam-schedule")
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data: { slots?: StreamSlot[] } | null) => {
-        if (active && Array.isArray(data?.slots)) setAutoSlots(data.slots);
-      })
-      .catch(() => {});
-
     return () => {
       active = false;
       window.clearInterval(timer);
     };
   }, []);
 
-  // 今日の、まだ終わっていない最も早い配信予定（手入力＋フレキャン自動取得）
+  // 今日の、まだ終わっていない最も早い配信予定（手入力）
   const todayStream = useMemo(() => {
     const today = todayKey();
     const now = Date.now();
-    const map = new Map<string, StreamSlot>();
-    [...streamSchedule, ...autoSlots].forEach((slot) => {
+    const map = new Map<string, (typeof streamSchedule)[number]>();
+    streamSchedule.forEach((slot) => {
       const key = `${slot.date}T${slot.time}`;
       if (!map.has(key)) map.set(key, slot);
     });
@@ -91,9 +79,9 @@ export function LiveBanner() {
       }))
       .filter((slot) => slot.ms + 3 * 3600 * 1000 > now)
       .sort((a, b) => a.ms - b.ms)[0];
-  }, [autoSlots]);
+  }, []);
 
-  // 表示する「今日の配信時刻」：手入力/フレキャン → 無ければ SHOWROOMの次回配信
+  // 表示する「今日の配信時刻」：手入力 → 無ければ SHOWROOMの次回配信
   const todayTime = todayStream?.time ?? todayTimeFromNextShow(nextShow);
   const todayNote = todayStream?.note;
 

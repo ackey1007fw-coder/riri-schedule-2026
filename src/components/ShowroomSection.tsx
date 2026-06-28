@@ -60,12 +60,12 @@ export function ShowroomSection() {
   return (
     <section id="showroom" className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader kicker="SHOWROOM" title="ライブ配信で応援する" copy="毎日の配信で会えるSHOWROOM。ルームの最新情報やアバターはこちらから。" />
+        <SectionHeader kicker="SHOWROOM" title="ライブ配信で応援する" copy="秋田の優花子として配信中のSHOWROOM。ルームの現在値を取得できる範囲で表示します。" />
         <div className="riri-card mb-12 grid overflow-hidden border-rosefog/25 bg-porcelain lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative bg-porcelain lg:min-h-[480px]">
             <img
               src={coverSrc}
-              alt="夏凪里季 SHOWROOM"
+              alt="吉井優花子さん SHOWROOM"
               loading="eager"
               onError={() => setCoverFailed(true)}
               className="block w-full object-cover lg:absolute lg:inset-0 lg:h-full"
@@ -89,6 +89,7 @@ export function ShowroomSection() {
             </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ExternalButton href={profile.showroom.url} variant="primary">SHOWROOMを開く</ExternalButton>
+              <ExternalButton href={profile.showroom.liveUrl} variant="light">配信ルームへ</ExternalButton>
               <a href="#links" className="inline-flex min-h-12 items-center justify-center gap-2 border border-rosefog/40 bg-white px-4 py-3 text-sm font-bold text-ink transition hover:bg-porcelain"><Sparkles className="h-4 w-4" aria-hidden="true" />SNSも見る</a>
             </div>
           </div>

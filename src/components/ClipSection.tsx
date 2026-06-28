@@ -100,7 +100,7 @@ export function ClipSection() {
             Short Movie
           </p>
           <h2 className="mt-1 font-display text-2xl text-ink sm:text-3xl">
-            動く里季ちゃん
+            動く優花子さん
           </h2>
           <p className="mt-2 text-sm text-ink/60">
             ショート動画。音声はオフで流しているので、本編はタップして元の投稿でどうぞ。
