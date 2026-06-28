@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.6.28",
+    label: "お知らせ",
+    text: "8月舞台情報解禁🎭 劇団ココア『ピッパラの樹』A班出演（8/18〜29・荻窪小劇場）チケット6/29 21:00〜予約開始",
+    url: "https://x.com/frecam2025_0306/status/2071126356952588633"
+  },
+  {
     date: "2026.6.27",
     label: "TikTok",
     text: "「階段を登ったら、、、」愛犬カルアちゃんが階段の上からひょっこり顔を出すショート動画",
