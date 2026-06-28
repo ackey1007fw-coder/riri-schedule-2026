@@ -86,7 +86,19 @@ export const imageManifest = {
   "/images/riri-zine-01.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]},
   "/images/riri-zine-02.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]},
   "/images/riri-zine-03.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]},
-  "/images/riri-zine-04.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]}
+  "/images/riri-zine-04.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]},
+  "/images/yukako-babyshark-character.jpg": {"width":1600,"height":2048,"widths":[360,480,720,960,1280,1600]},
+  "/images/yukako-babyshark-lobster.jpg": {"width":941,"height":1176,"widths":[360,480,720,941]},
+  "/images/yukako-babyshark-pirate.jpg": {"width":1011,"height":1264,"widths":[360,480,720,960,1011]},
+  "/images/yukako-casual-braids.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
+  "/images/yukako-cruise-captain.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
+  "/images/yukako-cruise-gym.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
+  "/images/yukako-cruise-night.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
+  "/images/yukako-noodles.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
+  "/images/yukako-portrait.jpg": {"width":1366,"height":2048,"widths":[360,480,720,960,1280,1366]},
+  "/images/yukako-shuichi-event.jpg": {"width":1524,"height":2048,"widths":[360,480,720,960,1280,1524]},
+  "/images/yukako-stage-back.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
+  "/images/yukako-stage-front.jpg": {"width":1401,"height":1751,"widths":[360,480,720,960,1280,1401]}
 } as const;
 
 export type ImageManifestPath = keyof typeof imageManifest;

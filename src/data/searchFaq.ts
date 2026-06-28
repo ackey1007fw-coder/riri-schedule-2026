@@ -16,19 +16,25 @@ export const searchIntents: SearchIntent[] = [
   {
     label: "公演情報",
     title: "公演スケジュールを確認する",
-    copy: "#ゆかJET の公演日程、会場、チケット情報を確認できます。",
+    copy: "#ゆかJET やBaby Shark Liveなど、最新の公演日程を確認できます。",
     href: "#next"
+  },
+  {
+    label: "出演歴",
+    title: "これまでの活動を見る",
+    copy: "舞台、CM、MV、ドラマ、ミスコンなど幅広い活動歴を確認できます。",
+    href: "#highlights"
   },
   {
     label: "SNS",
     title: "SNSをチェックする",
-    copy: "プロデュース公演の最新情報やオフショットを確認できます。",
+    copy: "X、Instagram、TikTok、SHOWROOMの最新情報を確認できます。",
     href: "#links"
   },
   {
     label: "プロフィール",
     title: "吉井優花子さんを知る",
-    copy: "プロフィール、活動歴、出演歴を確認できます。",
+    copy: "プロフィール、経歴、受賞歴を確認できます。",
     href: "#profile"
   }
 ];
@@ -44,9 +50,16 @@ export const searchFaqs: SearchFaq[] = [
   {
     question: "吉井優花子さんのSNSはどこですか？",
     answer:
-      "プロデュース公演のXアカウント @yukako_produce で最新情報を発信しています。",
+      "個人X（@mokoopy）、プロデュースX（@yukako_produce）、Instagram（@yoppy_777）、TikTok（@yukakoyoshii）、SHOWROOMで活動しています。",
     href: "#links",
     linkLabel: "SNSを見る"
+  },
+  {
+    question: "吉井優花子さんはどんな活動をしていますか？",
+    answer:
+      "舞台俳優・プロデューサー・SHOWROOMライバーとして活動中。Baby Shark Live全国公演のシンガー、自主プロデュース公演 #ゆかJET、CM・MV・ドラマ出演、ミスコン受賞歴など多方面で活躍しています。",
+    href: "#highlights",
+    linkLabel: "活動歴を見る"
   },
   {
     question: "#ゆかJET とは何ですか？",

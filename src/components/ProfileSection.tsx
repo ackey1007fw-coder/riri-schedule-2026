@@ -11,7 +11,7 @@ export function ProfileSection() {
           <SectionHeader
             kicker="Profile"
             title="プロフィール"
-            copy="舞台への想い、プロデュース活動のこと。吉井優花子さんのプロフィールです。"
+            copy="秋田出身の舞台俳優・プロデューサー・ライバー。吉井優花子さんのプロフィールです。"
           />
           <div className="riri-card border-champagne/40 bg-white p-5 shadow-paper">
             {profile.fanName && (

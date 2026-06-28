@@ -5,31 +5,51 @@ export const profile = {
   romaji: "Yoshii Yukako",
   fanScheduleLabel: "Fan Schedule",
   catchCopy:
-    "自分で創って、自分で立つ。プロデューサー兼キャストとして、舞台の最前線へ。",
+    "秋田から東京へ。舞台俳優・プロデューサー・ライバーとして、自分の舞台を自分で創る。",
   intro:
-    "#ゆかJET の公演情報から出演歴、SNSまで。吉井優花子さんの活動をまとめた応援サイトです。",
-  heroImage: "",
-  portraitImage: "",
-  birthday: "",
-  birthdayMonthDay: "",
-  birthdayLabel: "",
+    "公演情報からSNS、出演歴まで。吉井優花子さんの活動をまとめた応援サイトです。",
+  heroImage: "/images/yukako-stage-back.jpg",
+  portraitImage: "/images/yukako-portrait.jpg",
+  birthday: "1997-04-27",
+  birthdayMonthDay: "04-27",
+  birthdayLabel: "4月27日",
   fanName: "",
   fanMark: "",
   facts: [
-    { label: "活動", value: "舞台俳優・プロデューサー" },
-    { label: "出身", value: "秋田県" },
-    { label: "主な活動", value: "舞台出演、公演プロデュース" },
+    { label: "生年月日", value: "1997年4月27日" },
+    { label: "出身", value: "秋田県秋田市" },
+    { label: "身長", value: "162cm" },
+    { label: "血液型", value: "B型" },
+    { label: "活動", value: "舞台俳優・プロデューサー・ライバー" },
+    { label: "主な出演", value: "Baby Shark Live、舞台、CM、MV、ドラマ" },
     {
-      label: "プロデュース公演",
+      label: "プロデュース",
       value: "#ゆかJET（GO,JET!GO!GO! シリーズ）"
+    },
+    {
+      label: "受賞歴",
+      value: "Miss Grand Japan 2025 MISS PEACE賞 / Miss Cosmo Japan TOP5"
     }
   ],
-  gallery: [] as string[],
+  gallery: [
+    "/images/yukako-stage-back.jpg",
+    "/images/yukako-stage-front.jpg",
+    "/images/yukako-portrait.jpg",
+    "/images/yukako-cruise-night.jpg",
+    "/images/yukako-cruise-captain.jpg",
+    "/images/yukako-babyshark-lobster.jpg",
+    "/images/yukako-babyshark-pirate.jpg",
+    "/images/yukako-babyshark-character.jpg",
+    "/images/yukako-casual-braids.jpg",
+    "/images/yukako-cruise-gym.jpg",
+    "/images/yukako-shuichi-event.jpg",
+    "/images/yukako-noodles.jpg"
+  ] as string[],
   showroom: {
-    roomName: "",
-    tagline: "",
-    image: "",
-    url: "",
+    roomName: "秋田の優花子(ゆかこ)",
+    tagline: "秋田出身の舞台俳優。毎日配信中！",
+    image: "/images/yukako-portrait.jpg",
+    url: "https://www.showroom-live.com/room/profile?room_id=347571",
     stats: [] as { label: string; value: string }[],
     message: ""
   },

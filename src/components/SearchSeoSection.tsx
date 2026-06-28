@@ -13,17 +13,17 @@ const searchTopics = [
   {
     icon: CalendarDays,
     title: "公演情報",
-    body: "#ゆかJET の公演日程、会場、チケット情報を確認できます。"
+    body: "#ゆかJET やBaby Shark Liveなど、最新の公演日程を確認できます。"
   },
   {
     icon: Radio,
     title: "出演歴",
-    body: "CM・MV・ドラマ・舞台など、吉井優花子さんのこれまでの出演歴をまとめています。"
+    body: "CM・MV・ドラマ・舞台・ミスコンなど、幅広い活動歴をまとめています。"
   },
   {
     icon: Sparkles,
-    title: "プロデュース",
-    body: "GO,JET!GO!GO! シリーズのプロデュース公演情報を整理しています。"
+    title: "SNS・配信",
+    body: "X、Instagram、TikTok、SHOWROOMの最新情報をチェックできます。"
   }
 ];
 
@@ -60,8 +60,8 @@ export function SearchSeoSection() {
                 吉井優花子さんを応援するためのFan Schedule
               </h2>
               <p className="mt-5 leading-8 text-ink/70">
-                #ゆかJET の公演情報・出演歴・SNSを、応援する人の目線でまとめています。
-                公演スケジュールもチケットも、スマホからすぐにたどれます。
+                舞台・CM・MV・ミスコン・SHOWROOMまで、吉井優花子さんの活動を応援する人の目線でまとめています。
+                公演スケジュールもSNSも、スマホからすぐにたどれます。
               </p>
             </div>
 

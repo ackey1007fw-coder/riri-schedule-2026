@@ -25,6 +25,26 @@ export const highlights: Highlight[] = [
     ]
   },
   {
+    id: "babyshark-live-2025",
+    year: "2025",
+    date: "2025年〜",
+    category: "舞台",
+    title: "BABY SHARK LIVE! -The Hidden Treasure- 全国公演",
+    description:
+      "Pinkfongの人気キャラクターたちと歌って踊るファミリーミュージカル。シンガーとして全国各地の公演に出演中。",
+    image: "/images/yukako-babyshark-pirate.jpg"
+  },
+  {
+    id: "mgj-2025-miss-peace",
+    year: "2025",
+    date: "2025年9月",
+    category: "受賞",
+    title: "Miss Grand Japan 2025 MISS PEACE賞",
+    description:
+      "ミス・グランド・ジャパン2025にて、平和的活動を積極的に行ったファイナリストに贈られるMISS PEACE賞を受賞。大会はMSCベリッシマ号で開催。",
+    image: "/images/yukako-cruise-captain.jpg"
+  },
+  {
     id: "souzokurei-horror-2026-01",
     year: "2026",
     date: "2026年1月",
@@ -119,6 +139,24 @@ export const highlights: Highlight[] = [
       "Google Pixel × au のCM「ニッポンもしも写真部 東京篇」に、スタンドインとして参加しました。"
   },
   {
+    id: "miss-cosmo-japan-2024",
+    year: "2024",
+    date: "2024年8月",
+    category: "受賞",
+    title: "Miss Cosmo Japan 2024 TOP5ファイナリスト",
+    description:
+      "審査累計ポイントランキング1位を獲得してTOP5ファイナリストに選出。国内最終選考では3位に選定されました。"
+  },
+  {
+    id: "akt-ambassador-2024",
+    year: "2024",
+    date: "2024年5月",
+    category: "CM",
+    title: "AKT秋田テレビ アプリアンバサダー",
+    description:
+      "AKT秋田テレビの公式アプリ「AKTアプリ」のアンバサダーに選出。地上波テレビCMやイベントに出演しました。"
+  },
+  {
     id: "comdot-haikei-mv-2024-05",
     year: "2024",
     date: "2024年5月",
@@ -200,6 +238,15 @@ export const highlights: Highlight[] = [
       "2023年10月5日放送スタートのMBS深夜ドラマに出演。TVerなどでも配信されました。"
   },
   {
+    id: "tvk-weather-report-2023",
+    year: "2023",
+    date: "2023年4月〜9月",
+    category: "TV",
+    title: "テレビ神奈川『weather report』リポーター",
+    description:
+      "2023年4月10日〜9月30日放送のテレビ神奈川『weather report』にリポーターとして出演。夏のリポーター挑戦篇にも登場しました。"
+  },
+  {
     id: "natsutodoroki-2023-09",
     year: "2023",
     date: "2023年9月",
@@ -216,5 +263,23 @@ export const highlights: Highlight[] = [
     title: "舞台『リアライズサマー』",
     description:
       "2023年8月上演の『リアライズサマー』にアンダー役として出演。終始笑顔の絶えない2日間の公演でした。"
+  },
+  {
+    id: "akuma-no-namida-2022",
+    year: "2022",
+    date: "2022年12月",
+    category: "舞台",
+    title: "舞台『悪魔の涙』（舞台デビュー）",
+    description:
+      "プロジェクトアクト東京の第七回公演。2022年12月8日〜12日に平賀スクエアで上演。カラヤン組で諏訪桃子役を演じ、舞台俳優としてのキャリアをスタート。"
+  },
+  {
+    id: "miss-yukata-2021",
+    year: "2021",
+    date: "2021年",
+    category: "受賞",
+    title: "Sunny Side Project ミス浴衣コンテスト 準グランプリ",
+    description:
+      "秋田で公務員として勤務中にエントリー。準グランプリとSHOWROOM賞を受賞し、SHOWROOMでの配信活動を開始するきっかけに。"
   }
 ];
