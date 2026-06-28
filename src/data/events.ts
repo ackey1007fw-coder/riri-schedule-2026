@@ -18,7 +18,7 @@ export const events: ScheduleEvent[] = [
     ],
     displayDate: "2026年8月18日(火)〜29日(土)・A班 全6公演",
     venue: "荻窪小劇場",
-    image: "/images/riri-portrait.jpg",
+    image: "/images/gallery/g65.jpg",
     summary:
       "劇団ココアの19世紀イギリス風恋愛喜劇『ピッパラの樹』にA班として出演（約100分）。脚本・演出：小谷聡一郎。りりの出演回は 8/18(火)19:30｜8/22(土)12:00｜8/23(日)15:30｜8/25(火)14:00｜8/28(金)19:30｜8/29(土)19:30 の全6公演。特典付き優先入場チケット5,500円／一般4,500円（現金のみ）。",
     badges: ["舞台", "A班", "全6公演", "チケット6/29〜"],
@@ -27,6 +27,11 @@ export const events: ScheduleEvent[] = [
         label: "チケット予約（tiget）",
         url: "https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9",
         kind: "ticket"
+      },
+      {
+        label: "夏凪里季さんの出演告知",
+        url: "https://x.com/frecam2025_0306/status/2071212422107721835",
+        kind: "sns"
       },
       {
         label: "劇団ココア 公式X",

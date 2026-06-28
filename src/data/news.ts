@@ -9,6 +9,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.6.28",
+    label: "X",
+    text: "【出演情報】劇団ココア『ピッパラの樹』A班で出演決定🎭 8/18〜29・荻窪小劇場、チケットは6/29 21:00発売",
+    url: "https://x.com/frecam2025_0306/status/2071212422107721835"
+  },
+  {
+    date: "2026.6.28",
     label: "TikTok",
     text: "「犬って人間の4倍の速度で時間が進んでるらしい」愛犬カルアちゃんを抱きしめるショート動画",
     url: "https://vt.tiktok.com/ZSCSgjvth/"
