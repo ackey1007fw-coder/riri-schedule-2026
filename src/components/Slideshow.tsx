@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+﻿import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { shuffle, showcasePhotos } from "../lib/showcasePhotos";
@@ -96,7 +96,7 @@ export function Slideshow() {
             alt={photo.alt}
             loading="lazy"
             className="max-h-full w-auto max-w-full object-contain"
-            style={{ animation: "riri-fade 600ms ease" }}
+            style={{ animation: "yukako-fade 600ms ease" }}
           />
 
           <button

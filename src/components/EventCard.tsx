@@ -1,4 +1,4 @@
-import { CalendarDays, CalendarPlus, MapPin } from "lucide-react";
+﻿import { CalendarDays, CalendarPlus, MapPin } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
 import { isEventPast } from "../lib/date";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
@@ -20,7 +20,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
 
   return (
     <article
-      className={`riri-card riri-card-interactive group relative grid overflow-hidden bg-white ${
+      className={`yukako-card yukako-card-interactive group relative grid overflow-hidden bg-white ${
         event.isImportant || isNext
           ? "border-champagne/70"
           : "border-rosefog/25"
@@ -110,7 +110,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
                 href={googleCalendarUrl(event)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+                className="yukako-button yukako-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 <CalendarPlus className="h-4 w-4 text-champagne" aria-hidden="true" />
                 カレンダー

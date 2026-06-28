@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { ChevronDown, ChevronUp, Crown } from "lucide-react";
 import { profile } from "../data/profile";
 import { Photo } from "./Photo";
@@ -43,7 +43,7 @@ export function AvatarGallery() {
             onClick={() => animateAvatar(index)}
             onAnimationEnd={() => setActiveIndex(null)}
             aria-label={`${avatar.name}を動かす`}
-            className={`avatar-card riri-card group relative overflow-hidden bg-white p-3 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne ${
+            className={`avatar-card yukako-card group relative overflow-hidden bg-white p-3 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne ${
               avatar.featured ? "border-champagne/70" : "border-rosefog/25"
             } ${activeIndex === index ? "avatar-card-active" : ""}`}
           >
@@ -71,7 +71,7 @@ export function AvatarGallery() {
           <button
             type="button"
             onClick={() => setShowAll((current) => !current)}
-            className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+            className="yukako-button yukako-button-soft min-h-12 px-5 py-3 text-sm"
             aria-expanded={showAll}
             aria-controls="avatar-gallery-list"
           >

@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import {
   ArrowUpRight,
   ChevronDown,
@@ -42,7 +42,7 @@ export function HighlightsSection() {
             return (
               <article
                 key={item.id}
-                className="riri-card riri-card-interactive flex min-h-36 min-w-0 flex-col border-champagne/40 bg-white p-5"
+                className="yukako-card yukako-card-interactive flex min-h-36 min-w-0 flex-col border-champagne/40 bg-white p-5"
               >
                 {item.image && (
                   <img
@@ -105,7 +105,7 @@ export function HighlightsSection() {
             <button
               type="button"
               onClick={() => setShowAll((current) => !current)}
-              className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+              className="yukako-button yukako-button-soft min-h-12 px-5 py-3 text-sm"
               aria-expanded={showAll}
               aria-controls="highlight-list"
             >

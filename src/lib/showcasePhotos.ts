@@ -1,16 +1,7 @@
 import { galleryPhotos, type GalleryPhoto } from "../data/photos";
 
-// ショーケースでランダム表示する写真プール。
-// 人物が主役でない写真（店頭・モニター・PC・トレーなど）は見栄えのため除外する。
-const EXCLUDED_SRC = new Set<string>([
-  "/images/gallery/g26.jpg", // レストラン店頭
-  "/images/gallery/g42.jpg", // コンテストのモニター
-  "/images/gallery/g46.jpg", // 撮影データ選びのノートPC
-  "/images/gallery/g56.jpg" // スタバの新作トレー
-]);
-
 export const showcasePhotos: GalleryPhoto[] = galleryPhotos.filter(
-  (photo) => !EXCLUDED_SRC.has(photo.src)
+  (photo) => photo.src.startsWith("/images/yukako-")
 );
 
 // Fisher-Yates シャッフル（呼び出しごとに新しい順序。ブラウザでページを開くたびに変わる）

@@ -1,4 +1,4 @@
-import { CalendarPlus, Clock3, MapPin, Ticket } from "lucide-react";
+﻿import { CalendarPlus, Clock3, MapPin, Ticket } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { googleCalendarUrl } from "../lib/share";
@@ -36,13 +36,13 @@ export function NextEvent({ event }: NextEventProps) {
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <a
                 href="#schedule"
-                className="riri-button riri-button-primary min-h-12 px-5 py-3 text-sm"
+                className="yukako-button yukako-button-primary min-h-12 px-5 py-3 text-sm"
               >
                 これまでの予定を見る
               </a>
               <a
                 href="#links"
-                className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+                className="yukako-button yukako-button-soft min-h-12 px-5 py-3 text-sm"
               >
                 SNSで最新情報を見る
               </a>
@@ -148,14 +148,14 @@ export function NextEvent({ event }: NextEventProps) {
                 href={googleCalendarUrl(event)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+                className="yukako-button yukako-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 <CalendarPlus className="h-4 w-4 text-champagne" aria-hidden="true" />
                 カレンダーに追加
               </a>
               <a
                 href="#schedule"
-                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+                className="yukako-button yukako-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 ほかの予定も見る
               </a>

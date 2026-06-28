@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { ChevronDown, ChevronUp, History } from "lucide-react";
 import { getCalendarCells, getEventsForDay, formatMonthTitle } from "../lib/date";
 import { categoryMeta } from "../lib/eventMeta";
@@ -41,7 +41,7 @@ export function CalendarView({ events, monthKeys }: CalendarViewProps) {
           <button
             type="button"
             onClick={() => setShowPastMonths((current) => !current)}
-            className="riri-button riri-button-soft min-h-10 px-4 py-2 text-xs sm:text-sm"
+            className="yukako-button yukako-button-soft min-h-10 px-4 py-2 text-xs sm:text-sm"
             aria-expanded={showPastMonths}
             aria-controls="schedule-calendar-months"
           >
@@ -71,7 +71,7 @@ export function CalendarView({ events, monthKeys }: CalendarViewProps) {
           });
 
           return (
-            <section key={monthKey} className="riri-card border-rosefog/25 bg-white">
+            <section key={monthKey} className="yukako-card border-rosefog/25 bg-white">
           <div className="border-b border-rosefog/20 bg-porcelain px-4 py-4">
             <h3 className="font-display text-2xl text-ink">
               {formatMonthTitle(monthKey)}

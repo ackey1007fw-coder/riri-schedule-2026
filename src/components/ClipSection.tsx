@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import { Music2, Play } from "lucide-react";
 import { clips, type VideoClip } from "../data/clips";
 
@@ -38,7 +38,7 @@ function ClipCard({ clip }: { clip: VideoClip }) {
   }, [reduceMotion]);
 
   return (
-    <figure className="riri-card mx-auto w-full max-w-[320px] overflow-hidden p-0">
+    <figure className="yukako-card mx-auto w-full max-w-[320px] overflow-hidden p-0">
       <a
         href={clip.url}
         target="_blank"

@@ -6,11 +6,11 @@ import { SectionHeader } from "./SectionHeader";
 
 export function PetSection() {
   return (
-    <section id="kalua" className="bg-white py-16 sm:py-24">
+    <section id="support-moments" className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <SectionHeader
-            kicker="Kalua"
+            kicker="Moments"
             title="活動のひとこま"
             copy={petProfile.lead}
           />
@@ -29,7 +29,7 @@ export function PetSection() {
           <figure className="border border-rosefog/20 bg-porcelain p-3 shadow-sm">
             <img
               {...getResponsiveImageProps(
-                petProfile.ririImage,
+                petProfile.profileImage,
                 "(min-width: 1024px) 54vw, 100vw",
               )}
               alt={`${profile.name} profile photo`}
