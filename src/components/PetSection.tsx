@@ -11,7 +11,7 @@ export function PetSection() {
         <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <SectionHeader
             kicker="Kalua"
-            title="愛犬カルアちゃん"
+            title="活動のひとこま"
             copy={petProfile.lead}
           />
           <div className="border-y border-champagne/30 py-5 text-sm font-bold leading-7 text-ink/70">
@@ -20,7 +20,7 @@ export function PetSection() {
               {petProfile.ownerLabel}
             </span>
             <p className="mt-2">
-              {profile.name}さんのプロフィールに、カルアちゃんの紹介も加えました。
+              {profile.name}さんの活動や日常の雰囲気が伝わる写真も整理していきます。
             </p>
           </div>
         </div>
@@ -38,7 +38,7 @@ export function PetSection() {
             />
             <figcaption className="flex items-center gap-2 px-2 py-4 text-sm font-bold text-ink/65">
               <Sparkles className="h-4 w-4 text-champagne" aria-hidden="true" />
-              里季ちゃん
+              優花子さん
             </figcaption>
           </figure>
 
@@ -50,7 +50,7 @@ export function PetSection() {
                     petProfile.image,
                     "(min-width: 1024px) 360px, 80vw",
                   )}
-                  alt="カルアちゃん"
+                  alt="活動のひとこま"
                   loading="lazy"
                   className="h-auto max-h-full w-full object-contain"
                 />
@@ -75,7 +75,7 @@ export function PetSection() {
 
             <div className="flex items-start gap-3 border border-champagne/35 bg-porcelain p-4 text-sm font-bold leading-7 text-ink/70">
               <Heart className="mt-1 h-4 w-4 shrink-0 text-rosefog" aria-hidden="true" />
-              活動の合間にほっと一息。里季ちゃんの素顔がのぞくひとときです。
+              活動の合間に見える、自然な表情も大切に残していきます。
             </div>
           </div>
         </div>

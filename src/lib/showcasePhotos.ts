@@ -1,6 +1,6 @@
 import { galleryPhotos, type GalleryPhoto } from "../data/photos";
 
-// ショーケース（スライドショー・マガジン・Riri Mood）でランダム表示する写真プール。
+// ショーケースでランダム表示する写真プール。
 // 人物が主役でない写真（店頭・モニター・PC・トレーなど）は見栄えのため除外する。
 const EXCLUDED_SRC = new Set<string>([
   "/images/gallery/g26.jpg", // レストラン店頭

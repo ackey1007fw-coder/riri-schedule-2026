@@ -1,7 +1,7 @@
 {
   "name": "Yukako Schedule 2026",
   "short_name": "Yukako Schedule",
-  "description": "吉井優花子さんのプロデュース公演 #ゆかJET の公演情報をまとめた応援スケジュールです。",
+  "description": "吉井優花子さんのプロフィール、SHOWROOM、SNS、プロデュース公演 #ゆかJET の情報をまとめた応援スケジュールです。",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

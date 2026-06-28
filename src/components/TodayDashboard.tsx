@@ -82,7 +82,7 @@ export function TodayDashboard({
 
   const showroom =
     socialLinks.find((link) => link.kind === "showroom")?.url ??
-    "https://www.showroom-live.com/room/profile?room_id=550336";
+    "https://www.showroom-live.com/room/profile?room_id=347571";
 
   const { todayKey, weekEndKey, agenda } = useMemo(() => {
     const today = new Date();

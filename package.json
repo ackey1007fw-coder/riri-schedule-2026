@@ -1,12 +1,11 @@
 {
-  "name": "riri-fan-schedule-2026",
+  "name": "yukako-schedule-2026",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "images:build": "node scripts/generate-responsive-images.mjs",
-    "prebuild": "node scripts/generate-responsive-images.mjs",
     "typecheck": "tsc -b",
     "build": "tsc -b && node node_modules/vite/bin/vite.js build",
     "preview": "vite preview --host 127.0.0.1",

@@ -55,6 +55,20 @@ export const searchFaqs: SearchFaq[] = [
     linkLabel: "SNSを見る"
   },
   {
+    question: "秋田の優花子とは同じ人ですか？",
+    answer:
+      "SHOWROOMなどで使われている呼び名です。このページでは吉井優花子さん、Yukako、秋田の優花子の検索導線をまとめています。",
+    href: "#showroom",
+    linkLabel: "SHOWROOMを見る"
+  },
+  {
+    question: "SHOWROOMはどこから見られますか？",
+    answer:
+      "SHOWROOMセクションから配信ルームを開けます。フォロワー数、ルームレベル、SHOWランクなどは取得できる範囲で自動更新します。",
+    href: "#showroom",
+    linkLabel: "配信ルームを見る"
+  },
+  {
     question: "吉井優花子さんはどんな活動をしていますか？",
     answer:
       "舞台俳優・プロデューサー・SHOWROOMライバーとして活動中。Baby Shark Live全国公演のシンガー、自主プロデュース公演 #ゆかJET、CM・MV・ドラマ出演、ミスコン受賞歴など多方面で活躍しています。",
