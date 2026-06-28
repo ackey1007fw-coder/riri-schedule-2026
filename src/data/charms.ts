@@ -3,38 +3,26 @@ import { profile } from "./profile";
 export const charmPhotos = [
   {
     src: profile.gallery[0],
-    alt: "夏凪里季さんのやわらかな表情",
-    tag: "Portrait",
-    caption: "ふとした瞬間の、やわらかい表情。"
-  },
-  {
-    src: profile.gallery[1],
-    alt: "夏凪里季さんの透明感のあるポートレート",
-    tag: "Moment",
-    caption: "透明感のある、まっすぐな眼差し。"
-  },
-  {
-    src: profile.gallery[2],
-    alt: "夏凪里季さんの自然な笑顔",
-    tag: "Smile",
-    caption: "自然体で見せる、明るい笑顔。"
+    alt: "",
+    tag: "",
+    caption: ""
   }
 ];
 
 export const charmPoints = [
   {
-    label: "Smile",
-    title: "やわらかい笑顔",
-    copy: "見ているとふっと安心する、明るくあたたかい雰囲気。"
+    label: "Producer",
+    title: "自分で創る舞台",
+    copy: "プロデューサーとして企画から本番まで、舞台を一から創り上げる。"
+  },
+  {
+    label: "Cast",
+    title: "キャストとしての表現力",
+    copy: "プロデュースだけでなく、自ら舞台に立ち演じる二刀流。"
   },
   {
     label: "Stage",
-    title: "役者としての横顔",
-    copy: "舞台にドラマにMV。役に入り込む表情で引き込む。"
-  },
-  {
-    label: "Support",
-    title: "いちばん近くで応援",
-    copy: "次の出演も毎日の配信も、ここからすぐ追える。"
+    title: "#ゆかJET の世界",
+    copy: "GO,JET!GO!GO! シリーズで広がる、吉井優花子の舞台の世界。"
   }
 ];

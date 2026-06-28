@@ -25,7 +25,7 @@ export function ShareSection() {
 
   const nativeShare = async () => {
     try {
-      await navigator.share({ title: "Riri Schedule 2026", text, url });
+      await navigator.share({ title: "Yukako Schedule 2026", text, url });
     } catch {
       /* キャンセル/非対応時は何もしない */
     }
@@ -42,7 +42,7 @@ export function ShareSection() {
           このページをシェア
         </h2>
         <p className="mt-3 leading-8 text-ink/65">
-          友達にも教えて、一緒に里季ちゃんを応援しよう。
+          友達にも教えて、一緒に #ゆかJET を応援しよう。
         </p>
 
         <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">

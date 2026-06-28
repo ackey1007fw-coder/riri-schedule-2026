@@ -11,15 +11,17 @@ export function ProfileSection() {
           <SectionHeader
             kicker="Profile"
             title="プロフィール"
-            copy="大学のこと、舞台への想い、好きなものまで。里季ちゃんの素顔が見えるプロフィールです。"
+            copy="舞台への想い、プロデュース活動のこと。吉井優花子さんのプロフィールです。"
           />
           <div className="riri-card border-champagne/40 bg-white p-5 shadow-paper">
-            <div className="mb-4 flex items-center gap-3">
-              <Star className="h-5 w-5 text-champagne" aria-hidden="true" />
-              <p className="text-sm font-bold text-ink/70">
-                ファンネーム：{profile.fanName} ／ ファンマーク {profile.fanMark}
-              </p>
-            </div>
+            {profile.fanName && (
+              <div className="mb-4 flex items-center gap-3">
+                <Star className="h-5 w-5 text-champagne" aria-hidden="true" />
+                <p className="text-sm font-bold text-ink/70">
+                  ファンネーム：{profile.fanName} ／ ファンマーク {profile.fanMark}
+                </p>
+              </div>
+            )}
             <p className="font-display text-4xl text-ink">{profile.name}</p>
             <p className="mt-2 text-lg text-ink/55">{profile.kana}</p>
           </div>
@@ -48,10 +50,12 @@ export function ProfileSection() {
                 </div>
               </div>
             ))}
-            <div className="riri-card flex items-center gap-3 border-champagne/40 bg-white p-4 text-sm font-bold leading-7 text-ink/70">
-              <HeartHandshake className="h-5 w-5 shrink-0 text-champagne" aria-hidden="true" />
-              ファンマーク {profile.fanMark} をつけて、みんなで一緒に応援しよう。
-            </div>
+            {profile.fanMark && (
+              <div className="riri-card flex items-center gap-3 border-champagne/40 bg-white p-4 text-sm font-bold leading-7 text-ink/70">
+                <HeartHandshake className="h-5 w-5 shrink-0 text-champagne" aria-hidden="true" />
+                ファンマーク {profile.fanMark} をつけて、みんなで一緒に応援しよう。
+              </div>
+            )}
           </div>
         </div>
       </div>

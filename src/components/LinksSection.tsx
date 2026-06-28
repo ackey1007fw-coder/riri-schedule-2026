@@ -14,7 +14,7 @@ export function LinksSection({ socialLinks, mediaLinks }: LinksSectionProps) {
         <SectionHeader
           kicker="Links"
           title="SNS・メディアリンク"
-          copy="フォローも、配信も、最新の告知も。里季ちゃんとつながれる場所をまとめました。"
+          copy="フォローも、最新の告知も。吉井優花子さんとつながれる場所をまとめました。"
         />
 
         <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">

@@ -4,9 +4,9 @@ import { searchFaqs } from "../data/searchFaq";
 
 // events.ts の内容を schema.org Event の構造化データ(JSON-LD)として
 // 実行時に <head> へ出力する。データを足すだけで検索向けにも反映される。
-const BASE = "https://riri-schedule-2026.vercel.app";
+const BASE = "https://yukako-schedule-2026.vercel.app";
 const PERSON_ID = `${BASE}/#person`;
-const SCRIPT_ID = "riri-events-jsonld";
+const SCRIPT_ID = "yukako-events-jsonld";
 
 const toAbsolute = (path: string) =>
   path.startsWith("http") ? path : `${BASE}${path}`;

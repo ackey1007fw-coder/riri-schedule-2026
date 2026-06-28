@@ -12,18 +12,18 @@ import { searchFaqs, searchIntents } from "../data/searchFaq";
 const searchTopics = [
   {
     icon: CalendarDays,
-    title: "出演情報",
-    body: "夏凪里季さんの次の出演、舞台予定、イベント、チケット予約先を確認できます。"
+    title: "公演情報",
+    body: "#ゆかJET の公演日程、会場、チケット情報を確認できます。"
   },
   {
     icon: Radio,
-    title: "SHOWROOM",
-    body: "SHOWROOM配信、ルーム情報、アバター、フォロー導線をまとめています。"
+    title: "出演歴",
+    body: "CM・MV・ドラマ・舞台など、吉井優花子さんのこれまでの出演歴をまとめています。"
   },
   {
     icon: Sparkles,
-    title: "フレキャン",
-    body: "フレキャン2025 Entry No.306としての活動や関連リンクを見つけやすく整理しています。"
+    title: "プロデュース",
+    body: "GO,JET!GO!GO! シリーズのプロデュース公演情報を整理しています。"
   }
 ];
 
@@ -57,11 +57,11 @@ export function SearchSeoSection() {
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <h2 className="font-display text-3xl leading-tight text-ink sm:text-4xl">
-                夏凪里季さんを応援するためのFan Schedule
+                吉井優花子さんを応援するためのFan Schedule
               </h2>
               <p className="mt-5 leading-8 text-ink/70">
-                出演情報・舞台・SHOWROOM・SNS・プロフィールを、応援する人の目線でまとめています。
-                次の予定もチケットも配信も、スマホからすぐにたどれます。
+                #ゆかJET の公演情報・出演歴・SNSを、応援する人の目線でまとめています。
+                公演スケジュールもチケットも、スマホからすぐにたどれます。
               </p>
             </div>
 
