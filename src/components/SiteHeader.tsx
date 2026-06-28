@@ -4,11 +4,11 @@ import { profile } from "../data/profile";
 import type { SocialLink } from "../types";
 
 const navItems = [
-  { label: "次の出演", href: "#next", id: "next" },
+  { label: "公演情報", href: "#next", id: "next" },
   { label: "スケジュール", href: "#schedule", id: "schedule" },
   { label: "これまでの歩み", href: "#highlights", id: "highlights" },
-  { label: "SHOWROOM", href: "#showroom", id: "showroom" },
-  { label: "プロフィール", href: "#profile", id: "profile" }
+  { label: "プロフィール", href: "#profile", id: "profile" },
+  { label: "SNS", href: "#links", id: "links" }
 ];
 
 function useActiveSection() {
@@ -80,7 +80,7 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
           ))}
         </nav>
 
-        {showroom && (
+        {showroom ? (
           <a
             href={showroom.url}
             target="_blank"
@@ -89,6 +89,15 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
           >
             <span className="hidden min-[430px]:inline">SHOWROOM</span>
             <span className="min-[430px]:hidden">SR</span>
+          </a>
+        ) : socialLinks[0] && (
+          <a
+            href={socialLinks[0].url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="riri-button riri-button-gold min-h-10 shrink-0 px-3 text-xs sm:min-h-11 sm:px-4 sm:text-sm"
+          >
+            {socialLinks[0].label}
           </a>
         )}
       </div>

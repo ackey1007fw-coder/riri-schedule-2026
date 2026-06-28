@@ -1,7 +1,7 @@
 {
-  "name": "Riri Schedule 2026",
-  "short_name": "Riri Schedule",
-  "description": "夏凪里季さんの出演情報、SHOWROOM、SNSリンクをまとめた応援スケジュールです。",
+  "name": "Yukako Schedule 2026",
+  "short_name": "Yukako Schedule",
+  "description": "吉井優花子さんのプロデュース公演 #ゆかJET の公演情報をまとめた応援スケジュールです。",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

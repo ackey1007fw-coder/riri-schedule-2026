@@ -24,8 +24,8 @@ export function ScheduleSection({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           kicker="Schedule"
-          title="カードとカレンダーで見る出演予定"
-          copy="直近の応援先はカードで大きく、日付の流れはカレンダーで確認できます。スマホでも縦に読み進めやすい構成です。"
+          title="公演スケジュール"
+          copy="公演情報はカードで詳しく、日付の流れはカレンダーで一覧できます。"
         />
 
         <div className="mb-12">
@@ -35,7 +35,7 @@ export function ScheduleSection({
                 Upcoming
               </p>
               <h3 className="mt-1 font-display text-3xl text-ink">
-                今後の出演情報
+                今後の公演情報
               </h3>
             </div>
             <span className="border border-rosefog/30 bg-porcelain px-3 py-2 text-xs font-bold text-ink/62">
@@ -59,7 +59,7 @@ export function ScheduleSection({
                 終了済みイベント
               </h3>
               <p className="mt-2 text-sm leading-6 text-ink/55">
-                これまでの出演実績を、必要なときだけ開いて確認できます。
+                過去の公演やイベントを、必要なときだけ開いて確認できます。
               </p>
             </div>
             <span className="flex shrink-0 items-center gap-2 border border-rosefog/30 bg-porcelain px-3 py-2 text-xs font-bold text-ink/62">

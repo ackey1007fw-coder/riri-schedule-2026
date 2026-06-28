@@ -11,16 +11,15 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
     nextEvent?.links.find((link) => link.kind === "ticket") ??
     nextEvent?.links[0];
   const hasTicket = ticketLink?.kind === "ticket";
-  const instagram = socialLinks.find((link) => link.kind === "instagram");
+  const mainSocial = socialLinks[0];
 
-  // イベントの種類に合わせて「次の◯◯」の見出しを変える
   const nextLabel = !nextEvent
     ? "スケジュール"
     : nextEvent.category === "birthday"
       ? "次の予定"
       : nextEvent.category === "event"
         ? "次のイベント"
-        : "次の出演";
+        : "次の公演";
 
   const items = [
     {
@@ -43,11 +42,11 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
     },
     {
       label: "SNS",
-      title: instagram?.handle ?? "更新をチェック",
-      copy: "写真や最新の告知をチェック。",
-      href: instagram?.url ?? "#links",
+      title: mainSocial?.handle ?? "更新をチェック",
+      copy: "最新の公演情報やオフショットをチェック。",
+      href: mainSocial?.url ?? "#links",
       Icon: Images,
-      external: Boolean(instagram)
+      external: Boolean(mainSocial)
     }
   ];
 

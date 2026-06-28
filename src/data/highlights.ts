@@ -1,19 +1,3 @@
-// これまでの歩み（ハイライト）データ
-// ルール（AGENTS.md）:
-// - 未確認情報は書かない。確定できた事実だけを追加する。
-// - 画像は public/images/ に自己ホスト（例: /images/highlight-xxx.jpg）。Drive直リンク禁止。
-// - 新規追加テンプレート:
-//   {
-//     id: "一意なslug",
-//     year: "2024",                 // 並び替え用の年
-//     date: "2024年◯月",            // 画面表示用（年だけでも可）
-//     category: "受賞",             // 受賞 / メディア / 舞台 / イベント / 配信 など
-//     title: "タイトル",
-//     description: "確認できた事実のみ",
-//     image: "/images/highlight-xxx.jpg", // 任意・自己ホスト
-//     link: { label: "リンク名", url: "https://..." } // 任意
-//   }
-
 export type Highlight = {
   id: string;
   year: string;
@@ -27,6 +11,39 @@ export type Highlight = {
 };
 
 export const highlights: Highlight[] = [
+  {
+    id: "yukajet-gojet-vol1-2026-07",
+    year: "2026",
+    date: "2026年7月",
+    category: "舞台",
+    title: "#ゆかJET『GO,JET!GO!GO! vol.1 Premium 〜 I LOVE YOU が言えなくて 〜』",
+    description:
+      "吉井優花子プロデュース公演の第1弾。A/B/C班構成で、2026年7月23日〜27日にAir studio 両国にて上演。",
+    links: [
+      { label: "舞台情報解禁（X）", url: "https://x.com/yukako_produce/status/2070122985265197380" },
+      { label: "全キャスト・物販情報（X）", url: "https://x.com/yukako_produce/status/2070830869070377393" }
+    ]
+  },
+  {
+    id: "babyshark-live-2025",
+    year: "2025",
+    date: "2025年〜",
+    category: "舞台",
+    title: "BABY SHARK LIVE! -The Hidden Treasure- 全国公演",
+    description:
+      "Pinkfongの人気キャラクターたちと歌って踊るファミリーミュージカル。シンガーとして全国各地の公演に出演中。",
+    image: "/images/yukako-babyshark-pirate.jpg"
+  },
+  {
+    id: "mgj-2025-miss-peace",
+    year: "2025",
+    date: "2025年9月",
+    category: "受賞",
+    title: "Miss Grand Japan 2025 MISS PEACE賞",
+    description:
+      "ミス・グランド・ジャパン2025にて、平和的活動を積極的に行ったファイナリストに贈られるMISS PEACE賞を受賞。大会はMSCベリッシマ号で開催。",
+    image: "/images/yukako-cruise-captain.jpg"
+  },
   {
     id: "souzokurei-horror-2026-01",
     year: "2026",
@@ -61,7 +78,7 @@ export const highlights: Highlight[] = [
     category: "CM",
     title: "SHOWROOM×khb50周年 CM",
     description:
-      "SHOWROOMと東日本放送（khb）50周年のCMに出演。宮城県では地上波でも放映されました。",
+      "SHOWROOMと東日本放送（khb）50周年のCMに出演。宮城県では地上波でも放映されました。"
   },
   {
     id: "modelpress-2025-09",
@@ -70,7 +87,7 @@ export const highlights: Highlight[] = [
     category: "メディア",
     title: "モデルプレス掲載",
     description:
-      "「注目の“日本一可愛い新入生”候補」として、フレキャン2025特集のインタビューに登場しました。",
+      "「注目の『日本一可愛い新入生』候補」として、フレキャン2025特集のインタビューに登場しました。",
     link: { label: "モデルプレスで読む", url: "https://mdpr.jp/news/detail/4646978" }
   },
   {
@@ -80,12 +97,9 @@ export const highlights: Highlight[] = [
     category: "バラエティ",
     title: "フジテレビ『新しいカギ』2時間SP「超！学校かくれんぼ」",
     description:
-      "2025年8月16日放送のフジテレビ『新しいカギ』2時間SPの「超！学校かくれんぼ」（栃木の巨大校・作新学院、約4300人との対決回）に女子高生役で出演。新しい学校のリーダーズも参戦した回で、TVer・FODで見逃し配信もされました。",
+      "2025年8月16日放送のフジテレビ『新しいカギ』2時間SPの「超！学校かくれんぼ」に女子高生役で出演。",
     links: [
-      {
-        label: "FODで見る（作新学院の回）",
-        url: "https://fod.fujitv.co.jp/title/2705/2705110180/"
-      }
+      { label: "FODで見る（作新学院の回）", url: "https://fod.fujitv.co.jp/title/2705/2705110180/" }
     ]
   },
   {
@@ -95,7 +109,7 @@ export const highlights: Highlight[] = [
     category: "MV",
     title: "MAZZEL『King Kila Game』MV",
     description:
-      "MAZZEL の新曲『King Kila Game』のMVに出演。クレジットにも名前が掲載されました。",
+      "MAZZEL の新曲『King Kila Game』のMVに出演。クレジットにも名前が掲載されました。"
   },
   {
     id: "chuden-cm-2025-04",
@@ -104,7 +118,7 @@ export const highlights: Highlight[] = [
     category: "CM",
     title: "中部電力CM「藤井聡太なら。吹奏楽篇」",
     description:
-      "中部電力のCM「藤井聡太なら。吹奏楽篇」に出演しました。",
+      "中部電力のCM「藤井聡太なら。吹奏楽篇」に出演しました。"
   },
   {
     id: "adidas-cm-2025-03",
@@ -113,7 +127,7 @@ export const highlights: Highlight[] = [
     category: "CM",
     title: "adidas CM",
     description:
-      "adidas のCMに出演。SNSなどさまざまな広告で使用されました。",
+      "adidas のCMに出演。SNSなどさまざまな広告で使用されました。"
   },
   {
     id: "googlepixel-au-cm-2025-02",
@@ -122,7 +136,25 @@ export const highlights: Highlight[] = [
     category: "CM",
     title: "Google Pixel／au「ニッポンもしも写真部 東京篇」CM",
     description:
-      "Google Pixel × au のCM「ニッポンもしも写真部 東京篇」に、スタンドインとして参加しました。",
+      "Google Pixel × au のCM「ニッポンもしも写真部 東京篇」に、スタンドインとして参加しました。"
+  },
+  {
+    id: "miss-cosmo-japan-2024",
+    year: "2024",
+    date: "2024年8月",
+    category: "受賞",
+    title: "Miss Cosmo Japan 2024 TOP5ファイナリスト",
+    description:
+      "審査累計ポイントランキング1位を獲得してTOP5ファイナリストに選出。国内最終選考では3位に選定されました。"
+  },
+  {
+    id: "akt-ambassador-2024",
+    year: "2024",
+    date: "2024年5月",
+    category: "CM",
+    title: "AKT秋田テレビ アプリアンバサダー",
+    description:
+      "AKT秋田テレビの公式アプリ「AKTアプリ」のアンバサダーに選出。地上波テレビCMやイベントに出演しました。"
   },
   {
     id: "comdot-haikei-mv-2024-05",
@@ -131,7 +163,7 @@ export const highlights: Highlight[] = [
     category: "MV",
     title: "コムドット『拝啓、俺たちへ』MV",
     description:
-      "コムドットの1st single『拝啓、俺たちへ』のMV制作に参加しました。",
+      "コムドットの1st single『拝啓、俺たちへ』のMV制作に参加しました。"
   },
   {
     id: "meiyo-hope-mv-2024-04",
@@ -140,7 +172,7 @@ export const highlights: Highlight[] = [
     category: "MV",
     title: "meiyo『HOPE!HOPE!HOPE!』MV",
     description:
-      "meiyo の新曲MV『HOPE!HOPE!HOPE!』に出演。クレジットにも名前が掲載されました。",
+      "meiyo の新曲MV『HOPE!HOPE!HOPE!』に出演。クレジットにも名前が掲載されました。"
   },
   {
     id: "hotpepper-beauty-cm-2024-02",
@@ -149,7 +181,7 @@ export const highlights: Highlight[] = [
     category: "CM",
     title: "ホットペッパービューティー「学割」新CM",
     description:
-      "ホットペッパービューティー「学割」の新CM（情報篇・クーポン篇の2種類）に出演しました。",
+      "ホットペッパービューティー「学割」の新CM（情報篇・クーポン篇の2種類）に出演しました。"
   },
   {
     id: "bakasemaishi-2023-11",
@@ -158,7 +190,7 @@ export const highlights: Highlight[] = [
     category: "バラエティ",
     title: "フジテレビ『私のバカせまい史』",
     description:
-      "フジテレビのバラエティ番組『私のバカせまい史』にVTR出演。靴下についてのテーマで登場しました。",
+      "フジテレビのバラエティ番組『私のバカせまい史』にVTR出演。靴下についてのテーマで登場しました。"
   },
   {
     id: "tokyo-calling-mv-2023-11",
@@ -167,7 +199,7 @@ export const highlights: Highlight[] = [
     category: "MV",
     title: "新しい学校のリーダーズ『Tokyo Calling』MV",
     description:
-      "新しい学校のリーダーズの新曲MVに、猫カフェの店員役として出演。クレジットにも名前が掲載されました。",
+      "新しい学校のリーダーズの新曲MVに、猫カフェの店員役として出演。クレジットにも名前が掲載されました。"
   },
   {
     id: "fishers-100vs100-2023-10",
@@ -176,7 +208,7 @@ export const highlights: Highlight[] = [
     category: "企画",
     title: "フィッシャーズ「100人VS100人 野球対決」",
     description:
-      "人気YouTuberフィッシャーズの大型企画に、赤チームとして参加しました。",
+      "人気YouTuberフィッシャーズの大型企画に、赤チームとして参加しました。"
   },
   {
     id: "blackfamilia-2023-10",
@@ -185,7 +217,7 @@ export const highlights: Highlight[] = [
     category: "ドラマ",
     title: "日本テレビ系『ブラックファミリア〜新堂家の復讐〜』",
     description:
-      "2023年10月5日放送開始の日本テレビ系深夜ドラマに出演しました。",
+      "2023年10月5日放送開始の日本テレビ系深夜ドラマに出演しました。"
   },
   {
     id: "himitsu-shonen-2023-10",
@@ -194,7 +226,7 @@ export const highlights: Highlight[] = [
     category: "ドラマ",
     title: "日本テレビ 金曜ドラマDEEP『秘密を持った少年たち』",
     description:
-      "毎週金曜放送の金曜ドラマDEEP『秘密を持った少年たち』に出演しました。",
+      "毎週金曜放送の金曜ドラマDEEP『秘密を持った少年たち』に出演しました。"
   },
   {
     id: "kimito-koi-drama-2023-10",
@@ -203,7 +235,16 @@ export const highlights: Highlight[] = [
     category: "ドラマ",
     title: "MBS深夜ドラマ『君となら恋をしてみても』",
     description:
-      "2023年10月5日放送スタートのMBS深夜ドラマに出演。TVerなどでも配信されました。",
+      "2023年10月5日放送スタートのMBS深夜ドラマに出演。TVerなどでも配信されました。"
+  },
+  {
+    id: "tvk-weather-report-2023",
+    year: "2023",
+    date: "2023年4月〜9月",
+    category: "TV",
+    title: "テレビ神奈川『weather report』リポーター",
+    description:
+      "2023年4月10日〜9月30日放送のテレビ神奈川『weather report』にリポーターとして出演。夏のリポーター挑戦篇にも登場しました。"
   },
   {
     id: "natsutodoroki-2023-09",
@@ -212,7 +253,7 @@ export const highlights: Highlight[] = [
     category: "朗読劇",
     title: "朗読LIVE公演『夏轟』",
     description:
-      "Aznet Produce の朗読LIVE公演（2023年9月2日）に出演。浴衣チェキや配信アーカイブも販売されました。",
+      "Aznet Produce の朗読LIVE公演（2023年9月2日）に出演。浴衣チェキや配信アーカイブも販売されました。"
   },
   {
     id: "realizesummer-2023-08",
@@ -221,6 +262,24 @@ export const highlights: Highlight[] = [
     category: "舞台",
     title: "舞台『リアライズサマー』",
     description:
-      "2023年8月上演の『リアライズサマー』にアンダー役として出演。終始笑顔の絶えない2日間の公演でした。",
+      "2023年8月上演の『リアライズサマー』にアンダー役として出演。終始笑顔の絶えない2日間の公演でした。"
+  },
+  {
+    id: "akuma-no-namida-2022",
+    year: "2022",
+    date: "2022年12月",
+    category: "舞台",
+    title: "舞台『悪魔の涙』（舞台デビュー）",
+    description:
+      "プロジェクトアクト東京の第七回公演。2022年12月8日〜12日に平賀スクエアで上演。カラヤン組で諏訪桃子役を演じ、舞台俳優としてのキャリアをスタート。"
+  },
+  {
+    id: "miss-yukata-2021",
+    year: "2021",
+    date: "2021年",
+    category: "受賞",
+    title: "Sunny Side Project ミス浴衣コンテスト 準グランプリ",
+    description:
+      "秋田で公務員として勤務中にエントリー。準グランプリとSHOWROOM賞を受賞し、SHOWROOMでの配信活動を開始するきっかけに。"
   }
 ];

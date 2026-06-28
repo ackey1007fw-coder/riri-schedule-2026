@@ -2,19 +2,17 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   CalendarDays,
   CalendarHeart,
-  Images,
-  Radio,
   Sparkles,
-  UserRound
+  UserRound,
+  MessageCircle
 } from "lucide-react";
 
 const items = [
-  { label: "今日の応援", href: "#today", id: "today", Icon: Sparkles },
-  { label: "次の出演", href: "#next", id: "next", Icon: CalendarHeart },
-  { label: "カレンダー", href: "#calendar", id: "calendar", Icon: CalendarDays },
-  { label: "ギャラリー", href: "#gallery", id: "gallery", Icon: Images },
-  { label: "SHOWROOM", href: "#showroom", id: "showroom", Icon: Radio },
-  { label: "プロフィール", href: "#profile", id: "profile", Icon: UserRound }
+  { label: "公演情報", href: "#next", id: "next", Icon: CalendarHeart },
+  { label: "スケジュール", href: "#schedule", id: "schedule", Icon: CalendarDays },
+  { label: "これまでの歩み", href: "#highlights", id: "highlights", Icon: Sparkles },
+  { label: "プロフィール", href: "#profile", id: "profile", Icon: UserRound },
+  { label: "SNS", href: "#links", id: "links", Icon: MessageCircle }
 ];
 
 export function QuickNav() {

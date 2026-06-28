@@ -32,7 +32,7 @@ export function HighlightsSection() {
         <SectionHeader
           kicker="Highlights"
           title="これまでの歩み"
-          copy="ドラマ、MV、CM、舞台に受賞まで。里季ちゃんがこれまで歩んできた道のり。"
+          copy="舞台、CM、MV、ドラマ、ミスコンにSHOWROOMまで。吉井優花子さんがこれまで歩んできた道のり。"
         />
 
         <div id="highlight-list" className="grid gap-3 md:grid-cols-2">
