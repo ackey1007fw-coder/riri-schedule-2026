@@ -3,11 +3,11 @@ import type { ScheduleEvent } from "../types";
 export const events: ScheduleEvent[] = [
   {
     id: "stage-ogikubo-2026-08",
-    title: "舞台出演（詳細は後日発表）",
-    shortTitle: "8月の舞台",
+    title: "劇団ココア『ピッパラの樹』",
+    shortTitle: "ピッパラの樹",
     category: "stage",
     startAt: "2026-08-18T19:30:00+09:00",
-    endAt: "2026-08-29T21:30:00+09:00",
+    endAt: "2026-08-29T21:00:00+09:00",
     dates: [
       "2026-08-18",
       "2026-08-22",
@@ -16,13 +16,24 @@ export const events: ScheduleEvent[] = [
       "2026-08-28",
       "2026-08-29"
     ],
-    displayDate: "2026年8月18日(火)〜29日(土)・全6公演",
-    venue: "荻窪（詳細未公開）",
+    displayDate: "2026年8月18日(火)〜29日(土)・A班 全6公演",
+    venue: "荻窪小劇場",
     image: "/images/riri-portrait.jpg",
     summary:
-      "8月に荻窪で上演される舞台に出演（全6公演）。8/18(火)19:30｜8/22(土)12:00｜8/23(日)15:30｜8/25(火)14:00｜8/28(金)19:30｜8/29(土)19:30。作品タイトルや会場などの詳細は後日発表予定です。",
-    badges: ["舞台", "全6公演", "詳細は後日発表"],
-    links: [],
+      "劇団ココアの19世紀イギリス風恋愛喜劇『ピッパラの樹』にA班として出演（約100分）。脚本・演出：小谷聡一郎。りりの出演回は 8/18(火)19:30｜8/22(土)12:00｜8/23(日)15:30｜8/25(火)14:00｜8/28(金)19:30｜8/29(土)19:30 の全6公演。特典付き優先入場チケット5,500円／一般4,500円（現金のみ）。",
+    badges: ["舞台", "A班", "全6公演", "チケット6/29〜"],
+    links: [
+      {
+        label: "チケット予約（tiget）",
+        url: "https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9",
+        kind: "ticket"
+      },
+      {
+        label: "劇団ココア 公式X",
+        url: "https://x.com/gekidan_cocoa",
+        kind: "sns"
+      }
+    ],
     isImportant: true
   },
   {
