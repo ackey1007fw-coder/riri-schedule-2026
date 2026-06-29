@@ -1,122 +1,80 @@
+const showroomAsset = (url: string) =>
+  `/api/showroom-image?url=${encodeURIComponent(url)}`;
+
+const showroomAvatar = (id: string, version = "110") =>
+  showroomAsset(`https://static.showroom-live.com/image/avatar/${id}.png?v=${version}`);
+
 export const profile = {
-  theme: "Yukako Schedule 2026",
-  name: "吉井 優花子",
-  kana: "よしい ゆかこ",
-  romaji: "Yoshii Yukako",
-  aliases: ["Yukako", "秋田の優花子"],
+  theme: "Riri Schedule 2026",
+  name: "夏凪 里季",
+  kana: "なつなぎ りり",
+  romaji: "Natsunagi Riri",
   fanScheduleLabel: "Fan Schedule",
-  catchCopy:
-    "秋田から舞台へ。俳優・タレント・モデル・ライバーとして、まっすぐに表現を重ねる。",
+  catchCopy: "透明感のある笑顔とまっすぐな表現力で、次の舞台へ。",
   intro:
-    "公演情報からSNS、出演歴、SHOWROOMまで。吉井優花子さんの活動を追いやすくまとめた応援サイトです。",
-  heroImage: "/images/yukako-stage-back.jpg",
-  portraitImage: "/images/yukako-portrait.jpg",
-  birthday: "1997-04-27",
-  birthdayMonthDay: "04-27",
-  birthdayLabel: "4月27日",
-  fanName: "",
-  fanMark: "",
+    "出演予定も、配信も、SNSも。里季ちゃんを応援する人のための場所です。",
+  heroImage: "/images/riri-hero-2026.jpg",
+  portraitImage: "/images/riri-profile.jpg",
+  birthday: "2006-06-24",
+  birthdayMonthDay: "06-24",
+  birthdayLabel: "6月24日",
+  fanName: "ナギイチサマー",
+  fanMark: "🌻🌴",
   facts: [
-    { label: "生年月日", value: "1997年4月27日" },
-    { label: "出身", value: "秋田県秋田市" },
-    { label: "身長", value: "161cm" },
-    { label: "血液型", value: "AB型" },
-    { label: "活動", value: "俳優・タレント・モデル・ライバー" },
-    { label: "主な出演", value: "Baby Shark Live、舞台、CM、MV、ドラマ" },
-    {
-      label: "プロデュース",
-      value: "#ゆかJET（GO,JET!GO!GO! シリーズ）"
-    },
-    {
-      label: "受賞歴",
-      value: "Miss Grand Japan 2025 MISS PEACE賞 / Miss Cosmo Japan TOP5"
-    }
-  ],
-  summary: [
-    "大学卒業後、秋田県で公務員として勤務しながら、2021年の『Sunny Side Project ミス浴衣コンテスト』に参加。準グランプリなどを受賞し、SHOWROOMでの配信活動も本格化しました。",
-    "2022年から毎日配信を再開し、同年に活動拠点を東京へ。舞台『悪魔の涙』への出演をきっかけに、舞台・テレビ・CM・モデル活動など表現の場を広げています。",
-    "近年は『BABY SHARK LIVE!』日本版キャスト、AKTアプリアンバサダー、Miss Grand Japan 2025 MISS PEACE賞など、秋田とのつながりと発信力を活かした活動も目立ちます。"
-  ],
-  timeline: [
-    {
-      year: "2021",
-      title: "ミス浴衣コンテストで準グランプリなどを受賞",
-      copy: "SHOWROOM配信を始めるきっかけにもなった転機。以後、配信イベントやモデル活動へ活動の幅を広げました。"
-    },
-    {
-      year: "2022",
-      title: "東京へ活動拠点を移し、舞台活動を本格化",
-      copy: "毎日配信を再開し、初舞台『悪魔の涙』に出演。俳優としての活動を本格的に進めています。"
-    },
-    {
-      year: "2024",
-      title: "BABY SHARK LIVE!・AKT関連活動へ出演",
-      copy: "全国公演や秋田テレビ関連の活動など、舞台と地元秋田をつなぐ出演が増えています。"
-    },
-    {
-      year: "2025",
-      title: "Miss Grand Japan 2025でMISS PEACE賞",
-      copy: "社会貢献や平和への姿勢も評価され、2026年から代表補佐・運営マネジメントに就任したとSHOWROOMプロフィールで紹介されています。"
-    },
-    {
-      year: "2026",
-      title: "吉井優花子プロデュース公演 #ゆかJET",
-      copy: "『GO,JET!GO!GO! vol.1 Premium』でプロデューサーを務め、自身もB班・C班に出演予定です。"
-    }
-  ],
-  skills: [
-    "スポーツ全般",
-    "歌唱",
-    "字を書くこと",
-    "絵を描くこと",
-    "料理",
-    "写真撮影",
-    "五感を活かした表現"
+    { label: "大学", value: "青山学院大学 2年生" },
+    { label: "出身", value: "三重県生まれ、神奈川県育ち" },
+    { label: "身長", value: "163cm" },
+    { label: "血液型", value: "A型" },
+    { label: "夢", value: "世界中の人の心を動かす役者になること" },
+    { label: "受賞", value: "フレキャン2025 審査員特別賞" },
+    { label: "部活", value: "陸上部（ハードル）、ダンス部" },
+    { label: "趣味", value: "数独、映画鑑賞、スポーツ、お菓子作り" },
+    { label: "特技", value: "表情筋を動かすこと" },
+    { label: "利き手", value: "両利き（ご飯は右・鉛筆は左）" },
+    { label: "性格", value: "ESFJ（領事官）" },
+    { label: "カラー/骨格", value: "ブルベ夏・骨格ナチュラル" },
+    { label: "サイズ", value: "トップスM／ボトムスS・M／アウターM・靴24.5〜25cm" },
+    { label: "好きな服", value: "Chico / MURUA / MERCURYDUO / ZARA / rienda / sly / mochea" },
+    { label: "好きなブランド", value: "Dasique / Fwee / CLIO / Rom&nd / DIOR / CELINE / miumiu / VUITTON / SHIRO / JILLSTUART" }
   ],
   gallery: [
-    "/images/yukako-stage-back.jpg",
-    "/images/yukako-stage-front.jpg",
-    "/images/yukako-portrait.jpg",
-    "/images/yukako-cruise-night.jpg",
-    "/images/yukako-cruise-captain.jpg",
-    "/images/yukako-babyshark-lobster.jpg",
-    "/images/yukako-babyshark-pirate.jpg",
-    "/images/yukako-babyshark-character.jpg",
-    "/images/yukako-casual-braids.jpg",
-    "/images/yukako-cruise-gym.jpg",
-    "/images/yukako-shuichi-event.jpg",
-    "/images/yukako-noodles.jpg"
-  ] as string[],
-  showroom: {
-    roomId: "347571",
-    roomName: "秋田の優花子(ゆかこ)",
-    tagline: "優しく楽しく柔らかく",
-    image: "/images/yukako-portrait.jpg",
-    url: "https://www.showroom-live.com/room/profile?room_id=347571",
-    liveUrl: "https://www.showroom-live.com/r/SSPYUKATA048",
-    stats: [
-      { label: "まいにち配信", value: "更新中" },
-      { label: "次回配信", value: "SHOWROOMで確認" },
-      { label: "フォロワー", value: "1,300+" },
-      { label: "ルームLv", value: "700+" },
-      { label: "SHOWランク", value: "B帯" }
-    ] as { label: string; value: string }[],
-    message:
-      "SHOWROOMでは、秋田の優花子として配信中。ルーム紹介では、あたたかく、みんなで包み込むような場所を大切にしていることが伝えられています。"
-  },
-  sources: [
-    {
-      label: "Wikipedia",
-      url: "https://ja.wikipedia.org/wiki/%E5%90%89%E4%BA%95%E5%84%AA%E8%8A%B1%E5%AD%90"
-    },
-    {
-      label: "SHOWROOM",
-      url: "https://www.showroom-live.com/room/profile?room_id=347571"
-    },
-    {
-      label: "CloudCasting",
-      url: "https://cloudcasting.jp/profile/NTc4MTc3352"
-    }
+    "/images/riri-zine-01.jpg",
+    "/images/riri-zine-02.jpg",
+    "/images/riri-zine-03.jpg",
+    "/images/riri-zine-04.jpg"
   ],
-  avatars: [] as { name: string; image: string; featured?: boolean }[]
+  showroom: {
+    roomName: "夏凪里季",
+    tagline: "#フレキャン2025 | Entry No.306",
+    image: showroomAsset(
+      "https://static.showroom-live.com/image/room/cover/79fff63b1c4bdbb2fa1bf0507b410abbc3ce07d36111ac3ff3867633fb0d3c80_s.jpeg?v=1779283160"
+    ),
+    url: "https://www.showroom-live.com/room/profile?room_id=550336",
+    stats: [
+      { label: "まいにち配信", value: "400日目" },
+      { label: "次回配信", value: "未定" },
+      { label: "フォロワー", value: "933" },
+      { label: "ルームLv", value: "174" },
+      { label: "SHOWランク", value: "C" }
+    ],
+    message:
+      "朝の配信やイベント前の近況をチェック。コメント、フォロー、ギフトで日々の活動を応援できます。"
+  },
+  avatars: [
+    { name: "テオリデアのヘルメスりりたん", image: "/images/avatar-hermes-riritan.jpg", featured: true },
+    { name: "カルア",                 image: "/images/avatar-kalua.jpg" },
+    { name: "お昼寝カルア",            image: "/images/avatar-kalua-nap.jpg" },
+    { name: "カルアと里季",   image: showroomAvatar("1141864") },
+    { name: "おばけりりたん", image: showroomAvatar("1139413") },
+    { name: "金ぐりり",       image: showroomAvatar("1139155") },
+    { name: "ちびりり",       image: showroomAvatar("1137154") },
+    { name: "とりり",         image: showroomAvatar("1136628") },
+    { name: "りりわん",       image: showroomAvatar("1135709") },
+    { name: "こうもりり",     image: showroomAvatar("1135202") },
+    { name: "ひまわりり",     image: showroomAvatar("1133559") },
+    { name: "なつりり",       image: showroomAvatar("1133436") },
+    { name: "サーフィンサンサン", image: showroomAvatar("1132347") },
+    { name: "サンサン",       image: showroomAvatar("1131522") },
+    { name: "しょきりり",     image: showroomAvatar("1130485") }
+  ]
 };

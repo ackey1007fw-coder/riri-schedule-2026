@@ -35,7 +35,7 @@ const eventLines = (event: ScheduleEvent) => {
   if (event.dates?.length) {
     return event.dates.flatMap((date) => [
       "BEGIN:VEVENT",
-      `UID:${event.id}-${date}@yukako-schedule-2026.vercel.app`,
+      `UID:${event.id}-${date}@riri-schedule-2026.vercel.app`,
       `DTSTAMP:${utcStamp(new Date().toISOString())}`,
       `DTSTART;VALUE=DATE:${dateStamp(date)}`,
       `DTEND;VALUE=DATE:${nextDateStamp(date)}`,
@@ -46,7 +46,7 @@ const eventLines = (event: ScheduleEvent) => {
 
   return [
     "BEGIN:VEVENT",
-    `UID:${event.id}@yukako-schedule-2026.vercel.app`,
+    `UID:${event.id}@riri-schedule-2026.vercel.app`,
     `DTSTAMP:${utcStamp(new Date().toISOString())}`,
     `DTSTART:${utcStamp(event.startAt)}`,
     `DTEND:${utcStamp(event.endAt ?? event.startAt)}`,
@@ -60,10 +60,10 @@ export function downloadScheduleCalendar(events: ScheduleEvent[]) {
   const content = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Yukako Schedule 2026//Fan Schedule//JA",
+    "PRODID:-//Riri Schedule 2026//Fan Schedule//JA",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
-    "X-WR-CALNAME:吉井優花子 応援スケジュール",
+    "X-WR-CALNAME:夏凪里季 応援スケジュール",
     ...upcoming.flatMap(eventLines),
     "END:VCALENDAR"
   ].join("\r\n");
@@ -72,7 +72,7 @@ export function downloadScheduleCalendar(events: ScheduleEvent[]) {
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
-  anchor.download = "yukako-schedule-2026.ics";
+  anchor.download = "riri-schedule-2026.ics";
   anchor.style.display = "none";
   document.body.appendChild(anchor);
   anchor.click();

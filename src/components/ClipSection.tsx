@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Music2, Play } from "lucide-react";
 import { clips, type VideoClip } from "../data/clips";
 
@@ -38,7 +38,7 @@ function ClipCard({ clip }: { clip: VideoClip }) {
   }, [reduceMotion]);
 
   return (
-    <figure className="yukako-card mx-auto w-full max-w-[320px] overflow-hidden p-0">
+    <figure className="riri-card mx-auto w-full max-w-[320px] overflow-hidden p-0">
       <a
         href={clip.url}
         target="_blank"
@@ -100,7 +100,7 @@ export function ClipSection() {
             Short Movie
           </p>
           <h2 className="mt-1 font-display text-2xl text-ink sm:text-3xl">
-            動く優花子さん
+            動く里季ちゃん
           </h2>
           <p className="mt-2 text-sm text-ink/60">
             ショート動画。音声はオフで流しているので、本編はタップして元の投稿でどうぞ。

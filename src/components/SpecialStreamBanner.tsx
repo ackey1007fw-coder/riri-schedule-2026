@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { PartyPopper, Sparkles, Wine } from "lucide-react";
 import { profile } from "../data/profile";
 import { specialStream } from "../data/streamSchedule";
@@ -47,13 +47,13 @@ export function SpecialStreamBanner() {
       href={profile.showroom.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="yukako-special-banner block text-ink transition hover:brightness-[1.02]"
+      className="riri-special-banner block text-ink transition hover:brightness-[1.02]"
       aria-label={`今夜${specialStream.time}から特別配信「${specialStream.title}」。SHOWROOMで待つ`}
     >
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center gap-1 px-4 py-2.5 text-center sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 text-sm font-black tracking-wide sm:text-base">
           <Sparkles
-            className="yukako-special-twinkle h-4 w-4 text-champagne"
+            className="riri-special-twinkle h-4 w-4 text-champagne"
             aria-hidden="true"
           />
           <span className="rounded-full bg-white/55 px-2 py-0.5 text-[11px] font-black text-champagne">
@@ -68,7 +68,7 @@ export function SpecialStreamBanner() {
             </span>
           )}
           <PartyPopper
-            className="yukako-special-twinkle h-4 w-4 text-champagne"
+            className="riri-special-twinkle h-4 w-4 text-champagne"
             aria-hidden="true"
           />
         </div>

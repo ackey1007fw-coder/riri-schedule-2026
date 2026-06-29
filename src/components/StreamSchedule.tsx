@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import { CalendarClock } from "lucide-react";
-import { streamSchedule } from "../data/streamSchedule";
+import { streamSchedule, type StreamSlot } from "../data/streamSchedule";
 
 const partsFmt = new Intl.DateTimeFormat("ja-JP", {
   timeZone: "Asia/Tokyo",
@@ -13,8 +14,33 @@ const todayKey = () =>
   new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
 
 export function StreamSchedule() {
+  // 手入力リストを初期表示。フレキャンから取れたら上乗せ（いいとこどり）
+  const [autoSlots, setAutoSlots] = useState<StreamSlot[]>([]);
+
+  useEffect(() => {
+    let active = true;
+    fetch("/api/frecam-schedule")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: { slots?: StreamSlot[] } | null) => {
+        if (active && data && Array.isArray(data.slots)) setAutoSlots(data.slots);
+      })
+      .catch(() => {
+        /* 取得失敗時は手入力リストのみ */
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
+
   const now = Date.now();
-  const slots = streamSchedule
+  const merged = new Map<string, StreamSlot>();
+  // 手入力 → 自動の順で入れ、重複(date+time)は手入力(note等)を優先
+  [...streamSchedule, ...autoSlots].forEach((slot) => {
+    const key = `${slot.date}T${slot.time}`;
+    if (!merged.has(key)) merged.set(key, slot);
+  });
+
+  const slots = [...merged.values()]
     .map((slot) => {
       const start = new Date(`${slot.date}T${slot.time}:00+09:00`);
       return { ...slot, start, ms: start.getTime() };

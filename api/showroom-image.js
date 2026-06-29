@@ -35,7 +35,7 @@ export default async function handler(request, response) {
     const imageResponse = await fetch(parsedUrl.toString(), {
       headers: {
         "User-Agent":
-          "Mozilla/5.0 (compatible; YukakoSchedule/1.0; +https://yukako-schedule-2026.vercel.app)",
+          "Mozilla/5.0 (compatible; RiriSchedule/1.0; +https://riri-schedule-2026.vercel.app)",
         Referer: "https://www.showroom-live.com/"
       }
     });

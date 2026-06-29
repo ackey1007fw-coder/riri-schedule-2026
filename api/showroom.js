@@ -1,5 +1,5 @@
 // api/showroom.js - SHOWROOM stats proxy
-const ROOM_ID = '347571';
+const ROOM_ID = '550336';
 const JSON_API = 'https://www.showroom-live.com/api/room/profile?room_id=' + ROOM_ID;
 const ROOM_HTML = 'https://www.showroom-live.com/room/profile?room_id=' + ROOM_ID;
 const NEXT_LIVE_API = 'https://www.showroom-live.com/api/room/next_live?room_id=' + ROOM_ID;
@@ -12,14 +12,14 @@ function leagueToRank(id) {
 }
 
 async function fromJson() {
-  const r=await fetch(JSON_API,{headers:{'User-Agent':'Mozilla/5.0 (compatible; YukakoSchedule/1.0; +https://yukako-schedule-2026.vercel.app)','Accept':'application/json','Referer':'https://www.showroom-live.com/'}});
+  const r=await fetch(JSON_API,{headers:{'User-Agent':'Mozilla/5.0','Accept':'application/json','Referer':'https://www.showroom-live.com/'}});
   if(!r.ok) throw new Error('JSON API HTTP '+r.status);
   const d=await r.json();
   return {followerCount:d.follower_num!=null?String(d.follower_num):null,roomLevel:d.room_level!=null?String(d.room_level):null,showRank:d.league_id!=null?leagueToRank(d.league_id):null,streakDays:d.live_continuous_days!=null?String(d.live_continuous_days):null,coverImage:d.image_l||d.image||d.main_image||null,isLive:(d.is_live===1||d.is_live===true||d.is_onlive===true),source:'json'};
 }
 
 async function fromHtml() {
-  const r=await fetch(ROOM_HTML,{headers:{'User-Agent':'Mozilla/5.0 (compatible; YukakoSchedule/1.0; +https://yukako-schedule-2026.vercel.app)','Accept-Language':'ja,en'}});
+  const r=await fetch(ROOM_HTML,{headers:{'User-Agent':'Mozilla/5.0 (compatible; Googlebot/2.1)','Accept-Language':'ja,en'}});
   if(!r.ok) throw new Error('HTML HTTP '+r.status);
   const html=await r.text();
   const g=(re)=>{const x=html.match(re);return x?x[1]:null;};
@@ -30,7 +30,7 @@ async function fromHtml() {
 // 次回の配信予定（SHOWROOMの next_live エポックを JST 表記に整形）
 async function fetchNextLive() {
   try {
-    const r=await fetch(NEXT_LIVE_API,{headers:{'User-Agent':'Mozilla/5.0 (compatible; YukakoSchedule/1.0; +https://yukako-schedule-2026.vercel.app)','Accept':'application/json','Referer':'https://www.showroom-live.com/'}});
+    const r=await fetch(NEXT_LIVE_API,{headers:{'User-Agent':'Mozilla/5.0','Accept':'application/json','Referer':'https://www.showroom-live.com/'}});
     if(!r.ok) return null;
     const d=await r.json();
     const epoch=d&&(d.epoch||d.next_live_start_at||d.started_at);

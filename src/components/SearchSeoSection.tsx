@@ -1,4 +1,4 @@
-﻿import {
+import {
   ArrowRight,
   CalendarDays,
   ChevronDown,
@@ -12,18 +12,18 @@ import { searchFaqs, searchIntents } from "../data/searchFaq";
 const searchTopics = [
   {
     icon: CalendarDays,
-    title: "公演情報",
-    body: "#ゆかJET やBaby Shark Liveなど、最新の公演日程を確認できます。"
+    title: "出演情報",
+    body: "夏凪里季さんの次の出演、舞台予定、イベント、チケット予約先を確認できます。"
   },
   {
     icon: Radio,
-    title: "出演歴",
-    body: "CM・MV・ドラマ・舞台・ミスコンなど、幅広い活動歴をまとめています。"
+    title: "SHOWROOM",
+    body: "SHOWROOM配信、ルーム情報、アバター、フォロー導線をまとめています。"
   },
   {
     icon: Sparkles,
-    title: "SNS・配信",
-    body: "X、Instagram、TikTok、SHOWROOMの最新情報をチェックできます。"
+    title: "フレキャン",
+    body: "フレキャン2025 Entry No.306としての活動や関連リンクを見つけやすく整理しています。"
   }
 ];
 
@@ -57,11 +57,11 @@ export function SearchSeoSection() {
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <h2 className="font-display text-3xl leading-tight text-ink sm:text-4xl">
-                吉井優花子さんを応援するためのFan Schedule
+                夏凪里季さんを応援するためのFan Schedule
               </h2>
               <p className="mt-5 leading-8 text-ink/70">
-                舞台・CM・MV・ミスコン・SHOWROOMまで、吉井優花子さんの活動を応援する人の目線でまとめています。
-                公演スケジュールもSNSも、スマホからすぐにたどれます。
+                出演情報・舞台・SHOWROOM・SNS・プロフィールを、応援する人の目線でまとめています。
+                次の予定もチケットも配信も、スマホからすぐにたどれます。
               </p>
             </div>
 
@@ -90,7 +90,7 @@ export function SearchSeoSection() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="yukako-lift group flex min-h-36 flex-col justify-between border border-rosefog/25 bg-porcelain p-4 hover:border-champagne hover:bg-white"
+                  className="riri-lift group flex min-h-36 flex-col justify-between border border-rosefog/25 bg-porcelain p-4 hover:border-champagne hover:bg-white"
                 >
                   <span>
                     <span className="text-[11px] font-black uppercase tracking-wide text-champagne">

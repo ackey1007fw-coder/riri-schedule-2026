@@ -1,6 +1,6 @@
 import type { ScheduleEvent } from "../types";
 
-export const SITE_URL = "https://yukako-schedule-2026.vercel.app/";
+export const SITE_URL = "https://riri-schedule-2026.vercel.app/";
 
 // ISO日時 → Googleカレンダー用のUTCベーシック表記(YYYYMMDDTHHMMSSZ)
 const toCalDate = (iso: string) =>

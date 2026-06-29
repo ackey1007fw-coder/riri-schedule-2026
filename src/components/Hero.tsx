@@ -1,4 +1,4 @@
-﻿import { CalendarCheck, MessageCircleHeart, Ticket } from "lucide-react";
+import { CalendarCheck, Images, MessageCircleHeart, Radio, Ticket, Users } from "lucide-react";
 import { profile } from "../data/profile";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import type { ScheduleEvent, SocialLink } from "../types";
@@ -33,24 +33,24 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
       className="relative border-b border-rosefog/20 bg-porcelain"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 lg:items-stretch">
-        {profile.heroImage && (
-          <div className="relative order-1 overflow-hidden lg:order-2 lg:min-h-[90svh]">
-            <img
-              {...getResponsiveImageProps(
-                profile.heroImage,
-                "(min-width: 1024px) 50vw, 100vw",
-              )}
-              alt={profile.name}
-              loading="eager"
-              fetchPriority="high"
-              className="block w-full object-cover object-[50%_20%] lg:absolute lg:inset-0 lg:h-full"
-            />
-            <p className="absolute right-4 top-4 hidden border border-white/60 bg-white/30 px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-ink backdrop-blur lg:block">
-              Fan Schedule / Yukako 2026
-            </p>
-          </div>
-        )}
+        {/* 写真パネル（モバイルは上、デスクトップは右） */}
+        <div className="relative order-1 overflow-hidden lg:order-2 lg:min-h-[90svh]">
+          <img
+            {...getResponsiveImageProps(
+              profile.heroImage,
+              "(min-width: 1024px) 50vw, 100vw",
+            )}
+            alt={profile.name}
+            loading="eager"
+            fetchPriority="high"
+            className="block w-full object-cover object-[50%_20%] lg:absolute lg:inset-0 lg:h-full"
+          />
+          <p className="absolute right-4 top-4 hidden border border-white/60 bg-white/30 px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-ink backdrop-blur lg:block">
+            Fan Schedule / Riri 2026
+          </p>
+        </div>
 
+        {/* テキストパネル */}
         <div className="order-2 flex flex-col justify-center px-4 py-10 sm:px-6 sm:py-14 lg:order-1 lg:px-10 lg:py-20">
           <p className="gold-kicker mb-5 inline-flex self-start px-3 py-2 text-xs font-bold uppercase">
             {profile.theme}
@@ -67,13 +67,14 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
           <p className="mt-3 max-w-xl leading-8 text-ink/62">{profile.intro}</p>
 
           <div className="mt-8 flex flex-col gap-3">
+            {/* 主導線：次の出演＋（あれば）予約 */}
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#next"
-                className="yukako-button yukako-button-primary min-h-12 px-5 py-3 text-sm shadow-paper"
+                className="riri-button riri-button-primary min-h-12 px-5 py-3 text-sm shadow-paper"
               >
                 <CalendarCheck className="h-4 w-4" aria-hidden="true" />
-                公演情報を見る
+                次の出演を見る
               </a>
               {ticketLink && (
                 <ExternalButton href={ticketLink.url} variant="gold" className="px-5">
@@ -84,10 +85,25 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
                 </ExternalButton>
               )}
             </div>
+            {/* サブ導線：SHOWROOM／写真／SNS */}
             <div className="flex flex-wrap gap-2">
               <a
+                href="#showroom"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm shadow-sm"
+              >
+                <Radio className="h-4 w-4 text-champagne" aria-hidden="true" />
+                SHOWROOM
+              </a>
+              <a
+                href="#gallery"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm shadow-sm"
+              >
+                <Images className="h-4 w-4 text-champagne" aria-hidden="true" />
+                写真を見る
+              </a>
+              <a
                 href="#links"
-                className="yukako-button yukako-button-soft min-h-12 px-4 py-3 text-sm shadow-sm"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm shadow-sm"
               >
                 <MessageCircleHeart className="h-4 w-4 text-champagne" aria-hidden="true" />
                 SNSを見る
@@ -95,22 +111,21 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
             </div>
           </div>
 
-          {mainSocials.length > 0 && (
-            <div className="mt-7 flex items-center gap-2">
-              {mainSocials.map((link) => (
-                <a
-                  key={link.url}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={`${link.label} ${link.handle}`}
-                  className="grid h-11 w-11 place-items-center border border-rosefog/30 bg-white text-xs font-black text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-champagne"
-                >
-                  {socialShortLabels[link.kind]}
-                </a>
-              ))}
-            </div>
-          )}
+          <div className="mt-7 flex items-center gap-2">
+            <Users className="h-4 w-4 text-ink/45" aria-hidden="true" />
+            {mainSocials.map((link) => (
+              <a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`${link.label} ${link.handle}`}
+                className="grid h-11 w-11 place-items-center border border-rosefog/30 bg-white text-xs font-black text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-champagne"
+              >
+                {socialShortLabels[link.kind]}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

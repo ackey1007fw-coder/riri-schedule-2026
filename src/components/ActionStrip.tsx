@@ -1,4 +1,4 @@
-﻿import { ArrowUpRight, CalendarDays, Images, Ticket } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Images, Ticket } from "lucide-react";
 import type { ScheduleEvent, SocialLink } from "../types";
 
 type ActionStripProps = {
@@ -11,15 +11,16 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
     nextEvent?.links.find((link) => link.kind === "ticket") ??
     nextEvent?.links[0];
   const hasTicket = ticketLink?.kind === "ticket";
-  const mainSocial = socialLinks[0];
+  const instagram = socialLinks.find((link) => link.kind === "instagram");
 
+  // イベントの種類に合わせて「次の◯◯」の見出しを変える
   const nextLabel = !nextEvent
     ? "スケジュール"
     : nextEvent.category === "birthday"
       ? "次の予定"
       : nextEvent.category === "event"
         ? "次のイベント"
-        : "次の公演";
+        : "次の出演";
 
   const items = [
     {
@@ -42,11 +43,11 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
     },
     {
       label: "SNS",
-      title: mainSocial?.handle ?? "更新をチェック",
-      copy: "最新の公演情報やオフショットをチェック。",
-      href: mainSocial?.url ?? "#links",
+      title: instagram?.handle ?? "更新をチェック",
+      copy: "写真や最新の告知をチェック。",
+      href: instagram?.url ?? "#links",
       Icon: Images,
-      external: Boolean(mainSocial)
+      external: Boolean(instagram)
     }
   ];
 
@@ -85,7 +86,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="yukako-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
+              className="riri-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
             >
               {content}
             </a>
@@ -93,7 +94,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
             <a
               key={index}
               href={item.href}
-              className="yukako-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
+              className="riri-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
             >
               {content}
             </a>

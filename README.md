@@ -1,6 +1,6 @@
-# Yukako Schedule 2026
+# Riri Schedule 2026
 
-吉井優花子さんのプロフィール、SHOWROOM、舞台公演 `#ゆかJET`、SNS導線を整理するファン制作の応援スケジュールです。
+夏凪里季さんの活動予定、出演情報、SNS、SHOWROOM情報をまとめる Fan Schedule サイトです。
 
 ## Stack
 
@@ -8,27 +8,46 @@
 - React
 - TypeScript
 - Tailwind CSS
-- Vercel Serverless Functions
+- Google Sheets + Apps Script JSON API
 
-## MVP
-
-- 舞台公演情報
-- お知らせ
-- 写真・ビジュアル
-- プロフィール
-- SHOWROOM連携
-- SNS・関連リンク
-- 検索向けFAQ
-- 共有導線
-
-## Commands
+## Local Setup
 
 ```bash
-pnpm install --frozen-lockfile
-pnpm typecheck
-pnpm build
+pnpm install
+pnpm dev
 ```
+
+## Environment
+
+Create `.env.local` when using the Google Sheets API.
+
+```bash
+VITE_SCHEDULE_API_URL=https://script.google.com/macros/s/xxxxx/exec
+```
+
+If `VITE_SCHEDULE_API_URL` is not set, the site uses fallback data in `src/data`.
+
+## Google Sheets API
+
+Paste `google-apps-script/schedule-api.gs` into Google Sheets Apps Script, then deploy it as a web app.
+
+Recommended deploy settings:
+
+- Execute as: Me
+- Who has access: Anyone
 
 ## Deploy
 
-`main` にマージすると、Vercel 側の Git 連携で `https://yukako-schedule-2026.vercel.app/` に反映されます。
+Recommended: Vercel
+
+- Framework Preset: Vite
+- Build Command: `pnpm build`
+- Output Directory: `dist`
+
+## Analytics
+
+Vercel Web Analytics is included through `@vercel/analytics/react` in `src/App.tsx`.
+
+Access data is not shown on the public site. To view page views and visitor trends, open the Vercel dashboard, select `riri-schedule-2026`, then open `Analytics`.
+
+If tracking data does not appear, enable Web Analytics for the project in Vercel and redeploy from `main`.

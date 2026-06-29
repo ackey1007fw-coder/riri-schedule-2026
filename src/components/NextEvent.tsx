@@ -1,4 +1,4 @@
-﻿import { CalendarPlus, Clock3, MapPin, Ticket } from "lucide-react";
+import { CalendarPlus, Clock3, MapPin, Ticket } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { googleCalendarUrl } from "../lib/share";
@@ -19,8 +19,8 @@ export function NextEvent({ event }: NextEventProps) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             kicker="Next Appearance"
-            title="次の公演情報"
-            copy="いちばん近い公演予定をピックアップ。日程・会場・チケット情報をまとめています。"
+            title="次に見るべき出演情報"
+            copy="次に会えるのはいつ？ いちばん近い予定をここでチェック。"
           />
           <article className="zine-panel border border-champagne/70 bg-white p-8 text-center sm:p-12">
             <p className="inline-flex items-center gap-2 text-xs font-black uppercase text-champagne">
@@ -31,20 +31,20 @@ export function NextEvent({ event }: NextEventProps) {
               次の予定は調整中です
             </h3>
             <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-ink/70">
-              新しい公演や出演が決まり次第ここに掲載します。最新情報はSNSでチェックできます。
+              新しい出演やイベントが決まり次第ここに掲載します。最新の近況はSHOWROOMの配信やSNSでチェックできます。
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <a
                 href="#schedule"
-                className="yukako-button yukako-button-primary min-h-12 px-5 py-3 text-sm"
+                className="riri-button riri-button-primary min-h-12 px-5 py-3 text-sm"
               >
                 これまでの予定を見る
               </a>
               <a
-                href="#links"
-                className="yukako-button yukako-button-soft min-h-12 px-5 py-3 text-sm"
+                href="#showroom"
+                className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
               >
-                SNSで最新情報を見る
+                SHOWROOMで近況を見る
               </a>
             </div>
           </article>
@@ -70,20 +70,14 @@ export function NextEvent({ event }: NextEventProps) {
 
         <article className="zine-panel grid overflow-hidden border border-champagne/70 bg-white lg:grid-cols-[1.12fr_0.88fr]">
           <div className="relative overflow-hidden bg-ink lg:min-h-[560px]">
-            {event.image ? (
-              <img
-                {...getResponsiveImageProps(
-                  event.image,
-                  "(min-width: 1024px) 58vw, 100vw",
-                )}
-                alt={event.title}
-                className="block w-full object-cover object-top transition duration-700 hover:scale-[1.025] lg:absolute lg:inset-0 lg:h-full"
-              />
-            ) : (
-              <div className="flex min-h-[280px] items-center justify-center lg:absolute lg:inset-0 lg:min-h-0">
-                <p className="font-display text-5xl text-white/20 sm:text-6xl">{event.shortTitle}</p>
-              </div>
-            )}
+            <img
+              {...getResponsiveImageProps(
+                event.image,
+                "(min-width: 1024px) 58vw, 100vw",
+              )}
+              alt={event.title}
+              className="block w-full object-cover object-top transition duration-700 hover:scale-[1.025] lg:absolute lg:inset-0 lg:h-full"
+            />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(49,42,46,0.02),rgba(49,42,46,0.52))]" />
             <div className="absolute left-4 top-4 border border-white/50 bg-white/18 px-3 py-2 text-xs font-black uppercase text-white backdrop-blur">
               NEXT
@@ -148,14 +142,14 @@ export function NextEvent({ event }: NextEventProps) {
                 href={googleCalendarUrl(event)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="yukako-button yukako-button-soft min-h-12 px-4 py-3 text-sm"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 <CalendarPlus className="h-4 w-4 text-champagne" aria-hidden="true" />
                 カレンダーに追加
               </a>
               <a
                 href="#schedule"
-                className="yukako-button yukako-button-soft min-h-12 px-4 py-3 text-sm"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 ほかの予定も見る
               </a>

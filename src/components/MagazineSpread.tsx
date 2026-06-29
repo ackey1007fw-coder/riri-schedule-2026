@@ -11,9 +11,9 @@ type MagazineSpreadProps = {
 };
 
 const FALLBACK = [
-  { src: profile.heroImage, alt: "吉井優花子さんのポートレート" },
-  { src: profile.portraitImage, alt: "吉井優花子さんのポートレート" },
-  { src: profile.heroImage, alt: "吉井優花子さんのポートレート" }
+  { src: profile.heroImage, alt: "夏凪里季さんのポートレート" },
+  { src: profile.portraitImage, alt: "夏凪里季さんのポートレート" },
+  { src: profile.heroImage, alt: "夏凪里季さんのポートレート" }
 ];
 
 export function MagazineSpread({ nextEvent }: MagazineSpreadProps) {
@@ -26,7 +26,7 @@ export function MagazineSpread({ nextEvent }: MagazineSpreadProps) {
   const featureAlts = feature.map((p) => p.alt);
 
   return (
-    <section className="bg-white py-12 sm:py-16" aria-label="Yukako Magazine">
+    <section className="bg-white py-12 sm:py-16" aria-label="Riri Magazine">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid overflow-hidden border border-rosefog/20 bg-porcelain shadow-paper lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative border-b border-rosefog/20 bg-white lg:border-b-0 lg:border-r">
@@ -71,11 +71,11 @@ export function MagazineSpread({ nextEvent }: MagazineSpreadProps) {
 
           <div className="relative p-6 sm:p-8 lg:p-10">
             <p className="gold-kicker inline-flex px-3 py-2 text-[11px] font-black uppercase tracking-[0.18em]">
-              Yukako Schedule 2026 / Issue 06
+              Riri Schedule 2026 / Issue 06
             </p>
             <div className="mt-8 grid gap-4 border-y border-champagne/30 py-7">
               <p className="font-display text-5xl leading-none text-ink sm:text-6xl">
-                Yukako
+                Riri
                 <span className="block text-ink/45">Magazine</span>
               </p>
               <p className="max-w-xl text-sm leading-7 text-ink/68 sm:text-base sm:leading-8">
