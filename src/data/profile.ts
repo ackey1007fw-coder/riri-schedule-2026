@@ -5,7 +5,7 @@ export const profile = {
   romaji: "Yoshii Yukako",
   fanScheduleLabel: "Unofficial Fan Portal",
   catchCopy:
-    "心に届く声の女優。秋田から、舞台へ。",
+    "心に届く声の俳優。秋田から、舞台へ。",
   intro:
     "元公務員という誠実さと、舞台人としての表現力で、観る人の心に届く表現を目指す吉井優花子さんの応援ポータルです。",
   heroImage: "/images/yukako-stage-back.jpg",

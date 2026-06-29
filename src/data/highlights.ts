@@ -25,6 +25,15 @@ export const highlights: Highlight[] = [
     ]
   },
   {
+    id: "ryoma-kun-2026-04",
+    year: "2026",
+    date: "2026年4月",
+    category: "舞台",
+    title: "『かわええのう、龍馬くん』",
+    description:
+      "2026年4月7日〜12日、A-root赤坂にて上演。B班で坂本龍馬役、C班でおりょう役の二役を演じ、アソシエイトプロデューサーも務めました。"
+  },
+  {
     id: "littlebraver-tasogare-2025-12",
     year: "2025",
     date: "2025年12月",
@@ -50,7 +59,7 @@ export const highlights: Highlight[] = [
     category: "受賞",
     title: "Miss Grand Japan 2025 MISS PEACE賞",
     description:
-      "ミス・グランド・ジャパン2025にて、平和的活動を積極的に行ったファイナリストに贈られるMISS PEACE賞を受賞。大会はMSCベリッシマ号で開催。",
+      "ミス・グランド・ジャパン2025にて、平和的活動を積極的に行ったファイナリストに贈られるMISS PEACE賞を受賞。大会はMSCベリッシマ号で開催。2026年からは同協会の代表補佐・運営マネジメントを務めています。",
     image: "/images/yukako-mgj-award.jpg"
   },
   {

@@ -52,7 +52,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
               ))}
               <a
                 href={xShareUrl(
-                  `心に届く声の女優。${profile.name}さんの応援ポータル`,
+                  `心に届く声の俳優。${profile.name}さんの応援ポータル`,
                   SITE_URL,
                 )}
                 target="_blank"
