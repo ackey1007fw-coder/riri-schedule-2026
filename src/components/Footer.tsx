@@ -67,7 +67,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} {profile.romaji} Fan Portal ・ Produced by あっきー</p>
+          <p>© {year} {profile.romaji} Fan Portal ・ Produced by あっきー ・ 最終更新 2026.6.29</p>
           <p>
             本サイトはファンによる非公式の応援ページです。掲載情報は変更される場合があります。
           </p>
