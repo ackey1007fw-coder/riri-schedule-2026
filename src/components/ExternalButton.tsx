@@ -9,10 +9,10 @@ type ExternalButtonProps = {
 };
 
 const variants = {
-  primary: "riri-button-primary",
-  light: "riri-button-soft",
-  gold: "riri-button-gold",
-  ghost: "riri-button-ghost"
+  primary: "yukako-button-primary",
+  light: "yukako-button-soft",
+  gold: "yukako-button-gold",
+  ghost: "yukako-button-ghost"
 };
 
 export function ExternalButton({
@@ -26,7 +26,7 @@ export function ExternalButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`riri-button min-h-12 px-4 py-3 text-sm ${variants[variant]} ${className}`}
+      className={`yukako-button min-h-12 px-4 py-3 text-sm ${variants[variant]} ${className}`}
     >
       <span>{children}</span>
       <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />

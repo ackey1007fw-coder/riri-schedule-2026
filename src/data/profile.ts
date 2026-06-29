@@ -1,9 +1,9 @@
 export const profile = {
-  theme: "Yukako Schedule 2026",
+  theme: "吉井優花子 応援ポータル",
   name: "吉井 優花子",
   kana: "よしい ゆかこ",
   romaji: "Yoshii Yukako",
-  fanScheduleLabel: "Fan Schedule",
+  fanScheduleLabel: "Unofficial Fan Portal",
   catchCopy:
     "心に届く声の女優。秋田から、舞台へ。",
   intro:

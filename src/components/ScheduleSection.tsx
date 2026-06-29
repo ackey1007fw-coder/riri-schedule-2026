@@ -132,7 +132,7 @@ export function ScheduleSection({
             ))}
           </div>
 
-          <div className="riri-card border-rosefog/20 bg-porcelain p-4 sm:p-5">
+          <div className="yukako-card border-rosefog/20 bg-porcelain p-4 sm:p-5">
             <div className="mb-5 flex items-start gap-3">
               <span className="grid h-11 w-11 shrink-0 place-items-center border border-champagne/45 bg-white text-champagne">
                 <CalendarClock className="h-5 w-5" aria-hidden="true" />
@@ -168,7 +168,7 @@ export function ScheduleSection({
                   今日の予定がない日は、SHOWROOMやSNSで近況をチェックできます。
                 </p>
                 <div className="mt-5 flex justify-center">
-                  <a href="#showroom" className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm">
+                  <a href="#showroom" className="yukako-button yukako-button-soft min-h-12 px-5 py-3 text-sm">
                     SHOWROOMを確認する
                   </a>
                 </div>

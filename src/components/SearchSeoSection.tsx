@@ -57,7 +57,7 @@ export function SearchSeoSection() {
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <h2 className="font-display text-3xl leading-tight text-ink sm:text-4xl">
-                吉井優花子さんを応援するためのFan Schedule
+                吉井優花子さんを応援するための非公式ポータル
               </h2>
               <p className="mt-5 leading-8 text-ink/70">
                 舞台・CM・MV・ミスコン・SHOWROOMまで、吉井優花子さんの活動を応援する人の目線でまとめています。
@@ -90,7 +90,7 @@ export function SearchSeoSection() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="riri-lift group flex min-h-36 flex-col justify-between border border-rosefog/25 bg-porcelain p-4 hover:border-champagne hover:bg-white"
+                  className="yukako-lift group flex min-h-36 flex-col justify-between border border-rosefog/25 bg-porcelain p-4 hover:border-champagne hover:bg-white"
                 >
                   <span>
                     <span className="text-[11px] font-black uppercase tracking-wide text-champagne">
