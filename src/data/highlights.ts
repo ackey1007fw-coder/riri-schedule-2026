@@ -63,6 +63,15 @@ export const highlights: Highlight[] = [
     image: "/images/yukako-mgj-award.jpg"
   },
   {
+    id: "akt-tokyo-komachi-2025",
+    year: "2025",
+    date: "2025年",
+    category: "TV",
+    title: "AKT秋田テレビ『土曜の情報缶詰どっかん！』内「東京こまち」",
+    description:
+      "秋田出身者として、東京の話題を秋田へ届けるコーナーに出演。"
+  },
+  {
     id: "cocoa-seirei-2025-03",
     year: "2025",
     date: "2025年3月",
@@ -151,6 +160,24 @@ export const highlights: Highlight[] = [
     title: "劇団ココア 6周年記念公演『魔女エステリーゼの事件簿 贋と軀編』",
     description:
       "シリーズ第6弾。2023年11月14日〜19日、萬劇場にて上演。フレヤ・スチュアート役で出演。"
+  },
+  {
+    id: "gojet-paradise-vol2-2023-09",
+    year: "2023",
+    date: "2023年9月",
+    category: "舞台",
+    title: "『GO,JET!GO!GO! PARADISE LIVE vol.2』",
+    description:
+      "2023年9月、A-Garage（Air studio）にて上演。あかね役で出演。"
+  },
+  {
+    id: "gojet-paradise-vol1-2023-05",
+    year: "2023",
+    date: "2023年5月",
+    category: "舞台",
+    title: "『GO,JET!GO!GO! PARADISE LIVE vol.1』",
+    description:
+      "2023年5月、A-Garage（Air studio）にて上演。早紀役で出演。"
   },
   {
     id: "tvk-weather-report-2023",
