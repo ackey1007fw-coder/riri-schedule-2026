@@ -61,7 +61,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
               </span>
             </div>
 
-            <div className="mt-8 flex flex-col gap-3">
+            <div className="mt-7 flex flex-col gap-3 sm:mt-8">
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
                   href="#schedule"

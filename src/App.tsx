@@ -92,7 +92,11 @@ function App() {
           </div>
         )}
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
-        <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
+        <ActionStrip
+          nextEvent={nextEvent}
+          upcomingEvents={upcomingEvents}
+          socialLinks={socialLinks}
+        />
         <SectionReveal>
           <PortalIntroSection />
         </SectionReveal>

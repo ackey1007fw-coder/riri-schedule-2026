@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import type { ScheduleEvent } from "../types";
-import { CalendarClock, ChevronDown, Star } from "lucide-react";
+import { CalendarClock, ChevronDown, Search, SlidersHorizontal, Star } from "lucide-react";
+import { categoryMeta } from "../lib/eventMeta";
 import { CalendarView } from "./CalendarView";
 import { EventCard } from "./EventCard";
 import { SectionHeader } from "./SectionHeader";
@@ -13,6 +14,7 @@ type ScheduleSectionProps = {
 };
 
 type ScheduleTab = "today" | "week" | "month" | "archive";
+type CategoryFilter = "all" | ScheduleEvent["category"];
 
 const tokyoDateKey = (date: Date) =>
   new Intl.DateTimeFormat("sv-SE", {
@@ -43,6 +45,8 @@ export function ScheduleSection({
   monthKeys
 }: ScheduleSectionProps) {
   const [activeTab, setActiveTab] = useState<ScheduleTab>("today");
+  const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("all");
+  const [query, setQuery] = useState("");
   const nextId = upcomingEvents[0]?.id;
   const todayKey = tokyoDateKey(new Date());
   const weekEndKey = tokyoDateKey(addDays(new Date(), 6));
@@ -74,7 +78,41 @@ export function ScheduleSection({
     { id: "month", label: "今月", count: monthEvents.length, events: monthEvents },
     { id: "archive", label: "終了した予定", count: pastEvents.length, events: pastEvents }
   ];
-  const activeEvents = tabs.find((tab) => tab.id === activeTab)?.events ?? [];
+  const rawActiveEvents = tabs.find((tab) => tab.id === activeTab)?.events ?? [];
+  const normalizedQuery = query.trim().toLowerCase();
+  const activeEvents = useMemo(
+    () =>
+      rawActiveEvents.filter((event) => {
+        const categoryMatch =
+          categoryFilter === "all" || event.category === categoryFilter;
+        const haystack = [
+          event.title,
+          event.shortTitle,
+          event.displayDate,
+          event.venue,
+          event.summary,
+          ...event.badges
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        const queryMatch =
+          normalizedQuery.length === 0 || haystack.includes(normalizedQuery);
+        return categoryMatch && queryMatch;
+      }),
+    [categoryFilter, normalizedQuery, rawActiveEvents],
+  );
+  const categoryOptions = useMemo(() => {
+    const categories = Array.from(new Set(allEvents.map((event) => event.category)));
+    return [
+      { id: "all" as const, label: "すべて", count: rawActiveEvents.length },
+      ...categories.map((category) => ({
+        id: category,
+        label: categoryMeta[category].label,
+        count: rawActiveEvents.filter((event) => event.category === category).length
+      }))
+    ];
+  }, [allEvents, rawActiveEvents]);
 
   return (
     <section id="schedule" className="scroll-mt-24 bg-white py-16 sm:py-24">
@@ -132,6 +170,42 @@ export function ScheduleSection({
             ))}
           </div>
 
+          <div className="mb-5 grid gap-3 border-y border-rosefog/15 py-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+            <label className="relative block">
+              <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-champagne" aria-hidden="true" />
+              <input
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="公演名・会場・キーワードで検索"
+                className="min-h-12 w-full border border-rosefog/25 bg-white px-11 py-3 text-sm font-semibold text-ink outline-none transition placeholder:text-ink/38 focus:border-champagne"
+              />
+            </label>
+            <div className="flex min-w-0 flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-[0.14em] text-champagne">
+                <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
+                Filter
+              </span>
+              {categoryOptions.map((option) => (
+                <button
+                  key={option.id}
+                  type="button"
+                  onClick={() => setCategoryFilter(option.id)}
+                  className={`inline-flex min-h-10 items-center gap-2 border px-3 py-2 text-xs font-bold transition ${
+                    categoryFilter === option.id
+                      ? "border-champagne bg-champagne text-white"
+                      : "border-rosefog/25 bg-white text-ink/68 hover:border-champagne hover:text-ink"
+                  }`}
+                >
+                  {option.label}
+                  <span className={categoryFilter === option.id ? "text-white/72" : "text-champagne"}>
+                    {option.count}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="yukako-card border-rosefog/20 bg-porcelain p-4 sm:p-5">
             <div className="mb-5 flex items-start gap-3">
               <span className="grid h-11 w-11 shrink-0 place-items-center border border-champagne/45 bg-white text-champagne">
@@ -145,6 +219,9 @@ export function ScheduleSection({
                   {activeTab === "archive"
                     ? "終了済みイベントは活動の記録として残しています。"
                     : "予定ごとの応援アクションから、今できる応援へ進めます。"}
+                  {query || categoryFilter !== "all"
+                    ? ` 条件に合う予定は${activeEvents.length}件です。`
+                    : ""}
                 </p>
               </div>
             </div>
@@ -165,7 +242,7 @@ export function ScheduleSection({
               <div className="border border-dashed border-rosefog/30 bg-white px-5 py-8 text-center">
                 <p className="font-display text-2xl text-ink">該当する予定はありません</p>
                 <p className="mt-3 text-sm leading-7 text-ink/62">
-                  今日の予定がない日は、SHOWROOMやSNSで近況をチェックできます。
+                  検索条件を変えるか、SHOWROOMやSNSで近況をチェックできます。
                 </p>
                 <div className="mt-5 flex justify-center">
                   <a href="#showroom" className="yukako-button yukako-button-soft min-h-12 px-5 py-3 text-sm">

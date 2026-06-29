@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { ChevronDown, ChevronUp, History } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { ChevronLeft, ChevronRight, History } from "lucide-react";
 import { getCalendarCells, getEventsForDay, formatMonthTitle } from "../lib/date";
 import { categoryMeta } from "../lib/eventMeta";
 import type { ScheduleEvent } from "../types";
@@ -23,43 +23,70 @@ const currentMonthKey = () => {
 };
 
 export function CalendarView({ events, monthKeys }: CalendarViewProps) {
-  const [showPastMonths, setShowPastMonths] = useState(false);
   const thisMonth = currentMonthKey();
-  const pastMonthKeys = monthKeys.filter((monthKey) => monthKey < thisMonth);
-  const currentAndFutureMonthKeys = monthKeys.filter(
+  const availableMonthKeys = useMemo(
+    () => (monthKeys.length ? monthKeys : [thisMonth]),
+    [monthKeys, thisMonth],
+  );
+  const firstCurrentOrFutureIndex = availableMonthKeys.findIndex(
     (monthKey) => monthKey >= thisMonth,
   );
-  const defaultMonthKeys = currentAndFutureMonthKeys.length
-    ? currentAndFutureMonthKeys
-    : monthKeys.slice(-1);
-  const visibleMonthKeys = showPastMonths ? monthKeys : defaultMonthKeys;
+  const initialIndex =
+    firstCurrentOrFutureIndex >= 0
+      ? firstCurrentOrFutureIndex
+      : Math.max(0, availableMonthKeys.length - 1);
+  const [activeIndex, setActiveIndex] = useState(initialIndex);
+  const activeMonthKey =
+    availableMonthKeys[Math.min(activeIndex, availableMonthKeys.length - 1)];
+  const canGoPrevious = activeIndex > 0;
+  const canGoNext = activeIndex < availableMonthKeys.length - 1;
+  const pastCount = availableMonthKeys.filter((monthKey) => monthKey < thisMonth).length;
+
+  useEffect(() => {
+    setActiveIndex(initialIndex);
+  }, [initialIndex]);
 
   return (
     <div>
-      {pastMonthKeys.length > 0 && (
-        <div className="mb-5 flex justify-end">
+      <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-2 text-sm font-bold text-ink/62">
+          <History className="h-4 w-4 text-champagne" aria-hidden="true" />
+          <span>
+            {availableMonthKeys.length}か月分
+            {pastCount ? `（過去${pastCount}か月を含む）` : ""}
+          </span>
+        </div>
+        <div className="flex items-center gap-2">
           <button
             type="button"
-            onClick={() => setShowPastMonths((current) => !current)}
-            className="riri-button riri-button-soft min-h-10 px-4 py-2 text-xs sm:text-sm"
-            aria-expanded={showPastMonths}
-            aria-controls="schedule-calendar-months"
+            onClick={() => setActiveIndex((current) => Math.max(0, current - 1))}
+            disabled={!canGoPrevious}
+            className="yukako-button yukako-button-soft min-h-10 px-4 py-2 text-xs disabled:cursor-not-allowed disabled:opacity-40 sm:text-sm"
           >
-            <History className="h-4 w-4 text-champagne" aria-hidden="true" />
-            {showPastMonths
-              ? "過去の月を閉じる"
-              : `過去${pastMonthKeys.length}か月も見る`}
-            {showPastMonths ? (
-              <ChevronUp className="h-4 w-4 text-champagne" aria-hidden="true" />
-            ) : (
-              <ChevronDown className="h-4 w-4 text-champagne" aria-hidden="true" />
-            )}
+            <ChevronLeft className="h-4 w-4 text-champagne" aria-hidden="true" />
+            前の月
+          </button>
+          <span className="min-w-28 border border-champagne/35 bg-white px-4 py-2 text-center font-display text-xl text-ink">
+            {formatMonthTitle(activeMonthKey)}
+          </span>
+          <button
+            type="button"
+            onClick={() =>
+              setActiveIndex((current) =>
+                Math.min(availableMonthKeys.length - 1, current + 1),
+              )
+            }
+            disabled={!canGoNext}
+            className="yukako-button yukako-button-soft min-h-10 px-4 py-2 text-xs disabled:cursor-not-allowed disabled:opacity-40 sm:text-sm"
+          >
+            次の月
+            <ChevronRight className="h-4 w-4 text-champagne" aria-hidden="true" />
           </button>
         </div>
-      )}
+      </div>
 
-      <div id="schedule-calendar-months" className="grid gap-6 xl:grid-cols-3">
-        {visibleMonthKeys.map((monthKey) => {
+      <div id="schedule-calendar-months">
+        {[activeMonthKey].map((monthKey) => {
           const monthEvents = events.filter((event) => {
             if (event.dates?.length) {
               return event.dates.some((date) => date.startsWith(monthKey));
@@ -71,7 +98,7 @@ export function CalendarView({ events, monthKeys }: CalendarViewProps) {
           });
 
           return (
-            <section key={monthKey} className="riri-card border-rosefog/25 bg-white">
+            <section key={monthKey} className="yukako-card border-rosefog/25 bg-white">
           <div className="border-b border-rosefog/20 bg-porcelain px-4 py-4">
             <h3 className="font-display text-2xl text-ink">
               {formatMonthTitle(monthKey)}
