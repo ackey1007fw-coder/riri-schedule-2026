@@ -7,6 +7,7 @@ import { HighlightsSection } from "./components/HighlightsSection";
 import { LinksSection } from "./components/LinksSection";
 import { NextEvent } from "./components/NextEvent";
 import { NewsBar } from "./components/NewsBar";
+import { PortalIntroSection } from "./components/PortalIntroSection";
 import { QuickNav } from "./components/QuickNav";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SectionReveal } from "./components/SectionReveal";
@@ -91,6 +92,9 @@ function App() {
         )}
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
         <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
+        <SectionReveal>
+          <PortalIntroSection />
+        </SectionReveal>
         <SectionReveal>
           <NextEvent event={nextEvent} />
         </SectionReveal>

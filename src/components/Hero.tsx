@@ -1,4 +1,4 @@
-import { CalendarCheck, MessageCircleHeart, Ticket } from "lucide-react";
+import { CalendarCheck, Clapperboard, MessageCircleHeart } from "lucide-react";
 import { profile } from "../data/profile";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import type { ScheduleEvent, SocialLink } from "../types";
@@ -22,9 +22,7 @@ const socialShortLabels: Record<string, string> = {
 };
 
 export function Hero({ nextEvent, socialLinks }: HeroProps) {
-  const ticketLink =
-    nextEvent?.links.find((link) => link.kind === "ticket") ??
-    nextEvent?.links[0];
+  const showroomLink = socialLinks.find((link) => link.kind === "showroom");
   const mainSocials = socialLinks.slice(0, 5);
 
   return (
@@ -34,7 +32,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 lg:items-stretch">
         {profile.heroImage && (
-          <div className="relative order-1 overflow-hidden lg:order-2 lg:min-h-[90svh]">
+          <div className="relative order-2 overflow-hidden lg:order-2 lg:min-h-[90svh]">
             <img
               {...getResponsiveImageProps(
                 profile.heroImage,
@@ -51,46 +49,46 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
           </div>
         )}
 
-        <div className="order-2 flex flex-col justify-center px-4 py-10 sm:px-6 sm:py-14 lg:order-1 lg:px-10 lg:py-20">
+        <div className="order-1 flex flex-col justify-center px-4 py-10 sm:px-6 sm:py-14 lg:order-1 lg:px-10 lg:py-20">
           <p className="gold-kicker mb-5 inline-flex self-start px-3 py-2 text-xs font-bold uppercase">
-            {profile.theme}
+            非公式応援ポータル / {profile.theme}
           </p>
-          <h1 className="font-display text-6xl leading-[0.96] text-ink sm:text-7xl lg:text-8xl">
-            {profile.name}
-          </h1>
-          <p className="mt-4 font-display text-2xl text-ink/65 sm:text-3xl">
-            {profile.romaji}
-          </p>
-          <p className="mt-6 max-w-xl text-base leading-8 text-ink/78 sm:mt-7 sm:text-xl sm:leading-9">
+          <h1 className="font-display text-4xl leading-tight text-ink sm:text-5xl lg:text-6xl">
             {profile.catchCopy}
+          </h1>
+          <p className="mt-5 font-display text-2xl text-ink/72 sm:text-3xl">
+            {profile.name}
+            <span className="ml-3 align-middle text-base text-ink/48">
+              {profile.romaji}
+            </span>
           </p>
-          <p className="mt-3 max-w-xl leading-8 text-ink/62">{profile.intro}</p>
+          <p className="mt-6 max-w-xl text-base leading-8 text-ink/72 sm:mt-7 sm:text-lg sm:leading-9">
+            {profile.intro}
+          </p>
 
           <div className="mt-8 flex flex-col gap-3">
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
-                href="#next"
+                href="#schedule"
                 className="riri-button riri-button-primary min-h-12 px-5 py-3 text-sm shadow-paper"
               >
                 <CalendarCheck className="h-4 w-4" aria-hidden="true" />
-                公演情報を見る
+                今日の予定を見る
               </a>
-              {ticketLink && (
-                <ExternalButton href={ticketLink.url} variant="gold" className="px-5">
+              {showroomLink && (
+                <ExternalButton href={showroomLink.url} variant="gold" className="px-5">
                   <span className="inline-flex items-center gap-2">
-                    <Ticket className="h-4 w-4" aria-hidden="true" />
-                    {ticketLink.kind === "ticket" ? "チケット予約" : ticketLink.label}
+                    <MessageCircleHeart className="h-4 w-4" aria-hidden="true" />
+                    SHOWROOMを開く
                   </span>
                 </ExternalButton>
               )}
-            </div>
-            <div className="flex flex-wrap gap-2">
               <a
-                href="#links"
+                href="#next"
                 className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm shadow-sm"
               >
-                <MessageCircleHeart className="h-4 w-4 text-champagne" aria-hidden="true" />
-                SNSを見る
+                <Clapperboard className="h-4 w-4 text-champagne" aria-hidden="true" />
+                #ゆかJET / 舞台情報を見る
               </a>
             </div>
           </div>

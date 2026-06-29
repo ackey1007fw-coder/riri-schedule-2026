@@ -5,9 +5,9 @@ export const profile = {
   romaji: "Yoshii Yukako",
   fanScheduleLabel: "Fan Schedule",
   catchCopy:
-    "秋田から東京へ。舞台俳優・プロデューサー・ライバーとして、自分の舞台を自分で創る。",
+    "心に届く声の女優。秋田から、舞台へ。",
   intro:
-    "公演情報からSNS、出演歴まで。吉井優花子さんの活動をまとめた応援サイトです。",
+    "元公務員という誠実さと、舞台人としての表現力で、観る人の心に届く表現を目指す吉井優花子さんの応援ポータルです。",
   heroImage: "/images/yukako-stage-back.jpg",
   portraitImage: "/images/yukako-portrait.jpg",
   birthday: "1997-04-27",
@@ -19,7 +19,7 @@ export const profile = {
     { label: "生年月日", value: "1997年4月27日" },
     { label: "出身", value: "秋田県秋田市" },
     { label: "身長", value: "161cm" },
-    { label: "血液型", value: "B型" },
+    { label: "血液型", value: "AB型" },
     { label: "活動", value: "俳優・タレント・モデル・ライバー" },
     { label: "特技", value: "スポーツ全般、歌唱、字を書く、絵を描く、料理、写真撮影" },
     {

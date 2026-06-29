@@ -23,7 +23,10 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
           <div>
             <p className="font-display text-2xl">{profile.name}</p>
             <p className="mt-1 text-sm text-white/60">
-              {profile.theme}｜非公式の応援スケジュール（ファン制作）
+              {profile.theme}｜非公式応援ポータル（ファン制作）
+            </p>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-white/55">
+              本サイトは吉井優花子さんの活動予定、出演歴、SHOWROOM、SNSをまとめた非公式の応援サイトです。本人公式サイトではありません。
             </p>
             <p className="mt-4 text-xs text-white/45">
               掲載情報更新：{displayUpdatedAt}
@@ -49,7 +52,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
               ))}
               <a
                 href={xShareUrl(
-                  `${profile.name}（${profile.kana}）さんの応援スケジュール`,
+                  `心に届く声の女優。${profile.name}さんの応援ポータル`,
                   SITE_URL,
                 )}
                 target="_blank"
@@ -64,7 +67,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} {profile.romaji} Fan Schedule ・ Produced by あっきー</p>
+          <p>© {year} {profile.romaji} Fan Portal ・ Produced by あっきー</p>
           <p>
             本サイトはファンによる非公式の応援ページです。掲載情報は変更される場合があります。
           </p>
