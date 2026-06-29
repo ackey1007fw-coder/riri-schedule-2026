@@ -1,4 +1,4 @@
-﻿import { CalendarDays, CalendarPlus, MapPin } from "lucide-react";
+import { CalendarDays, CalendarPlus, MapPin } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
 import { isEventPast } from "../lib/date";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
@@ -20,7 +20,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
 
   return (
     <article
-      className={`yukako-card yukako-card-interactive group relative grid overflow-hidden bg-white ${
+      className={`riri-card riri-card-interactive group relative grid overflow-hidden bg-white ${
         event.isImportant || isNext
           ? "border-champagne/70"
           : "border-rosefog/25"
@@ -30,26 +30,20 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
         <div className="absolute left-0 top-0 z-10 h-full w-1 bg-champagne" />
       )}
 
-      {event.image ? (
-        <div className="relative bg-porcelain">
-          <img
-            {...getResponsiveImageProps(
-              event.image,
-              compact
-                ? "(min-width: 640px) 160px, 100vw"
-                : "(min-width: 640px) 220px, 100vw",
-            )}
-            alt={event.title}
-            loading="lazy"
-            decoding="async"
-            className="block w-full object-cover object-top sm:absolute sm:inset-0 sm:h-full"
-          />
-        </div>
-      ) : (
-        <div className="hidden bg-porcelain sm:flex sm:items-center sm:justify-center">
-          <span className="font-display text-2xl text-ink/15">{event.shortTitle}</span>
-        </div>
-      )}
+      <div className="relative bg-porcelain">
+        <img
+          {...getResponsiveImageProps(
+            event.image,
+            compact
+              ? "(min-width: 640px) 160px, 100vw"
+              : "(min-width: 640px) 220px, 100vw",
+          )}
+          alt={event.title}
+          loading="lazy"
+          decoding="async"
+          className="block w-full object-cover object-top sm:absolute sm:inset-0 sm:h-full"
+        />
+      </div>
 
       <div className={`${compact ? "p-5" : "p-6"} flex flex-col`}>
         <div className="mb-4 flex flex-wrap gap-2">
@@ -110,7 +104,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
                 href={googleCalendarUrl(event)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="yukako-button yukako-button-soft min-h-12 px-4 py-3 text-sm"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 <CalendarPlus className="h-4 w-4 text-champagne" aria-hidden="true" />
                 カレンダー

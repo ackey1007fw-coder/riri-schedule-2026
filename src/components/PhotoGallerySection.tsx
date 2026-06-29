@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ChevronDown,
   ChevronLeft,
@@ -112,8 +112,8 @@ export function PhotoGallerySection() {
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <SectionHeader
             kicker="Photo Gallery"
-            title="写真で見る Yukako"
-            copy="舞台に立つ姿から、配信や日常のふとした表情まで。優花子さんのいろんな瞬間をどうぞ。"
+            title="写真で見る Riri"
+            copy="舞台に立つ姿から、配信や日常のふとした表情まで。里季ちゃんのいろんな瞬間をどうぞ。"
           />
           <div className="flex flex-col gap-3 border-y border-champagne/30 py-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3 text-sm font-bold text-ink/70">
@@ -134,7 +134,7 @@ export function PhotoGallerySection() {
           href={galleryUpdate.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="yukako-lift mt-6 flex items-center gap-3 border border-champagne/40 bg-white px-4 py-3 text-sm font-bold text-ink hover:border-champagne hover:bg-porcelain"
+          className="riri-lift mt-6 flex items-center gap-3 border border-champagne/40 bg-white px-4 py-3 text-sm font-bold text-ink hover:border-champagne hover:bg-porcelain"
         >
           <span className="grid h-9 w-9 shrink-0 place-items-center border border-champagne/50 bg-porcelain text-champagne">
             <GalleryUpdateIcon className="h-4 w-4" aria-hidden="true" />
@@ -156,8 +156,8 @@ export function PhotoGallerySection() {
           {visiblePhotos.map((photo, index) => (
             <figure
               key={photo.src}
-              className={`photo-gallery-card yukako-card overflow-hidden border-rosefog/15 bg-porcelain ${
-                loaded[photo.src] ? "" : "yukako-skeleton"
+              className={`photo-gallery-card riri-card overflow-hidden border-rosefog/15 bg-porcelain ${
+                loaded[photo.src] ? "" : "riri-skeleton"
               }`}
             >
               <button
@@ -190,7 +190,7 @@ export function PhotoGallerySection() {
             <button
               type="button"
               onClick={() => setShowAll((current) => !current)}
-              className="yukako-button yukako-button-soft min-h-12 px-5 py-3 text-sm"
+              className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
               aria-expanded={showAll}
               aria-controls="photo-selection"
             >
@@ -218,7 +218,7 @@ export function PhotoGallerySection() {
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-champagne">
-                  Yukako Photo
+                  Riri Photo
                 </p>
                 <p className="truncate text-sm font-semibold text-white/75">
                   {selectedPhoto.alt}

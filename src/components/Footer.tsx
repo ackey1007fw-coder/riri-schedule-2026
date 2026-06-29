@@ -23,7 +23,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
           <div>
             <p className="font-display text-2xl">{profile.name}</p>
             <p className="mt-1 text-sm text-white/60">
-              {profile.theme}｜ファン制作の応援スケジュール
+              {profile.theme}｜非公式の応援スケジュール（ファン制作）
             </p>
             <p className="mt-4 text-xs text-white/45">
               掲載情報更新：{displayUpdatedAt}
@@ -66,7 +66,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
         <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} {profile.romaji} Fan Schedule ・ Produced by あっきー</p>
           <p>
-            本サイトはファン制作の応援ページです。掲載情報は変更される場合があります。
+            本サイトはファンによる非公式の応援ページです。掲載情報は変更される場合があります。
           </p>
         </div>
       </div>

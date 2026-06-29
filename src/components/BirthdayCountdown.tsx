@@ -1,4 +1,4 @@
-﻿import { Gift, Heart, PartyPopper, Sparkles } from "lucide-react";
+import { Gift, Heart, PartyPopper, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { profile } from "../data/profile";
 import { getBirthdayCountdown } from "../lib/date";
@@ -119,7 +119,7 @@ export function BirthdayCountdown() {
             }まで、あと少し。SNSやSHOWROOMで一緒にお祝いしよう。`}
           />
           <div
-            className={`birthday-card yukako-card yukako-card-interactive relative overflow-hidden border-champagne/40 bg-white p-5 shadow-paper sm:p-6 ${
+            className={`birthday-card riri-card riri-card-interactive relative overflow-hidden border-champagne/40 bg-white p-5 shadow-paper sm:p-6 ${
               isCelebrating ? "birthday-card-active" : ""
             }`}
           >
@@ -187,7 +187,7 @@ export function BirthdayCountdown() {
                 <button
                   type="button"
                   onClick={celebrate}
-                  className="yukako-button yukako-button-soft min-h-11 rounded-md px-4 py-2 text-sm"
+                  className="riri-button riri-button-soft min-h-11 rounded-md px-4 py-2 text-sm"
                   aria-label="お祝いのキラキラを贈る"
                 >
                   <PartyPopper

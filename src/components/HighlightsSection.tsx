@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import {
   ArrowUpRight,
   ChevronDown,
@@ -32,7 +32,7 @@ export function HighlightsSection() {
         <SectionHeader
           kicker="Highlights"
           title="これまでの歩み"
-          copy="舞台、CM、MV、ドラマ、ミスコンにSHOWROOMまで。吉井優花子さんがこれまで歩んできた道のり。"
+          copy="ドラマ、MV、CM、舞台に受賞まで。里季ちゃんがこれまで歩んできた道のり。"
         />
 
         <div id="highlight-list" className="grid gap-3 md:grid-cols-2">
@@ -42,7 +42,7 @@ export function HighlightsSection() {
             return (
               <article
                 key={item.id}
-                className="yukako-card yukako-card-interactive flex min-h-36 min-w-0 flex-col border-champagne/40 bg-white p-5"
+                className="riri-card riri-card-interactive flex min-h-36 min-w-0 flex-col border-champagne/40 bg-white p-5"
               >
                 {item.image && (
                   <img
@@ -105,7 +105,7 @@ export function HighlightsSection() {
             <button
               type="button"
               onClick={() => setShowAll((current) => !current)}
-              className="yukako-button yukako-button-soft min-h-12 px-5 py-3 text-sm"
+              className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
               aria-expanded={showAll}
               aria-controls="highlight-list"
             >

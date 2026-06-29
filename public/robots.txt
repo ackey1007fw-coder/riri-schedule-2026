@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yukako-schedule-2026.vercel.app/sitemap.xml
+Sitemap: https://riri-schedule-2026.vercel.app/sitemap.xml

@@ -1,4 +1,4 @@
-﻿import { Link2, MessageCircle, Video } from "lucide-react";
+import { Link2, MessageCircle, Video } from "lucide-react";
 import type { SocialLink } from "../types";
 import { SectionHeader } from "./SectionHeader";
 
@@ -14,7 +14,7 @@ export function LinksSection({ socialLinks, mediaLinks }: LinksSectionProps) {
         <SectionHeader
           kicker="Links"
           title="SNS・メディアリンク"
-          copy="X、Instagram、TikTok、SHOWROOM。吉井優花子さんをフォローできる場所をまとめました。"
+          copy="フォローも、配信も、最新の告知も。里季ちゃんとつながれる場所をまとめました。"
         />
 
         <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
@@ -25,7 +25,7 @@ export function LinksSection({ socialLinks, mediaLinks }: LinksSectionProps) {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="yukako-card yukako-lift group flex min-h-32 items-start gap-4 border-rosefog/25 bg-porcelain p-5 hover:border-champagne hover:bg-white"
+                className="riri-card riri-lift group flex min-h-32 items-start gap-4 border-rosefog/25 bg-porcelain p-5 hover:border-champagne hover:bg-white"
               >
                 <span className="grid h-11 w-11 shrink-0 place-items-center border border-champagne/50 bg-white text-champagne">
                   {link.kind === "showroom" ? (

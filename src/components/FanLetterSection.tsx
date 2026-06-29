@@ -14,7 +14,7 @@ export function FanLetterSection() {
           </div>
           <div className="border border-rosefog/25 bg-porcelain p-5">
             <p className="flex items-center gap-2 text-sm font-bold text-ink"><Mail className="h-4 w-4 text-champagne" aria-hidden="true" />送付先</p>
-            <p className="mt-3 text-sm leading-7 text-ink/70">送り先や受付方法は、本人または関係先の最新案内をご確認ください。</p>
+            <p className="mt-3 text-sm leading-7 text-ink/70">〒153-0042 東京都目黒区青葉台3-13-11-3F<br />株式会社エイジ・エンタテインメント 夏凪里季宛</p>
             <a href={fanLetterForm} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-12 items-center justify-center gap-2 bg-ink px-5 py-3 text-sm font-bold text-white transition hover:bg-champagne">必須フォームを開く<ExternalLink className="h-4 w-4" aria-hidden="true" /></a>
           </div>
         </div>

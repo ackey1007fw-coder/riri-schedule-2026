@@ -14,72 +14,65 @@ export type SearchFaq = {
 
 export const searchIntents: SearchIntent[] = [
   {
-    label: "公演情報",
-    title: "公演スケジュールを確認する",
-    copy: "#ゆかJET やBaby Shark Liveなど、最新の公演日程を確認できます。",
+    label: "出演情報",
+    title: "次に会える予定を探す",
+    copy: "直近の出演、イベント、チケットや詳細リンクを確認できます。",
     href: "#next"
   },
   {
-    label: "出演歴",
-    title: "これまでの活動を見る",
-    copy: "舞台、CM、MV、ドラマ、ミスコンなど幅広い活動歴を確認できます。",
-    href: "#highlights"
+    label: "配信",
+    title: "SHOWROOMで応援する",
+    copy: "ルーム情報、配信への入口、アバター、フォロー導線をまとめています。",
+    href: "#showroom"
   },
   {
-    label: "SNS",
-    title: "SNSをチェックする",
-    copy: "X、Instagram、TikTok、SHOWROOMの最新情報を確認できます。",
-    href: "#links"
+    label: "写真",
+    title: "写真と近況を見る",
+    copy: "ギャラリー、Instagram、SNS更新への導線をまとめています。",
+    href: "#gallery"
   },
   {
     label: "プロフィール",
-    title: "吉井優花子さんを知る",
-    copy: "プロフィール、経歴、受賞歴を確認できます。",
+    title: "夏凪里季さんを知る",
+    copy: "フレキャン、プロフィール、インタビュー、カルアちゃん情報を確認できます。",
     href: "#profile"
   }
 ];
 
 export const searchFaqs: SearchFaq[] = [
   {
-    question: "#ゆかJET の次の公演はいつですか？",
+    question: "夏凪里季さんの次の出演予定はどこで見られますか？",
     answer:
-      "「次の公演」セクションで、#ゆかJET の公演日程・会場・チケット情報を確認できます。",
+      "このFan Scheduleの「次の出演」と「スケジュール」で、直近の出演予定、イベント、チケットや詳細リンクを確認できます。",
     href: "#next",
-    linkLabel: "公演情報を見る"
+    linkLabel: "次の出演を見る"
   },
   {
-    question: "吉井優花子さんのSNSはどこですか？",
+    question: "SHOWROOMはどこから応援できますか？",
     answer:
-      "個人X（@mokoopy）、プロデュースX（@yukako_produce）、Instagram（@yoppy_777）、TikTok（@yukakoyoshii）、SHOWROOMで活動しています。",
-    href: "#links",
-    linkLabel: "SNSを見る"
-  },
-  {
-    question: "秋田の優花子とは同じ人ですか？",
-    answer:
-      "SHOWROOMなどで使われている呼び名です。このページでは吉井優花子さん、Yukako、秋田の優花子の検索導線をまとめています。",
+      "SHOWROOMセクションからルームへ移動できます。フォロー、コメント、ギフトなどで配信を応援できます。",
     href: "#showroom",
-    linkLabel: "SHOWROOMを見る"
+    linkLabel: "SHOWROOM情報を見る"
   },
   {
-    question: "SHOWROOMはどこから見られますか？",
+    question: "夏凪里季さんはフレキャン2025の何番ですか？",
     answer:
-      "SHOWROOMセクションから配信ルームを開けます。フォロワー数、ルームレベル、SHOWランクなどは取得できる範囲で自動更新します。",
-    href: "#showroom",
-    linkLabel: "配信ルームを見る"
+      "フレキャン2025 Entry No.306です。関連リンクやインタビューはプロフィール、インタビュー、リンク欄に整理しています。",
+    href: "#profile",
+    linkLabel: "プロフィールを見る"
   },
   {
-    question: "吉井優花子さんはどんな活動をしていますか？",
+    question: "SNSや写真はどこで見られますか？",
     answer:
-      "舞台俳優・プロデューサー・SHOWROOMライバーとして活動中。Baby Shark Live全国公演のシンガー、自主プロデュース公演 #ゆかJET、CM・MV・ドラマ出演、ミスコン受賞歴など多方面で活躍しています。",
-    href: "#highlights",
-    linkLabel: "活動歴を見る"
+      "X、Instagram、Threads、TikTok、note、Lit.Linkへのリンクをまとめています。写真はギャラリーからスライドショーで見られます。",
+    href: "#gallery",
+    linkLabel: "写真を見る"
   },
   {
-    question: "#ゆかJET とは何ですか？",
+    question: "カルアちゃんの紹介はありますか？",
     answer:
-      "吉井優花子さんがプロデュースする舞台シリーズ『GO,JET!GO!GO!』の愛称です。第1弾は2026年7月にAir studio 両国で上演されます。",
-    href: "#next",
-    linkLabel: "公演情報を見る"
+      "プロフィール後のカルアちゃんセクションで、里季ちゃんの愛犬カルアちゃんの写真と紹介を見られます。",
+    href: "#kalua",
+    linkLabel: "カルアちゃんを見る"
   }
 ];
