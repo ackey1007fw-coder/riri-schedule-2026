@@ -7,6 +7,7 @@ import { HighlightsSection } from "./components/HighlightsSection";
 import { LinksSection } from "./components/LinksSection";
 import { NextEvent } from "./components/NextEvent";
 import { NewsBar } from "./components/NewsBar";
+import { PhotoGallerySection } from "./components/PhotoGallerySection";
 import { PortalIntroSection } from "./components/PortalIntroSection";
 import { QuickNav } from "./components/QuickNav";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -111,6 +112,9 @@ function App() {
         </SectionReveal>
         <SectionReveal>
           <ProfileSection />
+        </SectionReveal>
+        <SectionReveal>
+          <PhotoGallerySection />
         </SectionReveal>
         <SearchSeoSection />
         <SectionReveal>
