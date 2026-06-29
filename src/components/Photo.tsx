@@ -20,7 +20,7 @@ export function Photo({
 
   return (
     <div
-      className={`relative overflow-hidden bg-[linear-gradient(135deg,#fff4f8_0%,#ece8ff_46%,#fff7e5_100%)] ${className}`}
+      className={`relative overflow-hidden bg-[linear-gradient(135deg,#fff5ef_0%,#f6e0d2_46%,#fff7e5_100%)] ${className}`}
     >
       {!failed && (
         <img

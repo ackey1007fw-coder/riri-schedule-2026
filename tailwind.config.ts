@@ -5,17 +5,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        porcelain: "#fffafc",
-        blush: "#f8dce8",
-        rosefog: "#f2b8cd",
-        lavender: "#dcd4ff",
-        lilac: "#b7a6e8",
-        champagne: "#d7ad62",
+        porcelain: "#fffdf7",
+        blush: "#f6dad2",
+        rosefog: "#c8385a",
+        lavender: "#e7c9a6",
+        lilac: "#9a3048",
+        champagne: "#c29a4a",
         ink: "#312a2e",
         moss: "#60705c"
       },
       fontFamily: {
-        display: ["Georgia", "Yu Mincho", "Hiragino Mincho ProN", "serif"],
+        display: [
+          "Playfair Display",
+          "Georgia",
+          "Yu Mincho",
+          "Hiragino Mincho ProN",
+          "serif"
+        ],
         sans: [
           "Inter",
           "ui-sans-serif",
@@ -26,8 +32,8 @@ export default {
         ]
       },
       boxShadow: {
-        paper: "0 18px 50px rgba(94, 62, 81, 0.12)",
-        button: "0 12px 24px rgba(215, 173, 98, 0.18)"
+        paper: "0 18px 50px rgba(120, 30, 50, 0.12)",
+        button: "0 12px 24px rgba(194, 154, 74, 0.20)"
       }
     }
   },

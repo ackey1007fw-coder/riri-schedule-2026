@@ -23,7 +23,7 @@ export function BirthdayDayBanner() {
   return (
     <a
       href="#birthday"
-      className="block bg-[linear-gradient(90deg,#f8dce8,#fdeef4_45%,#fbe7d8)] text-ink"
+      className="block bg-[linear-gradient(90deg,#f6dad2,#fbeef0_45%,#fbe7d8)] text-ink"
       aria-label="今日は夏凪里季さんのお誕生日。お祝いへ"
     >
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 py-2.5 text-sm font-black tracking-wide sm:px-6 lg:px-8">

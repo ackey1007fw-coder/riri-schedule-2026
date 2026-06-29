@@ -129,7 +129,7 @@ export function LiveBanner() {
         href={profile.showroom.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block border-b border-champagne/30 bg-[#fdeef4] text-ink transition hover:bg-[#fbe3ee]"
+        className="block border-b border-champagne/30 bg-[#fbeef0] text-ink transition hover:bg-[#f7dfe2]"
         aria-label={`今日の配信予定は${todayTime}から。SHOWROOMをフォロー`}
       >
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 py-2 text-sm font-bold sm:px-6 lg:px-8">

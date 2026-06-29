@@ -47,7 +47,7 @@ export function BirthdayBanner() {
   return (
     <a
       href="#birthday"
-      className="group block border-b border-champagne/40 bg-[linear-gradient(90deg,#fff4f7,#fffafc_55%,#fdf3e6)]"
+      className="group block border-b border-champagne/40 bg-[linear-gradient(90deg,#fff5ef,#fffdf7_55%,#fdf3e6)]"
     >
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-4 py-3 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
         <div className="flex items-center gap-3 text-ink">

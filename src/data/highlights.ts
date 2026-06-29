@@ -25,6 +25,15 @@ export const highlights: Highlight[] = [
     ]
   },
   {
+    id: "littlebraver-tasogare-2025-12",
+    year: "2025",
+    date: "2025年12月",
+    category: "舞台",
+    title: "演劇ユニットリトルブレイバー Vol.30『黄昏歌のカルーセル』",
+    description:
+      "2025年12月17日〜21日、荻窪小劇場にて上演。花チームに参加。"
+  },
+  {
     id: "babyshark-live-2025",
     year: "2025",
     date: "2025年〜",
@@ -45,6 +54,24 @@ export const highlights: Highlight[] = [
     image: "/images/yukako-mgj-award.jpg"
   },
   {
+    id: "cocoa-seirei-2025-03",
+    year: "2025",
+    date: "2025年3月",
+    category: "舞台",
+    title: "劇団ココア『魔女エステリーゼの事件簿 精霊と焔編』",
+    description:
+      "2025年3月19日〜23日、萬劇場にて上演。ヴィレッタ役で出演。"
+  },
+  {
+    id: "gojet-vol2-2024-11",
+    year: "2024",
+    date: "2024年11月",
+    category: "舞台",
+    title: "Air studio produce『GO,JET!GO!GO! vol.2』",
+    description:
+      "2024年11月20日〜25日、両国・Air studioにて上演。A班・早紀役で出演。"
+  },
+  {
     id: "miss-cosmo-japan-2024",
     year: "2024",
     date: "2024年8月",
@@ -54,6 +81,15 @@ export const highlights: Highlight[] = [
       "審査累計ポイントランキング1位を獲得してTOP5ファイナリストに選出。国内最終選考では3位に選定されました。"
   },
   {
+    id: "gojet-paradise-live4-2024-06",
+    year: "2024",
+    date: "2024年6月",
+    category: "舞台",
+    title: "LAST DIAMOND『GO,JET!GO!GO! PARADISE LIVE 4』",
+    description:
+      "2024年6月18日〜23日、A-Garageにて上演。Aチーム・すずこ役で出演。"
+  },
+  {
     id: "akt-ambassador-2024",
     year: "2024",
     date: "2024年5月",
@@ -61,6 +97,51 @@ export const highlights: Highlight[] = [
     title: "AKT秋田テレビ アプリアンバサダー",
     description:
       "AKT秋田テレビの公式アプリ「AKTアプリ」のアンバサダーに選出。地上波テレビCMやイベントに出演しました。"
+  },
+  {
+    id: "warau-neko-littlebraver-2024-04",
+    year: "2024",
+    date: "2024年4月",
+    category: "舞台",
+    title: "『笑う門には猫来る -リトブレ ver.-』",
+    description:
+      "2024年4月17日〜21日、荻窪小劇場にて上演。C班・猫神役で出演。"
+  },
+  {
+    id: "cocoa-kuroneko-2024-03",
+    year: "2024",
+    date: "2024年3月",
+    category: "舞台",
+    title: "劇団ココア『魔女エステリーゼの事件簿 黒猫喧騒編』",
+    description:
+      "2024年3月13日〜17日、劇場MOMOにて上演された新作短編に出演。"
+  },
+  {
+    id: "khb-weather-2024",
+    year: "2024",
+    date: "2024年1月〜6月",
+    category: "TV",
+    title: "khb東日本放送『khb weather forecast』お天気レポーター",
+    description:
+      "テレビ朝日系列・khb東日本放送のレギュラーお天気レポーターを務めました。"
+  },
+  {
+    id: "malasada-tokyo-model-2023",
+    year: "2023",
+    date: "2023年11月〜2024年2月",
+    category: "モデル",
+    title: "THE MALASADA TOKYO イメージモデル",
+    description:
+      "東京・下北沢のTHE MALASADA TOKYOのイメージモデルを務めました。"
+  },
+  {
+    id: "cocoa-gan-2023-11",
+    year: "2023",
+    date: "2023年11月",
+    category: "舞台",
+    title: "劇団ココア 6周年記念公演『魔女エステリーゼの事件簿 贋と軀編』",
+    description:
+      "シリーズ第6弾。2023年11月14日〜19日、萬劇場にて上演。フレヤ・スチュアート役で出演。"
   },
   {
     id: "tvk-weather-report-2023",

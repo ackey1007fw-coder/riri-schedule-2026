@@ -8,7 +8,7 @@ export function CharmSection() {
   const [photos] = useState(() => pickShowcasePhotos(charmPhotos.length));
 
   return (
-    <section className="bg-[linear-gradient(180deg,#fffafc,#fff4f8_55%,#ffffff)] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="bg-[linear-gradient(180deg,#fffdf7,#fff5ef_55%,#ffffff)] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>

@@ -44,7 +44,7 @@ export function BirthdayCelebration() {
       href={BIRTHDAY_POST_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block border-b border-champagne/40 bg-[linear-gradient(90deg,#fff2f6,#fffafc_50%,#fdf2e4)] text-ink"
+      className="group block border-b border-champagne/40 bg-[linear-gradient(90deg,#fff5ef,#fffdf7_50%,#fdf2e4)] text-ink"
       aria-label="20歳のお祝い投稿を見る"
     >
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 py-2.5 text-sm font-black tracking-wide sm:px-6 lg:px-8">
