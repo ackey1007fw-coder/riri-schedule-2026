@@ -2,6 +2,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   CalendarDays,
   CalendarHeart,
+  Images,
+  Radio,
   Sparkles,
   UserRound,
   MessageCircle
@@ -13,6 +15,8 @@ const items = [
   { label: "予定", href: "#schedule", id: "schedule", Icon: CalendarDays },
   { label: "これまでの歩み", href: "#highlights", id: "highlights", Icon: Sparkles },
   { label: "プロフィール", href: "#profile", id: "profile", Icon: UserRound },
+  { label: "写真", href: "#gallery", id: "gallery", Icon: Images },
+  { label: "配信", href: "#showroom", id: "showroom", Icon: Radio },
   { label: "SNS", href: "#links", id: "links", Icon: MessageCircle }
 ];
 

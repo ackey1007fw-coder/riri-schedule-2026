@@ -39,7 +39,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
 
   return (
     <article
-      className={`riri-card riri-card-interactive group relative grid overflow-hidden bg-white ${
+      className={`yukako-card yukako-card-interactive group relative grid overflow-hidden bg-white ${
         event.isImportant || isNext
           ? "border-champagne/70"
           : "border-rosefog/25"
@@ -65,8 +65,21 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
           />
         </div>
       ) : (
-        <div className="hidden bg-porcelain sm:flex sm:items-center sm:justify-center">
-          <span className="font-display text-2xl text-ink/15">{event.shortTitle}</span>
+        <div className="relative hidden overflow-hidden bg-ink sm:flex sm:items-stretch sm:justify-center">
+          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(194,154,74,0.22),transparent_42%),radial-gradient(circle_at_20%_18%,rgba(255,253,247,0.16),transparent_28%),linear-gradient(180deg,rgba(127,29,45,0.9),rgba(49,42,46,0.96))]" />
+          <div className="relative z-10 flex w-full flex-col justify-between p-4 text-white">
+            <span className={`grid h-11 w-11 place-items-center rounded-full border ${meta.tone}`}>
+              <Icon className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <span>
+              <span className="block text-[10px] font-black uppercase tracking-[0.18em] text-champagne">
+                {meta.label}
+              </span>
+              <span className="mt-1 block font-display text-2xl leading-tight text-white/86">
+                {event.shortTitle}
+              </span>
+            </span>
+          </div>
         </div>
       )}
 
@@ -129,7 +142,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
                 href={googleCalendarUrl(event)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+                className="yukako-button yukako-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 <CalendarPlus className="h-4 w-4 text-champagne" aria-hidden="true" />
                 カレンダー
