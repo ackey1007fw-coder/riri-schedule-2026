@@ -7,7 +7,7 @@ export const profile = {
   catchCopy:
     "心に届く声の俳優。秋田から、舞台へ。",
   intro:
-    "元公務員という誠実さと、舞台人としての表現力で、観る人の心に届く表現を目指す吉井優花子さんの応援ポータルです。",
+    "元公務員という誠実さと、舞台人としての表現力で観る人の心に届く表現を追求。近年はプロデュース公演 #ゆかJET にも挑戦する吉井優花子さんの応援ポータルです。",
   heroImage: "/images/yukako-stage-back.jpg",
   portraitImage: "/images/yukako-portrait.jpg",
   birthday: "1997-04-27",
@@ -35,6 +35,10 @@ export const profile = {
     {
       label: "受賞歴",
       value: "Miss Grand Japan 2025 MISS PEACE賞 / Miss Cosmo Japan 2024 TOP5（ポイントランキング1位）"
+    },
+    {
+      label: "役職",
+      value: "Miss Grand Japan 代表補佐・運営マネジメント（2026〜）"
     }
   ],
   gallery: [
