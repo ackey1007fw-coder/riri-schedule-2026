@@ -27,6 +27,7 @@ export const profile = {
       value: "秋田で公務員 → 2022年退職・上京 → 舞台デビュー → プロデュース公演主宰"
     },
     { label: "主な出演", value: "Baby Shark Live 全国公演、舞台、CM、MV、ドラマ" },
+    { label: "CM・PR", value: "リポビタンD、鹿角市公式PR動画 ほか" },
     {
       label: "プロデュース",
       value: "#ゆかJET（GO,JET!GO!GO! シリーズ）"
