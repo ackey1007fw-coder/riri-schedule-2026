@@ -8,8 +8,9 @@ import {
 } from "lucide-react";
 
 const items = [
+  { label: "魅力", href: "#about", id: "about", Icon: Sparkles },
   { label: "公演情報", href: "#next", id: "next", Icon: CalendarHeart },
-  { label: "スケジュール", href: "#schedule", id: "schedule", Icon: CalendarDays },
+  { label: "予定", href: "#schedule", id: "schedule", Icon: CalendarDays },
   { label: "これまでの歩み", href: "#highlights", id: "highlights", Icon: Sparkles },
   { label: "プロフィール", href: "#profile", id: "profile", Icon: UserRound },
   { label: "SNS", href: "#links", id: "links", Icon: MessageCircle }

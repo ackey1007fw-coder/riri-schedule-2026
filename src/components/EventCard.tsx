@@ -1,8 +1,8 @@
-import { CalendarDays, CalendarPlus, MapPin } from "lucide-react";
+import { CalendarDays, CalendarPlus, MapPin, MessageCircle, Share2 } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
 import { isEventPast } from "../lib/date";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
-import { googleCalendarUrl } from "../lib/share";
+import { googleCalendarUrl, SITE_URL, xShareUrl } from "../lib/share";
 import type { ScheduleEvent } from "../types";
 import { Badge } from "./Badge";
 import { ExternalButton } from "./ExternalButton";
@@ -17,6 +17,25 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
   const meta = categoryMeta[event.category];
   const Icon = meta.Icon;
   const upcoming = !isEventPast(event);
+  const ticketLink = event.links.find((link) => link.kind === "ticket");
+  const streamLink = event.links.find((link) => link.kind === "stream");
+  const infoLink = event.links.find((link) => link.kind === "info") ?? event.links[0];
+  const shareText = upcoming
+    ? `${event.title}を応援しています`
+    : `${event.title}の活動記録を見ました`;
+  const supportActions = [
+    ...(streamLink ? [{ label: "配信を見る", href: streamLink.url, external: true }] : []),
+    ...(ticketLink ? [{ label: "チケット予約", href: ticketLink.url, external: true }] : []),
+    ...(infoLink ? [{ label: infoLink.label, href: infoLink.url, external: true }] : []),
+    {
+      label: upcoming ? "Xで拡散" : "感想投稿",
+      href: xShareUrl(shareText, `${SITE_URL}#event-${event.id}`),
+      external: true
+    },
+    ...(upcoming
+      ? [{ label: "カレンダー追加", href: googleCalendarUrl(event), external: true }]
+      : [])
+  ];
 
   return (
     <article
@@ -118,6 +137,30 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
             )}
           </div>
         )}
+
+        <div className="mt-6 border-t border-rosefog/15 pt-5">
+          <p className="mb-3 inline-flex items-center gap-2 text-xs font-black uppercase text-champagne">
+            {upcoming ? (
+              <Share2 className="h-4 w-4" aria-hidden="true" />
+            ) : (
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+            )}
+            {upcoming ? "応援アクション" : "活動の記録"}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {supportActions.map((action) => (
+              <a
+                key={`${action.label}-${action.href}`}
+                href={action.href}
+                target={action.external ? "_blank" : undefined}
+                rel={action.external ? "noopener noreferrer" : undefined}
+                className="inline-flex min-h-10 items-center justify-center border border-rosefog/25 bg-porcelain px-3 py-2 text-xs font-bold text-ink/72 transition hover:border-champagne hover:bg-white hover:text-ink"
+              >
+                {action.label}
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </article>
   );
