@@ -8,7 +8,7 @@ export const profile = {
     "心に届く声の俳優。秋田から、舞台へ。",
   intro:
     "元公務員という誠実さと、舞台人としての表現力で観る人の心に届く表現を追求。近年はプロデュース公演 #ゆかJET にも挑戦する吉井優花子さんの応援ポータルです。",
-  heroImage: "/images/yukako-stage-back.jpg",
+  heroImage: "/images/yukako-mgj-award.jpg",
   portraitImage: "/images/yukako-portrait.jpg",
   birthday: "1997-04-27",
   birthdayMonthDay: "04-27",
