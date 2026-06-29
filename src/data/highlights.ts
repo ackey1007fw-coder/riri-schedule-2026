@@ -32,7 +32,7 @@ export const highlights: Highlight[] = [
     title: "BABY SHARK LIVE! -The Hidden Treasure- 全国公演",
     description:
       "Pinkfongの人気キャラクターたちと歌って踊るファミリーミュージカル。シンガーとして全国各地の公演に出演中。",
-    image: "/images/yukako-babyshark-pirate.jpg"
+    image: "/images/yukako-babyshark-lobster2.jpg"
   },
   {
     id: "mgj-2025-miss-peace",
@@ -42,7 +42,7 @@ export const highlights: Highlight[] = [
     title: "Miss Grand Japan 2025 MISS PEACE賞",
     description:
       "ミス・グランド・ジャパン2025にて、平和的活動を積極的に行ったファイナリストに贈られるMISS PEACE賞を受賞。大会はMSCベリッシマ号で開催。",
-    image: "/images/yukako-cruise-captain.jpg"
+    image: "/images/yukako-mgj-award.jpg"
   },
   {
     id: "miss-cosmo-japan-2024",

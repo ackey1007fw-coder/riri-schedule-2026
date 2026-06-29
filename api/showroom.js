@@ -1,5 +1,5 @@
 // api/showroom.js - SHOWROOM stats proxy
-const ROOM_ID = '550336';
+const ROOM_ID = '347571';
 const JSON_API = 'https://www.showroom-live.com/api/room/profile?room_id=' + ROOM_ID;
 const ROOM_HTML = 'https://www.showroom-live.com/room/profile?room_id=' + ROOM_ID;
 const NEXT_LIVE_API = 'https://www.showroom-live.com/api/room/next_live?room_id=' + ROOM_ID;

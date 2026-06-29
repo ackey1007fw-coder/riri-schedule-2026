@@ -14,8 +14,10 @@ import { ProfileSection } from "./components/ProfileSection";
 import { ScheduleSection } from "./components/ScheduleSection";
 import { SearchSeoSection } from "./components/SearchSeoSection";
 import { ShareSection } from "./components/ShareSection";
+import { ShowroomSection } from "./components/ShowroomSection";
 import { SiteHeader } from "./components/SiteHeader";
 import { StructuredData } from "./components/StructuredData";
+import { LiveBanner } from "./components/LiveBanner";
 import {
   getMonthKeysFromEvents,
   isEventPast,
@@ -78,6 +80,7 @@ function App() {
   return (
     <div className="min-h-screen bg-porcelain text-ink">
       <SiteHeader socialLinks={socialLinks} />
+      <LiveBanner />
       <NewsBar />
       <QuickNav />
       <main>
@@ -106,6 +109,9 @@ function App() {
           <ProfileSection />
         </SectionReveal>
         <SearchSeoSection />
+        <SectionReveal>
+          <ShowroomSection />
+        </SectionReveal>
         <SectionReveal>
           <LinksSection socialLinks={socialLinks} mediaLinks={mediaLinks} />
         </SectionReveal>
