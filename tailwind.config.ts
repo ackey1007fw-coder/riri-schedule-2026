@@ -6,8 +6,8 @@ export default {
     extend: {
       colors: {
         porcelain: "#fffdf7",
-        blush: "#f6dad2",
-        rosefog: "#c8385a",
+        blush: "#f8ead8",
+        rosefog: "#7f1d2d",
         lavender: "#e7c9a6",
         lilac: "#9a3048",
         champagne: "#c29a4a",

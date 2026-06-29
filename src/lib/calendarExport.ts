@@ -60,7 +60,7 @@ export function downloadScheduleCalendar(events: ScheduleEvent[]) {
   const content = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Yukako Schedule 2026//Fan Schedule//JA",
+    "PRODID:-//Yoshii Yukako Portal//Unofficial Fan Portal//JA",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
     "X-WR-CALNAME:吉井優花子 応援スケジュール",

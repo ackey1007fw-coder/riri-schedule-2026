@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CalendarDays } from "lucide-react";
+import { Mic2 } from "lucide-react";
 import { profile } from "../data/profile";
 import type { SocialLink } from "../types";
 
@@ -48,18 +48,18 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
   const activeSection = useActiveSection();
 
   return (
-    <header className="sticky top-0 z-50 w-full overflow-hidden border-b border-rosefog/20 bg-porcelain/88 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full overflow-hidden border-b border-champagne/25 bg-porcelain/90 backdrop-blur-xl">
       <div className="mx-auto flex h-16 w-full min-w-0 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <a href="#top" className="flex min-w-0 items-center gap-3 text-ink">
-          <span className="grid h-9 w-9 shrink-0 place-items-center border border-champagne/60 bg-white">
-            <CalendarDays className="h-4 w-4 text-champagne" aria-hidden="true" />
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-champagne/60 bg-ink text-champagne">
+            <Mic2 className="h-4 w-4" aria-hidden="true" />
           </span>
           <span className="min-w-0">
             <span className="block truncate font-display text-base leading-none min-[430px]:text-lg">
-              {profile.theme}
+              Yoshii Yukako
             </span>
             <span className="mt-1 block text-[11px] font-semibold text-ink/55">
-              Fan Schedule
+              Actor / Akita / Stage
             </span>
           </span>
         </a>
@@ -85,7 +85,7 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
             href={showroom.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="riri-button riri-button-gold min-h-10 shrink-0 px-3 text-xs sm:min-h-11 sm:px-4 sm:text-sm"
+            className="yukako-button yukako-button-gold min-h-10 shrink-0 rounded-full px-3 text-xs sm:min-h-11 sm:px-4 sm:text-sm"
           >
             <span className="hidden min-[430px]:inline">SHOWROOM</span>
             <span className="min-[430px]:hidden">SR</span>
@@ -95,7 +95,7 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
             href={socialLinks[0].url}
             target="_blank"
             rel="noopener noreferrer"
-            className="riri-button riri-button-gold min-h-10 shrink-0 px-3 text-xs sm:min-h-11 sm:px-4 sm:text-sm"
+            className="yukako-button yukako-button-gold min-h-10 shrink-0 rounded-full px-3 text-xs sm:min-h-11 sm:px-4 sm:text-sm"
           >
             {socialLinks[0].label}
           </a>

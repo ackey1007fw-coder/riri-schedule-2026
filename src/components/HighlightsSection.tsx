@@ -92,7 +92,7 @@ export function HighlightsSection() {
               <details
                 key={group.title}
                 open={index < 2}
-                className="group riri-card border-champagne/35 bg-white"
+                className="group yukako-card border-champagne/35 bg-white"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 marker:hidden sm:p-6">
                   <div className="flex items-start gap-4">
@@ -121,7 +121,7 @@ export function HighlightsSection() {
                     return (
                       <article
                         key={item.id}
-                        className="riri-card riri-card-interactive flex min-h-36 min-w-0 flex-col border-rosefog/20 bg-porcelain p-5"
+                        className="yukako-card yukako-card-interactive flex min-h-36 min-w-0 flex-col border-rosefog/20 bg-porcelain p-5"
                       >
                         {item.image && (
                           <img

@@ -25,7 +25,7 @@ export function ShareSection() {
 
   const nativeShare = async () => {
     try {
-      await navigator.share({ title: "Yukako Schedule 2026", text, url });
+      await navigator.share({ title: "吉井優花子 応援ポータル", text, url });
     } catch {
       /* キャンセル/非対応時は何もしない */
     }

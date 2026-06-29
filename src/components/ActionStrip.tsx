@@ -51,8 +51,18 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
   ];
 
   return (
-    <section className="relative z-20 -mt-8 bg-transparent px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-px overflow-hidden border border-white/70 bg-rosefog/20 shadow-paper backdrop-blur sm:grid-cols-3">
+    <section className="relative z-20 bg-porcelain px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto mb-4 flex max-w-7xl items-end justify-between gap-4">
+        <div>
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-champagne">
+            Support Compass
+          </p>
+          <h2 className="mt-2 font-display text-2xl text-ink sm:text-3xl">
+            今できる応援
+          </h2>
+        </div>
+      </div>
+      <div className="mx-auto grid max-w-7xl gap-3 sm:grid-cols-3">
         {items.map((item, index) => {
           const content = (
             <>
@@ -85,7 +95,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="riri-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
+              className="yukako-lift flex min-h-36 gap-4 border-l-4 border-champagne bg-white p-5 hover:bg-white sm:min-h-40"
             >
               {content}
             </a>
@@ -93,7 +103,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
             <a
               key={index}
               href={item.href}
-              className="riri-lift flex min-h-36 gap-4 bg-white/92 p-5 hover:bg-white sm:min-h-40"
+              className="yukako-lift flex min-h-36 gap-4 border-l-4 border-champagne bg-white p-5 hover:bg-white sm:min-h-40"
             >
               {content}
             </a>

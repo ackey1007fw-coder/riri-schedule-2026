@@ -47,7 +47,7 @@ export function PortalIntroSection() {
     <section id="about" className="scroll-mt-24 bg-porcelain py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="riri-card border-champagne/40 bg-white p-6 shadow-paper sm:p-8">
+          <div className="yukako-card border-champagne/40 bg-white p-6 shadow-paper sm:p-8">
             <p className="gold-kicker mb-5 inline-flex px-3 py-2 text-xs font-bold uppercase">
               30 seconds
             </p>
@@ -79,8 +79,8 @@ export function PortalIntroSection() {
             />
             <div className="grid gap-3 sm:grid-cols-2">
               {charmCards.map(({ title, copy, Icon }) => (
-                <article key={title} className="riri-card border-rosefog/20 bg-white p-5">
-                  <span className="grid h-11 w-11 place-items-center border border-champagne/45 bg-porcelain text-champagne">
+                <article key={title} className="yukako-card border-rosefog/20 bg-white p-5">
+                  <span className="grid h-11 w-11 place-items-center rounded-full border border-champagne/45 bg-porcelain text-champagne">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
                   <h3 className="mt-4 font-display text-2xl leading-tight text-ink">
@@ -104,7 +104,7 @@ export function PortalIntroSection() {
               <a
                 key={label}
                 href={href}
-                className="riri-card riri-card-interactive flex min-h-28 items-start gap-3 border-champagne/35 bg-white p-4"
+                className="yukako-card yukako-card-interactive flex min-h-28 items-start gap-3 border-champagne/35 bg-white p-4"
               >
                 <span className="grid h-10 w-10 shrink-0 place-items-center border border-champagne/45 bg-porcelain text-champagne">
                   <Icon className="h-4 w-4" aria-hidden="true" />
