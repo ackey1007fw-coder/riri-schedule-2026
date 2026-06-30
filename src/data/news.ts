@@ -8,6 +8,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.6.30",
+    label: "チケット",
+    text: "【予約受付開始】#ゆかJET『GO,JET!GO!GO! vol.1 Premium』ご予約はこちら🎫",
+    url: "https://premiumgoyukajet.hp.peraichi.com"
+  },
+  {
+    date: "2026.6.30",
     label: "お知らせ",
     text: "吉井優花子さんの応援スケジュールサイトを公開しました",
     url: "https://yukako-schedule-2026.vercel.app/"
