@@ -18,7 +18,7 @@ const searchTopics = [
   {
     icon: Radio,
     title: "出演歴",
-    body: "CM・MV・ドラマ・舞台・ミスコンなど、幅広い活動歴をまとめています。"
+    body: "舞台・映像・CM・MV・ドラマ・ミスコンなど、幅広い活動歴をまとめています。"
   },
   {
     icon: Sparkles,
@@ -57,10 +57,10 @@ export function SearchSeoSection() {
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <h2 className="font-display text-3xl leading-tight text-ink sm:text-4xl">
-                吉井優花子さんを応援するための非公式ポータル
+                吉井優花子さんを応援するためのファン制作ポータル
               </h2>
               <p className="mt-5 leading-8 text-ink/70">
-                舞台・CM・MV・ミスコン・SHOWROOMまで、吉井優花子さんの活動を応援する人の目線でまとめています。
+                舞台・映像・CM・MV・ミスコン・SHOWROOMまで、吉井優花子さんの活動を応援する人の目線でまとめています。
                 公演スケジュールもSNSも、スマホからすぐにたどれます。
               </p>
             </div>
