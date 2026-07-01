@@ -96,6 +96,7 @@ export const imageManifest = {
   "/images/yukako-cruise-gym.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
   "/images/yukako-cruise-night.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
   "/images/yukako-gojet-poster.jpg": {"width":1448,"height":2048,"widths":[360,480,720,960,1280,1448]},
+  "/images/yukako-hero-hall.jpg": {"width":1170,"height":1560,"widths":[360,480,720,960,1170]},
   "/images/yukako-mgj-award.jpg": {"width":1111,"height":1516,"widths":[360,480,720,960,1111]},
   "/images/yukako-noodles.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
   "/images/yukako-portrait.jpg": {"width":1366,"height":2048,"widths":[360,480,720,960,1280,1366]},
