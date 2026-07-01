@@ -3,11 +3,11 @@ export const profile = {
   name: "吉井 優花子",
   kana: "よしい ゆかこ",
   romaji: "Yoshii Yukako",
-  fanScheduleLabel: "Unofficial Fan Portal",
+  fanScheduleLabel: "Fan-made Portal",
   catchCopy:
-    "心に届く声の俳優。秋田から、舞台へ。",
+    "秋田の公務員から俳優へ。舞台・映像・配信へと表現の場を広げる吉井優花子さんの応援ポータルです。",
   intro:
-    "元公務員という誠実さと、舞台人としての表現力で観る人の心に届く表現を追求。近年はプロデュース公演 #ゆかJET にも挑戦する吉井優花子さんの応援ポータルです。",
+    "公務員として働いた経験を礎に、舞台・映像・配信・プロデュースへ表現の場を広げる吉井優花子さんの活動情報を整理しています。",
   heroImage: "/images/yukako-hero-hall.jpg",
   portraitImage: "/images/yukako-portrait.jpg",
   birthday: "1997-04-27",
@@ -24,10 +24,10 @@ export const profile = {
     { label: "特技", value: "スポーツ全般、歌唱、字を書く、絵を描く、料理、写真撮影" },
     {
       label: "経歴",
-      value: "秋田で公務員 → 2022年退職・上京 → 舞台デビュー → プロデュース公演主宰"
+      value: "秋田で公務員 → 2022年退職・上京 → 俳優活動を本格化 → プロデュース公演主宰"
     },
-    { label: "主な出演", value: "Baby Shark Live 全国公演、舞台、CM、MV、ドラマ" },
-    { label: "CM・PR", value: "リポビタンD、鹿角市公式PR動画 ほか" },
+    { label: "主な出演", value: "Baby Shark Live 全国公演、舞台、映像、CM、MV、ドラマ" },
+    { label: "CM・PR", value: "リポビタンD、鹿角市PR動画 ほか" },
     {
       label: "プロデュース",
       value: "#ゆかJET（GO,JET!GO!GO! シリーズ）"
@@ -59,11 +59,11 @@ export const profile = {
   ] as string[],
   showroom: {
     roomName: "秋田の優花子(ゆかこ)",
-    tagline: "秋田出身の舞台俳優・プロデューサー。毎日配信中！",
+    tagline: "秋田出身の俳優・プロデューサー。毎日配信中！",
     image: "/images/yukako-portrait.jpg",
     url: "https://www.showroom-live.com/room/profile?room_id=347571",
     stats: [] as { label: string; value: string }[],
-    message: "2021年、秋田で公務員として働きながらミス浴衣コンテストに出場したことがきっかけでSHOWROOMでの配信を開始。2022年に退職・上京し、舞台俳優への道を歩み始めました。毎日の配信で応援してくださる皆さんと繋がれる場所です。"
+    message: "2021年、秋田で公務員として働きながらミス浴衣コンテストに出場したことがきっかけでSHOWROOMでの配信を開始。2022年に退職・上京し、俳優として舞台や映像へ表現の場を広げています。毎日の配信で応援してくださる皆さんと繋がれる場所です。"
   },
   avatars: [] as { name: string; image: string; featured?: boolean }[]
 };
