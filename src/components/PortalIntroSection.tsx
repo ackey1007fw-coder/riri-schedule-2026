@@ -18,8 +18,8 @@ const charmCards = [
     Icon: Mic2
   },
   {
-    title: "秋田から夢へ",
-    copy: "元公務員という誠実な歩みから、上京して女優の道へ進むストーリー。",
+    title: "秋田の公務員から俳優へ",
+    copy: "公務員として働いた経験を礎に、上京して舞台・映像へ表現の場を広げる歩み。",
     Icon: Sparkles
   },
   {
@@ -37,7 +37,7 @@ const charmCards = [
 const guideCards = [
   { label: "まずプロフィールを見る", href: "#profile", Icon: UserRound },
   { label: "今日の配信・予定を見る", href: "#schedule", Icon: CalendarDays },
-  { label: "舞台情報を見る", href: "#next", Icon: Clapperboard },
+  { label: "出演・公演情報を見る", href: "#next", Icon: Clapperboard },
   { label: "SNSをフォローする", href: "#links", Icon: Share2 },
   { label: "応援方法を見る", href: "#showroom", Icon: HeartHandshake }
 ];
@@ -55,7 +55,7 @@ export function PortalIntroSection() {
               30秒でわかる吉井優花子
             </h2>
             <p className="mt-5 text-base leading-8 text-ink/74 sm:text-lg sm:leading-9">
-              秋田出身。元公務員から上京し、舞台・ミュージカル・映像・モデル・MC・リポーターとして活動する俳優。やわらかな声、丁寧な言葉、人をよく見る力を武器に、観る人の心に届く表現を目指しています。2026年は出演だけでなく、プロデュース公演にも挑戦中。
+              秋田出身。公務員として働いた経験を礎に上京し、舞台・ミュージカル・映像・モデル・MC・リポーターとして活動する俳優。やわらかな声、丁寧な言葉、人をよく見る力を武器に、観る人の心に届く表現を目指しています。2026年は出演だけでなく、プロデュース公演にも挑戦中。
             </p>
             <div className="mt-6 grid gap-3 sm:grid-cols-3">
               {[
@@ -75,7 +75,7 @@ export function PortalIntroSection() {
             <SectionHeader
               kicker="Charm"
               title="応援したくなる理由"
-              copy="舞台人としての信頼感と、配信で伝わるやわらかい空気。その両方が吉井優花子さんの魅力です。"
+              copy="俳優としての信頼感と、配信で伝わるやわらかい空気。その両方が吉井優花子さんの魅力です。"
             />
             <div className="grid gap-3 sm:grid-cols-2">
               {charmCards.map(({ title, copy, Icon }) => (
