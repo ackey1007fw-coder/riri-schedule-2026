@@ -22,7 +22,7 @@ export const searchIntents: SearchIntent[] = [
   {
     label: "出演歴",
     title: "これまでの活動を見る",
-    copy: "舞台、CM、MV、ドラマ、ミスコンなど幅広い活動歴を確認できます。",
+    copy: "舞台、映像、CM、MV、ドラマ、ミスコンなど幅広い活動歴を確認できます。",
     href: "#highlights"
   },
   {
@@ -57,7 +57,7 @@ export const searchFaqs: SearchFaq[] = [
   {
     question: "吉井優花子さんはどんな活動をしていますか？",
     answer:
-      "舞台俳優・プロデューサー・SHOWROOMライバーとして活動中。Baby Shark Live全国公演のシンガー、自主プロデュース公演 #ゆかJET、CM・MV・ドラマ出演、ミスコン受賞歴など多方面で活躍しています。",
+      "俳優・プロデューサー・SHOWROOMライバーとして活動中。Baby Shark Live全国公演のシンガー、自主プロデュース公演 #ゆかJET、舞台・映像・CM・MV・ドラマ出演、ミスコン受賞歴など多方面で活躍しています。",
     href: "#highlights",
     linkLabel: "活動歴を見る"
   },
