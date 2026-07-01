@@ -1,0 +1,39 @@
+name: Image Overwrite Guard
+
+# 画像の「同名上書き」を禁止する。
+# public/images 配下の既存画像を同じファイル名で上書きすると、CDN/ブラウザのキャッシュで
+# 「変わっていない」ように見える事故が起きる。新規追加(A)・削除(D)は許可、変更(M)は失敗。
+# どうしても上書きが必要な場合だけ PR に "allow:image-overwrite" ラベルを付ける。
+
+on:
+  pull_request:
+    branches: [main, yukako/main]
+
+jobs:
+  image-guard:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'allow:image-overwrite') }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Detect in-place image overwrites
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          MODIFIED=$(git diff --name-status --diff-filter=M "$BASE_SHA" "$HEAD_SHA" -- \
+            'public/images/**/*.jpg' 'public/images/**/*.jpeg' \
+            'public/images/**/*.png' 'public/images/**/*.webp' \
+            'public/images/*.jpg' 'public/images/*.jpeg' \
+            'public/images/*.png' 'public/images/*.webp' | awk '{print $2}')
+          if [ -n "$MODIFIED" ]; then
+            echo "❌ 画像の同名上書きを検出しました（キャッシュ事故の原因）:"
+            echo "$MODIFIED" | sed 's/^/   - /'
+            echo ""
+            echo "→ 既存ファイルを上書きせず、新しいファイル名にして参照パスを更新してください。"
+            echo "  どうしても上書きが必要な場合のみ PR に 'allow:image-overwrite' ラベルを付けてください。"
+            exit 1
+          fi
+          echo "✅ 画像の同名上書きなし（新規追加・削除のみ）"
