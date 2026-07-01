@@ -4,6 +4,9 @@
 保守ルール・規約は **[AGENTS.md](./AGENTS.md)** に集約しています。作業前に必ず読んでください。
 
 > 1リポジトリに2サイトが同居。**`yukako/main`＝優花子サイト / `main`＝里季サイト**。混同しない。
+> **⚠️ 取り違え防止**: 2サイトは同じリポジトリで**ブランチ**が違うだけ（`git remote -v` では区別不可）。
+> 優花子の作業は必ず `yukako/main` を基点にし、編集前に `grep -m1 name src/data/profile.ts` が
+> 「吉井 優花子」であることを確認（「夏凪 里季」なら里季＝取り違え、止めて報告）。詳細は AGENTS.md。
 
 要点（詳細は AGENTS.md）:
 - `yukako/main` → Vercel 自動デプロイ（本番 https://yukako-schedule-2026.vercel.app/）。
