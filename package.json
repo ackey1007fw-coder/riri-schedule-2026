@@ -8,6 +8,8 @@
     "images:build": "node scripts/generate-responsive-images.mjs",
     "prebuild": "node scripts/generate-responsive-images.mjs",
     "typecheck": "tsc -b",
+    "qa": "node scripts/qa-data-check.mjs",
+    "images:fetch": "node scripts/fetch-drive-image.mjs",
     "build": "tsc -b && node node_modules/vite/bin/vite.js build",
     "preview": "vite preview --host 127.0.0.1",
     "serve:dist": "node scripts/serve-dist.mjs"

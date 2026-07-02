@@ -1,0 +1,21 @@
+name: Data Guard
+
+# データ整合性ガード。
+# src/data/*.ts と public/ の突き合わせ（画像参照切れ・重複・日付形式・
+# 並び順・禁止表現など）を PR ごとに機械検査する。
+# 検査内容は scripts/qa-data-check.mjs を参照。ローカルでは `npm run qa` で実行できる。
+
+on:
+  pull_request:
+    branches: [main, yukako/main]
+
+jobs:
+  data-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run data QA checks
+        run: node scripts/qa-data-check.mjs

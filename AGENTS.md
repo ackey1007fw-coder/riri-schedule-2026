@@ -35,6 +35,13 @@ npm run dev   # http://127.0.0.1:5173 でローカル確認
 - `src/lib/eventImages.ts` … API経路用の画像マップ（ローカルパスで統一済み）。
 - `api/showroom.js` … SHOWROOM統計のリアルタイム取得（`room_id=550336`）。
 
+## 省力化ツール（先にこれを使う）
+
+- `npm run qa` … データ整合性検査（画像参照切れ・重複・日付形式・並び順・禁止表現）。**作業の前後に必ず実行**。CIでも `data-guard` として走る。
+- `npm run images:fetch -- <DriveのIDかURL...>` … Drive画像を次のギャラリー番号で自動配置し、photos.ts 用スニペットを出力（`--event <slug>` でイベント画像）。既存ファイルは上書きしない。
+- Claude Skill: `/add-sns-post`（SNS投稿の反映一式）/ `/add-event`（出演情報の追加）。`.claude/skills/` 参照。
+- 業務マップ・運用手順・自動化ロードマップは [docs/OPERATIONS.md](./docs/OPERATIONS.md)。
+
 ## SNS 投稿を追加する手順（チェックリスト）
 
 りりがSNS（X / Instagram / TikTok）に新しい投稿をしたとき、以下を更新する。
