@@ -1,72 +1,16 @@
-import {
-  ArrowUpRight,
-  ChevronDown,
-  Clapperboard,
-  HeartHandshake,
-  Mic2,
-  MonitorPlay,
-  Sparkles,
-  Trophy
-} from "lucide-react";
-import { highlights, type Highlight } from "../data/highlights";
+import { ArrowUpRight } from "lucide-react";
+import { highlights } from "../data/highlights";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
-import { SectionHeader } from "./SectionHeader";
+import { ActHeader } from "./ActHeader";
 
 const sortedHighlights = [...highlights].sort((a, b) =>
   a.year === b.year ? 0 : Number(b.year) - Number(a.year),
 );
 
-const groups = [
-  {
-    title: "舞台・ミュージカル",
-    copy: "舞台デビューからファミリーミュージカル、GO,JET!シリーズまで。",
-    Icon: Clapperboard,
-    match: (item: Highlight) =>
-      item.category === "舞台" && !item.title.includes("#ゆかJET")
-  },
-  {
-    title: "映像・CM",
-    copy: "テレビ、CM、映像領域での出演記録。",
-    Icon: MonitorPlay,
-    match: (item: Highlight) =>
-      ["TV", "CM"].includes(item.category) || item.title.includes("weather")
-  },
-  {
-    title: "モデル・リポーター・MC",
-    copy: "伝える仕事、見せる仕事で広がってきた活動。",
-    Icon: Mic2,
-    match: (item: Highlight) =>
-      item.category === "モデル" ||
-      item.title.includes("リポーター") ||
-      item.title.includes("アンバサダー")
-  },
-  {
-    title: "SHOWROOM実績",
-    copy: "配信活動の原点と、日々の応援が積み上がる場所。",
-    Icon: HeartHandshake,
-    match: (item: Highlight) =>
-      item.title.includes("ミス浴衣") || item.description.includes("SHOWROOM")
-  },
-  {
-    title: "ミスコン・運営補佐",
-    copy: "コンテストでの受賞・選出と、表舞台を支える経験。",
-    Icon: Trophy,
-    match: (item: Highlight) =>
-      item.category === "受賞" ||
-      item.title.includes("Miss") ||
-      item.title.includes("ミス")
-  },
-  {
-    title: "プロデュース",
-    copy: "出演だけでなく、企画して届ける側にも立つ挑戦。",
-    Icon: Sparkles,
-    match: (item: Highlight) =>
-      item.title.includes("#ゆかJET") || item.description.includes("プロデュース")
-  }
-];
+const years = [...new Set(sortedHighlights.map((item) => item.year))];
 
-const groupItems = (group: (typeof groups)[number]) =>
-  sortedHighlights.filter(group.match);
+const isProduceItem = (title: string, description: string) =>
+  title.includes("#ゆかJET") || description.includes("プロデュース");
 
 export function HighlightsSection() {
   if (sortedHighlights.length === 0) {
@@ -75,99 +19,93 @@ export function HighlightsSection() {
 
   return (
     <section id="highlights" className="scroll-mt-24 bg-porcelain py-16 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          kicker="Highlights"
-          title="出演歴・実績"
-          copy="女優・舞台人・プロデューサーとしての歩みを、活動カテゴリごとに整理しました。"
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <ActHeader
+          act={3}
+          eyebrow="Highlights"
+          title="これまでの歩み"
+          copy="女優・舞台人・プロデューサーとしての歩みを、年ごとのタイムラインで振り返ります。"
         />
 
-        <div className="grid gap-4">
-          {groups.map((group, index) => {
-            const items = groupItems(group);
-            if (items.length === 0) return null;
-            const Icon = group.Icon;
+        <div className="relative border-l-2 border-champagne/40 pl-7 sm:pl-10">
+          {years.map((year) => {
+            const items = sortedHighlights.filter((item) => item.year === year);
 
             return (
-              <details
-                key={group.title}
-                open={index < 2}
-                className="group yukako-card border-champagne/35 bg-white"
-              >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 marker:hidden sm:p-6">
-                  <div className="flex items-start gap-4">
-                    <span className="grid h-12 w-12 shrink-0 place-items-center border border-champagne/45 bg-porcelain text-champagne">
-                      <Icon className="h-5 w-5" aria-hidden="true" />
-                    </span>
-                    <span>
-                      <span className="block text-xs font-bold uppercase text-champagne">
-                        {items.length} records
-                      </span>
-                      <span className="mt-1 block font-display text-2xl text-ink sm:text-3xl">
-                        {group.title}
-                      </span>
-                      <span className="mt-2 block text-sm leading-6 text-ink/60">
-                        {group.copy}
-                      </span>
-                    </span>
-                  </div>
-                  <ChevronDown className="h-5 w-5 shrink-0 text-champagne transition group-open:rotate-180" aria-hidden="true" />
-                </summary>
+              <div key={year} className="mb-12 last:mb-0">
+                <p className="relative mb-6 font-display text-4xl leading-none text-ink sm:text-5xl">
+                  <span
+                    className="absolute -left-[39px] top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full border-2 border-champagne bg-porcelain sm:-left-[49px]"
+                    aria-hidden="true"
+                  />
+                  {year}
+                </p>
 
-                <div className="grid gap-3 border-t border-rosefog/15 p-4 sm:p-5 md:grid-cols-2">
+                <div className="space-y-6">
                   {items.map((item) => {
                     const links = item.links ?? (item.link ? [item.link] : []);
+                    const isProduce = isProduceItem(item.title, item.description);
 
                     return (
-                      <article
-                        key={item.id}
-                        className="yukako-card yukako-card-interactive flex min-h-36 min-w-0 flex-col border-rosefog/20 bg-porcelain p-5"
-                      >
-                        {item.image && (
-                          <img
-                            {...getResponsiveImageProps(
-                              item.image,
-                              "(min-width: 768px) 50vw, 100vw",
-                            )}
-                            alt={item.title}
-                            loading="lazy"
-                            className="mb-4 block w-full border border-white"
-                          />
-                        )}
-                        <p className="flex flex-wrap items-center gap-2 text-xs font-bold text-champagne">
-                          <span className="border border-champagne/40 bg-white px-2 py-0.5">
-                            {item.date}
-                          </span>
-                          <span>{item.category}</span>
-                        </p>
-                        <h3 className="mt-2 font-display text-2xl leading-tight text-ink">
-                          {item.title}
-                        </h3>
-                        <p className="mt-3 text-sm leading-7 text-ink/70">
-                          {item.description}
-                        </p>
+                      <article key={item.id} className="relative">
+                        <span
+                          className="absolute -left-[34px] top-2 h-2 w-2 rounded-full bg-rosefog sm:-left-[44px]"
+                          aria-hidden="true"
+                        />
+                        <div className="yukako-card yukako-card-interactive flex flex-col gap-4 border-rosefog/20 bg-white p-5 sm:flex-row">
+                          {item.image && (
+                            <img
+                              {...getResponsiveImageProps(
+                                item.image,
+                                "(min-width: 640px) 160px, 100vw",
+                              )}
+                              alt={item.title}
+                              loading="lazy"
+                              className="block h-40 w-full shrink-0 border border-champagne/30 object-cover sm:h-auto sm:w-32"
+                            />
+                          )}
+                          <div className="min-w-0 flex-1">
+                            <p className="flex flex-wrap items-center gap-2 text-xs font-bold text-champagne">
+                              <span className="border border-champagne/40 bg-porcelain px-2 py-0.5">
+                                {item.date}
+                              </span>
+                              <span>{item.category}</span>
+                              {isProduce && (
+                                <span className="border border-rosefog/40 bg-[#fff1f6] px-2 py-0.5 text-[#8d4260]">
+                                  プロデュース
+                                </span>
+                              )}
+                            </p>
+                            <h3 className="mt-2 font-display text-2xl leading-tight text-ink">
+                              {item.title}
+                            </h3>
+                            <p className="mt-3 text-sm leading-7 text-ink/70">
+                              {item.description}
+                            </p>
 
-                        {links.length > 0 && (
-                          <div className="mt-4 flex flex-wrap gap-2">
-                            {links.map((link) => (
-                              <a
-                                key={link.url}
-                                href={link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 border border-rosefog/40 bg-white px-3 py-1.5 text-xs font-bold text-ink transition hover:border-champagne hover:bg-porcelain"
-                              >
-                                {link.label}
-                                <ArrowUpRight className="h-3.5 w-3.5 text-champagne" aria-hidden="true" />
-                              </a>
-                            ))}
+                            {links.length > 0 && (
+                              <div className="mt-4 flex flex-wrap gap-2">
+                                {links.map((link) => (
+                                  <a
+                                    key={link.url}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 border border-rosefog/40 bg-porcelain px-3 py-1.5 text-xs font-bold text-ink transition hover:border-champagne hover:bg-white"
+                                  >
+                                    {link.label}
+                                    <ArrowUpRight className="h-3.5 w-3.5 text-champagne" aria-hidden="true" />
+                                  </a>
+                                ))}
+                              </div>
+                            )}
                           </div>
-                        )}
+                        </div>
                       </article>
                     );
                   })}
                 </div>
-              </details>
+              </div>
             );
           })}
         </div>

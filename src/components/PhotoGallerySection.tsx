@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { galleryPhotos, galleryUpdate } from "../data/photos";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
-import { SectionHeader } from "./SectionHeader";
+import { ActHeader } from "./ActHeader";
 
 const wrapIndex = (index: number) =>
   (index + galleryPhotos.length) % galleryPhotos.length;
@@ -110,8 +110,9 @@ export function PhotoGallerySection() {
     <section id="gallery" className="scroll-mt-24 bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-          <SectionHeader
-            kicker="Photo Gallery"
+          <ActHeader
+            act={5}
+            eyebrow="Photo Gallery"
             title="写真で見る 優花子"
             copy="舞台に立つ姿から、配信や日常のふとした表情まで。優花子さんのいろんな瞬間をどうぞ。"
           />

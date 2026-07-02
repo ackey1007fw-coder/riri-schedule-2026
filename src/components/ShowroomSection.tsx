@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { Radio, Sparkles } from "lucide-react";
 import { profile } from "../data/profile";
+import { ActHeader } from "./ActHeader";
 import { ExternalButton } from "./ExternalButton";
-import { SectionHeader } from "./SectionHeader";
 import { AvatarGallery } from "./AvatarGallery";
 import { StreamSchedule } from "./StreamSchedule";
 
@@ -60,7 +60,12 @@ export function ShowroomSection() {
   return (
     <section id="showroom" className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader kicker="SHOWROOM" title="ライブ配信で応援する" copy="毎日の配信で会える吉井優花子さんのSHOWROOMルーム。フォロワー数やランクなどの最新情報はこちらから。" />
+        <ActHeader
+          act={6}
+          eyebrow="SHOWROOM"
+          title="ライブ配信で応援する"
+          copy="配信で会える吉井優花子さんのSHOWROOMルーム。フォロワー数やランクなどの最新情報はこちらから。"
+        />
         <div className="yukako-card mb-12 grid overflow-hidden border-rosefog/25 bg-porcelain lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative bg-porcelain lg:min-h-[480px]">
             <img

@@ -1,6 +1,6 @@
 import { Link2, MessageCircle, Video } from "lucide-react";
 import type { SocialLink } from "../types";
-import { SectionHeader } from "./SectionHeader";
+import { ActHeader } from "./ActHeader";
 
 type LinksSectionProps = {
   socialLinks: SocialLink[];
@@ -11,8 +11,9 @@ export function LinksSection({ socialLinks, mediaLinks }: LinksSectionProps) {
   return (
     <section id="links" className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          kicker="Links"
+        <ActHeader
+          act={7}
+          eyebrow="Follow"
           title="SNS・メディアリンク"
           copy="X、Instagram、TikTok、SHOWROOM。吉井優花子さんをフォローできる場所をまとめました。"
         />

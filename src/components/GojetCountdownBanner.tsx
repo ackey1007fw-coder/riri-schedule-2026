@@ -1,32 +1,17 @@
 import { CalendarHeart, PartyPopper, Ticket } from "lucide-react";
-import {
-  gojetClosingDate,
-  gojetOpeningDate,
-  gojetTicketUrl,
-  gojetTimetable
-} from "../data/gojetTimetable";
+import { gojetTicketUrl } from "../data/gojetTimetable";
+import { getGojetStatus } from "../lib/gojetStatus";
 
 // #ゆかJET『GO,JET!GO!GO! vol.1 Premium』への導線バナー。
 // ・公演前（〜7/22）：公演まであと◯日
 // ・公演期間中（7/23〜27）：本日の回（班・開演時間）
 // ・7/28以降：自動で非表示
-const todayKey = () =>
-  new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
-
-const daysUntil = (fromKey: string, toKey: string) => {
-  const [fy, fm, fd] = fromKey.split("-").map(Number);
-  const [ty, tm, td] = toKey.split("-").map(Number);
-  return Math.round(
-    (Date.UTC(ty, tm - 1, td) - Date.UTC(fy, fm - 1, fd)) / 86400000
-  );
-};
-
 export function GojetCountdownBanner() {
-  const today = todayKey();
+  const status = getGojetStatus();
 
-  if (today > gojetClosingDate) return null;
+  if (status.phase === "after") return null;
 
-  const todayShow = gojetTimetable.find((day) => day.date === today);
+  const todayShow = status.phase === "today" ? status.day : null;
 
   return (
     <a
@@ -68,7 +53,7 @@ export function GojetCountdownBanner() {
               #ゆかJET『GO,JET!GO!GO! vol.1 Premium』
             </span>
             <span className="font-black">
-              公演まであと{daysUntil(today, gojetOpeningDate)}日
+              公演まであと{status.phase === "before" ? status.daysLeft : 0}日
             </span>
           </>
         )}

@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { ActionStrip } from "./components/ActionStrip";
+import { AkitaRootsSection } from "./components/AkitaRootsSection";
 import { Footer } from "./components/Footer";
 import { GojetCountdownBanner } from "./components/GojetCountdownBanner";
 import { Hero } from "./components/Hero";
 import { HighlightsSection } from "./components/HighlightsSection";
 import { LinksSection } from "./components/LinksSection";
-import { NextEvent } from "./components/NextEvent";
+import { NowProducingSection } from "./components/NowProducingSection";
 import { NewsBar } from "./components/NewsBar";
 import { PhotoGallerySection } from "./components/PhotoGallerySection";
 import { PortalIntroSection } from "./components/PortalIntroSection";
@@ -79,6 +80,7 @@ function App() {
     events.filter((event) => isEventPast(event, now)),
   );
   const nextEvent = upcomingEvents[0];
+  const gojetEvent = events.find((event) => event.id === "yukajet-gojet-2026-07");
   const monthKeys = getMonthKeysFromEvents(events);
 
   return (
@@ -104,7 +106,7 @@ function App() {
           <PortalIntroSection />
         </SectionReveal>
         <SectionReveal>
-          <NextEvent event={nextEvent} />
+          <NowProducingSection event={gojetEvent ?? nextEvent} />
         </SectionReveal>
         <SectionReveal>
           <SupportersSection />
@@ -122,6 +124,9 @@ function App() {
         </SectionReveal>
         <SectionReveal>
           <ProfileSection />
+        </SectionReveal>
+        <SectionReveal>
+          <AkitaRootsSection />
         </SectionReveal>
         <SectionReveal>
           <PhotoGallerySection />
