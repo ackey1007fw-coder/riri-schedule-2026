@@ -100,6 +100,7 @@ export const imageManifest = {
   "/images/yukako-mgj-award.jpg": {"width":1111,"height":1516,"widths":[360,480,720,960,1111]},
   "/images/yukako-noodles.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
   "/images/yukako-portrait.jpg": {"width":1366,"height":2048,"widths":[360,480,720,960,1280,1366]},
+  "/images/yukako-selfie-2026-07-01.jpg": {"width":1426,"height":2048,"widths":[360,480,720,960,1280,1426]},
   "/images/yukako-shuichi-event.jpg": {"width":1524,"height":2048,"widths":[360,480,720,960,1280,1524]},
   "/images/yukako-stage-back.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
   "/images/yukako-stage-front.jpg": {"width":1401,"height":1751,"widths":[360,480,720,960,1280,1401]}

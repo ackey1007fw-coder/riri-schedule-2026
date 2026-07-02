@@ -4,6 +4,7 @@ export type GalleryPhoto = {
 };
 
 export const galleryPhotos: GalleryPhoto[] = [
+  { src: "/images/yukako-selfie-2026-07-01.jpg", alt: "白Tシャツにピンクのベストで微笑む吉井優花子さん（2026.7.1 Xより）" },
   { src: "/images/yukako-stage-back.jpg", alt: "舞台上から客席を見つめる吉井優花子さん" },
   { src: "/images/yukako-stage-front.jpg", alt: "舞台衣装で演技中の吉井優花子さん" },
   { src: "/images/yukako-portrait.jpg", alt: "吉井優花子さんポートレート" },
@@ -24,8 +25,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.6",
+  date: "2026.7.1",
   platform: "X",
-  note: "#ゆかJET 舞台情報解禁",
-  url: "https://x.com/yukako_produce/status/2070122985265197380"
+  note: "「絶対観に来てね！」#ゆかJET 想いを込めた朝の投稿",
+  url: "https://x.com/mokoopy/status/2072459071773708413"
 };

@@ -7,6 +7,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.7.1",
+    label: "X",
+    text: "「7月の舞台、チェックしてくれたかな？最高のプロデュース作品にするから絶対観に来てね！」#ゆかJET ホームページも公開🌼",
+    url: "https://x.com/mokoopy/status/2072459071773708413"
+  },
+  {
     date: "2026.6.30",
     label: "チケット",
     text: "【予約受付開始】#ゆかJET『GO,JET!GO!GO! vol.1 Premium』ご予約はこちら🎫",
