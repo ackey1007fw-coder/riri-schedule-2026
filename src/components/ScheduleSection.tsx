@@ -132,6 +132,10 @@ export function ScheduleSection({
       count: rawActiveEvents.filter((event) => matchesCategoryFilter(event, filter)).length
     }));
   }, [rawActiveEvents]);
+  const featuredEventIds = useMemo(
+    () => new Set(featuredEvents.map((event) => event.id)),
+    [featuredEvents],
+  );
 
   return (
     <section id="schedule" className="scroll-mt-24 bg-white py-16 sm:py-24">
@@ -249,7 +253,11 @@ export function ScheduleSection({
             {activeEvents.length > 0 ? (
               <div className="grid gap-5 lg:grid-cols-2">
                 {activeEvents.map((event) => (
-                  <div key={event.id} id={`event-${event.id}`} className="scroll-mt-24">
+                  <div
+                    key={event.id}
+                    id={featuredEventIds.has(event.id) ? undefined : `event-${event.id}`}
+                    className="scroll-mt-24"
+                  >
                     <EventCard
                       event={event}
                       isNext={event.id === nextId}

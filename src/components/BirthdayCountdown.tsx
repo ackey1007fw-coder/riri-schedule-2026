@@ -119,7 +119,7 @@ export function BirthdayCountdown() {
             }まで、あと少し。SNSやSHOWROOMで一緒にお祝いしよう。`}
           />
           <div
-            className={`birthday-card riri-card riri-card-interactive relative overflow-hidden border-champagne/40 bg-white p-5 shadow-paper sm:p-6 ${
+            className={`birthday-card yukako-card yukako-card-interactive relative overflow-hidden border-champagne/40 bg-white p-5 shadow-paper sm:p-6 ${
               isCelebrating ? "birthday-card-active" : ""
             }`}
           >
@@ -158,7 +158,7 @@ export function BirthdayCountdown() {
                 {values.map((item) => (
                   <div
                     key={item.label}
-                    className="birthday-number-card rounded-md border border-rosefog/25 bg-porcelain p-4 text-center"
+                    className="birthday-number-card border border-rosefog/25 bg-porcelain p-4 text-center"
                   >
                     <span
                       key={item.value}
@@ -187,7 +187,7 @@ export function BirthdayCountdown() {
                 <button
                   type="button"
                   onClick={celebrate}
-                  className="riri-button riri-button-soft min-h-11 rounded-md px-4 py-2 text-sm"
+                  className="yukako-button yukako-button-soft min-h-11 px-4 py-2 text-sm"
                   aria-label="お祝いのキラキラを贈る"
                 >
                   <PartyPopper
@@ -212,7 +212,7 @@ export function BirthdayCountdown() {
               alt={`${profile.name} gallery ${index + 1}`}
               loading="lazy"
               decoding="async"
-              className="birthday-photo h-auto w-full rounded-md border border-white shadow-sm"
+              className="birthday-photo h-auto w-full border border-white shadow-sm"
             />
           ))}
         </div>

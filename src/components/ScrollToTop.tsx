@@ -16,7 +16,7 @@ export function ScrollToTop() {
     <button
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed bottom-[calc(5.75rem+env(safe-area-inset-bottom))] right-4 z-[45] grid h-11 w-11 place-items-center border border-rosefog/40 bg-white/92 text-ink shadow-paper backdrop-blur-xl transition hover:-translate-y-1 hover:border-champagne hover:shadow-lg md:bottom-6"
+      className="fixed bottom-[calc(5.75rem+env(safe-area-inset-bottom))] right-4 z-[45] grid h-11 w-11 place-items-center border border-rosefog/40 bg-white/92 text-ink shadow-paper backdrop-blur-xl transition hover:border-champagne md:bottom-6"
       aria-label="ページのトップに戻る"
       style={{ borderRadius: "6px" }}
     >

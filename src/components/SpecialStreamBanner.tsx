@@ -47,28 +47,28 @@ export function SpecialStreamBanner() {
       href={profile.showroom.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="riri-special-banner block text-ink transition hover:brightness-[1.02]"
+      className="yukako-special-banner block text-ink transition hover:brightness-[1.02]"
       aria-label={`今夜${specialStream.time}から特別配信「${specialStream.title}」。SHOWROOMで待つ`}
     >
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center gap-1 px-4 py-2.5 text-center sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 text-sm font-black tracking-wide sm:text-base">
           <Sparkles
-            className="riri-special-twinkle h-4 w-4 text-champagne"
+            className="yukako-special-twinkle h-4 w-4 text-champagne"
             aria-hidden="true"
           />
-          <span className="rounded-full bg-white/55 px-2 py-0.5 text-[11px] font-black text-champagne">
+          <span className="border border-champagne/35 bg-white/55 px-2 py-0.5 text-[11px] font-black text-champagne">
             SPECIAL
           </span>
           <Wine className="h-4 w-4 text-[#c47a99]" aria-hidden="true" />
           <span>今夜 {specialStream.time}〜</span>
           <span className="text-[#b85c86]">{specialStream.title}</span>
           {countdown && (
-            <span className="rounded-full bg-white/55 px-2 py-0.5 text-[11px] font-black text-ink/70">
+            <span className="border border-champagne/25 bg-white/55 px-2 py-0.5 text-[11px] font-black text-ink/70">
               {countdown}
             </span>
           )}
           <PartyPopper
-            className="riri-special-twinkle h-4 w-4 text-champagne"
+            className="yukako-special-twinkle h-4 w-4 text-champagne"
             aria-hidden="true"
           />
         </div>

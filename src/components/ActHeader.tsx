@@ -14,7 +14,11 @@ export function ActHeader({ act, eyebrow, title, copy, tone = "light" }: ActHead
   return (
     <div className="mb-10 max-w-3xl">
       <div className="mb-4 flex items-center gap-4">
-        <span className="font-display text-sm tracking-[0.4em] text-champagne">
+        <span
+          className={`font-display text-sm tracking-[0.4em] ${
+            isDark ? "text-champagne" : "text-[#8f6826]"
+          }`}
+        >
           ACT {String(act).padStart(2, "0")}
         </span>
         <span
@@ -23,7 +27,7 @@ export function ActHeader({ act, eyebrow, title, copy, tone = "light" }: ActHead
         />
         <span
           className={`text-[11px] font-bold uppercase tracking-[0.24em] ${
-            isDark ? "text-white/55" : "text-ink/40"
+            isDark ? "text-white/70" : "text-ink/55"
           }`}
         >
           {eyebrow}

@@ -87,7 +87,7 @@ img {
   backdrop-filter: blur(14px);
 }
 
-@keyframes riri-fade {
+@keyframes yukako-fade {
   from {
     opacity: 0;
   }
@@ -201,38 +201,16 @@ img {
   outline-offset: 2px;
 }
 
-/* カード共通のホバー挙動（やわらかく浮く）。レイアウトは動かさない。
-   hoverできる端末のみ適用 → スマホでタップ後に浮いたまま固まる問題を防ぐ。
-   見た目(角丸・ベース影)を .riri-card と揃えて、サイト全体のカードを統一する。 */
-.riri-lift {
-  border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(120, 30, 50, 0.06);
-  transition:
-    transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1),
-    box-shadow 280ms ease,
-    border-color 280ms ease;
-}
-
+/* カード共通のホバー挙動（罫線色を変える）。レイアウトは動かさない。
+   hoverできる端末のみ適用 → スマホでタップ後に状態が残る問題を防ぐ。
+   見た目(角丸・ベース影)を .yukako-card と揃えて、サイト全体のカードを統一する。 */
 .yukako-lift {
-  border-radius: 8px;
-  box-shadow: 0 8px 26px rgba(84, 33, 42, 0.08);
+  border-radius: 2px;
+  box-shadow: 0 8px 18px rgba(84, 33, 42, 0.055);
   transition:
-    transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1),
-    box-shadow 280ms ease,
-    border-color 280ms ease;
-}
-
-/* 画像読み込み中のスケルトン（やわらかく光るプレースホルダー）。
-   画像の背面に敷くだけなので、読み込めたら画像が覆って自然に消える。 */
-.riri-skeleton {
-  background-image: linear-gradient(
-    100deg,
-    rgba(200, 56, 90, 0.10) 28%,
-    rgba(255, 255, 255, 0.55) 50%,
-    rgba(200, 56, 90, 0.10) 72%
-  );
-  background-size: 200% 100%;
-  animation: riri-shimmer 1.5s ease-in-out infinite;
+    border-color 220ms ease,
+    background-color 220ms ease,
+    color 220ms ease;
 }
 
 .yukako-skeleton {
@@ -243,10 +221,10 @@ img {
     rgba(194, 154, 74, 0.14) 72%
   );
   background-size: 200% 100%;
-  animation: riri-shimmer 1.5s ease-in-out infinite;
+  animation: yukako-shimmer 1.5s ease-in-out infinite;
 }
 
-@keyframes riri-shimmer {
+@keyframes yukako-shimmer {
   0% {
     background-position: 200% 0;
   }
@@ -255,48 +233,31 @@ img {
   }
 }
 
-/* 特別配信バナー：シャンパンゴールド〜ピンクの華やかなグラデーションが流れる */
-.riri-special-banner {
+.yukako-special-banner {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    100deg,
-    #f7d9a8 0%,
-    #fbe7d8 22%,
-    #fbeef0 45%,
-    #f6dad2 68%,
-    #de8aa0 100%
-  );
-  background-size: 220% 100%;
-  animation: riri-special-flow 6s ease-in-out infinite;
+  background:
+    linear-gradient(90deg, rgba(49, 42, 46, 0.96), rgba(74, 22, 34, 0.94)),
+    repeating-linear-gradient(90deg, rgba(194, 154, 74, 0.18) 0 1px, transparent 1px 18px);
+  border: 1px solid rgba(194, 154, 74, 0.42);
 }
 
-.riri-special-banner::after {
+.yukako-special-banner::after {
   content: "";
   position: absolute;
   inset: 0;
   background-image: linear-gradient(
     100deg,
     rgba(255, 255, 255, 0) 38%,
-    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 253, 247, 0.22) 50%,
     rgba(255, 255, 255, 0) 62%
   );
   background-size: 220% 100%;
-  animation: riri-special-sheen 4.5s ease-in-out infinite;
+  animation: yukako-special-sheen 5.5s ease-in-out infinite;
   pointer-events: none;
 }
 
-@keyframes riri-special-flow {
-  0%,
-  100% {
-    background-position: 0% 0;
-  }
-  50% {
-    background-position: 100% 0;
-  }
-}
-
-@keyframes riri-special-sheen {
+@keyframes yukako-special-sheen {
   0% {
     background-position: 220% 0;
   }
@@ -306,37 +267,20 @@ img {
   }
 }
 
-.riri-special-twinkle {
-  animation: riri-special-twinkle 2.4s ease-in-out infinite;
+.yukako-special-twinkle {
+  animation: yukako-special-twinkle 2.4s ease-in-out infinite;
 }
 
-@keyframes riri-special-twinkle {
+@keyframes yukako-special-twinkle {
   0%,
   100% {
     opacity: 0.55;
-    transform: scale(0.9);
+    transform: scale(0.94);
   }
   50% {
     opacity: 1;
-    transform: scale(1.15);
+    transform: scale(1.08);
   }
-}
-
-.riri-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border-style: solid;
-  border-width: 1px;
-  font-weight: 700;
-  text-align: center;
-  transition:
-    transform 220ms ease,
-    box-shadow 220ms ease,
-    border-color 220ms ease,
-    background-color 220ms ease,
-    color 220ms ease;
 }
 
 .yukako-button {
@@ -346,48 +290,26 @@ img {
   gap: 0.5rem;
   border-style: solid;
   border-width: 1px;
-  border-radius: 9999px;
+  border-radius: 2px;
   font-weight: 800;
   text-align: center;
   transition:
-    transform 220ms ease,
-    box-shadow 220ms ease,
     border-color 220ms ease,
     background-color 220ms ease,
-    color 220ms ease;
-}
-
-.riri-button-primary {
-  border-color: #312a2e;
-  background: #312a2e;
-  color: white;
+    color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .yukako-button-primary {
-  border-color: #f3d99f;
-  background: #fffdf7;
-  color: #312a2e;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
-}
-
-.riri-button-gold {
-  border-color: #c29a4a;
-  background: #c29a4a;
-  color: white;
-  box-shadow: 0 12px 24px rgba(194, 154, 74, 0.18);
+  border-color: #312a2e;
+  background: #312a2e;
+  color: #fffdf7;
 }
 
 .yukako-button-gold {
   border-color: #c29a4a;
   background: #c29a4a;
   color: #fffdf7;
-  box-shadow: 0 12px 24px rgba(194, 154, 74, 0.20);
-}
-
-.riri-button-soft {
-  border-color: rgba(200, 56, 90, 0.48);
-  background: rgba(255, 255, 255, 0.9);
-  color: #312a2e;
 }
 
 .yukako-button-soft {
@@ -396,47 +318,31 @@ img {
   color: #312a2e;
 }
 
-.riri-button-rose {
+.yukako-button-rose {
   border-color: #c8385a;
   background: #c8385a;
-  color: white;
-}
-
-.riri-button-ghost {
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: #fffdf7;
 }
 
 .yukako-button-ghost {
-  border-color: rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.09);
-  color: white;
+  border-color: rgba(255, 253, 247, 0.42);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fffdf7;
 }
 
 @media (hover: hover) {
-  .riri-lift:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 36px rgba(120, 30, 50, 0.13);
-  }
-
-  .yukako-lift:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 42px rgba(84, 33, 42, 0.15);
-  }
-
-  .riri-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(120, 30, 50, 0.13);
+  .yukako-lift:hover,
+  .yukako-card-interactive:hover {
+    border-color: rgba(194, 154, 74, 0.72);
   }
 
   .yukako-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(84, 33, 42, 0.16);
+    border-color: #c29a4a;
+    box-shadow: 0 8px 18px rgba(84, 33, 42, 0.10);
   }
 
   .yukako-button-primary:hover {
-    background: #f8ead8;
+    background: #4a2935;
   }
 
   .yukako-button-gold:hover {
@@ -444,86 +350,70 @@ img {
   }
 
   .yukako-button-soft:hover {
-    border-color: #c29a4a;
     background: #fffdf7;
+  }
+
+  .yukako-button-rose:hover {
+    background: #b02f4f;
   }
 
   .yukako-button-ghost:hover {
     background: rgba(255, 255, 255, 0.16);
   }
-
-  .riri-button-primary:hover {
-    background: #4a3942;
-  }
-
-  .riri-button-gold:hover {
-    background: #b48a3e;
-  }
-
-  .riri-button-soft:hover {
-    border-color: #c29a4a;
-    background: #fffdf7;
-  }
-
-  .riri-button-rose:hover {
-    background: #b02f4f;
-  }
-
-  .riri-button-ghost:hover {
-    background: rgba(255, 255, 255, 0.3);
-  }
-}
-
-.riri-card {
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(120, 30, 50, 0.06);
 }
 
 .yukako-card {
   border-width: 1px;
   border-style: solid;
-  border-radius: 8px;
-  box-shadow: 0 8px 26px rgba(84, 33, 42, 0.08);
+  border-radius: 2px;
+  box-shadow: 0 8px 18px rgba(84, 33, 42, 0.055);
 }
 
 .yukako-card.shadow-paper {
-  box-shadow: 0 22px 54px rgba(84, 33, 42, 0.14);
-}
-
-.riri-card.shadow-paper {
-  box-shadow: 0 18px 50px rgba(120, 30, 50, 0.12);
-}
-
-.riri-card-interactive {
-  transition:
-    transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1),
-    box-shadow 280ms ease,
-    border-color 280ms ease;
+  box-shadow: 0 14px 30px rgba(84, 33, 42, 0.10);
 }
 
 .yukako-card-interactive {
   transition:
-    transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1),
-    box-shadow 280ms ease,
-    border-color 280ms ease;
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
-@media (hover: hover) {
-  .riri-card-interactive:hover,
-  .photo-gallery-card:hover,
-  .avatar-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 36px rgba(120, 30, 50, 0.13);
-  }
-
-  .yukako-card-interactive:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 42px rgba(84, 33, 42, 0.15);
-  }
+.yukako-ticket-card {
+  background-image:
+    linear-gradient(90deg, rgba(194, 154, 74, 0.08) 0 1px, transparent 1px),
+    linear-gradient(180deg, rgba(127, 29, 45, 0.04), transparent 42%);
+  background-size: 16px 100%, 100% 100%;
 }
 
+.yukako-ticket-card::before,
+.yukako-ticket-card::after {
+  content: "";
+  position: absolute;
+  left: calc(132px - 0.5rem);
+  z-index: 2;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid rgba(194, 154, 74, 0.45);
+  border-radius: 9999px;
+  background: #fbf4e6;
+}
+
+.yukako-ticket-card::before {
+  top: -0.5rem;
+}
+
+.yukako-ticket-card::after {
+  bottom: -0.5rem;
+}
+
+@media (max-width: 639px) {
+  .yukako-ticket-card::before,
+  .yukako-ticket-card::after {
+    display: none;
+  }
+}
 .quick-nav-link {
   scroll-snap-align: start;
 }
@@ -568,14 +458,13 @@ img {
 
 .avatar-card {
   transition:
-    transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1),
     box-shadow 280ms ease,
     border-color 280ms ease;
 }
 
 .avatar-card:focus-visible {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px rgba(120, 30, 50, 0.13);
+  border-color: rgba(194, 154, 74, 0.72);
+  box-shadow: 0 8px 18px rgba(84, 33, 42, 0.10);
 }
 
 @keyframes avatar-soft-pop {
@@ -592,16 +481,11 @@ img {
 
 @keyframes avatar-card-lift {
   0% {
-    transform: translateY(0);
-    box-shadow: 0 4px 16px rgba(120, 30, 50, 0.06);
+    box-shadow: 0 8px 18px rgba(84, 33, 42, 0.055);
   }
   55% {
-    transform: translateY(-3px);
     border-color: rgba(194, 154, 74, 0.82);
-    box-shadow: 0 16px 36px rgba(120, 30, 50, 0.13);
-  }
-  100% {
-    transform: translateY(0);
+    box-shadow: 0 10px 22px rgba(84, 33, 42, 0.10);
   }
 }
 
@@ -621,15 +505,13 @@ img {
 
 .photo-gallery-card {
   transition:
-    transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1),
     box-shadow 280ms ease,
     border-color 280ms ease;
 }
 
 .photo-gallery-card:focus-within {
-  transform: translateY(-3px);
   border-color: rgba(194, 154, 74, 0.64);
-  box-shadow: 0 16px 36px rgba(120, 30, 50, 0.13);
+  box-shadow: 0 8px 18px rgba(84, 33, 42, 0.10);
 }
 
 .photo-gallery-card:active {
@@ -669,16 +551,14 @@ img {
 
 .birthday-number-card {
   transition:
-    transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1),
     box-shadow 280ms ease,
     border-color 280ms ease;
 }
 
 .birthday-card:hover .birthday-number-card,
 .birthday-card:focus-within .birthday-number-card {
-  transform: translateY(-2px);
   border-color: rgba(194, 154, 74, 0.42);
-  box-shadow: 0 8px 20px rgba(120, 30, 50, 0.08);
+  box-shadow: 0 8px 18px rgba(84, 33, 42, 0.08);
 }
 
 .birthday-number-pop {
@@ -701,15 +581,15 @@ img {
 .birthday-photo,
 .birthday-banner-unit {
   transition:
-    transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1),
-    box-shadow 280ms ease;
+    box-shadow 280ms ease,
+    border-color 280ms ease;
 }
 
 @media (hover: hover) {
   .birthday-photo:hover,
   .birthday-banner-unit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(120, 30, 50, 0.1);
+    border-color: rgba(194, 154, 74, 0.48);
+    box-shadow: 0 8px 18px rgba(84, 33, 42, 0.08);
   }
 }
 
@@ -727,11 +607,10 @@ img {
 @keyframes birthday-card-celebrate {
   0%,
   100% {
-    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(84, 33, 42, 0.055);
   }
   50% {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 42px rgba(120, 30, 50, 0.14);
+    box-shadow: 0 12px 28px rgba(84, 33, 42, 0.12);
   }
 }
 

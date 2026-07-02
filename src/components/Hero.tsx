@@ -97,7 +97,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     title={`${link.label} ${link.handle}`}
-                    className="grid h-11 w-11 place-items-center rounded-full border border-white/18 bg-white/10 text-xs font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:border-champagne hover:bg-white/16"
+                    className="grid h-11 w-11 place-items-center border border-white/18 bg-white/10 text-xs font-black text-white shadow-sm transition hover:border-champagne hover:bg-white/16"
                   >
                     {socialShortLabels[link.kind]}
                   </a>

@@ -71,7 +71,7 @@ export function QuickNav() {
               key={href}
               href={href}
               data-nav-id={id}
-              className={`quick-nav-link inline-flex min-h-10 items-center gap-2 rounded-md border px-3 py-1.5 text-xs font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:text-sm ${
+              className={`quick-nav-link inline-flex min-h-10 items-center gap-2 border px-3 py-1.5 text-xs font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:text-sm ${
                 active === id
                   ? "border-champagne/60 bg-white text-champagne"
                   : "border-rosefog/25 bg-porcelain text-ink/72 hover:border-champagne/60 hover:bg-white hover:text-ink"

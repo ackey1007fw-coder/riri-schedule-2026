@@ -1,4 +1,3 @@
-import { categoryMeta } from "../lib/eventMeta";
 import type { EventCategory } from "../types";
 
 type BadgeProps = {
@@ -9,10 +8,10 @@ type BadgeProps = {
 
 export function Badge({ children, category, strong = false }: BadgeProps) {
   const tone = category
-    ? categoryMeta[category].tone
+    ? "border-champagne/60 bg-porcelain text-ink/72"
     : strong
-      ? "border-champagne bg-champagne text-white"
-      : "border-rosefog/30 bg-white/80 text-ink/70";
+      ? "border-champagne bg-ink text-champagne"
+      : "border-champagne/45 bg-white text-ink/68";
 
   return (
     <span

@@ -64,7 +64,7 @@ export function MobileActionDock({
   return (
     <nav
       aria-label="応援メニュー"
-      className="fixed bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-2 z-[70] w-[calc(100vw-1rem)] max-w-[calc(100vw-1rem)] rounded-md border border-white/80 bg-white/92 p-1 shadow-paper backdrop-blur-xl md:hidden"
+      className="fixed bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-2 z-[70] w-[calc(100vw-1rem)] max-w-[calc(100vw-1rem)] border border-white/80 bg-white/92 p-1 shadow-paper backdrop-blur-xl md:hidden"
     >
       <div className="grid grid-cols-5 gap-0.5">
         {items.map((item) => {

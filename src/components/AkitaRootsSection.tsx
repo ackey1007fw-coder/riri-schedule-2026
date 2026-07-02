@@ -38,7 +38,7 @@ export function AkitaRootsSection() {
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-champagne">
               Akita Roots
             </p>
-            <h3 className="font-display text-3xl text-ink">秋田との絆</h3>
+            <h2 className="font-display text-3xl text-ink">秋田との絆</h2>
           </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-3">

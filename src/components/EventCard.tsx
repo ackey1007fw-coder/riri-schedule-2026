@@ -1,7 +1,6 @@
 import { CalendarDays, CalendarPlus, MapPin, MessageCircle, Share2 } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
 import { isEventPast } from "../lib/date";
-import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { googleCalendarUrl, SITE_URL, xShareUrl } from "../lib/share";
 import type { ScheduleEvent } from "../types";
 import { Badge } from "./Badge";
@@ -13,10 +12,30 @@ type EventCardProps = {
   compact?: boolean;
 };
 
+const ticketDateFormatter = new Intl.DateTimeFormat("ja-JP", {
+  timeZone: "Asia/Tokyo",
+  month: "numeric",
+  day: "numeric",
+  weekday: "short"
+});
+
+const formatTicketDate = (isoDate: string) => {
+  const parts = ticketDateFormatter.formatToParts(new Date(isoDate));
+  const month = parts.find((part) => part.type === "month")?.value ?? "";
+  const day = parts.find((part) => part.type === "day")?.value ?? "";
+  const weekday = parts.find((part) => part.type === "weekday")?.value ?? "";
+
+  return {
+    monthDay: month && day ? `${month}.${day}` : isoDate.slice(5, 10).replace("-", "."),
+    weekday
+  };
+};
+
 export function EventCard({ event, isNext = false, compact = false }: EventCardProps) {
   const meta = categoryMeta[event.category];
   const Icon = meta.Icon;
   const upcoming = !isEventPast(event);
+  const ticketDate = formatTicketDate(event.startAt);
   const ticketLink = event.links.find((link) => link.kind === "ticket");
   const streamLink = event.links.find((link) => link.kind === "stream");
   const infoLink = event.links.find((link) => link.kind === "info") ?? event.links[0];
@@ -28,7 +47,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
     ...(ticketLink ? [{ label: "チケット予約", href: ticketLink.url, external: true }] : []),
     ...(infoLink ? [{ label: infoLink.label, href: infoLink.url, external: true }] : []),
     {
-      label: upcoming ? "Xで拡散" : "感想投稿",
+      label: upcoming ? "Xで共有" : "感想を投稿",
       href: xShareUrl(shareText, `${SITE_URL}#event-${event.id}`),
       external: true
     },
@@ -39,49 +58,26 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
 
   return (
     <article
-      className={`yukako-card yukako-card-interactive group relative grid overflow-hidden bg-white ${
+      className={`yukako-ticket-card yukako-card yukako-card-interactive group relative grid overflow-hidden bg-white ${
         event.isImportant || isNext
           ? "border-champagne/70"
           : "border-rosefog/25"
-      } ${compact ? "sm:grid-cols-[160px_1fr]" : "sm:grid-cols-[220px_1fr]"}`}
+      } ${compact ? "sm:grid-cols-[112px_1fr]" : "sm:grid-cols-[132px_1fr]"}`}
     >
-      {(event.isImportant || isNext) && (
-        <div className="absolute left-0 top-0 z-10 h-full w-1 bg-champagne" />
-      )}
-
-      {event.image ? (
-        <div className="relative bg-porcelain">
-          <img
-            {...getResponsiveImageProps(
-              event.image,
-              compact
-                ? "(min-width: 640px) 160px, 100vw"
-                : "(min-width: 640px) 220px, 100vw",
-            )}
-            alt={event.title}
-            loading="lazy"
-            decoding="async"
-            className="block w-full object-cover object-top sm:absolute sm:inset-0 sm:h-full"
-          />
-        </div>
-      ) : (
-        <div className="relative hidden overflow-hidden bg-ink sm:flex sm:items-stretch sm:justify-center">
-          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(194,154,74,0.22),transparent_42%),radial-gradient(circle_at_20%_18%,rgba(255,253,247,0.16),transparent_28%),linear-gradient(180deg,rgba(127,29,45,0.9),rgba(49,42,46,0.96))]" />
-          <div className="relative z-10 flex w-full flex-col justify-between p-4 text-white">
-            <span className={`grid h-11 w-11 place-items-center rounded-full border ${meta.tone}`}>
-              <Icon className="h-5 w-5" aria-hidden="true" />
-            </span>
-            <span>
-              <span className="block text-[10px] font-black uppercase tracking-[0.18em] text-champagne">
-                {meta.label}
-              </span>
-              <span className="mt-1 block font-display text-2xl leading-tight text-white/86">
-                {event.shortTitle}
-              </span>
-            </span>
-          </div>
-        </div>
-      )}
+      <div className="yukako-ticket-date relative flex items-center gap-4 border-b border-dashed border-champagne/45 bg-ink px-5 py-4 text-white sm:block sm:border-b-0 sm:border-r sm:px-4 sm:py-5">
+        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-champagne">
+          Date
+        </span>
+        <strong className="font-display text-4xl leading-none text-white sm:mt-3 sm:block">
+          {ticketDate.monthDay}
+        </strong>
+        <span className="text-xs font-bold text-white/68 sm:mt-2 sm:block">
+          {ticketDate.weekday}
+        </span>
+        <span className="ml-auto grid h-10 w-10 shrink-0 place-items-center border border-champagne/45 bg-white/8 text-champagne sm:ml-0 sm:mt-6">
+          <Icon className="h-5 w-5" aria-hidden="true" />
+        </span>
+      </div>
 
       <div className={`${compact ? "p-5" : "p-6"} flex flex-col`}>
         <div className="mb-4 flex flex-wrap gap-2">

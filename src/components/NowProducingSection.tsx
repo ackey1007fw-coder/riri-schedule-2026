@@ -9,7 +9,6 @@ import {
   Ticket,
   Users
 } from "lucide-react";
-import { getGojetStatus } from "../lib/gojetStatus";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { googleCalendarUrl } from "../lib/share";
 import type { ScheduleEvent } from "../types";
@@ -31,8 +30,6 @@ const roles = [
 // ヒーロー直下の #ゆかJET 特設ブロック（Now Producing billboard）。
 // ポスター + カウントダウン + 役割リスト + 予約CTA を、舞台看板風の1枚にまとめる。
 export function NowProducingSection({ event }: NowProducingSectionProps) {
-  const status = getGojetStatus();
-
   if (!event) {
     return (
       <section id="next" className="scroll-mt-24 bg-ink py-16 sm:py-24">
@@ -74,7 +71,9 @@ export function NowProducingSection({ event }: NowProducingSectionProps) {
                     "(min-width: 1024px) 40vw, 100vw",
                   )}
                   alt={event.title}
-                  className="block w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  className="block h-auto w-full object-contain"
                 />
               ) : (
                 <div className="flex min-h-[280px] items-center justify-center">
@@ -99,30 +98,6 @@ export function NowProducingSection({ event }: NowProducingSectionProps) {
                     <MapPin className="h-4 w-4 shrink-0 text-champagne" aria-hidden="true" />
                     {event.venue}
                   </p>
-                )}
-
-                {status.phase !== "after" && (
-                  <div className="mt-6 inline-flex flex-wrap items-center gap-x-3 gap-y-1 border border-champagne/40 bg-white/8 px-4 py-3 text-sm font-bold backdrop-blur">
-                    {status.phase === "before" ? (
-                      <>
-                        <span className="text-champagne">公演まで</span>
-                        <span className="font-display text-3xl leading-none">
-                          あと{status.daysLeft}日
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <span className="text-champagne">本日の回</span>
-                        <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                          {status.day.performances.map((performance) => (
-                            <span key={`${performance.time}-${performance.team}`}>
-                              {performance.time}〜 {performance.team}
-                            </span>
-                          ))}
-                        </span>
-                      </>
-                    )}
-                  </div>
                 )}
 
                 <ul className="mt-7 grid gap-2.5 sm:grid-cols-2">

@@ -51,7 +51,7 @@ export function BirthdayBanner() {
     >
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-4 py-3 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
         <div className="flex items-center gap-3 text-ink">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md border border-champagne bg-white text-champagne shadow-sm transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-[1.03]">
+          <span className="grid h-9 w-9 shrink-0 place-items-center border border-champagne bg-white text-champagne shadow-sm transition-colors duration-300 group-hover:bg-porcelain">
             {countdown.isBirthdayToday ? (
               <Heart className="h-5 w-5" aria-hidden="true" />
             ) : (
@@ -79,7 +79,7 @@ export function BirthdayBanner() {
             {units.map((unit) => (
               <span
                 key={unit.label}
-                className="birthday-banner-unit flex min-w-[52px] flex-col items-center rounded-md border border-rosefog/30 bg-white/80 px-2 py-1"
+                className="birthday-banner-unit flex min-w-[52px] flex-col items-center border border-rosefog/30 bg-white/80 px-2 py-1"
               >
                 <span className="font-display text-xl leading-none text-ink">
                   {String(unit.value).padStart(2, "0")}
