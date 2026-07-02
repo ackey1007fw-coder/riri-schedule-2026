@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import type { ScheduleEvent } from "../types";
 import { CalendarClock, ChevronDown, Search, SlidersHorizontal, Star } from "lucide-react";
-import { categoryMeta } from "../lib/eventMeta";
 import { CalendarView } from "./CalendarView";
 import { EventCard } from "./EventCard";
 import { SectionHeader } from "./SectionHeader";
@@ -14,7 +13,15 @@ type ScheduleSectionProps = {
 };
 
 type ScheduleTab = "today" | "week" | "month" | "archive";
-type CategoryFilter = "all" | ScheduleEvent["category"];
+type CategoryFilter = "all" | "stage" | "award" | "tv" | "produce";
+
+const categoryFilterLabels: Record<CategoryFilter, string> = {
+  all: "すべて",
+  stage: "舞台",
+  award: "受賞・ミスコン",
+  tv: "TV",
+  produce: "プロデュース"
+};
 
 const tokyoDateKey = (date: Date) =>
   new Intl.DateTimeFormat("sv-SE", {
@@ -37,6 +44,22 @@ const eventDateKeys = (event: ScheduleEvent) =>
 
 const hasEventInRange = (event: ScheduleEvent, startKey: string, endKey: string) =>
   eventDateKeys(event).some((key) => key >= startKey && key <= endKey);
+
+const isProducedEvent = (event: ScheduleEvent) =>
+  event.badges.some((badge) =>
+    ["プロデュース公演", "プロデュース関与"].includes(badge),
+  );
+
+const matchesCategoryFilter = (event: ScheduleEvent, filter: CategoryFilter) => {
+  if (filter === "all") return true;
+  if (filter === "produce") return isProducedEvent(event);
+  if (filter === "award") {
+    const haystack = [event.title, event.shortTitle, event.summary, ...event.badges].join(" ");
+    return event.category === "event" || /受賞|ミスコン|Miss|MISS/.test(haystack);
+  }
+  if (filter === "tv") return event.category === "tv";
+  return event.category === "stage";
+};
 
 export function ScheduleSection({
   upcomingEvents,
@@ -83,8 +106,7 @@ export function ScheduleSection({
   const activeEvents = useMemo(
     () =>
       rawActiveEvents.filter((event) => {
-        const categoryMatch =
-          categoryFilter === "all" || event.category === categoryFilter;
+        const categoryMatch = matchesCategoryFilter(event, categoryFilter);
         const haystack = [
           event.title,
           event.shortTitle,
@@ -103,16 +125,13 @@ export function ScheduleSection({
     [categoryFilter, normalizedQuery, rawActiveEvents],
   );
   const categoryOptions = useMemo(() => {
-    const categories = Array.from(new Set(allEvents.map((event) => event.category)));
-    return [
-      { id: "all" as const, label: "すべて", count: rawActiveEvents.length },
-      ...categories.map((category) => ({
-        id: category,
-        label: categoryMeta[category].label,
-        count: rawActiveEvents.filter((event) => event.category === category).length
-      }))
-    ];
-  }, [allEvents, rawActiveEvents]);
+    const filters: CategoryFilter[] = ["all", "stage", "award", "tv", "produce"];
+    return filters.map((filter) => ({
+      id: filter,
+      label: categoryFilterLabels[filter],
+      count: rawActiveEvents.filter((event) => matchesCategoryFilter(event, filter)).length
+    }));
+  }, [rawActiveEvents]);
 
   return (
     <section id="schedule" className="scroll-mt-24 bg-white py-16 sm:py-24">

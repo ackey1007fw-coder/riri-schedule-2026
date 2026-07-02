@@ -14,7 +14,7 @@ const todayKey = () =>
   new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
 
 export function StreamSchedule() {
-  // 手入力リストを初期表示。フレキャンから取れたら上乗せ（いいとこどり）
+  // 手入力リストを初期表示。外部予定から取れたら上乗せ（いいとこどり）
   const [autoSlots, setAutoSlots] = useState<StreamSlot[]>([]);
 
   useEffect(() => {

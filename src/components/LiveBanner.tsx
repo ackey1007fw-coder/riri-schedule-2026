@@ -11,13 +11,13 @@ import {
 // ・配信中 → 赤「配信中！」
 // ・今日に配信予定あり → ピンク「今日の配信は HH:MM〜 予定」
 // ・どちらも無ければ非表示
-// すべて自動（/api/showroom を定期確認、予定は手入力＋フレキャン自動取得をマージ）。
+// すべて自動（/api/showroom を定期確認、予定は手入力＋外部予定取得をマージ）。
 const POLL_MS = 60000;
 
 const todayKey = () =>
   new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
 
-// SHOWROOMの次回配信(nextShow: 例 "6/24(水) 21:30〜")が「今日」なら HH:MM を返す
+// SHOWROOMの次回配信(nextShow: 例 "4/27(火) 21:30〜")が「今日」なら HH:MM を返す
 const todayTimeFromNextShow = (nextShow?: string): string | null => {
   if (!nextShow) return null;
   const m = nextShow.match(/(\d{1,2})\/(\d{1,2}).*?(\d{1,2}):(\d{2})/);
@@ -74,7 +74,7 @@ export function LiveBanner() {
     };
   }, []);
 
-  // 今日の、まだ終わっていない最も早い配信予定（手入力＋フレキャン自動取得）
+  // 今日の、まだ終わっていない最も早い配信予定（手入力＋外部予定取得）
   const todayStream = useMemo(() => {
     const today = todayKey();
     const now = Date.now();
@@ -93,7 +93,7 @@ export function LiveBanner() {
       .sort((a, b) => a.ms - b.ms)[0];
   }, [autoSlots]);
 
-  // 表示する「今日の配信時刻」：手入力/フレキャン → 無ければ SHOWROOMの次回配信
+  // 表示する「今日の配信時刻」：手入力/外部予定 → 無ければ SHOWROOMの次回配信
   const todayTime = todayStream?.time ?? todayTimeFromNextShow(nextShow);
   const todayNote = todayStream?.note;
 

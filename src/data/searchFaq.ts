@@ -50,7 +50,7 @@ export const searchFaqs: SearchFaq[] = [
   {
     question: "配信で観られる？",
     answer:
-      "配信チケットは3,700円で、アーカイブ視聴もあります。遠方の方も予約サイトから申し込めます。",
+      "配信チケットは3,700円で、アーカイブは2026年8月6日まで視聴できます。遠方の方も予約サイトから申し込めます。",
     href: "https://premiumgoyukajet.hp.peraichi.com",
     linkLabel: "配信チケットを見る"
   },
@@ -64,7 +64,7 @@ export const searchFaqs: SearchFaq[] = [
   {
     question: "SHOWROOMはどこ？",
     answer:
-      "「秋田の優花子(ゆかこ)」のルームで毎日配信中。フォローするといつでも応援できます。",
+      "「秋田の優花子(ゆかこ)」のルームで配信しています。配信は不定期のため、SHOWROOMをフォローすると開始通知が届きます。",
     href: "#links",
     linkLabel: "SHOWROOMを見る"
   },

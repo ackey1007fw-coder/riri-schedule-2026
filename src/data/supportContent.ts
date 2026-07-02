@@ -22,5 +22,9 @@ export const supportContent: SupportContentItem[] = [
   {
     title: "応援チケット",
     description: "キャストメッセージ付きチェキがもらえる応援チケット。"
+  },
+  {
+    title: "配信チケット",
+    description: "遠方からも観劇できる配信チケット。アーカイブは2026年8月6日まで視聴可。"
   }
 ];

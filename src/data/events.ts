@@ -7,7 +7,7 @@ export const events: ScheduleEvent[] = [
     shortTitle: "#ゆかJET",
     category: "stage",
     startAt: "2026-07-23T18:30:00+09:00",
-    endAt: "2026-07-27T17:00:00+09:00",
+    endAt: "2026-07-27T21:00:00+09:00",
     dates: [
       "2026-07-23",
       "2026-07-24",
@@ -19,13 +19,18 @@ export const events: ScheduleEvent[] = [
     venue: "Air studio 両国（東京都墨田区両国2-18-7 地下1階）",
     image: "/images/yukako-gojet-poster.jpg",
     summary:
-      "吉井優花子プロデュース公演 #ゆかJET 第1弾。BAR SAMASAMA を舞台に、歌って踊る幽霊 GO,JET! GIRLS が繰り広げる歌ダンス満載のコメディ。A/B/C 3班＋7/27は全班合同LIVE。吉井優花子は B班JET・C班早紀を演じ、プロデュース・脚色・楽曲・デザインも担当。チケット予約受付中（ご来場 一般4,700円／特典付き前方席6,000円・配信アーカイブ3,700円）。",
+      "吉井優花子プロデュース公演 #ゆかJET 第1弾。BAR SAMASAMA を舞台に、歌って踊る幽霊 GO,JET! GIRLS が繰り広げる歌ダンス満載のコメディ。A/B/C 3班＋7/27は全班合同LIVE。吉井優花子は B班JET・C班早紀を演じ、プロデュース・脚色・楽曲・デザインも担当。チケット予約受付中（ご来場 一般4,700円／特典付き前方席6,000円・配信3,700円。アーカイブは2026年8月6日まで視聴可）。",
     badges: ["舞台", "プロデュース公演", "予約受付中", "配信あり", "7/23〜27"],
     links: [
       {
-        label: "🎫 チケット予約・応援（公式予約サイト）",
+        label: "🎫 チケット予約・応援（予約サイト）",
         url: "https://premiumgoyukajet.hp.peraichi.com",
         kind: "ticket"
+      },
+      {
+        label: "会場の地図を開く",
+        url: "https://www.google.com/maps/search/?api=1&query=Air%20studio%20%E4%B8%A1%E5%9B%BD%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A2%A8%E7%94%B0%E5%8C%BA%E4%B8%A1%E5%9B%BD2-18-7",
+        kind: "info"
       },
       {
         label: "ご予約開始のお知らせ（吉井優花子 X）",
@@ -33,7 +38,7 @@ export const events: ScheduleEvent[] = [
         kind: "info"
       },
       {
-        label: "全キャスト・タイムテーブル（公式 X）",
+        label: "全キャスト・タイムテーブル（X投稿）",
         url: "https://x.com/yukako_produce/status/2071913699020075096",
         kind: "info"
       }
@@ -190,7 +195,7 @@ export const events: ScheduleEvent[] = [
     venue: "平賀スクエア",
     image: "",
     summary:
-      "プロジェクトアクト東京 第七回公演。カラヤン組で諏訪桃子役を演じ、舞台俳優としてのキャリアをスタート。",
+      "プロジェクトアクト東京 第七回公演。カラヤン組で諏訪桃子役を演じ、俳優としてのキャリアをスタート。",
     badges: ["舞台", "デビュー作"],
     links: []
   }

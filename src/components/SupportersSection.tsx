@@ -7,6 +7,8 @@ const icons = [HeartHandshake, Video, MonitorPlay, Ticket];
 export function SupportersSection() {
   if (supportContent.length === 0) return null;
 
+  const hashtagUrl = "https://x.com/hashtag/%E3%82%86%E3%81%8BJET";
+
   return (
     <section id="support" className="scroll-mt-24 bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -44,8 +46,18 @@ export function SupportersSection() {
 
         <p className="mt-6 flex items-start gap-2 text-sm leading-6 text-ink/62">
           <Radio className="mt-0.5 h-4 w-4 shrink-0 text-champagne" aria-hidden="true" />
-          遠方の方も、配信チケット（3,700円・アーカイブ視聴あり）で公演をご覧いただけます。
+          遠方の方も、配信チケット（3,700円・アーカイブは2026年8月6日まで視聴可）で公演をご覧いただけます。
         </p>
+        <div className="mt-5">
+          <a
+            href={hashtagUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center justify-center border border-champagne bg-porcelain px-4 py-2 text-sm font-bold text-ink transition hover:bg-champagne hover:text-white"
+          >
+            Xでみんなの #ゆかJET 応援を見る
+          </a>
+        </div>
       </div>
     </section>
   );

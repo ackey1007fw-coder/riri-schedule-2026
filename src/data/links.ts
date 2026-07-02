@@ -33,7 +33,7 @@ export const socialLinks: SocialLink[] = [
     label: "SHOWROOM",
     handle: "秋田の優花子(ゆかこ)",
     url: "https://www.showroom-live.com/room/profile?room_id=347571",
-    description: "毎日配信中のSHOWROOMルーム。直接応援できる場所",
+    description: "配信は不定期。フォローすると開始通知が届くSHOWROOMルーム",
     kind: "showroom"
   }
 ];

@@ -1,6 +1,6 @@
-# Riri Schedule 2026
+# Yukako Schedule 2026
 
-夏凪里季さんの活動予定、出演情報、SNS、SHOWROOM情報をまとめる Fan Schedule サイトです。
+吉井優花子さんの活動予定、出演情報、SNS、SHOWROOM情報をまとめるファン制作の応援ポータルです。
 
 ## Stack
 
@@ -48,6 +48,6 @@ Recommended: Vercel
 
 Vercel Web Analytics is included through `@vercel/analytics/react` in `src/App.tsx`.
 
-Access data is not shown on the public site. To view page views and visitor trends, open the Vercel dashboard, select `riri-schedule-2026`, then open `Analytics`.
+Access data is not shown on the public site. To view page views and visitor trends, open the Vercel dashboard, select `yukako-schedule-2026`, then open `Analytics`.
 
-If tracking data does not appear, enable Web Analytics for the project in Vercel and redeploy from `main`.
+If tracking data does not appear, enable Web Analytics for the project in Vercel and redeploy from `yukako/main`.

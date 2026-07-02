@@ -4,7 +4,6 @@ const eventImageById: Record<string, string> = {
   "yofukashi-campus-2026-05-09": "/images/event-yofukashi.jpg",
   "theoridea-2026-05-14": "/images/event-theoridea.jpg",
   "aitoki-2026-05-29": "/images/event-aitoki.jpg",
-  "birthday-2026-06-24": "/images/event-birthday.jpg",
   "fukurow-fm-2026-04-21": "/images/event-fukurow.jpg",
   "tvk-nekohita-2026-04-16": "/images/event-tvk.jpg",
   "imacampus-2026-04-12": "/images/event-imacampus.jpg",

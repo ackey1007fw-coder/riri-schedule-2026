@@ -23,10 +23,10 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
           <div>
             <p className="font-display text-2xl">{profile.name}</p>
             <p className="mt-1 text-sm text-white/60">
-              {profile.theme}｜非公式応援ポータル（ファン制作）
+              {profile.theme}｜ファン制作応援ポータル
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-white/55">
-              本サイトは吉井優花子さんの活動予定、出演歴、SHOWROOM、SNSをまとめた非公式の応援サイトです。本人公式サイトではありません。
+              本サイトは吉井優花子さんの活動予定、出演歴、SHOWROOM、SNSをまとめたファン制作の応援サイトです。本人・所属団体が運営するサイトではありません。
             </p>
             <p className="mt-4 text-xs text-white/45">
               掲載情報更新：{displayUpdatedAt}
@@ -52,7 +52,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
               ))}
               <a
                 href={xShareUrl(
-                  `心に届く声の俳優。${profile.name}さんの応援ポータル`,
+                  `秋田の公務員から俳優へ。${profile.name}さんの応援ポータル`,
                   SITE_URL,
                 )}
                 target="_blank"
@@ -69,7 +69,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
         <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} {profile.romaji} Fan Portal ・ Produced by あっきー ・ 最終更新 {displayUpdatedAt}</p>
           <p>
-            本サイトはファンによる非公式の応援ページです。掲載情報は変更される場合があります。
+            本サイトはファン制作の応援ページです。掲載情報は変更される場合があります。
           </p>
         </div>
       </div>

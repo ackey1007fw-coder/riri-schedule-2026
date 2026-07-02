@@ -114,7 +114,7 @@ export const highlights: Highlight[] = [
     category: "CM",
     title: "AKT秋田テレビ アプリアンバサダー",
     description:
-      "AKT秋田テレビの公式アプリ「AKTアプリ」のアンバサダーに選出。地上波テレビCMやイベントに出演しました。"
+      "AKT秋田テレビのアプリ「AKTアプリ」のアンバサダーに選出。地上波テレビCMやイベントに出演しました。"
   },
   {
     id: "warau-neko-littlebraver-2024-04",
@@ -195,7 +195,7 @@ export const highlights: Highlight[] = [
     category: "舞台",
     title: "舞台『悪魔の涙』（舞台デビュー）",
     description:
-      "プロジェクトアクト東京の第七回公演。2022年12月8日〜12日に平賀スクエアで上演。カラヤン組で諏訪桃子役を演じ、舞台俳優としてのキャリアをスタート。"
+      "プロジェクトアクト東京の第七回公演。2022年12月8日〜12日に平賀スクエアで上演。カラヤン組で諏訪桃子役を演じ、俳優としてのキャリアをスタート。"
   },
   {
     id: "miss-yukata-2021",

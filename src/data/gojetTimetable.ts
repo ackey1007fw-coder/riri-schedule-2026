@@ -8,6 +8,7 @@ export type GojetTimetableDay = {
   date: string;
   label: string;
   performances: GojetPerformance[];
+  note?: string;
 };
 
 export const gojetTicketUrl = "https://premiumgoyukajet.hp.peraichi.com";
@@ -41,7 +42,8 @@ export const gojetTimetable: GojetTimetableDay[] = [
       { time: "12:00", team: "B班" },
       { time: "15:30", team: "A班" },
       { time: "19:00", team: "C班" }
-    ]
+    ],
+    note: "25日のみ、A班あかね役は葉山椎菜さんが務めます。"
   },
   {
     date: "2026-07-26",

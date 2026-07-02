@@ -34,7 +34,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
         <div className="order-1 flex flex-col justify-center px-4 py-10 sm:px-6 sm:py-14 lg:min-h-0 lg:px-10 lg:py-20">
           <div className="yukako-hero-panel">
             <p className="yukako-kicker mb-5 inline-flex self-start px-3 py-2 text-xs font-bold uppercase">
-              非公式応援ポータル / Akita to Stage
+              ファン制作応援ポータル / Akita to Actor
             </p>
             <h1 className="font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
               {profile.catchCopy}
@@ -54,7 +54,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
                 秋田出身
               </span>
               <span className="border border-white/18 bg-white/8 px-3 py-1.5">
-                元公務員から舞台へ
+                秋田の公務員から俳優へ
               </span>
               <span className="border border-white/18 bg-white/8 px-3 py-1.5">
                 #ゆかJET
@@ -83,7 +83,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
                   className="yukako-button yukako-button-ghost min-h-12 px-4 py-3 text-sm shadow-sm"
                 >
                   <Clapperboard className="h-4 w-4 text-champagne" aria-hidden="true" />
-                  #ゆかJET / 舞台情報を見る
+                  #ゆかJET / 公演情報を見る
                 </a>
               </div>
             </div>
@@ -121,7 +121,7 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
               className="block w-full object-cover object-[50%_18%] lg:absolute lg:inset-2 lg:h-[calc(100%-1rem)] lg:w-[calc(100%-1rem)]"
             />
             <p className="absolute bottom-5 left-5 z-10 border border-white/45 bg-ink/52 px-3 py-2 text-[11px] font-black uppercase tracking-[0.18em] text-white backdrop-blur">
-              Voice / Stage / Produce
+              Voice / Actor / Produce
             </p>
             </div>
           </div>
