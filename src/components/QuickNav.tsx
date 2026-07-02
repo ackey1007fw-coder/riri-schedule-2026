@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   CalendarDays,
   CalendarHeart,
+  HeartHandshake,
   Images,
   Radio,
   Sparkles,
@@ -12,6 +13,7 @@ import {
 const items = [
   { label: "魅力", href: "#about", id: "about", Icon: Sparkles },
   { label: "公演情報", href: "#next", id: "next", Icon: CalendarHeart },
+  { label: "応援", href: "#support", id: "support", Icon: HeartHandshake },
   { label: "予定", href: "#schedule", id: "schedule", Icon: CalendarDays },
   { label: "これまでの歩み", href: "#highlights", id: "highlights", Icon: Sparkles },
   { label: "プロフィール", href: "#profile", id: "profile", Icon: UserRound },

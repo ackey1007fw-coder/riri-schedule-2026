@@ -139,6 +139,9 @@ export function SearchSeoSection() {
                     <p className="text-sm leading-8 text-ink/68">{faq.answer}</p>
                     <a
                       href={faq.href}
+                      {...(faq.href.startsWith("http")
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
                       className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-ink underline decoration-champagne/70 underline-offset-4"
                     >
                       {faq.linkLabel}

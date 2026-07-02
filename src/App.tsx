@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { ActionStrip } from "./components/ActionStrip";
 import { Footer } from "./components/Footer";
+import { GojetCountdownBanner } from "./components/GojetCountdownBanner";
 import { Hero } from "./components/Hero";
 import { HighlightsSection } from "./components/HighlightsSection";
 import { LinksSection } from "./components/LinksSection";
@@ -18,6 +19,7 @@ import { SearchSeoSection } from "./components/SearchSeoSection";
 import { ShareSection } from "./components/ShareSection";
 import { ShowroomSection } from "./components/ShowroomSection";
 import { SiteHeader } from "./components/SiteHeader";
+import { SupportersSection } from "./components/SupportersSection";
 import { StructuredData } from "./components/StructuredData";
 import { LiveBanner } from "./components/LiveBanner";
 import {
@@ -84,6 +86,7 @@ function App() {
       <SiteHeader socialLinks={socialLinks} />
       <LiveBanner />
       <NewsBar />
+      <GojetCountdownBanner />
       <QuickNav />
       <main>
         {isLoading && (
@@ -102,6 +105,9 @@ function App() {
         </SectionReveal>
         <SectionReveal>
           <NextEvent event={nextEvent} />
+        </SectionReveal>
+        <SectionReveal>
+          <SupportersSection />
         </SectionReveal>
         <SectionReveal>
           <ScheduleSection

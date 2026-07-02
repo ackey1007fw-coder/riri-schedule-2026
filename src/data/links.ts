@@ -40,6 +40,14 @@ export const socialLinks: SocialLink[] = [
 
 export const mediaLinks: SocialLink[] = [
   {
+    label: "#ゆかJET 公演ホームページ",
+    handle: "peraichi",
+    url: "https://premiumgoyukajet.hp.peraichi.com",
+    description:
+      "本人が制作に関わった『GO,JET!GO!GO! vol.1 Premium』の公演ページ。チケット予約・応援メニューはこちらから",
+    kind: "web"
+  },
+  {
     label: "舞台情報解禁（X投稿）",
     handle: "2026年6月",
     url: "https://x.com/yukako_produce/status/2070122985265197380",

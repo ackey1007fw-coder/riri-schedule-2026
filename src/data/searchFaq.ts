@@ -41,25 +41,39 @@ export const searchIntents: SearchIntent[] = [
 
 export const searchFaqs: SearchFaq[] = [
   {
-    question: "#ゆかJET の次の公演はいつですか？",
+    question: "チケットはどこで買える？",
     answer:
-      "「次の公演」セクションで、#ゆかJET の公演日程・会場・チケット情報を確認できます。",
+      "ご来場チケットは一般4,700円、特典付き前方席6,000円。予約サイトから申し込めます。",
+    href: "https://premiumgoyukajet.hp.peraichi.com",
+    linkLabel: "予約サイトを見る"
+  },
+  {
+    question: "配信で観られる？",
+    answer:
+      "配信チケットは3,700円で、アーカイブ視聴もあります。遠方の方も予約サイトから申し込めます。",
+    href: "https://premiumgoyukajet.hp.peraichi.com",
+    linkLabel: "配信チケットを見る"
+  },
+  {
+    question: "会場はどこ？",
+    answer:
+      "Air studio 両国（東京都墨田区両国2-18-7 地下1階）。両国駅から徒歩2分です。",
     href: "#next",
     linkLabel: "公演情報を見る"
   },
   {
-    question: "吉井優花子さんのSNSはどこですか？",
+    question: "SHOWROOMはどこ？",
     answer:
-      "個人X（@mokoopy）、プロデュースX（@yukako_produce）、Instagram（@yoppy_777）、TikTok（@yukakoyoshii）、SHOWROOMで活動しています。",
+      "「秋田の優花子(ゆかこ)」のルームで毎日配信中。フォローするといつでも応援できます。",
     href: "#links",
-    linkLabel: "SNSを見る"
+    linkLabel: "SHOWROOMを見る"
   },
   {
-    question: "吉井優花子さんはどんな活動をしていますか？",
+    question: "初めてでも応援できる？",
     answer:
-      "舞台俳優・プロデューサー・SHOWROOMライバーとして活動中。Baby Shark Live全国公演のシンガー、自主プロデュース公演 #ゆかJET、CM・MV・ドラマ出演、ミスコン受賞歴など多方面で活躍しています。",
-    href: "#highlights",
-    linkLabel: "活動歴を見る"
+      "エールカードやメッセージ動画、応援チケットなど、初めての方でも参加しやすい応援メニューを用意しています。",
+    href: "#support",
+    linkLabel: "応援メニューを見る"
   },
   {
     question: "#ゆかJET とは何ですか？",
