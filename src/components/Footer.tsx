@@ -32,7 +32,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
           </div>
 
           <div className="sm:text-right">
-            <p className="mb-3 text-[11px] font-black uppercase tracking-[0.18em] text-champagneInk">
+            <p className="mb-3 text-[11px] font-black uppercase tracking-[0.18em] text-champagne">
               Follow &amp; Share
             </p>
             <div className="flex flex-wrap gap-2 sm:justify-end">

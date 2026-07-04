@@ -217,7 +217,7 @@ export function PhotoGallerySection() {
           <div className="mx-auto flex h-full max-w-6xl flex-col">
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-champagneInk">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-champagne">
                   Riri Photo
                 </p>
                 <p className="truncate text-sm font-semibold text-white/75">
