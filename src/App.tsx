@@ -115,16 +115,6 @@ function App() {
           <TodayDashboard events={events} socialLinks={socialLinks} />
         </SectionReveal>
         <SectionReveal>
-          <MagazineSpread nextEvent={nextEvent} />
-        </SectionReveal>
-        <SectionReveal>
-          <CharmSection />
-        </SectionReveal>
-        <Slideshow />
-        <SectionReveal>
-          <ClipSection />
-        </SectionReveal>
-        <SectionReveal>
           <NextEvent event={nextEvent} />
         </SectionReveal>
         <SectionReveal>
@@ -134,6 +124,16 @@ function App() {
             allEvents={events}
             monthKeys={monthKeys}
           />
+        </SectionReveal>
+        <SectionReveal>
+          <MagazineSpread nextEvent={nextEvent} />
+        </SectionReveal>
+        <SectionReveal>
+          <CharmSection />
+        </SectionReveal>
+        <Slideshow />
+        <SectionReveal>
+          <ClipSection />
         </SectionReveal>
         <SectionReveal>
           <HighlightsSection />
