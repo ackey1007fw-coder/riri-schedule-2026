@@ -2,6 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { Music2, Play } from "lucide-react";
 import { clips, type VideoClip } from "../data/clips";
 
+// public/videos/xxx.mp4 に対応する public/images/clips/xxx.jpg を参照する。
+// 動画を追加したら `node scripts/generate-clip-posters.mjs` でposterを生成する。
+const posterFor = (src: string) =>
+  src.replace("/videos/", "/images/clips/").replace(/\.mp4$/, ".jpg");
+
 // ショート動画クリップ（TikTokなど）をミュート自動ループで表示するセクション。
 // ・音声は流さない（muted・コントロール非表示）。タップで元のTikTokへ。
 // ・画面に入ったときだけ再生し、外れたら一時停止（通信量・電池に配慮）。
@@ -48,8 +53,9 @@ function ClipCard({ clip }: { clip: VideoClip }) {
       >
         <video
           ref={videoRef}
-          className="h-full w-full object-cover"
+          className="aspect-[9/16] h-full w-full object-cover"
           src={clip.src}
+          poster={posterFor(clip.src)}
           muted
           loop
           playsInline
