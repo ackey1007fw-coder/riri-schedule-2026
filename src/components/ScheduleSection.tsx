@@ -17,7 +17,8 @@ export function ScheduleSection({
   allEvents,
   monthKeys
 }: ScheduleSectionProps) {
-  const nextId = upcomingEvents[0]?.id;
+  // 直近の1件は直前の NextEvent セクションで既に大きく紹介済みのため、ここでは重複させない。
+  const restUpcomingEvents = upcomingEvents.slice(1);
 
   return (
     <section id="schedule" className="scroll-mt-24 bg-white py-16 sm:py-24">
@@ -42,13 +43,21 @@ export function ScheduleSection({
               {upcomingEvents.length}件
             </span>
           </div>
-          <div className="grid gap-5">
-            {upcomingEvents.map((event) => (
-              <div key={event.id} id={`event-${event.id}`} className="scroll-mt-24">
-                <EventCard event={event} isNext={event.id === nextId} />
-              </div>
-            ))}
-          </div>
+          {restUpcomingEvents.length > 0 ? (
+            <div className="grid gap-5">
+              {restUpcomingEvents.map((event) => (
+                <div key={event.id} id={`event-${event.id}`} className="scroll-mt-24">
+                  <EventCard event={event} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            upcomingEvents.length > 0 && (
+              <p className="border border-dashed border-rosefog/30 bg-porcelain px-5 py-6 text-sm text-ink/62">
+                直近の出演は、このすぐ上の「次に見るべき出演情報」でご紹介しています。
+              </p>
+            )
+          )}
         </div>
 
         <details className="group mb-12 border-y border-rosefog/25">

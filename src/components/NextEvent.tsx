@@ -68,7 +68,10 @@ export function NextEvent({ event }: NextEventProps) {
           copy="次に会えるのはいつ？ いちばん近い予定をここでチェック。"
         />
 
-        <article className="zine-panel grid overflow-hidden border border-champagne/70 bg-white lg:grid-cols-[1.12fr_0.88fr]">
+        <article
+          id={`event-${event.id}`}
+          className="zine-panel scroll-mt-24 grid overflow-hidden border border-champagne/70 bg-white lg:grid-cols-[1.12fr_0.88fr]"
+        >
           <div className="relative overflow-hidden bg-ink lg:min-h-[560px]">
             <img
               {...getResponsiveImageProps(
