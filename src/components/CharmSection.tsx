@@ -12,7 +12,7 @@ export function CharmSection() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
-            <p className="mb-4 inline-flex border border-champagne/45 bg-white/70 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] text-champagne backdrop-blur">
+            <p className="mb-4 inline-flex border border-champagne/45 bg-white/70 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] text-champagneInk backdrop-blur">
               Riri Mood
             </p>
             <h2 className="font-display text-4xl leading-[1.15] text-ink sm:text-5xl">
@@ -44,7 +44,7 @@ export function CharmSection() {
                     className="block w-full"
                   />
                   <figcaption className="px-1 pb-1 pt-2 leading-snug">
-                    <span className="block text-[10px] font-black uppercase tracking-[0.16em] text-champagne">
+                    <span className="block text-[10px] font-black uppercase tracking-[0.16em] text-champagneInk">
                       {item.tag}
                     </span>
                     <span className="mt-0.5 block text-[11px] font-bold text-ink/55">
@@ -63,7 +63,7 @@ export function CharmSection() {
               key={point.title}
               className="riri-lift border-t-2 border-champagne/50 bg-white/70 p-6 backdrop-blur hover:bg-white"
             >
-              <span className="text-[11px] font-black uppercase tracking-[0.18em] text-champagne">
+              <span className="text-[11px] font-black uppercase tracking-[0.18em] text-champagneInk">
                 {point.label}
               </span>
               <h3 className="mt-3 font-display text-2xl leading-tight text-ink">

@@ -67,7 +67,7 @@ export function ActionStrip({ nextEvent, socialLinks }: ActionStripProps) {
                 <item.Icon className="h-5 w-5" aria-hidden="true" />
               </span>
               <span className="min-w-0">
-                <span className="block text-xs font-black uppercase text-champagne">
+                <span className="block text-xs font-black uppercase text-champagneInk">
                   {item.label}
                 </span>
                 <span className="mt-1 block font-display text-xl leading-tight text-ink">

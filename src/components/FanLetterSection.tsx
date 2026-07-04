@@ -8,7 +8,7 @@ export function FanLetterSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 border-y border-champagne/35 py-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div>
-            <p className="mb-3 text-xs font-bold uppercase text-champagne">Fan Letter</p>
+            <p className="mb-3 text-xs font-bold uppercase text-champagneInk">Fan Letter</p>
             <h2 className="font-display text-3xl text-ink">ファンレターを届ける</h2>
             <p className="mt-4 leading-8 text-ink/68">送付前に必須フォームを入力してから、宛先をご確認ください。</p>
           </div>

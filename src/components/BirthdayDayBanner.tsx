@@ -29,7 +29,7 @@ export function BirthdayDayBanner() {
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 py-2.5 text-sm font-black tracking-wide sm:px-6 lg:px-8">
         <PartyPopper className="h-4 w-4 text-champagne" aria-hidden="true" />
         <span>HAPPY BIRTHDAY 夏凪里季！</span>
-        <span className="text-champagne">20歳（ハタチ）おめでとう🎂🌻</span>
+        <span className="text-champagneInk">20歳（ハタチ）おめでとう🎂🌻</span>
         <span className="text-ink/70 underline underline-offset-4">お祝いする →</span>
       </div>
     </a>

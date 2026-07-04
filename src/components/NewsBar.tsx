@@ -34,7 +34,7 @@ export function NewsBar() {
         className="group block border-b border-rosefog/20 bg-white"
       >
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-2.5 sm:px-6 lg:px-8">
-          <span className="inline-flex shrink-0 items-center gap-1.5 border border-champagne/50 bg-porcelain px-2 py-1 text-[10px] font-black uppercase tracking-wide text-champagne">
+          <span className="inline-flex shrink-0 items-center gap-1.5 border border-champagne/50 bg-porcelain px-2 py-1 text-[10px] font-black uppercase tracking-wide text-champagneInk">
             <Megaphone className="h-3.5 w-3.5" aria-hidden="true" />
             News
           </span>
@@ -43,7 +43,7 @@ export function NewsBar() {
             {"　"}
             {latest.text}
           </span>
-          <span className="hidden shrink-0 items-center gap-1 text-xs font-bold text-champagne group-hover:underline sm:inline-flex">
+          <span className="hidden shrink-0 items-center gap-1 text-xs font-bold text-champagneInk group-hover:underline sm:inline-flex">
             {latest.label}で見る
             <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
           </span>

@@ -136,7 +136,7 @@ export function CalendarView({ events, monthKeys }: CalendarViewProps) {
                           );
                         })}
                         {dayEvents.length > 2 && (
-                          <span className="block text-[10px] font-bold text-champagne">
+                          <span className="block text-[10px] font-bold text-champagneInk">
                             +{dayEvents.length - 2}
                           </span>
                         )}

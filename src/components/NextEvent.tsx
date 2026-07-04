@@ -23,7 +23,7 @@ export function NextEvent({ event }: NextEventProps) {
             copy="次に会えるのはいつ？ いちばん近い予定をここでチェック。"
           />
           <article className="zine-panel border border-champagne/70 bg-white p-8 text-center sm:p-12">
-            <p className="inline-flex items-center gap-2 text-xs font-black uppercase text-champagne">
+            <p className="inline-flex items-center gap-2 text-xs font-black uppercase text-champagneInk">
               <Clock3 className="h-4 w-4" aria-hidden="true" />
               Coming soon
             </p>
@@ -116,7 +116,7 @@ export function NextEvent({ event }: NextEventProps) {
                   <h3 className="font-display text-3xl leading-tight text-ink sm:text-4xl">
                     {event.title}
                   </h3>
-                  <p className="mt-4 flex gap-2 text-sm font-bold text-champagne">
+                  <p className="mt-4 flex gap-2 text-sm font-bold text-champagneInk">
                     <Clock3 className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {event.displayDate}
                   </p>

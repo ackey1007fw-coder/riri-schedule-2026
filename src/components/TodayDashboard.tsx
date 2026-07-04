@@ -141,7 +141,7 @@ export function TodayDashboard({
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-champagne">
+            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-champagneInk">
               Today & This Week
             </p>
             <h2 className="mt-2 font-display text-4xl text-ink sm:text-5xl">
@@ -164,7 +164,7 @@ export function TodayDashboard({
                 )}
               </span>
               <div>
-                <p className="text-xs font-black uppercase tracking-wide text-champagne">
+                <p className="text-xs font-black uppercase tracking-wide text-champagneInk">
                   {primary
                     ? primary.date === todayKey
                       ? "Today"
@@ -241,7 +241,7 @@ export function TodayDashboard({
                       rel={item.href.startsWith("#") ? undefined : "noopener noreferrer"}
                       className="flex min-h-16 items-center gap-3 py-3 transition hover:text-champagne"
                     >
-                      <span className="w-20 shrink-0 text-xs font-black text-champagne">
+                      <span className="w-20 shrink-0 text-xs font-black text-champagneInk">
                         {item.date === todayKey ? "本日" : dateLabel(item.date)}
                       </span>
                       <span className="min-w-0 flex-1">
@@ -259,7 +259,7 @@ export function TodayDashboard({
 
         <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_auto]">
           <div className="riri-card riri-card-interactive border-rosefog/25 bg-white p-5">
-            <p className="text-xs font-black uppercase tracking-[0.16em] text-champagne">
+            <p className="text-xs font-black uppercase tracking-[0.16em] text-champagneInk">
               Latest Updates
             </p>
             <div className="mt-3 grid gap-3 sm:grid-cols-2">

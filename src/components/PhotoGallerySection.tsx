@@ -140,7 +140,7 @@ export function PhotoGallerySection() {
             <GalleryUpdateIcon className="h-4 w-4" aria-hidden="true" />
           </span>
           <span className="min-w-0">
-            <span className="block text-[11px] font-black uppercase tracking-wide text-champagne">
+            <span className="block text-[11px] font-black uppercase tracking-wide text-champagneInk">
               New ・ {galleryUpdate.date}
             </span>
             <span className="block leading-snug">
@@ -217,7 +217,7 @@ export function PhotoGallerySection() {
           <div className="mx-auto flex h-full max-w-6xl flex-col">
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-champagne">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-champagneInk">
                   Riri Photo
                 </p>
                 <p className="truncate text-sm font-semibold text-white/75">

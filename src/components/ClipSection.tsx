@@ -102,7 +102,7 @@ export function ClipSection() {
     <section id="clips" className="bg-porcelain px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <div className="mb-6 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-champagne">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-champagneInk">
             Short Movie
           </p>
           <h2 className="mt-1 font-display text-2xl text-ink sm:text-3xl">

@@ -40,7 +40,7 @@ export function LinksSection({ socialLinks, mediaLinks }: LinksSectionProps) {
                   <span className="block font-display text-2xl text-ink">
                     {link.label}
                   </span>
-                  <span className="mt-1 block text-sm font-bold text-champagne">
+                  <span className="mt-1 block text-sm font-bold text-champagneInk">
                     {link.handle}
                   </span>
                   <span className="mt-3 block text-sm leading-6 text-ink/62">
@@ -52,7 +52,7 @@ export function LinksSection({ socialLinks, mediaLinks }: LinksSectionProps) {
           </div>
 
           <div className="border border-champagne/40 bg-porcelain p-5">
-            <p className="text-xs font-bold uppercase text-champagne">Media</p>
+            <p className="text-xs font-bold uppercase text-champagneInk">Media</p>
             <h3 className="mt-1 font-display text-3xl text-ink">
               もっと知る
             </h3>
@@ -66,7 +66,7 @@ export function LinksSection({ socialLinks, mediaLinks }: LinksSectionProps) {
                   className="border border-rosefog/25 bg-white p-4 transition hover:border-champagne"
                 >
                   <span className="block font-bold text-ink">{link.label}</span>
-                  <span className="mt-1 block text-sm text-champagne">
+                  <span className="mt-1 block text-sm text-champagneInk">
                     {link.handle}
                   </span>
                   <span className="mt-2 block text-sm leading-6 text-ink/62">

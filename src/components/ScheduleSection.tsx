@@ -32,7 +32,7 @@ export function ScheduleSection({
         <div className="mb-12">
           <div className="mb-5 flex items-end justify-between gap-4 border-b border-champagne/25 pb-4">
             <div>
-              <p className="text-xs font-bold uppercase text-champagne">
+              <p className="text-xs font-bold uppercase text-champagneInk">
                 Upcoming
               </p>
               <h3 className="mt-1 font-display text-3xl text-ink">
@@ -63,7 +63,7 @@ export function ScheduleSection({
         <details className="group mb-12 border-y border-rosefog/25">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 marker:hidden">
             <div>
-              <p className="text-xs font-bold uppercase text-champagne">Archive</p>
+              <p className="text-xs font-bold uppercase text-champagneInk">Archive</p>
               <h3 className="mt-1 font-display text-3xl text-ink">
                 終了済みイベント
               </h3>
@@ -91,7 +91,7 @@ export function ScheduleSection({
         <div id="calendar" className="scroll-mt-32">
           <div className="mb-5 flex items-end justify-between gap-4 border-b border-champagne/25 pb-4">
             <div>
-              <p className="text-xs font-bold uppercase text-champagne">Calendar</p>
+              <p className="text-xs font-bold uppercase text-champagneInk">Calendar</p>
               <h3 className="mt-1 font-display text-3xl text-ink">
                 カレンダー表示
               </h3>

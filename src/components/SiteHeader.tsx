@@ -71,7 +71,7 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
               href={item.href}
               className={`transition-colors ${
                 activeSection === item.id
-                  ? "text-champagne"
+                  ? "text-champagneInk"
                   : "hover:text-ink"
               }`}
             >

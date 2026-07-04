@@ -120,9 +120,10 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 title={`${link.label} ${link.handle}`}
+                aria-label={`${link.label}を開く（${link.handle}）`}
                 className="grid h-11 w-11 place-items-center border border-rosefog/30 bg-white text-xs font-black text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-champagne"
               >
-                {socialShortLabels[link.kind]}
+                <span aria-hidden="true">{socialShortLabels[link.kind]}</span>
               </a>
             ))}
           </div>

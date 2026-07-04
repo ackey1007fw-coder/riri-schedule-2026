@@ -78,8 +78,8 @@ export function ShowroomSection() {
             )}
           </div>
           <div className="p-6 sm:p-8 lg:p-10">
-            <div className="mb-6 flex items-center gap-3 text-champagne">
-              <span className="grid h-11 w-11 place-items-center border border-champagne/50 bg-white"><Radio className="h-5 w-5" aria-hidden="true" /></span>
+            <div className="mb-6 flex items-center gap-3 text-champagneInk">
+              <span className="grid h-11 w-11 place-items-center border border-champagne/50 bg-white text-champagne"><Radio className="h-5 w-5" aria-hidden="true" /></span>
               <div><p className="text-xs font-bold uppercase">Room</p><h3 className="font-display text-3xl text-ink">{profile.showroom.roomName}</h3></div>
             </div>
             <p className="text-sm font-bold text-ink/55">{profile.showroom.tagline}</p>
