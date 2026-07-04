@@ -112,7 +112,7 @@ function App() {
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
         <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
         <SectionReveal>
-          <TodayDashboard events={events} socialLinks={socialLinks} />
+          <TodayDashboard events={events} socialLinks={socialLinks} nextEvent={nextEvent} />
         </SectionReveal>
         <SectionReveal>
           <NextEvent event={nextEvent} />
