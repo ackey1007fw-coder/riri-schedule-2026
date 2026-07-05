@@ -112,17 +112,7 @@ function App() {
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
         <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
         <SectionReveal>
-          <TodayDashboard events={events} socialLinks={socialLinks} />
-        </SectionReveal>
-        <SectionReveal>
-          <MagazineSpread nextEvent={nextEvent} />
-        </SectionReveal>
-        <SectionReveal>
-          <CharmSection />
-        </SectionReveal>
-        <Slideshow />
-        <SectionReveal>
-          <ClipSection />
+          <TodayDashboard events={events} socialLinks={socialLinks} nextEvent={nextEvent} />
         </SectionReveal>
         <SectionReveal>
           <NextEvent event={nextEvent} />
@@ -134,6 +124,16 @@ function App() {
             allEvents={events}
             monthKeys={monthKeys}
           />
+        </SectionReveal>
+        <SectionReveal>
+          <MagazineSpread nextEvent={nextEvent} />
+        </SectionReveal>
+        <SectionReveal>
+          <CharmSection />
+        </SectionReveal>
+        <Slideshow />
+        <SectionReveal>
+          <ClipSection />
         </SectionReveal>
         <SectionReveal>
           <HighlightsSection />

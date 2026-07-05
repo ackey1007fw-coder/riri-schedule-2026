@@ -134,7 +134,7 @@ export function LiveBanner() {
       >
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 py-2 text-sm font-bold sm:px-6 lg:px-8">
           <CalendarClock className="h-4 w-4 text-champagne" aria-hidden="true" />
-          <span className="text-champagne">今日の配信</span>
+          <span className="text-champagneInk">今日の配信</span>
           <span className="font-black">{todayTime}〜 予定</span>
           {todayNote && <span className="text-ink/60">（{todayNote}）</span>}
           <span className="text-ink/70 underline underline-offset-4">

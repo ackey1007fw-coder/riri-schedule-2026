@@ -140,7 +140,7 @@ export function PhotoGallerySection() {
             <GalleryUpdateIcon className="h-4 w-4" aria-hidden="true" />
           </span>
           <span className="min-w-0">
-            <span className="block text-[11px] font-black uppercase tracking-wide text-champagne">
+            <span className="block text-[11px] font-black uppercase tracking-wide text-champagneInk">
               New ・ {galleryUpdate.date}
             </span>
             <span className="block leading-snug">

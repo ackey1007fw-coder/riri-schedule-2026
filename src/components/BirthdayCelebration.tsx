@@ -52,7 +52,7 @@ export function BirthdayCelebration() {
         <span>
           {profile.name}さん、{age}歳になりました！
         </span>
-        <span className="text-champagne">Happy {age}th Birthday🎂🌻</span>
+        <span className="text-champagneInk">Happy {age}th Birthday🎂🌻</span>
         <span className="text-ink/70 underline underline-offset-4 transition group-hover:text-ink">
           お祝いを見る →
         </span>

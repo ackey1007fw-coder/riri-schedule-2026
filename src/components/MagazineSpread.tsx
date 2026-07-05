@@ -60,7 +60,7 @@ export function MagazineSpread({ nextEvent }: MagazineSpreadProps) {
                       loading="lazy"
                       className="block w-full sm:h-[302px] sm:object-cover"
                     />
-                    <span className="absolute left-3 top-3 border border-champagne/40 bg-white/75 px-2 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-champagne backdrop-blur">
+                    <span className="absolute left-3 top-3 border border-champagne/40 bg-white/75 px-2 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-champagneInk backdrop-blur">
                       0{index + 2}
                     </span>
                   </figure>
@@ -105,7 +105,7 @@ export function MagazineSpread({ nextEvent }: MagazineSpreadProps) {
               >
                 <Radio className="h-5 w-5 shrink-0 text-champagne" aria-hidden="true" />
                 <span className="min-w-0 flex-1">
-                  <span className="block text-[11px] font-black uppercase tracking-[0.16em] text-champagne">
+                  <span className="block text-[11px] font-black uppercase tracking-[0.16em] text-champagneInk">
                     Live Room
                   </span>
                   <span className="block truncate text-sm font-bold">SHOWROOMの配信予定を見る</span>
@@ -118,7 +118,7 @@ export function MagazineSpread({ nextEvent }: MagazineSpreadProps) {
               >
                 <Camera className="h-5 w-5 shrink-0 text-champagne" aria-hidden="true" />
                 <span className="min-w-0 flex-1">
-                  <span className="block text-[11px] font-black uppercase tracking-[0.16em] text-champagne">
+                  <span className="block text-[11px] font-black uppercase tracking-[0.16em] text-champagneInk">
                     Photo Selection
                   </span>
                   <span className="block truncate text-sm font-bold">写真をスライドショーで見る</span>

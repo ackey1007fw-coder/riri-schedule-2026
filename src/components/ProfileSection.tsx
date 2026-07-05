@@ -40,7 +40,7 @@ export function ProfileSection() {
           <div className="grid gap-3">
             {profile.facts.map((fact) => (
               <div key={fact.label} className="riri-card grid grid-cols-[88px_1fr] border-rosefog/20 bg-white">
-                <div className="border-r border-rosefog/20 bg-porcelain px-4 py-4 text-xs font-bold text-champagne">
+                <div className="border-r border-rosefog/20 bg-porcelain px-4 py-4 text-xs font-bold text-champagneInk">
                   {fact.label}
                 </div>
                 <div className="px-4 py-4 text-sm font-semibold leading-7 text-ink/75">

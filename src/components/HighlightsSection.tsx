@@ -64,7 +64,7 @@ export function HighlightsSection() {
                     )}
                   </span>
                   <div className="min-w-0">
-                    <p className="flex flex-wrap items-center gap-2 text-xs font-bold text-champagne">
+                    <p className="flex flex-wrap items-center gap-2 text-xs font-bold text-champagneInk">
                       <span className="border border-champagne/40 bg-porcelain px-2 py-0.5">
                         {item.date}
                       </span>

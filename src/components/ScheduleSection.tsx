@@ -17,7 +17,8 @@ export function ScheduleSection({
   allEvents,
   monthKeys
 }: ScheduleSectionProps) {
-  const nextId = upcomingEvents[0]?.id;
+  // 直近の1件は直前の NextEvent セクションで既に大きく紹介済みのため、ここでは重複させない。
+  const restUpcomingEvents = upcomingEvents.slice(1);
 
   return (
     <section id="schedule" className="scroll-mt-24 bg-white py-16 sm:py-24">
@@ -31,7 +32,7 @@ export function ScheduleSection({
         <div className="mb-12">
           <div className="mb-5 flex items-end justify-between gap-4 border-b border-champagne/25 pb-4">
             <div>
-              <p className="text-xs font-bold uppercase text-champagne">
+              <p className="text-xs font-bold uppercase text-champagneInk">
                 Upcoming
               </p>
               <h3 className="mt-1 font-display text-3xl text-ink">
@@ -42,19 +43,27 @@ export function ScheduleSection({
               {upcomingEvents.length}件
             </span>
           </div>
-          <div className="grid gap-5">
-            {upcomingEvents.map((event) => (
-              <div key={event.id} id={`event-${event.id}`} className="scroll-mt-24">
-                <EventCard event={event} isNext={event.id === nextId} />
-              </div>
-            ))}
-          </div>
+          {restUpcomingEvents.length > 0 ? (
+            <div className="grid gap-5">
+              {restUpcomingEvents.map((event) => (
+                <div key={event.id} id={`event-${event.id}`} className="scroll-mt-24">
+                  <EventCard event={event} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            upcomingEvents.length > 0 && (
+              <p className="border border-dashed border-rosefog/30 bg-porcelain px-5 py-6 text-sm text-ink/62">
+                直近の出演は、このすぐ上の「次に見るべき出演情報」でご紹介しています。
+              </p>
+            )
+          )}
         </div>
 
         <details className="group mb-12 border-y border-rosefog/25">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 marker:hidden">
             <div>
-              <p className="text-xs font-bold uppercase text-champagne">Archive</p>
+              <p className="text-xs font-bold uppercase text-champagneInk">Archive</p>
               <h3 className="mt-1 font-display text-3xl text-ink">
                 終了済みイベント
               </h3>
@@ -82,7 +91,7 @@ export function ScheduleSection({
         <div id="calendar" className="scroll-mt-32">
           <div className="mb-5 flex items-end justify-between gap-4 border-b border-champagne/25 pb-4">
             <div>
-              <p className="text-xs font-bold uppercase text-champagne">Calendar</p>
+              <p className="text-xs font-bold uppercase text-champagneInk">Calendar</p>
               <h3 className="mt-1 font-display text-3xl text-ink">
                 カレンダー表示
               </h3>

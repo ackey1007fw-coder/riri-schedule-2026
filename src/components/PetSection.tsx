@@ -15,7 +15,7 @@ export function PetSection() {
             copy={petProfile.lead}
           />
           <div className="border-y border-champagne/30 py-5 text-sm font-bold leading-7 text-ink/70">
-            <span className="inline-flex items-center gap-2 text-champagne">
+            <span className="inline-flex items-center gap-2 text-champagneInk">
               <PawPrint className="h-4 w-4" aria-hidden="true" />
               {petProfile.ownerLabel}
             </span>
@@ -67,7 +67,7 @@ export function PetSection() {
             <div className="grid gap-3 sm:grid-cols-2">
               {petProfile.notes.map((note) => (
                 <div key={note.label} className="border border-rosefog/20 bg-white p-4">
-                  <p className="text-xs font-bold text-champagne">{note.label}</p>
+                  <p className="text-xs font-bold text-champagneInk">{note.label}</p>
                   <p className="mt-2 text-sm font-semibold leading-7 text-ink/75">{note.value}</p>
                 </div>
               ))}

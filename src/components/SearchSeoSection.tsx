@@ -37,7 +37,7 @@ export function SearchSeoSection() {
               <Search className="h-5 w-5" aria-hidden="true" />
             </span>
             <span>
-              <span className="block text-xs font-bold uppercase text-champagne">
+              <span className="block text-xs font-bold uppercase text-champagneInk">
                 First Guide
               </span>
               <span className="mt-1 block font-display text-2xl leading-tight text-ink sm:text-3xl">
@@ -81,7 +81,7 @@ export function SearchSeoSection() {
           </div>
 
           <div className="mt-10 border-t border-rosefog/20 pt-8">
-            <div className="mb-5 flex items-center gap-2 text-xs font-bold uppercase text-champagne">
+            <div className="mb-5 flex items-center gap-2 text-xs font-bold uppercase text-champagneInk">
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
               Start Here
             </div>
@@ -93,7 +93,7 @@ export function SearchSeoSection() {
                   className="riri-lift group flex min-h-36 flex-col justify-between border border-rosefog/25 bg-porcelain p-4 hover:border-champagne hover:bg-white"
                 >
                   <span>
-                    <span className="text-[11px] font-black uppercase tracking-wide text-champagne">
+                    <span className="text-[11px] font-black uppercase tracking-wide text-champagneInk">
                       {item.label}
                     </span>
                     <span className="mt-2 block font-display text-xl leading-tight text-ink">
@@ -117,7 +117,7 @@ export function SearchSeoSection() {
 
           <div className="mt-10 grid gap-6 border-t border-rosefog/20 pt-8 lg:grid-cols-[0.55fr_1.45fr]">
             <div>
-              <p className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase text-champagne">
+              <p className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase text-champagneInk">
                 <HelpCircle className="h-4 w-4" aria-hidden="true" />
                 FAQ
               </p>

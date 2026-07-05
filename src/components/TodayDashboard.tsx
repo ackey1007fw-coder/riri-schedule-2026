@@ -58,10 +58,12 @@ const firstEventDateInRange = (
 
 export function TodayDashboard({
   events,
-  socialLinks
+  socialLinks,
+  nextEvent
 }: {
   events: ScheduleEvent[];
   socialLinks: SocialLink[];
+  nextEvent?: ScheduleEvent;
 }) {
   const [streamSlots, setStreamSlots] = useState<StreamSlot[]>([]);
 
@@ -132,13 +134,14 @@ export function TodayDashboard({
 
   const todayItems = agenda.filter((item) => item.date === todayKey);
   const primary = todayItems[0] ?? agenda[0];
+  const hasAgenda = agenda.length > 0;
 
   return (
     <section id="today" className="scroll-mt-32 bg-porcelain px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-champagne">
+            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-champagneInk">
               Today & This Week
             </p>
             <h2 className="mt-2 font-display text-4xl text-ink sm:text-5xl">
@@ -150,7 +153,7 @@ export function TodayDashboard({
           </p>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className={`grid gap-4 ${hasAgenda ? "lg:grid-cols-[1.05fr_0.95fr]" : ""}`}>
           <div className="riri-card riri-card-interactive border-champagne/50 bg-white p-5 shadow-paper sm:p-7">
             <div className="flex items-center gap-3">
               <span className="grid h-11 w-11 place-items-center border border-champagne/50 bg-porcelain text-champagne">
@@ -161,11 +164,21 @@ export function TodayDashboard({
                 )}
               </span>
               <div>
-                <p className="text-xs font-black uppercase tracking-wide text-champagne">
-                  {primary?.date === todayKey ? "Today" : "Next"}
+                <p className="text-xs font-black uppercase tracking-wide text-champagneInk">
+                  {primary
+                    ? primary.date === todayKey
+                      ? "Today"
+                      : "Next"
+                    : nextEvent
+                      ? "Next Appearance"
+                      : "Today"}
                 </p>
                 <p className="text-sm font-bold text-ink/55">
-                  {primary ? dateLabel(primary.date) : "予定を確認中"}
+                  {primary
+                    ? dateLabel(primary.date)
+                    : nextEvent
+                      ? nextEvent.displayDate
+                      : "予定を確認中"}
                 </p>
               </div>
             </div>
@@ -189,6 +202,23 @@ export function TodayDashboard({
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </>
+            ) : nextEvent ? (
+              <>
+                <h3 className="mt-6 font-display text-3xl leading-tight text-ink sm:text-4xl">
+                  {nextEvent.shortTitle}
+                </h3>
+                <p className="mt-3 flex items-center gap-2 text-sm font-bold text-ink/65">
+                  <Clock3 className="h-4 w-4 text-champagne" aria-hidden="true" />
+                  今週の新しい予定はまだありません。次に会えるのはこちらです
+                </p>
+                <a
+                  href="#next"
+                  className="riri-button riri-button-primary mt-7 min-h-12 w-full px-5 py-3 text-sm sm:w-auto"
+                >
+                  次の出演を見る
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </>
             ) : (
               <p className="mt-6 leading-8 text-ink/65">
                 今週の新しい予定はまだありません。SHOWROOMやSNSで最新情報を確認できます。
@@ -196,40 +226,40 @@ export function TodayDashboard({
             )}
           </div>
 
-          <div className="riri-card riri-card-interactive border-rosefog/25 bg-white p-5 sm:p-7">
-            <p className="flex items-center gap-2 text-sm font-black text-ink">
-              <Sparkles className="h-4 w-4 text-champagne" aria-hidden="true" />
-              今週の応援予定
-            </p>
-            <ul className="mt-4 divide-y divide-rosefog/15">
-              {agenda.length ? agenda.map((item) => (
-                <li key={item.id}>
-                  <a
-                    href={item.href}
-                    target={item.href.startsWith("#") ? undefined : "_blank"}
-                    rel={item.href.startsWith("#") ? undefined : "noopener noreferrer"}
-                    className="flex min-h-16 items-center gap-3 py-3 transition hover:text-champagne"
-                  >
-                    <span className="w-20 shrink-0 text-xs font-black text-champagne">
-                      {item.date === todayKey ? "本日" : dateLabel(item.date)}
-                    </span>
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate text-sm font-bold">{item.title}</span>
-                      {item.time && <span className="mt-1 block text-xs text-ink/50">{item.time} 開始</span>}
-                    </span>
-                    <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
-                  </a>
-                </li>
-              )) : (
-                <li className="py-5 text-sm leading-7 text-ink/55">今週の予定は確認中です。</li>
-              )}
-            </ul>
-          </div>
+          {hasAgenda && (
+            <div className="riri-card riri-card-interactive border-rosefog/25 bg-white p-5 sm:p-7">
+              <p className="flex items-center gap-2 text-sm font-black text-ink">
+                <Sparkles className="h-4 w-4 text-champagne" aria-hidden="true" />
+                今週の応援予定
+              </p>
+              <ul className="mt-4 divide-y divide-rosefog/15">
+                {agenda.map((item) => (
+                  <li key={item.id}>
+                    <a
+                      href={item.href}
+                      target={item.href.startsWith("#") ? undefined : "_blank"}
+                      rel={item.href.startsWith("#") ? undefined : "noopener noreferrer"}
+                      className="flex min-h-16 items-center gap-3 py-3 transition hover:text-champagne"
+                    >
+                      <span className="w-20 shrink-0 text-xs font-black text-champagneInk">
+                        {item.date === todayKey ? "本日" : dateLabel(item.date)}
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate text-sm font-bold">{item.title}</span>
+                        {item.time && <span className="mt-1 block text-xs text-ink/50">{item.time} 開始</span>}
+                      </span>
+                      <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_auto]">
           <div className="riri-card riri-card-interactive border-rosefog/25 bg-white p-5">
-            <p className="text-xs font-black uppercase tracking-[0.16em] text-champagne">
+            <p className="text-xs font-black uppercase tracking-[0.16em] text-champagneInk">
               Latest Updates
             </p>
             <div className="mt-3 grid gap-3 sm:grid-cols-2">

@@ -57,7 +57,7 @@ export function StreamSchedule() {
 
   return (
     <div className="mb-12 border border-rosefog/25 bg-white p-6 sm:p-8">
-      <p className="mb-5 flex items-center gap-2 text-sm font-black uppercase tracking-wide text-champagne">
+      <p className="mb-5 flex items-center gap-2 text-sm font-black uppercase tracking-wide text-champagneInk">
         <CalendarClock className="h-4 w-4" aria-hidden="true" />
         配信予定
       </p>

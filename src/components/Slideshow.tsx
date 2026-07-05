@@ -63,7 +63,7 @@ export function Slideshow() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-3 flex items-center justify-between gap-3">
-          <p className="text-[11px] font-black uppercase tracking-[0.2em] text-champagne">
+          <p className="text-[11px] font-black uppercase tracking-[0.2em] text-champagneInk">
             Snapshots
           </p>
           <div className="flex items-center gap-3 text-xs font-bold text-ink/55">
