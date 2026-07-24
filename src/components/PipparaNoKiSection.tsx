@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import {
   CalendarDays,
@@ -43,19 +43,46 @@ type FlyerImage = {
 
 export function PipparaNoKiSection() {
   const [zoomedImage, setZoomedImage] = useState<FlyerImage | null>(null);
+  const zoomTriggerRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const closeZoom = useCallback(() => setZoomedImage(null), []);
 
   useEffect(() => {
     if (!zoomedImage) return;
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") closeZoom();
-    };
-    window.addEventListener("keydown", onKeyDown);
+
+    closeButtonRef.current?.focus();
     document.body.style.overflow = "hidden";
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeZoom();
+        return;
+      }
+      if (event.key !== "Tab" || !dialogRef.current) return;
+
+      const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
+        'button, [href], [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
     return () => {
       window.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = "";
+      zoomTriggerRef.current?.focus();
     };
   }, [zoomedImage, closeZoom]);
 
@@ -88,6 +115,7 @@ export function PipparaNoKiSection() {
             {/* フライヤー画像 */}
             <div className="border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:p-6 lg:border-b-0 lg:border-r">
               <button
+                ref={zoomTriggerRef}
                 type="button"
                 onClick={() => setZoomedImage(pipparaFlyer)}
                 className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
@@ -333,6 +361,7 @@ export function PipparaNoKiSection() {
       {zoomedImage &&
         createPortal(
           <div
+            ref={dialogRef}
             className="fixed inset-0 z-[999] grid h-[100dvh] place-items-center overscroll-contain bg-ink/90 p-4"
             role="dialog"
             aria-modal="true"
@@ -340,6 +369,7 @@ export function PipparaNoKiSection() {
             onClick={closeZoom}
           >
             <button
+              ref={closeButtonRef}
               type="button"
               onClick={closeZoom}
               className="absolute right-4 top-4 grid min-h-12 min-w-12 place-items-center border border-white/20 bg-white/10 text-white transition hover:bg-white/20"
