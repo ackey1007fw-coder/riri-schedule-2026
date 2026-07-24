@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.7.11",
+    label: "X",
+    text: "【8月9月の出演予定】劇団ココア『ピッパラの樹』(A班・荻窪小劇場)全6公演と、月シア別冊第2集『I'm talking about Homin'』(A side・西荻窪 遊空間がざびぃ)全4公演の日程をまとめて告知",
+    url: "https://x.com/frecam2025_0306/status/2075931870681063715"
+  },
+  {
     date: "2026.6.28",
     label: "X",
     text: "【出演情報】劇団ココア『ピッパラの樹』A班で出演決定🎭 8/18〜29・荻窪小劇場、チケットは6/29 21:00発売",
