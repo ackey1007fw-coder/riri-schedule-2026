@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.7.25",
+    label: "X",
+    text: "「スタバのフードはこれがいちばん美味しいから🥖異論は認める」スタバでいちばん好きなフードを紹介",
+    url: "https://x.com/frecam2025_0306/status/2080775028753461384"
+  },
+  {
     date: "2026.6.28",
     label: "X",
     text: "【出演情報】劇団ココア『ピッパラの樹』A班で出演決定🎭 8/18〜29・荻窪小劇場、チケットは6/29 21:00発売",

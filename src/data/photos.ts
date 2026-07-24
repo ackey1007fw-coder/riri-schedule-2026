@@ -5,6 +5,8 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.7.25 X「スタバのフードはこれがいちばん美味しいから🥖異論は認める」
+  { src: "/images/gallery/g66.jpg", alt: "白いレースのブラウスを着た夏凪里季さんが、チーズ入りの大きなサンドイッチを持っているスターバックスでのオフショット" },
   // 2026.6.28 X【出演情報】劇団ココア『ピッパラの樹』出演告知ポートレート
   { src: "/images/gallery/g65.jpg", alt: "白いレース襟のブラウスでカメラを見つめる夏凪里季さん。劇団ココア『ピッパラの樹』出演告知ポートレート" },
   // 2026.6.28 TikTok「犬って人間の4倍の速度で時間が進んでるらしい」カルアちゃんと一緒
@@ -88,8 +90,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.6.28",
+  date: "2026.7.25",
   platform: "X",
-  note: "劇団ココア『ピッパラの樹』A班出演告知のポートレート🎭",
-  url: "https://x.com/frecam2025_0306/status/2071212422107721835"
+  note: "スタバでいちばん好きなフード🥖 チーズ入りサンドイッチとのオフショット",
+  url: "https://x.com/frecam2025_0306/status/2080775028753461384"
 };
