@@ -6,6 +6,7 @@ import {
   Drama,
   ExternalLink,
   Info,
+  Instagram,
   MapPin,
   Quote,
   Ticket,
@@ -43,11 +44,19 @@ type FlyerImage = {
 
 export function PipparaNoKiSection() {
   const [zoomedImage, setZoomedImage] = useState<FlyerImage | null>(null);
-  const zoomTriggerRef = useRef<HTMLButtonElement>(null);
+  const zoomTriggerRef = useRef<HTMLElement | null>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const closeZoom = useCallback(() => setZoomedImage(null), []);
+
+  const openZoom = useCallback(
+    (image: FlyerImage) => (event: React.MouseEvent<HTMLButtonElement>) => {
+      zoomTriggerRef.current = event.currentTarget;
+      setZoomedImage(image);
+    },
+    []
+  );
 
   useEffect(() => {
     if (!zoomedImage) return;
@@ -94,6 +103,24 @@ export function PipparaNoKiSection() {
     src: "/images/im-talking-about-homin-flyer-2026.jpg",
     alt: "月シア別冊第2集『I'm talking about Homin'』公演フライヤー。夏凪里季さんはA sideに出演"
   };
+  const pipparaPortraitMain: FlyerImage = {
+    src: "/images/pippara-no-ki-portrait-01.jpg",
+    alt: "舞台『ピッパラの樹』の衣装姿で胸元に両手を重ねる夏凪里季さん"
+  };
+  const pipparaPortraitSub: FlyerImage = {
+    src: "/images/pippara-no-ki-portrait-02.jpg",
+    alt: "舞台『ピッパラの樹』の衣装姿で頬に手を添える夏凪里季さん"
+  };
+  const pipparaMainVisual: FlyerImage = {
+    src: "/images/pippara-no-ki-main-visual-2026.jpg",
+    alt: "鐘と青い薔薇、ヨーロッパ風建築を描いた舞台『ピッパラの樹』メインビジュアル"
+  };
+  const pipparaFlyerForGallery: FlyerImage = {
+    ...pipparaFlyer,
+    alt: "劇団ココア『ピッパラの樹』出演者一覧と公演日程を掲載したフライヤー"
+  };
+  const instagramGallery = [pipparaPortraitSub, pipparaMainVisual, pipparaFlyerForGallery];
+  const instagramPostUrl = "https://www.instagram.com/p/DbJsE5tkh7n/?igsh=NjBndms4aXlhM3d5";
 
   return (
     <section
@@ -115,9 +142,8 @@ export function PipparaNoKiSection() {
             {/* フライヤー画像 */}
             <div className="border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:p-6 lg:border-b-0 lg:border-r">
               <button
-                ref={zoomTriggerRef}
                 type="button"
-                onClick={() => setZoomedImage(pipparaFlyer)}
+                onClick={openZoom(pipparaFlyer)}
                 className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
                 aria-label="ピッパラの樹フライヤーを拡大表示"
               >
@@ -354,6 +380,153 @@ export function PipparaNoKiSection() {
                 </span>
               </span>
             </a>
+          </div>
+        </div>
+
+        {/* Instagram投稿 */}
+        <div className="mt-8">
+          <div className="mb-5 flex items-center gap-2 border-b border-[#7c5a3a]/25 pb-3">
+            <Instagram className="h-5 w-5 shrink-0 text-[#6f2f3c]" aria-hidden="true" />
+            <h3 className="font-display text-2xl leading-tight text-ink sm:text-3xl">
+              里季さんからのメッセージ
+            </h3>
+          </div>
+
+          <div className="riri-card overflow-hidden border-[#7c5a3a]/25 bg-white shadow-paper">
+            <div className="grid gap-0 lg:grid-cols-[1fr_1.15fr]">
+              {/* メイン人物写真 */}
+              <div className="border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:p-6 lg:border-b-0 lg:border-r">
+                <button
+                  type="button"
+                  onClick={openZoom(pipparaPortraitMain)}
+                  className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
+                  aria-label="夏凪里季さんの衣装写真を拡大表示"
+                >
+                  <span className="relative block aspect-[3/4] overflow-hidden border border-[#7c5a3a]/30 bg-white">
+                    <img
+                      {...getResponsiveImageProps(
+                        pipparaPortraitMain.src,
+                        "(min-width: 1024px) 45vw, 100vw"
+                      )}
+                      alt={pipparaPortraitMain.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 block h-full w-full object-cover object-top"
+                    />
+                    <span className="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100">
+                      <span className="absolute inset-0 bg-ink/10" />
+                    </span>
+                  </span>
+                  <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-[#6f2f3c]">
+                    タップして拡大表示
+                  </span>
+                </button>
+              </div>
+
+              {/* Instagram投稿本文 */}
+              <div className="p-5 sm:p-8 lg:p-10">
+                <div className="mb-5 flex items-center gap-3">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center border border-[#c9a24b]/50 bg-[#f8f3e6] text-[#6f2f3c] font-display text-lg">
+                    里
+                  </span>
+                  <div className="min-w-0">
+                    <p className="truncate font-bold text-ink">夏凪里季</p>
+                    <p className="flex items-center gap-1 truncate text-sm text-ink/55">
+                      <Instagram className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                      @__ririri__24
+                    </p>
+                  </div>
+                </div>
+
+                {/* 強調メッセージ */}
+                <blockquote className="border border-[#c9a24b]/40 bg-[#f8f3e6] p-6">
+                  <Quote className="h-5 w-5 text-[#6f2f3c]" aria-hidden="true" />
+                  <p className="mt-3 whitespace-pre-line text-sm leading-8 text-ink/85">
+                    {`初めての役柄で、今からとても楽しみです。
+大切に演じさせていただきます。`}
+                  </p>
+                </blockquote>
+
+                {/* 投稿本文 */}
+                <div className="mt-5 whitespace-pre-line text-sm leading-7 text-ink/82">
+                  {`舞台『ピッパラの樹』
+
+A班のアナスタジー・ド・ブロワ役を
+務めさせていただきます。
+
+初めての役柄で、今からとても楽しみです💞
+大切に演じさせていただきます。
+
+📍荻窪小劇場
+
+① 8月18日（火）19:30
+② 8月22日（土）12:00
+③ 8月23日（日）15:30
+④ 8月25日（火）14:00
+⑤ 8月28日（金）19:30
+⑥ 8月29日（土）19:30
+
+ご予約の際は、備考欄に
+「夏凪里季」
+とご記入ください。`}
+                </div>
+
+                <div className="mt-5 border-l-4 border-[#6f2f3c] bg-[#f8f3e6] px-4 py-3 text-sm font-bold text-[#6f2f3c]">
+                  ご予約の際は、備考欄に「夏凪里季」とご記入ください。
+                </div>
+
+                <a
+                  href={pipparaTicketUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="riri-button riri-button-gold mt-4 min-h-12 w-full px-5 py-3 text-sm sm:w-auto"
+                >
+                  夏凪里季さん扱いで予約する
+                  <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+
+            {/* 画像ギャラリー */}
+            <div className="border-t border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:p-6">
+              <p className="mb-3 text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
+                あわせて見る
+              </p>
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                {instagramGallery.map((image) => (
+                  <button
+                    key={image.src}
+                    type="button"
+                    onClick={openZoom(image)}
+                    className="group block text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
+                    aria-label={`${image.alt}を拡大表示`}
+                  >
+                    <span className="relative block aspect-[3/4] overflow-hidden border border-[#7c5a3a]/30 bg-white">
+                      <img
+                        {...getResponsiveImageProps(image.src, "(min-width: 640px) 30vw, 45vw")}
+                        alt={image.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className="absolute inset-0 block h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                      />
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Instagramリンク */}
+            <div className="border-t border-[#7c5a3a]/15 bg-white p-5 sm:p-6">
+              <a
+                href={instagramPostUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="riri-button riri-button-soft min-h-12 w-full px-4 py-3 text-sm sm:w-auto"
+              >
+                Instagramで投稿を見る
+                <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
