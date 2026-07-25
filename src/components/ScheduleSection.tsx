@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { CalendarView } from "./CalendarView";
 import { EventCard } from "./EventCard";
 import { SectionHeader } from "./SectionHeader";
+import { isFeaturedReport } from "../lib/date";
 
 type ScheduleSectionProps = {
   upcomingEvents: ScheduleEvent[];
@@ -20,15 +21,11 @@ export function ScheduleSection({
   // 直近の1件は直前の NextEvent セクションで既に大きく紹介済みのため、ここでは重複させない。
   const restUpcomingEvents = upcomingEvents.slice(1);
 
-  // 写真付きレポートカード（生誕祭レポートなど）は本文・写真が多く縦に長いため、
-  // 折りたたみ式の「終了済みイベント」内には入れず、常に見える場所に単独で表示する。
-  // （2カラムの圧縮グリッドに混ぜると、隣のカードとの高さ差で不自然な余白ができるため）
-  const reportEvents = pastEvents.filter(
-    (event) => event.gallery && event.gallery.length > 0,
-  );
-  const archiveEvents = pastEvents.filter(
-    (event) => !(event.gallery && event.gallery.length > 0),
-  );
+  // 写真付きレポートカード（生誕祭レポートなど）は投稿から一定期間だけ、
+  // 折りたたみ式の「終了済みイベント」に入れず常時表示の「新着」として目立たせる。
+  // 期間を過ぎると、他の過去イベントと同じく折りたたみ側へ自然に移る。
+  const reportEvents = pastEvents.filter((event) => isFeaturedReport(event));
+  const archiveEvents = pastEvents.filter((event) => !isFeaturedReport(event));
 
   return (
     <section id="schedule" className="scroll-mt-24 bg-white py-16 sm:py-24">
@@ -116,7 +113,13 @@ export function ScheduleSection({
           </summary>
           <div className="grid gap-5 pb-8 pt-2 lg:grid-cols-2">
             {archiveEvents.map((event) => (
-              <div key={event.id} id={`event-${event.id}`} className="scroll-mt-24">
+              <div
+                key={event.id}
+                id={`event-${event.id}`}
+                className={`scroll-mt-24 ${
+                  event.gallery && event.gallery.length > 0 ? "lg:col-span-2" : ""
+                }`}
+              >
                 <EventCard event={event} compact />
               </div>
             ))}
