@@ -1,4 +1,4 @@
-import { CalendarDays, CalendarPlus, MapPin } from "lucide-react";
+import { CalendarDays, CalendarPlus, Instagram, MapPin } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
 import { isEventPast } from "../lib/date";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
@@ -17,6 +17,9 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
   const meta = categoryMeta[event.category];
   const Icon = meta.Icon;
   const upcoming = !isEventPast(event);
+  // レポート系カードは本文・写真が長くなるため、サイドの細い帯に画像を詰めず
+  // 上部いっぱいに大きく表示する（顔やケーキが不自然に切れないように）。
+  const hasReportContent = Boolean(event.gallery && event.gallery.length > 0);
 
   return (
     <article
@@ -24,24 +27,34 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
         event.isImportant || isNext
           ? "border-champagne/70"
           : "border-rosefog/25"
-      } ${compact ? "sm:grid-cols-[160px_1fr]" : "sm:grid-cols-[220px_1fr]"}`}
+      } ${
+        hasReportContent
+          ? ""
+          : compact
+            ? "sm:grid-cols-[160px_1fr]"
+            : "sm:grid-cols-[220px_1fr]"
+      }`}
     >
       {(event.isImportant || isNext) && (
         <div className="absolute left-0 top-0 z-10 h-full w-1 bg-champagne" />
       )}
 
-      <div className="relative bg-porcelain">
+      <div className={`relative bg-porcelain ${hasReportContent ? "sm:aspect-[3/4]" : ""}`}>
         <img
           {...getResponsiveImageProps(
             event.image,
-            compact
-              ? "(min-width: 640px) 160px, 100vw"
-              : "(min-width: 640px) 220px, 100vw",
+            hasReportContent
+              ? "(min-width: 640px) 50vw, 100vw"
+              : compact
+                ? "(min-width: 640px) 160px, 100vw"
+                : "(min-width: 640px) 220px, 100vw",
           )}
-          alt={event.title}
+          alt={event.imageAlt ?? event.title}
           loading="lazy"
           decoding="async"
-          className="block w-full object-cover object-top sm:absolute sm:inset-0 sm:h-full"
+          className={`block w-full object-cover object-top ${
+            hasReportContent ? "sm:h-full" : "sm:absolute sm:inset-0 sm:h-full"
+          }`}
         />
       </div>
 
@@ -69,6 +82,11 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
             >
               {event.title}
             </h3>
+            {event.subtitle && (
+              <p className="mt-1 text-sm font-bold text-champagneInk">
+                {event.subtitle}
+              </p>
+            )}
             <div className="mt-3 grid gap-2 text-sm text-ink/62">
               <p className="flex gap-2">
                 <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-champagne" />
@@ -87,6 +105,46 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
         <p className={`${compact ? "mt-4" : "mt-5"} leading-8 text-ink/72`}>
           {event.summary}
         </p>
+
+        {event.reportQuote && (
+          <div className="mt-5 border border-champagne/30 bg-porcelain/70 p-4 sm:p-5">
+            <p className="mb-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-champagneInk">
+              <Instagram className="h-3.5 w-3.5" aria-hidden="true" />
+              投稿本文より
+            </p>
+            <p className="whitespace-pre-line text-sm leading-7 text-ink/80">
+              {event.reportQuote}
+            </p>
+          </div>
+        )}
+
+        {event.reportNote && (
+          <p className="mt-4 border-l-2 border-rosefog/40 pl-3 text-sm italic leading-7 text-ink/55">
+            {event.reportNote}
+          </p>
+        )}
+
+        {event.gallery && event.gallery.length > 0 && (
+          <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {event.gallery.map((photo) => (
+              <span
+                key={photo.src}
+                className="relative block aspect-[3/4] overflow-hidden border border-rosefog/20 bg-porcelain"
+              >
+                <img
+                  {...getResponsiveImageProps(
+                    photo.src,
+                    "(min-width: 640px) 33vw, 50vw",
+                  )}
+                  alt={photo.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 block h-full w-full object-cover"
+                />
+              </span>
+            ))}
+          </div>
+        )}
 
         {(event.links.length > 0 || upcoming) && (
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
