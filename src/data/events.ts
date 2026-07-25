@@ -20,7 +20,7 @@ export const events: ScheduleEvent[] = [
     venue: "荻窪小劇場",
     image: "/images/gallery/g65.jpg",
     summary:
-      "劇団ココアの19世紀イギリス風恋愛喜劇『ピッパラの樹』にA班として出演（約100分）。脚本・演出：小谷聡一郎。りりの出演回は 8/18(火)19:30｜8/22(土)12:00｜8/23(日)15:30｜8/25(火)14:00｜8/28(金)19:30｜8/29(土)19:30 の全6公演。特典付き優先入場チケット5,500円／一般4,500円（現金のみ）。",
+      "劇団ココアの19世紀イギリス風恋愛喜劇『ピッパラの樹』にA班「アナスタジー・ド・ブロワ役」として出演（約100分）。脚本・演出：小谷聡一郎。りりの出演回は 8/18(火)19:30｜8/22(土)12:00｜8/23(日)15:30｜8/25(火)14:00｜8/28(金)19:30｜8/29(土)19:30 の全6公演。特典付き優先入場チケット5,500円／一般4,500円（全席自由席）。ご予約の際は備考欄に「夏凪里季」とご記入ください。詳しい特集は「舞台『ピッパラの樹』」セクションでご紹介しています。",
     badges: ["舞台", "A班", "全6公演", "チケット6/29〜"],
     links: [
       {
@@ -36,6 +36,39 @@ export const events: ScheduleEvent[] = [
       {
         label: "劇団ココア 公式X",
         url: "https://x.com/gekidan_cocoa",
+        kind: "sns"
+      }
+    ],
+    isImportant: true
+  },
+  {
+    id: "aitoki-homin-2026-09",
+    title: "月シア別冊第2集『I'm talking about Homin'』",
+    shortTitle: "Homin'",
+    category: "stage",
+    startAt: "2026-09-11T19:00:00+09:00",
+    endAt: "2026-09-15T20:00:00+09:00",
+    dates: ["2026-09-11", "2026-09-12", "2026-09-13", "2026-09-15"],
+    displayDate: "2026年9月11日(金)〜15日(火)・A side 全4公演",
+    venue: "西荻窪 遊空間がざびぃ",
+    image: "/images/im-talking-about-homin-flyer-2026.jpg",
+    summary:
+      "アイトキシリーズ第2弾、名曲から生まれた5つの短編集『I'm talking about Homin'』にA sideとして出演。脚本・演出：中平奈緒・もか・横大路伸。りりの出演回は 9/11(金)19:00｜9/12(土)12:00｜9/13(日)12:00｜9/15(火)18:00 の全4公演。前売券6,000円／当日券6,500円。",
+    badges: ["舞台", "A side", "全4公演", "アイトキ第2弾"],
+    links: [
+      {
+        label: "チケット予約（livepocket）",
+        url: "https://livepocket.jp/t/aitokihomin",
+        kind: "ticket"
+      },
+      {
+        label: "夏凪里季さんの出演告知",
+        url: "https://x.com/frecam2025_0306/status/2075931870681063715",
+        kind: "sns"
+      },
+      {
+        label: "KAIGYAC STAGE X",
+        url: "https://x.com/kaigyacstage",
         kind: "sns"
       }
     ],

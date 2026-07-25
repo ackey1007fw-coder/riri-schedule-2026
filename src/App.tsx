@@ -19,6 +19,7 @@ import { MobileActionDock } from "./components/MobileActionDock";
 import { NextEvent } from "./components/NextEvent";
 import { NewsBar } from "./components/NewsBar";
 import { PetSection } from "./components/PetSection";
+import { PipparaNoKiSection } from "./components/PipparaNoKiSection";
 import { QuickNav } from "./components/QuickNav";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SectionReveal } from "./components/SectionReveal";
@@ -116,6 +117,9 @@ function App() {
         </SectionReveal>
         <SectionReveal>
           <NextEvent event={nextEvent} />
+        </SectionReveal>
+        <SectionReveal>
+          <PipparaNoKiSection />
         </SectionReveal>
         <SectionReveal>
           <ScheduleSection
