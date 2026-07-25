@@ -10,6 +10,17 @@ export const eventEndDate = (event: ScheduleEvent) =>
 export const isEventPast = (event: ScheduleEvent, now = new Date()) =>
   eventEndDate(event).getTime() < now.getTime();
 
+// 写真付きレポートカード（生誕祭レポートなど）を「新着」として常時表示しておく期間。
+// これを過ぎると、他の過去イベントと同じく「終了済みイベント」の折りたたみへ自然に移る。
+const FEATURED_REPORT_DAYS = 30;
+
+export const isFeaturedReport = (event: ScheduleEvent, now = new Date()) => {
+  if (!event.gallery || event.gallery.length === 0) return false;
+  const elapsedDays =
+    (now.getTime() - eventEndDate(event).getTime()) / (1000 * 60 * 60 * 24);
+  return elapsedDays <= FEATURED_REPORT_DAYS;
+};
+
 export const sortEventsAsc = (events: ScheduleEvent[]) =>
   [...events].sort(
     (a, b) => eventStartDate(a).getTime() - eventStartDate(b).getTime(),
