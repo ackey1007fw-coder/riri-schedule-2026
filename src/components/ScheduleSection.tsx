@@ -117,7 +117,9 @@ export function ScheduleSection({
                 key={event.id}
                 id={`event-${event.id}`}
                 className={`scroll-mt-24 ${
-                  event.gallery && event.gallery.length > 0 ? "lg:col-span-2" : ""
+                  (event.gallery && event.gallery.length > 0) || event.reportQuote
+                    ? "lg:col-span-2"
+                    : ""
                 }`}
               >
                 <EventCard event={event} compact />

@@ -19,7 +19,9 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
   const upcoming = !isEventPast(event);
   // レポート系カードは本文・写真が長くなるため、サイドの細い帯に画像を詰めず
   // 上部いっぱいに大きく表示する（顔やケーキが不自然に切れないように）。
-  const hasReportContent = Boolean(event.gallery && event.gallery.length > 0);
+  const hasReportContent = Boolean(
+    (event.gallery && event.gallery.length > 0) || event.reportQuote,
+  );
 
   return (
     <article
