@@ -12,10 +12,17 @@ export type EventLink = {
   kind?: "ticket" | "stream" | "info" | "sns";
 };
 
+export type EventGalleryPhoto = {
+  src: string;
+  alt: string;
+};
+
 export type ScheduleEvent = {
   id: string;
   title: string;
   shortTitle: string;
+  /** タイトル下に添える短い一言（任意） */
+  subtitle?: string;
   category: EventCategory;
   startAt: string;
   endAt?: string;
@@ -24,11 +31,19 @@ export type ScheduleEvent = {
   displayDate: string;
   venue?: string;
   image: string;
+  /** カバー画像のalt（未指定時はtitleを使用） */
+  imageAlt?: string;
   summary: string;
   badges: string[];
   links: EventLink[];
   isImportant?: boolean;
   isNextFocus?: boolean;
+  /** SNS投稿の開催後レポートなどで、カバー画像に加えて添える写真（任意） */
+  gallery?: EventGalleryPhoto[];
+  /** SNS投稿本文をそのまま引用する場合（任意） */
+  reportQuote?: string;
+  /** 事実を追加しない範囲での短い補足コメント（任意・原文と区別して表示） */
+  reportNote?: string;
 };
 
 export type SocialLink = {

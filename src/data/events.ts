@@ -97,6 +97,46 @@ export const events: ScheduleEvent[] = [
     isImportant: true
   },
   {
+    id: "moeriri-birthday-report-2026-07",
+    title: "もえりり生誕祭🎂✨️",
+    shortTitle: "もえりり生誕祭レポート",
+    subtitle: "20歳のスタートを、大切な仲間と",
+    category: "birthday",
+    startAt: "2026-07-19T18:00:00+09:00",
+    endAt: "2026-07-19T18:00:00+09:00",
+    displayDate: "2026年7月19日（日）の生誕祭より",
+    image: "/images/moeriri-birthday-2026-01.jpg",
+    imageAlt: "もえりり生誕祭でバースデープレートを持つ記念写真",
+    summary:
+      "小峰萌楓さんとの合同生誕祭のあと、夏凪里季さんがInstagramにレポートを投稿。集まってくれた皆さんへの感謝と、20歳を迎えた喜びがつづられています。",
+    badges: ["生誕祭レポート", "20歳", "Instagram"],
+    gallery: [
+      {
+        src: "/images/moeriri-birthday-2026-02.jpg",
+        alt: "バースデーケーキを楽しむ生誕祭の記念写真"
+      },
+      {
+        src: "/images/moeriri-birthday-2026-03.jpg",
+        alt: "スプーンを持って笑顔を見せる生誕祭の記念写真"
+      },
+      {
+        src: "/images/moeriri-birthday-2026-04.jpg",
+        alt: "バースデーケーキを食べる様子を収めた記念写真"
+      }
+    ],
+    reportQuote:
+      "もえりり生誕祭🎂✨️\n\nお集まりしてくださった皆様ありがとうございました❣️\nそしてもえにゃんとまた一緒にできてよかった楽しかった🎶\n\n素敵なハタチになりそうです💞\nまた後日別の写真あげるね📸\n\n#女子大生 #誕生日パーティー #生誕祭 #20歳 #誕生日",
+    reportNote:
+      "20歳という節目を、笑顔いっぱいで迎えた特別な生誕祭。感謝と楽しさが伝わる、あたたかな記念投稿です。",
+    links: [
+      {
+        label: "Instagramで投稿を見る",
+        url: "https://www.instagram.com/p/DbNtlj5iQyQ/?igsh=MTR1bXF2NmY1cGJ1cg==",
+        kind: "sns"
+      }
+    ]
+  },
+  {
     id: "yofukashi-campus-2026-05-09",
     title: "みつきとななこの夜ふかしキャンパス vol.2 春の新学期わくわくSP",
     shortTitle: "夜ふかしキャンパス",
