@@ -20,6 +20,16 @@ export function ScheduleSection({
   // 直近の1件は直前の NextEvent セクションで既に大きく紹介済みのため、ここでは重複させない。
   const restUpcomingEvents = upcomingEvents.slice(1);
 
+  // 写真付きレポートカード（生誕祭レポートなど）は本文・写真が多く縦に長いため、
+  // 折りたたみ式の「終了済みイベント」内には入れず、常に見える場所に単独で表示する。
+  // （2カラムの圧縮グリッドに混ぜると、隣のカードとの高さ差で不自然な余白ができるため）
+  const reportEvents = pastEvents.filter(
+    (event) => event.gallery && event.gallery.length > 0,
+  );
+  const archiveEvents = pastEvents.filter(
+    (event) => !(event.gallery && event.gallery.length > 0),
+  );
+
   return (
     <section id="schedule" className="scroll-mt-24 bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -60,6 +70,31 @@ export function ScheduleSection({
           )}
         </div>
 
+        {reportEvents.length > 0 && (
+          <div className="mb-12">
+            <div className="mb-5 flex items-end justify-between gap-4 border-b border-champagne/25 pb-4">
+              <div>
+                <p className="text-xs font-bold uppercase text-champagneInk">
+                  Report
+                </p>
+                <h3 className="mt-1 font-display text-3xl text-ink">
+                  生誕祭レポート
+                </h3>
+              </div>
+              <span className="border border-rosefog/30 bg-porcelain px-3 py-2 text-xs font-bold text-ink/62">
+                {reportEvents.length}件
+              </span>
+            </div>
+            <div className="grid gap-6">
+              {reportEvents.map((event) => (
+                <div key={event.id} id={`event-${event.id}`} className="scroll-mt-24">
+                  <EventCard event={event} />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <details className="group mb-12 border-y border-rosefog/25">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 marker:hidden">
             <div>
@@ -72,7 +107,7 @@ export function ScheduleSection({
               </p>
             </div>
             <span className="flex shrink-0 items-center gap-2 border border-rosefog/30 bg-porcelain px-3 py-2 text-xs font-bold text-ink/62">
-              {pastEvents.length}件
+              {archiveEvents.length}件
               <ChevronDown
                 className="h-4 w-4 text-champagne transition group-open:rotate-180"
                 aria-hidden="true"
@@ -80,7 +115,7 @@ export function ScheduleSection({
             </span>
           </summary>
           <div className="grid gap-5 pb-8 pt-2 lg:grid-cols-2">
-            {pastEvents.map((event) => (
+            {archiveEvents.map((event) => (
               <div key={event.id} id={`event-${event.id}`} className="scroll-mt-24">
                 <EventCard event={event} compact />
               </div>
