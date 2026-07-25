@@ -95,6 +95,7 @@ export const imageManifest = {
   "/images/pippara-no-ki-main-visual-2026.jpg": {"width":3222,"height":4296,"widths":[360,480,720,960,1280,1600,3222]},
   "/images/pippara-no-ki-portrait-01.jpg": {"width":3240,"height":4320,"widths":[360,480,720,960,1280,1600,3240]},
   "/images/pippara-no-ki-portrait-02.jpg": {"width":3240,"height":4320,"widths":[360,480,720,960,1280,1600,3240]},
+  "/images/riri-birthday-20th-one-month-later.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
   "/images/riri-hero-2026.jpg": {"width":3240,"height":4320,"widths":[360,480,720,960,1280,1600,3240]},
   "/images/riri-portrait.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]},
   "/images/riri-profile.jpg": {"width":1400,"height":1867,"widths":[360,480,720,960,1280,1400]},

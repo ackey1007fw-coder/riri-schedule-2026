@@ -15,7 +15,8 @@ export const isEventPast = (event: ScheduleEvent, now = new Date()) =>
 const FEATURED_REPORT_DAYS = 30;
 
 export const isFeaturedReport = (event: ScheduleEvent, now = new Date()) => {
-  if (!event.gallery || event.gallery.length === 0) return false;
+  const hasGallery = Boolean(event.gallery && event.gallery.length > 0);
+  if (!hasGallery && !event.reportQuote) return false;
   const elapsedDays =
     (now.getTime() - eventEndDate(event).getTime()) / (1000 * 60 * 60 * 24);
   return elapsedDays <= FEATURED_REPORT_DAYS;

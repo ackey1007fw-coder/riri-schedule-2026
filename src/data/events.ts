@@ -97,6 +97,30 @@ export const events: ScheduleEvent[] = [
     isImportant: true
   },
   {
+    id: "riri-birthday-1month-later-2026-07",
+    title: "20歳のお祝いはまだまだ続く🎂",
+    shortTitle: "1か月後の生誕祭ショット",
+    category: "birthday",
+    startAt: "2026-07-26T07:00:00+09:00",
+    endAt: "2026-07-26T07:00:00+09:00",
+    displayDate: "2026年7月26日（日）の投稿より",
+    image: "/images/riri-birthday-20th-one-month-later.jpg",
+    imageAlt: "夏凪里季さんが20歳のバースデーケーキを持って笑顔を見せる写真",
+    summary:
+      "20歳の誕生日から約1か月。バースデーケーキを手にした夏凪里季さんが、Xに笑顔の一枚を投稿しました。",
+    badges: ["生誕祭レポート", "20歳", "X"],
+    reportQuote: "誕生日から１ヶ月経ったけどまだお祝いしてもらってる🙄",
+    reportNote:
+      "ケーキには「Happy Birthday RIRI 20th！」のメッセージ。少し照れたような表情からも、うれしい気持ちが伝わってくる一枚です。",
+    links: [
+      {
+        label: "Xで元投稿を見る",
+        url: "https://x.com/frecam2025_0306/status/2081137416518214075",
+        kind: "sns"
+      }
+    ]
+  },
+  {
     id: "moeriri-birthday-report-2026-07",
     title: "もえりり生誕祭🎂✨️",
     shortTitle: "もえりり生誕祭レポート",
