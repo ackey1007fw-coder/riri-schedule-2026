@@ -6,6 +6,7 @@ import { googleCalendarUrl } from "../lib/share";
 import type { ScheduleEvent } from "../types";
 import { Badge } from "./Badge";
 import { ExternalButton } from "./ExternalButton";
+import { VenueLinks } from "./VenueLinks";
 
 type EventCardProps = {
   event: ScheduleEvent;
@@ -95,9 +96,10 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
                 <span>{event.displayDate}</span>
               </p>
               {event.venue && (
-                <p className="flex gap-2">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-champagne" />
+                <p className="flex flex-wrap items-center gap-x-2 gap-y-2">
+                  <MapPin className="h-4 w-4 shrink-0 text-champagne" />
                   <span>{event.venue}</span>
+                  <VenueLinks venue={event.venue} />
                 </p>
               )}
             </div>

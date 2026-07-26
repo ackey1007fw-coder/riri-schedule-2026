@@ -6,6 +6,7 @@ import type { ScheduleEvent } from "../types";
 import { Badge } from "./Badge";
 import { ExternalButton } from "./ExternalButton";
 import { SectionHeader } from "./SectionHeader";
+import { VenueLinks } from "./VenueLinks";
 
 type NextEventProps = {
   event?: ScheduleEvent;
@@ -125,10 +126,13 @@ export function NextEvent({ event }: NextEventProps) {
 
               <p className="text-lg leading-9 text-ink/72">{event.summary}</p>
               {event.venue && (
-                <p className="mt-5 flex gap-2 border-l-2 border-champagne pl-4 text-sm font-bold text-ink/70">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-champagne" aria-hidden="true" />
-                  {event.venue}
-                </p>
+                <div className="mt-5 border-l-2 border-champagne pl-4">
+                  <p className="flex gap-2 text-sm font-bold text-ink/70">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-champagne" aria-hidden="true" />
+                    {event.venue}
+                  </p>
+                  <VenueLinks venue={event.venue} className="mt-2" />
+                </div>
               )}
             </div>
 
