@@ -20,6 +20,7 @@ const pipparaTicketUrl =
   "https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9";
 const pipparaPostUrl = "https://x.com/frecam2025_0306/status/2075931870681063715";
 const hominTicketUrl = "https://livepocket.jp/t/aitokihomin";
+const pipparaKaoawasePostUrl = "https://x.com/gekidan_cocoa/status/2081277350176751632";
 
 const pipparaDates = [
   { date: "2026年8月18日（火）", time: "19:30" },
@@ -121,6 +122,13 @@ export function PipparaNoKiSection() {
   };
   const instagramGallery = [pipparaPortraitSub, pipparaMainVisual, pipparaFlyerForGallery];
   const instagramPostUrl = "https://www.instagram.com/p/DbJsE5tkh7n/?igsh=NjBndms4aXlhM3d5";
+
+  const pipparaKaoawaseGallery: FlyerImage[] = [
+    {
+      src: "/images/pippara-kaoawase-20260726-01.jpg",
+      alt: "『ピッパラの樹』顔合わせ時のキャスト集合写真 1"
+    }
+  ];
 
   return (
     <section
@@ -528,6 +536,109 @@ A班のアナスタジー・ド・ブロワ役を
               </a>
             </div>
           </div>
+        </div>
+
+        {/* 劇団ココアからの顔合わせ報告 */}
+        <div className="mt-8">
+          <div className="mb-5 flex items-center gap-2 border-b border-[#7c5a3a]/25 pb-3">
+            <Users className="h-5 w-5 shrink-0 text-[#6f2f3c]" aria-hidden="true" />
+            <h3 className="font-display text-2xl leading-tight text-ink sm:text-3xl">
+              劇団ココアからの顔合わせ報告
+            </h3>
+          </div>
+
+          <article className="riri-card overflow-hidden border-[#7c5a3a]/25 bg-white p-6 shadow-paper sm:p-7">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="grid h-11 w-11 shrink-0 place-items-center border border-[#c9a24b]/50 bg-[#f8f3e6] text-[#6f2f3c] font-display text-lg">
+                コ
+              </span>
+              <div className="min-w-0">
+                <p className="truncate font-bold text-ink">劇団ココア</p>
+                <p className="truncate text-sm text-ink/55">@gekidan_cocoa</p>
+              </div>
+            </div>
+            <p className="mb-4 text-xs text-ink/45">2026.7.26</p>
+
+            <p className="mb-4 text-sm leading-7 text-ink/82">
+              『ピッパラの樹』の顔合わせが行われました。
+              <br />
+              素敵な時間を届けられるよう、公演に向けた準備がスタートしています。
+              <br />
+              すでに満席となっている回もあるため、観劇を予定している方は早めに残席をご確認ください。
+            </p>
+
+            <blockquote className="border border-[#c9a24b]/40 bg-[#f8f3e6] p-6">
+              <Quote className="h-5 w-5 text-[#6f2f3c]" aria-hidden="true" />
+              <p className="mt-3 whitespace-pre-line text-sm leading-8 text-ink/85">
+                {`顔合わせでした！
+来て下さる皆様に素敵なお時間をお届け出来るよう、
+頑張りますので応援宜しくお願い致します！
+満席回もでておりますので、ご予約はお早めに！`}
+              </p>
+            </blockquote>
+
+            {/* 顔合わせ写真ギャラリー */}
+            <div className="mt-6">
+              <p className="mb-3 text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
+                顔合わせの様子
+              </p>
+              <div
+                className={
+                  pipparaKaoawaseGallery.length > 1
+                    ? "grid grid-cols-2 gap-3"
+                    : "max-w-sm"
+                }
+              >
+                {pipparaKaoawaseGallery.map((image) => (
+                  <button
+                    key={image.src}
+                    type="button"
+                    onClick={openZoom(image)}
+                    className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
+                    aria-label={`${image.alt}を拡大表示`}
+                  >
+                    <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-[#f0ead9]">
+                      <img
+                        {...getResponsiveImageProps(
+                          image.src,
+                          pipparaKaoawaseGallery.length > 1 ? "(min-width: 640px) 45vw, 90vw" : "(min-width: 640px) 380px, 90vw"
+                        )}
+                        alt={image.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className="block w-full object-contain"
+                      />
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-5 border-l-4 border-[#6f2f3c] bg-[#f8f3e6] px-4 py-3 text-sm font-bold text-[#6f2f3c]">
+              里季さんを応援して予約する場合は、備考欄に「夏凪里季」とご記入ください。
+            </div>
+
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a
+                href={pipparaKaoawasePostUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+              >
+                Xで投稿を見る
+                <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
+              </a>
+              <a
+                href={pipparaTicketUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="riri-button riri-button-gold min-h-12 px-4 py-3 text-sm"
+              >
+                チケット・残席を確認する
+                <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
+              </a>
+            </div>
+          </article>
         </div>
       </div>
 

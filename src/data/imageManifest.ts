@@ -91,6 +91,7 @@ export const imageManifest = {
   "/images/moeriri-birthday-2026-03.jpg": {"width":3324,"height":4431,"widths":[360,480,720,960,1280,1600,3324]},
   "/images/moeriri-birthday-2026-04.jpg": {"width":3324,"height":4431,"widths":[360,480,720,960,1280,1600,3324]},
   "/images/pet-kalua.jpg": {"width":1200,"height":1600,"widths":[360,480,720,960,1200]},
+  "/images/pippara-kaoawase-20260726-01.jpg": {"width":2048,"height":1542,"widths":[360,480,720,960,1280,1600,2048]},
   "/images/pippara-no-ki-flyer-2026.jpg": {"width":1074,"height":1524,"widths":[360,480,720,960,1074]},
   "/images/pippara-no-ki-main-visual-2026.jpg": {"width":3222,"height":4296,"widths":[360,480,720,960,1280,1600,3222]},
   "/images/pippara-no-ki-portrait-01.jpg": {"width":3240,"height":4320,"widths":[360,480,720,960,1280,1600,3240]},
