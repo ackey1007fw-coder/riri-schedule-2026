@@ -541,7 +541,7 @@ export function PipparaNoKiSection() {
           className="mt-8"
           venue="荻窪小劇場"
           access="JR・東京メトロ荻窪駅 南口より徒歩約8分"
-          note="開場は開演の30分前を予定。地図はGoogleマップの検索結果を表示しています。"
+          note="開場は開演の30分前を予定。"
         />
 
         {/* 里季さんの投稿：本文は折りたたみにして見通しを良くする */}

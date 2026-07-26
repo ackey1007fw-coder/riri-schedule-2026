@@ -36,10 +36,15 @@ npm run dev   # http://127.0.0.1:5173 でローカル確認
 - `api/showroom.js` … SHOWROOM統計のリアルタイム取得（`room_id=550336`）。
 
 ## 会場アクセスの地図
-- `src/components/VenueMap.tsx` … 会場の地図カード。Google マップの**キーレス埋め込み**（`output=embed`）なので **API キー不要**。
-- `venue`（会場名・検索キーワード兼用）/ `access`（最寄駅・徒歩分数）/ `note` / `id`（ページ内アンカー）を渡す。
+- `src/lib/venueMap.ts` … 会場名から Google マップの URL を作るヘルパー。**API キー不要**。
+  - `venueEmbedUrl` 埋め込み用（キーレス `output=embed`）/ `venueDirectionsUrl` **現在地からの経路**（`origin` を省くと Google 側が現在地を使う）/ `venueSearchUrl` マップ検索。
+  - `isMappableVenue` で「都内某所」「屋外施設」など**場所が特定できない会場は地図を出さない**。
+  - `toMapKeyword` で「萬劇場（大塚）」→「萬劇場 大塚」のように括弧を開いて検索精度を上げる。
+- `src/components/VenueMap.tsx` … 埋め込み地図つきのアクセスカード（特集セクション向け）。`venue` / `access` / `note` / `id` を渡す。
+- `src/components/VenueLinks.tsx` … 「現在地からのルート」「地図」の小さなリンク2つ（一覧向け）。EventCard / NextEvent で使用。
+- **一覧に埋め込み地図を並べない**：iframe が増えると重いので、一覧は `VenueLinks`、特集は `VenueMap`。
 - **住所は補完しない**：会場名で検索させる方針（「未確認情報を書かない」ルール）。`access` も本人・主催が公開している範囲だけ書く。
-- 他の会場に展開するときもこのコンポーネントを使い回す（iframe を直書きしない）。
+- 新しい会場に対応するときは `venue` に会場名を渡すだけでよい。iframe や maps URL を直書きしない。
 
 ## SNS 投稿を追加する手順（チェックリスト）
 
