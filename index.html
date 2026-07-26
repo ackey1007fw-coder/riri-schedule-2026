@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#fffafc" />
-    <meta name="format-detection" content="telephone=no" />
+    <!-- iOS(Chrome/Safari)が「荻窪駅 南口より徒歩約8分」のようなアクセス文を勝手に住所と誤認し、
+         隣の項目まで巻き込んで「Googleマップで見つかりません」を出すのを止める。
+         会場への地図・経路は VenueMap / VenueLinks のリンクで明示的に提供している。 -->
+    <meta
+      name="format-detection"
+      content="telephone=no, address=no, email=no, date=no"
+    />
     <meta
       name="description"
       content="夏凪里季（なつなぎりり）さんの出演情報、舞台予定、フレキャン関連情報、SHOWROOM、SNSリンク、プロフィールを見やすくまとめた応援スケジュールです。次の出演、チケット予約、配信情報をスマホで確認できます。"
