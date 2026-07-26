@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.7.26",
+    label: "X",
+    text: "「#ピッパラの樹 A班本日稽古初日でした✨️ 改善点は山々ですが良い作品になる予感！」稽古初日を報告。「いつもと違うりりが見れますヨ」とチケットの早めの確保を呼びかけ",
+    url: "https://x.com/frecam2025_0306/status/2081372754612486194"
+  },
+  {
     date: "2026.7.11",
     label: "X",
     text: "【8月9月の出演予定】劇団ココア『ピッパラの樹』(A班・荻窪小劇場)全6公演と、月シア別冊第2集『I'm talking about Homin'』(A side・西荻窪 遊空間がざびぃ)全4公演の日程をまとめて告知",
