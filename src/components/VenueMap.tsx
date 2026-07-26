@@ -1,10 +1,11 @@
-import { ExternalLink, MapPin, Navigation, Train } from "lucide-react";
+import { Building2, ExternalLink, MapPin, Navigation, Train } from "lucide-react";
+import { getVenueInfo } from "../data/venues";
 import { venueDirectionsUrl, venueEmbedUrl, venueSearchUrl } from "../lib/venueMap";
 
 type VenueMapProps = {
-  /** 会場名。そのまま地図の検索キーワードにも使う */
+  /** 会場名。src/data/venues.ts のキーと一致すれば住所・アクセスを自動で拾う */
   venue: string;
-  /** 最寄駅・徒歩分数など（本人・主催の公開情報の範囲で書く） */
+  /** venues.ts の access を上書きしたいときだけ指定 */
   access?: string;
   /** 見出しの下に添える一言 */
   note?: string;
@@ -14,11 +15,14 @@ type VenueMapProps = {
 };
 
 /**
- * 会場アクセス用の地図カード。
- * Google マップのキーレス埋め込み（output=embed）を使うので API キーは不要。
- * 「現在地からのルート」は origin を省略して Google マップ側に現在地を使わせる。
+ * 会場アクセスの地図カード。
+ * Google マップのキーレス埋め込み（output=embed）なので API キーは不要。
+ * 「会場の地図を開く」「現在地からのルート」はスマホだとマップアプリが開く。
  */
 export function VenueMap({ venue, access, note, id, className = "" }: VenueMapProps) {
+  const info = getVenueInfo(venue);
+  const accessText = access ?? info?.access;
+
   return (
     <div
       id={id}
@@ -45,37 +49,52 @@ export function VenueMap({ venue, access, note, id, className = "" }: VenueMapPr
         </div>
 
         <div>
-          {access && (
-            <p className="flex items-start gap-2 text-sm leading-7 text-ink/80">
-              <Train className="mt-1 h-4 w-4 shrink-0 text-[#6f2f3c]" aria-hidden="true" />
-              <span>{access}</span>
-            </p>
-          )}
+          <dl className="grid gap-3 text-sm">
+            {info?.address && (
+              <div className="flex items-start gap-2">
+                <dt className="mt-1 shrink-0">
+                  <Building2 className="h-4 w-4 text-[#6f2f3c]" aria-hidden="true" />
+                  <span className="sr-only">住所</span>
+                </dt>
+                <dd className="leading-7 text-ink/80">{info.address}</dd>
+              </div>
+            )}
+            {accessText && (
+              <div className="flex items-start gap-2">
+                <dt className="mt-1 shrink-0">
+                  <Train className="h-4 w-4 text-[#6f2f3c]" aria-hidden="true" />
+                  <span className="sr-only">アクセス</span>
+                </dt>
+                <dd className="leading-7 text-ink/80">{accessText}</dd>
+              </div>
+            )}
+          </dl>
 
-          <div className={`grid gap-2 ${access ? "mt-4" : ""}`}>
-            <a
-              href={venueDirectionsUrl(venue)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="riri-button riri-button-gold min-h-12 px-4 py-3 text-sm"
-            >
-              <Navigation className="h-4 w-4 shrink-0" aria-hidden="true" />
-              現在地からのルートを見る
-            </a>
+          <div className="mt-4 grid gap-2">
             <a
               href={venueSearchUrl(venue)}
               target="_blank"
               rel="noopener noreferrer"
+              className="riri-button riri-button-gold min-h-12 px-4 py-3 text-sm"
+            >
+              <MapPin className="h-4 w-4 shrink-0" aria-hidden="true" />
+              会場の地図を開く
+            </a>
+            <a
+              href={venueDirectionsUrl(venue)}
+              target="_blank"
+              rel="noopener noreferrer"
               className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
             >
-              Googleマップで開く
+              <Navigation className="h-4 w-4 shrink-0" aria-hidden="true" />
+              現在地からのルートを見る
               <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
             </a>
           </div>
 
           <p className="mt-3 text-xs leading-6 text-ink/50">
-            {note ? `${note} ` : ""}
-            「現在地からのルート」はGoogleマップが開き、今いる場所からの経路と所要時間が表示されます。
+            {note}
+            {info?.source && `（出典：${info.source}）`}
           </p>
         </div>
       </div>

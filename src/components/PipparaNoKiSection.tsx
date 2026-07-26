@@ -540,7 +540,6 @@ export function PipparaNoKiSection() {
           id="pippara-venue"
           className="mt-8"
           venue="荻窪小劇場"
-          access="JR・東京メトロ荻窪駅 南口より徒歩約8分"
           note="開場は開演の30分前を予定。"
         />
 

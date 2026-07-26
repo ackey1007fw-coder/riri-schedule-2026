@@ -36,6 +36,10 @@ npm run dev   # http://127.0.0.1:5173 でローカル確認
 - `api/showroom.js` … SHOWROOM統計のリアルタイム取得（`room_id=550336`）。
 
 ## 会場アクセスの地図
+- `src/data/venues.ts` … 会場の住所・アクセスの登録先。キーは `events.ts` の `venue` と完全一致させる。
+  - **住所は出典が確認できたものだけ書く**（公演フライヤー・主催の告知など）。`source` に出典を必ず残す。
+  - 分からない会場は `address` を省略してよい（会場名だけで検索する）。**推測で住所を書かない**。
+  - 検索キーワードが「会場名＋住所」になると Google マップが場所を一意に特定でき、スマホではマップアプリの場所カード（経路・ナビ開始つき）が開く。住所が無いと候補止まりになりやすい。
 - `src/lib/venueMap.ts` … 会場名から Google マップの URL を作るヘルパー。**API キー不要**。
   - `venueEmbedUrl` 埋め込み用（キーレス `output=embed`）/ `venueDirectionsUrl` **現在地からの経路**（`origin` を省くと Google 側が現在地を使う）/ `venueSearchUrl` マップ検索。
   - `isMappableVenue` で「都内某所」「屋外施設」など**場所が特定できない会場は地図を出さない**。
