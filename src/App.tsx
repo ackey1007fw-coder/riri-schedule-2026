@@ -33,6 +33,7 @@ import { ShowroomSection } from "./components/ShowroomSection";
 import { SiteHeader } from "./components/SiteHeader";
 import { SpecialStreamBanner } from "./components/SpecialStreamBanner";
 import { StructuredData } from "./components/StructuredData";
+import { SupportCallSection } from "./components/SupportCallSection";
 import { SupportersSection } from "./components/SupportersSection";
 import { TodayDashboard } from "./components/TodayDashboard";
 import {
@@ -112,6 +113,7 @@ function App() {
         <BirthdayCelebration />
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
         <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
+        <SupportCallSection />
         <SectionReveal>
           <TodayDashboard events={events} socialLinks={socialLinks} nextEvent={nextEvent} />
         </SectionReveal>
