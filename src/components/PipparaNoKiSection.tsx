@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { SectionHeader } from "./SectionHeader";
+import { VenueMap } from "./VenueMap";
 
 const pipparaTicketUrl =
   "https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9";
@@ -385,9 +386,12 @@ export function PipparaNoKiSection() {
                   </dt>
                   <dd className="mt-1 text-ink/85">
                     荻窪小劇場
-                    <span className="mt-0.5 block text-xs text-ink/55">
-                      JR・東京メトロ荻窪駅 南口より徒歩約8分
-                    </span>
+                    <a
+                      href="#pippara-venue"
+                      className="mt-0.5 block text-xs font-bold text-[#6f2f3c] underline decoration-[#c9a24b] underline-offset-2"
+                    >
+                      地図・アクセスを見る
+                    </a>
                   </dd>
                 </div>
                 <div>
@@ -530,6 +534,15 @@ export function PipparaNoKiSection() {
             </a>
           </div>
         </div>
+
+        {/* 会場までの行き方 */}
+        <VenueMap
+          id="pippara-venue"
+          className="mt-8"
+          venue="荻窪小劇場"
+          access="JR・東京メトロ荻窪駅 南口より徒歩約8分"
+          note="開場は開演の30分前を予定。地図はGoogleマップの検索結果を表示しています。"
+        />
 
         {/* 里季さんの投稿：本文は折りたたみにして見通しを良くする */}
         <div className="mt-8 riri-card border-[#7c5a3a]/20 bg-white p-5 sm:p-7">
