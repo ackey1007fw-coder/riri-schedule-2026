@@ -5,6 +5,11 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.7.27 Instagram「生誕祭ソロショット📸✨️」7/19の生誕祭より（4枚）
+  { src: "/images/gallery/g68.jpg", alt: "ティアラをつけ、たくさんのプレゼントの紙袋を抱えて笑顔の夏凪里季さん（生誕祭ソロショット）" },
+  { src: "/images/gallery/g69.jpg", alt: "「HAPPY BIRTHDAY」と描かれたバースデープレートを、線香花火の光とともに掲げて目を細めて笑う夏凪里季さん" },
+  { src: "/images/gallery/g70.jpg", alt: "フォークを手に、生クリームたっぷりのバースデープレートを持ってほほえむ夏凪里季さん" },
+  { src: "/images/gallery/g71.jpg", alt: "「りりたん 誕生日おめでとう」のうちわやお花、たくさんの紙袋が並んだ生誕祭のプレゼント" },
   // 2026.7.27 X「ネイル変えた🎶」ブルーグレー×シルバーラメのネイル
   { src: "/images/gallery/g67.jpg", alt: "くすんだブルーグレーにシルバーラメのアクセントを添えたロングネイルを、顔の前にかざして見せる夏凪里季さんのセルフィー" },
   // 2026.7.26 X『ピッパラの樹』A班 稽古初日レポート
@@ -93,7 +98,7 @@ export const galleryUpdate: {
   url: string;
 } = {
   date: "2026.7.27",
-  platform: "X",
-  note: "「ネイル変えた🎶」涼しげなブルーグレーの新しいネイル💅",
-  url: "https://x.com/frecam2025_0306/status/2081572553349619757"
+  platform: "Instagram",
+  note: "「生誕祭ソロショット📸✨️」7/19の生誕祭のソロ写真を4枚公開🎂",
+  url: "https://www.instagram.com/p/DbS3GMDiQuv/"
 };
