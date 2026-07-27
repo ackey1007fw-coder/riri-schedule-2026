@@ -8,14 +8,14 @@ export function CharmSection() {
   const [photos] = useState(() => pickShowcasePhotos(charmPhotos.length));
 
   return (
-    <section className="bg-[linear-gradient(180deg,#fffafc,#fff4f8_55%,#ffffff)] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="bg-[linear-gradient(180deg,#fffafc,#fff4f8_55%,#ffffff)] px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
             <p className="mb-4 inline-flex border border-champagne/45 bg-white/70 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] text-champagneInk backdrop-blur">
               Riri Mood
             </p>
-            <h2 className="font-display text-4xl leading-[1.15] text-ink sm:text-5xl">
+            <h2 className="font-display text-3xl leading-[1.15] text-ink sm:text-4xl">
               笑顔の奥に、
               <br className="hidden sm:block" />
               まっすぐな芯。

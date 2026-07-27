@@ -50,7 +50,7 @@ export function SupportCallSection() {
   return (
     <section
       id="support-call"
-      className="scroll-mt-24 border-y border-[#d4708f]/30 bg-[#fdf1f4] py-10 sm:py-14"
+      className="scroll-mt-24 border-y border-[#d4708f]/30 bg-[#fdf1f4] py-14 sm:py-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="riri-card overflow-hidden border-[#d4708f]/35 bg-white shadow-paper">

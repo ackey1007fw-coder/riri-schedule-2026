@@ -7,7 +7,6 @@ import {
   Radio,
   Sparkles
 } from "lucide-react";
-import { news } from "../data/news";
 import { downloadScheduleCalendar } from "../lib/calendarExport";
 import type { ScheduleEvent, SocialLink } from "../types";
 
@@ -137,14 +136,14 @@ export function TodayDashboard({
   const hasAgenda = agenda.length > 0;
 
   return (
-    <section id="today" className="scroll-mt-32 bg-porcelain px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+    <section id="today" className="scroll-mt-32 bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-champagneInk">
               Today & This Week
             </p>
-            <h2 className="mt-2 font-display text-4xl text-ink sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl text-ink sm:text-4xl">
               今日、何を見ればいい？
             </h2>
           </div>
@@ -204,16 +203,16 @@ export function TodayDashboard({
               </>
             ) : nextEvent ? (
               <>
-                <h3 className="mt-6 font-display text-3xl leading-tight text-ink sm:text-4xl">
-                  {nextEvent.shortTitle}
-                </h3>
-                <p className="mt-3 flex items-center gap-2 text-sm font-bold text-ink/65">
-                  <Clock3 className="h-4 w-4 text-champagne" aria-hidden="true" />
-                  今週の新しい予定はまだありません。次に会えるのはこちらです
+                {/* すぐ下の「次に見るべき出演情報」で同じ予定を大きく紹介するため、
+                    ここでは見出しを重ねず一文で案内する。 */}
+                <p className="mt-5 leading-8 text-ink/70">
+                  今週の新しい予定はまだありません。次に会えるのは
+                  <span className="font-bold text-ink">{nextEvent.shortTitle}</span>
+                  （{nextEvent.displayDate}）です。
                 </p>
                 <a
                   href="#next"
-                  className="riri-button riri-button-primary mt-7 min-h-12 w-full px-5 py-3 text-sm sm:w-auto"
+                  className="riri-button riri-button-soft mt-5 min-h-12 w-full px-5 py-3 text-sm sm:w-auto"
                 >
                   次の出演を見る
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -257,45 +256,25 @@ export function TodayDashboard({
           )}
         </div>
 
-        <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_auto]">
-          <div className="riri-card riri-card-interactive border-rosefog/25 bg-white p-5">
-            <p className="text-xs font-black uppercase tracking-[0.16em] text-champagneInk">
-              Latest Updates
-            </p>
-            <div className="mt-3 grid gap-3 sm:grid-cols-2">
-              {news.slice(0, 2).map((item) => (
-                <a
-                  key={`${item.date}-${item.text}`}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-l-2 border-champagne pl-4 text-sm font-bold leading-6 text-ink/72 transition hover:text-champagne"
-                >
-                  <span className="block text-xs text-ink/40">{item.date} / {item.label}</span>
-                  {item.text}
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:w-[420px]">
-            <button
-              type="button"
-              onClick={() => downloadScheduleCalendar(events)}
-              className="riri-button riri-button-soft min-h-14 px-4 py-3 text-sm"
-            >
-              <Download className="h-4 w-4 text-champagne" aria-hidden="true" />
-              今後の予定を保存
-            </button>
-            <a
-              href={showroom}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="riri-button riri-button-rose min-h-14 px-4 py-3 text-sm"
-            >
-              <Radio className="h-4 w-4" aria-hidden="true" />
-              SHOWROOMへ
-            </a>
-          </div>
+        {/* 最新のお知らせはページ上部のニュースバーで扱うため、ここでは重複させない。 */}
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:max-w-[420px]">
+          <button
+            type="button"
+            onClick={() => downloadScheduleCalendar(events)}
+            className="riri-button riri-button-soft min-h-14 px-4 py-3 text-sm"
+          >
+            <Download className="h-4 w-4 text-champagne" aria-hidden="true" />
+            今後の予定を保存
+          </button>
+          <a
+            href={showroom}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="riri-button riri-button-rose min-h-14 px-4 py-3 text-sm"
+          >
+            <Radio className="h-4 w-4" aria-hidden="true" />
+            SHOWROOMへ
+          </a>
         </div>
       </div>
     </section>

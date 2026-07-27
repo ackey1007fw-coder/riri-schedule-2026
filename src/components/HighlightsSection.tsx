@@ -27,7 +27,7 @@ export function HighlightsSection() {
   }
 
   return (
-    <section id="highlights" className="scroll-mt-24 bg-porcelain py-16 sm:py-24">
+    <section id="highlights" className="scroll-mt-24 bg-porcelain py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           kicker="Highlights"

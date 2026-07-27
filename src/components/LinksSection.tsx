@@ -9,7 +9,7 @@ type LinksSectionProps = {
 
 export function LinksSection({ socialLinks, mediaLinks }: LinksSectionProps) {
   return (
-    <section id="links" className="bg-white py-16 sm:py-24">
+    <section id="links" className="bg-white py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           kicker="Links"
@@ -53,7 +53,7 @@ export function LinksSection({ socialLinks, mediaLinks }: LinksSectionProps) {
 
           <div className="border border-champagne/40 bg-porcelain p-5">
             <p className="text-xs font-bold uppercase text-champagneInk">Media</p>
-            <h3 className="mt-1 font-display text-3xl text-ink">
+            <h3 className="mt-1 font-display text-2xl text-ink">
               もっと知る
             </h3>
             <div className="mt-5 grid gap-3">

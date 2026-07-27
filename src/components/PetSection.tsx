@@ -6,7 +6,7 @@ import { SectionHeader } from "./SectionHeader";
 
 export function PetSection() {
   return (
-    <section id="kalua" className="bg-white py-16 sm:py-24">
+    <section id="kalua" className="bg-porcelain py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <SectionHeader

@@ -28,7 +28,7 @@ export function ScheduleSection({
   const archiveEvents = pastEvents.filter((event) => !isFeaturedReport(event));
 
   return (
-    <section id="schedule" className="scroll-mt-24 bg-white py-16 sm:py-24">
+    <section id="schedule" className="scroll-mt-24 bg-white py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           kicker="Schedule"
@@ -42,7 +42,7 @@ export function ScheduleSection({
               <p className="text-xs font-bold uppercase text-champagneInk">
                 Upcoming
               </p>
-              <h3 className="mt-1 font-display text-3xl text-ink">
+              <h3 className="mt-1 font-display text-2xl text-ink">
                 今後の出演情報
               </h3>
             </div>
@@ -74,7 +74,7 @@ export function ScheduleSection({
                 <p className="text-xs font-bold uppercase text-champagneInk">
                   Report
                 </p>
-                <h3 className="mt-1 font-display text-3xl text-ink">
+                <h3 className="mt-1 font-display text-2xl text-ink">
                   生誕祭レポート
                 </h3>
               </div>
@@ -96,7 +96,7 @@ export function ScheduleSection({
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 marker:hidden">
             <div>
               <p className="text-xs font-bold uppercase text-champagneInk">Archive</p>
-              <h3 className="mt-1 font-display text-3xl text-ink">
+              <h3 className="mt-1 font-display text-2xl text-ink">
                 終了済みイベント
               </h3>
               <p className="mt-2 text-sm leading-6 text-ink/55">
@@ -132,7 +132,7 @@ export function ScheduleSection({
           <div className="mb-5 flex items-end justify-between gap-4 border-b border-champagne/25 pb-4">
             <div>
               <p className="text-xs font-bold uppercase text-champagneInk">Calendar</p>
-              <h3 className="mt-1 font-display text-3xl text-ink">
+              <h3 className="mt-1 font-display text-2xl text-ink">
                 カレンダー表示
               </h3>
             </div>

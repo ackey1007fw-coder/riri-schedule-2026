@@ -4,7 +4,7 @@ import { SectionHeader } from "./SectionHeader";
 
 export function InterviewSection() {
   return (
-    <section className="bg-porcelain py-16 sm:py-24">
+    <section className="bg-white py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader kicker="Interview" title="インタビュー記事" copy="役者を目指す思いや、これまでの挑戦を知ることができる掲載記事です。" />
         <div className="grid gap-3 md:grid-cols-2">

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Music2, Play } from "lucide-react";
+import { ChevronDown, Music2, Play } from "lucide-react";
 import { clips, type VideoClip } from "../data/clips";
 
 // public/videos/xxx.mp4 に対応する public/images/clips/xxx.jpg を参照する。
@@ -95,28 +95,49 @@ function ClipCard({ clip }: { clip: VideoClip }) {
   );
 }
 
+// 最初に見せる本数。動画が縦長なので全部並べるとスマホで延々スクロールになるため、
+// 3本だけ出して残りは「もっと見る」で開く（同時に自動再生される本数も抑えられる）。
+const INITIAL_CLIP_COUNT = 3;
+
 export function ClipSection() {
+  const [expanded, setExpanded] = useState(false);
+
   if (clips.length === 0) return null;
 
+  const visibleClips = expanded ? clips : clips.slice(0, INITIAL_CLIP_COUNT);
+  const hiddenCount = clips.length - visibleClips.length;
+
   return (
-    <section id="clips" className="bg-porcelain px-4 py-12 sm:px-6 lg:px-8">
+    <section id="clips" className="bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <div className="mb-6 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-champagneInk">
             Short Movie
           </p>
-          <h2 className="mt-1 font-display text-2xl text-ink sm:text-3xl">
+          <h2 className="mt-1 font-display text-3xl text-ink sm:text-4xl">
             動く里季ちゃん
           </h2>
-          <p className="mt-2 text-sm text-ink/60">
+          <p className="mt-3 text-sm leading-7 text-ink/60">
             ショート動画。音声はオフで流しているので、本編はタップして元の投稿でどうぞ。
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {clips.map((clip) => (
+          {visibleClips.map((clip) => (
             <ClipCard key={clip.src} clip={clip} />
           ))}
         </div>
+        {hiddenCount > 0 && (
+          <div className="mt-8 text-center">
+            <button
+              type="button"
+              onClick={() => setExpanded(true)}
+              className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+            >
+              <ChevronDown className="h-4 w-4 text-champagne" aria-hidden="true" />
+              ほかの動画も見る（あと{hiddenCount}本）
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

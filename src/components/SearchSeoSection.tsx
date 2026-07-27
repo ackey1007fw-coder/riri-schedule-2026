@@ -29,7 +29,7 @@ const searchTopics = [
 
 export function SearchSeoSection() {
   return (
-    <section className="bg-white px-4 py-10 sm:px-6 lg:px-8" aria-label="サイト案内">
+    <section className="bg-porcelain px-4 py-14 sm:px-6 sm:py-20 lg:px-8" aria-label="サイト案内">
       <details className="group/guide mx-auto max-w-7xl border-y border-champagne/35">
         <summary className="flex cursor-pointer list-none items-center justify-between gap-5 py-7 marker:hidden">
           <span className="flex min-w-0 items-center gap-4">

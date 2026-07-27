@@ -26,7 +26,7 @@ export function MagazineSpread({ nextEvent }: MagazineSpreadProps) {
   const featureAlts = feature.map((p) => p.alt);
 
   return (
-    <section className="bg-white py-12 sm:py-16" aria-label="Riri Magazine">
+    <section className="bg-porcelain py-14 sm:py-20" aria-label="Riri Magazine">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid overflow-hidden border border-rosefog/20 bg-porcelain shadow-paper lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative border-b border-rosefog/20 bg-white lg:border-b-0 lg:border-r">
