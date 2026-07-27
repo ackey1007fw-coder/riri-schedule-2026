@@ -23,7 +23,7 @@ export function AvatarGallery() {
       <div className="mb-5 flex items-end justify-between gap-4">
         <div>
           <p className="text-xs font-bold uppercase text-champagneInk">Avatar Gallery</p>
-          <h3 className="mt-1 font-display text-3xl text-ink">
+          <h3 className="mt-1 font-display text-2xl text-ink">
             SHOWROOMアバター
           </h3>
         </div>

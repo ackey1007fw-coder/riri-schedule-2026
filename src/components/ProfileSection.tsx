@@ -5,7 +5,7 @@ import { SectionHeader } from "./SectionHeader";
 
 export function ProfileSection() {
   return (
-    <section id="profile" className="scroll-mt-24 bg-porcelain py-16 sm:py-24">
+    <section id="profile" className="scroll-mt-24 bg-white py-14 sm:py-20">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.86fr_1.14fr] lg:px-8">
         <div>
           <SectionHeader

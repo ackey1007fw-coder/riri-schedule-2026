@@ -42,7 +42,9 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
             )}
             alt={profile.name}
             loading="eager"
-            fetchPriority="high"
+            // React 18 は camelCase の fetchPriority を認識せず属性を落としてしまうため、
+            // 小文字の fetchpriority を直接渡して優先読み込みを効かせる。
+            {...{ fetchpriority: "high" }}
             className="block w-full object-cover object-[50%_20%] lg:absolute lg:inset-0 lg:h-full"
           />
           <p className="absolute right-4 top-4 hidden border border-white/60 bg-white/30 px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-ink backdrop-blur lg:block">

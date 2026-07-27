@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import { ActionStrip } from "./components/ActionStrip";
 import { BirthdayBanner } from "./components/BirthdayBanner";
 import { BirthdayCelebration } from "./components/BirthdayCelebration";
 import { BirthdayCountdown } from "./components/BirthdayCountdown";
@@ -112,7 +111,6 @@ function App() {
         <BirthdayBanner />
         <BirthdayCelebration />
         <Hero nextEvent={nextEvent} socialLinks={socialLinks} />
-        <ActionStrip nextEvent={nextEvent} socialLinks={socialLinks} />
         <SupportCallSection />
         <SectionReveal>
           <TodayDashboard events={events} socialLinks={socialLinks} nextEvent={nextEvent} />

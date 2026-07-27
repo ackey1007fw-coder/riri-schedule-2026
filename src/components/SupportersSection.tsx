@@ -7,7 +7,7 @@ const RECOMMEND_URL =
 
 export function SupportersSection() {
   return (
-    <section className="bg-porcelain py-16 sm:py-24">
+    <section className="bg-white py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           kicker="Messages"

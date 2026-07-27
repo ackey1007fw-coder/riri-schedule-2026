@@ -4,7 +4,7 @@ const fanLetterForm = "https://docs.google.com/forms/d/e/1FAIpQLSdVD6VDs_Es3wNqx
 
 export function FanLetterSection() {
   return (
-    <section className="bg-white py-16 sm:py-20">
+    <section className="bg-porcelain py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 border-y border-champagne/35 py-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div>
