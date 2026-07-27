@@ -9,6 +9,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.7.27",
+    label: "X",
+    text: "「ネイル変えた🎶」くすんだブルーグレーで統一したロングのアーモンド型ネイル。アクセントにシルバーラメの一本を添えた、涼しげで大人っぽいデザイン",
+    url: "https://x.com/frecam2025_0306/status/2081572553349619757"
+  },
+  {
+    date: "2026.7.27",
     label: "お知らせ",
     text: "【ご協力お願いします🙏】里季さんの高校からのお友達(@174fumina.si2)がダンスの大会に出場中。リール動画の再生・いいね・コメント・再投稿の協力を里季さんご本人が呼びかけ。現在総合2位、7/27(月)11:59まで",
     url: "https://www.instagram.com/reel/Da60yPDxPBp/"

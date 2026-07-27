@@ -5,8 +5,8 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
-  // X ネイルの披露（ブルーグレー×シルバーラメ）
-  { src: "/images/gallery/g67.jpg", alt: "屋外でブルーグレー×シルバーラメのネイルを手前にかざして自撮りする夏凪里季さん" },
+  // 2026.7.27 X「ネイル変えた🎶」ブルーグレー×シルバーラメのネイル
+  { src: "/images/gallery/g67.jpg", alt: "くすんだブルーグレーにシルバーラメのアクセントを添えたロングネイルを、顔の前にかざして見せる夏凪里季さんのセルフィー" },
   // 2026.7.26 X『ピッパラの樹』A班 稽古初日レポート
   { src: "/images/gallery/g66.jpg", alt: "淡いブルーグレーのシャーリングトップスで鏡越しに自撮りする夏凪里季さん（『ピッパラの樹』A班 稽古初日）" },
   // 2026.6.28 X【出演情報】劇団ココア『ピッパラの樹』出演告知ポートレート
@@ -92,8 +92,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.7.26",
+  date: "2026.7.27",
   platform: "X",
-  note: "『ピッパラの樹』A班 稽古初日の一枚🎭",
-  url: "https://x.com/frecam2025_0306/status/2081372754612486194"
+  note: "「ネイル変えた🎶」涼しげなブルーグレーの新しいネイル💅",
+  url: "https://x.com/frecam2025_0306/status/2081572553349619757"
 };
