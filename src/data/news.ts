@@ -9,6 +9,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.7.27",
+    label: "Instagram",
+    text: "「生誕祭ソロショット📸✨️」7/19の生誕祭のソロ写真を公開。ティアラ姿の一枚やバースデーケーキ、抱えきれないほどのプレゼントの写真とともに「たくさんのお祝いをありがとう💞」",
+    url: "https://www.instagram.com/p/DbS3GMDiQuv/"
+  },
+  {
+    date: "2026.7.27",
     label: "X",
     text: "「ネイル変えた🎶」くすんだブルーグレーで統一したロングのアーモンド型ネイル。アクセントにシルバーラメの一本を添えた、涼しげで大人っぽいデザイン",
     url: "https://x.com/frecam2025_0306/status/2081572553349619757"

@@ -102,6 +102,47 @@ export const events: ScheduleEvent[] = [
     isImportant: true
   },
   {
+    id: "riri-birthday-solo-shots-2026-07",
+    title: "生誕祭ソロショット📸✨️",
+    shortTitle: "生誕祭ソロショット",
+    subtitle: "ハタチの生誕祭から、あらためて",
+    category: "birthday",
+    startAt: "2026-07-27T07:00:00+09:00",
+    endAt: "2026-07-27T07:00:00+09:00",
+    displayDate: "2026年7月27日（月）の投稿より",
+    image: "/images/gallery/g68.jpg",
+    imageAlt:
+      "ティアラをつけ、たくさんのプレゼントの紙袋を抱えて笑顔の夏凪里季さん",
+    summary:
+      "7月19日の生誕祭で撮影したソロ写真を、夏凪里季さんがInstagramに投稿。「また後日別の写真あげるね📸」と予告していた一組で、ティアラ姿のショットやバースデーケーキ、抱えきれないほどのプレゼントの写真が並びます。",
+    badges: ["生誕祭レポート", "20歳", "Instagram"],
+    gallery: [
+      {
+        src: "/images/gallery/g69.jpg",
+        alt: "「HAPPY BIRTHDAY」と描かれたバースデープレートを、線香花火の光とともに掲げて目を細めて笑う夏凪里季さん"
+      },
+      {
+        src: "/images/gallery/g70.jpg",
+        alt: "フォークを手に、生クリームたっぷりのバースデープレートを持ってほほえむ夏凪里季さん"
+      },
+      {
+        src: "/images/gallery/g71.jpg",
+        alt: "「りりたん 誕生日おめでとう」のうちわやお花、たくさんの紙袋が並んだ生誕祭のプレゼント"
+      }
+    ],
+    reportQuote:
+      "生誕祭ソロショット📸✨️\n\nケーキあまあまで美味しかった🎂\n\nプレゼント持ちきれないほど🙏✨️\n\nたくさんのお祝いをありがとう💞\n\n#誕生日 #誕生日コーデ #女子大生 #06 #ハーフアップ",
+    reportNote:
+      "ティアラとハーフアップ、そして山盛りのプレゼント。ハタチの生誕祭のうれしさが、そのまま伝わってくる4枚です。",
+    links: [
+      {
+        label: "Instagramで投稿を見る",
+        url: "https://www.instagram.com/p/DbS3GMDiQuv/",
+        kind: "sns"
+      }
+    ]
+  },
+  {
     id: "riri-birthday-1month-later-2026-07",
     title: "20歳のお祝いはまだまだ続く🎂",
     shortTitle: "1か月後の生誕祭ショット",
