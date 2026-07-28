@@ -9,6 +9,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.7.28",
+    label: "Instagram",
+    text: "「東京駅にあるパリアッチョってお店なんだけど、プレートも豪華でとっても可愛いし刺さってた薔薇ももらえて幸せ🌹」丸の内でのバースデーサプライズを公開。「サプライズしてくれてありがとう💞」",
+    url: "https://www.instagram.com/p/DbVb9P2CetG/"
+  },
+  {
+    date: "2026.7.28",
     label: "X",
     text: "「デジカメをGETしてから写真撮るのが楽しくて仕方ない📸」手に入れたばかりのコンパクトデジカメを掲げた、いちご柄トップスのお出かけショット（ディズニーシーにて）",
     url: "https://x.com/frecam2025_0306/status/2082028292434014320"

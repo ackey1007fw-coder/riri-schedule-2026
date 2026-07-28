@@ -13,6 +13,14 @@ export type VideoClip = {
 
 export const clips: VideoClip[] = [
   {
+    src: "/videos/instagram-2026-07-28.mp4",
+    platform: "Instagram",
+    title: "「Happy Birthday Riri」のバースデープレート",
+    caption: "キャンドルの灯りと一輪挿しの薔薇。パリアッチョ 丸の内でのバースデーサプライズ🌹",
+    date: "2026.7.28",
+    url: "https://www.instagram.com/p/DbVb9P2CetG/"
+  },
+  {
     src: "/videos/tiktok-2026-06-28.mp4",
     platform: "TikTok",
     title: "犬って人間の4倍の速度で時間が進んでるらしい",
