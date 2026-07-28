@@ -5,6 +5,8 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.7.28 X「デジカメをGETしてから写真撮るのが楽しくて仕方ない📸」
+  { src: "/images/gallery/g72.jpg", alt: "岩肌の壁を背景に、シルバーのコンパクトデジタルカメラを顔の横に掲げてほほえむ夏凪里季さん。いちご柄の白いキャミソールとハートのネックレス" },
   // 2026.7.27 Instagram「生誕祭ソロショット📸✨️」7/19の生誕祭より（4枚）
   { src: "/images/gallery/g68.jpg", alt: "ティアラをつけ、たくさんのプレゼントの紙袋を抱えて笑顔の夏凪里季さん（生誕祭ソロショット）" },
   { src: "/images/gallery/g69.jpg", alt: "「HAPPY BIRTHDAY」と描かれたバースデープレートを、線香花火の光とともに掲げて目を細めて笑う夏凪里季さん" },
@@ -97,8 +99,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.7.27",
-  platform: "Instagram",
-  note: "「生誕祭ソロショット📸✨️」7/19の生誕祭のソロ写真を4枚公開🎂",
-  url: "https://www.instagram.com/p/DbS3GMDiQuv/"
+  date: "2026.7.28",
+  platform: "X",
+  note: "「デジカメをGETしてから写真撮るのが楽しくて仕方ない📸」新しい相棒のデジカメと一緒に📷",
+  url: "https://x.com/frecam2025_0306/status/2082028292434014320"
 };
