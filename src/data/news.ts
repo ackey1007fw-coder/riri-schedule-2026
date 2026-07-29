@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.7.29",
+    label: "TikTok",
+    text: "「人生で初めて髪を染めた どっちの方がタイプ？」黒髪から明るいブラウンへ。イメチェンのビフォーアフターを見せる動画を公開",
+    url: "https://vt.tiktok.com/ZS4Ln9f6L/"
+  },
+  {
     date: "2026.7.28",
     label: "X",
     text: "「みてみて！ニュース載ってた🎶」7/27に投稿したブルーグレーのキラキラネイルが、Xのトレンドまとめ「Xで夏らしい新ネイル投稿が続々 キラキラデザインが人気」で紹介されたことを報告",
