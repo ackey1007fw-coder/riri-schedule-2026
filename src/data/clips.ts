@@ -13,6 +13,14 @@ export type VideoClip = {
 
 export const clips: VideoClip[] = [
   {
+    src: "/videos/tiktok-2026-07-29.mp4",
+    platform: "TikTok",
+    title: "人生で初めて髪を染めた",
+    caption: "黒髪から明るいブラウンへ。「どっちの方がタイプ？」のイメチェン動画💇‍♀️",
+    date: "2026.7.29",
+    url: "https://vt.tiktok.com/ZS4Ln9f6L/"
+  },
+  {
     src: "/videos/instagram-2026-07-28.mp4",
     platform: "Instagram",
     title: "「Happy Birthday Riri」のバースデープレート",

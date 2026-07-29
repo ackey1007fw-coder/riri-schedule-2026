@@ -5,6 +5,8 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.7.29 TikTok「人生で初めて髪を染めた どっちの方がタイプ？」イメチェン動画より
+  { src: "/images/gallery/g79.jpg", alt: "人生で初めて染めたという明るいブラウンのロングヘアでカメラを見つめる夏凪里季さん。白いシアー素材のトップスにデニム、屋外での自撮り（TikTok「人生で初めて髪を染めた」より）" },
   // 2026.7.28 X「みてみて！ニュース載ってた🎶」Xのトレンドまとめに掲載された記念のスクリーンショット（2枚）
   { src: "/images/gallery/g77.jpg", alt: "夏凪里季さんのX投稿「みてみて！ニュース載ってた🎶」。トレンド「Xで夏らしい新ネイル投稿が続々 キラキラデザインが人気」のカードが添えられている" },
   { src: "/images/gallery/g78.jpg", alt: "Xのトレンドまとめ本文のスクリーンショット。「夏凪里季さんがグレーグラデのキラキラデザインを投稿したり」という一節に赤い線が引かれている" },
@@ -107,8 +109,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.7.28",
-  platform: "X",
-  note: "「みてみて！ニュース載ってた🎶」7/27のネイルがXのトレンドまとめで紹介された記念のスクリーンショット✨",
-  url: "https://x.com/frecam2025_0306/status/2082080818881814932"
+  date: "2026.7.29",
+  platform: "TikTok",
+  note: "「人生で初めて髪を染めた」黒髪から明るいブラウンへイメチェンした一枚💇‍♀️",
+  url: "https://vt.tiktok.com/ZS4Ln9f6L/"
 };
