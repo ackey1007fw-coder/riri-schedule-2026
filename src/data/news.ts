@@ -9,6 +9,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.7.28",
+    label: "X",
+    text: "「みてみて！ニュース載ってた🎶」7/27に投稿したブルーグレーのキラキラネイルが、Xのトレンドまとめ「Xで夏らしい新ネイル投稿が続々 キラキラデザインが人気」で紹介されたことを報告",
+    url: "https://x.com/frecam2025_0306/status/2082080818881814932"
+  },
+  {
+    date: "2026.7.28",
     label: "Instagram",
     text: "「東京駅にあるパリアッチョってお店なんだけど、プレートも豪華でとっても可愛いし刺さってた薔薇ももらえて幸せ🌹」丸の内でのバースデーサプライズを公開。「サプライズしてくれてありがとう💞」",
     url: "https://www.instagram.com/p/DbVb9P2CetG/"

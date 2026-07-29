@@ -5,6 +5,9 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.7.28 X「みてみて！ニュース載ってた🎶」Xのトレンドまとめに掲載された記念のスクリーンショット（2枚）
+  { src: "/images/gallery/g77.jpg", alt: "夏凪里季さんのX投稿「みてみて！ニュース載ってた🎶」。トレンド「Xで夏らしい新ネイル投稿が続々 キラキラデザインが人気」のカードが添えられている" },
+  { src: "/images/gallery/g78.jpg", alt: "Xのトレンドまとめ本文のスクリーンショット。「夏凪里季さんがグレーグラデのキラキラデザインを投稿したり」という一節に赤い線が引かれている" },
   // 2026.7.28 Instagram「刺さってた薔薇ももらえて幸せ🌹」パリアッチョ 丸の内でのバースデーサプライズ（4枚）
   { src: "/images/gallery/g73.jpg", alt: "ライトアップされた東京駅丸の内駅舎を背景に、白い包みに一輪だけ入った濃いピンクの薔薇" },
   { src: "/images/gallery/g74.jpg", alt: "夜の東京駅丸の内駅舎の前で、一輪の薔薇とYVES SAINT LAURENTの紙袋を手にほほえむ夏凪里季さん。白いオーガンジーのブラウスにドット柄のロングスカート" },
@@ -105,7 +108,7 @@ export const galleryUpdate: {
   url: string;
 } = {
   date: "2026.7.28",
-  platform: "Instagram",
-  note: "「プレートも豪華でとっても可愛いし刺さってた薔薇ももらえて幸せ🌹」パリアッチョ 丸の内でのバースデーサプライズより🌹",
-  url: "https://www.instagram.com/p/DbVb9P2CetG/"
+  platform: "X",
+  note: "「みてみて！ニュース載ってた🎶」7/27のネイルがXのトレンドまとめで紹介された記念のスクリーンショット✨",
+  url: "https://x.com/frecam2025_0306/status/2082080818881814932"
 };
