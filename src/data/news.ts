@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.7.30",
+    label: "Instagram",
+    text: "「📷⟡.·」黒のジップジャケット×白のリブタンクトップに、ペールピンクのリボンバッグを合わせた街撮りのストリートスナップを4枚公開（#ストリートスナップ #被写体ポートレート #被写体モデル）",
+    url: "https://www.instagram.com/p/DbabLRqCT_W/"
+  },
+  {
     date: "2026.7.29",
     label: "TikTok",
     text: "「人生で初めて髪を染めた どっちの方がタイプ？」黒髪から明るいブラウンへ。イメチェンのビフォーアフターを見せる動画を公開",
