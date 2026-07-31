@@ -5,6 +5,8 @@ export type GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.7.31 X「夏だね>  ̫<」イルミネーションの灯る夜の階段にて
+  { src: "/images/gallery/g84.jpg", alt: "イルミネーションが灯る夜の木製階段の上でほほえむ夏凪里季さん。白いレースのスクエアネックトップスにライトブルーのワイドデニム、淡いピンクのショルダーバッグ（X「夏だね」より）" },
   // 2026.7.30 Instagram「📷⟡.·」街撮りのストリートスナップ（4枚）
   { src: "/images/gallery/g80.jpg", alt: "金網フェンスの手すりにもたれ、肩越しにカメラへ視線を向ける夏凪里季さん。黒のジップジャケットに、CHARLES & KEITH のペールピンクのリボンバッグ（ストリートスナップ）" },
   { src: "/images/gallery/g81.jpg", alt: "耳元に手を添えて笑う夏凪里季さんのアップショット。黒いジップジャケットの襟元にハートモチーフのシルバーネックレスがのぞく（ストリートスナップ）" },
@@ -114,8 +116,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.7.30",
-  platform: "Instagram",
-  note: "「📷⟡.·」黒ジャケット×ペールピンクのリボンバッグ、街撮りのストリートスナップ4枚📷",
-  url: "https://www.instagram.com/p/DbabLRqCT_W/"
+  date: "2026.7.31",
+  platform: "X",
+  note: "「夏だね>  ̫<」イルミネーションが灯る夜の階段での涼しげな1枚✨",
+  url: "https://x.com/frecam2025_0306/status/2083030504925012290"
 };
