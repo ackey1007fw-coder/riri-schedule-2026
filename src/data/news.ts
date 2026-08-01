@@ -9,6 +9,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.8.1",
+    label: "応援案内",
+    text: "月シア別冊第2集『I'm talking about Homin\'』のデジタル花が販売開始。会場に行けない方も、劇場のスクリーンへ夏凪里季さんへの応援を届けられます。購入・入金は9月1日(火)23:59まで",
+    url: "https://x.com/frecam2025_0306/status/2083525044479664564"
+  },
+  {
+    date: "2026.8.1",
     label: "X",
     text: "「なおちゃんがお祝いしてくれた😭✨️💞 だいすき！」お友達のなおさん(@iito_nya)の投稿を引用してお祝いに感謝を伝えた投稿。2ショットとイタリアンのお料理の写真4枚",
     url: "https://x.com/frecam2025_0306/status/2083419789717053843"

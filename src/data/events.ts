@@ -59,12 +59,27 @@ export const events: ScheduleEvent[] = [
     image: "/images/im-talking-about-homin-flyer-2026.jpg",
     summary:
       "アイトキシリーズ第2弾、名曲から生まれた5つの短編集『I'm talking about Homin'』にA sideとして出演。脚本・演出：中平奈緒・もか・横大路伸。りりの出演回は 9/11(金)19:00｜9/12(土)12:00｜9/13(日)12:00｜9/15(火)18:00 の全4公演。前売券6,000円／当日券6,500円。",
-    badges: ["舞台", "A side", "全4公演", "アイトキ第2弾"],
+    badges: ["舞台", "A side", "全4公演", "デジタル花受付中", "アイトキ第2弾"],
     links: [
       {
         label: "チケット予約（livepocket）",
         url: "https://livepocket.jp/t/aitokihomin",
         kind: "ticket"
+      },
+      {
+        label: "デジタルメッセージ花（5,000円）",
+        url: "https://tsukitheater.base.ec/items/150226748",
+        kind: "info"
+      },
+      {
+        label: "デジタルスタンド花（2,000円）",
+        url: "https://tsukitheater.base.ec/items/150226569",
+        kind: "info"
+      },
+      {
+        label: "デジタル花のお知らせ",
+        url: "https://x.com/frecam2025_0306/status/2083525044479664564",
+        kind: "sns"
       },
       {
         label: "夏凪里季さんの出演告知",

@@ -630,7 +630,7 @@ export function PipparaNoKiSection() {
           </div>
 
           <a
-            href="#event-aitoki-homin-2026-09"
+            href="#aitoki-homin"
             className="riri-card riri-lift group flex gap-4 border-[#7c5a3a]/20 bg-white p-5"
           >
             <span className="relative w-20 shrink-0 overflow-hidden border border-[#7c5a3a]/20 bg-[#f0ead9] sm:w-24">
@@ -653,7 +653,7 @@ export function PipparaNoKiSection() {
                 A side・西荻窪 遊空間がざびぃ・9/11〜9/15 全4公演
               </span>
               <span className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[#6f2f3c]">
-                スケジュールで詳しく見る
+                アイトキ特集で詳しく見る
               </span>
             </span>
           </a>

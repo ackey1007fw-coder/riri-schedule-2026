@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { AitokiHominSection } from "./components/AitokiHominSection";
 import { BirthdayBanner } from "./components/BirthdayBanner";
 import { BirthdayCelebration } from "./components/BirthdayCelebration";
 import { BirthdayCountdown } from "./components/BirthdayCountdown";
@@ -121,6 +122,9 @@ function App() {
         </SectionReveal>
         <SectionReveal>
           <PipparaNoKiSection />
+        </SectionReveal>
+        <SectionReveal>
+          <AitokiHominSection />
         </SectionReveal>
         <SectionReveal>
           <ScheduleSection

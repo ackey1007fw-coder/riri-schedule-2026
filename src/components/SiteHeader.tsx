@@ -5,6 +5,7 @@ import type { SocialLink } from "../types";
 
 const navItems = [
   { label: "次の出演", href: "#next", id: "next" },
+  { label: "アイトキ", href: "#aitoki-homin", id: "aitoki-homin", desktopOnly: true },
   { label: "スケジュール", href: "#schedule", id: "schedule" },
   { label: "20th Birthday", href: "#birthday", id: "birthday", desktopOnly: true },
   { label: "これまでの歩み", href: "#highlights", id: "highlights" },
