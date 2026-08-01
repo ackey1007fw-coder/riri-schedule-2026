@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
+  Cake,
   CalendarDays,
   CalendarHeart,
   Drama,
@@ -14,6 +15,7 @@ const items = [
   { label: "次の出演", href: "#next", id: "next", Icon: CalendarHeart },
   { label: "ピッパラの樹", href: "#pippara-no-ki", id: "pippara-no-ki", Icon: Drama },
   { label: "カレンダー", href: "#calendar", id: "calendar", Icon: CalendarDays },
+  { label: "20歳の誕生日", href: "#birthday", id: "birthday", Icon: Cake },
   { label: "ギャラリー", href: "#gallery", id: "gallery", Icon: Images },
   { label: "SHOWROOM", href: "#showroom", id: "showroom", Icon: Radio },
   { label: "プロフィール", href: "#profile", id: "profile", Icon: UserRound }

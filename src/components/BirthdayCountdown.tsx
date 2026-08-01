@@ -108,7 +108,7 @@ export function BirthdayCountdown() {
   if (!isApproaching) return null;
 
   return (
-    <section id="birthday" className="scroll-mt-24 border-y border-rosefog/20 bg-porcelain py-14 sm:py-20">
+    <section id="birthday-countdown" className="scroll-mt-24 border-y border-rosefog/20 bg-porcelain py-14 sm:py-20">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-8">
         <div>
           <SectionHeader

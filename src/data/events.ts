@@ -80,6 +80,51 @@ export const events: ScheduleEvent[] = [
     isImportant: true
   },
   {
+    id: "riri-family-birthday-dinner-2026-08",
+    title: "家族と過ごした、幸せの誕生日ディナー🍴💕",
+    shortTitle: "家族との誕生日ディナー",
+    subtitle: "ハタチのお祝いを、クルーズディナーで",
+    category: "birthday",
+    startAt: "2026-08-01T12:00:00+09:00",
+    endAt: "2026-08-01T12:00:00+09:00",
+    displayDate: "Instagram @__ririri__24 の投稿より",
+    image: "/images/birthday/riri-family-dinner-hero.jpg",
+    imageAlt:
+      "クルーズ船内のレストランで「Happy Birthday RIRI 20th!」のケーキを手に笑顔を見せる夏凪里季さん",
+    summary:
+      "家族に20歳をお祝いしてもらったクルーズディナー。コース料理とバースデーケーキを味わい、里季さんが「全部美味しかった幸せの味」と綴った、あたたかな家族との時間です。",
+    badges: ["Birthday Memories", "20歳", "家族", "Instagram"],
+    gallery: [
+      {
+        src: "/images/birthday/riri-family-dinner-toast.jpg",
+        alt: "クルーズ船内のレストランで、グラスを手にカメラを見つめる夏凪里季さん"
+      },
+      {
+        src: "/images/birthday/riri-family-dinner-appetizer.jpg",
+        alt: "サーモンと彩り豊かな野菜が盛り付けられた誕生日ディナーの前菜"
+      },
+      {
+        src: "/images/birthday/riri-family-dinner-main.jpg",
+        alt: "パイ包みとマッシュポテト、サラダが美しく盛り付けられた誕生日ディナーのメイン料理"
+      },
+      {
+        src: "/images/birthday/riri-family-dinner-cake.jpg",
+        alt: "「Happy Birthday RIRI 20th!」のメッセージとフルーツが飾られたバースデーケーキ"
+      }
+    ],
+    reportQuote:
+      "🍴💕\n\n家族にお祝いしてもらった> ̫<\n料理もケーキも全部美味しかった幸せの味(𓈒ʚ̴̶̷̷̥ ⩊ ɞ̴̶̷𓈒)\n\n#誕生日ディナー #都内ディナー #クルーズディナー #天王洲アイルディナー #誕生日ケーキ",
+    reportNote:
+      "乾杯からコース料理、そして「RIRI 20th!」のケーキまで。家族からのお祝いに包まれた、ハタチの大切な思い出です。",
+    links: [
+      {
+        label: "Instagramで投稿を見る",
+        url: "https://www.instagram.com/p/Dbfx1-uCV0I/?img_index=3&igsh=MXdzY2Flc2JqbGczYw==",
+        kind: "sns"
+      }
+    ]
+  },
+  {
     id: "goudou-birthday-2026-07-19",
     title: "夏凪里季×小峰萌楓 合同誕生祭",
     shortTitle: "合同誕生祭",

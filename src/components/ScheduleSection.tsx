@@ -4,6 +4,7 @@ import { CalendarView } from "./CalendarView";
 import { EventCard } from "./EventCard";
 import { SectionHeader } from "./SectionHeader";
 import { isFeaturedReport } from "../lib/date";
+import { isBirthdayMemoryEventId } from "../data/birthdayMemories";
 
 type ScheduleSectionProps = {
   upcomingEvents: ScheduleEvent[];
@@ -21,11 +22,15 @@ export function ScheduleSection({
   // 直近の1件は直前の NextEvent セクションで既に大きく紹介済みのため、ここでは重複させない。
   const restUpcomingEvents = upcomingEvents.slice(1);
 
-  // 写真付きレポートカード（生誕祭レポートなど）は投稿から一定期間だけ、
+  // 写真付きレポートカードは投稿から一定期間だけ、
   // 折りたたみ式の「終了済みイベント」に入れず常時表示の「新着」として目立たせる。
-  // 期間を過ぎると、他の過去イベントと同じく折りたたみ側へ自然に移る。
-  const reportEvents = pastEvents.filter((event) => isFeaturedReport(event));
-  const archiveEvents = pastEvents.filter((event) => !isFeaturedReport(event));
+  // 誕生日関連の投稿は、専用の Birthday Memories セクションへまとめる。
+  const reportEvents = pastEvents.filter(
+    (event) => !isBirthdayMemoryEventId(event.id) && isFeaturedReport(event),
+  );
+  const archiveEvents = pastEvents.filter(
+    (event) => !isBirthdayMemoryEventId(event.id) && !isFeaturedReport(event),
+  );
 
   return (
     <section id="schedule" className="scroll-mt-24 bg-white py-14 sm:py-20">
@@ -75,7 +80,7 @@ export function ScheduleSection({
                   Report
                 </p>
                 <h3 className="mt-1 font-display text-2xl text-ink">
-                  生誕祭レポート
+                  最新レポート
                 </h3>
               </div>
               <span className="border border-rosefog/30 bg-porcelain px-3 py-2 text-xs font-bold text-ink/62">

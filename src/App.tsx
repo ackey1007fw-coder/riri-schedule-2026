@@ -4,6 +4,7 @@ import { BirthdayBanner } from "./components/BirthdayBanner";
 import { BirthdayCelebration } from "./components/BirthdayCelebration";
 import { BirthdayCountdown } from "./components/BirthdayCountdown";
 import { BirthdayDayBanner } from "./components/BirthdayDayBanner";
+import { BirthdayMemoriesSection } from "./components/BirthdayMemoriesSection";
 import { CharmSection } from "./components/CharmSection";
 import { ClipSection } from "./components/ClipSection";
 import { Footer } from "./components/Footer";
@@ -128,6 +129,9 @@ function App() {
             allEvents={events}
             monthKeys={monthKeys}
           />
+        </SectionReveal>
+        <SectionReveal>
+          <BirthdayMemoriesSection />
         </SectionReveal>
         <SectionReveal>
           <MagazineSpread nextEvent={nextEvent} />
