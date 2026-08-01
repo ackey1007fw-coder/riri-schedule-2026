@@ -276,6 +276,18 @@ export function PhotoGallerySection() {
               </button>
             </div>
 
+            {selectedPhoto.credit && (
+              <a
+                href={selectedPhoto.credit.url}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-flex items-center gap-2 self-start border border-white/15 bg-white/10 px-3 py-2 text-xs font-bold text-white/90 transition hover:bg-white/20"
+              >
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                {selectedPhoto.credit.label}
+              </a>
+            )}
+
             <div className="mt-4 flex items-center justify-between gap-4 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
               <span>
                 {selectedIndex + 1} / {galleryPhotos.length}
