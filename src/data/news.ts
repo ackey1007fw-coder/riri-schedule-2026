@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.8.2",
+    label: "X",
+    text: "「今年初めての浴衣👘」白地にピンクと紫の花柄の浴衣、アップヘアに赤い花飾りを合わせた、2026年夏の初浴衣ショット",
+    url: "https://x.com/frecam2025_0306/status/2083666581314519466"
+  },
+  {
     date: "2026.8.1",
     label: "応援案内",
     text: "月シア別冊第2集『I'm talking about Homin\'』のデジタル花が販売開始。会場に行けない方も、劇場のスクリーンへ夏凪里季さんへの応援を届けられます。購入・入金は9月1日(火)23:59まで",

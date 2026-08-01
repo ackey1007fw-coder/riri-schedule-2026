@@ -4,6 +4,8 @@ import {
   ChevronLeft,
   ChevronRight,
   ChevronUp,
+  ExternalLink,
+  Flower2,
   Images,
   Instagram,
   MessageCircle,
@@ -12,7 +14,7 @@ import {
   Sparkles,
   X
 } from "lucide-react";
-import { galleryPhotos, galleryUpdate } from "../data/photos";
+import { galleryFeature, galleryPhotos, galleryUpdate } from "../data/photos";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { SectionHeader } from "./SectionHeader";
 
@@ -129,6 +131,59 @@ export function PhotoGallerySection() {
             </a>
           </div>
         </div>
+
+        <article className="riri-card mt-6 grid overflow-hidden border-rosefog/30 bg-[linear-gradient(135deg,#fffafc_0%,#fff2f7_52%,#f8f0ff_100%)] lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+          <button
+            type="button"
+            onClick={() => openPhoto(0)}
+            className="group block w-full overflow-hidden bg-porcelain text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-champagne"
+            aria-label={`${galleryFeature.photo.alt}を大きく表示`}
+          >
+            <img
+              {...getResponsiveImageProps(
+                galleryFeature.photo.src,
+                "(min-width: 1024px) 54vw, 100vw",
+              )}
+              alt={galleryFeature.photo.alt}
+              loading="lazy"
+              decoding="async"
+              className="block h-auto w-full object-contain transition duration-500 group-hover:scale-[1.015]"
+            />
+          </button>
+
+          <div className="p-6 sm:p-8 lg:p-10">
+            <p className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-champagneInk">
+              <Flower2 className="h-4 w-4" aria-hidden="true" />
+              {galleryFeature.kicker} ・ {galleryFeature.date}
+            </p>
+            <h3 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-4xl">
+              2026年、最初の浴衣
+            </h3>
+            <blockquote className="mt-5 border-l-2 border-champagne pl-4 font-display text-xl text-[#6f2f3c]">
+              {galleryFeature.title}
+            </blockquote>
+            <p className="mt-5 leading-8 text-ink/70">{galleryFeature.copy}</p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a
+                href={galleryFeature.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="riri-button riri-button-gold min-h-12 px-5 py-3 text-sm"
+              >
+                Xで元の投稿を見る
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <button
+                type="button"
+                onClick={() => openPhoto(0)}
+                className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+              >
+                <Images className="h-4 w-4" aria-hidden="true" />
+                写真を大きく見る
+              </button>
+            </div>
+          </div>
+        </article>
 
         <a
           href={galleryUpdate.url}

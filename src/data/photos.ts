@@ -5,6 +5,20 @@ export type GalleryPhoto = {
   credit?: { label: string; url: string };
 };
 
+export const summerYukataPhoto: GalleryPhoto = {
+  src: "/images/gallery/g90.jpg",
+  alt: "白地にピンクと紫の大きな花柄の浴衣をまとい、赤い花の髪飾りをつけたアップヘアで明るく笑う夏凪里季さん（X『今年初めての浴衣』より）"
+};
+
+export const galleryFeature = {
+  date: "2026.8.2",
+  kicker: "Summer Moment",
+  title: "今年初めての浴衣👘",
+  copy: "白地にピンクと紫の花が咲く浴衣と、アップヘアに添えた赤い花飾り。明るい髪色にも映える、2026年夏の初浴衣ショットです。",
+  url: "https://x.com/frecam2025_0306/status/2083666581314519466",
+  photo: summerYukataPhoto
+};
+
 // 2026.8.1 里季さんが引用RTした、なおさん(@iito_nya)の投稿の写真につけるクレジット
 const naoCredit = {
   label: "写真: なお（@iito_nya）の投稿",
@@ -13,6 +27,8 @@ const naoCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.2 X「今年初めての浴衣👘」2026年夏の初浴衣ショット
+  summerYukataPhoto,
   // 2026.8.1 X「なおちゃんがお祝いしてくれた😭✨️💞 だいすき！」お友達のなおさん(@iito_nya)の投稿を引用（4枚）
   { src: "/images/gallery/g86.jpg", alt: "夜の駅構内で、なおさん(@iito_nya)と肩を寄せ合って笑顔の2ショット自撮り。夏凪里季さんは白いレース襟のブラウス姿", credit: naoCredit },
   { src: "/images/gallery/g87.jpg", alt: "同じ場所での2ショット自撮り。夏凪里季さんの隣で、なおさん(@iito_nya)がピースサインを見せている", credit: naoCredit },
@@ -131,8 +147,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.1",
+  date: "2026.8.2",
   platform: "X",
-  note: "「なおちゃんがお祝いしてくれた😭✨️💞 だいすき！」2ショットとお料理の写真4枚🍽️",
-  url: "https://x.com/frecam2025_0306/status/2083419789717053843"
+  note: "「今年初めての浴衣👘」花柄の浴衣と赤い花飾りが映える、2026年夏の初浴衣ショット",
+  url: "https://x.com/frecam2025_0306/status/2083666581314519466"
 };
