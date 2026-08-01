@@ -15,6 +15,7 @@ import { SectionHeader } from "./SectionHeader";
 
 const ticketUrl = "https://livepocket.jp/t/aitokihomin";
 const postUrl = "https://x.com/frecam2025_0306/status/2083525044479664564";
+const organizerPostUrl = "https://x.com/kaigyacstage/status/2083523150080315892";
 
 const performances = [
   { date: "9/11", weekday: "金", time: "19:00" },
@@ -244,20 +245,31 @@ export function AitokiHominSection() {
                 </div>
               </div>
 
-              <div className="mt-6 flex flex-col gap-3 border-t border-rosefog/25 pt-6 sm:flex-row sm:items-center sm:justify-between">
+              <div className="mt-6 flex flex-col gap-4 border-t border-rosefog/25 pt-6 lg:flex-row lg:items-center lg:justify-between">
                 <p className="flex items-center gap-2 text-sm text-ink/58">
                   <CalendarDays className="h-4 w-4 shrink-0 text-champagne" aria-hidden="true" />
-                  里季さんによる販売開始のお知らせも確認できます。
+                  里季さん本人の告知と、KAIGYAC STAGEの販売案内を確認できます。
                 </p>
-                <a
-                  href={postUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
-                >
-                  Xで里季さんの投稿を見る
-                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
-                </a>
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <a
+                    href={postUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+                  >
+                    里季さんの告知を見る
+                    <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                  <a
+                    href={organizerPostUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+                  >
+                    KAIGYAC STAGEの案内を見る
+                    <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

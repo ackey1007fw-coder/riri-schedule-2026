@@ -82,6 +82,11 @@ export const events: ScheduleEvent[] = [
         kind: "sns"
       },
       {
+        label: "KAIGYAC STAGE 販売案内",
+        url: "https://x.com/kaigyacstage/status/2083523150080315892",
+        kind: "sns"
+      },
+      {
         label: "夏凪里季さんの出演告知",
         url: "https://x.com/frecam2025_0306/status/2075931870681063715",
         kind: "sns"
