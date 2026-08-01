@@ -1,15 +1,23 @@
 export type GalleryPhoto = {
   src: string;
   alt: string;
+  // 里季さん以外の方が撮影・投稿した写真のときだけ、撮影者への動線として付ける
+  credit?: { label: string; url: string };
+};
+
+// 2026.8.1 里季さんが引用RTした、なおさん(@iito_nya)の投稿の写真につけるクレジット
+const naoCredit = {
+  label: "写真: なお（@iito_nya）の投稿",
+  url: "https://x.com/iito_nya/status/2083336339282633061"
 };
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
   // 2026.8.1 X「なおちゃんがお祝いしてくれた😭✨️💞 だいすき！」お友達のなおさん(@iito_nya)の投稿を引用（4枚）
-  { src: "/images/gallery/g86.jpg", alt: "夜の駅構内で、なおさん(@iito_nya)と肩を寄せ合って笑顔の2ショット自撮り。夏凪里季さんは白いレース襟のブラウス姿" },
-  { src: "/images/gallery/g87.jpg", alt: "同じ場所での2ショット自撮り。夏凪里季さんの隣で、なおさん(@iito_nya)がピースサインを見せている" },
-  { src: "/images/gallery/g88.jpg", alt: "生ハムをぐるりと巻いた白いピッツァ。中央に目玉焼きがのり、削ったチーズがたっぷりかかっている" },
-  { src: "/images/gallery/g89.jpg", alt: "黒い皿に盛られたレアのステーキ。ルッコラとチーズのサラダ、焼きアスパラ、粒マスタードが添えられている" },
+  { src: "/images/gallery/g86.jpg", alt: "夜の駅構内で、なおさん(@iito_nya)と肩を寄せ合って笑顔の2ショット自撮り。夏凪里季さんは白いレース襟のブラウス姿", credit: naoCredit },
+  { src: "/images/gallery/g87.jpg", alt: "同じ場所での2ショット自撮り。夏凪里季さんの隣で、なおさん(@iito_nya)がピースサインを見せている", credit: naoCredit },
+  { src: "/images/gallery/g88.jpg", alt: "生ハムをぐるりと巻いた白いピッツァ。中央に目玉焼きがのり、削ったチーズがたっぷりかかっている", credit: naoCredit },
+  { src: "/images/gallery/g89.jpg", alt: "黒い皿に盛られたレアのステーキ。ルッコラとチーズのサラダ、焼きアスパラ、粒マスタードが添えられている", credit: naoCredit },
   // 2026.8.1 X「ハタチの誕生日は何ヶ月引っ張ってもいいって聞きました」お祝いのデザートプレート
   { src: "/images/gallery/g85.jpg", alt: "カフェのテーブルで、ケーキやマカロン・ベリーが並び「リリちゃん 誕生日おめでとう。舞台頑張ってね」と手書きされたデザートプレートを前にほほえむ夏凪里季さん。白いレースのフリルブラウスに、髪をゆるくまとめたスタイル" },
   // 2026.7.31 X「夏だね>  ̫<」イルミネーションの灯る夜の階段にて
