@@ -10,14 +10,31 @@ export const summerYukataPhoto: GalleryPhoto = {
   alt: "白地にピンクと紫の大きな花柄の浴衣をまとい、赤い花の髪飾りをつけたアップヘアで明るく笑う夏凪里季さん（X『今年初めての浴衣』より）"
 };
 
-export const galleryFeature = {
-  date: "2026.8.2",
-  kicker: "Summer Moment",
-  title: "今年初めての浴衣👘",
-  copy: "白地にピンクと紫の花が咲く浴衣と、アップヘアに添えた赤い花飾り。明るい髪色にも映える、2026年夏の初浴衣ショットです。",
-  url: "https://x.com/frecam2025_0306/status/2083666581314519466",
-  photo: summerYukataPhoto
+export const familyYukataPhoto: GalleryPhoto = {
+  src: "/images/gallery/g91.jpg",
+  alt: "ピンクと紫の花柄浴衣の夏凪里季さん、青紫の花柄浴衣のお姉さん、ピンクの浴衣風ウェアを着た愛犬カルアちゃんの3ショット。お姉さんの顔は『姉』の文字で隠されている（X『お姉ちゃんと一緒に浴衣』より）"
 };
+
+export const galleryFeatures = [
+  {
+    date: "2026.8.3",
+    kicker: "Family Summer Moment",
+    heading: "家族で浴衣。カルアちゃんも一緒👘",
+    title: "お姉ちゃんと一緒に浴衣👘 実はカルアさんも着てるの✨️",
+    copy: "花柄の浴衣で並んだ里季さんとお姉さん、その真ん中には浴衣風ウェアのカルアちゃん。姉妹と愛犬で夏を楽しむ、明るくあたたかな家族ショットです。",
+    url: "https://x.com/frecam2025_0306/status/2084028970237083833",
+    photo: familyYukataPhoto
+  },
+  {
+    date: "2026.8.2",
+    kicker: "Summer Moment",
+    heading: "2026年、最初の浴衣",
+    title: "今年初めての浴衣👘",
+    copy: "白地にピンクと紫の花が咲く浴衣と、アップヘアに添えた赤い花飾り。明るい髪色にも映える、2026年夏の初浴衣ショットです。",
+    url: "https://x.com/frecam2025_0306/status/2083666581314519466",
+    photo: summerYukataPhoto
+  }
+];
 
 // 2026.8.1 里季さんが引用RTした、なおさん(@iito_nya)の投稿の写真につけるクレジット
 const naoCredit = {
@@ -27,6 +44,8 @@ const naoCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.3 X「お姉ちゃんと一緒に浴衣」姉妹とカルアちゃんの家族浴衣ショット
+  familyYukataPhoto,
   // 2026.8.2 X「今年初めての浴衣👘」2026年夏の初浴衣ショット
   summerYukataPhoto,
   // 2026.8.1 X「なおちゃんがお祝いしてくれた😭✨️💞 だいすき！」お友達のなおさん(@iito_nya)の投稿を引用（4枚）
@@ -147,8 +166,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.2",
+  date: "2026.8.3",
   platform: "X",
-  note: "「今年初めての浴衣👘」花柄の浴衣と赤い花飾りが映える、2026年夏の初浴衣ショット",
-  url: "https://x.com/frecam2025_0306/status/2083666581314519466"
+  note: "「お姉ちゃんと一緒に浴衣👘」姉妹と浴衣姿のカルアちゃんが並ぶ、夏の家族ショット",
+  url: "https://x.com/frecam2025_0306/status/2084028970237083833"
 };
