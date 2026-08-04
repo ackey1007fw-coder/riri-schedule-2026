@@ -19,6 +19,7 @@ import { MagazineSpread } from "./components/MagazineSpread";
 import { MobileActionDock } from "./components/MobileActionDock";
 import { NextEvent } from "./components/NextEvent";
 import { NewsBar } from "./components/NewsBar";
+import { NightCruiseSection } from "./components/NightCruiseSection";
 import { PetSection } from "./components/PetSection";
 import { PipparaNoKiSection } from "./components/PipparaNoKiSection";
 import { QuickNav } from "./components/QuickNav";
@@ -136,6 +137,9 @@ function App() {
         </SectionReveal>
         <SectionReveal>
           <BirthdayMemoriesSection />
+        </SectionReveal>
+        <SectionReveal>
+          <NightCruiseSection />
         </SectionReveal>
         <SectionReveal>
           <MagazineSpread nextEvent={nextEvent} />
