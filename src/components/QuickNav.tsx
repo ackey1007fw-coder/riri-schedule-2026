@@ -7,6 +7,7 @@ import {
   Flower2,
   Images,
   Radio,
+  Ship,
   Sparkles,
   UserRound
 } from "lucide-react";
@@ -18,6 +19,7 @@ const items = [
   { label: "アイトキ", href: "#aitoki-homin", id: "aitoki-homin", Icon: Flower2 },
   { label: "カレンダー", href: "#calendar", id: "calendar", Icon: CalendarDays },
   { label: "20歳の誕生日", href: "#birthday", id: "birthday", Icon: Cake },
+  { label: "ナイトクルーズ", href: "#night-cruise", id: "night-cruise", Icon: Ship },
   { label: "ギャラリー", href: "#gallery", id: "gallery", Icon: Images },
   { label: "SHOWROOM", href: "#showroom", id: "showroom", Icon: Radio },
   { label: "プロフィール", href: "#profile", id: "profile", Icon: UserRound }

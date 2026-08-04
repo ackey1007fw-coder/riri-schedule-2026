@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.8.4",
+    label: "Instagram",
+    text: "「ディナー後にクルーズ船乗ってきた⚓️ かわいいドリンクたくさんあって景色も最高> ̫<」天王洲アイル発の東京湾ナイトクルーズ。レインボーブリッジの夜景と色とりどりのドリンクの写真を公開（#クルーズ船 #天王洲アイル #クルーズディナー）",
+    url: "https://www.instagram.com/p/DbnQ8aICUTN/"
+  },
+  {
     date: "2026.8.3",
     label: "X",
     text: "「お姉ちゃんと一緒に浴衣👘 実はカルアさんも着てるの✨️」姉妹と愛犬カルアちゃんが浴衣姿で並んだ、夏らしい家族ショット",

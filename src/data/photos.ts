@@ -44,6 +44,27 @@ const naoCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.4 Instagram「ディナー後にクルーズ船乗ってきた⚓️」東京湾ナイトクルーズ（5枚 / Night Cruise Logコーナーと共用）
+  {
+    src: "/images/gallery/g92.jpg",
+    alt: "夜景を背にした窓際で、ミントグリーンのドリンクが入ったミルクボトル型グラスを掲げてほほえむ夏凪里季さん。白いフリルの半袖トップス姿"
+  },
+  {
+    src: "/images/gallery/g93.jpg",
+    alt: "船内の席で、右手にオレンジジュースのミルクボトル、左手に淡いブルーのドリンクのグラスを持ち、目を細めて笑う夏凪里季さん"
+  },
+  {
+    src: "/images/gallery/g94.jpg",
+    alt: "夜の東京湾から見上げたレインボーブリッジ。ライトアップされた橋の下に、湾岸のビル群の灯りが帯のように広がっている"
+  },
+  {
+    src: "/images/gallery/g95.jpg",
+    alt: "船内のカウンターに並んだトレー。ミルクボトル型のグラスに、ミントグリーン・オレンジ・レッド・コーラなど色とりどりのソフトドリンクが注がれている"
+  },
+  {
+    src: "/images/gallery/g96.jpg",
+    alt: "テーブルに広げられた「LADY CRYSTAL BOARDING TICKET」と印字された3枚の乗船チケット"
+  },
   // 2026.8.3 X「お姉ちゃんと一緒に浴衣」姉妹とカルアちゃんの家族浴衣ショット
   familyYukataPhoto,
   // 2026.8.2 X「今年初めての浴衣👘」2026年夏の初浴衣ショット
@@ -166,8 +187,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.3",
-  platform: "X",
-  note: "「お姉ちゃんと一緒に浴衣👘」姉妹と浴衣姿のカルアちゃんが並ぶ、夏の家族ショット",
-  url: "https://x.com/frecam2025_0306/status/2084028970237083833"
+  date: "2026.8.4",
+  platform: "Instagram",
+  note: "「ディナー後にクルーズ船乗ってきた⚓️」東京湾ナイトクルーズの5枚",
+  url: "https://www.instagram.com/p/DbnQ8aICUTN/"
 };
