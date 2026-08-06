@@ -44,6 +44,8 @@ const naoCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.6 X「トイストーリー展に行ってそのままトイストーリー5も見てきた🤖」
+  { src: "/images/gallery/g97.jpg", alt: "レースをあしらったグリーンのティアードワンピースで笑顔の夏凪里季さん。背景はレックスやジェシー、エイリアンなどトイ・ストーリーのキャラクターと「THE FIRST FAN」の文字が並ぶフォトスポット" },
   // 2026.8.4 Instagram「ディナー後にクルーズ船乗ってきた⚓️」東京湾ナイトクルーズ（5枚 / Night Cruise Logコーナーと共用）
   {
     src: "/images/gallery/g92.jpg",
@@ -187,8 +189,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.4",
-  platform: "Instagram",
-  note: "「ディナー後にクルーズ船乗ってきた⚓️」東京湾ナイトクルーズの5枚",
-  url: "https://www.instagram.com/p/DbnQ8aICUTN/"
+  date: "2026.8.6",
+  platform: "X",
+  note: "「トイストーリー展に行ってそのままトイストーリー5も見てきた🤖」フォトスポットでの1枚🧸",
+  url: "https://x.com/frecam2025_0306/status/2085212136968712240"
 };

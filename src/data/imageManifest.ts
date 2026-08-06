@@ -125,6 +125,7 @@ export const imageManifest = {
   "/images/gallery/g94.jpg": {"width":2048,"height":1536,"widths":[360,480,720,960,1280,1600,2048]},
   "/images/gallery/g95.jpg": {"width":2048,"height":1536,"widths":[360,480,720,960,1280,1600,2048]},
   "/images/gallery/g96.jpg": {"width":2048,"height":1535,"widths":[360,480,720,960,1280,1600,2048]},
+  "/images/gallery/g97.jpg": {"width":2048,"height":1536,"widths":[360,480,720,960,1280,1600,2048]},
   "/images/im-talking-about-homin-flyer-2026.jpg": {"width":1536,"height":2048,"widths":[360,480,720,960,1280,1536]},
   "/images/moeriri-birthday-2026-01.jpg": {"width":3324,"height":4431,"widths":[360,480,720,960,1280,1600,3324]},
   "/images/moeriri-birthday-2026-02.jpg": {"width":3324,"height":4431,"widths":[360,480,720,960,1280,1600,3324]},
