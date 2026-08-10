@@ -7,6 +7,7 @@ import {
   Clock,
   Drama,
   ExternalLink,
+  Flower2,
   Instagram,
   MapPin,
   PenLine,
@@ -67,6 +68,10 @@ const pipparaPortraitHat: FlyerImage = {
   src: "/images/pippara-no-ki-portrait-03.jpg",
   alt: "黒いチュールをあしらった白いミニハットに手を添え、カメラに笑顔を向ける夏凪里季さん。ベージュのストライプブラウスにボウタイ、茶色の留め具がついた青緑のベスト、白いスカートというA班「アナスタジー・ド・ブロワ」の衣装姿"
 };
+const pipparaSelfieBackstage: FlyerImage = {
+  src: "/images/gallery/g100.jpg",
+  alt: "暗い舞台裏で腕を伸ばして自撮りする夏凪里季さん。黒いチュールとリボン、パールをあしらった白いミニハットを髪に留め、ベージュのストライプブラウスに大きなボウタイ、紺色のベストというA班「アナスタジー・ド・ブロワ」の衣装姿"
+};
 const pipparaMainVisual: FlyerImage = {
   src: "/images/pippara-no-ki-main-visual-2026.jpg",
   alt: "鐘と青い薔薇、ヨーロッパ風建築を描いた舞台『ピッパラの樹』メインビジュアル"
@@ -77,6 +82,7 @@ const rehearsalPhoto: FlyerImage = {
 };
 
 const relatedImages: FlyerImage[] = [
+  pipparaPortraitHat,
   pipparaPortraitSub,
   pipparaMainVisual,
   rehearsalPhoto,
@@ -85,13 +91,13 @@ const relatedImages: FlyerImage[] = [
 
 /** 劇団ココア公式Xの座席状況投稿。日々変わるため、記号の意味と参照先だけを置く */
 const seatStatus = {
-  updatedAt: "2026年8月5日",
+  updatedAt: "2026年8月9日",
   legend: [
     { mark: "◯", text: "まだまだ予約OK" },
     { mark: "△", text: "埋まってきている" },
     { mark: "！", text: "満席になりそう" }
   ],
-  note: "A班の回にも「！」や残りわずかの日程が出ています。満席の回も出ているため、気になる日程はお早めに。",
+  note: "劇団ココア公式Xの8月9日の告知では、A班の回にも「！」や残りわずか・満席の日程が出ています。里季さんも8月10日の投稿で「満席が増えて来ていますが、まだ空席あります！」と呼びかけています。最新の状況は公式Xでご確認ください。",
   url: "https://x.com/gekidan_cocoa"
 };
 
@@ -108,6 +114,19 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-05",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月5日（水）08:01",
+    headline: "「もっとたくさんの人に見に来て欲しい」",
+    body: `#ピッパラの樹 みんな予約してくれた？
+もっとたくさんの人に見に来て欲しい🥺
+私はA班だよ！6公演あるからどこかお時間合う時来て欲しいな〜🌀🍃
+（備考欄に夏凪里季と書いてね）`,
+    quote: "6公演あるからどこかお時間合う時来て欲しいな〜",
+    url: "https://x.com/frecam2025_0306/status/2084776732289388564"
+  },
   {
     id: "x-2026-07-26",
     platform: "X",
@@ -186,16 +205,30 @@ A班のアナスタジー・ド・ブロワ役を
 
 /** 最新のトピック（写真つきで大きく扱う） */
 const latestTopic = {
-  headline: "「もっとたくさんの人に見に来て欲しい」",
-  datetime: "2026年8月5日（水）08:01",
-  photo: pipparaPortraitHat,
-  body: `#ピッパラの樹 みんな予約してくれた？
-もっとたくさんの人に見に来て欲しい🥺
-私はA班だよ！6公演あるからどこかお時間合う時来て欲しいな〜🌀🍃
-（備考欄に夏凪里季と書いてね）`,
-  quote: "6公演あるからどこかお時間合う時来て欲しいな〜",
-  note: "劇団ココア公式Xの座席状況を引用しての呼びかけです。",
-  url: "https://x.com/frecam2025_0306/status/2084776732289388564"
+  headline: "「まだ空席あります！ そこの貴方！！」",
+  datetime: "2026年8月10日（月）14:34",
+  photo: pipparaSelfieBackstage,
+  body: `#ピッパラの樹 みんな予約してくれたかな？？
+満席が増えて来ていますが、まだ空席あります！
+そこの貴方！！ぜひ会場に足を運んでくださると嬉しいです。
+(固定ポストに日程、場所等も載せています!)
+
+日程合わないな〜とかもっと応援したい！と思ってくださった方、ぜひこちらの推し花もご検討ください🙇🏻‍♀️とっても力になります🥹✨️
+
+チケット→（りりはA班、備考欄に夏凪里季と記入お願いします）
+推し花→（下の「推し花で応援を届ける」からご覧いただけます）`,
+  quote: "満席が増えて来ていますが、まだ空席あります！",
+  note: "劇団ココア公式Xの8月9日の座席状況を引用しての呼びかけです。",
+  url: "https://x.com/frecam2025_0306/status/2086687668155695183"
+};
+
+/** 8月10日の投稿で案内された「推し花」（応援広告） */
+const oshibana = {
+  url: "https://oshibana.shop/theater/oshibana/24950033",
+  deadlineLabel: "2026年8月29日（土）18:00まで",
+  lead: "日程が合わない方・もっと応援したい方へ",
+  copy: "劇場に贈るお祝いのお花とメッセージを兼ねた応援広告です。メッセージは公演期間中に会場で掲出されます。金額の種類や申し込み方法は推し花のページをご確認ください。",
+  quote: "日程合わないな〜とかもっと応援したい！と思ってくださった方、ぜひこちらの推し花もご検討ください"
 };
 
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
@@ -302,7 +335,7 @@ export function PipparaNoKiSection() {
                 type="button"
                 onClick={openZoom(latestTopic.photo)}
                 className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
-                aria-label="A班「アナスタジー・ド・ブロワ」衣装姿の夏凪里季さんの写真を拡大表示"
+                aria-label="A班「アナスタジー・ド・ブロワ」衣装姿で舞台裏から自撮りする夏凪里季さんの写真を拡大表示"
               >
                 <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
                   <img
@@ -383,6 +416,13 @@ export function PipparaNoKiSection() {
                   <Ticket className="h-4 w-4 shrink-0" aria-hidden="true" />
                   チケットを予約する
                   <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
+                </a>
+                <a
+                  href="#pippara-oshibana"
+                  className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+                >
+                  <Flower2 className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  推し花で応援する
                 </a>
                 <a
                   href={latestTopic.url}
@@ -595,7 +635,7 @@ export function PipparaNoKiSection() {
             </p>
 
             <p className="mt-3 text-xs leading-6 text-ink/55">
-              8月5日の本人投稿では「もっとたくさんの人に見に来て欲しい」と予約が呼びかけられています。満席・残りわずかの回も出ているので、気になる日程はお早めに。
+              8月10日の本人投稿では「満席が増えて来ていますが、まだ空席あります！」と予約が呼びかけられています。満席・残りわずかの回も出ているので、気になる日程はお早めに。
             </p>
 
             <a
@@ -608,6 +648,42 @@ export function PipparaNoKiSection() {
               <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
             </a>
           </div>
+        </div>
+
+        {/* 推し花：日程が合わない方への応援手段（8/10の本人投稿より） */}
+        <div
+          id="pippara-oshibana"
+          className="mt-6 scroll-mt-24 riri-card border-[#c9a24b]/50 bg-white p-5 sm:p-7"
+        >
+          <p className="inline-flex items-center gap-1.5 border border-[#c9a24b]/50 bg-[#f8f3e6] px-2.5 py-1 text-xs font-bold text-[#6f2f3c]">
+            <Flower2 className="h-3.5 w-3.5" aria-hidden="true" />
+            {oshibana.lead}
+          </p>
+          <h3 className="mt-3 font-display text-xl leading-tight text-ink sm:text-2xl">
+            「推し花」で応援を届ける
+          </h3>
+
+          <blockquote className="mt-4 border-l-4 border-[#c9a24b] bg-[#f8f3e6] px-4 py-3">
+            <p className="text-sm leading-7 text-ink/85">{oshibana.quote}</p>
+            <footer className="mt-2 text-xs text-ink/50">
+              夏凪里季さん（2026年8月10日・Xより）
+            </footer>
+          </blockquote>
+
+          <p className="mt-4 text-sm leading-7 text-ink/80">{oshibana.copy}</p>
+          <p className="mt-3 text-xs font-bold leading-6 text-[#6f2f3c]">
+            受付は{oshibana.deadlineLabel}
+          </p>
+
+          <a
+            href={oshibana.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="riri-button riri-button-soft mt-4 min-h-12 px-4 py-3 text-sm"
+          >
+            推し花のページを見る
+            <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
+          </a>
         </div>
 
         {/* 会場までの行き方 */}
@@ -681,7 +757,7 @@ export function PipparaNoKiSection() {
             <p className="mb-3 text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
               あわせて見る
             </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
               {relatedImages.map((image) => (
                 <button
                   key={image.src}
@@ -692,7 +768,7 @@ export function PipparaNoKiSection() {
                 >
                   <span className="relative block aspect-[3/4] overflow-hidden border border-[#7c5a3a]/30 bg-[#f0ead9]">
                     <img
-                      {...getResponsiveImageProps(image.src, "(min-width: 640px) 22vw, 30vw")}
+                      {...getResponsiveImageProps(image.src, "(min-width: 640px) 18vw, 30vw")}
                       alt={image.alt}
                       loading="lazy"
                       decoding="async"
