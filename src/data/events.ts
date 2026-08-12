@@ -110,6 +110,47 @@ export const events: ScheduleEvent[] = [
     isImportant: true
   },
   {
+    id: "riri-nao-birthday-dinner-2026-08",
+    title: "なおちゃんと過ごした、お祝いディナー🥹🩷️",
+    shortTitle: "なおちゃんとのお祝いディナー",
+    subtitle: "ずっと行きたかったお店で、ハタチのお祝い",
+    category: "birthday",
+    startAt: "2026-08-12T12:00:00+09:00",
+    endAt: "2026-08-12T12:00:00+09:00",
+    displayDate: "2026年8月12日（水）の投稿より",
+    image: "/images/gallery/g102.jpg",
+    imageAlt:
+      "白いレース襟のブラウス姿の夏凪里季さんと、黒いトップス姿のなおさんが、夜の駅構内で肩を寄せて笑う2ショット自撮り",
+    summary:
+      "なおちゃんが、里季さんのずっと行きたかったお店で20歳をお祝い。2ショットや料理、舞台への応援メッセージが添えられたデザートプレートとともに、感謝を綴ったあたたかなディナーの記録です。",
+    badges: ["Birthday Memories", "20歳", "Instagram", "なおちゃん"],
+    gallery: [
+      {
+        src: "/images/gallery/g103.jpg",
+        alt: "黒い皿に盛られたレアのステーキ。ルッコラとチーズのサラダ、焼いたズッキーニとアスパラ、粒マスタードと塩が添えられている"
+      },
+      {
+        src: "/images/gallery/g104.jpg",
+        alt: "生ハムをぐるりと飾った白いピッツァ。中央に卵がのり、削ったチーズがたっぷりかかっている"
+      },
+      {
+        src: "/images/gallery/g105.jpg",
+        alt: "「リリちゃん 誕生日おめでとう。舞台頑張ってね」と書かれたデザートプレートを前に笑う夏凪里季さん。ケーキ、ロールケーキ、マカロン、ベリーとコスメデコルテのギフトバッグが並ぶ"
+      }
+    ],
+    reportQuote:
+      "ずっと行きたかったお店でお祝いしてくれた🥹🩷️\n\n🍕\n\nこれ革命🍴\n\nなおちゃん‪🫶🏻️💞ありがとうございます✨️",
+    reportNote:
+      "おいしい料理と、舞台への応援まで込められたデザートプレート。なおちゃんへの感謝と、うれしい気持ちが伝わる4枚です。",
+    links: [
+      {
+        label: "Instagramで投稿を見る",
+        url: "https://www.instagram.com/p/Db8Oo_ZiY2L/",
+        kind: "sns"
+      }
+    ]
+  },
+  {
     id: "riri-family-birthday-dinner-2026-08",
     title: "家族と過ごした、幸せの誕生日ディナー🍴💕",
     shortTitle: "家族との誕生日ディナー",

@@ -1,6 +1,7 @@
 import { events } from "./events";
 
 export const birthdayMemoryEventIds = [
+  "riri-nao-birthday-dinner-2026-08",
   "riri-family-birthday-dinner-2026-08",
   "riri-birthday-solo-shots-2026-07",
   "riri-birthday-1month-later-2026-07",
