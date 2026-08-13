@@ -44,6 +44,8 @@ const naoCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.13 X サンリオピューロランド
+  { src: "/images/gallery/g106.jpg", alt: "黄色いソファを背景に、黒いトップスと黒い垂れ耳のキャラクターカチューシャ姿で両手を広げて笑う夏凪里季さん。テーブルにはキャラクターをモチーフにしたカレー、ラーメン、フライドチキン、ポテト、ドリンクが並ぶ（サンリオピューロランド）" },
   // 2026.8.12 Instagram「ずっと行きたかったお店でお祝いしてくれた」なおちゃんとのお祝いディナー（4枚）
   { src: "/images/gallery/g102.jpg", alt: "白いレース襟のブラウス姿の夏凪里季さんと、黒いトップス姿のなおさんが、夜の駅構内で肩を寄せて笑う2ショット自撮り" },
   { src: "/images/gallery/g103.jpg", alt: "黒い皿に盛られたレアのステーキ。ルッコラとチーズのサラダ、焼いたズッキーニとアスパラ、粒マスタードと塩が添えられている" },
@@ -202,8 +204,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.12",
-  platform: "Instagram",
-  note: "なおちゃんと、ずっと行きたかったお店でハタチのお祝いディナー🥹🩷️",
-  url: "https://www.instagram.com/p/Db8Oo_ZiY2L/"
+  date: "2026.8.13",
+  platform: "X",
+  note: "サンリオピューロランドで、キャラクターフードに囲まれた笑顔の1枚",
+  url: "https://x.com/frecam2025_0306/status/2087690108640379078"
 };
