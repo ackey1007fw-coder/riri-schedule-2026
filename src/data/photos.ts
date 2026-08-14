@@ -50,6 +50,8 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.15 X「ノリで滝行してきた」本人投稿。creditなし
+  { src: "/images/gallery/g109.jpg", alt: "滝を背景に、濡れた白い半袖Tシャツと黒いサングラス姿で笑顔のピースサインをする夏凪里季さん。髪は濡れ、シルバーブルーのロングネイルが見える（X『ノリで滝行してきた』より）" },
   // 2026.8.14 X「#ピッパラの樹 イケメンすぎるねねさん」本人投稿。creditなし
   { src: "/images/gallery/g108.jpg", alt: "チェック柄の半袖シャツ姿でピースをする夏凪里季さん（右）と、短い黒髪に水色のトップスでピースをするねねさん(@nene_matu)（左）。ハンガーラックのある室内での2ショット（X『#ピッパラの樹』より）" },
   // 2026.8.13 X サンリオピューロランド
@@ -214,8 +216,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.14",
+  date: "2026.8.15",
   platform: "X",
-  note: "ねねさん(@nene_matu)との2ショット。#ピッパラの樹 でジョセフとアナスタジーの関係に注目を呼びかけ",
-  url: "https://x.com/frecam2025_0306/status/2088209691122036893"
+  note: "「ノリで滝行してきた」滝の前でサングラス姿、笑顔のピースショット",
+  url: "https://x.com/frecam2025_0306/status/2088377624980803925"
 };
