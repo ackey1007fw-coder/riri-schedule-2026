@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { AitokiHominSection } from "./components/AitokiHominSection";
 import { BirthdayBanner } from "./components/BirthdayBanner";
@@ -99,13 +99,16 @@ function App() {
 
   return (
     <div className="min-h-screen bg-porcelain pb-[calc(7rem+env(safe-area-inset-bottom))] text-ink md:pb-0">
+      <a href="#main-content" className="skip-link">
+        本文へスキップ
+      </a>
       <BirthdayDayBanner />
       <SpecialStreamBanner />
       <LiveBanner />
       <SiteHeader socialLinks={socialLinks} />
       <NewsBar />
       <QuickNav />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         {isLoading && (
           <div className="bg-ink px-4 py-2 text-center text-xs font-bold text-white">
             スケジュールを読み込み中です
