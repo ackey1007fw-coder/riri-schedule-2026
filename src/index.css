@@ -103,6 +103,32 @@ img {
   outline-offset: 2px;
 }
 
+/* キーボード操作の起点。フォーカス時だけ見える「本文へスキップ」。 */
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  border: 1px solid #d7ad62;
+  background: #fffafc;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #312a2e;
+  box-shadow: 0 12px 24px rgba(94, 62, 81, 0.13);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+#main-content:focus {
+  outline: none;
+}
+
 /* カード共通のホバー挙動（やわらかく浮く）。レイアウトは動かさない。
    hoverできる端末のみ適用 → スマホでタップ後に浮いたまま固まる問題を防ぐ。
    見た目(角丸・ベース影)を .riri-card と揃えて、サイト全体のカードを統一する。 */

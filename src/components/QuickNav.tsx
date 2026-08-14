@@ -1,25 +1,21 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
-  Cake,
   CalendarDays,
   CalendarHeart,
   Drama,
   Flower2,
   Images,
   Radio,
-  Ship,
   Sparkles,
   UserRound
 } from "lucide-react";
 
 const items = [
-  { label: "今日の応援", href: "#today", id: "today", Icon: Sparkles },
   { label: "次の出演", href: "#next", id: "next", Icon: CalendarHeart },
   { label: "ピッパラの樹", href: "#pippara-no-ki", id: "pippara-no-ki", Icon: Drama },
   { label: "アイトキ", href: "#aitoki-homin", id: "aitoki-homin", Icon: Flower2 },
+  { label: "今日の応援", href: "#today", id: "today", Icon: Sparkles },
   { label: "カレンダー", href: "#calendar", id: "calendar", Icon: CalendarDays },
-  { label: "20歳の誕生日", href: "#birthday", id: "birthday", Icon: Cake },
-  { label: "ナイトクルーズ", href: "#night-cruise", id: "night-cruise", Icon: Ship },
   { label: "ギャラリー", href: "#gallery", id: "gallery", Icon: Images },
   { label: "SHOWROOM", href: "#showroom", id: "showroom", Icon: Radio },
   { label: "プロフィール", href: "#profile", id: "profile", Icon: UserRound }
@@ -74,6 +70,7 @@ export function QuickNav() {
               key={href}
               href={href}
               data-nav-id={id}
+              aria-current={active === id ? "true" : undefined}
               className={`quick-nav-link inline-flex min-h-10 items-center gap-2 rounded-md border px-3 py-1.5 text-xs font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne sm:text-sm ${
                 active === id
                   ? "border-champagne/60 bg-white text-champagneInk"

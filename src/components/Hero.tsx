@@ -1,4 +1,13 @@
-import { CalendarCheck, Images, MessageCircleHeart, Radio, Ticket, Users } from "lucide-react";
+import {
+  CalendarCheck,
+  Clock3,
+  Images,
+  MapPin,
+  MessageCircleHeart,
+  Radio,
+  Ticket,
+  Users
+} from "lucide-react";
 import { profile } from "../data/profile";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
 import type { ScheduleEvent, SocialLink } from "../types";
@@ -68,21 +77,55 @@ export function Hero({ nextEvent, socialLinks }: HeroProps) {
           </p>
           <p className="mt-3 max-w-xl leading-8 text-ink/62">{profile.intro}</p>
 
+          {nextEvent && (
+            <a
+              href="#next"
+              aria-label={`次の出演 ${nextEvent.shortTitle}、${nextEvent.displayDate}${nextEvent.venue ? `、${nextEvent.venue}` : ""}。詳細を見る`}
+              className="riri-card riri-card-interactive mt-7 block border-champagne/55 bg-white p-4 shadow-paper sm:p-5"
+            >
+              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-champagneInk">
+                Next Appearance
+              </p>
+              <p className="mt-1.5 font-display text-2xl leading-tight text-ink sm:text-3xl">
+                {nextEvent.shortTitle}
+              </p>
+              <p className="mt-2 flex gap-2 text-sm font-bold text-ink/70">
+                <Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-champagne" aria-hidden="true" />
+                <span>{nextEvent.displayDate}</span>
+              </p>
+              {nextEvent.venue && (
+                <p className="mt-1.5 flex gap-2 text-sm font-bold text-ink/62">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-champagne" aria-hidden="true" />
+                  <span>{nextEvent.venue}</span>
+                </p>
+              )}
+              <p className="mt-3 text-sm font-bold text-champagneInk">
+                詳細を見る →
+              </p>
+            </a>
+          )}
+
           <div className="mt-8 flex flex-col gap-3">
             {/* 主導線：次の出演＋（あれば）予約 */}
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a
-                href="#next"
-                className="riri-button riri-button-primary min-h-12 px-5 py-3 text-sm shadow-paper"
-              >
-                <CalendarCheck className="h-4 w-4" aria-hidden="true" />
-                次の出演を見る
-              </a>
+              {!nextEvent && (
+                <a
+                  href="#next"
+                  className="riri-button riri-button-primary min-h-12 px-5 py-3 text-sm shadow-paper"
+                >
+                  <CalendarCheck className="h-4 w-4" aria-hidden="true" />
+                  次の出演を見る
+                </a>
+              )}
               {ticketLink && (
                 <ExternalButton href={ticketLink.url} variant="gold" className="px-5">
                   <span className="inline-flex items-center gap-2">
                     <Ticket className="h-4 w-4" aria-hidden="true" />
-                    {ticketLink.kind === "ticket" ? "チケット予約" : ticketLink.label}
+                    {ticketLink.kind === "ticket"
+                      ? nextEvent
+                        ? `${nextEvent.shortTitle}のチケット`
+                        : "チケット予約"
+                      : ticketLink.label}
                   </span>
                 </ExternalButton>
               )}

@@ -5,10 +5,10 @@ import type { SocialLink } from "../types";
 
 const navItems = [
   { label: "次の出演", href: "#next", id: "next" },
+  { label: "ピッパラの樹", href: "#pippara-no-ki", id: "pippara-no-ki" },
   { label: "アイトキ", href: "#aitoki-homin", id: "aitoki-homin", desktopOnly: true },
   { label: "スケジュール", href: "#schedule", id: "schedule" },
-  { label: "20th Birthday", href: "#birthday", id: "birthday", desktopOnly: true },
-  { label: "これまでの歩み", href: "#highlights", id: "highlights" },
+  { label: "これまでの歩み", href: "#highlights", id: "highlights", desktopOnly: true },
   { label: "SHOWROOM", href: "#showroom", id: "showroom" },
   { label: "プロフィール", href: "#profile", id: "profile" }
 ];
@@ -71,6 +71,7 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
             <a
               key={item.href}
               href={item.href}
+              aria-current={activeSection === item.id ? "true" : undefined}
               className={`transition-colors ${
                 "desktopOnly" in item && item.desktopOnly ? "hidden lg:inline" : ""
               } ${

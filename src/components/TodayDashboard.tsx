@@ -8,6 +8,7 @@ import {
   Sparkles
 } from "lucide-react";
 import { downloadScheduleCalendar } from "../lib/calendarExport";
+import { isBirthdayMemoryEventId } from "../data/birthdayMemories";
 import type { ScheduleEvent, SocialLink } from "../types";
 
 type StreamSlot = {
@@ -107,7 +108,11 @@ export function TodayDashboard({
             }).format(new Date(event.startAt)),
         title: event.shortTitle,
         kind: "event" as const,
-        href: event.links[0]?.url ?? "#schedule"
+        // チケット予約より先に、出演の概要・備考・会場をページ内で見てもらう。
+        // 誕生日メモリーズはスケジュール一覧から外しているため、専用セクションへ。
+        href: isBirthdayMemoryEventId(event.id)
+          ? "#birthday"
+          : `#event-${event.id}`
       }];
     });
 
@@ -134,6 +139,11 @@ export function TodayDashboard({
   const todayItems = agenda.filter((item) => item.date === todayKey);
   const primary = todayItems[0] ?? agenda[0];
   const hasAgenda = agenda.length > 0;
+  const primaryIsNextEvent = Boolean(
+    primary?.kind === "event" &&
+      nextEvent &&
+      primary.id.startsWith(`event-${nextEvent.id}-`),
+  );
 
   return (
     <section id="today" className="scroll-mt-32 bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
@@ -182,7 +192,23 @@ export function TodayDashboard({
               </div>
             </div>
 
-            {primary ? (
+            {primaryIsNextEvent && nextEvent ? (
+              <>
+                {/* すぐ下の「次に見るべき出演情報」と同じ予定なので、見出しを重ねない。 */}
+                <p className="mt-5 leading-8 text-ink/70">
+                  今週いちばんの予定は
+                  <span className="font-bold text-ink">{nextEvent.shortTitle}</span>
+                  （{nextEvent.displayDate}）です。詳細はすぐ下でご紹介しています。
+                </p>
+                <a
+                  href="#next"
+                  className="riri-button riri-button-soft mt-5 min-h-12 w-full px-5 py-3 text-sm sm:w-auto"
+                >
+                  次の出演を見る
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </>
+            ) : primary ? (
               <>
                 <h3 className="mt-6 font-display text-3xl leading-tight text-ink sm:text-4xl">
                   {primary.title}
@@ -197,7 +223,7 @@ export function TodayDashboard({
                   rel={primary.href.startsWith("#") ? undefined : "noopener noreferrer"}
                   className="riri-button riri-button-primary mt-7 min-h-12 w-full px-5 py-3 text-sm sm:w-auto"
                 >
-                  {primary.kind === "stream" ? "配信を見る" : "予定の詳細を見る"}
+                  {primary.kind === "stream" ? "配信を見る" : "出演の詳細を見る"}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </>
