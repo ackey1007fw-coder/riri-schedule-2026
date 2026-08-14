@@ -8,6 +8,7 @@ import {
   Sparkles
 } from "lucide-react";
 import { downloadScheduleCalendar } from "../lib/calendarExport";
+import { isBirthdayMemoryEventId } from "../data/birthdayMemories";
 import type { ScheduleEvent, SocialLink } from "../types";
 
 type StreamSlot = {
@@ -108,7 +109,10 @@ export function TodayDashboard({
         title: event.shortTitle,
         kind: "event" as const,
         // チケット予約より先に、出演の概要・備考・会場をページ内で見てもらう。
-        href: `#event-${event.id}`
+        // 誕生日メモリーズはスケジュール一覧から外しているため、専用セクションへ。
+        href: isBirthdayMemoryEventId(event.id)
+          ? "#birthday"
+          : `#event-${event.id}`
       }];
     });
 
