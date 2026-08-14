@@ -32,7 +32,7 @@ export function toMs(timestamp) {
 }
 
 export function actorLogin(item) {
-  return item?.user?.login || item?.author?.login || "";
+  return item?.user?.login || item?.author?.login || item?.actor?.login || "";
 }
 
 export function isCodexBot(item) {
@@ -159,6 +159,6 @@ export function evaluateCodexGate({
     exitCode: 0,
     message:
       `最新の @codex review 要求より後に Codex レビューが完了し、未解決 P1/P2 はありません` +
-      `（reviews=${laterValidReviews.length}, line comments=${laterValidLines.length}）。`
+      `（reviews=${laterValidReviews.length}, line comments=${laterValidLines.length}, +1 reactions=${laterReactions.length}）。`
   };
 }

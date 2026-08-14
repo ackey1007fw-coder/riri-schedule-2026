@@ -208,4 +208,86 @@ describe("evaluateCodexGate", () => {
     assert.equal(result.status, "pass");
     assert.equal(result.exitCode, 0);
   });
+
+  it("最新レビュー要求後のCodex 👍 → pass", () => {
+    const result = evaluateCodexGate({
+      issueComments: [
+        { user: human, body: "@codex review", created_at: t("2026-08-14T12:00:00Z") }
+      ],
+      reactions: [
+        { user: bot, content: "+1", created_at: t("2026-08-14T12:05:00Z") }
+      ]
+    });
+    assert.equal(result.status, "pass");
+    assert.equal(result.exitCode, 0);
+  });
+
+  it("最新要求より前のCodex 👍 → fail", () => {
+    const result = evaluateCodexGate({
+      issueComments: [
+        { user: human, body: "@codex review", created_at: t("2026-08-14T12:00:00Z") },
+        { user: human, body: "@codex review", created_at: t("2026-08-14T13:00:00Z") }
+      ],
+      reactions: [
+        { user: bot, content: "+1", created_at: t("2026-08-14T12:05:00Z") }
+      ]
+    });
+    assert.equal(result.status, "fail");
+    assert.equal(result.exitCode, 1);
+    assert.match(result.message, /未応答|過去の成功/);
+  });
+
+  it("人間の👍 → fail", () => {
+    const result = evaluateCodexGate({
+      issueComments: [
+        { user: human, body: "@codex review", created_at: t("2026-08-14T12:00:00Z") }
+      ],
+      reactions: [
+        { user: human, content: "+1", created_at: t("2026-08-14T12:05:00Z") },
+        { user: { login: "vercel[bot]" }, content: "THUMBS_UP", created_at: t("2026-08-14T12:05:01Z") }
+      ]
+    });
+    assert.equal(result.status, "fail");
+    assert.equal(result.exitCode, 1);
+    assert.match(result.message, /未応答|過去の成功/);
+  });
+
+  it("最新要求後に接続エラーだけ → fail", () => {
+    const result = evaluateCodexGate({
+      issueComments: [
+        { user: human, body: "@codex review", created_at: t("2026-08-14T13:00:00Z") },
+        {
+          user: bot,
+          body: "To use Codex here, create a Codex account and connect to github",
+          created_at: t("2026-08-14T13:00:05Z")
+        }
+      ],
+      reactions: [
+        { user: bot, content: "+1", created_at: t("2026-08-14T12:05:00Z") }
+      ]
+    });
+    assert.equal(result.status, "fail");
+    assert.equal(result.exitCode, 1);
+    assert.match(result.message, /接続エラー/);
+  });
+
+  it("最新要求後に正常review submission → pass", () => {
+    const result = evaluateCodexGate({
+      issueComments: [
+        { user: human, body: "@codex review", created_at: t("2026-08-14T13:00:00Z") }
+      ],
+      reviews: [
+        {
+          user: bot,
+          body: "### 💡 Codex Review\nLooks good.",
+          submitted_at: t("2026-08-14T13:05:00Z")
+        }
+      ],
+      reactions: [
+        { user: human, content: "+1", created_at: t("2026-08-14T13:06:00Z") }
+      ]
+    });
+    assert.equal(result.status, "pass");
+    assert.equal(result.exitCode, 0);
+  });
 });

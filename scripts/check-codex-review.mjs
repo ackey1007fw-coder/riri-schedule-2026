@@ -7,7 +7,7 @@
 //   1 … 最新の @codex review が未完了（未応答・接続エラー・未解決P1/P2）→ 自動マージ禁止
 //   2 … 使い方ミス / GitHub API 失敗
 import { spawnSync } from "node:child_process";
-import { evaluateCodexGate, flattenPages } from "./lib/codexReviewGate.mjs";
+import { evaluateCodexGate, flattenPages, REQUEST_RE } from "./lib/codexReviewGate.mjs";
 
 const prNumber = (process.argv[2] || "").trim();
 if (!/^\d+$/.test(prNumber)) {
@@ -27,7 +27,14 @@ const gh = (args) => {
 const ghJson = (args) => JSON.parse(gh(args));
 
 const ghPaginatedList = (path) => {
-  const pages = ghJson(["api", "--paginate", "--slurp", path]);
+  const pages = ghJson([
+    "api",
+    "--paginate",
+    "--slurp",
+    "-H",
+    "Accept: application/vnd.github+json",
+    path
+  ]);
   return flattenPages(pages);
 };
 
@@ -115,13 +122,25 @@ try {
   ];
 }
 
+// Codex は指摘なしのとき PR 本体、または @codex review コメントに 👍 を付ける。
+const reactions = [
+  ...ghPaginatedList(`repos/${owner}/${repoName}/issues/${prNumber}/reactions`)
+];
+for (const comment of issueComments) {
+  if (!comment?.id || !REQUEST_RE.test(comment.body || "")) continue;
+  reactions.push(
+    ...ghPaginatedList(`repos/${owner}/${repoName}/issues/comments/${comment.id}/reactions`)
+  );
+}
+
 const result = evaluateCodexGate({
   prBody: pr.body || "",
   prCreatedAt: pr.created_at,
   issueComments,
   reviews,
   reviewComments,
-  reviewThreads
+  reviewThreads,
+  reactions
 });
 
 const printer = result.exitCode === 0 ? console.log : console.error;
