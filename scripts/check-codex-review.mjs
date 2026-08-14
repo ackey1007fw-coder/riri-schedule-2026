@@ -3,15 +3,11 @@
 // 使い方: node scripts/check-codex-review.mjs <pr-number>
 //
 // 終了コード:
-//   0 … Codex未依頼、または実際にレビュー処理が完了している
-//   1 … Codexを依頼したが完了していない（接続エラー・未応答など）→ 自動マージ禁止
+//   0 … Codex未依頼、または最新要求より後に有効なレビューがあり未解決P1/P2なし
+//   1 … 最新の @codex review が未完了（未応答・接続エラー・未解決P1/P2）→ 自動マージ禁止
 //   2 … 使い方ミス / GitHub API 失敗
 import { spawnSync } from "node:child_process";
-
-const CODEX_BOT = "chatgpt-codex-connector[bot]";
-const REQUEST_RE = /@codex\s+review/i;
-const FAILURE_RE =
-  /connect to github|create a Codex account|not connected|account\/connect|timed? ?out|connection error|reviewを実行できない|GitHub接続/i;
+import { evaluateCodexGate, flattenPages } from "./lib/codexReviewGate.mjs";
 
 const prNumber = (process.argv[2] || "").trim();
 if (!/^\d+$/.test(prNumber)) {
@@ -19,67 +15,115 @@ if (!/^\d+$/.test(prNumber)) {
   process.exit(2);
 }
 
-const gh = (path) => {
-  const result = spawnSync("gh", ["api", path], { encoding: "utf8" });
+const gh = (args) => {
+  const result = spawnSync("gh", args, { encoding: "utf8", maxBuffer: 20 * 1024 * 1024 });
   if (result.status !== 0) {
-    console.error(result.stderr || result.stdout || `gh api ${path} failed`);
+    console.error(result.stderr || result.stdout || `gh ${args.join(" ")} failed`);
     process.exit(2);
   }
-  return JSON.parse(result.stdout);
+  return result.stdout;
 };
 
-const issueComments = gh(`repos/ackey1007fw-coder/riri-schedule-2026/issues/${prNumber}/comments`);
-const reviews = gh(`repos/ackey1007fw-coder/riri-schedule-2026/pulls/${prNumber}/reviews`);
-const reviewComments = gh(
-  `repos/ackey1007fw-coder/riri-schedule-2026/pulls/${prNumber}/comments`,
-);
-const pr = gh(`repos/ackey1007fw-coder/riri-schedule-2026/pulls/${prNumber}`);
+const ghJson = (args) => JSON.parse(gh(args));
 
-const requested =
-  REQUEST_RE.test(pr.body || "") ||
-  issueComments.some((c) => REQUEST_RE.test(c.body || ""));
+const ghPaginatedList = (path) => {
+  const pages = ghJson(["api", "--paginate", "--slurp", path]);
+  return flattenPages(pages);
+};
 
-const failureComments = [...issueComments, ...reviews, ...reviewComments].filter(
-  (item) => item.user?.login === CODEX_BOT && FAILURE_RE.test(item.body || ""),
-);
-
-const completedReviews = reviews.filter(
-  (item) =>
-    item.user?.login === CODEX_BOT &&
-    !FAILURE_RE.test(item.body || "") &&
-    (item.body || "").trim().length > 0,
-);
-const completedLineComments = reviewComments.filter(
-  (item) => item.user?.login === CODEX_BOT && !FAILURE_RE.test(item.body || ""),
-);
-const completed = completedReviews.length > 0 || completedLineComments.length > 0;
-
-if (!requested) {
-  console.log(
-    `codex-review: PR #${prNumber} に @codex review 依頼は見当たりません。Codexゲートはスキップします。`,
-  );
-  process.exit(0);
+const pr = ghJson(["api", `repos/{owner}/{repo}/pulls/${prNumber}`]);
+const owner = pr.base?.repo?.owner?.login;
+const repoName = pr.base?.repo?.name;
+if (!owner || !repoName) {
+  console.error("PR の owner/repo が取得できませんでした。");
+  process.exit(2);
 }
 
-if (failureComments.length > 0 && !completed) {
-  console.error(
-    `\n❌ Codexレビューは完了していません（接続エラー等）。自動マージしないでください。\n` +
-      failureComments
-        .map((item) => `   - ${(item.body || "").split("\n")[0].slice(0, 200)}`)
-        .join("\n"),
-  );
-  process.exit(1);
-}
-
-if (!completed) {
-  console.error(
-    `\n❌ PR #${prNumber} は @codex review を依頼済みですが、Codexの review submission / 指摘コメントがありません。\n` +
-      `   「未解決P1/P2が0件」だけではレビュー完了ではありません。自動マージしないでください。\n`,
-  );
-  process.exit(1);
-}
-
-console.log(
-  `✅ codex-review: PR #${prNumber} は Codex のレビュー処理が完了しています` +
-    `（reviews=${completedReviews.length}, line comments=${completedLineComments.length}）。`,
+const issueComments = ghPaginatedList(
+  `repos/${owner}/${repoName}/issues/${prNumber}/comments`
 );
+const reviews = ghPaginatedList(`repos/${owner}/${repoName}/pulls/${prNumber}/reviews`);
+const reviewComments = ghPaginatedList(
+  `repos/${owner}/${repoName}/pulls/${prNumber}/comments`
+);
+
+const fetchReviewThreads = () => {
+  // GraphQL の query 本文では {owner}/{repo} プレースホルダは置換されないため変数で渡す。
+  // gh api graphql --paginate は pageInfo.hasNextPage / endCursor を見て全ページを取る。
+  const query = `query($owner: String!, $name: String!, $number: Int!, $endCursor: String) {
+    repository(owner: $owner, name: $name) {
+      pullRequest(number: $number) {
+        reviewThreads(first: 50, after: $endCursor) {
+          pageInfo { hasNextPage endCursor }
+          nodes {
+            id
+            isResolved
+            comments(first: 50) {
+              nodes { body createdAt author { login } }
+            }
+          }
+        }
+      }
+    }
+  }`;
+
+  const pages = flattenPages(
+    ghJson([
+      "api",
+      "graphql",
+      "--paginate",
+      "--slurp",
+      "-f",
+      `query=${query}`,
+      "-F",
+      `owner=${owner}`,
+      "-F",
+      `name=${repoName}`,
+      "-F",
+      `number=${Number(prNumber)}`
+    ])
+  );
+
+  const threads = [];
+  for (const page of pages) {
+    const nodes = page?.data?.repository?.pullRequest?.reviewThreads?.nodes || [];
+    for (const node of nodes) {
+      threads.push({
+        id: node.id,
+        isResolved: Boolean(node.isResolved),
+        comments: (node.comments?.nodes || []).map((comment) => ({
+          user: { login: comment.author?.login },
+          body: comment.body,
+          created_at: comment.createdAt
+        }))
+      });
+    }
+  }
+  return threads;
+};
+
+let reviewThreads = [];
+try {
+  reviewThreads = fetchReviewThreads();
+} catch (error) {
+  console.error("reviewThreads の取得に失敗したため、未解決 P1/P2 はレビューコメントから判定します。", error);
+  reviewThreads = [
+    {
+      isResolved: false,
+      comments: reviewComments
+    }
+  ];
+}
+
+const result = evaluateCodexGate({
+  prBody: pr.body || "",
+  prCreatedAt: pr.created_at,
+  issueComments,
+  reviews,
+  reviewComments,
+  reviewThreads
+});
+
+const printer = result.exitCode === 0 ? console.log : console.error;
+printer(result.exitCode === 0 ? `codex-review: ${result.message}` : `\n❌ ${result.message}\n`);
+process.exit(result.exitCode);

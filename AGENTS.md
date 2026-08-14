@@ -170,10 +170,14 @@ node scripts/check-codex-review.mjs <pr-number>   # @codex review を付けた P
 ### Codex レビュー完了の判定
 **この依頼で Codex レビューを要求していない PR** まで、存在しないレビューを必須化しない。
 
-Codex レビューを要求した PR（PR 本文またはコメントに `@codex review` がある、あるいは依頼文で Codex レビューを求めている）では、「依頼した」という事実だけでは不十分。次の**いずれか**で、実際にレビュー処理が完了したことを確認してからマージする。
-- Codex（`chatgpt-codex-connector[bot]`）から **review submission** が付いた。
-- Codex が「指摘なし」を示す正式な反応を返した。
-- Codex のレビューコメントが付き、その指摘を処理済み（未解決の P1/P2 が残っていない）。
+判定は「過去に1回でも成功レビューがあるか」ではない。**最新の `@codex review` 要求の `created_at` より後に**、Codex（`chatgpt-codex-connector[bot]`）から有効なレビュー応答（`submitted_at` / `created_at`）が来たかどうかで見る。古い成功レビューのあと、新しい要求が未応答・接続エラー・失敗なら **自動マージ禁止**。
+
+issue comments / reviews / review comments は GitHub API の **全ページ** を取得し、flatten してから最新要求・応答を決める（1ページ目だけで終わらせない）。
+
+有効な応答の例:
+- Codex から **review submission** が付いた
+- Codex が「指摘なし」を示す正式な反応を返した
+- Codex のレビューコメントが付き、その指摘を処理済み（未解決の P1/P2 が残っていない）
 
 次のような応答は **レビュー完了ではない**。自動マージせず、理由を報告して止まる。
 - GitHub に接続されていない / connect GitHub を要求された
@@ -181,7 +185,7 @@ Codex レビューを要求した PR（PR 本文またはコメントに `@codex
 - エラー
 - タイムアウト
 
-確認コマンド: `node scripts/check-codex-review.mjs <pr-number>`（GitHub 上の `@codex review` 依頼を見る）。依頼文だけで `@codex review` コメントが無い場合は、エージェントがコメントしてから待つ。
+確認コマンド: `node scripts/check-codex-review.mjs <pr-number>`。回帰テストは `pnpm test`（CI の `typecheck-and-build` でも実行）。依頼文だけで `@codex review` コメントが無い場合は、エージェントがコメントしてから待つ。
 
 ### マージ方法
 原則 **GitHub の squash merge**（`gh pr merge <n> --squash` または同等の GitHub merge）。
