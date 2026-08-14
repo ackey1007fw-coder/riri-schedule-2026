@@ -32,15 +32,17 @@ type Stage = {
   day: number;
   weekday: string;
   time: string;
+  /** 劇団ココア公式Xの当該投稿におけるA班のお席表記 */
+  seat: string;
 };
 
 const pipparaStages: Stage[] = [
-  { no: 1, iso: "2026-08-18T19:30:00+09:00", month: 8, day: 18, weekday: "火", time: "19:30" },
-  { no: 2, iso: "2026-08-22T12:00:00+09:00", month: 8, day: 22, weekday: "土", time: "12:00" },
-  { no: 3, iso: "2026-08-23T15:30:00+09:00", month: 8, day: 23, weekday: "日", time: "15:30" },
-  { no: 4, iso: "2026-08-25T14:00:00+09:00", month: 8, day: 25, weekday: "火", time: "14:00" },
-  { no: 5, iso: "2026-08-28T19:30:00+09:00", month: 8, day: 28, weekday: "金", time: "19:30" },
-  { no: 6, iso: "2026-08-29T19:30:00+09:00", month: 8, day: 29, weekday: "土", time: "19:30" }
+  { no: 1, iso: "2026-08-18T19:30:00+09:00", month: 8, day: 18, weekday: "火", time: "19:30", seat: "！" },
+  { no: 2, iso: "2026-08-22T12:00:00+09:00", month: 8, day: 22, weekday: "土", time: "12:00", seat: "！" },
+  { no: 3, iso: "2026-08-23T15:30:00+09:00", month: 8, day: 23, weekday: "日", time: "15:30", seat: "残り5席" },
+  { no: 4, iso: "2026-08-25T14:00:00+09:00", month: 8, day: 25, weekday: "火", time: "14:00", seat: "！" },
+  { no: 5, iso: "2026-08-28T19:30:00+09:00", month: 8, day: 28, weekday: "金", time: "19:30", seat: "！" },
+  { no: 6, iso: "2026-08-29T19:30:00+09:00", month: 8, day: 29, weekday: "土", time: "19:30", seat: "満席" }
 ];
 
 type FlyerImage = {
@@ -91,14 +93,14 @@ const relatedImages: FlyerImage[] = [
 
 /** 劇団ココア公式Xの座席状況投稿。日々変わるため、記号の意味と参照先だけを置く */
 const seatStatus = {
-  updatedAt: "2026年8月9日",
+  updatedAt: "2026年8月14日",
   legend: [
     { mark: "◯", text: "まだまだ予約OK" },
-    { mark: "△", text: "埋まってきている" },
-    { mark: "！", text: "満席になりそう" }
+    { mark: "△", text: "埋まってきてます" },
+    { mark: "！", text: "満席になりそう予約急いで" }
   ],
-  note: "劇団ココア公式Xの8月9日の告知では、A班の回にも「！」や残りわずか・満席の日程が出ています。里季さんも8月10日の投稿で「満席が増えて来ていますが、まだ空席あります！」と呼びかけています。最新の状況は公式Xでご確認ください。",
-  url: "https://x.com/gekidan_cocoa"
+  note: "劇団ココア公式Xの8月14日の告知では、夏凪里季さん出演のA班は 8/18(火)19:30「！」／8/22(土)12:00「！」／8/23(日)15:30 残り5席／8/25(火)14:00「！」／8/28(金)19:30「！」／8/29(土)19:30 満席 です。満席回が増えているので、ご予約はお早めに。",
+  url: "https://x.com/gekidan_cocoa/status/2088062591679807522"
 };
 
 /** 投稿本文はここに一度だけ置き、セクション内で重複表示しない */
@@ -401,7 +403,7 @@ export function PipparaNoKiSection() {
                   rel="noopener noreferrer"
                   className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[#6f2f3c] underline decoration-[#c9a24b] underline-offset-2"
                 >
-                  最新の座席状況は劇団ココア公式Xで確認する
+                  8月14日のお席情報を劇団ココア公式Xで見る
                   <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
                 </a>
               </div>
@@ -598,6 +600,13 @@ export function PipparaNoKiSection() {
                     <span className="ml-1 text-xs opacity-70">（{stage.weekday}）</span>
                   </span>
                   <span className="font-bold tabular-nums">{stage.time}</span>
+                  <span
+                    className={`shrink-0 text-[10px] font-bold ${
+                      stage.isPast ? "text-ink/40" : "text-[#6f2f3c]"
+                    }`}
+                  >
+                    {stage.seat}
+                  </span>
                   {stage.isPast && (
                     <span className="shrink-0 text-[10px] font-bold">終了</span>
                   )}
@@ -605,7 +614,7 @@ export function PipparaNoKiSection() {
               ))}
             </ul>
             <p className="mt-3 text-xs leading-6 text-ink/50">
-              日時はすべて日本時間です。
+              日時はすべて日本時間です。お席表記は劇団ココア公式X（2026年8月14日）の告知によります。
             </p>
           </div>
 
@@ -635,7 +644,7 @@ export function PipparaNoKiSection() {
             </p>
 
             <p className="mt-3 text-xs leading-6 text-ink/55">
-              8月10日の本人投稿では「満席が増えて来ていますが、まだ空席あります！」と予約が呼びかけられています。満席・残りわずかの回も出ているので、気になる日程はお早めに。
+              8月10日の本人投稿では「満席が増えて来ていますが、まだ空席あります！」と予約が呼びかけられています。劇団ココア公式Xの8月14日時点では、A班の8/29(土)19:30は満席、8/23(日)15:30は残り5席、ほか4公演は「！」です。気になる日程はお早めに。
             </p>
 
             <a
