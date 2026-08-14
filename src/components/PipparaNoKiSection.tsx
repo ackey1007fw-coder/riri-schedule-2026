@@ -70,9 +70,9 @@ const pipparaPortraitHat: FlyerImage = {
   src: "/images/pippara-no-ki-portrait-03.jpg",
   alt: "黒いチュールをあしらった白いミニハットに手を添え、カメラに笑顔を向ける夏凪里季さん。ベージュのストライプブラウスにボウタイ、茶色の留め具がついた青緑のベスト、白いスカートというA班「アナスタジー・ド・ブロワ」の衣装姿"
 };
-const pipparaSelfieBackstage: FlyerImage = {
-  src: "/images/gallery/g100.jpg",
-  alt: "暗い舞台裏で腕を伸ばして自撮りする夏凪里季さん。黒いチュールとリボン、パールをあしらった白いミニハットを髪に留め、ベージュのストライプブラウスに大きなボウタイ、紺色のベストというA班「アナスタジー・ド・ブロワ」の衣装姿"
+const pipparaNenePhoto: FlyerImage = {
+  src: "/images/gallery/g108.jpg",
+  alt: "チェック柄の半袖シャツ姿でピースをする夏凪里季さん（右）と、短い黒髪に水色のトップスでピースをするねねさん(@nene_matu)（左）。ハンガーラックのある室内での2ショット"
 };
 const pipparaMainVisual: FlyerImage = {
   src: "/images/pippara-no-ki-main-visual-2026.jpg",
@@ -116,6 +116,24 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-10",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月10日（月）14:34",
+    headline: "「まだ空席あります！ そこの貴方！！」",
+    body: `#ピッパラの樹 みんな予約してくれたかな？？
+満席が増えて来ていますが、まだ空席あります！
+そこの貴方！！ぜひ会場に足を運んでくださると嬉しいです。
+(固定ポストに日程、場所等も載せています!)
+
+日程合わないな〜とかもっと応援したい！と思ってくださった方、ぜひこちらの推し花もご検討ください🙇🏻‍♀️とっても力になります🥹✨️
+
+チケット→（りりはA班、備考欄に夏凪里季と記入お願いします）
+推し花→（下の「推し花で応援を届ける」からご覧いただけます）`,
+    quote: "満席が増えて来ていますが、まだ空席あります！",
+    url: "https://x.com/frecam2025_0306/status/2086687668155695183"
+  },
   {
     id: "x-2026-08-05",
     platform: "X",
@@ -207,21 +225,19 @@ A班のアナスタジー・ド・ブロワ役を
 
 /** 最新のトピック（写真つきで大きく扱う） */
 const latestTopic = {
-  headline: "「まだ空席あります！ そこの貴方！！」",
-  datetime: "2026年8月10日（月）14:34",
-  photo: pipparaSelfieBackstage,
-  body: `#ピッパラの樹 みんな予約してくれたかな？？
-満席が増えて来ていますが、まだ空席あります！
-そこの貴方！！ぜひ会場に足を運んでくださると嬉しいです。
-(固定ポストに日程、場所等も載せています!)
+  headline: "「ジョセフとアナスタジーの関係にもご注目」",
+  datetime: "2026年8月14日（金）19:22",
+  photo: pipparaNenePhoto,
+  body: `#ピッパラの樹 イケメンすぎるねねさん(@nene_matu )とお写真撮らせていただきました𓂃◌𓈒𓐍
 
-日程合わないな〜とかもっと応援したい！と思ってくださった方、ぜひこちらの推し花もご検討ください🙇🏻‍♀️とっても力になります🥹✨️
+普段は可愛らしいのにお芝居になるとギャップがすごい✨️
+ジョセフとアナスタジーの関係にもご注目👀‼️
 
 チケット→（りりはA班、備考欄に夏凪里季と記入お願いします）
 推し花→（下の「推し花で応援を届ける」からご覧いただけます）`,
-  quote: "満席が増えて来ていますが、まだ空席あります！",
-  note: "劇団ココア公式Xの8月9日の座席状況を引用しての呼びかけです。",
-  url: "https://x.com/frecam2025_0306/status/2086687668155695183"
+  quote: "普段は可愛らしいのにお芝居になるとギャップがすごい",
+  note: "ねねさん(@nene_matu)との2ショットとともに、ジョセフとアナスタジーの関係を見どころとして紹介しています。夏凪里季さんの役はA班「アナスタジー・ド・ブロワ」です。",
+  url: "https://x.com/frecam2025_0306/status/2088209691122036893"
 };
 
 /** 8月10日の投稿で案内された「推し花」（応援広告） */
@@ -328,7 +344,7 @@ export function PipparaNoKiSection() {
           copy="夏凪里季さんが、A班「アナスタジー・ド・ブロワ役」で出演！"
         />
 
-        {/* 最新トピック：本人からの予約呼びかけ */}
+        {/* 最新トピック：本人の最新投稿 */}
         <article className="riri-card overflow-hidden border-[#7c5a3a]/25 bg-white shadow-paper">
           <div className="h-1.5 bg-[linear-gradient(90deg,#2f4a3a_0%,#6f2f3c_35%,#c9a24b_68%,#2f4a3a_100%)]" />
           <div className="grid gap-0 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
@@ -337,7 +353,7 @@ export function PipparaNoKiSection() {
                 type="button"
                 onClick={openZoom(latestTopic.photo)}
                 className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
-                aria-label="A班「アナスタジー・ド・ブロワ」衣装姿で舞台裏から自撮りする夏凪里季さんの写真を拡大表示"
+                aria-label="ねねさん(@nene_matu)とピースサインで並ぶ夏凪里季さんの写真を拡大表示"
               >
                 <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
                   <img
