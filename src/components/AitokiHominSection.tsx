@@ -74,10 +74,10 @@ export function AitokiHominSection() {
           <div className="riri-card overflow-hidden border-rosefog/30 bg-white">
             <img
               {...getResponsiveImageProps(
-                "/images/im-talking-about-homin-flyer-2026.jpg",
+                "/images/im-talking-about-homin-mainvisual-a-2026.jpg",
                 "(min-width: 1024px) 38vw, 100vw"
               )}
-              alt="月シア別冊第2集『I'm talking about Homin'』公演フライヤー。夏凪里季さんはA sideに出演"
+              alt="月シア別冊第2集『I'm talking about Homin'』メインビジュアルA。2026年9月11日〜15日、西荻窪 遊空間がざびぃ"
               loading="lazy"
               decoding="async"
               className="block h-auto w-full object-contain"
