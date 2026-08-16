@@ -82,6 +82,11 @@ export const events: ScheduleEvent[] = [
         kind: "ticket"
       },
       {
+        label: "メインビジュアルA解禁（8/15）",
+        url: "https://x.com/frecam2025_0306/status/2088596575849533937",
+        kind: "sns"
+      },
+      {
         label: "デジタルメッセージ花（5,000円）",
         url: "https://tsukitheater.base.ec/items/150226748",
         kind: "info"
