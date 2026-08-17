@@ -50,6 +50,10 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.14 Instagram「原宿にこんな綺麗な場所があること知らなかった」本人投稿3枚。creditなし
+  { src: "/images/gallery/g109.jpg", alt: "夜の屋外の木製階段に立つ夏凪里季さんの全身が分かる縦写真。白いノースリーブのトップスにライトブルーのデニム、淡い色のショルダーバッグ。手すりにイルミネーション、背景に都市の夜景（原宿・Instagramより）" },
+  { src: "/images/gallery/g110.jpg", alt: "カメラに近い構図で、片手を髪付近に添えた夏凪里季さん。白いノースリーブのトップスにデニム、淡い色のショルダーバッグ。背景はイルミネーションの灯る夜の階段と都市の夜景（原宿・Instagramより）" },
+  { src: "/images/gallery/g111.jpg", alt: "イルミネーションの灯る手すりに片手を置き、横方向へ視線を向けた夏凪里季さん。白いノースリーブのトップスにデニム、淡い色のショルダーバッグ。背景は夜の都市の夜景（原宿・Instagramより）" },
   // 2026.8.14 X「#ピッパラの樹 イケメンすぎるねねさん」本人投稿。creditなし
   { src: "/images/gallery/g108.jpg", alt: "チェック柄の半袖シャツ姿でピースをする夏凪里季さん（右）と、短い黒髪に水色のトップスでピースをするねねさん(@nene_matu)（左）。ハンガーラックのある室内での2ショット（X『#ピッパラの樹』より）" },
   // 2026.8.13 X サンリオピューロランド
@@ -215,7 +219,7 @@ export const galleryUpdate: {
   url: string;
 } = {
   date: "2026.8.14",
-  platform: "X",
-  note: "ねねさん(@nene_matu)との2ショット。#ピッパラの樹 でジョセフとアナスタジーの関係に注目を呼びかけ",
-  url: "https://x.com/frecam2025_0306/status/2088209691122036893"
+  platform: "Instagram",
+  note: "「原宿にこんな綺麗な場所があること知らなかった」イルミネーションの夜の階段で夏コーデを3枚",
+  url: "https://www.instagram.com/p/DcBRFaoiTAh/"
 };
