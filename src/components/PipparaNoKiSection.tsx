@@ -84,6 +84,7 @@ const rehearsalPhoto: FlyerImage = {
 };
 
 const relatedImages: FlyerImage[] = [
+  pipparaNenePhoto,
   pipparaPortraitHat,
   pipparaPortraitSub,
   pipparaMainVisual,
@@ -116,6 +117,22 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-14",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月14日（金）19:22",
+    headline: "「ジョセフとアナスタジーの関係にもご注目」",
+    body: `#ピッパラの樹 イケメンすぎるねねさん(@nene_matu )とお写真撮らせていただきました𓂃◌𓈒𓐍
+
+普段は可愛らしいのにお芝居になるとギャップがすごい✨️
+ジョセフとアナスタジーの関係にもご注目👀‼️
+
+チケット→（りりはA班、備考欄に夏凪里季と記入お願いします）
+推し花→（下の「推し花で応援を届ける」からご覧いただけます）`,
+    quote: "普段は可愛らしいのにお芝居になるとギャップがすごい",
+    url: "https://x.com/frecam2025_0306/status/2088209691122036893"
+  },
   {
     id: "x-2026-08-10",
     platform: "X",
@@ -223,22 +240,43 @@ A班のアナスタジー・ド・ブロワ役を
   }
 ];
 
-/** 最新のトピック（写真つきで大きく扱う） */
-const latestTopic = {
-  headline: "「ジョセフとアナスタジーの関係にもご注目」",
-  datetime: "2026年8月14日（金）19:22",
-  photo: pipparaNenePhoto,
-  body: `#ピッパラの樹 イケメンすぎるねねさん(@nene_matu )とお写真撮らせていただきました𓂃◌𓈒𓐍
-
-普段は可愛らしいのにお芝居になるとギャップがすごい✨️
-ジョセフとアナスタジーの関係にもご注目👀‼️
-
-チケット→（りりはA班、備考欄に夏凪里季と記入お願いします）
-推し花→（下の「推し花で応援を届ける」からご覧いただけます）`,
-  quote: "普段は可愛らしいのにお芝居になるとギャップがすごい",
-  note: "ねねさん(@nene_matu)との2ショットとともに、ジョセフとアナスタジーの関係を見どころとして紹介しています。夏凪里季さんの役はA班「アナスタジー・ド・ブロワ」です。",
-  url: "https://x.com/frecam2025_0306/status/2088209691122036893"
+/** 最新のトピック（写真がある投稿は写真つき、無い投稿は初日パネルを添える） */
+type LatestTopic = {
+  headline: string;
+  datetime: string;
+  /** 投稿に写真があるときだけ。無い場合は初日パネルを表示する */
+  photo?: FlyerImage;
+  body: string;
+  quote: string;
+  note: string;
+  url: string;
+  /** 引用元の投稿（引用リポストのとき） */
+  quotedPost?: { label: string; text: string; url: string };
 };
+
+const latestTopic: LatestTopic = {
+  headline: "「ついに明日が初日です！」",
+  datetime: "2026年8月17日（月）13:54",
+  body: `A班最終通し稽古終わりました✨️
+
+ついに明日が初日です！
+まだお席空いています！今一度ご予定の確認よろしくお願いいたします😊
+
+🎫 チケット→（りりはA班、備考欄に夏凪里季と記入お願いします）
+推し花→（下の「推し花で応援を届ける」からご覧いただけます）`,
+  quote: `A班最終通し稽古終わりました✨️
+ついに明日が初日です！`,
+  note: "劇団ココア公式Xの最終通し稽古の投稿を引用しての報告です。夏凪里季さんの役はA班「アナスタジー・ド・ブロワ」です。",
+  url: "https://x.com/frecam2025_0306/status/2089214229576585512",
+  quotedPost: {
+    label: "劇団ココア公式X（2026年8月16日）",
+    text: "【#ピッパラの樹】Ａ班の最終通し稽古も無事に終わりましたー！ Ａ班は8/18(火)からです！🗓️ ※ご予約は備考欄に応援されている演者の明記をお願い致します。（最終通し稽古の様子をまとめた動画つき）",
+    url: "https://x.com/gekidan_cocoa/status/2088889793619079463"
+  }
+};
+
+/** 最新トピックに写真が無いときに添える、初日（A班1公演目）の情報 */
+const openingNight = pipparaStages[0];
 
 /** 8月10日の投稿で案内された「推し花」（応援広告） */
 const oshibana = {
@@ -250,6 +288,16 @@ const oshibana = {
 };
 
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
+const JST_OFFSET_MS = 9 * 60 * 60 * 1000;
+
+/** 「あと何日」は時刻差ではなく日本時間の暦日で数える（今日=0／明日=1） */
+const jstDayIndex = (ms: number) => Math.floor((ms + JST_OFFSET_MS) / MS_PER_DAY);
+
+const nextStageLabel = (days: number) => {
+  if (days <= 0) return "次の公演は本日です";
+  if (days === 1) return "次の公演は明日です";
+  return `次の公演まであと${days}日`;
+};
 
 const AccountAvatar = ({ platform }: { platform: SnsPost["platform"] }) => (
   <span
@@ -327,7 +375,7 @@ export function PipparaNoKiSection() {
       stages: marked,
       remaining: upcoming.length,
       daysToNext: next
-        ? Math.max(0, Math.ceil((new Date(next.iso).getTime() - now) / MS_PER_DAY))
+        ? Math.max(0, jstDayIndex(new Date(next.iso).getTime()) - jstDayIndex(now))
         : null
     };
   }, []);
@@ -349,29 +397,57 @@ export function PipparaNoKiSection() {
           <div className="h-1.5 bg-[linear-gradient(90deg,#2f4a3a_0%,#6f2f3c_35%,#c9a24b_68%,#2f4a3a_100%)]" />
           <div className="grid gap-0 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
             <div className="border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:border-b-0 sm:border-r sm:p-6">
-              <button
-                type="button"
-                onClick={openZoom(latestTopic.photo)}
-                className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
-                aria-label="ねねさん(@nene_matu)とピースサインで並ぶ夏凪里季さんの写真を拡大表示"
-              >
-                <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
-                  <img
-                    {...getResponsiveImageProps(
-                      latestTopic.photo.src,
-                      "(min-width: 640px) 40vw, 100vw"
-                    )}
-                    alt={latestTopic.photo.alt}
-                    loading="lazy"
-                    decoding="async"
-                    className="block w-full"
-                  />
-                  <span className="pointer-events-none absolute inset-0 bg-ink/10 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
-                </span>
-                <span className="mt-2 inline-block text-xs font-bold text-[#6f2f3c]">
-                  タップして拡大表示
-                </span>
-              </button>
+              {latestTopic.photo ? (
+                <button
+                  type="button"
+                  onClick={openZoom(latestTopic.photo)}
+                  className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
+                  aria-label={`${latestTopic.photo.alt}を拡大表示`}
+                >
+                  <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
+                    <img
+                      {...getResponsiveImageProps(
+                        latestTopic.photo.src,
+                        "(min-width: 640px) 40vw, 100vw"
+                      )}
+                      alt={latestTopic.photo.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="block w-full"
+                    />
+                    <span className="pointer-events-none absolute inset-0 bg-ink/10 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
+                  </span>
+                  <span className="mt-2 inline-block text-xs font-bold text-[#6f2f3c]">
+                    タップして拡大表示
+                  </span>
+                </button>
+              ) : (
+                <div className="border border-[#7c5a3a]/25 bg-white p-5 sm:p-6">
+                  <p className="text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
+                    Opening Night
+                  </p>
+                  <p className="mt-2 font-display text-2xl leading-tight text-ink sm:text-3xl">
+                    A班 初日
+                  </p>
+                  <p className="mt-2 flex items-center gap-2 text-sm text-ink/80">
+                    <CalendarDays className="h-4 w-4 shrink-0 text-[#6f2f3c]" aria-hidden="true" />
+                    {openingNight.month}月{openingNight.day}日（{openingNight.weekday}）
+                    {openingNight.time} 開演
+                  </p>
+                  <p className="mt-1.5 flex items-center gap-2 text-sm text-ink/80">
+                    <MapPin className="h-4 w-4 shrink-0 text-[#6f2f3c]" aria-hidden="true" />
+                    荻窪小劇場
+                  </p>
+                  {daysToNext !== null && (
+                    <p className="mt-4 border-t border-dashed border-[#7c5a3a]/25 pt-4 text-sm font-bold text-[#6f2f3c]">
+                      {nextStageLabel(daysToNext)}
+                    </p>
+                  )}
+                  <p className="mt-3 text-xs leading-6 text-ink/55">
+                    開場は開演の30分前を予定。ご予約は備考欄に「夏凪里季」とご記入ください。
+                  </p>
+                </div>
+              )}
             </div>
 
             <div className="p-5 sm:p-7 lg:p-9">
@@ -395,6 +471,27 @@ export function PipparaNoKiSection() {
                 {latestTopic.body}
               </div>
               <p className="mt-3 text-xs leading-6 text-ink/50">{latestTopic.note}</p>
+
+              {/* 引用元の投稿（動画は元投稿で見てもらう） */}
+              {latestTopic.quotedPost && (
+                <div className="mt-4 border border-[#7c5a3a]/25 bg-[#f8f3e6] p-4">
+                  <p className="text-xs font-bold text-[#6f2f3c]">
+                    引用元：{latestTopic.quotedPost.label}
+                  </p>
+                  <p className="mt-2 whitespace-pre-line text-sm leading-7 text-ink/80">
+                    {latestTopic.quotedPost.text}
+                  </p>
+                  <a
+                    href={latestTopic.quotedPost.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[#6f2f3c] underline decoration-[#c9a24b] underline-offset-2"
+                  >
+                    最終通し稽古の動画をXで見る
+                    <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                  </a>
+                </div>
+              )}
 
               {/* 座席状況は日々変わるので、記号の意味と公式の参照先だけを置く */}
               <div className="mt-5 border border-[#c9a24b]/40 bg-[#f8f3e6] p-4">
@@ -582,9 +679,7 @@ export function PipparaNoKiSection() {
                 全6公演
                 {remaining > 0 && remaining < stages.length && `／残り${remaining}公演`}
                 {daysToNext !== null && (
-                  <span className="ml-1 text-ink/55">
-                    ・次の公演まであと{daysToNext}日
-                  </span>
+                  <span className="ml-1 text-ink/55">・{nextStageLabel(daysToNext)}</span>
                 )}
               </p>
             </div>
@@ -660,7 +755,7 @@ export function PipparaNoKiSection() {
             </p>
 
             <p className="mt-3 text-xs leading-6 text-ink/55">
-              8月10日の本人投稿では「満席が増えて来ていますが、まだ空席あります！」と予約が呼びかけられています。劇団ココア公式Xの8月14日時点では、A班の8/29(土)19:30は満席、8/23(日)15:30は残り5席、ほか4公演は「！」です。気になる日程はお早めに。
+              8月17日の本人投稿では「まだお席空いています！今一度ご予定の確認よろしくお願いいたします」と予約が呼びかけられています。劇団ココア公式Xの8月14日時点では、A班の8/29(土)19:30は満席、8/23(日)15:30は残り5席、ほか4公演は「！」です。気になる日程はお早めに。
             </p>
 
             <a
@@ -782,7 +877,7 @@ export function PipparaNoKiSection() {
             <p className="mb-3 text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
               あわせて見る
             </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-6">
               {relatedImages.map((image) => (
                 <button
                   key={image.src}
@@ -793,7 +888,7 @@ export function PipparaNoKiSection() {
                 >
                   <span className="relative block aspect-[3/4] overflow-hidden border border-[#7c5a3a]/30 bg-[#f0ead9]">
                     <img
-                      {...getResponsiveImageProps(image.src, "(min-width: 640px) 18vw, 30vw")}
+                      {...getResponsiveImageProps(image.src, "(min-width: 640px) 15vw, 30vw")}
                       alt={image.alt}
                       loading="lazy"
                       decoding="async"
