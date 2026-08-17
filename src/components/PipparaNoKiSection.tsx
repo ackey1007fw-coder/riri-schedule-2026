@@ -240,11 +240,11 @@ A班のアナスタジー・ド・ブロワ役を
   }
 ];
 
-/** 最新のトピック（写真がある投稿は写真つき、無い投稿は初日パネルを添える） */
+/** 最新のトピック（写真がある投稿は写真つき、無い投稿は次回公演パネルを添える） */
 type LatestTopic = {
   headline: string;
   datetime: string;
-  /** 投稿に写真があるときだけ。無い場合は初日パネルを表示する */
+  /** 投稿に写真があるときだけ。無い場合は次回公演パネルを表示する */
   photo?: FlyerImage;
   body: string;
   quote: string;
@@ -270,13 +270,10 @@ const latestTopic: LatestTopic = {
   url: "https://x.com/frecam2025_0306/status/2089214229576585512",
   quotedPost: {
     label: "劇団ココア公式X（2026年8月16日）",
-    text: "【#ピッパラの樹】Ａ班の最終通し稽古も無事に終わりましたー！ Ａ班は8/18(火)からです！🗓️ ※ご予約は備考欄に応援されている演者の明記をお願い致します。（最終通し稽古の様子をまとめた動画つき）",
+    text: "【#ピッパラの樹】Ａ班の最終通し稽古も無事に終わりましたー！ Ａ班は8/18(火)からです！🗓️ ※ご予約は備考欄に応援されている演者の明記をお願い致します。（最終通し稽古を終えたA班メンバーの動画つき）",
     url: "https://x.com/gekidan_cocoa/status/2088889793619079463"
   }
 };
-
-/** 最新トピックに写真が無いときに添える、初日（A班1公演目）の情報 */
-const openingNight = pipparaStages[0];
 
 /** 8月10日の投稿で案内された「推し花」（応援広告） */
 const oshibana = {
@@ -362,7 +359,7 @@ export function PipparaNoKiSection() {
   }, [zoomedImage, closeZoom]);
 
   // 「もう終わった回」と「これから行ける回」がひと目で分かるようにする
-  const { stages, remaining, daysToNext } = useMemo(() => {
+  const { stages, remaining, nextStage, daysToNext } = useMemo(() => {
     const now = Date.now();
     const marked = pipparaStages.map((stage) => ({
       ...stage,
@@ -374,6 +371,7 @@ export function PipparaNoKiSection() {
     return {
       stages: marked,
       remaining: upcoming.length,
+      nextStage: next ?? null,
       daysToNext: next
         ? Math.max(0, jstDayIndex(new Date(next.iso).getTime()) - jstDayIndex(now))
         : null
@@ -424,28 +422,41 @@ export function PipparaNoKiSection() {
               ) : (
                 <div className="border border-[#7c5a3a]/25 bg-white p-5 sm:p-6">
                   <p className="text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
-                    Opening Night
+                    Next Stage
                   </p>
-                  <p className="mt-2 font-display text-2xl leading-tight text-ink sm:text-3xl">
-                    A班 初日
-                  </p>
-                  <p className="mt-2 flex items-center gap-2 text-sm text-ink/80">
-                    <CalendarDays className="h-4 w-4 shrink-0 text-[#6f2f3c]" aria-hidden="true" />
-                    {openingNight.month}月{openingNight.day}日（{openingNight.weekday}）
-                    {openingNight.time} 開演
-                  </p>
-                  <p className="mt-1.5 flex items-center gap-2 text-sm text-ink/80">
-                    <MapPin className="h-4 w-4 shrink-0 text-[#6f2f3c]" aria-hidden="true" />
-                    荻窪小劇場
-                  </p>
-                  {daysToNext !== null && (
-                    <p className="mt-4 border-t border-dashed border-[#7c5a3a]/25 pt-4 text-sm font-bold text-[#6f2f3c]">
-                      {nextStageLabel(daysToNext)}
-                    </p>
+                  {nextStage ? (
+                    <>
+                      <p className="mt-2 font-display text-2xl leading-tight text-ink sm:text-3xl">
+                        A班 {nextStage.no === 1 ? "初日" : `第${nextStage.no}公演`}
+                      </p>
+                      <p className="mt-2 flex items-center gap-2 text-sm text-ink/80">
+                        <CalendarDays className="h-4 w-4 shrink-0 text-[#6f2f3c]" aria-hidden="true" />
+                        {nextStage.month}月{nextStage.day}日（{nextStage.weekday}）
+                        {nextStage.time} 開演
+                      </p>
+                      <p className="mt-1.5 flex items-center gap-2 text-sm text-ink/80">
+                        <MapPin className="h-4 w-4 shrink-0 text-[#6f2f3c]" aria-hidden="true" />
+                        荻窪小劇場
+                      </p>
+                      {daysToNext !== null && (
+                        <p className="mt-4 border-t border-dashed border-[#7c5a3a]/25 pt-4 text-sm font-bold text-[#6f2f3c]">
+                          {nextStageLabel(daysToNext)}
+                        </p>
+                      )}
+                      <p className="mt-3 text-xs leading-6 text-ink/55">
+                        開場は開演の30分前を予定。ご予約は備考欄に「夏凪里季」とご記入ください。
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="mt-2 font-display text-2xl leading-tight text-ink sm:text-3xl">
+                        A班 全6公演終了
+                      </p>
+                      <p className="mt-3 text-sm leading-7 text-ink/65">
+                        『ピッパラの樹』A班の全公演が終了しました。ご観劇・応援ありがとうございました。
+                      </p>
+                    </>
                   )}
-                  <p className="mt-3 text-xs leading-6 text-ink/55">
-                    開場は開演の30分前を予定。ご予約は備考欄に「夏凪里季」とご記入ください。
-                  </p>
                 </div>
               )}
             </div>
@@ -487,7 +498,7 @@ export function PipparaNoKiSection() {
                     rel="noopener noreferrer"
                     className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[#6f2f3c] underline decoration-[#c9a24b] underline-offset-2"
                   >
-                    最終通し稽古の動画をXで見る
+                    A班メンバーの動画をXで見る
                     <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
                   </a>
                 </div>
