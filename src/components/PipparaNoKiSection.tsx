@@ -87,11 +87,11 @@ const rehearsalPhoto: FlyerImage = {
 const pipparaCollabChekiPhotos: FlyerImage[] = [
   {
     src: "/images/gallery/g109.jpg",
-    alt: "『ピッパラの樹』舞台衣装でキャストと撮影したコラボショット。白いミニハットに青緑のベスト姿と、チェックのベストにネクタイ姿"
+    alt: "白いミニハットに青緑のベスト姿の夏凪里季さん（左）と、白いシャツにチェックのベスト・ネクタイ姿の共演者（右）。『ピッパラの樹』の舞台衣装での2ショット"
   },
   {
     src: "/images/gallery/g110.jpg",
-    alt: "『ピッパラの樹』舞台衣装でキャストと撮影したコラボショット。白いミニハットに青緑のベスト姿と、茶色のベストにネクタイ姿"
+    alt: "白いミニハットに青緑のベスト姿の夏凪里季さん（左）と、白いシャツに茶色のベスト・ネクタイ姿の共演者（右）。『ピッパラの樹』の舞台衣装での2ショット"
   }
 ];
 
@@ -306,18 +306,18 @@ const latestTopic: LatestTopic = {
   }
 };
 
-/** 8/17 本人X：コラボチェキのおすすめ。最新トピック（最終通し稽古）とは別カードで案内する */
+/** 8/17 本人X：コラボチェキのおすすめ。最新トピック（最終通し稽古）とは別カードで案内する。
+ *  本人の言い回し（「かっこいいよ」「オヌヌメ」など）は下の「これまでの告知投稿」の本文で読めるので、
+ *  ここは役名とお名前だけの一覧にしておく。 */
 const collabCheki: {
   postUrl: string;
-  reserveUrl: string;
   dmUrl: string;
   deadline: string;
   price: string;
   quote: string;
-  recommends: { role: string; name: string; note?: string }[];
+  recommends: { role: string; name: string }[];
 } = {
   postUrl: "https://x.com/frecam2025_0306/status/2089256985061621949",
-  reserveUrl: "https://x.com/cocoa__collab/status/2088606049213518057",
   dmUrl: "https://x.com/cocoa__collab",
   deadline: "8月27日（木）22:00",
   price: "人数 × 1,500円",
@@ -325,8 +325,8 @@ const collabCheki: {
   recommends: [
     { role: "ジョセフ役", name: "松浦寧々さん" },
     { role: "ジュリアン役", name: "小笠原里緒さん" },
-    { role: "ポール役", name: "ミヤビさん", note: "もかっこいいよ" },
-    { role: "C班 アナスタジー役", name: "鳴島萌華ちゃん", note: "とかもオヌヌメ" }
+    { role: "ポール役", name: "ミヤビさん" },
+    { role: "C班 アナスタジー役", name: "鳴島萌華さん" }
   ]
 };
 
@@ -619,133 +619,6 @@ export function PipparaNoKiSection() {
           </div>
         </article>
 
-        {/* コラボチェキ：8/17の最終通し稽古トピックとは別件なので独立カードにする */}
-        <article
-          id="pippara-collab-cheki"
-          className="mt-8 scroll-mt-24 riri-card overflow-hidden border-[#7c5a3a]/25 bg-white shadow-paper"
-        >
-          <div className="h-1.5 bg-[linear-gradient(90deg,#c9a24b_0%,#6f2f3c_42%,#c9a24b_100%)]" />
-          <div className="grid gap-0 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
-            <div className="border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:p-6 lg:border-b-0 lg:border-r">
-              <div className="grid grid-cols-2 gap-3">
-                {pipparaCollabChekiPhotos.map((image) => (
-                  <button
-                    key={image.src}
-                    type="button"
-                    onClick={openZoom(image)}
-                    className="group block min-w-0 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
-                    aria-label={`${image.alt}を拡大表示`}
-                  >
-                    <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
-                      <img
-                        {...getResponsiveImageProps(image.src, "(min-width: 1024px) 22vw, 45vw")}
-                        alt={image.alt}
-                        loading="lazy"
-                        decoding="async"
-                        className="block w-full"
-                      />
-                      <span className="pointer-events-none absolute inset-0 bg-ink/10 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
-                    </span>
-                  </button>
-                ))}
-              </div>
-              <p className="mt-2 text-xs font-bold text-[#6f2f3c]">タップして拡大表示</p>
-            </div>
-
-            <div className="p-5 sm:p-7 lg:p-8">
-              <p className="inline-flex items-center gap-1.5 border border-[#c9a24b]/50 bg-[#f8f3e6] px-2.5 py-1 text-xs font-bold text-[#6f2f3c]">
-                <Camera className="h-3.5 w-3.5" aria-hidden="true" />
-                コラボチェキ受付中
-              </p>
-              <h3 className="mt-3 font-display text-2xl leading-tight text-ink sm:text-3xl">
-                完全受注生産です
-              </h3>
-              <p className="mt-1 text-xs text-ink/45">2026年8月17日（月）16:44・X</p>
-
-              <p className="mt-4 text-sm leading-7 text-ink/80">
-                劇団ココア特別公演『ピッパラの樹』のコラボチェキ。里季さんのおすすめはこちら。他班のキャストとも撮れます。
-              </p>
-
-              <div className="mt-5 border border-[#c9a24b]/45 bg-[#f8f3e6] px-4 py-3">
-                <p className="text-xs font-bold tracking-wide text-[#6f2f3c]">全予約締切</p>
-                <p className="mt-1 font-display text-2xl leading-tight text-ink sm:text-[1.7rem]">
-                  {collabCheki.deadline}
-                </p>
-                <p className="mt-1 text-xs leading-5 text-ink/55">受取日前日の22:00までにご連絡を</p>
-              </div>
-
-              <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
-                <div className="border border-[#7c5a3a]/20 bg-white px-3 py-2.5">
-                  <dt className="text-xs font-bold text-ink/50">料金</dt>
-                  <dd className="mt-0.5 font-bold text-ink">{collabCheki.price}</dd>
-                </div>
-                <div className="border border-[#7c5a3a]/20 bg-white px-3 py-2.5">
-                  <dt className="text-xs font-bold text-ink/50">予約</dt>
-                  <dd className="mt-0.5 font-bold text-ink">@cocoa__collab へDM</dd>
-                </div>
-              </dl>
-
-              <div className="mt-5">
-                <p className="text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
-                  里季さんのおすすめ
-                </p>
-                <ul className="mt-2 grid gap-1.5 text-sm leading-7 text-ink/85">
-                  {collabCheki.recommends.map((item) => (
-                    <li key={item.role} className="flex min-w-0 flex-wrap gap-x-2">
-                      <span className="text-ink/55">{item.role}</span>
-                      <span className="font-bold">
-                        {item.name}
-                        {item.note ?? ""}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <blockquote className="mt-5 border-l-4 border-[#c9a24b] bg-[#f8f3e6] px-4 py-3">
-                <Quote className="h-4 w-4 text-[#6f2f3c]" aria-hidden="true" />
-                <p className="mt-2 font-display text-lg leading-8 text-ink">{collabCheki.quote}</p>
-                <footer className="mt-2 text-xs text-ink/50">夏凪里季さん（Xより）</footer>
-              </blockquote>
-
-              <ul className="mt-4 space-y-1.5 text-xs leading-6 text-ink/60">
-                <li>スケジュールによっては撮影できないことがあるので、お早めに。</li>
-                <li>ソロチェキの取り置き予約はありません。</li>
-              </ul>
-
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <a
-                  href={collabCheki.postUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="riri-button riri-button-gold min-h-12 px-4 py-3 text-sm"
-                >
-                  本人のX投稿を見る
-                  <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
-                </a>
-                <a
-                  href={collabCheki.reserveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
-                >
-                  予約方法・注意事項を見る
-                  <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
-                </a>
-                <a
-                  href={collabCheki.dmUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
-                >
-                  <MessageCircle className="h-4 w-4 shrink-0" aria-hidden="true" />
-                  受付アカウントへ
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
         {/* 公演概要 */}
         <div className="mt-8 riri-card overflow-hidden border-[#7c5a3a]/25 bg-white shadow-paper">
           <div className="grid gap-0 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
@@ -962,6 +835,123 @@ export function PipparaNoKiSection() {
             </a>
           </div>
         </div>
+
+        {/* コラボチェキ：8/17の最終通し稽古トピックとは別件なので、
+            公演日程・チケットより下に独立カードで置く（応援手段のひとつとして推し花の隣） */}
+        <article
+          id="pippara-collab-cheki"
+          className="mt-6 scroll-mt-24 riri-card overflow-hidden border-[#7c5a3a]/25 bg-white shadow-paper"
+        >
+          <div className="grid gap-0 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
+            <div className="border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:p-6 lg:border-b-0 lg:border-r">
+              <div className="grid grid-cols-2 gap-3">
+                {pipparaCollabChekiPhotos.map((image) => (
+                  <button
+                    key={image.src}
+                    type="button"
+                    onClick={openZoom(image)}
+                    className="group block min-w-0 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
+                    aria-label={`${image.alt}を拡大表示`}
+                  >
+                    <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
+                      <img
+                        {...getResponsiveImageProps(image.src, "(min-width: 1024px) 22vw, 45vw")}
+                        alt={image.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className="block w-full"
+                      />
+                      <span className="pointer-events-none absolute inset-0 bg-ink/10 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
+                    </span>
+                  </button>
+                ))}
+              </div>
+              <p className="mt-2 text-xs font-bold text-[#6f2f3c]">タップして拡大表示</p>
+            </div>
+
+            <div className="p-5 sm:p-7">
+              <p className="inline-flex items-center gap-1.5 border border-[#c9a24b]/50 bg-[#f8f3e6] px-2.5 py-1 text-xs font-bold text-[#6f2f3c]">
+                <Camera className="h-3.5 w-3.5" aria-hidden="true" />
+                コラボチェキ受付中
+              </p>
+              <h3 className="mt-3 font-display text-xl leading-tight text-ink sm:text-2xl">
+                里季さんおすすめの組み合わせ
+              </h3>
+              <p className="mt-1 text-xs text-ink/45">2026年8月17日（月）16:44・X</p>
+
+              <p className="mt-4 text-sm leading-7 text-ink/80">
+                劇団ココア『ピッパラの樹』のコラボチェキ。完全受注生産で、他班のキャストとのコラボもできます。
+              </p>
+
+              <div className="mt-5">
+                <p className="text-xs font-bold tracking-wide text-[#6f2f3c]">おすすめのキャスト</p>
+                <ul className="mt-2 grid gap-1.5 text-sm leading-7 text-ink/85">
+                  {collabCheki.recommends.map((item) => (
+                    <li key={item.role} className="flex min-w-0 flex-wrap gap-x-2">
+                      <span className="text-ink/55">{item.role}</span>
+                      <span className="font-bold">{item.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <blockquote className="mt-5 border-l-4 border-[#c9a24b] bg-[#f8f3e6] px-4 py-3">
+                <p className="text-sm leading-7 text-ink/85">{collabCheki.quote}</p>
+                <footer className="mt-2 text-xs text-ink/50">
+                  夏凪里季さん（2026年8月17日・Xより）
+                </footer>
+              </blockquote>
+
+              <div className="mt-5 border border-[#c9a24b]/45 bg-[#f8f3e6] px-4 py-3">
+                <p className="text-xs font-bold tracking-wide text-[#6f2f3c]">全予約締切</p>
+                <p className="mt-1 font-display text-xl leading-tight text-ink sm:text-2xl">
+                  {collabCheki.deadline}
+                </p>
+                <p className="mt-1 text-xs leading-5 text-ink/55">
+                  受取分ごとの予約は受取日前日の22:00まで
+                </p>
+              </div>
+
+              <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+                <div className="border border-[#7c5a3a]/20 bg-white px-3 py-2.5">
+                  <dt className="text-xs font-bold text-ink/50">料金</dt>
+                  <dd className="mt-0.5 font-bold text-ink">{collabCheki.price}</dd>
+                </div>
+                <div className="border border-[#7c5a3a]/20 bg-white px-3 py-2.5">
+                  <dt className="text-xs font-bold text-ink/50">予約</dt>
+                  <dd className="mt-0.5 font-bold text-ink">@cocoa__collab へDM</dd>
+                </div>
+              </dl>
+
+              <ul className="mt-4 space-y-1.5 text-xs leading-6 text-ink/60">
+                <li>日程によって撮影できない場合があります。</li>
+                <li>ソロチェキの取り置き予約はありません。</li>
+              </ul>
+
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a
+                  href={collabCheki.postUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+                >
+                  本人のX投稿を見る
+                  <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
+                </a>
+                <a
+                  href={collabCheki.dmUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+                >
+                  <MessageCircle className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  受付アカウント（@cocoa__collab）へ
+                  <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
 
         {/* 推し花：日程が合わない方への応援手段（8/10の本人投稿より） */}
         <div
