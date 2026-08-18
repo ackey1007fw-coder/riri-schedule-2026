@@ -103,6 +103,20 @@ const pipparaCollabChekiPhotos: FlyerImage[] = [
     alt: "白いミニハットに青緑のベスト姿の夏凪里季さん（左）と、白いシャツに茶色のベスト・ネクタイ姿の共演者（右）。『ピッパラの樹』の舞台衣装での2ショット"
   }
 ];
+const pipparaDay1Photos: FlyerImage[] = [
+  {
+    src: "/images/gallery/g111.jpg",
+    alt: "白いミニハットとストライプのブラウス、青いベストの衣装でウインクし、右手の人差し指を立てている夏凪里季さん"
+  },
+  {
+    src: "/images/gallery/g112.jpg",
+    alt: "白いミニハットと青緑のベスト姿の夏凪里季さん（右）と、白いレースのカチューシャ姿の共演者（左）。二人とも頬付近に手を添えている2ショット"
+  },
+  {
+    src: "/images/gallery/g113.jpg",
+    alt: "白いミニハットと青緑のベスト姿の夏凪里季さん（右）と、白いレースのカチューシャ姿の共演者（左）。木目の壁の前での2ショット"
+  }
+];
 
 const relatedImages: FlyerImage[] = [
   pipparaNenePhoto,
@@ -131,6 +145,12 @@ type QuotedPost = {
   text: string;
   url: string;
   linkLabel?: string;
+  /** 引用元に自己ホストした動画があるときだけ */
+  video?: {
+    src: string;
+    poster?: string;
+    alt: string;
+  };
 };
 
 /** 投稿本文はここに一度だけ置き、セクション内で重複表示しない */
@@ -147,6 +167,31 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-18-notices",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月18日（火）9:29",
+    headline: "「注意事項です〜！ ビジュアルも公開されているのでチェックしてみてね」",
+    body: `#ピッパラの樹 注意事項です〜！
+ビジュアルも公開されているのでチェックしてみてね👀
+
+差し入れは
+・既製品ではないもの
+・要冷蔵のもの
+・個包装ではないもの
+・役者の持ち帰りが困難なもの
+以外は大丈夫でした🙏🙏✨️✨️`,
+    quote: `注意事項です〜！
+ビジュアルも公開されているのでチェックしてみてね`,
+    url: "https://x.com/frecam2025_0306/status/2089509845796073503",
+    quotedPost: {
+      label: "劇団ココア公式X（2026年8月18日）",
+      text: "【#劇団ココア 注意事項】入待ち・出待ちの禁止、上演中の携帯電話、差し入れの条件、支払い（現金のみ）、入場（年齢制限なし／未就学児連れは周囲への配慮）などを案内。",
+      url: "https://x.com/gekidan_cocoa/status/2089479953473822805",
+      linkLabel: "劇団ココア公式Xで注意事項を見る"
+    }
+  },
   {
     id: "x-2026-08-17-collab-cheki",
     platform: "X",
@@ -316,8 +361,10 @@ A班のアナスタジー・ド・ブロワ役を
 type LatestTopic = {
   headline: string;
   datetime: string;
-  /** 投稿に写真があるときだけ。無い場合は次回公演パネルを表示する */
+  /** 投稿に写真が1枚のとき。複数枚は photos を使う */
   photo?: FlyerImage;
+  /** 投稿に写真が複数あるとき。photo より優先する */
+  photos?: FlyerImage[];
   body: string;
   quote: string;
   note: string;
@@ -327,26 +374,35 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "「注意事項です〜！ ビジュアルも公開されているのでチェックしてみてね」",
-  datetime: "2026年8月18日（火）9:29",
-  body: `#ピッパラの樹 注意事項です〜！
-ビジュアルも公開されているのでチェックしてみてね👀
+  headline: "「公演1日目終了しました！」",
+  datetime: "2026年8月18日（火）22:30",
+  photos: pipparaDay1Photos,
+  body: `#ピッパラの樹 公演1日目終了しました！
+ご来場いただき、ありがとうございました💖
 
-差し入れは
-・既製品ではないもの
-・要冷蔵のもの
-・個包装ではないもの
-・役者の持ち帰りが困難なもの
-以外は大丈夫でした🙏🙏✨️✨️`,
-  quote: `注意事項です〜！
-ビジュアルも公開されているのでチェックしてみてね`,
-  note: "2026年8月18日、A班初日の朝に、劇団ココア公式Xの注意事項を引用して案内がありました。",
-  url: "https://x.com/frecam2025_0306/status/2089509845796073503",
+A班は次8/22(土)12時！空席あるよ👀待ってます✨️
+
+🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
+
+推し花💐https://oshibana.shop/theater/oshibana/24950033`,
+  quote: `公演1日目終了しました！
+ご来場いただき、ありがとうございました`,
+  note: "2026年8月18日夜、A班初日の公演後に、劇団ココア公式Xの動画を引用して報告がありました。",
+  url: "https://x.com/frecam2025_0306/status/2089706405683188098",
   quotedPost: {
     label: "劇団ココア公式X（2026年8月18日）",
-    text: "【#劇団ココア 注意事項】入待ち・出待ちの禁止、上演中の携帯電話、差し入れの条件、支払い（現金のみ）、入場（年齢制限なし／未就学児連れは周囲への配慮）などを案内。",
-    url: "https://x.com/gekidan_cocoa/status/2089479953473822805",
-    linkLabel: "劇団ココア公式Xで注意事項を見る"
+    text: `【#ピッパラの樹】
+
+Ａ班初日終了しました！
+
+明日はＢ班の初日です！🌲`,
+    url: "https://x.com/gekidan_cocoa/status/2089692907217236085",
+    linkLabel: "元投稿をXで見る",
+    video: {
+      src: "/videos/pippara-no-ki-a-cast-2026-08-18.mp4",
+      poster: "/images/pippara-no-ki-a-cast-video-poster-2026-08-18.jpg",
+      alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班初日公演後の動画"
+    }
   }
 };
 
@@ -410,9 +466,23 @@ const nextStageLabel = (days: number) => {
 };
 
 const QuotedPostBlock = ({ post }: { post: QuotedPost }) => (
-  <div className="mt-4 border border-[#7c5a3a]/25 bg-[#f8f3e6] p-4">
+  <div className="mt-4 max-w-full overflow-x-hidden border border-[#7c5a3a]/25 bg-[#f8f3e6] p-4">
     <p className="text-xs font-bold text-[#6f2f3c]">引用元：{post.label}</p>
     <p className="mt-2 whitespace-pre-line text-sm leading-7 text-ink/80">{post.text}</p>
+    {post.video && (
+      <div className="mt-3 max-w-full overflow-hidden border border-[#7c5a3a]/25 bg-black">
+        <video
+          className="block h-auto w-full max-w-full"
+          controls
+          playsInline
+          preload="metadata"
+          poster={post.video.poster}
+          aria-label={post.video.alt}
+        >
+          <source src={post.video.src} type="video/mp4" />
+        </video>
+      </div>
+    )}
     <a
       href={post.url}
       target="_blank"
@@ -507,6 +577,9 @@ export function PipparaNoKiSection() {
     };
   }, []);
 
+  const topicPhotos = latestTopic.photos ?? (latestTopic.photo ? [latestTopic.photo] : []);
+  const hasMultipleTopicPhotos = topicPhotos.length > 1;
+
   return (
     <section
       id="pippara-no-ki"
@@ -522,32 +595,59 @@ export function PipparaNoKiSection() {
         {/* 最新トピック：本人の最新投稿。写真が無いときは左に Next Stage */}
         <article className="riri-card overflow-hidden border-[#7c5a3a]/25 bg-white shadow-paper">
           <div className="h-1.5 bg-[linear-gradient(90deg,#2f4a3a_0%,#6f2f3c_35%,#c9a24b_68%,#2f4a3a_100%)]" />
-          <div className="grid gap-0 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
-            <div className="border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:border-b-0 sm:border-r sm:p-6">
-              {latestTopic.photo ? (
-                <button
-                  type="button"
-                  onClick={openZoom(latestTopic.photo)}
-                  className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
-                  aria-label={`${latestTopic.photo.alt}を拡大表示`}
-                >
-                  <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
-                    <img
-                      {...getResponsiveImageProps(
-                        latestTopic.photo.src,
-                        "(min-width: 640px) 40vw, 100vw"
-                      )}
-                      alt={latestTopic.photo.alt}
-                      loading="lazy"
-                      decoding="async"
-                      className="block w-full object-contain"
-                    />
-                    <span className="pointer-events-none absolute inset-0 bg-ink/10 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
-                  </span>
+          <div
+            className={
+              hasMultipleTopicPhotos
+                ? "grid gap-0"
+                : "grid gap-0 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]"
+            }
+          >
+            <div
+              className={
+                hasMultipleTopicPhotos
+                  ? "min-w-0 overflow-x-hidden border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:p-6"
+                  : "min-w-0 border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:border-b-0 sm:border-r sm:p-6"
+              }
+            >
+              {topicPhotos.length > 0 ? (
+                <>
+                  <div
+                    className={
+                      hasMultipleTopicPhotos
+                        ? "grid grid-cols-1 items-start gap-3 sm:grid-cols-2 lg:grid-cols-3"
+                        : undefined
+                    }
+                  >
+                    {topicPhotos.map((photo) => (
+                      <button
+                        key={photo.src}
+                        type="button"
+                        onClick={openZoom(photo)}
+                        className="group block w-full min-w-0 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
+                        aria-label={`${photo.alt}を拡大表示`}
+                      >
+                        <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
+                          <img
+                            {...getResponsiveImageProps(
+                              photo.src,
+                              hasMultipleTopicPhotos
+                                ? "(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                                : "(min-width: 640px) 40vw, 100vw"
+                            )}
+                            alt={photo.alt}
+                            loading="lazy"
+                            decoding="async"
+                            className="block h-auto w-full max-w-full object-contain"
+                          />
+                          <span className="pointer-events-none absolute inset-0 bg-ink/10 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
+                        </span>
+                      </button>
+                    ))}
+                  </div>
                   <span className="mt-2 inline-block text-xs font-bold text-[#6f2f3c]">
                     タップして拡大表示
                   </span>
-                </button>
+                </>
               ) : (
                 <div className="border border-[#7c5a3a]/25 bg-white p-5 sm:p-6">
                   <p className="text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
@@ -590,7 +690,7 @@ export function PipparaNoKiSection() {
               )}
             </div>
 
-            <div className="p-5 sm:p-7 lg:p-9">
+            <div className="min-w-0 p-5 sm:p-7 lg:p-9">
               <p className="inline-flex items-center gap-1.5 border border-[#6f2f3c]/30 bg-[#6f2f3c] px-2.5 py-1 text-xs font-bold text-white">
                 <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
                 最新トピック
@@ -607,7 +707,7 @@ export function PipparaNoKiSection() {
                 </p>
               </blockquote>
 
-              <div className="mt-4 whitespace-pre-line text-sm leading-7 text-ink/80">
+              <div className="mt-4 whitespace-pre-line break-words text-sm leading-7 text-ink/80">
                 {latestTopic.body}
               </div>
               <p className="mt-3 text-xs leading-6 text-ink/50">{latestTopic.note}</p>
