@@ -85,6 +85,15 @@ function normalizeUrl(value: string): string {
   }`;
 }
 
+function urlOrigin(value: string): string {
+  const match = /^(https?):\/\/([^/?#]+)(?:[/?#]|$)/i.exec(value);
+  if (!match) {
+    throw new Error(`Portal feed URL must be absolute: ${value}`);
+  }
+
+  return `${match[1].toLowerCase()}://${match[2].toLowerCase()}`;
+}
+
 function absoluteSiteUrl(value: string): string {
   if (/^https?:\/\//.test(value)) {
     return value;
@@ -198,7 +207,7 @@ function createScheduleItems(generatedAt: string): PortalFeedItem[] {
     .slice(0, MAX_ITEMS);
 }
 
-function validateFeed(feed: PortalFeed): void {
+export function validatePortalFeed(feed: PortalFeed): void {
   if (feed.items.length > MAX_ITEMS) {
     throw new Error(`Portal feed exceeds ${MAX_ITEMS} items`);
   }
@@ -211,10 +220,16 @@ function validateFeed(feed: PortalFeed): void {
     }
     ids.add(item.id);
 
-    for (const value of [item.url, item.sourceUrl, item.image]) {
-      if (value && !/^https?:\/\//.test(value)) {
-        throw new Error(`Portal feed URL must be absolute: ${value}`);
-      }
+    if (urlOrigin(item.url) !== urlOrigin(SITE_URL)) {
+      throw new Error(`Portal feed item.url must use Riri site origin: ${item.url}`);
+    }
+
+    if (item.sourceUrl) {
+      urlOrigin(item.sourceUrl);
+    }
+
+    if (item.image && urlOrigin(item.image) !== urlOrigin(SITE_URL)) {
+      throw new Error(`Portal feed item.image must use Riri site origin: ${item.image}`);
     }
 
     for (const value of [
@@ -245,7 +260,7 @@ export function createPortalFeed(generatedAt = new Date().toISOString()): Portal
     personId: PERSON_ID,
     type: "news" as const,
     title: item.text,
-    url: item.url,
+    url: SITE_URL,
     sourceUrl: item.url,
     publishedAt: canonicalJstDate(item.date)
   }));
@@ -261,6 +276,6 @@ export function createPortalFeed(generatedAt = new Date().toISOString()): Portal
     )
   };
 
-  validateFeed(feed);
+  validatePortalFeed(feed);
   return feed;
 }
