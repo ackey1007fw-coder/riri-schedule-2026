@@ -103,6 +103,10 @@ const pipparaCollabChekiPhotos: FlyerImage[] = [
     alt: "白いミニハットに青緑のベスト姿の夏凪里季さん（左）と、白いシャツに茶色のベスト・ネクタイ姿の共演者（右）。『ピッパラの樹』の舞台衣装での2ショット"
   }
 ];
+const pipparaFirstDayPhoto: FlyerImage = {
+  src: "/images/pippara-no-ki-first-day-20260818.jpg",
+  alt: "ストライプのブラウスに青いベスト、首元の大きなリボン、白いミニハットの衣装でウインクし、右手の人差し指を立てている夏凪里季さん（『ピッパラの樹』A班初日終了後）"
+};
 
 const relatedImages: FlyerImage[] = [
   pipparaNenePhoto,
@@ -131,6 +135,12 @@ type QuotedPost = {
   text: string;
   url: string;
   linkLabel?: string;
+  /** 引用元に自己ホストした動画があるときだけ */
+  video?: {
+    src: string;
+    poster?: string;
+    alt: string;
+  };
 };
 
 /** 投稿本文はここに一度だけ置き、セクション内で重複表示しない */
@@ -147,6 +157,31 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-18-notices",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月18日（火）9:29",
+    headline: "「注意事項です〜！ ビジュアルも公開されているのでチェックしてみてね」",
+    body: `#ピッパラの樹 注意事項です〜！
+ビジュアルも公開されているのでチェックしてみてね👀
+
+差し入れは
+・既製品ではないもの
+・要冷蔵のもの
+・個包装ではないもの
+・役者の持ち帰りが困難なもの
+以外は大丈夫でした🙏🙏✨️✨️`,
+    quote: `注意事項です〜！
+ビジュアルも公開されているのでチェックしてみてね`,
+    url: "https://x.com/frecam2025_0306/status/2089509845796073503",
+    quotedPost: {
+      label: "劇団ココア公式X（2026年8月18日）",
+      text: "【#劇団ココア 注意事項】入待ち・出待ちの禁止、上演中の携帯電話、差し入れの条件、支払い（現金のみ）、入場（年齢制限なし／未就学児連れは周囲への配慮）などを案内。",
+      url: "https://x.com/gekidan_cocoa/status/2089479953473822805",
+      linkLabel: "劇団ココア公式Xで注意事項を見る"
+    }
+  },
   {
     id: "x-2026-08-17-collab-cheki",
     platform: "X",
@@ -327,26 +362,34 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "「注意事項です〜！ ビジュアルも公開されているのでチェックしてみてね」",
-  datetime: "2026年8月18日（火）9:29",
-  body: `#ピッパラの樹 注意事項です〜！
-ビジュアルも公開されているのでチェックしてみてね👀
+  headline: "A班初日、無事終了！ 次は8/22（土）12:00",
+  datetime: "2026年8月18日（火）22:30",
+  photo: pipparaFirstDayPhoto,
+  body: `#ピッパラの樹 公演1日目終了しました！
+ご来場いただき、ありがとうございました💖
 
-差し入れは
-・既製品ではないもの
-・要冷蔵のもの
-・個包装ではないもの
-・役者の持ち帰りが困難なもの
-以外は大丈夫でした🙏🙏✨️✨️`,
-  quote: `注意事項です〜！
-ビジュアルも公開されているのでチェックしてみてね`,
-  note: "2026年8月18日、A班初日の朝に、劇団ココア公式Xの注意事項を引用して案内がありました。",
-  url: "https://x.com/frecam2025_0306/status/2089509845796073503",
+A班は次8/22(土)12時！空席あるよ👀待ってます✨️
+
+🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
+
+推し花💐 https://oshibana.shop/theater/oshibana/24950033`,
+  quote: `公演1日目終了しました！
+ご来場いただき、ありがとうございました`,
+  note: "2026年8月18日夜、A班初日の公演後に、劇団ココア公式Xの動画を引用して報告がありました。空席の案内は投稿時点のものです。",
+  url: "https://x.com/frecam2025_0306/status/2089706405683188098",
   quotedPost: {
     label: "劇団ココア公式X（2026年8月18日）",
-    text: "【#劇団ココア 注意事項】入待ち・出待ちの禁止、上演中の携帯電話、差し入れの条件、支払い（現金のみ）、入場（年齢制限なし／未就学児連れは周囲への配慮）などを案内。",
-    url: "https://x.com/gekidan_cocoa/status/2089479953473822805",
-    linkLabel: "劇団ココア公式Xで注意事項を見る"
+    text: `【#ピッパラの樹】
+
+Ａ班初日終了しました！
+明日はＢ班の初日です！🌲`,
+    url: "https://x.com/gekidan_cocoa/status/2089692907217236085",
+    linkLabel: "元投稿をXで見る",
+    video: {
+      src: "/videos/pippara-a-first-day-20260818.mp4",
+      poster: "/images/pippara-a-first-day-20260818-poster.jpg",
+      alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班初日終了後の集合動画。衣装姿のキャストが白い壁の前で拍手し、手を振っている"
+    }
   }
 };
 
@@ -410,9 +453,23 @@ const nextStageLabel = (days: number) => {
 };
 
 const QuotedPostBlock = ({ post }: { post: QuotedPost }) => (
-  <div className="mt-4 border border-[#7c5a3a]/25 bg-[#f8f3e6] p-4">
+  <div className="mt-4 max-w-full overflow-x-hidden border border-[#7c5a3a]/25 bg-[#f8f3e6] p-4">
     <p className="text-xs font-bold text-[#6f2f3c]">引用元：{post.label}</p>
     <p className="mt-2 whitespace-pre-line text-sm leading-7 text-ink/80">{post.text}</p>
+    {post.video && (
+      <div className="mt-3 max-w-full overflow-hidden border border-[#7c5a3a]/25 bg-black">
+        <video
+          className="block h-auto w-full max-w-full"
+          controls
+          playsInline
+          preload="metadata"
+          poster={post.video.poster}
+          aria-label={post.video.alt}
+        >
+          <source src={post.video.src} type="video/mp4" />
+        </video>
+      </div>
+    )}
     <a
       href={post.url}
       target="_blank"
@@ -522,8 +579,8 @@ export function PipparaNoKiSection() {
         {/* 最新トピック：本人の最新投稿。写真が無いときは左に Next Stage */}
         <article className="riri-card overflow-hidden border-[#7c5a3a]/25 bg-white shadow-paper">
           <div className="h-1.5 bg-[linear-gradient(90deg,#2f4a3a_0%,#6f2f3c_35%,#c9a24b_68%,#2f4a3a_100%)]" />
-          <div className="grid gap-0 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
-            <div className="border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:border-b-0 sm:border-r sm:p-6">
+          <div className="grid min-w-0 gap-0 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
+            <div className="min-w-0 border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:border-b-0 sm:border-r sm:p-6">
               {latestTopic.photo ? (
                 <button
                   type="button"
@@ -590,7 +647,7 @@ export function PipparaNoKiSection() {
               )}
             </div>
 
-            <div className="p-5 sm:p-7 lg:p-9">
+            <div className="min-w-0 p-5 sm:p-7 lg:p-9">
               <p className="inline-flex items-center gap-1.5 border border-[#6f2f3c]/30 bg-[#6f2f3c] px-2.5 py-1 text-xs font-bold text-white">
                 <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
                 最新トピック
@@ -607,12 +664,17 @@ export function PipparaNoKiSection() {
                 </p>
               </blockquote>
 
-              <div className="mt-4 whitespace-pre-line text-sm leading-7 text-ink/80">
+              <div className="mt-4 whitespace-pre-line break-words text-sm leading-7 text-ink/80">
                 {latestTopic.body}
               </div>
               <p className="mt-3 text-xs leading-6 text-ink/50">{latestTopic.note}</p>
 
               {latestTopic.quotedPost && <QuotedPostBlock post={latestTopic.quotedPost} />}
+
+              <p className="mt-4 border border-[#c9a24b]/40 bg-[#f8f3e6] px-4 py-3 text-sm leading-7 text-ink/80">
+                <span className="font-bold text-[#6f2f3c]">8/18投稿時点：</span>
+                次回 8/22（土）12:00 は空席あり、との案内です。最新の空席は公式の告知をご確認ください。
+              </p>
 
               {/* 座席状況は日々変わるので、記号の意味と公式の参照先だけを置く */}
               <div className="mt-5 border border-[#c9a24b]/40 bg-[#f8f3e6] p-4">
@@ -1035,7 +1097,7 @@ export function PipparaNoKiSection() {
             </p>
 
             <p className="mt-3 text-xs leading-6 text-ink/55">
-              8月17日の本人投稿では「まだお席空いています！今一度ご予定の確認よろしくお願いいたします」と予約が呼びかけられています。劇団ココア公式Xの8月14日時点では、A班の8/29(土)19:30は満席、8/23(日)15:30は残り5席、ほか4公演は「！」です。気になる日程はお早めに。
+              8月18日の本人投稿（初日終了後・投稿時点）では、次回 8/22（土）12:00 について「空席あるよ」と案内されています。8月17日の本人投稿では「まだお席空いています！今一度ご予定の確認よろしくお願いいたします」と予約が呼びかけられていました。劇団ココア公式Xの8月14日時点では、A班の8/29(土)19:30は満席、8/23(日)15:30は残り5席、ほか4公演は「！」です。気になる日程はお早めに。
             </p>
 
             <a
