@@ -142,7 +142,7 @@ export function PhotoGallerySection() {
               夏の浴衣フォト特集
             </h3>
             <p className="mt-2 leading-7 text-ink/65">
-              今年最初の浴衣ショットから、お姉さんとカルアちゃんも一緒の家族写真へ。里季さんの夏の思い出を続けて紹介します。
+              今年最初の浴衣ショットから、お姉さんやカルアちゃんも一緒の1枚まで。里季さんの夏の思い出を続けて紹介します。
             </p>
           </div>
 
@@ -195,7 +195,7 @@ export function PhotoGallerySection() {
                         rel="noopener noreferrer"
                         className="riri-button riri-button-gold min-h-12 px-5 py-3 text-sm"
                       >
-                        Xで元の投稿を見る
+                        元の投稿を見る
                         <ExternalLink className="h-4 w-4" aria-hidden="true" />
                       </a>
                       <button
