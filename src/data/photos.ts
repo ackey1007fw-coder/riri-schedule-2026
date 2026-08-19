@@ -15,7 +15,28 @@ export const familyYukataPhoto: GalleryPhoto = {
   alt: "ピンクと紫の花柄浴衣の夏凪里季さん、青紫の花柄浴衣のお姉さん、ピンクの浴衣風ウェアを着た愛犬カルアちゃんの3ショット。お姉さんの顔は『姉』の文字で隠されている（X『お姉ちゃんと一緒に浴衣』より）"
 };
 
+// 2026.8.19 Instagram「今年初浴衣✨️着ただけだけど」のカルーセル2・3枚目
+// （1枚目は 8/2 のX投稿と同じ写真のため g90 = summerYukataPhoto を再利用する）
+const yukataKaluaTwoShotPhoto: GalleryPhoto = {
+  src: "/images/gallery/g112.jpg",
+  alt: "白地にピンクと紫の花柄の浴衣に赤い花の髪飾りをつけた夏凪里季さん（左）と、青紫の花柄の浴衣を着た女性（右）が、抱き上げた愛犬カルアちゃんを間にして笑う3ショット。窓のある室内での1枚"
+};
+
+const yukataKaluaPhoto: GalleryPhoto = {
+  src: "/images/gallery/g113.jpg",
+  alt: "白地にピンクと紫の花柄の浴衣に赤い花の髪飾りをつけた夏凪里季さんが、浴衣風ウェアを着た愛犬カルアちゃんを抱いてほほえむ2ショット"
+};
+
 export const galleryFeatures = [
+  {
+    date: "2026.8.19",
+    kicker: "Summer Moment",
+    heading: "今年初浴衣。カルアさんも一緒に",
+    title: "今年初浴衣✨️着ただけだけど",
+    copy: "白地にピンクと紫の花柄の浴衣に、赤い花の髪飾り。愛犬カルアちゃんを抱いた写真も添えて「カルアさんお付き合いありがとう」と綴った、夏らしい3枚組のInstagram投稿です。",
+    url: "https://www.instagram.com/p/DcOFaLGiYhP/",
+    photo: yukataKaluaPhoto
+  },
   {
     date: "2026.8.3",
     kicker: "Family Summer Moment",
@@ -50,6 +71,10 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.19 Instagram「今年初浴衣✨️着ただけだけど」本人投稿。creditなし
+  // 1枚目は 8/2 のX投稿と同じ写真（g90）なので、ギャラリーへは重複追加しない
+  yukataKaluaTwoShotPhoto,
+  yukataKaluaPhoto,
   // 2026.8.18 X「#ピッパラの樹 公演1日目終了しました！」本人投稿。creditなし
   { src: "/images/gallery/g111.jpg", alt: "ストライプのブラウスに青いベスト、首元の大きなリボン、白いミニハットの衣装でウインクし、右手の人差し指を立てている夏凪里季さん（『ピッパラの樹』A班初日終了後）" },
   // 2026.8.17 X「#ピッパラの樹 コラボチェキのオススメはこちらです」本人投稿。creditなし
@@ -219,8 +244,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.18",
-  platform: "X",
-  note: "『ピッパラの樹』A班初日公演後の舞台衣装ショット",
-  url: "https://x.com/frecam2025_0306/status/2089706405683188098"
+  date: "2026.8.19",
+  platform: "Instagram",
+  note: "今年初浴衣の里季さんとカルアちゃんのカルーセル（3枚）",
+  url: "https://www.instagram.com/p/DcOFaLGiYhP/"
 };
