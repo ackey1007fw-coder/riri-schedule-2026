@@ -27,6 +27,12 @@ const yukataKaluaPhoto: GalleryPhoto = {
   alt: "白地にピンクと紫の花柄の浴衣に赤い花の髪飾りをつけた夏凪里季さんが、浴衣風ウェアを着た愛犬カルアちゃんを抱いてほほえむ2ショット"
 };
 
+// 2026.8.21 X『ピッパラの樹』A班2公演目の告知投稿の3ショット
+const pipparaSecondShowThreeShotPhoto: GalleryPhoto = {
+  src: "/images/gallery/g114.jpg",
+  alt: "『ピッパラの樹』の舞台衣装で並ぶ3ショット。左にガイヤール夫人役の三笘とむさん、中央に白いミニハットと青いベスト姿の夏凪里季さん、右に白い衣装とレースのヘッドバンド姿のルワン役せいかさん。3人ともカメラに笑顔を向けている"
+};
+
 export const galleryFeatures = [
   {
     date: "2026.8.19",
@@ -71,6 +77,8 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.21 X「明日8/22(土)12時から #ピッパラの樹 2公演目です」本人投稿。creditなし
+  pipparaSecondShowThreeShotPhoto,
   // 2026.8.19 Instagram「今年初浴衣✨️着ただけだけど」本人投稿。creditなし
   // 1枚目は 8/2 のX投稿と同じ写真（g90）なので、ギャラリーへは重複追加しない
   yukataKaluaTwoShotPhoto,
@@ -244,8 +252,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.19",
-  platform: "Instagram",
-  note: "今年初浴衣の里季さんとカルアちゃんのカルーセル（3枚）",
-  url: "https://www.instagram.com/p/DcOFaLGiYhP/"
+  date: "2026.8.21",
+  platform: "X",
+  note: "『ピッパラの樹』A班2公演目の告知投稿より、舞台衣装での3ショット",
+  url: "https://x.com/frecam2025_0306/status/2090799310481076374"
 };
