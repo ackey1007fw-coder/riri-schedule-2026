@@ -107,6 +107,10 @@ const pipparaFirstDayPhoto: FlyerImage = {
   src: "/images/pippara-no-ki-first-day-20260818.jpg",
   alt: "ストライプのブラウスに青いベスト、首元の大きなリボン、白いミニハットの衣装でウインクし、右手の人差し指を立てている夏凪里季さん（『ピッパラの樹』A班初日終了後）"
 };
+const pipparaSecondShowPhoto: FlyerImage = {
+  src: "/images/gallery/g114.jpg",
+  alt: "『ピッパラの樹』の舞台衣装で並ぶ3ショット。左にガイヤール夫人役の三笘とむさん、中央に白いミニハットと青いベスト姿の夏凪里季さん、右に白い衣装とレースのヘッドバンド姿のルワン役せいかさん。3人ともカメラに笑顔を向けている"
+};
 
 const relatedImages: FlyerImage[] = [
   pipparaNenePhoto,
@@ -153,10 +157,45 @@ type SnsPost = {
   body: string;
   quote?: string;
   url: string;
+  /** 投稿に写真があるときだけ */
+  photo?: FlyerImage;
   quotedPost?: QuotedPost;
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-18-first-day",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月18日（火）22:30",
+    headline: "「公演1日目終了しました！ A班は次8/22(土)12時！」",
+    body: `#ピッパラの樹 公演1日目終了しました！
+ご来場いただき、ありがとうございました💖
+
+A班は次8/22(土)12時！空席あるよ👀待ってます✨️
+
+🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
+
+推し花💐 https://oshibana.shop/theater/oshibana/24950033`,
+    quote: `公演1日目終了しました！
+ご来場いただき、ありがとうございました`,
+    url: "https://x.com/frecam2025_0306/status/2089706405683188098",
+    photo: pipparaFirstDayPhoto,
+    quotedPost: {
+      label: "劇団ココア公式X（2026年8月18日）",
+      text: `【#ピッパラの樹】
+
+Ａ班初日終了しました！
+明日はＢ班の初日です！🌲`,
+      url: "https://x.com/gekidan_cocoa/status/2089692907217236085",
+      linkLabel: "元投稿をXで見る",
+      video: {
+        src: "/videos/pippara-a-first-day-20260818.mp4",
+        poster: "/images/pippara-a-first-day-20260818-poster.jpg",
+        alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班初日終了後の集合動画。衣装姿のキャストが白い壁の前で拍手し、手を振っている"
+      }
+    }
+  },
   {
     id: "x-2026-08-18-notices",
     platform: "X",
@@ -362,35 +401,25 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "A班初日、無事終了！ 次は8/22（土）12:00",
-  datetime: "2026年8月18日（火）22:30",
-  photo: pipparaFirstDayPhoto,
-  body: `#ピッパラの樹 公演1日目終了しました！
-ご来場いただき、ありがとうございました💖
+  headline: "A班2公演目、8/22（土）12:00へ",
+  datetime: "2026年8月21日（金）22:52",
+  photo: pipparaSecondShowPhoto,
+  body: `明日8/22(土)12時から #ピッパラの樹 2公演目です✨️
+お昼公演！元気いっぱい頑張ります🔥
 
-A班は次8/22(土)12時！空席あるよ👀待ってます✨️
+まだお席あるようなので駆け込みでもいかがでしょうか！！
 
 🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
 
-推し花💐 https://oshibana.shop/theater/oshibana/24950033`,
-  quote: `公演1日目終了しました！
-ご来場いただき、ありがとうございました`,
-  note: "2026年8月18日夜、A班初日の公演後に、劇団ココア公式Xの動画を引用して報告がありました。空席の案内は投稿時点のものです。",
-  url: "https://x.com/frecam2025_0306/status/2089706405683188098",
-  quotedPost: {
-    label: "劇団ココア公式X（2026年8月18日）",
-    text: `【#ピッパラの樹】
+推し花もとーーっても力になります🌸⬇️
+https://oshibana.shop/theater/oshibana/24950033
 
-Ａ班初日終了しました！
-明日はＢ班の初日です！🌲`,
-    url: "https://x.com/gekidan_cocoa/status/2089692907217236085",
-    linkLabel: "元投稿をXで見る",
-    video: {
-      src: "/videos/pippara-a-first-day-20260818.mp4",
-      poster: "/images/pippara-a-first-day-20260818-poster.jpg",
-      alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班初日終了後の集合動画。衣装姿のキャストが白い壁の前で拍手し、手を振っている"
-    }
-  }
+左ガイヤール夫人役とむさん♡
+右ルワン役せいかさん♡`,
+  quote: `お昼公演！
+元気いっぱい頑張ります`,
+  note: "2026年8月21日夜、A班2公演目（8/22 12:00・荻窪小劇場）の告知です。写真は左がガイヤール夫人役の三笘とむさん、中央が夏凪里季さん、右がルワン役のせいかさん。空席の案内は投稿時点のものです。",
+  url: "https://x.com/frecam2025_0306/status/2090799310481076374"
 };
 
 /** 8/18 本人X：劇団ココア公式の注意事項を引用した案内。長文は転載せず要点だけ。 */
@@ -672,8 +701,8 @@ export function PipparaNoKiSection() {
               {latestTopic.quotedPost && <QuotedPostBlock post={latestTopic.quotedPost} />}
 
               <p className="mt-4 border border-[#c9a24b]/40 bg-[#f8f3e6] px-4 py-3 text-sm leading-7 text-ink/80">
-                <span className="font-bold text-[#6f2f3c]">8/18投稿時点：</span>
-                次回 8/22（土）12:00 は空席あり、との案内です。最新の空席は公式の告知をご確認ください。
+                <span className="font-bold text-[#6f2f3c]">8/21投稿時点：</span>
+                8/22（土）12:00 の公演について「まだお席あるようなので駆け込みでもいかがでしょうか」との案内でした。最新の空席状況はTIGETや公式の告知をご確認ください。
               </p>
 
               {/* 座席状況は日々変わるので、記号の意味と公式の参照先だけを置く */}
@@ -1286,7 +1315,7 @@ export function PipparaNoKiSection() {
             {snsPosts.map((post) => (
               <details
                 key={post.id}
-                className="group border border-[#7c5a3a]/20 bg-[#f8f3e6] open:bg-white"
+                className="group min-w-0 border border-[#7c5a3a]/20 bg-[#f8f3e6] open:bg-white"
               >
                 <summary className="flex cursor-pointer list-none items-center gap-3 p-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne">
                   <AccountAvatar platform={post.platform} />
@@ -1312,9 +1341,34 @@ export function PipparaNoKiSection() {
                       </p>
                     </blockquote>
                   )}
-                  <div className="whitespace-pre-line text-sm leading-7 text-ink/80">
+                  <div className="whitespace-pre-line break-words text-sm leading-7 text-ink/80">
                     {post.body}
                   </div>
+                  {post.photo && (
+                    <button
+                      type="button"
+                      onClick={openZoom(post.photo)}
+                      className="group mt-4 block w-full max-w-sm text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
+                      aria-label={`${post.photo.alt}を拡大表示`}
+                    >
+                      <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
+                        <img
+                          {...getResponsiveImageProps(
+                            post.photo.src,
+                            "(min-width: 640px) 24rem, 100vw"
+                          )}
+                          alt={post.photo.alt}
+                          loading="lazy"
+                          decoding="async"
+                          className="block w-full object-contain"
+                        />
+                        <span className="pointer-events-none absolute inset-0 bg-ink/10 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
+                      </span>
+                      <span className="mt-2 inline-block text-xs font-bold text-[#6f2f3c]">
+                        タップして拡大表示
+                      </span>
+                    </button>
+                  )}
                   {post.quotedPost && <QuotedPostBlock post={post.quotedPost} />}
                   <a
                     href={post.url}
