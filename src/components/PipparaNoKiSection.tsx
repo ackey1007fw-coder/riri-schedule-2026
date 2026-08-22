@@ -121,7 +121,7 @@ const relatedImages: FlyerImage[] = [
   { ...pipparaFlyer, alt: "劇団ココア『ピッパラの樹』出演者一覧と公演日程を掲載したフライヤー" }
 ];
 
-/** 劇団ココア公式Xの座席状況投稿。日々変わるため、記号の意味と参照先だけを置く */
+/** 8/21投稿時に参照していた劇団ココア公式Xの座席状況。現在情報と混同しないよう履歴内だけで表示する */
 const seatStatus = {
   updatedAt: "2026年8月14日",
   legend: [
@@ -129,8 +129,14 @@ const seatStatus = {
     { mark: "△", text: "埋まってきてます" },
     { mark: "！", text: "満席になりそう予約急いで" }
   ],
-  note: "劇団ココア公式Xの8月14日の告知では、夏凪里季さん出演のA班は 8/18(火)19:30「！」／8/22(土)12:00「！」／8/23(日)15:30 残り5席／8/25(火)14:00「！」／8/28(金)19:30「！」／8/29(土)19:30 満席 です。満席回が増えているので、ご予約はお早めに。",
+  note: "劇団ココア公式Xの8月14日の告知では、夏凪里季さん出演のA班は 8/18(火)19:30「！」／8/22(土)12:00「！」／8/23(日)15:30 残り5席／8/25(火)14:00「！」／8/28(金)19:30「！」／8/29(土)19:30 満席でした。8/21投稿時に参照していた状況の記録です。",
   url: "https://x.com/gekidan_cocoa/status/2088062591679807522"
+};
+
+type VideoAsset = {
+  src: string;
+  poster?: string;
+  alt: string;
 };
 
 /** 引用リポストの出典。linkLabel が無いときは汎用の誘導文を使う */
@@ -140,11 +146,7 @@ type QuotedPost = {
   url: string;
   linkLabel?: string;
   /** 引用元に自己ホストした動画があるときだけ */
-  video?: {
-    src: string;
-    poster?: string;
-    alt: string;
-  };
+  video?: VideoAsset;
 };
 
 /** 投稿本文はここに一度だけ置き、セクション内で重複表示しない */
@@ -156,6 +158,10 @@ type SnsPost = {
   headline: string;
   body: string;
   quote?: string;
+  /** 投稿日時点の補足など、現在情報との混同を避けるための注記 */
+  note?: string;
+  /** 8/21投稿時に表示していた座席状況を履歴として残す */
+  showSeatStatusHistory?: boolean;
   url: string;
   /** 投稿に写真があるときだけ */
   photo?: FlyerImage;
@@ -163,6 +169,31 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-21-second-show-notice",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月21日（金）22:52",
+    headline: "「明日8/22(土)12時から #ピッパラの樹 2公演目です」",
+    body: `明日8/22(土)12時から #ピッパラの樹 2公演目です✨️
+お昼公演！元気いっぱい頑張ります🔥
+
+まだお席あるようなので駆け込みでもいかがでしょうか！！
+
+🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
+
+推し花もとーーっても力になります🌸⬇️
+https://oshibana.shop/theater/oshibana/24950033
+
+左ガイヤール夫人役とむさん♡
+右ルワン役せいかさん♡`,
+    quote: `お昼公演！
+元気いっぱい頑張ります`,
+    note: "空席の案内は2026年8月21日22:52の投稿時点の情報です。8/22（土）12:00のA班2公演目は終了しています。",
+    showSeatStatusHistory: true,
+    url: "https://x.com/frecam2025_0306/status/2090799310481076374",
+    photo: pipparaSecondShowPhoto
+  },
   {
     id: "x-2026-08-18-first-day",
     platform: "X",
@@ -386,10 +417,14 @@ A班のアナスタジー・ド・ブロワ役を
   }
 ];
 
-/** 最新のトピック（写真がある投稿は写真つき、無い投稿は次回公演パネルを添える） */
+/** 最新のトピック（動画、写真、次回公演パネルの順で左側に表示する） */
 type LatestTopic = {
   headline: string;
   datetime: string;
+  sourceLabel: string;
+  handle?: string;
+  /** 投稿に自己ホストした動画があるときだけ */
+  video?: VideoAsset;
   /** 投稿に写真があるときだけ。無い場合は次回公演パネルを表示する */
   photo?: FlyerImage;
   body: string;
@@ -401,25 +436,23 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "A班2公演目、8/22（土）12:00へ",
-  datetime: "2026年8月21日（金）22:52",
-  photo: pipparaSecondShowPhoto,
-  body: `明日8/22(土)12時から #ピッパラの樹 2公演目です✨️
-お昼公演！元気いっぱい頑張ります🔥
-
-まだお席あるようなので駆け込みでもいかがでしょうか！！
-
-🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
-
-推し花もとーーっても力になります🌸⬇️
-https://oshibana.shop/theater/oshibana/24950033
-
-左ガイヤール夫人役とむさん♡
-右ルワン役せいかさん♡`,
-  quote: `お昼公演！
-元気いっぱい頑張ります`,
-  note: "2026年8月21日夜、A班2公演目（8/22 12:00・荻窪小劇場）の告知です。写真は左がガイヤール夫人役の三笘とむさん、中央が夏凪里季さん、右がルワン役のせいかさん。空席の案内は投稿時点のものです。",
-  url: "https://x.com/frecam2025_0306/status/2090799310481076374"
+  headline: "A班2ステ目終了！",
+  datetime: "2026年8月22日（土）13:57",
+  sourceLabel: "劇団ココア公式X",
+  handle: "@gekidan_cocoa",
+  video: {
+    src: "/videos/pippara-a-second-show-20260822.mp4",
+    poster: "/images/pippara-a-second-show-20260822-poster.jpg",
+    alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班2ステ目終了後の集合動画。衣装姿のA班キャストが並んでいる"
+  },
+  body: `【#ピッパラの樹】
+Ａ班2ステ目終了しました！
+ご来場誠にありがとうございました！
+次は15:30からＢ班です！🌲`,
+  quote: `Ａ班2ステ目終了しました！
+ご来場誠にありがとうございました！`,
+  note: "A班2公演目が終了。夏凪里季さんの次回A班出演は8/23（日）15:30です。「次は15:30からＢ班です！」は2026年8月22日13:57の投稿時点での当日案内です。",
+  url: "https://x.com/gekidan_cocoa/status/2091026922839126490"
 };
 
 /** 8/18 本人X：劇団ココア公式の注意事項を引用した案内。長文は転載せず要点だけ。 */
@@ -605,12 +638,47 @@ export function PipparaNoKiSection() {
           copy="夏凪里季さんが、A班「アナスタジー・ド・ブロワ役」で出演！"
         />
 
-        {/* 最新トピック：本人の最新投稿。写真が無いときは左に Next Stage */}
+        {/* 最新トピック：動画、写真、Next Stage の優先順で左側に表示 */}
         <article className="riri-card overflow-hidden border-[#7c5a3a]/25 bg-white shadow-paper">
           <div className="h-1.5 bg-[linear-gradient(90deg,#2f4a3a_0%,#6f2f3c_35%,#c9a24b_68%,#2f4a3a_100%)]" />
           <div className="grid min-w-0 gap-0 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
             <div className="min-w-0 border-b border-[#7c5a3a]/15 bg-[#f0ead9] p-4 sm:border-b-0 sm:border-r sm:p-6">
-              {latestTopic.photo ? (
+              {latestTopic.video ? (
+                <div className="min-w-0">
+                  <div className="max-w-full overflow-hidden border border-[#7c5a3a]/30 bg-black">
+                    <video
+                      className="block h-auto w-full max-w-full"
+                      controls
+                      playsInline
+                      preload="metadata"
+                      poster={latestTopic.video.poster}
+                      aria-label={latestTopic.video.alt}
+                    >
+                      <source src={latestTopic.video.src} type="video/mp4" />
+                    </video>
+                  </div>
+                  <p className="mt-3 text-xs leading-6 text-ink/55">
+                    出典：
+                    <a
+                      href={latestTopic.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-[#6f2f3c] underline decoration-[#c9a24b] underline-offset-2"
+                    >
+                      {latestTopic.sourceLabel}
+                    </a>
+                  </p>
+                  <a
+                    href={latestTopic.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[#6f2f3c] underline decoration-[#c9a24b] underline-offset-2"
+                  >
+                    元投稿をXで見る
+                    <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                  </a>
+                </div>
+              ) : latestTopic.photo ? (
                 <button
                   type="button"
                   onClick={openZoom(latestTopic.photo)}
@@ -684,7 +752,10 @@ export function PipparaNoKiSection() {
               <h3 className="mt-3 font-display text-2xl leading-tight text-ink sm:text-3xl">
                 {latestTopic.headline}
               </h3>
-              <p className="mt-1 text-xs text-ink/45">{latestTopic.datetime}・X</p>
+              <p className="mt-1 break-words text-xs text-ink/45">
+                {latestTopic.datetime}・{latestTopic.sourceLabel}
+                {latestTopic.handle && `（${latestTopic.handle}）`}
+              </p>
 
               <blockquote className="mt-4 border-l-4 border-[#c9a24b] bg-[#f8f3e6] px-4 py-3">
                 <Quote className="h-4 w-4 text-[#6f2f3c]" aria-hidden="true" />
@@ -699,39 +770,6 @@ export function PipparaNoKiSection() {
               <p className="mt-3 text-xs leading-6 text-ink/50">{latestTopic.note}</p>
 
               {latestTopic.quotedPost && <QuotedPostBlock post={latestTopic.quotedPost} />}
-
-              <p className="mt-4 border border-[#c9a24b]/40 bg-[#f8f3e6] px-4 py-3 text-sm leading-7 text-ink/80">
-                <span className="font-bold text-[#6f2f3c]">8/21投稿時点：</span>
-                8/22（土）12:00 の公演について「まだお席あるようなので駆け込みでもいかがでしょうか」との案内でした。最新の空席状況はTIGETや公式の告知をご確認ください。
-              </p>
-
-              {/* 座席状況は日々変わるので、記号の意味と公式の参照先だけを置く */}
-              <div className="mt-5 border border-[#c9a24b]/40 bg-[#f8f3e6] p-4">
-                <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
-                  <Armchair className="h-4 w-4" aria-hidden="true" />
-                  座席状況の見方（{seatStatus.updatedAt}時点）
-                </p>
-                <ul className="mt-3 grid gap-1.5 text-sm text-ink/80 sm:grid-cols-3">
-                  {seatStatus.legend.map((item) => (
-                    <li key={item.mark} className="flex items-center gap-2">
-                      <span className="grid h-6 w-6 shrink-0 place-items-center border border-[#6f2f3c]/30 bg-white text-xs font-bold text-[#6f2f3c]">
-                        {item.mark}
-                      </span>
-                      {item.text}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-3 text-xs leading-6 text-ink/60">{seatStatus.note}</p>
-                <a
-                  href={seatStatus.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[#6f2f3c] underline decoration-[#c9a24b] underline-offset-2"
-                >
-                  8月14日のお席情報を劇団ココア公式Xで見る
-                  <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-                </a>
-              </div>
 
               <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 {remaining > 0 && (
@@ -765,7 +803,7 @@ export function PipparaNoKiSection() {
                   rel="noopener noreferrer"
                   className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
                 >
-                  Xで投稿を見る
+                  元投稿をXで見る
                   <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
                 </a>
               </div>
@@ -1126,7 +1164,7 @@ export function PipparaNoKiSection() {
             </p>
 
             <p className="mt-3 text-xs leading-6 text-ink/55">
-              8月18日の本人投稿（初日終了後・投稿時点）では、次回 8/22（土）12:00 について「空席あるよ」と案内されています。8月17日の本人投稿では「まだお席空いています！今一度ご予定の確認よろしくお願いいたします」と予約が呼びかけられていました。劇団ココア公式Xの8月14日時点では、A班の8/29(土)19:30は満席、8/23(日)15:30は残り5席、ほか4公演は「！」です。気になる日程はお早めに。
+              8/22（土）12:00のA班2公演目は終了しました。8月21日の空席案内は、下の「これまでの告知投稿」に投稿時点の記録として残しています。8/23（日）15:30以降の最新の空席状況はTIGETや劇団ココア公式Xをご確認ください。
             </p>
 
             <a
@@ -1344,6 +1382,37 @@ export function PipparaNoKiSection() {
                   <div className="whitespace-pre-line break-words text-sm leading-7 text-ink/80">
                     {post.body}
                   </div>
+                  {post.note && (
+                    <p className="mt-3 text-xs leading-6 text-ink/50">{post.note}</p>
+                  )}
+                  {post.showSeatStatusHistory && (
+                    <div className="mt-4 border border-[#c9a24b]/40 bg-[#f8f3e6] p-4">
+                      <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
+                        <Armchair className="h-4 w-4" aria-hidden="true" />
+                        当時参照していた座席状況（{seatStatus.updatedAt}時点）
+                      </p>
+                      <ul className="mt-3 grid gap-1.5 text-sm text-ink/80 sm:grid-cols-3">
+                        {seatStatus.legend.map((item) => (
+                          <li key={item.mark} className="flex items-center gap-2">
+                            <span className="grid h-6 w-6 shrink-0 place-items-center border border-[#6f2f3c]/30 bg-white text-xs font-bold text-[#6f2f3c]">
+                              {item.mark}
+                            </span>
+                            {item.text}
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="mt-3 text-xs leading-6 text-ink/60">{seatStatus.note}</p>
+                      <a
+                        href={seatStatus.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[#6f2f3c] underline decoration-[#c9a24b] underline-offset-2"
+                      >
+                        8月14日のお席情報を劇団ココア公式Xで見る
+                        <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                      </a>
+                    </div>
+                  )}
                   {post.photo && (
                     <button
                       type="button"
