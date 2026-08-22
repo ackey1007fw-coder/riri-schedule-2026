@@ -15,7 +15,34 @@ export const familyYukataPhoto: GalleryPhoto = {
   alt: "ピンクと紫の花柄浴衣の夏凪里季さん、青紫の花柄浴衣のお姉さん、ピンクの浴衣風ウェアを着た愛犬カルアちゃんの3ショット。お姉さんの顔は『姉』の文字で隠されている（X『お姉ちゃんと一緒に浴衣』より）"
 };
 
+// 2026.8.19 Instagram「今年初浴衣✨️着ただけだけど」のカルーセル2・3枚目
+// （1枚目は 8/2 のX投稿と同じ写真のため g90 = summerYukataPhoto を再利用する）
+const yukataKaluaTwoShotPhoto: GalleryPhoto = {
+  src: "/images/gallery/g112.jpg",
+  alt: "白地にピンクと紫の花柄の浴衣に赤い花の髪飾りをつけた夏凪里季さん（左）と、青紫の花柄の浴衣を着た女性（右）が、抱き上げた愛犬カルアちゃんを間にして笑う3ショット。窓のある室内での1枚"
+};
+
+const yukataKaluaPhoto: GalleryPhoto = {
+  src: "/images/gallery/g113.jpg",
+  alt: "白地にピンクと紫の花柄の浴衣に赤い花の髪飾りをつけた夏凪里季さんが、浴衣風ウェアを着た愛犬カルアちゃんを抱いてほほえむ2ショット"
+};
+
+// 2026.8.21 X『ピッパラの樹』A班2公演目の告知投稿の3ショット
+const pipparaSecondShowThreeShotPhoto: GalleryPhoto = {
+  src: "/images/gallery/g114.jpg",
+  alt: "『ピッパラの樹』の舞台衣装で並ぶ3ショット。左にガイヤール夫人役の三笘とむさん、中央に白いミニハットと青いベスト姿の夏凪里季さん、右に白い衣装とレースのヘッドバンド姿のルワン役せいかさん。3人ともカメラに笑顔を向けている"
+};
+
 export const galleryFeatures = [
+  {
+    date: "2026.8.19",
+    kicker: "Summer Moment",
+    heading: "今年初浴衣。カルアさんも一緒に",
+    title: "今年初浴衣✨️着ただけだけど",
+    copy: "白地にピンクと紫の花柄の浴衣に、赤い花の髪飾り。愛犬カルアちゃんを抱いた写真も添えて「カルアさんお付き合いありがとう」と綴った、夏らしい3枚組のInstagram投稿です。",
+    url: "https://www.instagram.com/p/DcOFaLGiYhP/",
+    photo: yukataKaluaPhoto
+  },
   {
     date: "2026.8.3",
     kicker: "Family Summer Moment",
@@ -50,8 +77,19 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.21 X「明日8/22(土)12時から #ピッパラの樹 2公演目です」本人投稿。creditなし
+  pipparaSecondShowThreeShotPhoto,
+  // 2026.8.19 Instagram「今年初浴衣✨️着ただけだけど」本人投稿。creditなし
+  // 1枚目は 8/2 のX投稿と同じ写真（g90）なので、ギャラリーへは重複追加しない
+  yukataKaluaTwoShotPhoto,
+  yukataKaluaPhoto,
+  // 2026.8.18 X「#ピッパラの樹 公演1日目終了しました！」本人投稿。creditなし
+  { src: "/images/gallery/g111.jpg", alt: "ストライプのブラウスに青いベスト、首元の大きなリボン、白いミニハットの衣装でウインクし、右手の人差し指を立てている夏凪里季さん（『ピッパラの樹』A班初日終了後）" },
+  // 2026.8.17 X「#ピッパラの樹 コラボチェキのオススメはこちらです」本人投稿。creditなし
+  { src: "/images/gallery/g109.jpg", alt: "白いミニハットに青緑のベスト姿の夏凪里季さん（左）と、白いシャツにチェックのベスト・ネクタイ姿の共演者（右）。『ピッパラの樹』の舞台衣装での2ショット" },
+  { src: "/images/gallery/g110.jpg", alt: "白いミニハットに青緑のベスト姿の夏凪里季さん（左）と、白いシャツに茶色のベスト・ネクタイ姿の共演者（右）。『ピッパラの樹』の舞台衣装での2ショット" },
   // 2026.8.15 X「ノリで滝行してきた」本人投稿。creditなし
-  { src: "/images/gallery/g109.jpg", alt: "滝を背景に、濡れた白い半袖Tシャツと黒いサングラス姿で笑顔のピースサインをする夏凪里季さん。髪は濡れ、シルバーブルーのロングネイルが見える（X『ノリで滝行してきた』より）" },
+  { src: "/images/gallery/g115.jpg", alt: "滝を背景に、濡れた白い半袖Tシャツと黒いサングラス姿で笑顔のピースサインをする夏凪里季さん。髪は濡れ、シルバーブルーのロングネイルが見える（X『ノリで滝行してきた』より）" },
   // 2026.8.14 X「#ピッパラの樹 イケメンすぎるねねさん」本人投稿。creditなし
   { src: "/images/gallery/g108.jpg", alt: "チェック柄の半袖シャツ姿でピースをする夏凪里季さん（右）と、短い黒髪に水色のトップスでピースをするねねさん(@nene_matu)（左）。ハンガーラックのある室内での2ショット（X『#ピッパラの樹』より）" },
   // 2026.8.13 X サンリオピューロランド
@@ -216,8 +254,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.15",
+  date: "2026.8.21",
   platform: "X",
-  note: "「ノリで滝行してきた」滝の前でサングラス姿、笑顔のピースショット",
-  url: "https://x.com/frecam2025_0306/status/2088377624980803925"
+  note: "『ピッパラの樹』A班2公演目の告知投稿より、舞台衣装での3ショット",
+  url: "https://x.com/frecam2025_0306/status/2090799310481076374"
 };

@@ -16,6 +16,14 @@ export const events: ScheduleEvent[] = [
       "2026-08-28",
       "2026-08-29"
     ],
+    occurrences: [
+      { startAt: "2026-08-18T19:30:00+09:00" },
+      { startAt: "2026-08-22T12:00:00+09:00" },
+      { startAt: "2026-08-23T15:30:00+09:00" },
+      { startAt: "2026-08-25T14:00:00+09:00" },
+      { startAt: "2026-08-28T19:30:00+09:00" },
+      { startAt: "2026-08-29T19:30:00+09:00" }
+    ],
     displayDate: "2026年8月18日(火)〜29日(土)・A班 全6公演",
     venue: "荻窪小劇場",
     image: "/images/gallery/g65.jpg",
@@ -69,6 +77,12 @@ export const events: ScheduleEvent[] = [
     startAt: "2026-09-11T19:00:00+09:00",
     endAt: "2026-09-15T20:00:00+09:00",
     dates: ["2026-09-11", "2026-09-12", "2026-09-13", "2026-09-15"],
+    occurrences: [
+      { startAt: "2026-09-11T19:00:00+09:00" },
+      { startAt: "2026-09-12T12:00:00+09:00" },
+      { startAt: "2026-09-13T12:00:00+09:00" },
+      { startAt: "2026-09-15T18:00:00+09:00" }
+    ],
     displayDate: "2026年9月11日(金)〜15日(火)・A side 全4公演",
     venue: "西荻窪 遊空間がざびぃ",
     image: "/images/im-talking-about-homin-flyer-2026.jpg",
@@ -80,6 +94,11 @@ export const events: ScheduleEvent[] = [
         label: "チケット予約（livepocket）",
         url: "https://livepocket.jp/t/aitokihomin",
         kind: "ticket"
+      },
+      {
+        label: "メインビジュアルA解禁（8/15）",
+        url: "https://x.com/frecam2025_0306/status/2088596575849533937",
+        kind: "sns"
       },
       {
         label: "デジタルメッセージ花（5,000円）",

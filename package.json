@@ -8,6 +8,9 @@
     "images:build": "node scripts/generate-responsive-images.mjs",
     "prebuild": "node scripts/generate-responsive-images.mjs",
     "typecheck": "tsc -b",
+    "test": "node --test scripts/codex-review-gate.test.mjs scripts/portal-feed.test.mjs scripts/ouen-archive-link.test.mjs",
+    "guard:site": "node scripts/check-site-identity.mjs",
+    "guard:codex": "node scripts/check-codex-review.mjs",
     "build": "tsc -b && node node_modules/vite/bin/vite.js build",
     "preview": "vite preview --host 127.0.0.1",
     "serve:dist": "node scripts/serve-dist.mjs"
