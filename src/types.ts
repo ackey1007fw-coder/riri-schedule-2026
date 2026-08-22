@@ -17,6 +17,12 @@ export type EventGalleryPhoto = {
   alt: string;
 };
 
+export type EventOccurrence = {
+  startAt: string;
+  endAt?: string;
+  label?: string;
+};
+
 export type ScheduleEvent = {
   id: string;
   title: string;
@@ -28,6 +34,8 @@ export type ScheduleEvent = {
   endAt?: string;
   /** 公演日が飛び飛びの場合の実施日リスト（"YYYY-MM-DD"）。カレンダー表示に使用 */
   dates?: string[];
+  /** 個別の開催日時。終了時刻は確認できる場合だけ設定する */
+  occurrences?: EventOccurrence[];
   displayDate: string;
   venue?: string;
   image: string;
