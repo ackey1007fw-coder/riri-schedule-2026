@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "predev": "node scripts/materialize-g119.mjs",
+    "predev": "pnpm run images:build",
     "dev": "vite --host 127.0.0.1",
     "images:build": "node scripts/materialize-g119.mjs && node scripts/generate-responsive-images.mjs",
     "prebuild": "pnpm run images:build",
