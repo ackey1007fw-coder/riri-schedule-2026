@@ -4,10 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "predev": "pnpm run images:build",
     "dev": "vite --host 127.0.0.1",
-    "images:build": "node scripts/materialize-g119.mjs && node scripts/generate-responsive-images.mjs",
-    "prebuild": "pnpm run images:build",
+    "images:build": "node scripts/generate-responsive-images.mjs",
+    "prebuild": "node scripts/generate-responsive-images.mjs",
     "typecheck": "tsc -b",
     "test": "node --test scripts/codex-review-gate.test.mjs scripts/portal-feed.test.mjs scripts/ouen-archive-link.test.mjs",
     "guard:site": "node scripts/check-site-identity.mjs",
