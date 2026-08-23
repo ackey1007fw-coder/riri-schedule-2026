@@ -111,6 +111,10 @@ const pipparaSecondShowPhoto: FlyerImage = {
   src: "/images/gallery/g114.jpg",
   alt: "『ピッパラの樹』の舞台衣装で並ぶ3ショット。左にガイヤール夫人役の三笘とむさん、中央に白いミニハットと青いベスト姿の夏凪里季さん、右に白い衣装とレースのヘッドバンド姿のルワン役せいかさん。3人ともカメラに笑顔を向けている"
 };
+const pipparaThirdShowUmbrellaPhoto: FlyerImage = {
+  src: "/images/gallery/g119.jpg",
+  alt: "黒い傘を差し、ネイビーのポロシャツ姿でカメラを見つめる夏凪里季さん。青いバッグストラップが見える屋外での自撮り（X『#ピッパラの樹 本日3ステ目！』より）"
+};
 
 const relatedImages: FlyerImage[] = [
   pipparaNenePhoto,
@@ -165,10 +169,32 @@ type SnsPost = {
   url: string;
   /** 投稿に写真があるときだけ */
   photo?: FlyerImage;
+  /** 投稿に自己ホストした動画があるときだけ */
+  video?: VideoAsset;
   quotedPost?: QuotedPost;
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-22-second-show-end",
+    platform: "X",
+    handle: "@gekidan_cocoa",
+    datetime: "2026年8月22日（土）13:57",
+    headline: "A班2ステ目終了！",
+    body: `【#ピッパラの樹】
+Ａ班2ステ目終了しました！
+ご来場誠にありがとうございました！
+次は15:30からＢ班です！🌲`,
+    quote: `Ａ班2ステ目終了しました！
+ご来場誠にありがとうございました！`,
+    note: "A班2公演目が終了。夏凪里季さんの次回A班出演は8/23（日）15:30です。「次は15:30からＢ班です！」は2026年8月22日13:57の投稿時点での当日案内です。",
+    url: "https://x.com/gekidan_cocoa/status/2091026922839126490",
+    video: {
+      src: "/videos/pippara-a-second-show-20260822.mp4",
+      poster: "/images/pippara-a-second-show-20260822-poster.jpg",
+      alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班2ステ目終了後の集合動画。衣装姿のA班キャストが並んでいる"
+    }
+  },
   {
     id: "x-2026-08-21-second-show-notice",
     platform: "X",
@@ -436,23 +462,19 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "A班2ステ目終了！",
-  datetime: "2026年8月22日（土）13:57",
-  sourceLabel: "劇団ココア公式X",
-  handle: "@gekidan_cocoa",
-  video: {
-    src: "/videos/pippara-a-second-show-20260822.mp4",
-    poster: "/images/pippara-a-second-show-20260822-poster.jpg",
-    alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班2ステ目終了後の集合動画。衣装姿のA班キャストが並んでいる"
-  },
-  body: `【#ピッパラの樹】
-Ａ班2ステ目終了しました！
-ご来場誠にありがとうございました！
-次は15:30からＢ班です！🌲`,
-  quote: `Ａ班2ステ目終了しました！
-ご来場誠にありがとうございました！`,
-  note: "A班2公演目が終了。夏凪里季さんの次回A班出演は8/23（日）15:30です。「次は15:30からＢ班です！」は2026年8月22日13:57の投稿時点での当日案内です。",
-  url: "https://x.com/gekidan_cocoa/status/2091026922839126490"
+  headline: "A班3ステ目、8/23（日）15:30",
+  datetime: "2026年8月23日（日）10:49",
+  sourceLabel: "X",
+  handle: "@frecam2025_0306",
+  photo: pipparaThirdShowUmbrellaPhoto,
+  body: `#ピッパラの樹 本日3ステ目！
+A班は15時半から荻窪小劇場にてお待ちしております✨️
+🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
+💐 https://oshibana.shop/theater/oshibana/24950033`,
+  quote: `#ピッパラの樹 本日3ステ目！
+A班は15時半から荻窪小劇場にてお待ちしております✨️`,
+  note: "2026年8月23日10:49に投稿された、A班3ステ目（8/23（日）15:30・荻窪小劇場）の当日告知です。「本日3ステ目」「15時半から」は投稿時点の案内です。",
+  url: "https://x.com/frecam2025_0306/status/2091342109060260135"
 };
 
 /** 8/18 本人X：劇団ココア公式の注意事項を引用した案内。長文は転載せず要点だけ。 */
@@ -544,12 +566,24 @@ const QuotedPostBlock = ({ post }: { post: QuotedPost }) => (
   </div>
 );
 
-const AccountAvatar = ({ platform }: { platform: SnsPost["platform"] }) => (
+const AccountAvatar = ({
+  platform,
+  handle
+}: {
+  platform: SnsPost["platform"];
+  handle?: string;
+}) => (
   <span
     className="grid h-10 w-10 shrink-0 place-items-center border border-[#c9a24b]/50 bg-[#f8f3e6] font-display text-lg text-[#6f2f3c]"
     aria-hidden="true"
   >
-    {platform === "Instagram" ? <Instagram className="h-4 w-4" /> : "里"}
+    {platform === "Instagram" ? (
+      <Instagram className="h-4 w-4" />
+    ) : handle === "@gekidan_cocoa" ? (
+      "劇"
+    ) : (
+      "里"
+    )}
   </span>
 );
 
@@ -1356,7 +1390,7 @@ export function PipparaNoKiSection() {
                 className="group min-w-0 border border-[#7c5a3a]/20 bg-[#f8f3e6] open:bg-white"
               >
                 <summary className="flex cursor-pointer list-none items-center gap-3 p-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne">
-                  <AccountAvatar platform={post.platform} />
+                  <AccountAvatar platform={post.platform} handle={post.handle} />
                   <span className="min-w-0 flex-1">
                     <span className="block text-sm font-bold text-ink">{post.headline}</span>
                     <span className="mt-0.5 block truncate text-xs text-ink/50">
@@ -1437,6 +1471,20 @@ export function PipparaNoKiSection() {
                         タップして拡大表示
                       </span>
                     </button>
+                  )}
+                  {post.video && (
+                    <div className="mt-4 max-w-full overflow-hidden border border-[#7c5a3a]/25 bg-black">
+                      <video
+                        className="block h-auto w-full max-w-full"
+                        controls
+                        playsInline
+                        preload="metadata"
+                        poster={post.video.poster}
+                        aria-label={post.video.alt}
+                      >
+                        <source src={post.video.src} type="video/mp4" />
+                      </video>
+                    </div>
                   )}
                   {post.quotedPost && <QuotedPostBlock post={post.quotedPost} />}
                   <a
