@@ -111,6 +111,10 @@ const pipparaSecondShowPhoto: FlyerImage = {
   src: "/images/gallery/g114.jpg",
   alt: "『ピッパラの樹』の舞台衣装で並ぶ3ショット。左にガイヤール夫人役の三笘とむさん、中央に白いミニハットと青いベスト姿の夏凪里季さん、右に白い衣装とレースのヘッドバンド姿のルワン役せいかさん。3人ともカメラに笑顔を向けている"
 };
+const pipparaThirdShowEndThreeShotPhoto: FlyerImage = {
+  src: "/images/gallery/g120.jpg",
+  alt: "『ピッパラの樹』A班3ステ目終演後の舞台衣装3ショット。右に夏凪里季さん、左にオルガ役の雪乃さん、中央上にガイヤール夫人役の三笘とむさん。雪乃さんととむさんはピースサインをしている"
+};
 const pipparaThirdShowUmbrellaPhoto: FlyerImage = {
   src: "/images/gallery/g119.jpg",
   alt: "黒い傘を差し、ネイビーのポロシャツ姿でカメラを見つめる夏凪里季さん。青いバッグストラップが見える屋外での自撮り（X『#ピッパラの樹 本日3ステ目！』より）"
@@ -175,6 +179,22 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-23-third-show-notice",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月23日（日）10:49",
+    headline: "「#ピッパラの樹 本日3ステ目！」",
+    body: `#ピッパラの樹 本日3ステ目！
+A班は15時半から荻窪小劇場にてお待ちしております✨️
+🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
+💐 https://oshibana.shop/theater/oshibana/24950033`,
+    quote: `#ピッパラの樹 本日3ステ目！
+A班は15時半から荻窪小劇場にてお待ちしております✨️`,
+    note: "2026年8月23日10:49に投稿された、A班3ステ目（8/23（日）15:30・荻窪小劇場）の当日告知です。「本日3ステ目」「15時半から」は投稿時点の案内です。",
+    url: "https://x.com/frecam2025_0306/status/2091342109060260135",
+    photo: pipparaThirdShowUmbrellaPhoto
+  },
   {
     id: "x-2026-08-22-second-show-end",
     platform: "X",
@@ -462,19 +482,39 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "A班3ステ目、8/23（日）15:30",
-  datetime: "2026年8月23日（日）10:49",
+  headline: "A班3ステ目終了！ 次は8/25（火）14:00",
+  datetime: "2026年8月23日（日）22:06",
   sourceLabel: "X",
   handle: "@frecam2025_0306",
-  photo: pipparaThirdShowUmbrellaPhoto,
-  body: `#ピッパラの樹 本日3ステ目！
-A班は15時半から荻窪小劇場にてお待ちしております✨️
+  photo: pipparaThirdShowEndThreeShotPhoto,
+  body: `#ピッパラの樹 3ステ終了いたしましたー！！
+今日も楽しかったです🎶次は8/25(火)14時からお待ちしております❣️
+まだまだたくさんの人に見に来て欲しいです！！
 🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
-💐 https://oshibana.shop/theater/oshibana/24950033`,
-  quote: `#ピッパラの樹 本日3ステ目！
-A班は15時半から荻窪小劇場にてお待ちしております✨️`,
-  note: "2026年8月23日10:49に投稿された、A班3ステ目（8/23（日）15:30・荻窪小劇場）の当日告知です。「本日3ステ目」「15時半から」は投稿時点の案内です。",
-  url: "https://x.com/frecam2025_0306/status/2091342109060260135"
+🌸 https://oshibana.shop/theater/oshibana/24950033
+オルガ役雪乃さん♡ガイヤール夫人役とむさん♡`,
+  quote: `#ピッパラの樹 3ステ終了いたしましたー！！
+今日も楽しかったです🎶次は8/25(火)14時からお待ちしております❣️`,
+  note: "2026年8月23日、A班3ステ目終了後の本人投稿です。次のA班公演は8/25（火）14:00・荻窪小劇場です。「今日も」「次は」などの表現は投稿時点のものです。引用元の「ほぼ満席でした」は終了した8/23公演についての報告です。",
+  url: "https://x.com/frecam2025_0306/status/2091512301216301350",
+  quotedPost: {
+    label: "劇団ココア公式X（2026年8月23日 17:35）",
+    text: `【#ピッパラの樹】
+
+Ａ班3ステ目終了しました！
+
+ほぼ満席でした！
+ご来場誠にありがとうございました！
+
+本日ラストは19:30からＢ班です！🌲`,
+    url: "https://x.com/gekidan_cocoa/status/2091444088600195237",
+    linkLabel: "元投稿をXで見る",
+    video: {
+      src: "/videos/pippara-a-third-show-20260823.mp4",
+      poster: "/images/pippara-a-third-show-20260823-poster.jpg",
+      alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班3ステ目終了後の集合動画。衣装姿のA班キャストが白い壁の前で並んでいる"
+    }
+  }
 };
 
 /** 8/18 本人X：劇団ココア公式の注意事項を引用した案内。長文は転載せず要点だけ。 */
