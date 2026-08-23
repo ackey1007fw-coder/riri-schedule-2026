@@ -59,6 +59,7 @@ export const imageManifest = {
   "/images/gallery/g116.jpg": {"width":1108,"height":1477,"widths":[360,480,720,960,1108]},
   "/images/gallery/g117.jpg": {"width":1280,"height":1706,"widths":[360,480,720,960,1280]},
   "/images/gallery/g118.jpg": {"width":1108,"height":1477,"widths":[360,480,720,960,1108]},
+  "/images/gallery/g119.jpg": {"width":480,"height":640,"widths":[360,480]},
   "/images/gallery/g12.jpg": {"width":1100,"height":1467,"widths":[360,480,720,960,1100]},
   "/images/gallery/g13.jpg": {"width":1100,"height":1467,"widths":[360,480,720,960,1100]},
   "/images/gallery/g14.jpg": {"width":1100,"height":1467,"widths":[360,480,720,960,1100]},
