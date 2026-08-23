@@ -27,6 +27,12 @@ const yukataKaluaPhoto: GalleryPhoto = {
   alt: "白地にピンクと紫の花柄の浴衣に赤い花の髪飾りをつけた夏凪里季さんが、浴衣風ウェアを着た愛犬カルアちゃんを抱いてほほえむ2ショット"
 };
 
+// 2026.8.23 X『ピッパラの樹』A班3ステ目終了後の3ショット。本人アカウントの本人写真のため credit なし
+const pipparaThirdShowEndThreeShotPhoto: GalleryPhoto = {
+  src: "/images/gallery/g120.jpg",
+  alt: "『ピッパラの樹』A班3ステ目終演後の舞台衣装3ショット。右に夏凪里季さん、左にオルガ役の雪乃さん、中央上にガイヤール夫人役の三笘とむさん。雪乃さんととむさんはピースサインをしている"
+};
+
 // 2026.8.23 X『ピッパラの樹』A班3ステ目の当日告知。本人アカウントの本人写真のため credit なし
 const pipparaThirdShowUmbrellaPhoto: GalleryPhoto = {
   src: "/images/gallery/g119.jpg",
@@ -83,7 +89,9 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
-  // 2026.8.23 X「#ピッパラの樹 本日3ステ目！」本人投稿。creditなし
+  // 2026.8.23 22:06 X「#ピッパラの樹 3ステ終了いたしましたー！！」本人投稿。creditなし
+  pipparaThirdShowEndThreeShotPhoto,
+  // 2026.8.23 10:49 X「#ピッパラの樹 本日3ステ目！」本人投稿。creditなし
   pipparaThirdShowUmbrellaPhoto,
   // 2026.8.21 X「明日8/22(土)12時から #ピッパラの樹 2公演目です」本人投稿。creditなし
   pipparaSecondShowThreeShotPhoto,
@@ -268,6 +276,6 @@ export const galleryUpdate: {
 } = {
   date: "2026.8.23",
   platform: "X",
-  note: "『ピッパラの樹』A班3ステ目の当日告知より、雨の屋外で傘を差した自撮り",
-  url: "https://x.com/frecam2025_0306/status/2091342109060260135"
+  note: "『ピッパラの樹』A班3ステ目終了後、雪乃さん・とむさんとの舞台衣装3ショット",
+  url: "https://x.com/frecam2025_0306/status/2091512301216301350"
 };
