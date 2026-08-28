@@ -119,6 +119,10 @@ const pipparaThirdShowUmbrellaPhoto: FlyerImage = {
   src: "/images/gallery/g119.jpg",
   alt: "黒い傘を差し、ネイビーのポロシャツ姿でカメラを見つめる夏凪里季さん。青いバッグストラップが見える屋外での自撮り（X『#ピッパラの樹 本日3ステ目！』より）"
 };
+const pipparaFifthShowTwoShotPhoto: FlyerImage = {
+  src: "/images/gallery/g121.jpg",
+  alt: "『ピッパラの樹』の舞台衣装2ショット。左に白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さん。右に白い衣装とレースのヘッドバンド姿の共演者が赤い薔薇を持っている。2人ともカメラに笑顔を向けている（X『#ピッパラの樹 本日5ステ目！』より）"
+};
 
 const relatedImages: FlyerImage[] = [
   pipparaNenePhoto,
@@ -179,6 +183,42 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-23-third-show-end",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月23日（日）22:06",
+    headline: "「#ピッパラの樹 3ステ終了いたしましたー！！」",
+    body: `#ピッパラの樹 3ステ終了いたしましたー！！
+今日も楽しかったです🎶次は8/25(火)14時からお待ちしております❣️
+まだまだたくさんの人に見に来て欲しいです！！
+🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
+🌸 https://oshibana.shop/theater/oshibana/24950033
+オルガ役雪乃さん♡ガイヤール夫人役とむさん♡`,
+    quote: `#ピッパラの樹 3ステ終了いたしましたー！！
+今日も楽しかったです🎶次は8/25(火)14時からお待ちしております❣️`,
+    note: "2026年8月23日、A班3ステ目終了後の本人投稿です。「今日も」「次は」などの表現は投稿時点のものです。引用元の「ほぼ満席でした」は終了した8/23公演についての報告です。",
+    url: "https://x.com/frecam2025_0306/status/2091512301216301350",
+    photo: pipparaThirdShowEndThreeShotPhoto,
+    quotedPost: {
+      label: "劇団ココア公式X（2026年8月23日 17:35）",
+      text: `【#ピッパラの樹】
+
+Ａ班3ステ目終了しました！
+
+ほぼ満席でした！
+ご来場誠にありがとうございました！
+
+本日ラストは19:30からＢ班です！🌲`,
+      url: "https://x.com/gekidan_cocoa/status/2091444088600195237",
+      linkLabel: "元投稿をXで見る",
+      video: {
+        src: "/videos/pippara-a-third-show-20260823.mp4",
+        poster: "/images/pippara-a-third-show-20260823-poster.jpg",
+        alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班3ステ目終了後の集合動画。衣装姿のA班キャストが白い壁の前で並んでいる"
+      }
+    }
+  },
   {
     id: "x-2026-08-23-third-show-notice",
     platform: "X",
@@ -482,39 +522,21 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "A班3ステ目終了！ 次は8/25（火）14:00",
-  datetime: "2026年8月23日（日）22:06",
+  headline: "A班5ステ目！ 明日の千秋楽は満席、飛び込みは今日のみ",
+  datetime: "2026年8月28日（金）16:21",
   sourceLabel: "X",
   handle: "@frecam2025_0306",
-  photo: pipparaThirdShowEndThreeShotPhoto,
-  body: `#ピッパラの樹 3ステ終了いたしましたー！！
-今日も楽しかったです🎶次は8/25(火)14時からお待ちしております❣️
-まだまだたくさんの人に見に来て欲しいです！！
+  photo: pipparaFifthShowTwoShotPhoto,
+  body: `#ピッパラの樹 本日5ステ目！
+明日はついに千秋楽✨️有難いことに満席ということで、飛び込み可能なのは今日のみです！
+19時半から荻窪小劇場にてお待ちしております❣️(開場は19時ね〜)
+推し花での応援もお待ちしております🤲🏻
 🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
-🌸 https://oshibana.shop/theater/oshibana/24950033
-オルガ役雪乃さん♡ガイヤール夫人役とむさん♡`,
-  quote: `#ピッパラの樹 3ステ終了いたしましたー！！
-今日も楽しかったです🎶次は8/25(火)14時からお待ちしております❣️`,
-  note: "2026年8月23日、A班3ステ目終了後の本人投稿です。次のA班公演は8/25（火）14:00・荻窪小劇場です。「今日も」「次は」などの表現は投稿時点のものです。引用元の「ほぼ満席でした」は終了した8/23公演についての報告です。",
-  url: "https://x.com/frecam2025_0306/status/2091512301216301350",
-  quotedPost: {
-    label: "劇団ココア公式X（2026年8月23日 17:35）",
-    text: `【#ピッパラの樹】
-
-Ａ班3ステ目終了しました！
-
-ほぼ満席でした！
-ご来場誠にありがとうございました！
-
-本日ラストは19:30からＢ班です！🌲`,
-    url: "https://x.com/gekidan_cocoa/status/2091444088600195237",
-    linkLabel: "元投稿をXで見る",
-    video: {
-      src: "/videos/pippara-a-third-show-20260823.mp4",
-      poster: "/images/pippara-a-third-show-20260823-poster.jpg",
-      alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班3ステ目終了後の集合動画。衣装姿のA班キャストが白い壁の前で並んでいる"
-    }
-  }
+🌸 https://oshibana.shop/theater/oshibana/24950033`,
+  quote: `#ピッパラの樹 本日5ステ目！
+明日はついに千秋楽✨️有難いことに満席ということで、飛び込み可能なのは今日のみです！`,
+  note: "2026年8月28日16:21に投稿された、A班5ステ目（8/28（金）19:30・荻窪小劇場）の当日告知です。「本日5ステ目」「飛び込み可能なのは今日のみ」「明日は千秋楽・満席」は投稿時点の案内です。次のA班公演は8/29（土）19:30です。",
+  url: "https://x.com/frecam2025_0306/status/2093237598143893726"
 };
 
 /** 8/18 本人X：劇団ココア公式の注意事項を引用した案内。長文は転載せず要点だけ。 */
@@ -1238,7 +1260,7 @@ export function PipparaNoKiSection() {
             </p>
 
             <p className="mt-3 text-xs leading-6 text-ink/55">
-              8/22（土）12:00のA班2公演目は終了しました。8月21日の空席案内は、下の「これまでの告知投稿」に投稿時点の記録として残しています。8/23（日）15:30以降の最新の空席状況はTIGETや劇団ココア公式Xをご確認ください。
+              8/28（金）の本人投稿では、8/29（土）19:30の千秋楽は満席、飛び込み可能なのは当日8/28（金）19:30のみ、との案内です。最新の空席状況はTIGETや劇団ココア公式Xをご確認ください。
             </p>
 
             <a

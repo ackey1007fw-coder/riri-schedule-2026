@@ -39,6 +39,12 @@ const pipparaThirdShowUmbrellaPhoto: GalleryPhoto = {
   alt: "黒い傘を差し、ネイビーのポロシャツ姿でカメラを見つめる夏凪里季さん。青いバッグストラップが見える屋外での自撮り（X『#ピッパラの樹 本日3ステ目！』より）"
 };
 
+// 2026.8.28 X『ピッパラの樹』A班5ステ目の当日告知。本人アカウントの本人写真のため credit なし
+const pipparaFifthShowTwoShotPhoto: GalleryPhoto = {
+  src: "/images/gallery/g121.jpg",
+  alt: "『ピッパラの樹』の舞台衣装2ショット。左に白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さん。右に白い衣装とレースのヘッドバンド姿の共演者が赤い薔薇を持っている。2人ともカメラに笑顔を向けている（X『#ピッパラの樹 本日5ステ目！』より）"
+};
+
 // 2026.8.21 X『ピッパラの樹』A班2公演目の告知投稿の3ショット
 const pipparaSecondShowThreeShotPhoto: GalleryPhoto = {
   src: "/images/gallery/g114.jpg",
@@ -89,6 +95,8 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.28 16:21 X「#ピッパラの樹 本日5ステ目！」本人投稿。creditなし
+  pipparaFifthShowTwoShotPhoto,
   // 2026.8.23 22:06 X「#ピッパラの樹 3ステ終了いたしましたー！！」本人投稿。creditなし
   pipparaThirdShowEndThreeShotPhoto,
   // 2026.8.23 10:49 X「#ピッパラの樹 本日3ステ目！」本人投稿。creditなし
@@ -274,8 +282,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.23",
+  date: "2026.8.28",
   platform: "X",
-  note: "『ピッパラの樹』A班3ステ目終了後、雪乃さん・とむさんとの舞台衣装3ショット",
-  url: "https://x.com/frecam2025_0306/status/2091512301216301350"
+  note: "『ピッパラの樹』A班5ステ目当日、衣装姿の共演者との2ショット",
+  url: "https://x.com/frecam2025_0306/status/2093237598143893726"
 };
