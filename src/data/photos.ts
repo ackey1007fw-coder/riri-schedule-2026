@@ -63,6 +63,18 @@ const pipparaFifthShowMiyabiPointPhoto: GalleryPhoto = {
   credit: miyabiFifthShowCredit
 };
 
+// 2026.8.29 14:59 X。A班千秋楽当日のKKさん(@catkkact)の投稿の2ショット
+const kkSenshurakuCredit = {
+  label: "写真: KK（@catkkact）の投稿",
+  url: "https://x.com/catkkact/status/2093579307121852626"
+};
+
+const pipparaSenshurakuKkTwoShotPhoto: GalleryPhoto = {
+  src: "/images/gallery/g124.jpg",
+  alt: "『ピッパラの樹』の舞台衣装2ショット。左に白いミニハットと黒いチュール、ストライプのブラウスに青いベスト姿の夏凪里季さん。右に茶縁の眼鏡、白いシャツに茶色のボウタイ、緑のジャケット姿のKKさん(@catkkact)。2人ともカメラに笑顔を向け、KKさんはピースサインをしている",
+  credit: kkSenshurakuCredit
+};
+
 // 2026.8.21 X『ピッパラの樹』A班2公演目の告知投稿の3ショット
 const pipparaSecondShowThreeShotPhoto: GalleryPhoto = {
   src: "/images/gallery/g114.jpg",
@@ -113,6 +125,8 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.29 14:59 X「#ピッパラの樹 本日A班千秋楽ですー！！」KKさん(@catkkact)の投稿
+  pipparaSenshurakuKkTwoShotPhoto,
   // 2026.8.28 23:53 X「今日はポール様に完全にやられました。」ミヤビさん(@miyabidayo_o)の投稿を引用
   pipparaFifthShowMiyabiCheekPhoto,
   pipparaFifthShowMiyabiPointPhoto,
@@ -303,8 +317,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.28",
+  date: "2026.8.29",
   platform: "X",
-  note: "『ピッパラの樹』A班5ステ目・前楽後、ポール役ミヤビさんとの衣装2ショット",
-  url: "https://x.com/frecam2025_0306/status/2093351347320160629"
+  note: "『ピッパラの樹』A班千秋楽当日、KKさんとの衣装2ショット",
+  url: "https://x.com/catkkact/status/2093579307121852626"
 };
