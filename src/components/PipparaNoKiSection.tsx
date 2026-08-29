@@ -135,6 +135,10 @@ const pipparaSenshurakuKkTwoShotPhoto: FlyerImage = {
   src: "/images/gallery/g124.jpg",
   alt: "『ピッパラの樹』の舞台衣装2ショット。左に白いミニハットと黒いチュール、ストライプのブラウスに青いベスト姿の夏凪里季さん。右に茶縁の眼鏡、白いシャツに茶色のボウタイ、緑のジャケット姿のKKさん(@catkkact)。2人ともカメラに笑顔を向け、KKさんはピースサインをしている"
 };
+const pipparaSenshurakuSelfiePhoto: FlyerImage = {
+  src: "/images/gallery/g125.jpg",
+  alt: "『ピッパラの樹』の舞台衣装で、右手のピースサインをしながら笑顔の自撮りをする夏凪里季さん。白いミニハットと黒いチュール、ストライプのブラウスに青いベスト、首元のボウタイ。シルバーブルーのロングネイルが見える（X『#ピッパラの樹 A班千秋楽終えました！』より）"
+};
 
 const relatedImages: FlyerImage[] = [
   pipparaNenePhoto,
@@ -197,6 +201,36 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-29-senshuraku-cocoa",
+    platform: "X",
+    handle: "@gekidan_cocoa",
+    datetime: "2026年8月29日（土）22:36",
+    headline: "A班千秋楽終了。満席ありがとうございました",
+    body: `【#ピッパラの樹】
+
+Ａ班千秋楽終了しました！
+満席ありがとうございました！
+
+ご来場誠にありがとうございました！
+
+明日はＢ班、Ｃ班、Ｄ班の千秋楽！🌲
+どの班もほぼ満席です！
+ご来場お待ちしております！
+
+ご予約は↓から！
+https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
+※備考欄に応援されている演者の明記をお願い致します。`,
+    quote: `Ａ班千秋楽終了しました！
+満席ありがとうございました！`,
+    note: "2026年8月29日22:36の劇団ココア公式Xの投稿です。夏凪里季さん出演のA班千秋楽（8/29（土）19:30・荻窪小劇場）が終了しました。「明日はＢ班、Ｃ班、Ｄ班の千秋楽」は投稿時点の案内で、8/30（日）のことです。",
+    url: "https://x.com/gekidan_cocoa/status/2093694275230085363",
+    video: {
+      src: "/videos/pippara-a-senshuraku-20260829.mp4",
+      poster: "/images/pippara-a-senshuraku-20260829-poster.jpg",
+      alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班千秋楽終了後の集合動画。白い壁の前に衣装姿のA班キャストが並び、白いミニハットと青いベスト姿の夏凪里季さんも写っている"
+    }
+  },
   {
     id: "x-2026-08-29-senshuraku-riri",
     platform: "X",
@@ -644,33 +678,20 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "A班千秋楽終了。満席ありがとうございました",
-  datetime: "2026年8月29日（土）22:36",
-  sourceLabel: "劇団ココアX",
-  handle: "@gekidan_cocoa",
-  video: {
-    src: "/videos/pippara-a-senshuraku-20260829.mp4",
-    poster: "/images/pippara-a-senshuraku-20260829-poster.jpg",
-    alt: "劇団ココア公式Xが投稿した『ピッパラの樹』A班千秋楽終了後の集合動画。白い壁の前に衣装姿のA班キャストが並び、白いミニハットと青いベスト姿の夏凪里季さんも写っている"
-  },
-  body: `【#ピッパラの樹】
+  headline: "「#ピッパラの樹 A班千秋楽終えました！」",
+  datetime: "2026年8月29日（土）22:53",
+  sourceLabel: "X",
+  handle: "@frecam2025_0306",
+  photo: pipparaSenshurakuSelfiePhoto,
+  body: `#ピッパラの樹 A班千秋楽終えました！
 
-Ａ班千秋楽終了しました！
-満席ありがとうございました！
+ご来場いただいた皆さん、祝い花を送ってくださった皆さん、遠くからでも応援してくださった皆さん、ありがとうございました✨️💖
 
-ご来場誠にありがとうございました！
-
-明日はＢ班、Ｃ班、Ｄ班の千秋楽！🌲
-どの班もほぼ満席です！
-ご来場お待ちしております！
-
-ご予約は↓から！
-https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
-※備考欄に応援されている演者の明記をお願い致します。`,
-  quote: `Ａ班千秋楽終了しました！
-満席ありがとうございました！`,
-  note: "2026年8月29日22:36の劇団ココア公式Xの投稿です。夏凪里季さん出演のA班千秋楽（8/29（土）19:30・荻窪小劇場）が終了しました。「明日はＢ班、Ｃ班、Ｄ班の千秋楽」は投稿時点の案内で、8/30（日）のことです。",
-  url: "https://x.com/gekidan_cocoa/status/2093694275230085363"
+とっても楽しかったです！またあげるね🙏`,
+  quote: `#ピッパラの樹 A班千秋楽終えました！
+とっても楽しかったです！またあげるね🙏`,
+  note: "2026年8月29日22:53の本人投稿です。A班千秋楽（8/29（土）19:30・荻窪小劇場）終演後の感謝です。",
+  url: "https://x.com/frecam2025_0306/status/2093698550974812255"
 };
 
 /** 8/18 本人X：劇団ココア公式の注意事項を引用した案内。長文は転載せず要点だけ。 */
