@@ -162,6 +162,7 @@ export const imageManifest = {
   "/images/pet-kalua.jpg": {"width":1200,"height":1600,"widths":[360,480,720,960,1200]},
   "/images/pippara-a-first-day-20260818-poster.jpg": {"width":1920,"height":1080,"widths":[360,480,720,960,1280,1600,1920]},
   "/images/pippara-a-second-show-20260822-poster.jpg": {"width":1920,"height":1080,"widths":[360,480,720,960,1280,1600,1920]},
+  "/images/pippara-a-senshuraku-20260829-poster.jpg": {"width":1280,"height":720,"widths":[360,480,720,960,1280]},
   "/images/pippara-a-third-show-20260823-poster.jpg": {"width":1920,"height":1080,"widths":[360,480,720,960,1280,1600,1920]},
   "/images/pippara-no-ki-cast-visual-2026.jpg": {"width":4096,"height":2919,"widths":[360,480,720,960,1280,1600,4096]},
   "/images/pippara-no-ki-first-day-20260818.jpg": {"width":1024,"height":768,"widths":[360,480,720,960,1024]},
