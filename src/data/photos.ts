@@ -45,6 +45,24 @@ const pipparaFifthShowTwoShotPhoto: GalleryPhoto = {
   alt: "『ピッパラの樹』の舞台衣装2ショット。左に白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さん。右に白い衣装とレースのヘッドバンド姿の共演者が赤い薔薇を持っている。2人ともカメラに笑顔を向けている（X『#ピッパラの樹 本日5ステ目！』より）"
 };
 
+// 2026.8.28 23:53 X。ポール役ミヤビさん(@miyabidayo_o)の投稿を引用した2ショット
+const miyabiFifthShowCredit = {
+  label: "写真: ミヤビ（@miyabidayo_o）の投稿",
+  url: "https://x.com/miyabidayo_o/status/2093337245839396999"
+};
+
+const pipparaFifthShowMiyabiCheekPhoto: GalleryPhoto = {
+  src: "/images/gallery/g122.jpg",
+  alt: "『ピッパラの樹』の舞台衣装2ショット。左に白い花柄のベストと黒いシャツ姿のポール役ミヤビさん(@miyabidayo_o)、右に白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さん。里季さんは頰に手を添え、片目を閉じている",
+  credit: miyabiFifthShowCredit
+};
+
+const pipparaFifthShowMiyabiPointPhoto: GalleryPhoto = {
+  src: "/images/gallery/g123.jpg",
+  alt: "『ピッパラの樹』の舞台衣装2ショット。白い花柄のベスト姿のポール役ミヤビさん(@miyabidayo_o)が、白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さんの頰を人差し指で指している。里季さんはカメラに向かって笑っている",
+  credit: miyabiFifthShowCredit
+};
+
 // 2026.8.21 X『ピッパラの樹』A班2公演目の告知投稿の3ショット
 const pipparaSecondShowThreeShotPhoto: GalleryPhoto = {
   src: "/images/gallery/g114.jpg",
@@ -95,6 +113,9 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.28 23:53 X「今日はポール様に完全にやられました。」ミヤビさん(@miyabidayo_o)の投稿を引用
+  pipparaFifthShowMiyabiCheekPhoto,
+  pipparaFifthShowMiyabiPointPhoto,
   // 2026.8.28 16:21 X「#ピッパラの樹 本日5ステ目！」本人投稿。creditなし
   pipparaFifthShowTwoShotPhoto,
   // 2026.8.23 22:06 X「#ピッパラの樹 3ステ終了いたしましたー！！」本人投稿。creditなし
@@ -284,6 +305,6 @@ export const galleryUpdate: {
 } = {
   date: "2026.8.28",
   platform: "X",
-  note: "『ピッパラの樹』A班5ステ目当日、衣装姿の共演者との2ショット",
-  url: "https://x.com/frecam2025_0306/status/2093237598143893726"
+  note: "『ピッパラの樹』A班5ステ目・前楽後、ポール役ミヤビさんとの衣装2ショット",
+  url: "https://x.com/frecam2025_0306/status/2093351347320160629"
 };

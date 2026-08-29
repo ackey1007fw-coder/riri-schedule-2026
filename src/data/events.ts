@@ -42,6 +42,11 @@ export const events: ScheduleEvent[] = [
         kind: "info"
       },
       {
+        label: "5ステ目・前楽後の2ショット（8/28）",
+        url: "https://x.com/frecam2025_0306/status/2093351347320160629",
+        kind: "sns"
+      },
+      {
         label: "5ステ目当日告知（8/28）",
         url: "https://x.com/frecam2025_0306/status/2093237598143893726",
         kind: "sns"
