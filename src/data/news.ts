@@ -9,6 +9,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.8.29",
+    label: "X",
+    text: "「#ピッパラの樹 A班本日千秋楽です✨️ 出し切ってくるぞーーー❣️❣️ チェリッシュ役kkさんと♡(@catkkact )」A班千秋楽（8/29 19:30）の当日告知。ブロマイドとチェキの郵送対応も案内。衣装姿のkkさんとの2ショットも公開",
+    url: "https://x.com/frecam2025_0306/status/2093597005444726999"
+  },
+  {
+    date: "2026.8.29",
     label: "KKさんのX",
     text: "「#ピッパラの樹 本日A班千秋楽ですー！！ 完全満席です！ありがとうございます🙇‍♀️✨✨」A班千秋楽当日のKKさん(@catkkact)の投稿。夏凪里季さんとの衣装2ショットを公開。月曜日のアフターイベントも案内",
     url: "https://x.com/catkkact/status/2093579307121852626"

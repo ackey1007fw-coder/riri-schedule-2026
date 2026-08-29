@@ -42,6 +42,11 @@ export const events: ScheduleEvent[] = [
         kind: "info"
       },
       {
+        label: "千秋楽当日（8/29）",
+        url: "https://x.com/frecam2025_0306/status/2093597005444726999",
+        kind: "sns"
+      },
+      {
         label: "千秋楽当日（8/29・KKさん）",
         url: "https://x.com/catkkact/status/2093579307121852626",
         kind: "sns"

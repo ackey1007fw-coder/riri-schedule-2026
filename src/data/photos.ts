@@ -319,6 +319,6 @@ export const galleryUpdate: {
 } = {
   date: "2026.8.29",
   platform: "X",
-  note: "『ピッパラの樹』A班千秋楽当日、KKさんとの衣装2ショット",
-  url: "https://x.com/catkkact/status/2093579307121852626"
+  note: "『ピッパラの樹』A班千秋楽当日、チェリッシュ役kkさんとの衣装2ショット",
+  url: "https://x.com/frecam2025_0306/status/2093597005444726999"
 };
