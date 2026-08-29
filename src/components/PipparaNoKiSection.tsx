@@ -123,6 +123,14 @@ const pipparaFifthShowTwoShotPhoto: FlyerImage = {
   src: "/images/gallery/g121.jpg",
   alt: "『ピッパラの樹』の舞台衣装2ショット。左に白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さん。右に白い衣装とレースのヘッドバンド姿の共演者が赤い薔薇を持っている。2人ともカメラに笑顔を向けている（X『#ピッパラの樹 本日5ステ目！』より）"
 };
+const pipparaFifthShowMiyabiCheekPhoto: FlyerImage = {
+  src: "/images/gallery/g122.jpg",
+  alt: "『ピッパラの樹』の舞台衣装2ショット。左に白い花柄のベストと黒いシャツ姿のポール役ミヤビさん(@miyabidayo_o)、右に白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さん。里季さんは頰に手を添え、片目を閉じている"
+};
+const pipparaFifthShowMiyabiPointPhoto: FlyerImage = {
+  src: "/images/gallery/g123.jpg",
+  alt: "『ピッパラの樹』の舞台衣装2ショット。白い花柄のベスト姿のポール役ミヤビさん(@miyabidayo_o)が、白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さんの頰を人差し指で指している。里季さんはカメラに向かって笑っている"
+};
 
 const relatedImages: FlyerImage[] = [
   pipparaNenePhoto,
@@ -183,6 +191,24 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-28-fifth-show-notice",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月28日（金）16:21",
+    headline: "「#ピッパラの樹 本日5ステ目！」",
+    body: `#ピッパラの樹 本日5ステ目！
+明日はついに千秋楽✨️有難いことに満席ということで、飛び込み可能なのは今日のみです！
+19時半から荻窪小劇場にてお待ちしております❣️(開場は19時ね〜)
+推し花での応援もお待ちしております🤲🏻
+🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
+🌸 https://oshibana.shop/theater/oshibana/24950033`,
+    quote: `#ピッパラの樹 本日5ステ目！
+明日はついに千秋楽✨️有難いことに満席ということで、飛び込み可能なのは今日のみです！`,
+    note: "2026年8月28日16:21に投稿された、A班5ステ目（8/28（金）19:30・荻窪小劇場）の当日告知です。「本日5ステ目」「飛び込み可能なのは今日のみ」「明日は千秋楽・満席」は投稿時点の案内です。次のA班公演は8/29（土）19:30です。",
+    url: "https://x.com/frecam2025_0306/status/2093237598143893726",
+    photo: pipparaFifthShowTwoShotPhoto
+  },
   {
     id: "x-2026-08-23-third-show-end",
     platform: "X",
@@ -513,6 +539,10 @@ type LatestTopic = {
   video?: VideoAsset;
   /** 投稿に写真があるときだけ。無い場合は次回公演パネルを表示する */
   photo?: FlyerImage;
+  /** 投稿に複数枚あるとき。ある場合は photo より優先して並べて表示する */
+  photos?: FlyerImage[];
+  /** 第三者投稿の写真につけるクレジット */
+  photoCredit?: { label: string; url: string };
   body: string;
   quote: string;
   note: string;
@@ -522,21 +552,36 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "A班5ステ目！ 明日の千秋楽は満席、飛び込みは今日のみ",
-  datetime: "2026年8月28日（金）16:21",
+  headline: "A班5ステ目・前楽後、ポール役ミヤビさんとの2ショット",
+  datetime: "2026年8月28日（金）23:53",
   sourceLabel: "X",
   handle: "@frecam2025_0306",
-  photo: pipparaFifthShowTwoShotPhoto,
-  body: `#ピッパラの樹 本日5ステ目！
-明日はついに千秋楽✨️有難いことに満席ということで、飛び込み可能なのは今日のみです！
-19時半から荻窪小劇場にてお待ちしております❣️(開場は19時ね〜)
-推し花での応援もお待ちしております🤲🏻
-🎫 https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81%AE%E6%A8%B9
-🌸 https://oshibana.shop/theater/oshibana/24950033`,
-  quote: `#ピッパラの樹 本日5ステ目！
-明日はついに千秋楽✨️有難いことに満席ということで、飛び込み可能なのは今日のみです！`,
-  note: "2026年8月28日16:21に投稿された、A班5ステ目（8/28（金）19:30・荻窪小劇場）の当日告知です。「本日5ステ目」「飛び込み可能なのは今日のみ」「明日は千秋楽・満席」は投稿時点の案内です。次のA班公演は8/29（土）19:30です。",
-  url: "https://x.com/frecam2025_0306/status/2093237598143893726"
+  photos: [pipparaFifthShowMiyabiCheekPhoto, pipparaFifthShowMiyabiPointPhoto],
+  photoCredit: {
+    label: "ミヤビ（@miyabidayo_o）の投稿",
+    url: "https://x.com/miyabidayo_o/status/2093337245839396999"
+  },
+  body: `今日はポール様に完全にやられました。
+とてもニヤケました。許しません😊😊😊😊😊😊😊`,
+  quote: `今日はポール様に完全にやられました。
+とてもニヤケました。許しません😊😊😊😊😊😊😊`,
+  note: "2026年8月28日23:53の本人投稿です。ポール役のミヤビさん(@miyabidayo_o)のA班5ステ目・前楽の報告を引用しています。写真はミヤビさんの投稿のものです。次のA班公演は8/29（土）19:30の千秋楽です。",
+  url: "https://x.com/frecam2025_0306/status/2093351347320160629",
+  quotedPost: {
+    label: "ミヤビさん（@miyabidayo_o／2026年8月28日 22:57）",
+    text: `#ピッパラの樹 A班5ステ目！前楽！
+ご来場いただきました皆様ありがとうございました！
+あったかかった〜〜
+
+今日のアドリブはついにアナスタジーもﾌﾌﾌとさせることができたようです
+裏で怒られました。嬉しいですね
+
+明日はいよいよ千秋楽
+完全満席ありがとうございます
+最後まで生き抜きますよ！`,
+    url: "https://x.com/miyabidayo_o/status/2093337245839396999",
+    linkLabel: "元投稿をXで見る"
+  }
 };
 
 /** 8/18 本人X：劇団ココア公式の注意事項を引用した案内。長文は転載せず要点だけ。 */
@@ -722,6 +767,8 @@ export function PipparaNoKiSection() {
     };
   }, []);
 
+  const latestPhotos = latestTopic.photos ?? (latestTopic.photo ? [latestTopic.photo] : []);
+
   return (
     <section
       id="pippara-no-ki"
@@ -774,30 +821,48 @@ export function PipparaNoKiSection() {
                     <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
                   </a>
                 </div>
-              ) : latestTopic.photo ? (
-                <button
-                  type="button"
-                  onClick={openZoom(latestTopic.photo)}
-                  className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
-                  aria-label={`${latestTopic.photo.alt}を拡大表示`}
-                >
-                  <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
-                    <img
-                      {...getResponsiveImageProps(
-                        latestTopic.photo.src,
-                        "(min-width: 640px) 40vw, 100vw"
-                      )}
-                      alt={latestTopic.photo.alt}
-                      loading="lazy"
-                      decoding="async"
-                      className="block w-full object-contain"
-                    />
-                    <span className="pointer-events-none absolute inset-0 bg-ink/10 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
-                  </span>
-                  <span className="mt-2 inline-block text-xs font-bold text-[#6f2f3c]">
+              ) : latestPhotos.length > 0 ? (
+                <div className="grid min-w-0 gap-3">
+                  {latestPhotos.map((photo) => (
+                    <button
+                      key={photo.src}
+                      type="button"
+                      onClick={openZoom(photo)}
+                      className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
+                      aria-label={`${photo.alt}を拡大表示`}
+                    >
+                      <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
+                        <img
+                          {...getResponsiveImageProps(
+                            photo.src,
+                            "(min-width: 640px) 40vw, 100vw"
+                          )}
+                          alt={photo.alt}
+                          loading="lazy"
+                          decoding="async"
+                          className="block w-full object-contain"
+                        />
+                        <span className="pointer-events-none absolute inset-0 bg-ink/10 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
+                      </span>
+                    </button>
+                  ))}
+                  <span className="text-xs font-bold text-[#6f2f3c]">
                     タップして拡大表示
                   </span>
-                </button>
+                  {latestTopic.photoCredit && (
+                    <p className="text-xs leading-6 text-ink/55">
+                      写真:{" "}
+                      <a
+                        href={latestTopic.photoCredit.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-[#6f2f3c] underline decoration-[#c9a24b] underline-offset-2"
+                      >
+                        {latestTopic.photoCredit.label}
+                      </a>
+                    </p>
+                  )}
+                </div>
               ) : (
                 <div className="border border-[#7c5a3a]/25 bg-white p-5 sm:p-6">
                   <p className="text-xs font-bold uppercase tracking-wide text-[#6f2f3c]">
