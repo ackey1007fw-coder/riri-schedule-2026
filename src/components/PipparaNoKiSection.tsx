@@ -131,6 +131,10 @@ const pipparaFifthShowMiyabiPointPhoto: FlyerImage = {
   src: "/images/gallery/g123.jpg",
   alt: "『ピッパラの樹』の舞台衣装2ショット。白い花柄のベスト姿のポール役ミヤビさん(@miyabidayo_o)が、白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さんの頰を人差し指で指している。里季さんはカメラに向かって笑っている"
 };
+const pipparaSenshurakuKkTwoShotPhoto: FlyerImage = {
+  src: "/images/gallery/g124.jpg",
+  alt: "『ピッパラの樹』の舞台衣装2ショット。左に白いミニハットと黒いチュール、ストライプのブラウスに青いベスト姿の夏凪里季さん。右に茶縁の眼鏡、白いシャツに茶色のボウタイ、緑のジャケット姿のKKさん(@catkkact)。2人ともカメラに笑顔を向け、KKさんはピースサインをしている"
+};
 
 const relatedImages: FlyerImage[] = [
   pipparaNenePhoto,
@@ -185,12 +189,83 @@ type SnsPost = {
   url: string;
   /** 投稿に写真があるときだけ */
   photo?: FlyerImage;
+  /** 投稿に複数枚あるとき。ある場合は photo より優先して並べて表示する */
+  photos?: FlyerImage[];
   /** 投稿に自己ホストした動画があるときだけ */
   video?: VideoAsset;
   quotedPost?: QuotedPost;
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-29-senshuraku-kk",
+    platform: "X",
+    handle: "@catkkact",
+    datetime: "2026年8月29日（土）14:59",
+    headline: "「#ピッパラの樹 本日A班千秋楽ですー！！」",
+    body: `ついに…！！
+#ピッパラの樹 本日A班千秋楽ですー！！
+
+完全満席です！
+ありがとうございます🙇‍♀️✨✨
+
+月曜日にアフターイベントありますので、そちらでもお待ちしております🎶
+
+全て出し切ってきます！
+いってきますー！！！
+詳細→ https://catkkact.wordpress.com/%e3%80%8e%e3%83%94%e3%83%83%e3%83%91%e3%83%a9%e3%81%ae%e6%a8%b9%e3%80%8f%ef%bc%88%e5%86%8d%e6%bc%94%ef%bc%89/`,
+    quote: `ついに…！！
+#ピッパラの樹 本日A班千秋楽ですー！！
+完全満席です！`,
+    note: "2026年8月29日14:59の、A班のKKさん(@catkkact)の千秋楽当日投稿です。写真はKKさんの投稿のものです。A班千秋楽は8/29（土）19:30、完全満席です。",
+    url: "https://x.com/catkkact/status/2093579307121852626",
+    photo: pipparaSenshurakuKkTwoShotPhoto,
+    quotedPost: {
+      label: "劇団ココア公式X（2026年8月28日 21:54）",
+      text: `【#ピッパラの樹】
+
+Ａ班5ステ目終了しました！
+Ａ班も残すところ千秋楽のみ！
+
+ご来場誠にありがとうございました！
+
+明日はＣ班、Ｄ班、Ａ班です！🌲
+Ａ班は完全満席！
+Ｃ班Ｄ班もかなり埋まっておりますがまだ入れます！
+ご来場お待ちしております！`,
+      url: "https://x.com/gekidan_cocoa/status/2093321326417293705",
+      linkLabel: "元投稿をXで見る"
+    }
+  },
+  {
+    id: "x-2026-08-28-miyabi-two-shot",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月28日（金）23:53",
+    headline: "A班5ステ目・前楽後、ポール役ミヤビさんとの2ショット",
+    body: `今日はポール様に完全にやられました。
+とてもニヤケました。許しません😊😊😊😊😊😊😊`,
+    quote: `今日はポール様に完全にやられました。
+とてもニヤケました。許しません😊😊😊😊😊😊😊`,
+    note: "2026年8月28日23:53の本人投稿です。ポール役のミヤビさん(@miyabidayo_o)のA班5ステ目・前楽の報告を引用しています。写真はミヤビさんの投稿のものです。",
+    url: "https://x.com/frecam2025_0306/status/2093351347320160629",
+    photos: [pipparaFifthShowMiyabiCheekPhoto, pipparaFifthShowMiyabiPointPhoto],
+    quotedPost: {
+      label: "ミヤビさん（@miyabidayo_o／2026年8月28日 22:57）",
+      text: `#ピッパラの樹 A班5ステ目！前楽！
+ご来場いただきました皆様ありがとうございました！
+あったかかった〜〜
+
+今日のアドリブはついにアナスタジーもﾌﾌﾌとさせることができたようです
+裏で怒られました。嬉しいですね
+
+明日はいよいよ千秋楽
+完全満席ありがとうございます
+最後まで生き抜きますよ！`,
+      url: "https://x.com/miyabidayo_o/status/2093337245839396999",
+      linkLabel: "元投稿をXで見る"
+    }
+  },
   {
     id: "x-2026-08-28-fifth-show-notice",
     platform: "X",
@@ -552,34 +627,44 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "A班5ステ目・前楽後、ポール役ミヤビさんとの2ショット",
-  datetime: "2026年8月28日（金）23:53",
+  headline: "A班千秋楽当日、KKさんとの衣装2ショット",
+  datetime: "2026年8月29日（土）14:59",
   sourceLabel: "X",
-  handle: "@frecam2025_0306",
-  photos: [pipparaFifthShowMiyabiCheekPhoto, pipparaFifthShowMiyabiPointPhoto],
+  handle: "@catkkact",
+  photos: [pipparaSenshurakuKkTwoShotPhoto],
   photoCredit: {
-    label: "ミヤビ（@miyabidayo_o）の投稿",
-    url: "https://x.com/miyabidayo_o/status/2093337245839396999"
+    label: "KK（@catkkact）の投稿",
+    url: "https://x.com/catkkact/status/2093579307121852626"
   },
-  body: `今日はポール様に完全にやられました。
-とてもニヤケました。許しません😊😊😊😊😊😊😊`,
-  quote: `今日はポール様に完全にやられました。
-とてもニヤケました。許しません😊😊😊😊😊😊😊`,
-  note: "2026年8月28日23:53の本人投稿です。ポール役のミヤビさん(@miyabidayo_o)のA班5ステ目・前楽の報告を引用しています。写真はミヤビさんの投稿のものです。次のA班公演は8/29（土）19:30の千秋楽です。",
-  url: "https://x.com/frecam2025_0306/status/2093351347320160629",
+  body: `ついに…！！
+#ピッパラの樹 本日A班千秋楽ですー！！
+
+完全満席です！
+ありがとうございます🙇‍♀️✨✨
+
+月曜日にアフターイベントありますので、そちらでもお待ちしております🎶
+
+全て出し切ってきます！
+いってきますー！！！`,
+  quote: `ついに…！！
+#ピッパラの樹 本日A班千秋楽ですー！！
+完全満席です！`,
+  note: "2026年8月29日14:59の、A班のKKさん(@catkkact)の千秋楽当日投稿です。写真はKKさんの投稿のものです。A班千秋楽は本日8/29（土）19:30、完全満席です。",
+  url: "https://x.com/catkkact/status/2093579307121852626",
   quotedPost: {
-    label: "ミヤビさん（@miyabidayo_o／2026年8月28日 22:57）",
-    text: `#ピッパラの樹 A班5ステ目！前楽！
-ご来場いただきました皆様ありがとうございました！
-あったかかった〜〜
+    label: "劇団ココア公式X（2026年8月28日 21:54）",
+    text: `【#ピッパラの樹】
 
-今日のアドリブはついにアナスタジーもﾌﾌﾌとさせることができたようです
-裏で怒られました。嬉しいですね
+Ａ班5ステ目終了しました！
+Ａ班も残すところ千秋楽のみ！
 
-明日はいよいよ千秋楽
-完全満席ありがとうございます
-最後まで生き抜きますよ！`,
-    url: "https://x.com/miyabidayo_o/status/2093337245839396999",
+ご来場誠にありがとうございました！
+
+明日はＣ班、Ｄ班、Ａ班です！🌲
+Ａ班は完全満席！
+Ｃ班Ｄ班もかなり埋まっておりますがまだ入れます！
+ご来場お待ちしております！`,
+    url: "https://x.com/gekidan_cocoa/status/2093321326417293705",
     linkLabel: "元投稿をXで見る"
   }
 };
@@ -688,6 +773,8 @@ const AccountAvatar = ({
       <Instagram className="h-4 w-4" />
     ) : handle === "@gekidan_cocoa" ? (
       "劇"
+    ) : handle === "@catkkact" ? (
+      "け"
     ) : (
       "里"
     )}
@@ -1574,20 +1661,21 @@ export function PipparaNoKiSection() {
                       </a>
                     </div>
                   )}
-                  {post.photo && (
+                  {(post.photos ?? (post.photo ? [post.photo] : [])).map((photo) => (
                     <button
+                      key={photo.src}
                       type="button"
-                      onClick={openZoom(post.photo)}
+                      onClick={openZoom(photo)}
                       className="group mt-4 block w-full max-w-sm text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne"
-                      aria-label={`${post.photo.alt}を拡大表示`}
+                      aria-label={`${photo.alt}を拡大表示`}
                     >
                       <span className="relative block overflow-hidden border border-[#7c5a3a]/30 bg-white">
                         <img
                           {...getResponsiveImageProps(
-                            post.photo.src,
+                            photo.src,
                             "(min-width: 640px) 24rem, 100vw"
                           )}
-                          alt={post.photo.alt}
+                          alt={photo.alt}
                           loading="lazy"
                           decoding="async"
                           className="block w-full object-contain"
@@ -1598,7 +1686,7 @@ export function PipparaNoKiSection() {
                         タップして拡大表示
                       </span>
                     </button>
-                  )}
+                  ))}
                   {post.video && (
                     <div className="mt-4 max-w-full overflow-hidden border border-[#7c5a3a]/25 bg-black">
                       <video
