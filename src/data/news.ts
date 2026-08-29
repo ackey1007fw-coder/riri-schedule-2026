@@ -9,6 +9,12 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.8.29",
+    label: "劇団ココアX",
+    text: "【#ピッパラの樹】Ａ班千秋楽終了。満席ありがとうございました！ 衣装姿のA班キャスト集合動画も公開。明日（8/30）はＢ班・Ｃ班・Ｄ班の千秋楽",
+    url: "https://x.com/gekidan_cocoa/status/2093694275230085363"
+  },
+  {
+    date: "2026.8.29",
     label: "X",
     text: "「#ピッパラの樹 A班本日千秋楽です✨️ 出し切ってくるぞーーー❣️❣️ チェリッシュ役kkさんと♡(@catkkact )」A班千秋楽（8/29 19:30）の当日告知。ブロマイドとチェキの郵送対応も案内。衣装姿のkkさんとの2ショットも公開",
     url: "https://x.com/frecam2025_0306/status/2093597005444726999"
