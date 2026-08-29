@@ -42,6 +42,11 @@ export const events: ScheduleEvent[] = [
         kind: "info"
       },
       {
+        label: "A班千秋楽終えました（8/29）",
+        url: "https://x.com/frecam2025_0306/status/2093698550974812255",
+        kind: "sns"
+      },
+      {
         label: "A班千秋楽終了（8/29・劇団ココア）",
         url: "https://x.com/gekidan_cocoa/status/2093694275230085363",
         kind: "sns"
