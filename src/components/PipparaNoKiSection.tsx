@@ -127,9 +127,9 @@ const pipparaFifthShowMiyabiCheekPhoto: FlyerImage = {
   src: "/images/gallery/g122.jpg",
   alt: "『ピッパラの樹』の舞台衣装2ショット。左に白い花柄のベストと黒いシャツ姿のポール役ミヤビさん(@miyabidayo_o)、右に白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さん。里季さんは頰に手を添え、片目を閉じている"
 };
-const pipparaFifthShowMiyabiPointPhoto: FlyerImage = {
-  src: "/images/gallery/g123.jpg",
-  alt: "『ピッパラの樹』の舞台衣装2ショット。白い花柄のベスト姿のポール役ミヤビさん(@miyabidayo_o)が、白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さんの頰を人差し指で指している。里季さんはカメラに向かって笑っている"
+const pipparaSenshurakuKkPhoto: FlyerImage = {
+  src: "/images/gallery/g124.jpg",
+  alt: "『ピッパラの樹』の舞台衣装2ショット。左に白いミニハットと青いベスト、ストライプのブラウス姿の夏凪里季さん。右に眼鏡と緑のジャケット、茶色のネクタイ姿のチェリッシュ役kkさん(@catkkact)。2人ともピースサインをしている（X『#ピッパラの樹 A班本日千秋楽です』より）"
 };
 
 const relatedImages: FlyerImage[] = [
@@ -191,6 +191,35 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-28-fifth-show-miyabi",
+    platform: "X",
+    handle: "@frecam2025_0306",
+    datetime: "2026年8月28日（金）23:53",
+    headline: "「今日はポール様に完全にやられました。」",
+    body: `今日はポール様に完全にやられました。
+とてもニヤケました。許しません😊😊😊😊😊😊😊`,
+    quote: `今日はポール様に完全にやられました。
+とてもニヤケました。許しません😊😊😊😊😊😊😊`,
+    note: "2026年8月28日23:53の本人投稿です。ポール役のミヤビさん(@miyabidayo_o)のA班5ステ目・前楽の報告を引用しています。写真はミヤビさんの投稿のものです。",
+    url: "https://x.com/frecam2025_0306/status/2093351347320160629",
+    photo: pipparaFifthShowMiyabiCheekPhoto,
+    quotedPost: {
+      label: "ミヤビさん（@miyabidayo_o／2026年8月28日 22:57）",
+      text: `#ピッパラの樹 A班5ステ目！前楽！
+ご来場いただきました皆様ありがとうございました！
+あったかかった〜〜
+
+今日のアドリブはついにアナスタジーもﾌﾌﾌとさせることができたようです
+裏で怒られました。嬉しいですね
+
+明日はいよいよ千秋楽
+完全満席ありがとうございます
+最後まで生き抜きますよ！`,
+      url: "https://x.com/miyabidayo_o/status/2093337245839396999",
+      linkLabel: "元投稿をXで見る"
+    }
+  },
   {
     id: "x-2026-08-28-fifth-show-notice",
     platform: "X",
@@ -552,36 +581,20 @@ type LatestTopic = {
 };
 
 const latestTopic: LatestTopic = {
-  headline: "A班5ステ目・前楽後、ポール役ミヤビさんとの2ショット",
-  datetime: "2026年8月28日（金）23:53",
+  headline: "A班本日千秋楽。チェリッシュ役kkさんと",
+  datetime: "2026年8月29日（土）16:09",
   sourceLabel: "X",
   handle: "@frecam2025_0306",
-  photos: [pipparaFifthShowMiyabiCheekPhoto, pipparaFifthShowMiyabiPointPhoto],
-  photoCredit: {
-    label: "ミヤビ（@miyabidayo_o）の投稿",
-    url: "https://x.com/miyabidayo_o/status/2093337245839396999"
-  },
-  body: `今日はポール様に完全にやられました。
-とてもニヤケました。許しません😊😊😊😊😊😊😊`,
-  quote: `今日はポール様に完全にやられました。
-とてもニヤケました。許しません😊😊😊😊😊😊😊`,
-  note: "2026年8月28日23:53の本人投稿です。ポール役のミヤビさん(@miyabidayo_o)のA班5ステ目・前楽の報告を引用しています。写真はミヤビさんの投稿のものです。次のA班公演は8/29（土）19:30の千秋楽です。",
-  url: "https://x.com/frecam2025_0306/status/2093351347320160629",
-  quotedPost: {
-    label: "ミヤビさん（@miyabidayo_o／2026年8月28日 22:57）",
-    text: `#ピッパラの樹 A班5ステ目！前楽！
-ご来場いただきました皆様ありがとうございました！
-あったかかった〜〜
+  photo: pipparaSenshurakuKkPhoto,
+  body: `#ピッパラの樹 A班本日千秋楽です✨️
+出し切ってくるぞーーー❣️❣️
+チェリッシュ役kkさんと♡(@catkkact )
 
-今日のアドリブはついにアナスタジーもﾌﾌﾌとさせることができたようです
-裏で怒られました。嬉しいですね
-
-明日はいよいよ千秋楽
-完全満席ありがとうございます
-最後まで生き抜きますよ！`,
-    url: "https://x.com/miyabidayo_o/status/2093337245839396999",
-    linkLabel: "元投稿をXで見る"
-  }
+ブロマイドとチェキの郵送対応可能なので欲しい方いらっしゃいましたら枚数のご連絡dmまでお願いします🤲🏻ぜひGETしてほしい🫶🏻`,
+  quote: `#ピッパラの樹 A班本日千秋楽です✨️
+出し切ってくるぞーーー❣️❣️`,
+  note: "2026年8月29日16:09の本人投稿です。A班千秋楽（8/29（土）19:30・荻窪小劇場）の当日告知です。ブロマイドとチェキの郵送は本人XのDMへ、との案内です。",
+  url: "https://x.com/frecam2025_0306/status/2093597005444726999"
 };
 
 /** 8/18 本人X：劇団ココア公式の注意事項を引用した案内。長文は転載せず要点だけ。 */
