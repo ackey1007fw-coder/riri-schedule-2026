@@ -139,6 +139,10 @@ const pipparaSenshurakuSelfiePhoto: FlyerImage = {
   src: "/images/gallery/g125.jpg",
   alt: "『ピッパラの樹』の舞台衣装で、右手のピースサインをしながら笑顔の自撮りをする夏凪里季さん。白いミニハットと黒いチュール、ストライプのブラウスに青いベスト、首元のボウタイ。シルバーブルーのロングネイルが見える（X『#ピッパラの樹 A班千秋楽終えました！』より）"
 };
+const pipparaSenshurakuCastGroupPhoto: FlyerImage = {
+  src: "/images/gallery/g126.jpg",
+  alt: "『ピッパラの樹』A班千秋楽後の舞台衣装での集合写真。白い壁の前で、衣装姿のキャストが両手を広げて2列に並んでいる。前列左端にストライプのブラウスと青いベスト、白いスカート姿の夏凪里季さん"
+};
 
 const relatedImages: FlyerImage[] = [
   pipparaNenePhoto,
@@ -201,6 +205,22 @@ type SnsPost = {
 };
 
 const snsPosts: SnsPost[] = [
+  {
+    id: "x-2026-08-30-senshuraku-flefiore",
+    platform: "X",
+    handle: "@flefiore_",
+    datetime: "2026年8月30日（日）00:32",
+    headline: "「#ピッパラの樹 A班千秋楽ありがとうございました！」",
+    body: `#ピッパラの樹 A班千秋楽ありがとうございました！本当に楽しかった✨19世紀のお話は初めてでしたが、天真爛漫なご令嬢になれたのではと思います🙌
+この作品に携われて、たくさんのお客様にご覧いただけて、本当に幸せでした🍀
+次は9月！またお会いできたら幸いです🩵
+スザンヌ・ソレル役/菜花はな🌸💕`,
+    quote: `#ピッパラの樹 A班千秋楽ありがとうございました！
+本当に楽しかった✨`,
+    note: "2026年8月30日0:32の、A班スザンヌ・ソレル役 菜花はなさん(@flefiore_)の千秋楽後投稿です。写真は菜花はなさんの投稿のものです。舞台衣装でのA班集合写真に夏凪里季さんも写っています。",
+    url: "https://x.com/flefiore_/status/2093723452733817025",
+    photo: pipparaSenshurakuCastGroupPhoto
+  },
   {
     id: "x-2026-08-29-senshuraku-cocoa",
     platform: "X",
@@ -800,6 +820,8 @@ const AccountAvatar = ({
       "劇"
     ) : handle === "@catkkact" ? (
       "け"
+    ) : handle === "@flefiore_" ? (
+      "花"
     ) : (
       "里"
     )}

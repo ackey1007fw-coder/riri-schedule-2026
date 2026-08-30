@@ -81,6 +81,18 @@ const pipparaSenshurakuKkTwoShotPhoto: GalleryPhoto = {
   credit: kkSenshurakuCredit
 };
 
+// 2026.8.30 00:32 X。A班千秋楽後のスザンヌ・ソレル役 菜花はなさん(@flefiore_)の投稿の集合写真
+const flefioreSenshurakuCredit = {
+  label: "写真: 菜花はな（@flefiore_）の投稿",
+  url: "https://x.com/flefiore_/status/2093723452733817025"
+};
+
+const pipparaSenshurakuCastGroupPhoto: GalleryPhoto = {
+  src: "/images/gallery/g126.jpg",
+  alt: "『ピッパラの樹』A班千秋楽後の舞台衣装での集合写真。白い壁の前で、衣装姿のキャストが両手を広げて2列に並んでいる。前列左端にストライプのブラウスと青いベスト、白いスカート姿の夏凪里季さん",
+  credit: flefioreSenshurakuCredit
+};
+
 // 2026.8.21 X『ピッパラの樹』A班2公演目の告知投稿の3ショット
 const pipparaSecondShowThreeShotPhoto: GalleryPhoto = {
   src: "/images/gallery/g114.jpg",
@@ -131,6 +143,8 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.8.30 00:32 X「#ピッパラの樹 A班千秋楽ありがとうございました！」菜花はなさん(@flefiore_)の投稿
+  pipparaSenshurakuCastGroupPhoto,
   // 2026.8.29 22:53 X「#ピッパラの樹 A班千秋楽終えました！」本人投稿。creditなし
   pipparaSenshurakuSelfiePhoto,
   // 2026.8.29 14:59 X「#ピッパラの樹 本日A班千秋楽ですー！！」KKさん(@catkkact)の投稿
@@ -325,8 +339,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.29",
+  date: "2026.8.30",
   platform: "X",
-  note: "『ピッパラの樹』A班千秋楽終演後、舞台衣装での自撮り",
-  url: "https://x.com/frecam2025_0306/status/2093698550974812255"
+  note: "『ピッパラの樹』A班千秋楽、菜花はなさん投稿の集合写真（里季さんも写っています）",
+  url: "https://x.com/flefiore_/status/2093723452733817025"
 };
