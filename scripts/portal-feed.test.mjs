@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { access, readFile } from "node:fs/promises";
 import { after, before, describe, it } from "node:test";
 import { createServer } from "vite";
 
@@ -41,6 +42,29 @@ function productionFeed() {
 }
 
 describe("Riri portal feed origin contract", () => {
+  it("archives the source-backed Pippara cast meetup report", async () => {
+    const sourceUrl = "https://x.com/gekidan_cocoa/status/2081277350176751632";
+    const item = news.find((candidate) => candidate.url === sourceUrl);
+
+    assert.ok(item);
+    assert.equal(item.date, "2026.7.26");
+    assert.equal(item.label, "劇団ココアX");
+    assert.match(item.text, /公演は終了しています/);
+
+    const [component, manifest] = await Promise.all([
+      readFile("src/components/PipparaNoKiSection.tsx", "utf8"),
+      readFile("src/data/imageManifest.ts", "utf8")
+    ]);
+    assert.match(component, /x-2026-07-26-pippara-kaoawase/);
+    assert.match(component, /満席回と予約の案内は投稿時点の情報で、公演は終了しています/);
+    assert.match(component, /\/images\/gallery\/g127\.jpg/);
+    assert.match(manifest, /\/images\/gallery\/g127\.jpg/);
+    const photos = await readFile("src/data/photos.ts", "utf8");
+    assert.match(photos, /写真: 劇団ココア（@gekidan_cocoa）の投稿/);
+    assert.match(photos, /2081277350176751632/);
+    await access("public/images/gallery/g127.jpg");
+  });
+
   it("maps news URLs to the Riri homepage and retains original source URLs and titles", () => {
     const items = productionFeed().items.filter((item) => item.type === "news");
 

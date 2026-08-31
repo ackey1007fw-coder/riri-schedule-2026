@@ -89,6 +89,10 @@ const rehearsalPhoto: FlyerImage = {
   src: "/images/gallery/g66.jpg",
   alt: "淡いブルーグレーのシャーリングトップスで鏡越しに自撮りする夏凪里季さん（『ピッパラの樹』A班 稽古初日）"
 };
+const pipparaKaoawasePhoto: FlyerImage = {
+  src: "/images/gallery/g127.jpg",
+  alt: "『ピッパラの樹』顔合わせで台本を持って2列に並ぶキャスト。上段右端に夏凪里季さん"
+};
 const pipparaCastVisual: FlyerImage = {
   src: "/images/pippara-no-ki-cast-visual-2026.jpg",
   alt: "『ピッパラの樹』A・B・C・D班のキャストビジュアル。夏凪里季さんはA班「アナスタジー・ド・ブロワ」役"
@@ -612,6 +616,21 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
 いつもと違うりりが見れますヨ🫶🏻`,
     quote: "改善点は山々ですが良い作品になる予感！",
     url: "https://x.com/frecam2025_0306/status/2081372754612486194"
+  },
+  {
+    id: "x-2026-07-26-pippara-kaoawase",
+    platform: "X",
+    handle: "@gekidan_cocoa",
+    datetime: "2026年7月26日（日）16:16",
+    headline: "『ピッパラの樹』顔合わせ",
+    body: `#ピッパラの樹
+顔合わせでした！
+来て下さる皆様に素敵なお時間をお届け出来るよう、頑張りますので応援宜しくお願い致します！
+満席回もでておりますので、ご予約はお早めに！`,
+    quote: "顔合わせでした！",
+    note: "2026年7月26日の劇団ココア公式X投稿です。満席回と予約の案内は投稿時点の情報で、公演は終了しています。写真は劇団ココアの投稿のもので、台本を持ったキャストと夏凪里季さんが写っています。",
+    url: "https://x.com/gekidan_cocoa/status/2081277350176751632",
+    photo: pipparaKaoawasePhoto
   },
   {
     id: "x-2026-07-11",
