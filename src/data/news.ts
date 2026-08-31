@@ -70,7 +70,7 @@ export const news: NewsItem[] = [
   {
     date: "2026.8.25",
     label: "Instagram",
-    text: "「阿佐ヶ谷祭り初参戦ჱ̒ ᴗ ̫ ᴗ やっぱり夏にはデジカメ必須だね📸」と、デジカメを持って阿佐ヶ谷七夕祭りへ",
+    text: "「阿佐ヶ谷祭り初参戦 やっぱり夏にはデジカメ必須だね📸」と、阿佐ヶ谷七夕祭りへの投稿",
     url: "https://www.instagram.com/p/Dcdm-w7iVyA/"
   },
   {
