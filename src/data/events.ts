@@ -42,6 +42,16 @@ export const events: ScheduleEvent[] = [
         kind: "info"
       },
       {
+        label: "推し花ありがとうございました（8/31）",
+        url: "https://x.com/frecam2025_0306/status/2094077682309083629",
+        kind: "sns"
+      },
+      {
+        label: "全6ステージ走り切りました（8/30）",
+        url: "https://x.com/frecam2025_0306/status/2094044795928719369",
+        kind: "sns"
+      },
+      {
         label: "A班千秋楽終えました（8/29）",
         url: "https://x.com/frecam2025_0306/status/2093698550974812255",
         kind: "sns"
