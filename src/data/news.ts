@@ -292,6 +292,12 @@ export const news: NewsItem[] = [
     url: "https://x.com/frecam2025_0306/status/2081372754612486194"
   },
   {
+    date: "2026.7.26",
+    label: "劇団ココアX",
+    text: "【#ピッパラの樹】顔合わせを報告。台本を持ったキャスト集合写真に夏凪里季さんも写っています。満席回と予約の案内は投稿時点の情報で、公演は終了しています",
+    url: "https://x.com/gekidan_cocoa/status/2081277350176751632"
+  },
+  {
     date: "2026.7.11",
     label: "X",
     text: "【8月9月の出演予定】劇団ココア『ピッパラの樹』(A班・荻窪小劇場)全6公演と、月シア別冊第2集『I'm talking about Homin'』(A side・西荻窪 遊空間がざびぃ)全4公演の日程をまとめて告知",
