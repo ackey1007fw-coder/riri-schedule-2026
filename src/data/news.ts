@@ -62,6 +62,18 @@ export const news: NewsItem[] = [
     url: "https://x.com/frecam2025_0306/status/2093237598143893726"
   },
   {
+    date: "2026.8.28",
+    label: "Instagram",
+    text: "「今年初プールでサマーランドに上陸🛟10年ぶりくらい✨️」と、東京サマーランドへの投稿",
+    url: "https://www.instagram.com/p/Dcleu70icI3/"
+  },
+  {
+    date: "2026.8.25",
+    label: "Instagram",
+    text: "「阿佐ヶ谷祭り初参戦ჱ̒ ᴗ ̫ ᴗ やっぱり夏にはデジカメ必須だね📸」と、デジカメを持って阿佐ヶ谷七夕祭りへ",
+    url: "https://www.instagram.com/p/Dcdm-w7iVyA/"
+  },
+  {
     date: "2026.8.23",
     label: "X",
     text: "「#ピッパラの樹 3ステ終了いたしましたー！！ 今日も楽しかったです🎶 次は8/25(火)14時からお待ちしております❣️」A班3ステ目の終了を報告。次回は8/25（火）14:00。オルガ役の雪乃さん、ガイヤール夫人役のとむさんとの舞台衣装3ショットも公開",
