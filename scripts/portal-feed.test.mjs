@@ -57,9 +57,12 @@ describe("Riri portal feed origin contract", () => {
     ]);
     assert.match(component, /x-2026-07-26-pippara-kaoawase/);
     assert.match(component, /満席回と予約の案内は投稿時点の情報で、公演は終了しています/);
-    assert.match(component, /pippara-kaoawase-20260726-01\.jpg/);
-    assert.match(manifest, /pippara-kaoawase-20260726-01\.jpg/);
-    await access("public/images/pippara-kaoawase-20260726-01.jpg");
+    assert.match(component, /\/images\/gallery\/g127\.jpg/);
+    assert.match(manifest, /\/images\/gallery\/g127\.jpg/);
+    const photos = await readFile("src/data/photos.ts", "utf8");
+    assert.match(photos, /写真: 劇団ココア（@gekidan_cocoa）の投稿/);
+    assert.match(photos, /2081277350176751632/);
+    await access("public/images/gallery/g127.jpg");
   });
 
   it("maps news URLs to the Riri homepage and retains original source URLs and titles", () => {

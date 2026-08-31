@@ -90,7 +90,7 @@ const rehearsalPhoto: FlyerImage = {
   alt: "淡いブルーグレーのシャーリングトップスで鏡越しに自撮りする夏凪里季さん（『ピッパラの樹』A班 稽古初日）"
 };
 const pipparaKaoawasePhoto: FlyerImage = {
-  src: "/images/pippara-kaoawase-20260726-01.jpg",
+  src: "/images/gallery/g127.jpg",
   alt: "『ピッパラの樹』顔合わせで台本を持って2列に並ぶキャスト。上段右端に夏凪里季さん"
 };
 const pipparaCastVisual: FlyerImage = {
