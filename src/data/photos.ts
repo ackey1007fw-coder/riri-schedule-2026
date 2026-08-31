@@ -87,6 +87,28 @@ const flefioreSenshurakuCredit = {
   url: "https://x.com/flefiore_/status/2093723452733817025"
 };
 
+// 2026.8.28 Instagram「今年初プールでサマーランドに上陸」本人投稿。creditなし
+const summerlandIgCollagePhoto: GalleryPhoto = {
+  src: "/images/gallery/g128.jpg",
+  alt: "東京サマーランドで、黒いホルターネック水着にミニーマウス柄の赤い浮き輪を抱えて笑う夏凪里季さんの2カット縦コラージュ（Instagram『今年初プールでサマーランドに上陸』より）"
+};
+
+// 2026.8.25 Instagram「阿佐ヶ谷祭り初参戦」本人投稿。creditなし
+const asagayaIgPeacePhoto: GalleryPhoto = {
+  src: "/images/gallery/g129.jpg",
+  alt: "赤・黄・緑・ピンクなど色とりどりの吹き流しが天井に下がる夜の商店街アーケードで、右手でピースサインをして笑う夏凪里季さん。黒い透かし編みのカーディガンに白いトップス、ライトブルーのデニム（Instagram『阿佐ヶ谷祭り初参戦』より）"
+};
+
+const asagayaIgLanternPhoto: GalleryPhoto = {
+  src: "/images/gallery/g130.jpg",
+  alt: "提灯で「阿佐谷七夕まつり」と書かれた大きな看板の下に、色とりどりの吹き流しと来場者たちが広がる夜の阿佐ヶ谷七夕祭り（Instagram『阿佐ヶ谷祭り初参戦』より）"
+};
+
+const asagayaIgLookBackPhoto: GalleryPhoto = {
+  src: "/images/gallery/g131.jpg",
+  alt: "色とりどりの吹き流しの下で、黒いメッシュニット姿に白いショルダーバッグを携え、振り返ってカメラを見る夏凪里季さん（Instagram『阿佐ヶ谷祭り初参戦』より）"
+};
+
 const pipparaSenshurakuCastGroupPhoto: GalleryPhoto = {
   src: "/images/gallery/g126.jpg",
   alt: "『ピッパラの樹』A班千秋楽後の舞台衣装での集合写真。白い壁の前で、衣装姿のキャストが両手を広げて2列に並んでいる。前列左端にストライプのブラウスと青いベスト、白いスカート姿の夏凪里季さん",
@@ -154,6 +176,12 @@ export const galleryPhotos: GalleryPhoto[] = [
   pipparaFifthShowMiyabiPointPhoto,
   // 2026.8.28 16:21 X「#ピッパラの樹 本日5ステ目！」本人投稿。creditなし
   pipparaFifthShowTwoShotPhoto,
+  // 2026.8.28 Instagram「今年初プールでサマーランドに上陸」本人投稿。creditなし
+  summerlandIgCollagePhoto,
+  // 2026.8.25 Instagram「阿佐ヶ谷祭り初参戦」本人投稿。creditなし
+  asagayaIgPeacePhoto,
+  asagayaIgLanternPhoto,
+  asagayaIgLookBackPhoto,
   // 2026.8.23 22:06 X「#ピッパラの樹 3ステ終了いたしましたー！！」本人投稿。creditなし
   pipparaThirdShowEndThreeShotPhoto,
   // 2026.8.23 10:49 X「#ピッパラの樹 本日3ステ目！」本人投稿。creditなし
