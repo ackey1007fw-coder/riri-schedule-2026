@@ -10,6 +10,12 @@ export const news: NewsItem[] = [
   {
     date: "2026.9.1",
     label: "X",
+    text: "「山梨上陸した！これは鍋焼きうどん🍲」山梨で鍋焼きうどんを前に両手を広げて笑う1枚",
+    url: "https://x.com/frecam2025_0306/status/2094629557819285798"
+  },
+  {
+    date: "2026.9.1",
+    label: "X",
     text: "「#アイトキ #ホーミン 本日顔合わせ読み合わせでした✨️ オムニバス形式の公演となるので色んなりりが見れちゃいますよ👀」月シア別冊第2集『I'm talking about Homin'』の顔合わせ・読み合わせ。里季さんは A side に出演。",
     url: "https://x.com/frecam2025_0306/status/2094452561462108436"
   },

@@ -121,6 +121,12 @@ const pipparaSecondShowThreeShotPhoto: GalleryPhoto = {
   alt: "『ピッパラの樹』の舞台衣装で並ぶ3ショット。左にガイヤール夫人役の三笘とむさん、中央に白いミニハットと青いベスト姿の夏凪里季さん、右に白い衣装とレースのヘッドバンド姿のルワン役せいかさん。3人ともカメラに笑顔を向けている"
 };
 
+// 2026.9.1 12:32 X「山梨上陸した！これは鍋焼きうどん🍲」本人投稿。creditなし
+const yamanashiNabeyakiPhoto: GalleryPhoto = {
+  src: "/images/gallery/g132.jpg",
+  alt: "ピンクの半袖トップスで両手を広げて笑う夏凪里季さん。手前の木製トレーに黒い土鍋の鍋焼きうどんとれんげ。和食店の座敷（X『山梨上陸した！これは鍋焼きうどん』より）"
+};
+
 export const galleryFeatures = [
   {
     date: "2026.8.19",
@@ -165,6 +171,8 @@ const miyabiCredit = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.1 12:32 X「山梨上陸した！これは鍋焼きうどん🍲」本人投稿。creditなし
+  yamanashiNabeyakiPhoto,
   // 2026.8.30 00:32 X「#ピッパラの樹 A班千秋楽ありがとうございました！」菜花はなさん(@flefiore_)の投稿
   pipparaSenshurakuCastGroupPhoto,
   // 2026.8.29 22:53 X「#ピッパラの樹 A班千秋楽終えました！」本人投稿。creditなし
@@ -376,8 +384,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.8.30",
+  date: "2026.9.1",
   platform: "X",
-  note: "『ピッパラの樹』A班千秋楽、菜花はなさん投稿の集合写真（里季さんも写っています）",
-  url: "https://x.com/flefiore_/status/2093723452733817025"
+  note: "山梨上陸。鍋焼きうどんを前に両手を広げて笑う1枚",
+  url: "https://x.com/frecam2025_0306/status/2094629557819285798"
 };
