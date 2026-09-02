@@ -8,6 +8,18 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.3",
+    label: "X",
+    text: "「【🌟出演情報🌟】天竺生地vol.28 出演させていただきます！ 🗓10月11日(日)📍池袋西口GEKIBA 稽古なしの即興劇！初挑戦でドキドキですが頑張ります」即興劇ユニット『天竺生地』vol.28に出演",
+    url: "https://x.com/frecam2025_0306/status/2095174102634168752"
+  },
+  {
+    date: "2026.9.2",
+    label: "天竺生地X",
+    text: "【情報解禁 第一弾】『天竺生地』vol.28 キャスト発表。MCは斎藤このむ・緑川睦。夏凪里季さんは10月11日（日）・池袋西口GEKIBAの出演",
+    url: "https://x.com/tenjikukiji/status/2095073990658445630"
+  },
+  {
     date: "2026.9.1",
     label: "X",
     text: "「山梨上陸した！これは鍋焼きうどん🍲」山梨で鍋焼きうどんを前に両手を広げて笑う1枚",
