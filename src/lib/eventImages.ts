@@ -9,7 +9,8 @@ const eventImageById: Record<string, string> = {
   "tvk-nekohita-2026-04-16": "/images/event-tvk.jpg",
   "imacampus-2026-04-12": "/images/event-imacampus.jpg",
   "steenz-2026-04-08": "/images/event-steenz.jpg",
-  "kyanly-2026-03-14": "/images/event-kyanly.jpg"
+  "kyanly-2026-03-14": "/images/event-kyanly.jpg",
+  "tenjiku-vol28-2026-10": "/images/tenjiku-vol28-flyer.jpg"
 };
 
 const eventImageByCategory: Record<EventCategory, string> = {

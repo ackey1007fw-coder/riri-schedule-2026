@@ -179,6 +179,42 @@ export const events: ScheduleEvent[] = [
     isImportant: true
   },
   {
+    id: "tenjiku-vol28-2026-10",
+    title: "『天竺生地』vol.28",
+    shortTitle: "天竺生地 vol.28",
+    subtitle: "稽古なしの即興劇、初挑戦",
+    category: "stage",
+    startAt: "2026-10-11T00:00:00+09:00",
+    endAt: "2026-10-11T23:59:59+09:00",
+    dates: ["2026-10-11"],
+    displayDate: "2026年10月11日（日）・池袋西口GEKIBA",
+    venue: "池袋西口GEKIBA",
+    image: "/images/tenjiku-vol28-flyer.jpg",
+    imageAlt:
+      "『天竺生地』vol.28の公演フライヤー。2026年10月10日〜11日、池袋西口GEKIBA。MCは斎藤このむと緑川睦",
+    summary:
+      "即興劇ユニット『天竺生地』vol.28に出演。里季さんの出演日は10月11日（日）、会場は池袋西口GEKIBA。キャスト発表第一弾では日付単位の案内で、どの回への出演かは現時点で確認できていません。MCは斎藤このむ・緑川睦。稽古なしの即興劇で、里季さん自身「初挑戦」と投稿しています。チケット情報は確認でき次第掲載します。",
+    badges: ["舞台", "即興劇", "初挑戦", "10月11日"],
+    links: [
+      {
+        label: "夏凪里季さんの出演告知",
+        url: "https://x.com/frecam2025_0306/status/2095174102634168752",
+        kind: "sns"
+      },
+      {
+        label: "キャスト発表（天竺生地）",
+        url: "https://x.com/tenjikukiji/status/2095073990658445630",
+        kind: "sns"
+      },
+      {
+        label: "天竺生地 X",
+        url: "https://x.com/tenjikukiji",
+        kind: "sns"
+      }
+    ],
+    isImportant: true
+  },
+  {
     id: "riri-nao-birthday-dinner-2026-08",
     title: "なおちゃんと過ごした、お祝いディナー🥹🩷️",
     shortTitle: "なおちゃんとのお祝いディナー",

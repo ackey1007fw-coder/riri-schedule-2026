@@ -7,6 +7,7 @@ const navItems = [
   { label: "次の出演", href: "#next", id: "next" },
   { label: "ピッパラの樹", href: "#pippara-no-ki", id: "pippara-no-ki" },
   { label: "アイトキ", href: "#aitoki-homin", id: "aitoki-homin", desktopOnly: true },
+  { label: "天竺生地", href: "#tenjiku-vol28", id: "tenjiku-vol28", desktopOnly: true },
   { label: "スケジュール", href: "#schedule", id: "schedule" },
   { label: "これまでの歩み", href: "#highlights", id: "highlights", desktopOnly: true },
   { label: "SHOWROOM", href: "#showroom", id: "showroom" },
