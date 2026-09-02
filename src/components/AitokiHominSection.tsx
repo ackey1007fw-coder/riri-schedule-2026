@@ -37,7 +37,7 @@ const supportOptions = [
     image: "/images/aitoki-homin-digital-message-flower-2026.jpg",
     alt: "月シアのデジタルメッセージ花の表示例。花に囲まれた祝ご出演の大きな枠と出演者写真",
     url: "https://tsukitheater.base.ec/items/150226748",
-    cta: "メッセージ花を購入する",
+    cta: "メッセージ花の案内を見る",
     Icon: MessageSquare
   },
   {
@@ -52,7 +52,7 @@ const supportOptions = [
     image: "/images/aitoki-homin-digital-stand-flower-2026.jpg",
     alt: "月シアのデジタルスタンド花の表示例。花束と宛名、贈り主名のカードが6枚並ぶデザイン",
     url: "https://tsukitheater.base.ec/items/150226569",
-    cta: "スタンド花を購入する",
+    cta: "スタンド花の案内を見る",
     Icon: Flower2
   }
 ];
@@ -171,10 +171,10 @@ export function AitokiHominSection() {
                 <div className="shrink-0 border border-white/25 bg-white/10 px-5 py-4 backdrop-blur-sm">
                   <p className="flex items-center gap-2 text-xs font-bold text-white/75">
                     <Clock className="h-4 w-4" aria-hidden="true" />
-                    購入・入金期限
+                    販売終了
                   </p>
                   <time dateTime="2026-09-01T23:59:00+09:00" className="mt-1 block font-display text-xl">
-                    9月1日(火) 23:59
+                    2026-09-01 23:59
                   </time>
                 </div>
               </div>
@@ -219,13 +219,13 @@ export function AitokiHominSection() {
                         href={option.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="riri-button riri-button-gold mt-6 min-h-12 px-5 py-3 text-sm"
+                        className="riri-button riri-button-soft mt-6 min-h-12 px-5 py-3 text-sm"
                       >
                         {option.cta}
                         <ExternalLink className="h-4 w-4" aria-hidden="true" />
                       </a>
                       <p className="mt-3 text-center text-xs leading-5 text-ink/50">
-                        購入ページで応援キャスト「夏凪里季」を選択してください
+                        販売は終了しています。案内ページは参考として残しています
                       </p>
                     </div>
                   </article>
@@ -235,10 +235,11 @@ export function AitokiHominSection() {
               <div className="mt-6 grid gap-4 border border-champagne/35 bg-[#fffaf0] p-5 sm:grid-cols-[auto_1fr] sm:items-start sm:p-6">
                 <AlertCircle className="h-6 w-6 text-champagneInk" aria-hidden="true" />
                 <div>
-                  <h4 className="font-bold text-ink">購入前にここだけ確認</h4>
+                  <h4 className="font-bold text-ink">販売は終了しています</h4>
                   <ul className="mt-2 grid gap-1.5 text-sm leading-6 text-ink/68">
+                    <li>購入・入金は2026年9月1日(火) 23:59で終了しました。下のリンクは案内の控えです。</li>
                     <li>備考欄は、購入画面のお支払い方法選択の下にあります。</li>
-                    <li>メッセージに絵文字は使えません。すべての決済を期限までに完了してください。</li>
+                    <li>メッセージに絵文字は使えません。</li>
                     <li>デジタル商品のため発送はなく、購入後のキャンセルはできません。</li>
                     <li>会場スペースの都合により、物理的なスタンド花・楽屋花は受け付けていません。</li>
                   </ul>
