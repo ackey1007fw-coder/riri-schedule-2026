@@ -133,7 +133,7 @@ export const events: ScheduleEvent[] = [
     image: "/images/im-talking-about-homin-flyer-2026.jpg",
     summary:
       "アイトキシリーズ第2弾、名曲から生まれた5つの短編集『I'm talking about Homin'』にA sideとして出演。脚本・演出：中平奈緒・もか・横大路伸。りりの出演回は 9/11(金)19:00｜9/12(土)12:00｜9/13(日)12:00｜9/15(火)18:00 の全4公演。前売券6,000円／当日券6,500円。",
-    badges: ["舞台", "A side", "全4公演", "デジタル花受付中", "アイトキ第2弾"],
+    badges: ["舞台", "A side", "全4公演", "販売終了（2026-09-01 23:59）", "アイトキ第2弾"],
     links: [
       {
         label: "チケット予約（livepocket）",
