@@ -14,12 +14,15 @@ const toAbsolute = (path: string) =>
 export function StructuredData() {
   useEffect(() => {
     const graph = events.map((event) => {
+      const dateOnly = Boolean(event.dates?.length) && !event.occurrences?.length;
       const node: Record<string, unknown> = {
         "@type": "Event",
         "@id": `${BASE}/#event-${event.id}`,
         name: event.title,
-        startDate: event.startAt,
-        endDate: event.endAt ?? event.startAt,
+        startDate: dateOnly ? event.startAt.slice(0, 10) : event.startAt,
+        endDate: dateOnly
+          ? (event.endAt ?? event.startAt).slice(0, 10)
+          : event.endAt ?? event.startAt,
         eventStatus: "https://schema.org/EventScheduled",
         eventAttendanceMode: event.venue
           ? "https://schema.org/OfflineEventAttendanceMode"
