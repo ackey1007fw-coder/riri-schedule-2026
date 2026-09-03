@@ -10,6 +10,12 @@ export const news: NewsItem[] = [
   {
     date: "2026.9.3",
     label: "X",
+    text: "「野菜たっぷりうどん」里季がXに写真を上げました。",
+    url: "https://x.com/frecam2025_0306/status/2095331683516162311"
+  },
+  {
+    date: "2026.9.3",
+    label: "X",
     text: "「【🌟出演情報🌟】天竺生地vol.28 出演させていただきます！ 🗓10月11日(日)📍池袋西口GEKIBA 稽古なしの即興劇！初挑戦でドキドキですが頑張ります」即興劇ユニット『天竺生地』vol.28に出演",
     url: "https://x.com/frecam2025_0306/status/2095174102634168752"
   },
