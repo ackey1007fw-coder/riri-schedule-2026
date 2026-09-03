@@ -10,7 +10,7 @@ export const news: NewsItem[] = [
   {
     date: "2026.9.3",
     label: "X",
-    text: "「野菜たっぷりうどん」里季がXに写真を上げました。",
+    text: "「野菜たっぷりうどん」と写真付きで投稿",
     url: "https://x.com/frecam2025_0306/status/2095331683516162311"
   },
   {
