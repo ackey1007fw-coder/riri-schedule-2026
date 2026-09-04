@@ -1,8 +1,4 @@
-import {
-  galleryFeatures as archivedFeatures,
-  galleryPhotos as archivedPhotos,
-  type GalleryPhoto
-} from "./photos";
+import { galleryPhotos as archivedPhotos, type GalleryPhoto } from "./photos";
 
 export type { GalleryPhoto };
 export { galleryFeatures } from "./photos";
@@ -25,5 +21,3 @@ export const galleryUpdate: {
   note: "おはよう華金。公園で愛犬カルアちゃんと一緒の1枚",
   url: "https://x.com/frecam2025_0306/status/2095626890396786873"
 };
-
-void archivedFeatures;
