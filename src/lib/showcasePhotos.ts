@@ -1,4 +1,4 @@
-import { galleryPhotos, type GalleryPhoto } from "../data/photos";
+import { galleryPhotos, type GalleryPhoto } from "../data/photosAll";
 
 // ショーケース（スライドショー・マガジン・Riri Mood）でランダム表示する写真プール。
 // 人物が主役でない写真（店頭・モニター・PC・トレーなど）は見栄えのため除外する。
