@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Megaphone } from "lucide-react";
-import { news } from "../data/news";
+import { news } from "../data/newsAll";
 
 // 最新のお知らせを1件、トップのスリムなバーで表示する。
 // ヘッダー＋ニュースバー＋QuickNavのsticky3段が狭い画面を圧迫しないよう、
