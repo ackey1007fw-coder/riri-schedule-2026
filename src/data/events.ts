@@ -132,13 +132,23 @@ export const events: ScheduleEvent[] = [
     venue: "西荻窪 遊空間がざびぃ",
     image: "/images/im-talking-about-homin-flyer-2026.jpg",
     summary:
-      "アイトキシリーズ第2弾、名曲から生まれた5つの短編集『I'm talking about Homin'』にA sideとして出演。脚本・演出：中平奈緒・もか・横大路伸。りりの出演回は 9/11(金)19:00｜9/12(土)12:00｜9/13(日)12:00｜9/15(火)18:00 の全4公演。前売券6,000円／当日券6,500円。",
-    badges: ["舞台", "A side", "全4公演", "販売終了（2026-09-01 23:59）", "アイトキ第2弾"],
+      "アイトキシリーズ第2弾、名曲から生まれた5つの短編集『I'm talking about Homin'』にA sideとして出演。脚本・演出：中平奈緒・もか・横大路伸。りりの出演回は 9/11(金)19:00｜9/12(土)12:00｜9/13(日)12:00｜9/15(火)18:00 の全4公演。前売券6,000円／当日券6,500円。9/12 12:00回は残席少（制作X：残り4席 / 2026-09-05確認）。変動するので販売ページを正とする。",
+    badges: ["舞台", "A side", "全4公演", "9/12 12:00残席少", "アイトキ第2弾"],
     links: [
       {
         label: "チケット予約（livepocket）",
         url: "https://livepocket.jp/t/aitokihomin",
         kind: "ticket"
+      },
+      {
+        label: "9/12 12:00回 残席少（9/5）",
+        url: "https://x.com/frecam2025_0306/status/2096140971528552544",
+        kind: "sns"
+      },
+      {
+        label: "残り4席案内（9/5・制作X）",
+        url: "https://x.com/kaigyacstage/status/2096084187141099996",
+        kind: "sns"
       },
       {
         label: "メインビジュアルA解禁（8/15）",
