@@ -1,5 +1,5 @@
 import { Share2 } from "lucide-react";
-import { news } from "../data/news";
+import { news } from "../data/newsAll";
 import { profile } from "../data/profile";
 import { SITE_URL, xShareUrl } from "../lib/share";
 import type { SocialLink } from "../types";
@@ -35,7 +35,7 @@ export function Footer({ socialLinks, source, updatedAt }: FooterProps) {
 
           <div className="sm:text-right">
             <p className="mb-3 text-[11px] font-black uppercase tracking-[0.18em] text-champagne">
-              Follow &amp; Share
+              Follow & Share
             </p>
             <div className="flex flex-wrap gap-2 sm:justify-end">
               {socialLinks.map((link) => (
