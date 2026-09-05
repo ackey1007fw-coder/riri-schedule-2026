@@ -47,7 +47,7 @@ pnpm dev
 
 プロフィールの数値・学年・活動状況・SNS一覧はこのガイドへ重複保存せず、正本と確認できる出典を読む。演目は略称だけで判断せず、`events.ts` の正式題名・会場・日程を照合する。
 
-## SNS・過去投稿の掲載
+## SNS 投稿を追加する手順
 
 ### 時系列
 
@@ -93,7 +93,9 @@ pnpm run typecheck
 pnpm test
 pnpm run build
 node scripts/check-site-identity.mjs main
-git diff --check
+git diff --check                      # 未ステージの変更
+git diff --cached --check             # ステージ済みの変更
+git diff --check origin/main...HEAD   # コミット済みのPR差分（最新のbaseを取得後）
 ```
 
 - CIはtypecheck / build / test、Site Identity Guardはサイト取り違え、Image Overwrite Guardは既存画像の同名上書きを検査する。それぞれの役割を維持する。
