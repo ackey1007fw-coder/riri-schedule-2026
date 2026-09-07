@@ -192,7 +192,8 @@ const aitokiRehearsalGroupPhoto: GalleryPhoto = {
 // 画像ファイルは依頼者提供待ち。SNS画像は自動保存しないため、ギャラリーへは埋め込まない。
 
 
-// 2026.9.7 本人X「月曜日頑張ったね」オーナー提供5枚。SNSスクレイプではない。creditなし
+// 2026.9.7 オーナー提供5枚（引用元由来。SNSスクレイプではない。本人のため credit なし）。
+// 公開ポスト status/2096882906488865090 に載っているのは g135 のみ。g136〜g139 は同ポスト由来と断定しない。
 const mondayGanbattaThumbsUpPhoto: GalleryPhoto = {
   src: "/images/gallery/g135.jpg",
   alt: "白いシャッター前でサムズアップを手前に出し、明るく笑う夏凪里季さんの自撮り（X『月曜日頑張ったね』より）"
@@ -200,22 +201,22 @@ const mondayGanbattaThumbsUpPhoto: GalleryPhoto = {
 
 const mondayGanbattaEscalatorPhoto: GalleryPhoto = {
   src: "/images/gallery/g136.jpg",
-  alt: "エスカレーターで黒いパーカー姿の夏凪里季さんがこちらを見つめる自撮り（X『月曜日頑張ったね』より）"
+  alt: "エスカレーターで黒いパーカー姿の夏凪里季さんがこちらを見つめる自撮り（引用元・本人X）"
 };
 
 const mondayGanbattaGroupHallPhoto: GalleryPhoto = {
   src: "/images/gallery/g137.jpg",
-  alt: "廊下で共演者たちとピースサインをする夏凪里季さんを含む集合写真。奥には鯉のぼりの絵（X『月曜日頑張ったね』より）"
+  alt: "廊下で共演者たちとピースサインをする夏凪里季さんを含む集合写真。奥には鯉のぼりの絵（引用元・本人X）"
 };
 
 const mondayGanbattaGroupStudioAPhoto: GalleryPhoto = {
   src: "/images/gallery/g138.jpg",
-  alt: "白い部屋でキャストが集まってピースやサムズアップをする集合写真。夏凪里季さんも写っている（X『月曜日頑張ったね』より）"
+  alt: "白い部屋でキャストが集まってピースやサムズアップをする集合写真。夏凪里季さんも写っている（引用元・本人X）"
 };
 
 const mondayGanbattaGroupStudioBPhoto: GalleryPhoto = {
   src: "/images/gallery/g139.jpg",
-  alt: "白い部屋でキャストが集まってピースサインをする集合写真。手前の男性が自撮り（X『月曜日頑張ったね』より）"
+  alt: "白い部屋でキャストが集まってピースサインをする集合写真。手前の男性が自撮り（引用元・本人X）"
 };
 
 // 2026.9.8 本人X「ベストショット🐶📸✨️」オーナー提供1枚。SNSスクレイプではない。creditなし
@@ -229,7 +230,7 @@ const bestShotDogPhoto: GalleryPhoto = {
 export const galleryPhotos: GalleryPhoto[] = [
   // 2026.9.8 本人X「ベストショット🐶📸✨️」オーナー提供1枚
   bestShotDogPhoto,
-  // 2026.9.7 本人X「月曜日頑張ったね」オーナー提供5枚
+  // 2026.9.7 オーナー提供5枚（g135のみ公開ポスト「月曜日頑張ったね」。他は引用元・本人X）
   mondayGanbattaThumbsUpPhoto,
   mondayGanbattaEscalatorPhoto,
   mondayGanbattaGroupHallPhoto,
