@@ -169,12 +169,33 @@ const miyabiCredit = {
   url: "https://x.com/miyabidayo_o/status/2087112482506920007"
 };
 
+// 2026.9.7 KAIGYAC STAGE（@kaigyacstage）の稽古場集合写真。第三者投稿のため credit を付ける
+const kaigyacRehearsalCredit = {
+  label: "写真: KAIGYAC STAGE（@kaigyacstage）の投稿",
+  url: "https://x.com/kaigyacstage/status/2096736729747407040"
+};
+
+const aitokiRehearsalSelfiePhoto: GalleryPhoto = {
+  src: "/images/gallery/g133.jpg",
+  alt: "白い壁の廊下で、グレーのスウェットに黒いリュック姿の夏凪里季さんがピースサインをしながら自撮りしている稽古場の集合写真。手前左には白いセーラー風ブラウスの共演者、奥には絵画とベージュの扉",
+  credit: kaigyacRehearsalCredit
+};
+
+const aitokiRehearsalGroupPhoto: GalleryPhoto = {
+  src: "/images/gallery/g134.jpg",
+  alt: "白い部屋でキャストが集まっている稽古場の集合写真。手前の男性がサムズアップの自撮り。奥の列、前髪のある夏凪里季さんがピースサインをしている",
+  credit: kaigyacRehearsalCredit
+};
+
 // 2026.9.5 06:24 JST 本人X「トイストーリーに囲まれた夏🦖🏀🐖🧸」
 // 出典: https://x.com/frecam2025_0306/status/2095986258497491400
 // 画像ファイルは依頼者提供待ち。SNS画像は自動保存しないため、ギャラリーへは埋め込まない。
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.7 KAIGYAC STAGE X「稽古順調に進んでおります」稽古場の集合写真2枚
+  aitokiRehearsalSelfiePhoto,
+  aitokiRehearsalGroupPhoto,
   // 2026.9.5 本人X「トイストーリーに囲まれた夏」は出典URLのみ（上記）。画像は依頼者提供待ちのため未掲載。
   // 2026.9.1 12:32 X「山梨上陸した！これは鍋焼きうどん🍲」本人投稿。creditなし
   yamanashiNabeyakiPhoto,
@@ -389,8 +410,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.9.1",
+  date: "2026.9.7",
   platform: "X",
-  note: "山梨上陸。鍋焼きうどんを前に両手を広げて笑う1枚",
-  url: "https://x.com/frecam2025_0306/status/2094629557819285798"
+  note: "アイトキ稽古場の集合写真。制作Xがツイキャス配信案内とともに公開",
+  url: "https://x.com/kaigyacstage/status/2096736729747407040"
 };
