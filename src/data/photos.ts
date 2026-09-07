@@ -218,8 +218,17 @@ const mondayGanbattaGroupStudioBPhoto: GalleryPhoto = {
   alt: "白い部屋でキャストが集まってピースサインをする集合写真。手前の男性が自撮り（X『月曜日頑張ったね』より）"
 };
 
+// 2026.9.8 本人X「ベストショット🐶📸✨️」オーナー提供1枚。SNSスクレイプではない。creditなし
+// 出典: https://x.com/frecam2025_0306/status/2097069395478512041
+const bestShotDogPhoto: GalleryPhoto = {
+  src: "/images/gallery/g140.jpg",
+  alt: "白いTシャツ姿の夏凪里季さんが、舌を出したふわふわの小型犬を抱えて微笑む室内の自撮り（X『ベストショット』より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.8 本人X「ベストショット🐶📸✨️」オーナー提供1枚
+  bestShotDogPhoto,
   // 2026.9.7 本人X「月曜日頑張ったね」オーナー提供5枚
   mondayGanbattaThumbsUpPhoto,
   mondayGanbattaEscalatorPhoto,
@@ -443,8 +452,8 @@ export const galleryUpdate: {
   note: string;
   url: string;
 } = {
-  date: "2026.9.7",
+  date: "2026.9.8",
   platform: "X",
-  note: "月曜日頑張ったね",
-  url: "https://x.com/frecam2025_0306/status/2096882906488865090"
+  note: "ベストショット",
+  url: "https://x.com/frecam2025_0306/status/2097069395478512041"
 };
