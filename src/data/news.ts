@@ -26,6 +26,12 @@ export const news: NewsItem[] = [
     url: "https://x.com/frecam2025_0306/status/2095986258497491400"
   },
   {
+    date: "2026.9.4",
+    label: "X",
+    text: "「おはよう華金だね☀️」と投稿",
+    url: "https://x.com/frecam2025_0306/status/2095626890396786873"
+  },
+  {
     date: "2026.9.3",
     label: "X",
     text: "「野菜たっぷりうどん」と写真付きで投稿",
