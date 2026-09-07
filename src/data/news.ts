@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.8",
+    label: "X",
+    text: "「明日9/8(火)17:00～17:20ツイキャス配信します～❣️」配信アカウントは @kaigyacstage",
+    url: "https://x.com/frecam2025_0306/status/2096826234915480002"
+  },
+  {
     date: "2026.9.6",
     label: "X",
     text: "「#月シア #アイトキ 今日も稽古だよ🌟みんなチケット予約してくれた？🥺」里季が稽古を伝えました。チケット https://livepocket.jp/t/aitokihomin",
