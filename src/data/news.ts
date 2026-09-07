@@ -8,6 +8,24 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.7",
+    label: "X",
+    text: "「明日9/8(火)17:00～17:20ツイキャス配信します～❣️」配信は KAIGYAC STAGE（@kaigyacstage）のツイキャス。約10〜20分",
+    url: "https://x.com/frecam2025_0306/status/2096826234915480002"
+  },
+  {
+    date: "2026.9.7",
+    label: "KAIGYAC STAGE X",
+    text: "「ツイキャス出演メンバー」9/8(火)17:00〜17:20に夏凪里季さんの出演を発表。配信は制作アカウントのツイキャス",
+    url: "https://x.com/kaigyacstage/status/2096825431978828249"
+  },
+  {
+    date: "2026.9.7",
+    label: "KAIGYAC STAGE X",
+    text: "「稽古順調に進んでおります」稽古場の集合写真2枚とともに、アイトキのツイキャス配信日時を案内。9/7(月)20:20〜20:40、9/8(火)17:00〜17:20",
+    url: "https://x.com/kaigyacstage/status/2096736729747407040"
+  },
+  {
     date: "2026.9.6",
     label: "X",
     text: "「#月シア #アイトキ 今日も稽古だよ🌟みんなチケット予約してくれた？🥺」里季が稽古を伝えました。チケット https://livepocket.jp/t/aitokihomin",

@@ -115,6 +115,67 @@ export const events: ScheduleEvent[] = [
     isImportant: true
   },
   {
+    id: "aitoki-homin-twitcasting-2026-09-08",
+    title: "月シア『Homin'』ツイキャス配信",
+    shortTitle: "アイトキ ツイキャス",
+    subtitle: "里季さん出演・稽古の気持ちを話す短め配信",
+    category: "web",
+    startAt: "2026-09-08T17:00:00+09:00",
+    endAt: "2026-09-08T17:20:00+09:00",
+    dates: ["2026-09-08"],
+    occurrences: [
+      {
+        startAt: "2026-09-08T17:00:00+09:00",
+        endAt: "2026-09-08T17:20:00+09:00",
+        label: "里季さん出演"
+      }
+    ],
+    displayDate: "2026年9月8日（火）17:00〜17:20・ツイキャス",
+    image: "/images/gallery/g134.jpg",
+    imageAlt:
+      "白い部屋でキャストが集まっている稽古場の集合写真。奥の列、前髪のある夏凪里季さんがピースサインをしている",
+    summary:
+      "月シア別冊第2集『I'm talking about Homin'』の稽古場から、制作アカウント KAIGYAC STAGE（@kaigyacstage）のツイキャスで短めの配信。里季さんの出演は 9/8(火)17:00〜17:20。稽古をしてみての気持ちなどを話す約10〜20分の配信です。9/7(月)20:20〜20:40の回に里季さんの出演はありません。",
+    badges: ["ツイキャス", "アイトキ", "約10〜20分", "9/8出演"],
+    gallery: [
+      {
+        src: "/images/gallery/g133.jpg",
+        alt: "白い壁の廊下で、グレーのスウェット姿の夏凪里季さんがピースサインをしながら自撮りしている稽古場の集合写真"
+      },
+      {
+        src: "/images/gallery/g134.jpg",
+        alt: "白い部屋でキャストが集まっている稽古場の集合写真。奥の列、前髪のある夏凪里季さんがピースサインをしている"
+      }
+    ],
+    reportQuote:
+      "明日9/8(火)17:00～17:20ツイキャス配信します～❣️\nこちらのアカウントです▶︎@kaigyacstage \n来てね\"(ﾉ*>∀<)ﾉ",
+    reportNote:
+      "制作Xが稽古場の集合写真とともに配信日時を案内し、続いて出演メンバーを発表。里季さん本人も引用して呼びかけています。",
+    links: [
+      {
+        label: "ツイキャスで見る",
+        url: "https://twitcasting.tv/kaigyacstage",
+        kind: "stream"
+      },
+      {
+        label: "里季さんの告知",
+        url: "https://x.com/frecam2025_0306/status/2096826234915480002",
+        kind: "sns"
+      },
+      {
+        label: "出演メンバー発表",
+        url: "https://x.com/kaigyacstage/status/2096825431978828249",
+        kind: "sns"
+      },
+      {
+        label: "配信案内・稽古写真",
+        url: "https://x.com/kaigyacstage/status/2096736729747407040",
+        kind: "sns"
+      }
+    ],
+    isImportant: true
+  },
+  {
     id: "aitoki-homin-2026-09",
     title: "月シア別冊第2集『I'm talking about Homin'』",
     shortTitle: "Homin'",
@@ -132,13 +193,33 @@ export const events: ScheduleEvent[] = [
     venue: "西荻窪 遊空間がざびぃ",
     image: "/images/im-talking-about-homin-flyer-2026.jpg",
     summary:
-      "アイトキシリーズ第2弾、名曲から生まれた5つの短編集『I'm talking about Homin'』にA sideとして出演。脚本・演出：中平奈緒・もか・横大路伸。りりの出演回は 9/11(金)19:00｜9/12(土)12:00｜9/13(日)12:00｜9/15(火)18:00 の全4公演。前売券6,000円／当日券6,500円。9/12 12:00回は残席少（制作X：残り4席 / 2026-09-05確認）。変動するので販売ページを正とする。",
+      "アイトキシリーズ第2弾、名曲から生まれた5つの短編集『I'm talking about Homin'』にA sideとして出演。脚本・演出：中平奈緒・もか・横大路伸。りりの出演回は 9/11(金)19:00｜9/12(土)12:00｜9/13(日)12:00｜9/15(火)18:00 の全4公演。前売券6,000円／当日券6,500円。9/12 12:00回は残席少（制作X：残り4席 / 2026-09-05確認）。変動するので販売ページを正とする。公演に先立ち、9/8(火)17:00〜17:20は制作アカウントのツイキャスに里季さんが出演します（約10〜20分）。",
     badges: ["舞台", "A side", "全4公演", "9/12 12:00残席少", "アイトキ第2弾"],
     links: [
       {
         label: "チケット予約（livepocket）",
         url: "https://livepocket.jp/t/aitokihomin",
         kind: "ticket"
+      },
+      {
+        label: "ツイキャス（里季さん出演 9/8）",
+        url: "https://twitcasting.tv/kaigyacstage",
+        kind: "stream"
+      },
+      {
+        label: "里季さんのツイキャス告知（9/7）",
+        url: "https://x.com/frecam2025_0306/status/2096826234915480002",
+        kind: "sns"
+      },
+      {
+        label: "出演メンバー発表（9/7）",
+        url: "https://x.com/kaigyacstage/status/2096825431978828249",
+        kind: "sns"
+      },
+      {
+        label: "稽古写真・配信案内（9/7）",
+        url: "https://x.com/kaigyacstage/status/2096736729747407040",
+        kind: "sns"
       },
       {
         label: "9/12 12:00回 残席少（9/5）",
