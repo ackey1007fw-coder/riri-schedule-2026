@@ -10,6 +10,12 @@ export const news: NewsItem[] = [
   {
     date: "2026.9.7",
     label: "X",
+    text: "「月曜日頑張ったね」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2096882906488865090"
+  },
+  {
+    date: "2026.9.7",
+    label: "X",
     text: "「明日9/8(火)17:00～17:20ツイキャス配信します～❣️」配信は KAIGYAC STAGE（@kaigyacstage）のツイキャス。約10〜20分",
     url: "https://x.com/frecam2025_0306/status/2096826234915480002"
   },
