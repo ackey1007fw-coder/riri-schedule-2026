@@ -191,8 +191,41 @@ const aitokiRehearsalGroupPhoto: GalleryPhoto = {
 // 出典: https://x.com/frecam2025_0306/status/2095986258497491400
 // 画像ファイルは依頼者提供待ち。SNS画像は自動保存しないため、ギャラリーへは埋め込まない。
 
+
+// 2026.9.7 本人X「月曜日頑張ったね」オーナー提供5枚。SNSスクレイプではない。creditなし
+const mondayGanbattaThumbsUpPhoto: GalleryPhoto = {
+  src: "/images/gallery/g135.jpg",
+  alt: "白いシャッター前でサムズアップを手前に出し、明るく笑う夏凪里季さんの自撮り（X『月曜日頑張ったね』より）"
+};
+
+const mondayGanbattaEscalatorPhoto: GalleryPhoto = {
+  src: "/images/gallery/g136.jpg",
+  alt: "エスカレーターで黒いパーカー姿の夏凪里季さんがこちらを見つめる自撮り（X『月曜日頑張ったね』より）"
+};
+
+const mondayGanbattaGroupHallPhoto: GalleryPhoto = {
+  src: "/images/gallery/g137.jpg",
+  alt: "廊下で共演者たちとピースサインをする夏凪里季さんを含む集合写真。奥には鯉のぼりの絵（X『月曜日頑張ったね』より）"
+};
+
+const mondayGanbattaGroupStudioAPhoto: GalleryPhoto = {
+  src: "/images/gallery/g138.jpg",
+  alt: "白い部屋でキャストが集まってピースやサムズアップをする集合写真。夏凪里季さんも写っている（X『月曜日頑張ったね』より）"
+};
+
+const mondayGanbattaGroupStudioBPhoto: GalleryPhoto = {
+  src: "/images/gallery/g139.jpg",
+  alt: "白い部屋でキャストが集まってピースサインをする集合写真。手前の男性が自撮り（X『月曜日頑張ったね』より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.7 本人X「月曜日頑張ったね」オーナー提供5枚
+  mondayGanbattaThumbsUpPhoto,
+  mondayGanbattaEscalatorPhoto,
+  mondayGanbattaGroupHallPhoto,
+  mondayGanbattaGroupStudioAPhoto,
+  mondayGanbattaGroupStudioBPhoto,
   // 2026.9.7 KAIGYAC STAGE X「稽古順調に進んでおります」稽古場の集合写真2枚
   aitokiRehearsalSelfiePhoto,
   aitokiRehearsalGroupPhoto,
@@ -412,6 +445,6 @@ export const galleryUpdate: {
 } = {
   date: "2026.9.7",
   platform: "X",
-  note: "アイトキ稽古場の集合写真。制作Xがツイキャス配信案内とともに公開",
-  url: "https://x.com/kaigyacstage/status/2096736729747407040"
+  note: "月曜日頑張ったね",
+  url: "https://x.com/frecam2025_0306/status/2096882906488865090"
 };
