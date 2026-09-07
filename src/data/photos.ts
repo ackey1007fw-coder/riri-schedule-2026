@@ -445,6 +445,6 @@ export const galleryUpdate: {
 } = {
   date: "2026.9.7",
   platform: "X",
-  note: "月曜日頑張ったね。本人Xの写真5枚",
+  note: "月曜日頑張ったね",
   url: "https://x.com/frecam2025_0306/status/2096882906488865090"
 };
