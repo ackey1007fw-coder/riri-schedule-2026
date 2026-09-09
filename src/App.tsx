@@ -14,6 +14,7 @@ import { FanLetterSection } from "./components/FanLetterSection";
 import { Hero } from "./components/Hero";
 import { HighlightsSection } from "./components/HighlightsSection";
 import { InterviewSection } from "./components/InterviewSection";
+import { LatestXPostSection } from "./components/LatestXPostSection";
 import { LinksSection } from "./components/LinksSection";
 import { LiveBanner } from "./components/LiveBanner";
 import { MagazineSpread } from "./components/MagazineSpread";
@@ -150,6 +151,9 @@ function App() {
         </SectionReveal>
         <SectionReveal>
           <MagazineSpread nextEvent={nextEvent} />
+        </SectionReveal>
+        <SectionReveal>
+          <LatestXPostSection />
         </SectionReveal>
         <SectionReveal>
           <CharmSection />
