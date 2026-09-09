@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Megaphone } from "lucide-react";
 import { news } from "../data/news";
+import { latestXPost } from "../data/latestXPost";
 
 // 最新のお知らせを1件、トップのスリムなバーで表示する。
 // ヘッダー＋ニュースバー＋QuickNavのsticky3段が狭い画面を圧迫しないよう、
 // 少しでもスクロールしたら畳み、ページ上端に戻ったら再表示する。
 export function NewsBar() {
-  const latest = news[0];
+  // news.ts は履歴の正本として残しつつ、今回の最新投稿を先頭に重ねる。
+  // 次回 news.ts を通常編集できる作業環境では、この1件を履歴側へ統合する。
+  const latest = [latestXPost, ...news][0];
   const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
