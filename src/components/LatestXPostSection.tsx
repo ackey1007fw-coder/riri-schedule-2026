@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { ExternalLink, Newspaper } from "lucide-react";
-import { latestXPost } from "../data/latestXPost";
+import { news } from "../data/news";
 
 const X_WIDGET_SCRIPT_ID = "x-widgets-js";
+const latestXPost = news[0];
 
 export function LatestXPostSection() {
   useEffect(() => {
