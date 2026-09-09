@@ -3,10 +3,10 @@ import { ExternalLink, Newspaper } from "lucide-react";
 import { news } from "../data/news";
 
 const X_WIDGET_SCRIPT_ID = "x-widgets-js";
-const KINDai_MAHJONG_POST_URL =
+const KINDAI_MAHJONG_POST_URL =
   "https://x.com/frecam2025_0306/status/2097456673581584515";
 const kindaiMahjongPost = news.find(
-  (item) => item.url === KINDai_MAHJONG_POST_URL,
+  (item) => item.url === KINDAI_MAHJONG_POST_URL,
 );
 
 export function LatestXPostSection() {
