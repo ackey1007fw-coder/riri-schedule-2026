@@ -3,7 +3,11 @@ import { ExternalLink, Newspaper } from "lucide-react";
 import { news } from "../data/news";
 
 const X_WIDGET_SCRIPT_ID = "x-widgets-js";
-const latestXPost = news[0];
+const KINDai_MAHJONG_POST_URL =
+  "https://x.com/frecam2025_0306/status/2097456673581584515";
+const kindaiMahjongPost = news.find(
+  (item) => item.url === KINDai_MAHJONG_POST_URL,
+);
 
 export function LatestXPostSection() {
   useEffect(() => {
@@ -17,6 +21,8 @@ export function LatestXPostSection() {
     document.body.appendChild(script);
   }, []);
 
+  if (!kindaiMahjongPost) return null;
+
   return (
     <section
       id="latest-x-post"
@@ -27,7 +33,7 @@ export function LatestXPostSection() {
         <div>
           <p className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-champagneInk">
             <Newspaper className="h-4 w-4" aria-hidden="true" />
-            Latest X ・ {latestXPost.date}
+            Latest X ・ {kindaiMahjongPost.date}
           </p>
           <h2
             id="latest-x-post-title"
@@ -39,7 +45,7 @@ export function LatestXPostSection() {
             9月6日発売の『近代麻雀』に掲載されたことを、里季さん本人がXでお知らせ。撮影時のオフショットも公開されています。
           </p>
           <a
-            href={latestXPost.url}
+            href={kindaiMahjongPost.url}
             target="_blank"
             rel="noopener noreferrer"
             className="riri-button riri-button-gold mt-6 min-h-12 px-5 py-3 text-sm"
@@ -51,11 +57,11 @@ export function LatestXPostSection() {
 
         <div className="riri-card overflow-hidden border-rosefog/30 bg-white p-3 sm:p-5">
           <blockquote className="twitter-tweet" data-dnt="true" data-theme="light">
-            <a href={latestXPost.url}>{latestXPost.text}</a>
+            <a href={kindaiMahjongPost.url}>{kindaiMahjongPost.text}</a>
           </blockquote>
           <noscript>
             <a
-              href={latestXPost.url}
+              href={kindaiMahjongPost.url}
               target="_blank"
               rel="noopener noreferrer"
               className="block px-3 py-4 text-sm font-bold text-champagneInk underline"
