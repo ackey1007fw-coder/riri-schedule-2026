@@ -8,6 +8,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.10",
+    label: "X",
+    text: "「君と夏の終わり☆。.:＊・゜」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2097834370082172967"
+  },
+  {
     date: "2026.9.9",
     label: "X",
     text: "「仕込み中」。金曜日から『I'm talking about Homin'』が始まることを伝え、来場を呼びかけ。チケット https://livepocket.jp/t/aitokihomin",
