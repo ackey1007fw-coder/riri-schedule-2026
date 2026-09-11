@@ -8,6 +8,18 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.11",
+    label: "X",
+    text: "「#アイトキ #月シア ついにA班初日✨️ 当日券あるよ！19時から西荻窪で待ってます🤲🏻(開場は18時40分！)」19:00開演・西荻窪、開場18:40。翌日以降のチケットは https://livepocket.jp/t/aitokihomin",
+    url: "https://x.com/frecam2025_0306/status/2098201505715376507"
+  },
+  {
+    date: "2026.9.10",
+    label: "X",
+    text: "「君と夏の終わり☆。.:＊・゜」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2097834370082172967"
+  },
+  {
     date: "2026.9.9",
     label: "X",
     text: "「仕込み中」。金曜日から『I'm talking about Homin'』が始まることを伝え、来場を呼びかけ。チケット https://livepocket.jp/t/aitokihomin",
