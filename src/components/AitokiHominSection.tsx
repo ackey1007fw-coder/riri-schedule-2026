@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   AlertCircle,
   CalendarDays,
@@ -22,6 +23,8 @@ const ririTwitcastPostUrl =
   "https://x.com/frecam2025_0306/status/2096826234915480002";
 const castAnnounceUrl = "https://x.com/kaigyacstage/status/2096825431978828249";
 const rehearsalPostUrl = "https://x.com/kaigyacstage/status/2096736729747407040";
+const sceneRelayPostUrl = "https://x.com/kaigyacstage/status/2098018651362168990";
+const X_WIDGET_SCRIPT_ID = "x-widgets-js";
 
 const twitcastSlots = [
   {
@@ -94,6 +97,17 @@ const supportOptions = [
 ];
 
 export function AitokiHominSection() {
+  useEffect(() => {
+    if (document.getElementById(X_WIDGET_SCRIPT_ID)) return;
+
+    const script = document.createElement("script");
+    script.id = X_WIDGET_SCRIPT_ID;
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    script.setAttribute("charset", "utf-8");
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <section
       id="aitoki-homin"
@@ -242,6 +256,57 @@ export function AitokiHominSection() {
               稽古写真の投稿
               <ExternalLink className="h-4 w-4" aria-hidden="true" />
             </a>
+          </div>
+        </div>
+
+        <div
+          id="aitoki-scene-relay"
+          className="mb-8 scroll-mt-28 overflow-hidden border border-rosefog/35 bg-white shadow-paper"
+        >
+          <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+            <div className="bg-[linear-gradient(135deg,#6f2f3c_0%,#8d4556_52%,#b36b7e_100%)] p-5 text-white sm:p-8">
+              <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-white/75">
+                <Monitor className="h-4 w-4" aria-hidden="true" />
+                X Video / Scene Relay
+              </p>
+              <h3 className="mt-3 font-display text-2xl leading-tight sm:text-4xl">
+                おすすめシーン繋ぎリレーに里季さん登場
+              </h3>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
+                KAIGYAC STAGEが公開した『I'm talking about Homin'』の「おすすめシーン繋ぎリレー」。
+                アイトキキャストが個人的なおすすめシーンをつなぐ動画に、夏凪里季さんも登場します。
+              </p>
+              <p className="mt-4 text-xs font-bold tracking-wide text-white/70">
+                2026年9月10日 ・ KAIGYAC STAGE（@kaigyacstage）
+              </p>
+              <a
+                href={sceneRelayPostUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex min-h-12 items-center gap-2 border border-white/35 bg-white/10 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/20"
+              >
+                Xで元の動画を見る
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </div>
+
+            <div className="flex min-h-[420px] items-start justify-center bg-porcelain p-3 sm:p-5">
+              <blockquote className="twitter-tweet" data-dnt="true" data-theme="light">
+                <a href={sceneRelayPostUrl}>
+                  KAIGYAC STAGE「おすすめシーン繋ぎリレー」
+                </a>
+              </blockquote>
+              <noscript>
+                <a
+                  href={sceneRelayPostUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 text-sm font-bold text-champagneInk underline"
+                >
+                  Xで「おすすめシーン繋ぎリレー」の動画を見る
+                </a>
+              </noscript>
+            </div>
           </div>
         </div>
 
