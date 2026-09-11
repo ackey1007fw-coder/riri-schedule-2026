@@ -15,6 +15,12 @@ export const news: NewsItem[] = [
   },
   {
     date: "2026.9.10",
+    label: "KAIGYAC STAGE X",
+    text: "月シア別冊第2集『I'm talking about Homin'』の「おすすめシーン繋ぎリレー」がスタート。アイトキキャストが個人的なおすすめシーンをつなぐ動画に、夏凪里季さんも登場",
+    url: "https://x.com/kaigyacstage/status/2098018651362168990"
+  },
+  {
+    date: "2026.9.10",
     label: "X",
     text: "「君と夏の終わり☆。.:＊・゜」と写真付きで投稿",
     url: "https://x.com/frecam2025_0306/status/2097834370082172967"
