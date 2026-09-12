@@ -268,13 +268,13 @@ export function AitokiHominSection() {
             <div className="bg-[linear-gradient(135deg,#2f4a55_0%,#4f7380_58%,#7fb4c4_100%)] p-5 text-white sm:p-8">
               <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-white/75">
                 <Ticket className="h-4 w-4" aria-hidden="true" />
-                Today / A side 2nd Show
+                9/12 Update / A side 2nd Show
               </p>
               <h3 className="mt-3 font-display text-2xl leading-tight sm:text-4xl">
                 9/12(土) 12:00、A side 2ステ目
               </h3>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
-                里季さん本人Xで、12:00開演のA side 2ステ目を当日告知。当日券あり、
+                9/12当日の里季さん本人Xで、12:00開演のA side 2ステ目を告知。当日券あり、
                 開場は11:40、当日券販売は11:30からと案内しています。
               </p>
               <p className="mt-4 text-xs leading-6 text-white/70">
