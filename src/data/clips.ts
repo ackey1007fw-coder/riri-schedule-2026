@@ -21,7 +21,7 @@ export const clips: VideoClip[] = [
       "『I'm talking about Homin'』公演2日目。ストーリーで翌日以降のチケットも案内🎫",
     date: "2026.9.12",
     url: "https://livepocket.jp/t/aitokihomin",
-    linkLabel: "明日以降のチケットを見る →"
+    linkLabel: "公演チケットを見る →"
   },
   {
     src: "/videos/tiktok-2026-07-29.mp4",
