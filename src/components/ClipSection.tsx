@@ -44,17 +44,7 @@ function ClipCard({ clip }: { clip: VideoClip }) {
 
   return (
     <figure className="riri-card mx-auto w-full max-w-[320px] overflow-hidden p-0">
-      <a
-        href={clip.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group relative block aspect-[9/16] bg-ink/5"
-        aria-label={
-          clip.linkLabel
-            ? `${clip.title}：${clip.linkLabel.replace(/\s*→$/, "")}`
-            : `${clip.platform ?? "TikTok"}「${clip.title}」を見る`
-        }
-      >
+      <div className="group relative block aspect-[9/16] bg-ink/5">
         <video
           ref={videoRef}
           className="aspect-[9/16] h-full w-full object-cover"
@@ -65,24 +55,32 @@ function ClipCard({ clip }: { clip: VideoClip }) {
           playsInline
           preload="metadata"
           autoPlay={!reduceMotion}
-          controls={reduceMotion}
-          disablePictureInPicture
+          controls={Boolean(clip.controls) || reduceMotion}
+          disablePictureInPicture={!clip.controls}
         />
         <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-black/45 px-2 py-0.5 text-[11px] font-black text-white backdrop-blur-sm">
           {clip.platform ?? "TikTok"}
         </span>
-        <span className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition group-hover:opacity-100">
-          <span className="grid h-12 w-12 place-items-center rounded-full bg-white/85 text-ink shadow-lg">
-            <Play className="h-5 w-5 translate-x-0.5" aria-hidden="true" />
-          </span>
-        </span>
+        {!clip.controls && !reduceMotion && (
+          <a
+            href={clip.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute inset-0 flex items-center justify-center opacity-0 transition group-hover:opacity-100"
+            aria-label={`${clip.platform ?? "TikTok"}「${clip.title}」を見る`}
+          >
+            <span className="grid h-12 w-12 place-items-center rounded-full bg-white/85 text-ink shadow-lg">
+              <Play className="h-5 w-5 translate-x-0.5" aria-hidden="true" />
+            </span>
+          </a>
+        )}
         {clip.bgm && (
           <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center gap-1.5 bg-gradient-to-t from-black/55 to-transparent px-3 pb-2 pt-6 text-[11px] font-bold text-white">
             <Music2 className="h-3.5 w-3.5" aria-hidden="true" />
             <span className="truncate">{clip.bgm}</span>
           </span>
         )}
-      </a>
+      </div>
       <figcaption className="space-y-1 px-4 py-3 text-center">
         <p className="font-display text-lg text-ink">{clip.title}</p>
         <p className="text-xs text-ink/65">{clip.caption}</p>

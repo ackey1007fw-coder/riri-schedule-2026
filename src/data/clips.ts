@@ -7,6 +7,7 @@ export type VideoClip = {
   title: string; // 見出し
   caption: string; // ひとこと
   bgm?: string; // 使用BGM（クレジット表記用）
+  controls?: boolean; // Storyなど、サイト内で音声を含めて操作可能にする場合
   date: string; // 表示用 例: "2026.6.23"
   url: string; // 元の投稿または関連リンク
   linkLabel?: string; // Storyなど、関連リンクへ案内する場合
@@ -19,6 +20,7 @@ export const clips: VideoClip[] = [
     title: "「公演2日目⭐」",
     caption:
       "『I'm talking about Homin'』公演2日目。ストーリーで翌日以降のチケットも案内🎫",
+    controls: true,
     date: "2026.9.12",
     url: "https://livepocket.jp/t/aitokihomin",
     linkLabel: "公演チケットを見る →"
