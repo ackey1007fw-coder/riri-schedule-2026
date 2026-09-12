@@ -24,6 +24,7 @@ const ririTwitcastPostUrl =
 const castAnnounceUrl = "https://x.com/kaigyacstage/status/2096825431978828249";
 const rehearsalPostUrl = "https://x.com/kaigyacstage/status/2096736729747407040";
 const sceneRelayPostUrl = "https://x.com/kaigyacstage/status/2098018651362168990";
+const secondShowPostUrl = "https://x.com/frecam2025_0306/status/2098561013679624620";
 const X_WIDGET_SCRIPT_ID = "x-widgets-js";
 
 const twitcastSlots = [
@@ -256,6 +257,57 @@ export function AitokiHominSection() {
               稽古写真の投稿
               <ExternalLink className="h-4 w-4" aria-hidden="true" />
             </a>
+          </div>
+        </div>
+
+        <div
+          id="aitoki-second-show"
+          className="mb-8 scroll-mt-28 overflow-hidden border border-champagne/45 bg-white shadow-paper"
+        >
+          <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+            <div className="bg-[linear-gradient(135deg,#2f4a55_0%,#4f7380_58%,#7fb4c4_100%)] p-5 text-white sm:p-8">
+              <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-white/75">
+                <Ticket className="h-4 w-4" aria-hidden="true" />
+                Today / A side 2nd Show
+              </p>
+              <h3 className="mt-3 font-display text-2xl leading-tight sm:text-4xl">
+                9/12(土) 12:00、A side 2ステ目
+              </h3>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
+                里季さん本人Xで、12:00開演のA side 2ステ目を当日告知。当日券あり、
+                開場は11:40、当日券販売は11:30からと案内しています。
+              </p>
+              <p className="mt-4 text-xs leading-6 text-white/70">
+                写真は引用元のKAIGYAC STAGE公式投稿を、Xの公式埋め込みで表示しています。
+              </p>
+              <a
+                href={secondShowPostUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex min-h-12 items-center gap-2 border border-white/35 bg-white/10 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/20"
+              >
+                本人Xの投稿を見る
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </div>
+
+            <div className="flex min-h-[420px] items-start justify-center bg-porcelain p-3 sm:p-5">
+              <blockquote className="twitter-tweet" data-dnt="true" data-theme="light">
+                <a href={secondShowPostUrl}>
+                  夏凪里季さん 9/12 A side 2ステ目の告知
+                </a>
+              </blockquote>
+              <noscript>
+                <a
+                  href={secondShowPostUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 text-sm font-bold text-champagneInk underline"
+                >
+                  Xで9/12の告知と写真を見る
+                </a>
+              </noscript>
+            </div>
           </div>
         </div>
 
