@@ -9,9 +9,9 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026.9.12",
-    label: "Instagram Story",
+    label: "Instagram",
     text: "「公演2日目⭐」のStory。『I'm talking about Homin'』公演2日目の様子と、以降の公演チケットを案内。Short Movieに動画を保存",
-    url: "https://www.instagram.com/__ririri__24"
+    url: "https://riri-schedule-2026.vercel.app/videos/instagram-story-2026-09-12-aitoki-second-day.mp4"
   },
   {
     date: "2026.9.12",
