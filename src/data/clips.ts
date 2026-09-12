@@ -1,6 +1,6 @@
 // TikTokなどのショート動画クリップ（自己ホスト・ミュート自動ループで表示）。
 // ・新しいものを先頭に。配列が空ならセクションは非表示。
-// ・src は public/videos/ 以下のパス。url は元の投稿（タップで本編へ）。
+// ・src は public/videos/ 以下のパス。url は元の投稿または関連リンク。
 export type VideoClip = {
   src: string; // 例: "/videos/tiktok-2026-06-23.mp4"
   platform?: "TikTok" | "Instagram"; // 省略時は TikTok 扱い
@@ -8,10 +8,21 @@ export type VideoClip = {
   caption: string; // ひとこと
   bgm?: string; // 使用BGM（クレジット表記用）
   date: string; // 表示用 例: "2026.6.23"
-  url: string; // 元の投稿URL（タップで本編へ）
+  url: string; // 元の投稿または関連リンク
+  linkLabel?: string; // Storyなど、関連リンクへ案内する場合
 };
 
 export const clips: VideoClip[] = [
+  {
+    src: "/videos/instagram-story-2026-09-12-aitoki-second-day.mp4",
+    platform: "Instagram",
+    title: "「公演2日目⭐」",
+    caption:
+      "『I'm talking about Homin'』公演2日目。ストーリーで翌日以降のチケットも案内🎫",
+    date: "2026.9.12",
+    url: "https://livepocket.jp/t/aitokihomin",
+    linkLabel: "明日以降のチケットを見る →"
+  },
   {
     src: "/videos/tiktok-2026-07-29.mp4",
     platform: "TikTok",

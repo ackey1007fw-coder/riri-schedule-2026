@@ -8,7 +8,7 @@ const posterFor = (src: string) =>
   src.replace("/videos/", "/images/clips/").replace(/\.mp4$/, ".jpg");
 
 // ショート動画クリップ（TikTokなど）をミュート自動ループで表示するセクション。
-// ・音声は流さない（muted・コントロール非表示）。タップで元のTikTokへ。
+// ・音声は流さない（muted・コントロール非表示）。カードから元投稿や関連リンクへ。
 // ・画面に入ったときだけ再生し、外れたら一時停止（通信量・電池に配慮）。
 // ・動きを抑える設定(prefers-reduced-motion)の人には自動再生しない。
 function ClipCard({ clip }: { clip: VideoClip }) {
@@ -49,7 +49,11 @@ function ClipCard({ clip }: { clip: VideoClip }) {
         target="_blank"
         rel="noopener noreferrer"
         className="group relative block aspect-[9/16] bg-ink/5"
-        aria-label={`TikTok「${clip.title}」を見る`}
+        aria-label={
+          clip.linkLabel
+            ? `${clip.title}：${clip.linkLabel.replace(/\s*→$/, "")}`
+            : `${clip.platform ?? "TikTok"}「${clip.title}」を見る`
+        }
       >
         <video
           ref={videoRef}
@@ -88,7 +92,7 @@ function ClipCard({ clip }: { clip: VideoClip }) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 text-xs font-bold text-champagne underline underline-offset-4"
         >
-          {clip.date}・{clip.platform ?? "TikTok"}で見る →
+          {clip.linkLabel ?? `${clip.date}・${clip.platform ?? "TikTok"}で見る →`}
         </a>
       </figcaption>
     </figure>
@@ -118,7 +122,7 @@ export function ClipSection() {
             動く里季ちゃん
           </h2>
           <p className="mt-3 text-sm leading-7 text-ink/60">
-            ショート動画。音声はオフで流しているので、本編はタップして元の投稿でどうぞ。
+            ショート動画は音声オフで自動再生。元投稿や関連リンクがある動画はカードから開けます。
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
