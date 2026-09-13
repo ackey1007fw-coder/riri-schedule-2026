@@ -31,7 +31,7 @@ function ClipCard({ clip }: { clip: VideoClip }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          video.play().catch(() => {});
+          if (!clip.controls) video.play().catch(() => {});
         } else {
           video.pause();
         }
@@ -40,7 +40,7 @@ function ClipCard({ clip }: { clip: VideoClip }) {
     );
     observer.observe(video);
     return () => observer.disconnect();
-  }, [reduceMotion]);
+  }, [reduceMotion, clip.controls]);
 
   return (
     <figure className="riri-card mx-auto w-full max-w-[320px] overflow-hidden p-0">
@@ -54,7 +54,7 @@ function ClipCard({ clip }: { clip: VideoClip }) {
           loop
           playsInline
           preload="metadata"
-          autoPlay={!reduceMotion}
+          autoPlay={!reduceMotion && !clip.controls}
           controls={Boolean(clip.controls) || reduceMotion}
           disablePictureInPicture={!clip.controls}
         />
@@ -66,7 +66,7 @@ function ClipCard({ clip }: { clip: VideoClip }) {
             href={clip.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute inset-0 flex items-center justify-center opacity-0 transition group-hover:opacity-100"
+            className="absolute inset-0 flex items-center justify-center opacity-0 transition group-hover:opacity-100 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-white"
             aria-label={`${clip.platform ?? "TikTok"}「${clip.title}」を見る`}
           >
             <span className="grid h-12 w-12 place-items-center rounded-full bg-white/85 text-ink shadow-lg">
