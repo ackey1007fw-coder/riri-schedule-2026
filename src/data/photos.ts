@@ -226,8 +226,16 @@ const bestShotDogPhoto: GalleryPhoto = {
   alt: "白いTシャツ姿の夏凪里季さんが、舌を出したふわふわの小型犬を抱えて微笑む室内の自撮り（X『ベストショット』より）"
 };
 
+// 2026.9.12 本人Instagram Story「公演2日目⭐」。オーナー提供動画のposterをギャラリーにも掲載。
+const aitokiSecondDayStoryPhoto: GalleryPhoto = {
+  src: "/images/gallery/g141.jpg",
+  alt: "Instagram Story『公演2日目⭐』の縦写真。白いトップス姿の女性2人がカメラに向かってポーズを取り、下部に『明日以降のチケット』の案内が表示されている"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.12 本人Instagram Story「公演2日目⭐」
+  aitokiSecondDayStoryPhoto,
   // 2026.9.8 本人X「ベストショット🐶📸✨️」オーナー提供1枚
   bestShotDogPhoto,
   // 2026.9.7 オーナー提供5枚（g135のみ公開ポスト「月曜日頑張ったね」。他は引用元・本人X）
@@ -452,9 +460,11 @@ export const galleryUpdate: {
   platform: "X" | "Instagram" | "TikTok";
   note: string;
   url: string;
+  linkLabel?: string;
 } = {
-  date: "2026.9.8",
-  platform: "X",
-  note: "ベストショット",
-  url: "https://x.com/frecam2025_0306/status/2097069395478512041"
+  date: "2026.9.12",
+  platform: "Instagram",
+  note: "『公演2日目⭐』Storyの写真を追加",
+  url: "https://riri-schedule-2026.vercel.app/#clips",
+  linkLabel: "Short Movieで見る"
 };

@@ -4,9 +4,17 @@ export type NewsItem = {
   label: string; // 出どころ 例: "X" / "Instagram" / "お知らせ"
   text: string;
   url: string;
+  linkLabel?: string; // 元SNS以外の保存先へ案内するときの表示文言
 };
 
 export const news: NewsItem[] = [
+  {
+    date: "2026.9.12",
+    label: "Instagram",
+    text: "「公演2日目⭐」のStory。『I'm talking about Homin'』公演2日目の様子と、以降の公演チケットを案内。Short Movieに動画を保存",
+    url: "https://riri-schedule-2026.vercel.app/#clips",
+    linkLabel: "Short Movieで見る"
+  },
   {
     date: "2026.9.12",
     label: "X",
