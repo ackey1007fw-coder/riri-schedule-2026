@@ -274,8 +274,8 @@ export function AitokiHominSection() {
                 9/12(土) 12:00、A side 2ステ目
               </h3>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
-                9/12当日の里季さん本人Xで、12:00開演のA side 2ステ目を告知。当日券あり、
-                開場は11:40、当日券販売は11:30からと案内しています。
+                9/12当時の告知です。里季さん本人Xでは、12:00開演のA side 2ステ目について、当日券あり、
+                開場は11:40、当日券販売は11:30からと案内されていました。
               </p>
               <p className="mt-4 text-xs leading-6 text-white/70">
                 写真は引用元のKAIGYAC STAGE公式投稿を、Xの公式埋め込みで表示しています。
