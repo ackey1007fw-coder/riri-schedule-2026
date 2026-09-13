@@ -44,7 +44,7 @@ export function NewsBar() {
             {latest.text}
           </span>
           <span className="hidden shrink-0 items-center gap-1 text-xs font-bold text-champagneInk group-hover:underline sm:inline-flex">
-            {latest.label}で見る
+            {latest.linkLabel ?? `${latest.label}で見る`}
             <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
           </span>
         </div>

@@ -228,7 +228,7 @@ export function PhotoGallerySection() {
               New ・ {galleryUpdate.date}
             </span>
             <span className="block leading-snug">
-              {galleryUpdate.note} — {galleryUpdate.platform}で見る
+              {galleryUpdate.note} — {galleryUpdate.linkLabel ?? `${galleryUpdate.platform}で見る`}
             </span>
           </span>
         </a>

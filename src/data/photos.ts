@@ -460,9 +460,11 @@ export const galleryUpdate: {
   platform: "X" | "Instagram" | "TikTok";
   note: string;
   url: string;
+  linkLabel?: string;
 } = {
   date: "2026.9.12",
   platform: "Instagram",
   note: "『公演2日目⭐』Storyの写真を追加",
-  url: "https://riri-schedule-2026.vercel.app/videos/instagram-story-2026-09-12-aitoki-second-day.mp4"
+  url: "https://riri-schedule-2026.vercel.app/#clips",
+  linkLabel: "Short Movieで見る"
 };
