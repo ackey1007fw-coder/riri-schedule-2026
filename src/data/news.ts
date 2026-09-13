@@ -9,6 +9,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.13",
+    label: "X",
+    text: "「#アイトキ」本日12:00回。当日券が若干あり、開場11:40・当日券販売11:30と案内。西荻窪・遊空間がざびぃ。出演は「れんあいじょうず」「風に吹かれて」",
+    url: "https://x.com/frecam2025_0306/status/2098930122145591351"
+  },
+  {
     date: "2026.9.12",
     label: "Instagram",
     text: "「公演2日目⭐」のStory。『I'm talking about Homin'』公演2日目の様子と、以降の公演チケットを案内。Short Movieに動画を保存",
