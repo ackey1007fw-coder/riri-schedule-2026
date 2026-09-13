@@ -110,7 +110,7 @@ export function ClipSection() {
   const hiddenCount = clips.length - visibleClips.length;
 
   return (
-    <section id="clips" className="bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+    <section id="clips" className="scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <div className="mb-6 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-champagneInk">
