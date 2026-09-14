@@ -9,6 +9,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.14",
+    label: "X",
+    text: "「#アイトキ 明日はついに千秋楽！」A sideは9/15 18:00、西荻窪・遊空間がざびぃ。チケット https://livepocket.jp/t/aitokihomin",
+    url: "https://x.com/frecam2025_0306/status/2099360329822265576"
+  },
+  {
     date: "2026.9.13",
     label: "X",
     text: "「#アイトキ」本日12:00回。当日券が若干あり、開場11:40・当日券販売11:30と案内。西荻窪・遊空間がざびぃ。出演は「れんあいじょうず」「風に吹かれて」",
