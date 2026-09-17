@@ -232,8 +232,31 @@ const aitokiSecondDayStoryPhoto: GalleryPhoto = {
   alt: "Instagram Story『公演2日目⭐』の縦写真。白いトップス姿の女性2人がカメラに向かってポーズを取り、下部に『明日以降のチケット』の案内が表示されている"
 };
 
+// 2026.9.17 11:49 JST 本人X「#月シア #アイトキ ツーショたち」。元投稿の写真順。
+// https://x.com/frecam2025_0306/status/2100416833283395875
+const aitokiTwoShotPhotos: GalleryPhoto[] = [
+  {
+    src: "/images/gallery/g142.jpg",
+    alt: "黒いカーテンを背景に、白いTシャツ姿の2人が笑顔でピースサインをする横向きのツーショット（9月17日のX投稿・1枚目）"
+  },
+  {
+    src: "/images/gallery/g143.jpg",
+    alt: "白いTシャツ姿の2人が顔を寄せ、ピースサインをする縦向きのツーショット（9月17日のX投稿・2枚目）"
+  },
+  {
+    src: "/images/gallery/g144.jpg",
+    alt: "白いTシャツ姿の人物と薄いピンクの上着を着た人物が並び、奥の人物がピースサインをする縦向きのツーショット（9月17日のX投稿・3枚目）"
+  },
+  {
+    src: "/images/gallery/g145.jpg",
+    alt: "白いTシャツ姿の2人が並び、左の人物が目を閉じて顔の近くでピースサインをする横向きのツーショット（9月17日のX投稿・4枚目）"
+  }
+];
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.17 本人X「#月シア #アイトキ ツーショたち」
+  ...aitokiTwoShotPhotos,
   // 2026.9.12 本人Instagram Story「公演2日目⭐」
   aitokiSecondDayStoryPhoto,
   // 2026.9.8 本人X「ベストショット🐶📸✨️」オーナー提供1枚
@@ -462,9 +485,8 @@ export const galleryUpdate: {
   url: string;
   linkLabel?: string;
 } = {
-  date: "2026.9.12",
-  platform: "Instagram",
-  note: "『公演2日目⭐』Storyの写真を追加",
-  url: "https://riri-schedule-2026.vercel.app/#clips",
-  linkLabel: "Short Movieで見る"
+  date: "2026.9.17",
+  platform: "X",
+  note: "『#月シア #アイトキ ツーショたち』の写真4枚を追加",
+  url: "https://x.com/frecam2025_0306/status/2100416833283395875"
 };
