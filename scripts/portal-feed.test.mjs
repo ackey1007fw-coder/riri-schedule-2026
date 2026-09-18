@@ -138,6 +138,31 @@ describe("Riri portal feed origin contract", () => {
 });
 
 describe("Riri portal feed stability", () => {
+  it("publishes the three confirmed Tenjiku performances instead of a midnight placeholder", () => {
+    const feed = createPortalFeed("2026-09-19T00:00:00.000Z");
+    const tenjiku = feed.items.filter((item) =>
+      item.id.includes("tenjiku-vol28-2026-10")
+    );
+
+    assert.deepEqual(
+      tenjiku.map(({ startsAt, endsAt }) => ({ startsAt, endsAt })),
+      [
+        {
+          startsAt: "2026-10-11T12:00:00+09:00",
+          endsAt: "2026-10-11T13:00:00+09:00",
+        },
+        {
+          startsAt: "2026-10-11T15:30:00+09:00",
+          endsAt: "2026-10-11T16:30:00+09:00",
+        },
+        {
+          startsAt: "2026-10-11T18:30:00+09:00",
+          endsAt: "2026-10-11T19:30:00+09:00",
+        },
+      ]
+    );
+  });
+
   it("keeps stable IDs and order across builds on the same JST day", () => {
     const first = createPortalFeed("2026-08-19T00:00:00.000Z");
     const second = createPortalFeed("2026-08-19T14:59:59.000Z");
