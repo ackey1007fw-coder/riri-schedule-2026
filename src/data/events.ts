@@ -280,26 +280,58 @@ export const events: ScheduleEvent[] = [
     shortTitle: "天竺生地 vol.28",
     subtitle: "稽古なしの即興劇、初挑戦",
     category: "stage",
-    startAt: "2026-10-11T00:00:00+09:00",
-    endAt: "2026-10-11T23:59:59+09:00",
+    startAt: "2026-10-11T12:00:00+09:00",
+    endAt: "2026-10-11T19:30:00+09:00",
     dates: ["2026-10-11"],
-    displayDate: "2026年10月11日（日）・池袋西口GEKIBA",
+    occurrences: [
+      {
+        startAt: "2026-10-11T12:00:00+09:00",
+        endAt: "2026-10-11T13:00:00+09:00",
+        label: "第一回",
+      },
+      {
+        startAt: "2026-10-11T15:30:00+09:00",
+        endAt: "2026-10-11T16:30:00+09:00",
+        label: "第二回",
+      },
+      {
+        startAt: "2026-10-11T18:30:00+09:00",
+        endAt: "2026-10-11T19:30:00+09:00",
+        label: "第三回",
+      },
+    ],
+    displayDate: "2026年10月11日（日）12:00／15:30／18:30",
     venue: "池袋西口GEKIBA",
     image: "/images/tenjiku-vol28-flyer.jpg",
     imageAlt:
       "『天竺生地』vol.28の公演フライヤー。2026年10月10日〜11日、池袋西口GEKIBA。MCは斎藤このむと緑川睦",
     summary:
-      "即興劇ユニット『天竺生地』vol.28に出演。里季さんの出演日は10月11日（日）、会場は池袋西口GEKIBA。キャスト発表第一弾では日付単位の案内で、どの回への出演かは現時点で確認できていません。MCは斎藤このむ・緑川睦。稽古なしの即興劇で、里季さん自身「初挑戦」と投稿しています。チケット情報は確認でき次第掲載します。",
-    badges: ["舞台", "即興劇", "初挑戦", "10月11日"],
+      "即興劇ユニット『天竺生地』vol.28の10月11日（日）全3公演に出演。第一回12:00、第二回15:30、第三回18:30、会場は池袋西口GEKIBAです。チケット、応援メッセージポストカード、ソロチェキを受付中です。",
+    badges: ["舞台", "即興劇", "全3公演", "予約受付中"],
     links: [
+      {
+        label: "チケットを予約する",
+        url: "https://livepocket.jp/e/tenjiku28",
+        kind: "ticket"
+      },
+      {
+        label: "応援メッセージポストカード",
+        url: "https://livepocket.jp/e/tenjiku28_message",
+        kind: "info"
+      },
+      {
+        label: "ソロチェキを予約する",
+        url: "https://livepocket.jp/e/tenjiku28_solo",
+        kind: "info"
+      },
       {
         label: "夏凪里季さんの出演告知",
         url: "https://x.com/frecam2025_0306/status/2095174102634168752",
         kind: "sns"
       },
       {
-        label: "キャスト発表（天竺生地）",
-        url: "https://x.com/tenjikukiji/status/2095073990658445630",
+        label: "全公演情報（天竺生地）",
+        url: "https://x.com/tenjikukiji/status/2098699547707138361",
         kind: "sns"
       },
       {
