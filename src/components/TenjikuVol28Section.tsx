@@ -12,8 +12,10 @@ import { VenueMap } from "./VenueMap";
 const ririPostUrl =
   "https://x.com/frecam2025_0306/status/2095174102634168752";
 const organizerCastPostUrl =
-  "https://x.com/tenjikukiji/status/2095073990658445630";
-const organizerAccountUrl = "https://x.com/tenjikukiji";
+  "https://x.com/tenjikukiji/status/2098699547707138361";
+const ticketUrl = "https://livepocket.jp/e/tenjiku28";
+const messageCardUrl = "https://livepocket.jp/e/tenjiku28_message";
+const soloChekiUrl = "https://livepocket.jp/e/tenjiku28_solo";
 
 const dayShows = [
   { label: "第一回", time: "12:00〜13:00" },
@@ -76,7 +78,7 @@ export function TenjikuVol28Section() {
               里季さんの出演日
             </h3>
             <p className="mt-2 text-sm leading-7 text-ink/68">
-              キャスト発表第一弾では、出演者は日付単位で案内されています。どの回への出演かは、現時点では確認できていません。
+              里季さんは10月11日（日）の全3公演に出演します。各回の受付開始・客席開場は、開演の30分前です。
             </p>
 
             <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -134,7 +136,7 @@ export function TenjikuVol28Section() {
             <div className="mt-6">
               <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-champagneInk">
                 <Users className="h-4 w-4" aria-hidden="true" />
-                10月11日（日）のキャスト（発表第一弾）
+                10月11日（日）のキャスト
               </p>
               <ul className="flex flex-wrap gap-2">
                 {sundayCast.map((name) => (
@@ -153,15 +155,42 @@ export function TenjikuVol28Section() {
             </div>
 
             <p className="mt-6 leading-8 text-ink/72">
-              天竺生地は、出演者を「生地」と見立てて合わせることでひとつの作品を完成させる即興劇。主な活動衣装はジャージです。チケット情報は、確認でき次第こちらに掲載します。
+              天竺生地は、出演者を「生地」と見立てて合わせることでひとつの作品を完成させる即興劇。チケットのほか、会場に掲示される応援メッセージポストカードと、当日受け取るソロチェキも予約できます。里季さん出演日分の受付は10月10日（土）23:59までです。
             </p>
 
             <div className="mt-auto flex flex-col gap-3 pt-7 sm:flex-row sm:flex-wrap">
               <a
-                href={ririPostUrl}
+                href={ticketUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="riri-button riri-button-gold min-h-12 px-5 py-3 text-sm"
+              >
+                チケットを予約する
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a
+                href={messageCardUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+              >
+                応援メッセージを届ける
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a
+                href={soloChekiUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+              >
+                ソロチェキを予約する
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a
+                href={ririPostUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
               >
                 里季さんの出演告知を見る
                 <ExternalLink className="h-4 w-4" aria-hidden="true" />
@@ -172,16 +201,7 @@ export function TenjikuVol28Section() {
                 rel="noopener noreferrer"
                 className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
               >
-                キャスト発表を見る
-                <ExternalLink className="h-4 w-4" aria-hidden="true" />
-              </a>
-              <a
-                href={organizerAccountUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
-              >
-                天竺生地のX
+                全公演情報を見る
                 <ExternalLink className="h-4 w-4" aria-hidden="true" />
               </a>
             </div>
