@@ -36,6 +36,12 @@ export const news: NewsItem[] = [
   {
     date: "2026.9.12",
     label: "X",
+    text: "「アイトキ2公演目終了」A side後半戦は9/13 12:00 西荻窪、当日券あり。千秋楽チケット https://livepocket.jp/t/aitokihomin",
+    url: "https://x.com/frecam2025_0306/status/2098766967612280945"
+  },
+  {
+    date: "2026.9.12",
+    label: "X",
     text: "『本日2ステ目！』A sideは12:00開演。当日券あり、開場11:40・当日券販売11:30と案内",
     url: "https://x.com/frecam2025_0306/status/2098561013679624620"
   },
