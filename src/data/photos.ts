@@ -261,8 +261,18 @@ const tabiNiDemasuPhoto: GalleryPhoto = {
   alt: "青いチェック柄の座席に座り、水色のシャツに白いインナー、白いイヤホンとネックレスをつけてカメラを見る夏凪里季さん。窓の外に緑が見える車内の自撮り（X『旅に出ます』より）"
 };
 
+// 2026.9.19 08:28 JST 本人X「ホイップもりもりパンケーキ🥞」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2101091051188699341
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const whipMoriMoriPancakePhoto: GalleryPhoto = {
+  src: "/images/gallery/g147.jpg",
+  alt: "白い丸皿にホイップクリームを盛ったパンケーキが2枚。手前には粉砂糖、奥には赤いベリー。水色の半袖シャツを着た夏凪里季さんが、左手のフォークをパンケーキに向けてカメラを見ている店内の自撮り（X『ホイップもりもりパンケーキ』より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.19 本人X「ホイップもりもりパンケーキ🥞」
+  whipMoriMoriPancakePhoto,
   // 2026.9.18 本人X「旅に出ます🚃」
   tabiNiDemasuPhoto,
   // 2026.9.17 本人X「#月シア #アイトキ ツーショたち」
@@ -495,8 +505,8 @@ export const galleryUpdate: {
   url: string;
   linkLabel?: string;
 } = {
-  date: "2026.9.18",
+  date: "2026.9.19",
   platform: "X",
-  note: "『旅に出ます🚃』の写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2100692267787018739"
+  note: "『ホイップもりもりパンケーキ🥞』の写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2101091051188699341"
 };
