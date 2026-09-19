@@ -269,8 +269,18 @@ const whipMoriMoriPancakePhoto: GalleryPhoto = {
   alt: "白い丸皿にホイップクリームを盛ったパンケーキが2枚。手前には粉砂糖、奥には赤いベリー。水色の半袖シャツを着た夏凪里季さんが、左手のフォークをパンケーキに向けてカメラを見ている店内の自撮り（X『ホイップもりもりパンケーキ』より）"
 };
 
+// 2026.9.19 18:37 JST 本人X「#月シア 上映イベント『月を跨ぐvol20』」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2101244304979329158
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const tsukiWoMataguAnnouncePhoto: GalleryPhoto = {
+  src: "/images/gallery/g148.jpg",
+  alt: "白いシャツに黒いカーディガン、グレーのスカート姿でベージュのソファに座り、右手でピースサインをしながら自撮りする夏凪里季さん。奥に白いカーテンの窓と木の棚（X『月を跨ぐvol20』出演告知より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.19 本人X「#月シア 上映イベント『月を跨ぐvol20』」
+  tsukiWoMataguAnnouncePhoto,
   // 2026.9.19 本人X「ホイップもりもりパンケーキ🥞」
   whipMoriMoriPancakePhoto,
   // 2026.9.18 本人X「旅に出ます🚃」
@@ -507,6 +517,6 @@ export const galleryUpdate: {
 } = {
   date: "2026.9.19",
   platform: "X",
-  note: "『ホイップもりもりパンケーキ🥞』の写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2101091051188699341"
+  note: "『月を跨ぐvol20』出演告知の写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2101244304979329158"
 };
