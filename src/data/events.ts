@@ -343,6 +343,66 @@ export const events: ScheduleEvent[] = [
     isImportant: true
   },
   {
+    id: "tsuki-wo-matagu-vol20-2026-10",
+    title: "月シア上映イベント『月を跨ぐ』vol.20",
+    shortTitle: "月を跨ぐ vol.20",
+    subtitle: "アイトキホーミンを一緒に見て、裏話を語る",
+    category: "event",
+    startAt: "2026-10-24T13:00:00+09:00",
+    dates: ["2026-10-24"],
+    occurrences: [
+      {
+        startAt: "2026-10-24T13:00:00+09:00",
+        label: "昼の部"
+      },
+      {
+        startAt: "2026-10-24T17:00:00+09:00",
+        label: "夕方の部"
+      }
+    ],
+    displayDate: "2026年10月24日（土）昼の部13:00／夕方の部17:00",
+    venue: "下北沢RBLCAFE",
+    image: "/images/tsuki-wo-matagu-vol20-flyer.jpg",
+    imageAlt:
+      "月シア上映イベント『月を跨ぐ』vol.20のフライヤー。2026年10月24日（土）、下北沢RBLCAFE。昼の部13:00、夕方の部17:00",
+    summary:
+      "月シア上映イベント『月を跨ぐvol.20』に、昼の部（13:00）・夕方の部（17:00）の両部へ出演。月シア別冊第2集『I'm talking about Homin'』の全5話をキャストと一緒に見て、裏話を語るトークショーです。会場は下北沢RBLCAFE。チケット販売は9月21日（月）18:00から。お席数が限られているため、公式は早めの予約を案内しています。来場者限定で、キャスト全員のサイン入りA1ポスター抽選と、イベント出演者の撮り下ろしサイン入りチェキのプレゼント企画もあります。",
+    badges: ["上映イベント", "トークショー", "昼・夕両部出演", "9/21 18:00チケ発"],
+    gallery: [
+      {
+        src: "/images/gallery/g148.jpg",
+        alt: "白いシャツに黒いカーディガン、グレーのスカート姿でベージュのソファに座り、右手でピースサインをしながら自撮りする夏凪里季さん（X『月を跨ぐvol20』出演告知より）"
+      }
+    ],
+    reportQuote:
+      "【🌟出演情報🌟】\n#月シア 上映イベント『月を跨ぐvol20』出演いたします！\n\nアイトキホーミンの収録回を一緒に見ようというイベントです！\n私たちが副音声みたいな感じでお話するよ！楽しみだねっっ！プレゼント企画もあるみたい✨️\n\n舞台には来れなかったけどこの日なら都合合いそうという方や、もう1回みたい！見れてない作品みたい！裏話聞きたい！という方などなどお待ちしております🤲🏻\n\n🗓10月24日(土)📍下北沢RBLCAFE\n\n昼の部(13時回)夕方の部(17時回)どっちもいるよ✨️\n\nお席限られてるので早めがおすすめ！(9/21の18時からチケ発です)",
+    reportNote:
+      "本人X（2026年9月19日）の出演告知です。チケット販売開始は9月21日（月）18:00。",
+    links: [
+      {
+        label: "チケット販売ページ（9/21 18:00〜）",
+        url: "https://livepocket.jp/t/20matagu",
+        kind: "ticket"
+      },
+      {
+        label: "夏凪里季さんの出演告知",
+        url: "https://x.com/frecam2025_0306/status/2101244304979329158",
+        kind: "sns"
+      },
+      {
+        label: "制作の告知（KAIGYAC STAGE）",
+        url: "https://x.com/kaigyacstage/status/2101234845632364882",
+        kind: "sns"
+      },
+      {
+        label: "KAIGYAC STAGE X",
+        url: "https://x.com/kaigyacstage",
+        kind: "sns"
+      }
+    ],
+    isImportant: true
+  },
+  {
     id: "riri-nao-birthday-dinner-2026-08",
     title: "なおちゃんと過ごした、お祝いディナー🥹🩷️",
     shortTitle: "なおちゃんとのお祝いディナー",

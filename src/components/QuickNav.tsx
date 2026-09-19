@@ -5,6 +5,7 @@ import {
   Drama,
   Flower2,
   Images,
+  Moon,
   Radio,
   Sparkles,
   UserRound
@@ -14,6 +15,7 @@ const items = [
   { label: "次の出演", href: "#next", id: "next", Icon: CalendarHeart },
   { label: "ピッパラの樹", href: "#pippara-no-ki", id: "pippara-no-ki", Icon: Drama },
   { label: "アイトキ", href: "#aitoki-homin", id: "aitoki-homin", Icon: Flower2 },
+  { label: "月を跨ぐ", href: "#tsuki-wo-matagu", id: "tsuki-wo-matagu", Icon: Moon },
   { label: "天竺生地", href: "#tenjiku-vol28", id: "tenjiku-vol28", Icon: Sparkles },
   { label: "今日の応援", href: "#today", id: "today", Icon: Sparkles },
   { label: "カレンダー", href: "#calendar", id: "calendar", Icon: CalendarDays },

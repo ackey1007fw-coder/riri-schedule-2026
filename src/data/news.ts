@@ -11,6 +11,12 @@ export const news: NewsItem[] = [
   {
     date: "2026.9.19",
     label: "X",
+    text: "「#月シア 上映イベント『月を跨ぐvol20』出演いたします！」10月24日（土）下北沢RBLCAFE。昼の部13:00・夕方の部17:00どちらも出演。チケット販売は9/21 18:00から https://livepocket.jp/t/20matagu",
+    url: "https://x.com/frecam2025_0306/status/2101244304979329158"
+  },
+  {
+    date: "2026.9.19",
+    label: "X",
     text: "「ホイップもりもりパンケーキ🥞」と写真付きで投稿",
     url: "https://x.com/frecam2025_0306/status/2101091051188699341"
   },
