@@ -75,7 +75,7 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
               href={item.href}
               aria-current={activeSection === item.id ? "true" : undefined}
               className={`transition-colors ${
-                "desktopOnly" in item && item.desktopOnly ? "hidden lg:inline" : ""
+                "desktopOnly" in item && item.desktopOnly ? "hidden xl:inline" : ""
               } ${
                 activeSection === item.id
                   ? "text-champagneInk"
