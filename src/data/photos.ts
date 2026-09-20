@@ -269,8 +269,18 @@ const whipMoriMoriPancakePhoto: GalleryPhoto = {
   alt: "白い丸皿にホイップクリームを盛ったパンケーキが2枚。手前には粉砂糖、奥には赤いベリー。水色の半袖シャツを着た夏凪里季さんが、左手のフォークをパンケーキに向けてカメラを見ている店内の自撮り（X『ホイップもりもりパンケーキ』より）"
 };
 
+// 2026.9.20 06:33 JST 本人X「今さら夏ディズニー投稿は許されない？」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2101424453523767699
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const natsuDisneyPhoto: GalleryPhoto = {
+  src: "/images/gallery/g149.jpg",
+  alt: "暗い室内で、ピンクのリボン付きの黒いミニーマウスの耳カチューシャをつけ、いちご柄の白いトップスを着た夏凪里季さん。長い髪でカメラのほうを見ている（X『今さら夏ディズニー投稿は許されない？』より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.20 本人X「今さら夏ディズニー投稿は許されない？」
+  natsuDisneyPhoto,
   // 2026.9.19 本人X「ホイップもりもりパンケーキ🥞」
   whipMoriMoriPancakePhoto,
   // 2026.9.18 本人X「旅に出ます🚃」
@@ -505,8 +515,8 @@ export const galleryUpdate: {
   url: string;
   linkLabel?: string;
 } = {
-  date: "2026.9.19",
+  date: "2026.9.20",
   platform: "X",
-  note: "『ホイップもりもりパンケーキ』の写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2101091051188699341"
+  note: "『今さら夏ディズニー投稿は許されない？』の写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2101424453523767699"
 };
