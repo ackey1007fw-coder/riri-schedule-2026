@@ -71,6 +71,9 @@ export function TsukiWoMataguVol20Section() {
               decoding="async"
               className="block h-auto w-full object-contain"
             />
+            <p className="px-5 py-4 text-center text-xs leading-6 text-ink/50">
+              フライヤーの出典：KAIGYAC STAGE（@kaigyacstage）の告知投稿
+            </p>
           </div>
 
           <div className="riri-card flex flex-col border-champagne/30 bg-white p-5 sm:p-7 lg:p-8">
@@ -224,23 +227,7 @@ export function TsukiWoMataguVol20Section() {
           </div>
         </div>
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,1.58fr)] lg:items-stretch">
-          <div className="riri-card overflow-hidden border-champagne/30 bg-white p-5 sm:p-6">
-            <img
-              {...getResponsiveImageProps(
-                "/images/gallery/g148.jpg",
-                "(min-width: 1024px) 24vw, 100vw"
-              )}
-              alt="白いシャツに黒いカーディガン、グレーのスカート姿でベージュのソファに座り、右手でピースサインをしながら自撮りする夏凪里季さん（X『月を跨ぐvol20』出演告知より）"
-              loading="lazy"
-              decoding="async"
-              className="mx-auto block h-auto w-full max-w-xs object-contain"
-            />
-            <p className="mt-4 text-center text-xs leading-6 text-ink/50">
-              フライヤーの出典：KAIGYAC STAGE（@kaigyacstage）の告知投稿。写真は里季さん本人の出演告知より
-            </p>
-          </div>
-
+        <div className="mt-8">
           <VenueMap
             venue="下北沢RBLCAFE"
             note="会場名は告知フライヤー、住所・アクセスはRBL CAFE公式サイトの記載です。"
