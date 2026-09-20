@@ -9,6 +9,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.20",
+    label: "X",
+    text: "「今さら夏ディズニー投稿は許されない？」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2101424453523767699"
+  },
+  {
     date: "2026.9.19",
     label: "X",
     text: "「#月シア 上映イベント『月を跨ぐvol20』出演いたします！」10月24日（土）下北沢RBLCAFE。昼の部13:00・夕方の部17:00どちらも出演。チケット販売は9/21 18:00から https://livepocket.jp/t/20matagu",
