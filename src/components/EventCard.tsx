@@ -2,7 +2,7 @@ import { CalendarDays, CalendarPlus, Instagram, MapPin } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
 import { isEventPast } from "../lib/date";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
-import { googleCalendarUrl } from "../lib/share";
+import { googleCalendarLinks } from "../lib/share";
 import type { ScheduleEvent } from "../types";
 import { Badge } from "./Badge";
 import { ExternalButton } from "./ExternalButton";
@@ -161,17 +161,18 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
                 {link.label}
               </ExternalButton>
             ))}
-            {upcoming && (
+            {upcoming && googleCalendarLinks(event).map((link) => (
               <a
-                href={googleCalendarUrl(event)}
+                key={link.key}
+                href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
               >
                 <CalendarPlus className="h-4 w-4 text-champagne" aria-hidden="true" />
-                カレンダー
+                {link.label ? `カレンダー：${link.label}` : "カレンダー"}
               </a>
-            )}
+            ))}
           </div>
         )}
       </div>
