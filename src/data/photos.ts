@@ -277,8 +277,18 @@ const natsuDisneyPhoto: GalleryPhoto = {
   alt: "暗い室内で、ピンクのリボン付きの黒いミニーマウスの耳カチューシャをつけ、いちご柄の白いトップスを着た夏凪里季さん。長い髪でカメラのほうを見ている（X『今さら夏ディズニー投稿は許されない？』より）"
 };
 
+// 2026.9.21 09:23 JST 本人X「シルバーウィークENJOYしてる？」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2101829630894456910
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const silverWeekEnjoyPhoto: GalleryPhoto = {
+  src: "/images/gallery/g150.jpg",
+  alt: "窓際の座席に座り、ピンクの半袖カーディガンに白いインナー、紺のストライプパンツ姿の夏凪里季さん。右手を髪に添え、青い格子柄の座席に座ってカメラを見ている。窓の外は曇り空（X『シルバーウィークENJOYしてる？』より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.21 本人X「シルバーウィークENJOYしてる？」
+  silverWeekEnjoyPhoto,
   // 2026.9.20 本人X「今さら夏ディズニー投稿は許されない？」
   natsuDisneyPhoto,
   // 2026.9.19 本人X「ホイップもりもりパンケーキ🥞」
@@ -515,8 +525,8 @@ export const galleryUpdate: {
   url: string;
   linkLabel?: string;
 } = {
-  date: "2026.9.20",
+  date: "2026.9.21",
   platform: "X",
-  note: "『今さら夏ディズニー投稿は許されない？』の写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2101424453523767699"
+  note: "『シルバーウィークENJOYしてる？』の写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2101829630894456910"
 };
