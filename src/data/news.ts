@@ -9,6 +9,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.21",
+    label: "X",
+    text: "「シルバーウィークENJOYしてる？」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2101829630894456910"
+  },
+  {
     date: "2026.9.20",
     label: "X",
     text: "「今さら夏ディズニー投稿は許されない？」と写真付きで投稿",
