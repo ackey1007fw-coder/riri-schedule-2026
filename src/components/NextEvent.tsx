@@ -1,7 +1,7 @@
 import { CalendarPlus, Clock3, MapPin, Ticket } from "lucide-react";
 import { categoryMeta } from "../lib/eventMeta";
 import { getResponsiveImageProps } from "../lib/responsiveImage";
-import { googleCalendarUrl } from "../lib/share";
+import { googleCalendarLinks } from "../lib/share";
 import type { ScheduleEvent } from "../types";
 import { Badge } from "./Badge";
 import { ExternalButton } from "./ExternalButton";
@@ -145,15 +145,18 @@ export function NextEvent({ event }: NextEventProps) {
                   </span>
                 </ExternalButton>
               )}
-              <a
-                href={googleCalendarUrl(event)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
-              >
-                <CalendarPlus className="h-4 w-4 text-champagne" aria-hidden="true" />
-                カレンダーに追加
-              </a>
+              {googleCalendarLinks(event).map((link) => (
+                <a
+                  key={link.key}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
+                >
+                  <CalendarPlus className="h-4 w-4 text-champagne" aria-hidden="true" />
+                  {link.label ? `カレンダー：${link.label}` : "カレンダーに追加"}
+                </a>
+              ))}
               <a
                 href="#schedule"
                 className="riri-button riri-button-soft min-h-12 px-4 py-3 text-sm"
