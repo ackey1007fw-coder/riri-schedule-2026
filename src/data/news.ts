@@ -9,6 +9,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.22",
+    label: "X",
+    text: "「朝はパン派？ごはん派？」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2102153147879919882"
+  },
+  {
     date: "2026.9.21",
     label: "X",
     text: "『月を跨ぐ vol.20』チケット発売開始。1部・2部どちらも出演し、「お席少ないです」と案内。チケット https://livepocket.jp/t/20matagu",
