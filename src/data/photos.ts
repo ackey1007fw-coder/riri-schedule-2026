@@ -285,8 +285,28 @@ const silverWeekEnjoyPhoto: GalleryPhoto = {
   alt: "窓際の座席に座り、ピンクの半袖カーディガンに白いインナー、紺のストライプパンツ姿の夏凪里季さん。右手を髪に添え、青い格子柄の座席に座ってカメラを見ている。窓の外は曇り空（X『シルバーウィークENJOYしてる？』より）"
 };
 
+// 2026.9.24 06:14 JST 本人X「徒歩よりも車よりもチャリがすき」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2102869111386558788
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const chariGaSukiPhoto: GalleryPhoto = {
+  src: "/images/gallery/g151.jpg",
+  alt: "芝生の公園で、ピンクの半袖カーディガンに紺のストライプパンツ、白い厚底スニーカー姿の夏凪里季さんが、カゴ付きの自転車にまたがって笑っている。カゴには淡いピンクのバッグとHELLO CYCLINGの案内。背景は住宅と木々（X『徒歩よりも車よりもチャリがすき』より）"
+};
+
+// 2026.9.25 07:07 JST 本人X「矢場とん！ご飯大盛りにした😋✨️」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2103244907800649999
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const yabatonOmoriPhoto: GalleryPhoto = {
+  src: "/images/gallery/g152.jpg",
+  alt: "矢場とんの店内で、大盛りの白いご飯と味噌カツ、味噌汁を前に、両手でご飯を指さして笑う夏凪里季さん。ネイビーのトップスにデニム。背景は街並みと野球のユニフォームが並ぶモノクロ写真（X『矢場とん！ご飯大盛りにした』より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.25 本人X「矢場とん！ご飯大盛りにした😋✨️」
+  yabatonOmoriPhoto,
+  // 2026.9.24 本人X「徒歩よりも車よりもチャリがすき」
+  chariGaSukiPhoto,
   // 2026.9.21 本人X「シルバーウィークENJOYしてる？」
   silverWeekEnjoyPhoto,
   // 2026.9.20 本人X「今さら夏ディズニー投稿は許されない？」
@@ -525,8 +545,8 @@ export const galleryUpdate: {
   url: string;
   linkLabel?: string;
 } = {
-  date: "2026.9.21",
+  date: "2026.9.25",
   platform: "X",
-  note: "『シルバーウィークENJOYしてる？』の写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2101829630894456910"
+  note: "『矢場とん！ご飯大盛りにした』と『徒歩よりも車よりもチャリがすき』の写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2103244907800649999"
 };

@@ -9,6 +9,18 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.25",
+    label: "X",
+    text: "「矢場とん！ご飯大盛りにした😋✨️」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2103244907800649999"
+  },
+  {
+    date: "2026.9.24",
+    label: "X",
+    text: "「徒歩よりも車よりもチャリがすき」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2102869111386558788"
+  },
+  {
     date: "2026.9.23",
     label: "X",
     text: "「露出と明るさ変えただけで」と、明るさを比べる写真2枚を投稿",
