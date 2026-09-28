@@ -9,6 +9,18 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.28",
+    label: "X",
+    text: "『天竺生地』vol.28の出演を告知。10/11（日）池袋西口GEKIBA、全3公演（12:00「半知半解」／15:30「二者択一」／18:30「取捨選択」）。チケット・ソロチェキ（10/10 23:59締切）・応援メッセージポストカードあり。天竺生地のイラスト解禁投稿 https://x.com/tenjikukiji/status/2103473180778348795 を引用",
+    url: "https://x.com/frecam2025_0306/status/2104439788191568330"
+  },
+  {
+    date: "2026.9.27",
+    label: "X",
+    text: "「一日に2個もクレープ食べた🤍」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2104008576729829754"
+  },
+  {
     date: "2026.9.25",
     label: "X",
     text: "「矢場とん！ご飯大盛りにした😋✨️」と写真付きで投稿",

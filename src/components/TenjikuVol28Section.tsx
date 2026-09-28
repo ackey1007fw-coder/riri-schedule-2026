@@ -11,6 +11,8 @@ import { VenueMap } from "./VenueMap";
 
 const ririPostUrl =
   "https://x.com/frecam2025_0306/status/2095174102634168752";
+const ririSep28PostUrl =
+  "https://x.com/frecam2025_0306/status/2104439788191568330";
 const organizerCastPostUrl =
   "https://x.com/tenjikukiji/status/2098699547707138361";
 const ticketUrl = "https://livepocket.jp/e/tenjiku28";
@@ -18,9 +20,9 @@ const messageCardUrl = "https://livepocket.jp/e/tenjiku28_message";
 const soloChekiUrl = "https://livepocket.jp/e/tenjiku28_solo";
 
 const dayShows = [
-  { label: "第一回", time: "12:00〜13:00" },
-  { label: "第二回", time: "15:30〜16:30" },
-  { label: "第三回", time: "18:30〜19:30" }
+  { label: "第一回「半知半解」", time: "12:00〜13:00" },
+  { label: "第二回「二者択一」", time: "15:30〜16:30" },
+  { label: "第三回「取捨選択」", time: "18:30〜19:30" }
 ];
 
 const sundayCast = [
@@ -59,6 +61,16 @@ export function TenjikuVol28Section() {
               decoding="async"
               className="block h-auto w-full object-contain"
             />
+            <img
+              {...getResponsiveImageProps(
+                "/images/gallery/g153.jpg",
+                "(min-width: 1024px) 42vw, 100vw"
+              )}
+              alt="白いレース襟のブラウス姿でほほえむ夏凪里季さんの写真入り告知。『天竺生地』vol.28、2026年10月11日（日）池袋西口GEKIBA。第1回「半知半解」、第2回「二者択一」、第3回「取捨選択」。チケット・ソロチェキ・応援メッセージポストカードの案内付き"
+              loading="lazy"
+              decoding="async"
+              className="block h-auto w-full border-t border-champagne/20 object-contain"
+            />
           </div>
 
           <div className="riri-card flex flex-col border-champagne/30 bg-white p-5 sm:p-7 lg:p-8">
@@ -78,7 +90,7 @@ export function TenjikuVol28Section() {
               里季さんの出演日
             </h3>
             <p className="mt-2 text-sm leading-7 text-ink/68">
-              里季さんは10月11日（日）の全3公演に出演します。各回の受付開始・客席開場は、開演の30分前です。
+              里季さんは10月11日（日）の全3公演に出演します。第1回「半知半解」、第2回「二者択一」、第3回「取捨選択」。各回の受付開始・客席開場は、開演の30分前です。
             </p>
 
             <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -155,7 +167,7 @@ export function TenjikuVol28Section() {
             </div>
 
             <p className="mt-6 leading-8 text-ink/72">
-              天竺生地は、出演者を「生地」と見立てて合わせることでひとつの作品を完成させる即興劇。チケットのほか、会場に掲示される応援メッセージポストカードと、当日受け取るソロチェキも予約できます。里季さん出演日分の受付は10月10日（土）23:59までです。
+              天竺生地は、出演者を「生地」と見立てて合わせることでひとつの作品を完成させる即興劇。チケットのほか、会場に掲示される応援メッセージポストカードと、当日受け取るソロチェキも予約できます。ソロチェキは事前予約で、締切は10月10日（土）23:59です。里季さん出演日分の受付は10月10日（土）23:59までです。
             </p>
 
             <div className="mt-auto flex flex-col gap-3 pt-7 sm:flex-row sm:flex-wrap">
@@ -184,6 +196,15 @@ export function TenjikuVol28Section() {
                 className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
               >
                 ソロチェキを予約する
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a
+                href={ririSep28PostUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+              >
+                9/28の出演告知を見る
                 <ExternalLink className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
