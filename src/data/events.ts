@@ -418,6 +418,7 @@ export const events: ScheduleEvent[] = [
     venue: "東京某所",
     image: "/images/gallery/g156.jpg",
     imageDisplay: "full",
+    galleryPurpose: "announcement",
     imageCredit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" },
     imageAlt: "第3回あゆどん大運動会の出演者告知。夏凪里季さんを含む出演者と、11月8日12:00〜16:00・東京某所の案内",
     gallery: [{ src: "/images/gallery/g157.jpg", alt: "第3回あゆどん大運動会の応援チケット案内。1枚2,000円、来場できない方も応援可能。高橋あゆみさんの写真入り", credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" } }],

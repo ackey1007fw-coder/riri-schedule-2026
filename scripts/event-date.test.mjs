@@ -5,6 +5,7 @@ import { createServer } from "vite";
 let server;
 let eventEndDate;
 let isEventPast;
+let isFeaturedReport;
 let events;
 
 before(async () => {
@@ -14,7 +15,7 @@ before(async () => {
     server: { middlewareMode: true },
     appType: "custom"
   });
-  ({ eventEndDate, isEventPast } = await server.ssrLoadModule("/src/lib/date.ts"));
+  ({ eventEndDate, isEventPast, isFeaturedReport } = await server.ssrLoadModule("/src/lib/date.ts"));
   ({ events } = await server.ssrLoadModule("/src/data/events.ts"));
 });
 
@@ -54,4 +55,18 @@ test("confirmed overall closing time and single-event fallback remain unchanged"
   assert.equal(eventEndDate({ ...single, occurrences: [] }).getTime(), new Date(single.startAt).getTime());
   const overall = { ...single, endAt: "2026-10-24T20:00:00+09:00", occurrences: [{ startAt: "2026-10-24T17:00:00+09:00" }] };
   assert.equal(eventEndDate(overall).getTime(), new Date(overall.endAt).getTime());
+});
+
+
+test("announcement flyers stay in the archive after the sports day, while reports remain featured", () => {
+  const event = events.find(({ id }) => id === "ayudon-sports-day-2026-11-08");
+  assert.ok(event);
+  for (const time of ["2026-11-08T16:00:01+09:00", "2026-11-09T12:00:00+09:00", "2026-12-08T16:00:00+09:00"]) {
+    const now = new Date(time);
+    assert.equal(isEventPast(event, now), true);
+    assert.equal(isFeaturedReport(event, now), false);
+  }
+  const report = events.find(({ id }) => id === "riri-nao-birthday-dinner-2026-08");
+  assert.ok(report);
+  assert.equal(isFeaturedReport(report, new Date("2026-08-13T12:00:00+09:00")), true);
 });

@@ -57,6 +57,8 @@ export type ScheduleEvent = {
   isNextFocus?: boolean;
   /** SNS投稿の開催後レポートなどで、カバー画像に加えて添える写真（任意） */
   gallery?: EventGalleryPhoto[];
+  /** 事前告知画像は開催後レポートとして扱わない */
+  galleryPurpose?: "announcement" | "report";
   /** SNS投稿本文をそのまま引用する場合（任意） */
   reportQuote?: string;
   /** 事実を追加しない範囲での短い補足コメント（任意・原文と区別して表示） */
