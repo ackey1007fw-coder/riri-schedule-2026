@@ -12,9 +12,15 @@ export type EventLink = {
   kind?: "ticket" | "stream" | "info" | "sns";
 };
 
+export type ImageCredit = {
+  label: string;
+  url: string;
+};
+
 export type EventGalleryPhoto = {
   src: string;
   alt: string;
+  credit?: ImageCredit;
 };
 
 export type EventOccurrence = {
@@ -41,6 +47,9 @@ export type ScheduleEvent = {
   image: string;
   /** カバー画像のalt（未指定時はtitleを使用） */
   imageAlt?: string;
+  /** 告知画像など、文字を含むカバーは全体表示する */
+  imageDisplay?: "full";
+  imageCredit?: ImageCredit;
   summary: string;
   badges: string[];
   links: EventLink[];
