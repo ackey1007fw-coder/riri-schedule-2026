@@ -129,11 +129,11 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
         )}
 
         {event.gallery && event.gallery.length > 0 && (
-          <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div className="mt-5 grid grid-cols-2 items-start gap-3 sm:grid-cols-3">
             {event.gallery.map((photo) => (
               <span
                 key={photo.src}
-                className="relative block aspect-[3/4] overflow-hidden border border-rosefog/20 bg-porcelain"
+                className="block overflow-hidden border border-rosefog/20 bg-porcelain"
               >
                 <img
                   {...getResponsiveImageProps(
@@ -143,7 +143,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
                   alt={photo.alt}
                   loading="lazy"
                   decoding="async"
-                  className="absolute inset-0 block h-full w-full object-cover"
+                  className="block h-auto w-full"
                 />
               </span>
             ))}
