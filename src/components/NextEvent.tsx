@@ -79,7 +79,7 @@ export function NextEvent({ event }: NextEventProps) {
                 event.image,
                 "(min-width: 1024px) 58vw, 100vw",
               )}
-              alt={event.title}
+              alt={event.imageAlt ?? event.title}
               className="block w-full object-cover object-top transition duration-700 hover:scale-[1.025] lg:absolute lg:inset-0 lg:h-full"
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(49,42,46,0.02),rgba(49,42,46,0.52))]" />
@@ -145,6 +145,11 @@ export function NextEvent({ event }: NextEventProps) {
                   </span>
                 </ExternalButton>
               )}
+              {event.links.filter((link) => link !== ticketLink).map((link) => (
+                <ExternalButton key={link.url} href={link.url} className="w-full sm:w-auto">
+                  {link.label}
+                </ExternalButton>
+              ))}
               {googleCalendarLinks(event).map((link) => (
                 <a
                   key={link.key}

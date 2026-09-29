@@ -414,12 +414,6 @@ export const events: ScheduleEvent[] = [
     category: "event",
     startAt: "2026-11-08T12:00:00+09:00",
     endAt: "2026-11-08T16:00:00+09:00",
-    occurrences: [
-      {
-        startAt: "2026-11-08T12:00:00+09:00",
-        endAt: "2026-11-08T16:00:00+09:00"
-      }
-    ],
     displayDate: "2026年11月8日（日）12:00〜16:00（11:30開場）",
     venue: "東京某所",
     image: "/images/riri-profile.jpg",
