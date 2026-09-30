@@ -318,8 +318,18 @@ const yabatonOmoriPhoto: GalleryPhoto = {
   alt: "矢場とんの店内で、大盛りの白いご飯と味噌カツ、味噌汁を前に、両手でご飯を指さして笑う夏凪里季さん。ネイビーのトップスにデニム。背景は街並みと野球のユニフォームが並ぶモノクロ写真（X『矢場とん！ご飯大盛りにした』より）"
 };
 
+// 2026.9.29 07:27 JST 本人X「やっとさつまいもフラペ飲めた🍠💜」。本人写真のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2104699548216242600
+// 指定投稿の画像を取得する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
+const sweetPotatoFrappePhoto: GalleryPhoto = {
+  src: "/images/gallery/g155.jpg",
+  alt: "店内の茶色い座席で、ホイップとオレンジ色のソースがのったスターバックスの飲み物を顔の横に掲げる夏凪里季さん。グレーのリブニットにデニム、白いシュシュで長い髪を結んでいる（X『やっとさつまいもフラペ飲めた』より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.29 07:27 JST 本人X「やっとさつまいもフラペ飲めた🍠💜」
+  sweetPotatoFrappePhoto,
   // 2026.9.28 本人X『天竺生地』vol.28出演告知
   tenjikuVol28AnnouncePhoto,
   // 2026.9.27 本人X「一日に2個もクレープ食べた🤍」
@@ -566,8 +576,8 @@ export const galleryUpdate: {
   url: string;
   linkLabel?: string;
 } = {
-  date: "2026.9.28",
+  date: "2026.9.29",
   platform: "X",
-  note: "『天竺生地』vol.28の出演告知画像と『一日に2個もクレープ食べた』の写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2104439788191568330"
+  note: "『やっとさつまいもフラペ飲めた』の写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2104699548216242600"
 };
