@@ -42,7 +42,7 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
         <div className="absolute left-0 top-0 z-10 h-full w-1 bg-champagne" />
       )}
 
-      <div className={`relative bg-porcelain ${hasReportContent ? "sm:aspect-[3/4]" : ""}`}>
+      <div className={`relative bg-porcelain ${hasReportContent && event.imageDisplay !== "full" ? "sm:aspect-[3/4]" : ""}`}>
         <img
           {...getResponsiveImageProps(
             event.image,
@@ -56,12 +56,17 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
           loading="lazy"
           decoding="async"
           className={`block w-full object-cover object-top ${
-            hasReportContent ? "sm:h-full" : "sm:absolute sm:inset-0 sm:h-full"
+            event.imageDisplay === "full" ? "h-auto" : hasReportContent ? "sm:h-full" : "sm:absolute sm:inset-0 sm:h-full"
           }`}
         />
       </div>
 
       <div className={`${compact ? "p-5" : "p-6"} flex flex-col`}>
+        {event.imageCredit && (
+          <a href={event.imageCredit.url} target="_blank" rel="noopener noreferrer" className="mb-4 text-xs text-ink/60 underline underline-offset-2">
+            出典：{event.imageCredit.label}
+          </a>
+        )}
         <div className="mb-4 flex flex-wrap gap-2">
           {isNext && <Badge strong>NEXT</Badge>}
           <Badge category={event.category}>{meta.label}</Badge>
@@ -129,11 +134,11 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
         )}
 
         {event.gallery && event.gallery.length > 0 && (
-          <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div className="mt-5 grid grid-cols-2 items-start gap-3 sm:grid-cols-3">
             {event.gallery.map((photo) => (
               <span
                 key={photo.src}
-                className="relative block aspect-[3/4] overflow-hidden border border-rosefog/20 bg-porcelain"
+                className="block overflow-hidden border border-rosefog/20 bg-porcelain"
               >
                 <img
                   {...getResponsiveImageProps(
@@ -143,8 +148,13 @@ export function EventCard({ event, isNext = false, compact = false }: EventCardP
                   alt={photo.alt}
                   loading="lazy"
                   decoding="async"
-                  className="absolute inset-0 block h-full w-full object-cover"
+                  className="block h-auto w-full"
                 />
+                {photo.credit && (
+                  <a href={photo.credit.url} target="_blank" rel="noopener noreferrer" className="block p-2 text-xs text-ink/60 underline underline-offset-2">
+                    出典：{photo.credit.label}
+                  </a>
+                )}
               </span>
             ))}
           </div>

@@ -73,13 +73,18 @@ export function NextEvent({ event }: NextEventProps) {
           id={`event-${event.id}`}
           className="zine-panel scroll-mt-24 grid overflow-hidden border border-champagne/70 bg-white lg:grid-cols-[1.12fr_0.88fr]"
         >
+          {event.imageDisplay === "full" ? (
+            <div className="bg-porcelain">
+              <img {...getResponsiveImageProps(event.image, "(min-width: 1024px) 58vw, 100vw")} alt={event.imageAlt ?? event.title} className="block h-auto w-full" />
+            </div>
+          ) : (
           <div className="relative overflow-hidden bg-ink lg:min-h-[560px]">
             <img
               {...getResponsiveImageProps(
                 event.image,
                 "(min-width: 1024px) 58vw, 100vw",
               )}
-              alt={event.title}
+              alt={event.imageAlt ?? event.title}
               className="block w-full object-cover object-top transition duration-700 hover:scale-[1.025] lg:absolute lg:inset-0 lg:h-full"
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(49,42,46,0.02),rgba(49,42,46,0.52))]" />
@@ -97,8 +102,15 @@ export function NextEvent({ event }: NextEventProps) {
             </div>
           </div>
 
+          )}
+
           <div className="flex flex-col justify-between p-6 sm:p-8 lg:p-10">
             <div>
+              {event.imageCredit && (
+                <a href={event.imageCredit.url} target="_blank" rel="noopener noreferrer" className="mb-4 block text-xs text-ink/60 underline underline-offset-2">
+                  出典：{event.imageCredit.label}
+                </a>
+              )}
               <div className="mb-6 flex flex-wrap gap-2">
                 <Badge strong>NEXT</Badge>
                 <Badge category={event.category}>{meta.label}</Badge>
@@ -145,6 +157,11 @@ export function NextEvent({ event }: NextEventProps) {
                   </span>
                 </ExternalButton>
               )}
+              {event.links.filter((link) => link !== ticketLink).map((link) => (
+                <ExternalButton key={link.url} href={link.url} className="w-full sm:w-auto">
+                  {link.label}
+                </ExternalButton>
+              ))}
               {googleCalendarLinks(event).map((link) => (
                 <a
                   key={link.key}

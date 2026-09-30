@@ -12,9 +12,15 @@ export type EventLink = {
   kind?: "ticket" | "stream" | "info" | "sns";
 };
 
+export type ImageCredit = {
+  label: string;
+  url: string;
+};
+
 export type EventGalleryPhoto = {
   src: string;
   alt: string;
+  credit?: ImageCredit;
 };
 
 export type EventOccurrence = {
@@ -41,6 +47,9 @@ export type ScheduleEvent = {
   image: string;
   /** カバー画像のalt（未指定時はtitleを使用） */
   imageAlt?: string;
+  /** 告知画像など、文字を含むカバーは全体表示する */
+  imageDisplay?: "full";
+  imageCredit?: ImageCredit;
   summary: string;
   badges: string[];
   links: EventLink[];
@@ -48,6 +57,8 @@ export type ScheduleEvent = {
   isNextFocus?: boolean;
   /** SNS投稿の開催後レポートなどで、カバー画像に加えて添える写真（任意） */
   gallery?: EventGalleryPhoto[];
+  /** 事前告知画像は開催後レポートとして扱わない */
+  galleryPurpose?: "announcement" | "report";
   /** SNS投稿本文をそのまま引用する場合（任意） */
   reportQuote?: string;
   /** 事実を追加しない範囲での短い補足コメント（任意・原文と区別して表示） */

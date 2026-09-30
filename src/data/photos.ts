@@ -328,6 +328,17 @@ const sweetPotatoFrappePhoto: GalleryPhoto = {
 
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  // 2026.9.29 11:26 JST 本人Xの出演まとめ。依頼に基づき告知画像2枚を原本のまま取得。
+  {
+    src: "/images/gallery/g156.jpg",
+    alt: "第3回あゆどん大運動会の出演者告知。高橋あゆみさん、響・長友光弘さん、夏凪里季さんらの写真と、11月8日（日）12:00〜16:00・東京某所の案内",
+    credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" }
+  },
+  {
+    src: "/images/gallery/g157.jpg",
+    alt: "第3回あゆどん大運動会の応援チケット案内。1枚2,000円、当日来場できない方も応援可能。赤と黄色の背景に高橋あゆみさんの写真",
+    credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" }
+  },
   // 2026.9.29 07:27 JST 本人X「やっとさつまいもフラペ飲めた🍠💜」
   sweetPotatoFrappePhoto,
   // 2026.9.28 本人X『天竺生地』vol.28出演告知
@@ -578,6 +589,6 @@ export const galleryUpdate: {
 } = {
   date: "2026.9.29",
   platform: "X",
-  note: "『やっとさつまいもフラペ飲めた』の写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2104699548216242600"
+  note: "『第3回あゆどん大運動会』の出演者告知と応援チケット案内の画像を追加",
+  url: "https://x.com/frecam2025_0306/status/2104759725665714184"
 };
