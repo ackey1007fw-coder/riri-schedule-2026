@@ -408,6 +408,43 @@ export const events: ScheduleEvent[] = [
     isImportant: true
   },
   {
+    id: "ayudon-sports-day-2026-11-08",
+    title: "第3回あゆどん大運動会",
+    shortTitle: "あゆどん大運動会",
+    category: "event",
+    startAt: "2026-11-08T12:00:00+09:00",
+    endAt: "2026-11-08T16:00:00+09:00",
+    displayDate: "2026年11月8日（日）12:00〜16:00（11:30開場）",
+    venue: "東京某所",
+    image: "/images/gallery/g156.jpg",
+    imageDisplay: "full",
+    galleryPurpose: "announcement",
+    imageCredit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" },
+    imageAlt: "第3回あゆどん大運動会の出演者告知。夏凪里季さんを含む出演者と、11月8日12:00〜16:00・東京某所の案内",
+    gallery: [{ src: "/images/gallery/g157.jpg", alt: "第3回あゆどん大運動会の応援チケット案内。1枚2,000円、来場できない方も応援可能。高橋あゆみさんの写真入り", credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" } }],
+    summary:
+      "高橋あゆみさん主催の第3回あゆどん大運動会に出演。11月8日（日）12:00〜16:00、11:30開場。会場は東京某所で、詳細は購入者に主催から案内されます。来場は完全予約制。本人の出演まとめでは「遠隔応援チケもあります✨️」と案内。会場へ行けない方も、応援チケットで応援できます。来場・応援チケットの詳細は主催の販売ページをご確認ください。",
+    badges: ["運動会", "完全予約制", "応援チケットあり"],
+    links: [
+      {
+        label: "来場チケット・開催詳細",
+        url: "https://ayudon.base.shop/items/153484411",
+        kind: "ticket"
+      },
+      {
+        label: "応援チケット（来場できない方も）",
+        url: "https://ayudon.base.shop/items/153487153",
+        kind: "info"
+      },
+      {
+        label: "本人の出演まとめ（X）",
+        url: "https://x.com/frecam2025_0306/status/2104759725665714184",
+        kind: "info"
+      }
+    ],
+    isImportant: true
+  },
+  {
     id: "riri-nao-birthday-dinner-2026-08",
     title: "なおちゃんと過ごした、お祝いディナー🥹🩷️",
     shortTitle: "なおちゃんとのお祝いディナー",
