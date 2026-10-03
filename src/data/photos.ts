@@ -326,8 +326,17 @@ const sweetPotatoFrappePhoto: GalleryPhoto = {
   alt: "店内の茶色い座席で、ホイップとオレンジ色のソースがのったスターバックスの飲み物を顔の横に掲げる夏凪里季さん。グレーのリブニットにデニム、白いシュシュで長い髪を結んでいる（X『やっとさつまいもフラペ飲めた』より）"
 };
 
+// 2026.10.3 11:13 JST 本人X「青学から徒歩3分くらいのお店、空きコマに行けた幸(^-^)/」。本人写真のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2106205883349008812
+// 指定投稿の写真を掲載する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
+const campusLunchPhoto: GalleryPhoto = {
+  src: "/images/gallery/g158.jpg",
+  alt: "レンガの壁と緑の植物を背景に、ハンバーガーとフライドポテトがのった白い皿を両手で持って笑う夏凪里季さん。黒いトップス姿で屋外の席に座っている（2026年10月3日の本人X投稿より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  campusLunchPhoto,
   // 2026.9.29 11:26 JST 本人Xの出演まとめ。依頼に基づき告知画像2枚を原本のまま取得。
   {
     src: "/images/gallery/g156.jpg",
@@ -587,8 +596,8 @@ export const galleryUpdate: {
   url: string;
   linkLabel?: string;
 } = {
-  date: "2026.9.29",
+  date: "2026.10.3",
   platform: "X",
-  note: "『第3回あゆどん大運動会』の出演者告知と応援チケット案内の画像を追加",
-  url: "https://x.com/frecam2025_0306/status/2104759725665714184"
+  note: "空きコマに訪れたお店で、ハンバーガーとフライドポテトの皿を持つ写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2106205883349008812"
 };
