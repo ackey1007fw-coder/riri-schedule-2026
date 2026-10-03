@@ -334,8 +334,17 @@ const campusLunchPhoto: GalleryPhoto = {
   alt: "レンガの壁と緑の植物を背景に、ハンバーガーとフライドポテトがのった白い皿を両手で持って笑う夏凪里季さん。黒いトップス姿で屋外の席に座っている（2026年10月3日の本人X投稿より）"
 };
 
+// 2026.10.4 06:19 JST 本人Xのチキンとアボカドのエピソード。本人写真のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2106494249520787508
+// 指定投稿の写真を掲載する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
+const avocadoLunchPhoto: GalleryPhoto = {
+  src: "/images/gallery/g159.jpg",
+  alt: "えんじ色のパーカーとデニム姿でソファに座り、ナイフとフォークを持って笑う夏凪里季さん。手前のテーブルにアボカドをのせた料理の器とトーストの皿がある（2026年10月4日の本人X投稿より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  avocadoLunchPhoto,
   campusLunchPhoto,
   // 2026.9.29 11:26 JST 本人Xの出演まとめ。依頼に基づき告知画像2枚を原本のまま取得。
   {
@@ -596,8 +605,8 @@ export const galleryUpdate: {
   url: string;
   linkLabel?: string;
 } = {
-  date: "2026.10.3",
+  date: "2026.10.4",
   platform: "X",
-  note: "空きコマに訪れたお店で、ハンバーガーとフライドポテトの皿を持つ写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2106205883349008812"
+  note: "ナイフとフォークを持ち、アボカドをのせた料理を前に笑う写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2106494249520787508"
 };
