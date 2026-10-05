@@ -342,8 +342,17 @@ const avocadoLunchPhoto: GalleryPhoto = {
   alt: "えんじ色のパーカーとデニム姿でソファに座り、ナイフとフォークを持って笑う夏凪里季さん。手前のテーブルにアボカドをのせた料理の器とトーストの皿がある（2026年10月4日の本人X投稿より）"
 };
 
+// 2026.10.5 08:58 JST 本人X「どーーこだ！？」。本人写真のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2106896786174664898
+// 指定投稿の写真を掲載する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
+const whereIsThisPhoto: GalleryPhoto = {
+  src: "/images/gallery/g160.jpg",
+  alt: "紺色のジップアップのトップスに白い肩掛けバッグを身につけ、髪を二つの三つ編みにした夏凪里季さん。小さな絵柄入りの紙を顔の横に持って笑っている。背景に石段、赤い柵、瓦屋根の建物と木々が見える（2026年10月5日の本人X投稿より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  whereIsThisPhoto,
   avocadoLunchPhoto,
   campusLunchPhoto,
   // 2026.9.29 11:26 JST 本人Xの出演まとめ。依頼に基づき告知画像2枚を原本のまま取得。
@@ -605,8 +614,8 @@ export const galleryUpdate: {
   url: string;
   linkLabel?: string;
 } = {
-  date: "2026.10.4",
+  date: "2026.10.5",
   platform: "X",
-  note: "ナイフとフォークを持ち、アボカドをのせた料理を前に笑う写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2106494249520787508"
+  note: "「どーーこだ！？」の投稿から、小さな絵柄入りの紙を顔の横に持つ写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2106896786174664898"
 };
