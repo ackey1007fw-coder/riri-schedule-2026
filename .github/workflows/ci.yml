@@ -4,8 +4,8 @@ name: CI
 # Site Identity Guard / Image Overwrite Guard は既存 workflow のまま（ここでは二重実行しない）。
 #
 # パッケージマネージャは pnpm（README と追跡中の pnpm-lock.yaml。package-lock.json は gitignore）。
-# Node 22 は、このリポジトリの既存 GitHub Actions が使っている ubuntu-24.04 ランナーの
-# 既定 Node.js（22.23.2、image 20260810.271）に合わせる。
+# CI は ubuntu-24.04 に固定し、既存の検証環境を維持する。
+# Node 22 は既存ランナーに合わせて選定した。実行時は actions/setup-node で明示指定する。
 # sharp@0.35.1（lockfile）の engines は node >=20.9.0。
 
 on:
@@ -15,7 +15,7 @@ on:
 jobs:
   verify:
     name: typecheck-and-build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
