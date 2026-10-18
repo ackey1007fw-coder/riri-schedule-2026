@@ -7,6 +7,7 @@ const navItems = [
   { label: "次の出演", href: "#next", id: "next" },
   { label: "ピッパラの樹", href: "#pippara-no-ki", id: "pippara-no-ki" },
   { label: "アイトキ", href: "#aitoki-homin", id: "aitoki-homin", desktopOnly: true },
+  { label: "月を跨ぐ", href: "#tsuki-wo-matagu", id: "tsuki-wo-matagu", desktopOnly: true },
   { label: "天竺生地", href: "#tenjiku-vol28", id: "tenjiku-vol28", desktopOnly: true },
   { label: "スケジュール", href: "#schedule", id: "schedule" },
   { label: "これまでの歩み", href: "#highlights", id: "highlights", desktopOnly: true },
@@ -74,7 +75,7 @@ export function SiteHeader({ socialLinks }: SiteHeaderProps) {
               href={item.href}
               aria-current={activeSection === item.id ? "true" : undefined}
               className={`transition-colors ${
-                "desktopOnly" in item && item.desktopOnly ? "hidden lg:inline" : ""
+                "desktopOnly" in item && item.desktopOnly ? "hidden xl:inline" : ""
               } ${
                 activeSection === item.id
                   ? "text-champagneInk"

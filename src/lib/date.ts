@@ -5,7 +5,12 @@ export const toDateKey = (iso: string) => iso.slice(0, 10);
 export const eventStartDate = (event: ScheduleEvent) => new Date(event.startAt);
 
 export const eventEndDate = (event: ScheduleEvent) =>
-  new Date(event.endAt ?? event.startAt);
+  new Date(Math.max(
+    new Date(event.endAt ?? event.startAt).getTime(),
+    ...(event.occurrences ?? []).map((occurrence) =>
+      new Date(occurrence.endAt ?? occurrence.startAt).getTime(),
+    ),
+  ));
 
 export const isEventPast = (event: ScheduleEvent, now = new Date()) =>
   eventEndDate(event).getTime() < now.getTime();
@@ -15,7 +20,8 @@ export const isEventPast = (event: ScheduleEvent, now = new Date()) =>
 const FEATURED_REPORT_DAYS = 30;
 
 export const isFeaturedReport = (event: ScheduleEvent, now = new Date()) => {
-  const hasGallery = Boolean(event.gallery && event.gallery.length > 0);
+  const hasGallery = event.galleryPurpose !== "announcement" &&
+    Boolean(event.gallery && event.gallery.length > 0);
   if (!hasGallery && !event.reportQuote) return false;
   const elapsedDays =
     (now.getTime() - eventEndDate(event).getTime()) / (1000 * 60 * 60 * 24);

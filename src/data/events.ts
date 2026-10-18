@@ -287,17 +287,17 @@ export const events: ScheduleEvent[] = [
       {
         startAt: "2026-10-11T12:00:00+09:00",
         endAt: "2026-10-11T13:00:00+09:00",
-        label: "第一回",
+        label: "第一回「半知半解」",
       },
       {
         startAt: "2026-10-11T15:30:00+09:00",
         endAt: "2026-10-11T16:30:00+09:00",
-        label: "第二回",
+        label: "第二回「二者択一」",
       },
       {
         startAt: "2026-10-11T18:30:00+09:00",
         endAt: "2026-10-11T19:30:00+09:00",
-        label: "第三回",
+        label: "第三回「取捨選択」",
       },
     ],
     displayDate: "2026年10月11日（日）12:00／15:30／18:30",
@@ -305,8 +305,14 @@ export const events: ScheduleEvent[] = [
     image: "/images/tenjiku-vol28-flyer.jpg",
     imageAlt:
       "『天竺生地』vol.28の公演フライヤー。2026年10月10日〜11日、池袋西口GEKIBA。MCは斎藤このむと緑川睦",
+    gallery: [
+      {
+        src: "/images/gallery/g153.jpg",
+        alt: "白いレース襟のブラウス姿でほほえむ夏凪里季さんの写真入り告知。『天竺生地』vol.28、2026年10月11日（日）池袋西口GEKIBA。第1回「半知半解」、第2回「二者択一」、第3回「取捨選択」。チケット・ソロチェキ・応援メッセージポストカードの案内付き（X『出演情報』より）"
+      }
+    ],
     summary:
-      "即興劇ユニット『天竺生地』vol.28の10月11日（日）全3公演に出演。第一回12:00、第二回15:30、第三回18:30、会場は池袋西口GEKIBAです。チケット、応援メッセージポストカード、ソロチェキを受付中です。",
+      "即興劇ユニット『天竺生地』vol.28の10月11日（日）全3公演に出演。第一回12:00「半知半解」、第二回15:30「二者択一」、第三回18:30「取捨選択」。会場は池袋西口GEKIBAです。チケット、応援メッセージポストカード、ソロチェキを受付中です。ソロチェキは事前予約で、締切は10月10日（土）23:59です。",
     badges: ["舞台", "即興劇", "全3公演", "予約受付中"],
     links: [
       {
@@ -325,6 +331,11 @@ export const events: ScheduleEvent[] = [
         kind: "info"
       },
       {
+        label: "本人の出演告知（9/28）",
+        url: "https://x.com/frecam2025_0306/status/2104439788191568330",
+        kind: "sns"
+      },
+      {
         label: "夏凪里季さんの出演告知",
         url: "https://x.com/frecam2025_0306/status/2095174102634168752",
         kind: "sns"
@@ -338,6 +349,97 @@ export const events: ScheduleEvent[] = [
         label: "天竺生地 X",
         url: "https://x.com/tenjikukiji",
         kind: "sns"
+      }
+    ],
+    isImportant: true
+  },
+  {
+    id: "tsuki-wo-matagu-vol20-2026-10",
+    title: "月シア上映イベント『月を跨ぐ』vol.20",
+    shortTitle: "月を跨ぐ vol.20",
+    subtitle: "アイトキホーミンを一緒に見て、裏話を語る",
+    category: "event",
+    startAt: "2026-10-24T13:00:00+09:00",
+    dates: ["2026-10-24"],
+    occurrences: [
+      {
+        startAt: "2026-10-24T13:00:00+09:00",
+        label: "昼の部"
+      },
+      {
+        startAt: "2026-10-24T17:00:00+09:00",
+        label: "夕方の部"
+      }
+    ],
+    displayDate: "2026年10月24日（土）昼の部13:00／夕方の部17:00",
+    venue: "下北沢RBLCAFE",
+    image: "/images/tsuki-wo-matagu-vol20-flyer.jpg",
+    imageAlt:
+      "月シア上映イベント『月を跨ぐ』vol.20のフライヤー。2026年10月24日（土）、下北沢RBLCAFE。昼の部13:00、夕方の部17:00",
+    summary:
+      "月シア上映イベント『月を跨ぐvol.20』に、昼の部（13:00）・夕方の部（17:00）の両部へ出演。月シア別冊第2集『I'm talking about Homin'』の全5話をキャストと一緒に見て、裏話を語るトークショーです。会場は下北沢RBLCAFE。チケットは販売中です。お席数が限られているため、本人も早めの予約を案内しています。来場者限定で、キャスト全員のサイン入りA1ポスター抽選と、イベント出演者の撮り下ろしサイン入りチェキのプレゼント企画もあります。",
+    badges: ["上映イベント", "トークショー", "昼・夕両部出演", "チケット販売中"],
+    reportQuote:
+      "【🌟出演情報🌟】\n#月シア 上映イベント『月を跨ぐvol20』出演いたします！\n\nアイトキホーミンの収録回を一緒に見ようというイベントです！\n私たちが副音声みたいな感じでお話するよ！楽しみだねっっ！プレゼント企画もあるみたい✨️\n\n舞台には来れなかったけどこの日なら都合合いそうという方や、もう1回みたい！見れてない作品みたい！裏話聞きたい！という方などなどお待ちしております🤲🏻\n\n🗓10月24日(土)📍下北沢RBLCAFE\n\n昼の部(13時回)夕方の部(17時回)どっちもいるよ✨️\n\nお席限られてるので早めがおすすめ！(9/21の18時からチケ発です)",
+    reportNote:
+      "本人X（2026年9月19日）の出演告知です。チケットは販売中です。",
+    links: [
+      {
+        label: "チケット販売ページ（販売中）",
+        url: "https://livepocket.jp/t/20matagu",
+        kind: "ticket"
+      },
+      {
+        label: "夏凪里季さんの出演告知",
+        url: "https://x.com/frecam2025_0306/status/2101244304979329158",
+        kind: "sns"
+      },
+      {
+        label: "制作の告知（KAIGYAC STAGE）",
+        url: "https://x.com/kaigyacstage/status/2101234845632364882",
+        kind: "sns"
+      },
+      {
+        label: "KAIGYAC STAGE X",
+        url: "https://x.com/kaigyacstage",
+        kind: "sns"
+      }
+    ],
+    isImportant: true
+  },
+  {
+    id: "ayudon-sports-day-2026-11-08",
+    title: "第3回あゆどん大運動会",
+    shortTitle: "あゆどん大運動会",
+    category: "event",
+    startAt: "2026-11-08T12:00:00+09:00",
+    endAt: "2026-11-08T16:00:00+09:00",
+    displayDate: "2026年11月8日（日）12:00〜16:00（11:30開場）",
+    venue: "東京某所",
+    image: "/images/gallery/g156.jpg",
+    imageDisplay: "full",
+    galleryPurpose: "announcement",
+    imageCredit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" },
+    imageAlt: "第3回あゆどん大運動会の出演者告知。夏凪里季さんを含む出演者と、11月8日12:00〜16:00・東京某所の案内",
+    gallery: [{ src: "/images/gallery/g157.jpg", alt: "第3回あゆどん大運動会の応援チケット案内。1枚2,000円、来場できない方も応援可能。高橋あゆみさんの写真入り", credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" } }],
+    summary:
+      "高橋あゆみさん主催の第3回あゆどん大運動会に出演。11月8日（日）12:00〜16:00、11:30開場。会場は東京某所で、詳細は購入者に主催から案内されます。来場は完全予約制。本人の出演まとめでは「遠隔応援チケもあります✨️」と案内。会場へ行けない方も、応援チケットで応援できます。来場・応援チケットの詳細は主催の販売ページをご確認ください。",
+    badges: ["運動会", "完全予約制", "応援チケットあり"],
+    links: [
+      {
+        label: "来場チケット・開催詳細",
+        url: "https://ayudon.base.shop/items/153484411",
+        kind: "ticket"
+      },
+      {
+        label: "応援チケット（来場できない方も）",
+        url: "https://ayudon.base.shop/items/153487153",
+        kind: "info"
+      },
+      {
+        label: "本人の出演まとめ（X）",
+        url: "https://x.com/frecam2025_0306/status/2104759725665714184",
+        kind: "info"
       }
     ],
     isImportant: true

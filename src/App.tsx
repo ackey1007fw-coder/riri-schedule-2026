@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { AitokiHominSection } from "./components/AitokiHominSection";
 import { TenjikuVol28Section } from "./components/TenjikuVol28Section";
+import { TsukiWoMataguVol20Section } from "./components/TsukiWoMataguVol20Section";
 import { BirthdayBanner } from "./components/BirthdayBanner";
 import { BirthdayCelebration } from "./components/BirthdayCelebration";
 import { BirthdayCountdown } from "./components/BirthdayCountdown";
@@ -130,6 +131,9 @@ function App() {
         </SectionReveal>
         <SectionReveal>
           <AitokiHominSection />
+        </SectionReveal>
+        <SectionReveal>
+          <TsukiWoMataguVol20Section />
         </SectionReveal>
         <SectionReveal>
           <TenjikuVol28Section />
