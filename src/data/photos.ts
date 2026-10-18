@@ -350,8 +350,17 @@ const whereIsThisPhoto: GalleryPhoto = {
   alt: "紺色のジップアップのトップスに白い肩掛けバッグを身につけ、髪を二つの三つ編みにした夏凪里季さん。小さな絵柄入りの紙を顔の横に持って笑っている。背景に石段、赤い柵、瓦屋根の建物と木々が見える（2026年10月5日の本人X投稿より）"
 };
 
+// 2026.10.6 06:26 JST 本人X「寿司！！なんのネタがすき？」。本人写真のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2107220785555234999
+// 指定された1投稿1枚の単発取得。元投稿画面と写真を目視確認済み。
+const sushiPhoto: GalleryPhoto = {
+  src: "/images/gallery/g161.jpg",
+  alt: "紺色のトップスを着た夏凪里季さんが、目を閉じて笑いながら、握り寿司と軍艦巻きの皿を一皿ずつ持っている。背景に木目の壁、手前に木のテーブルが見える（2026年10月6日の本人X投稿より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  sushiPhoto,
   whereIsThisPhoto,
   avocadoLunchPhoto,
   campusLunchPhoto,
@@ -614,8 +623,8 @@ export const galleryUpdate: {
   url: string;
   linkLabel?: string;
 } = {
-  date: "2026.10.5",
+  date: "2026.10.6",
   platform: "X",
-  note: "「どーーこだ！？」の投稿から、小さな絵柄入りの紙を顔の横に持つ写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2106896786174664898"
+  note: "「寿司！！なんのネタがすき？」の投稿から、寿司の皿を持つ写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2107220785555234999"
 };

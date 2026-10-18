@@ -8,6 +8,13 @@ export type NewsItem = {
 };
 
 export const news: NewsItem[] = [
+  // 2026.10.6 06:26 JST 本人X。元投稿の日時・本文・写真1枚を実画面で確認。
+  {
+    date: "2026.10.6",
+    label: "X",
+    text: "「寿司！！なんのネタがすき？」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2107220785555234999"
+  },
   {
     date: "2026.10.5",
     label: "X",
