@@ -4,9 +4,215 @@ export type NewsItem = {
   label: string; // 出どころ 例: "X" / "Instagram" / "お知らせ"
   text: string;
   url: string;
+  linkLabel?: string; // 元SNS以外の保存先へ案内するときの表示文言
 };
 
 export const news: NewsItem[] = [
+  {
+    date: "2026.10.5",
+    label: "X",
+    text: "「どーーこだ！？」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2106896786174664898"
+  },
+  {
+    date: "2026.10.4",
+    label: "X",
+    text: "チキンを食べた際、写真を撮るために友達のアボカドを借りたエピソードを写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2106494249520787508"
+  },
+  {
+    date: "2026.10.3",
+    label: "X",
+    text: "「青学から徒歩3分くらいのお店、空きコマに行けた幸(^-^)/」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2106205883349008812"
+  },
+  {
+    date: "2026.9.29",
+    label: "X",
+    text: "出演まとめで11/8（日）『あゆどん運動会』への出演を告知。12:00〜16:00、東京某所。「遠隔応援チケもあります✨️」と案内。",
+    url: "https://x.com/frecam2025_0306/status/2104759725665714184"
+  },
+  {
+    date: "2026.9.29",
+    label: "X",
+    text: "「やっとさつまいもフラペ飲めた🍠💜」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2104699548216242600"
+  },
+  {
+    date: "2026.9.28",
+    label: "X",
+    text: "『天竺生地』vol.28の出演を告知。10/11（日）池袋西口GEKIBA、全3公演（12:00「半知半解」／15:30「二者択一」／18:30「取捨選択」）。チケット・ソロチェキ（10/10 23:59締切）・応援メッセージポストカードあり。天竺生地のイラスト解禁投稿 https://x.com/tenjikukiji/status/2103473180778348795 を引用",
+    url: "https://x.com/frecam2025_0306/status/2104439788191568330"
+  },
+  {
+    date: "2026.9.27",
+    label: "X",
+    text: "「一日に2個もクレープ食べた🤍」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2104008576729829754"
+  },
+  {
+    date: "2026.9.25",
+    label: "X",
+    text: "「矢場とん！ご飯大盛りにした😋✨️」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2103244907800649999"
+  },
+  {
+    date: "2026.9.24",
+    label: "X",
+    text: "「徒歩よりも車よりもチャリがすき」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2102869111386558788"
+  },
+  {
+    date: "2026.9.23",
+    label: "X",
+    text: "「露出と明るさ変えただけで」と、明るさを比べる写真2枚を投稿",
+    url: "https://x.com/frecam2025_0306/status/2102581603189010785"
+  },
+  {
+    date: "2026.9.22",
+    label: "X",
+    text: "「朝はパン派？ごはん派？」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2102153147879919882"
+  },
+  {
+    date: "2026.9.21",
+    label: "X",
+    text: "『月を跨ぐ vol.20』チケット発売開始。1部・2部どちらも出演し、「お席少ないです」と案内。チケット https://livepocket.jp/t/20matagu",
+    url: "https://x.com/frecam2025_0306/status/2101970906658783484"
+  },
+  {
+    date: "2026.9.21",
+    label: "X",
+    text: "「シルバーウィークENJOYしてる？」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2101829630894456910"
+  },
+  {
+    date: "2026.9.20",
+    label: "X",
+    text: "「今さら夏ディズニー投稿は許されない？」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2101424453523767699"
+  },
+  {
+    date: "2026.9.19",
+    label: "X",
+    text: "「#月シア 上映イベント『月を跨ぐvol20』出演いたします！」10月24日（土）下北沢RBLCAFE。昼の部13:00・夕方の部17:00どちらも出演。チケット販売は9/21 18:00から https://livepocket.jp/t/20matagu",
+    url: "https://x.com/frecam2025_0306/status/2101244304979329158"
+  },
+  {
+    date: "2026.9.19",
+    label: "X",
+    text: "「ホイップもりもりパンケーキ🥞」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2101091051188699341"
+  },
+  {
+    date: "2026.9.18",
+    label: "X",
+    text: "「旅に出ます🚃」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2100692267787018739"
+  },
+  {
+    date: "2026.9.17",
+    label: "X",
+    text: "「#月シア #アイトキ ツーショたち📸ありがとうございます🥰」と、ツーショット写真4枚を投稿",
+    url: "https://x.com/frecam2025_0306/status/2100416833283395875"
+  },
+  {
+    date: "2026.9.13",
+    label: "X",
+    text: "「#アイトキ」本日12:00回。当日券が若干あり、開場11:40・当日券販売11:30と案内。西荻窪・遊空間がざびぃ。出演は「れんあいじょうず」「風に吹かれて」",
+    url: "https://x.com/frecam2025_0306/status/2098930122145591351"
+  },
+  {
+    date: "2026.9.12",
+    label: "Instagram",
+    text: "「公演2日目⭐」のStory。『I'm talking about Homin'』公演2日目の様子と、以降の公演チケットを案内。Short Movieに動画を保存",
+    url: "https://riri-schedule-2026.vercel.app/#clips",
+    linkLabel: "Short Movieで見る"
+  },
+  {
+    date: "2026.9.12",
+    label: "X",
+    text: "『本日2ステ目！』A sideは12:00開演。当日券あり、開場11:40・当日券販売11:30と案内",
+    url: "https://x.com/frecam2025_0306/status/2098561013679624620"
+  },
+  {
+    date: "2026.9.11",
+    label: "X",
+    text: "「#アイトキ #月シア ついにA班初日✨️ 当日券あるよ！19時から西荻窪で待ってます🤲🏻(開場は18時40分！)」19:00開演・西荻窪、開場18:40。翌日以降のチケットは https://livepocket.jp/t/aitokihomin",
+    url: "https://x.com/frecam2025_0306/status/2098201505715376507"
+  },
+  {
+    date: "2026.9.10",
+    label: "KAIGYAC STAGE X",
+    text: "月シア別冊第2集『I'm talking about Homin'』の「おすすめシーン繋ぎリレー」がスタート。アイトキキャストが個人的なおすすめシーンをつなぐ動画に、夏凪里季さんも登場",
+    url: "https://x.com/kaigyacstage/status/2098018651362168990"
+  },
+  {
+    date: "2026.9.10",
+    label: "X",
+    text: "「君と夏の終わり☆。.:＊・゜」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2097834370082172967"
+  },
+  {
+    date: "2026.9.9",
+    label: "X",
+    text: "「仕込み中」。金曜日から『I'm talking about Homin'』が始まることを伝え、来場を呼びかけ。チケット https://livepocket.jp/t/aitokihomin",
+    url: "https://x.com/frecam2025_0306/status/2097549024903696614"
+  },
+  {
+    date: "2026.9.8",
+    label: "X",
+    text: "「ベストショット🐶📸✨️」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2097069395478512041"
+  },
+  {
+    date: "2026.9.7",
+    label: "X",
+    text: "「月曜日頑張ったね」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2096882906488865090"
+  },
+  {
+    date: "2026.9.7",
+    label: "X",
+    text: "「明日9/8(火)17:00～17:20ツイキャス配信します～❣️」配信は KAIGYAC STAGE（@kaigyacstage）のツイキャス。約10〜20分",
+    url: "https://x.com/frecam2025_0306/status/2096826234915480002"
+  },
+  {
+    date: "2026.9.7",
+    label: "KAIGYAC STAGE X",
+    text: "「ツイキャス出演メンバー」9/8(火)17:00〜17:20に夏凪里季さんの出演を発表。配信は制作アカウントのツイキャス",
+    url: "https://x.com/kaigyacstage/status/2096825431978828249"
+  },
+  {
+    date: "2026.9.7",
+    label: "KAIGYAC STAGE X",
+    text: "「稽古順調に進んでおります」稽古場の集合写真2枚とともに、アイトキのツイキャス配信日時を案内。9/7(月)20:20〜20:40、9/8(火)17:00〜17:20",
+    url: "https://x.com/kaigyacstage/status/2096736729747407040"
+  },
+  {
+    date: "2026.9.6",
+    label: "X",
+    text: "「#月シア #アイトキ 今日も稽古だよ🌟みんなチケット予約してくれた？🥺」里季が稽古を伝えました。チケット https://livepocket.jp/t/aitokihomin",
+    url: "https://x.com/frecam2025_0306/status/2096353175989273024"
+  },
+  {
+    date: "2026.9.5",
+    label: "X",
+    text: "「#月シア #アイトキ 9月12日の12時回残席少ないです！！ご予約お早めに！！！！！」A side 9/12(土)12:00回の残席少案内。制作Xは残り4席と案内（2026-09-05確認）。席数は変動するので販売ページを正とする",
+    url: "https://x.com/frecam2025_0306/status/2096140971528552544"
+  },
+  {
+    date: "2026.9.5",
+    label: "X",
+    text: "「トイストーリーに囲まれた夏🦖🏀🐖🧸」と写真付きで投稿",
+    url: "https://x.com/frecam2025_0306/status/2095986258497491400"
+  },
+  {
+    date: "2026.9.4",
+    label: "X",
+    text: "「おはよう華金だね☀️」と投稿",
+    url: "https://x.com/frecam2025_0306/status/2095626890396786873"
+  },
   {
     date: "2026.9.3",
     label: "X",

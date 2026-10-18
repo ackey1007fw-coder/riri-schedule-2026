@@ -6,8 +6,9 @@
 - `main` → Vercel 自動デプロイ（本番 https://riri-schedule-2026.vercel.app/）。
 - 編集する元データ: `src/data/events.ts` / `profile.ts` / `photos.ts` / `news.ts` / `clips.ts`。
 - **SNS投稿の追加手順**は AGENTS.md「SNS 投稿を追加する手順」を参照。
-- 画像は `public/images/` に**自己ホスト**（Drive直リンク不使用）。新規は Drive サムネ `?id=ID&sz=w1400` を落として配置。
+- 画像は `public/images/` に**自己ホスト**（Drive直リンク不使用）。新規はチャット添付・依頼者指定のDrive原本を使い、本人性・出典・掲載範囲を確認して配置。
 - **写真はトリミングしない**：モバイルは `block w-full`（全体表示）、PCのみ `object-cover`。
 - ルール: 「公式/公認」と書かない・未確認情報を書かない・顔をAI生成しない・差分最小。
 - 演目: テオリデア=青い制服(聖アリストテレス学院) / アイトキ=月シア別冊『I'm talking about Lovin'』(小劇場)。混同注意。
 - `/api/*` は ESM（`export default handler`）で書く。`module.exports` は使わない。
+

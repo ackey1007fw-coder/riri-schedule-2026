@@ -115,6 +115,67 @@ export const events: ScheduleEvent[] = [
     isImportant: true
   },
   {
+    id: "aitoki-homin-twitcasting-2026-09-08",
+    title: "月シア『Homin'』ツイキャス配信",
+    shortTitle: "アイトキ ツイキャス",
+    subtitle: "里季さん出演・稽古の気持ちを話す短め配信",
+    category: "web",
+    startAt: "2026-09-08T17:00:00+09:00",
+    endAt: "2026-09-08T17:20:00+09:00",
+    dates: ["2026-09-08"],
+    occurrences: [
+      {
+        startAt: "2026-09-08T17:00:00+09:00",
+        endAt: "2026-09-08T17:20:00+09:00",
+        label: "里季さん出演"
+      }
+    ],
+    displayDate: "2026年9月8日（火）17:00〜17:20・ツイキャス",
+    image: "/images/gallery/g134.jpg",
+    imageAlt:
+      "白い部屋でキャストが集まっている稽古場の集合写真。奥の列、前髪のある夏凪里季さんがピースサインをしている",
+    summary:
+      "月シア別冊第2集『I'm talking about Homin'』の稽古場から、制作アカウント KAIGYAC STAGE（@kaigyacstage）のツイキャスで短めの配信。里季さんの出演は 9/8(火)17:00〜17:20。稽古をしてみての気持ちなどを話す約10〜20分の配信です。9/7(月)20:20〜20:40の回に里季さんの出演はありません。",
+    badges: ["ツイキャス", "アイトキ", "約10〜20分", "9/8出演"],
+    gallery: [
+      {
+        src: "/images/gallery/g133.jpg",
+        alt: "白い壁の廊下で、グレーのスウェット姿の夏凪里季さんがピースサインをしながら自撮りしている稽古場の集合写真"
+      },
+      {
+        src: "/images/gallery/g134.jpg",
+        alt: "白い部屋でキャストが集まっている稽古場の集合写真。奥の列、前髪のある夏凪里季さんがピースサインをしている"
+      }
+    ],
+    reportQuote:
+      "明日9/8(火)17:00～17:20ツイキャス配信します～❣️\nこちらのアカウントです▶︎@kaigyacstage \n来てね\"(ﾉ*>∀<)ﾉ",
+    reportNote:
+      "制作Xが稽古場の集合写真とともに配信日時を案内し、続いて出演メンバーを発表。里季さん本人も引用して呼びかけています。",
+    links: [
+      {
+        label: "ツイキャスで見る",
+        url: "https://twitcasting.tv/kaigyacstage",
+        kind: "stream"
+      },
+      {
+        label: "里季さんの告知",
+        url: "https://x.com/frecam2025_0306/status/2096826234915480002",
+        kind: "sns"
+      },
+      {
+        label: "出演メンバー発表",
+        url: "https://x.com/kaigyacstage/status/2096825431978828249",
+        kind: "sns"
+      },
+      {
+        label: "配信案内・稽古写真",
+        url: "https://x.com/kaigyacstage/status/2096736729747407040",
+        kind: "sns"
+      }
+    ],
+    isImportant: true
+  },
+  {
     id: "aitoki-homin-2026-09",
     title: "月シア別冊第2集『I'm talking about Homin'』",
     shortTitle: "Homin'",
@@ -132,13 +193,48 @@ export const events: ScheduleEvent[] = [
     venue: "西荻窪 遊空間がざびぃ",
     image: "/images/im-talking-about-homin-flyer-2026.jpg",
     summary:
-      "アイトキシリーズ第2弾、名曲から生まれた5つの短編集『I'm talking about Homin'』にA sideとして出演。脚本・演出：中平奈緒・もか・横大路伸。りりの出演回は 9/11(金)19:00｜9/12(土)12:00｜9/13(日)12:00｜9/15(火)18:00 の全4公演。前売券6,000円／当日券6,500円。",
-    badges: ["舞台", "A side", "全4公演", "販売終了（2026-09-01 23:59）", "アイトキ第2弾"],
+      "アイトキシリーズ第2弾、名曲から生まれた5つの短編集『I'm talking about Homin'』にA sideとして出演。脚本・演出：中平奈緒・もか・横大路伸。りりの出演回は 9/11(金)19:00｜9/12(土)12:00｜9/13(日)12:00｜9/15(火)18:00 の全4公演。前売券6,000円／当日券6,500円。9/11本人Xより当日券あり。9/11(金)19:00回の開場は18:40。9/12 12:00回は残席少（制作X：残り4席 / 2026-09-05確認）。変動するので販売ページを正とする。公演に先立ち、9/8(火)17:00〜17:20は制作アカウントのツイキャスに里季さんが出演します（約10〜20分）。",
+    badges: ["舞台", "A side", "全4公演", "9/12 12:00残席少", "アイトキ第2弾"],
     links: [
       {
         label: "チケット予約（livepocket）",
         url: "https://livepocket.jp/t/aitokihomin",
         kind: "ticket"
+      },
+      {
+        label: "A班初日・当日券あり（9/11）",
+        url: "https://x.com/frecam2025_0306/status/2098201505715376507",
+        kind: "sns"
+      },
+      {
+        label: "ツイキャス（里季さん出演 9/8）",
+        url: "https://twitcasting.tv/kaigyacstage",
+        kind: "stream"
+      },
+      {
+        label: "里季さんのツイキャス告知（9/7）",
+        url: "https://x.com/frecam2025_0306/status/2096826234915480002",
+        kind: "sns"
+      },
+      {
+        label: "出演メンバー発表（9/7）",
+        url: "https://x.com/kaigyacstage/status/2096825431978828249",
+        kind: "sns"
+      },
+      {
+        label: "稽古写真・配信案内（9/7）",
+        url: "https://x.com/kaigyacstage/status/2096736729747407040",
+        kind: "sns"
+      },
+      {
+        label: "9/12 12:00回 残席少（9/5）",
+        url: "https://x.com/frecam2025_0306/status/2096140971528552544",
+        kind: "sns"
+      },
+      {
+        label: "残り4席案内（9/5・制作X）",
+        url: "https://x.com/kaigyacstage/status/2096084187141099996",
+        kind: "sns"
       },
       {
         label: "メインビジュアルA解禁（8/15）",
@@ -184,32 +280,166 @@ export const events: ScheduleEvent[] = [
     shortTitle: "天竺生地 vol.28",
     subtitle: "稽古なしの即興劇、初挑戦",
     category: "stage",
-    startAt: "2026-10-11T00:00:00+09:00",
-    endAt: "2026-10-11T23:59:59+09:00",
+    startAt: "2026-10-11T12:00:00+09:00",
+    endAt: "2026-10-11T19:30:00+09:00",
     dates: ["2026-10-11"],
-    displayDate: "2026年10月11日（日）・池袋西口GEKIBA",
+    occurrences: [
+      {
+        startAt: "2026-10-11T12:00:00+09:00",
+        endAt: "2026-10-11T13:00:00+09:00",
+        label: "第一回「半知半解」",
+      },
+      {
+        startAt: "2026-10-11T15:30:00+09:00",
+        endAt: "2026-10-11T16:30:00+09:00",
+        label: "第二回「二者択一」",
+      },
+      {
+        startAt: "2026-10-11T18:30:00+09:00",
+        endAt: "2026-10-11T19:30:00+09:00",
+        label: "第三回「取捨選択」",
+      },
+    ],
+    displayDate: "2026年10月11日（日）12:00／15:30／18:30",
     venue: "池袋西口GEKIBA",
     image: "/images/tenjiku-vol28-flyer.jpg",
     imageAlt:
       "『天竺生地』vol.28の公演フライヤー。2026年10月10日〜11日、池袋西口GEKIBA。MCは斎藤このむと緑川睦",
+    gallery: [
+      {
+        src: "/images/gallery/g153.jpg",
+        alt: "白いレース襟のブラウス姿でほほえむ夏凪里季さんの写真入り告知。『天竺生地』vol.28、2026年10月11日（日）池袋西口GEKIBA。第1回「半知半解」、第2回「二者択一」、第3回「取捨選択」。チケット・ソロチェキ・応援メッセージポストカードの案内付き（X『出演情報』より）"
+      }
+    ],
     summary:
-      "即興劇ユニット『天竺生地』vol.28に出演。里季さんの出演日は10月11日（日）、会場は池袋西口GEKIBA。キャスト発表第一弾では日付単位の案内で、どの回への出演かは現時点で確認できていません。MCは斎藤このむ・緑川睦。稽古なしの即興劇で、里季さん自身「初挑戦」と投稿しています。チケット情報は確認でき次第掲載します。",
-    badges: ["舞台", "即興劇", "初挑戦", "10月11日"],
+      "即興劇ユニット『天竺生地』vol.28の10月11日（日）全3公演に出演。第一回12:00「半知半解」、第二回15:30「二者択一」、第三回18:30「取捨選択」。会場は池袋西口GEKIBAです。チケット、応援メッセージポストカード、ソロチェキを受付中です。ソロチェキは事前予約で、締切は10月10日（土）23:59です。",
+    badges: ["舞台", "即興劇", "全3公演", "予約受付中"],
     links: [
+      {
+        label: "チケットを予約する",
+        url: "https://livepocket.jp/e/tenjiku28",
+        kind: "ticket"
+      },
+      {
+        label: "応援メッセージポストカード",
+        url: "https://livepocket.jp/e/tenjiku28_message",
+        kind: "info"
+      },
+      {
+        label: "ソロチェキを予約する",
+        url: "https://livepocket.jp/e/tenjiku28_solo",
+        kind: "info"
+      },
+      {
+        label: "本人の出演告知（9/28）",
+        url: "https://x.com/frecam2025_0306/status/2104439788191568330",
+        kind: "sns"
+      },
       {
         label: "夏凪里季さんの出演告知",
         url: "https://x.com/frecam2025_0306/status/2095174102634168752",
         kind: "sns"
       },
       {
-        label: "キャスト発表（天竺生地）",
-        url: "https://x.com/tenjikukiji/status/2095073990658445630",
+        label: "全公演情報（天竺生地）",
+        url: "https://x.com/tenjikukiji/status/2098699547707138361",
         kind: "sns"
       },
       {
         label: "天竺生地 X",
         url: "https://x.com/tenjikukiji",
         kind: "sns"
+      }
+    ],
+    isImportant: true
+  },
+  {
+    id: "tsuki-wo-matagu-vol20-2026-10",
+    title: "月シア上映イベント『月を跨ぐ』vol.20",
+    shortTitle: "月を跨ぐ vol.20",
+    subtitle: "アイトキホーミンを一緒に見て、裏話を語る",
+    category: "event",
+    startAt: "2026-10-24T13:00:00+09:00",
+    dates: ["2026-10-24"],
+    occurrences: [
+      {
+        startAt: "2026-10-24T13:00:00+09:00",
+        label: "昼の部"
+      },
+      {
+        startAt: "2026-10-24T17:00:00+09:00",
+        label: "夕方の部"
+      }
+    ],
+    displayDate: "2026年10月24日（土）昼の部13:00／夕方の部17:00",
+    venue: "下北沢RBLCAFE",
+    image: "/images/tsuki-wo-matagu-vol20-flyer.jpg",
+    imageAlt:
+      "月シア上映イベント『月を跨ぐ』vol.20のフライヤー。2026年10月24日（土）、下北沢RBLCAFE。昼の部13:00、夕方の部17:00",
+    summary:
+      "月シア上映イベント『月を跨ぐvol.20』に、昼の部（13:00）・夕方の部（17:00）の両部へ出演。月シア別冊第2集『I'm talking about Homin'』の全5話をキャストと一緒に見て、裏話を語るトークショーです。会場は下北沢RBLCAFE。チケットは販売中です。お席数が限られているため、本人も早めの予約を案内しています。来場者限定で、キャスト全員のサイン入りA1ポスター抽選と、イベント出演者の撮り下ろしサイン入りチェキのプレゼント企画もあります。",
+    badges: ["上映イベント", "トークショー", "昼・夕両部出演", "チケット販売中"],
+    reportQuote:
+      "【🌟出演情報🌟】\n#月シア 上映イベント『月を跨ぐvol20』出演いたします！\n\nアイトキホーミンの収録回を一緒に見ようというイベントです！\n私たちが副音声みたいな感じでお話するよ！楽しみだねっっ！プレゼント企画もあるみたい✨️\n\n舞台には来れなかったけどこの日なら都合合いそうという方や、もう1回みたい！見れてない作品みたい！裏話聞きたい！という方などなどお待ちしております🤲🏻\n\n🗓10月24日(土)📍下北沢RBLCAFE\n\n昼の部(13時回)夕方の部(17時回)どっちもいるよ✨️\n\nお席限られてるので早めがおすすめ！(9/21の18時からチケ発です)",
+    reportNote:
+      "本人X（2026年9月19日）の出演告知です。チケットは販売中です。",
+    links: [
+      {
+        label: "チケット販売ページ（販売中）",
+        url: "https://livepocket.jp/t/20matagu",
+        kind: "ticket"
+      },
+      {
+        label: "夏凪里季さんの出演告知",
+        url: "https://x.com/frecam2025_0306/status/2101244304979329158",
+        kind: "sns"
+      },
+      {
+        label: "制作の告知（KAIGYAC STAGE）",
+        url: "https://x.com/kaigyacstage/status/2101234845632364882",
+        kind: "sns"
+      },
+      {
+        label: "KAIGYAC STAGE X",
+        url: "https://x.com/kaigyacstage",
+        kind: "sns"
+      }
+    ],
+    isImportant: true
+  },
+  {
+    id: "ayudon-sports-day-2026-11-08",
+    title: "第3回あゆどん大運動会",
+    shortTitle: "あゆどん大運動会",
+    category: "event",
+    startAt: "2026-11-08T12:00:00+09:00",
+    endAt: "2026-11-08T16:00:00+09:00",
+    displayDate: "2026年11月8日（日）12:00〜16:00（11:30開場）",
+    venue: "東京某所",
+    image: "/images/gallery/g156.jpg",
+    imageDisplay: "full",
+    galleryPurpose: "announcement",
+    imageCredit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" },
+    imageAlt: "第3回あゆどん大運動会の出演者告知。夏凪里季さんを含む出演者と、11月8日12:00〜16:00・東京某所の案内",
+    gallery: [{ src: "/images/gallery/g157.jpg", alt: "第3回あゆどん大運動会の応援チケット案内。1枚2,000円、来場できない方も応援可能。高橋あゆみさんの写真入り", credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" } }],
+    summary:
+      "高橋あゆみさん主催の第3回あゆどん大運動会に出演。11月8日（日）12:00〜16:00、11:30開場。会場は東京某所で、詳細は購入者に主催から案内されます。来場は完全予約制。本人の出演まとめでは「遠隔応援チケもあります✨️」と案内。会場へ行けない方も、応援チケットで応援できます。来場・応援チケットの詳細は主催の販売ページをご確認ください。",
+    badges: ["運動会", "完全予約制", "応援チケットあり"],
+    links: [
+      {
+        label: "来場チケット・開催詳細",
+        url: "https://ayudon.base.shop/items/153484411",
+        kind: "ticket"
+      },
+      {
+        label: "応援チケット（来場できない方も）",
+        url: "https://ayudon.base.shop/items/153487153",
+        kind: "info"
+      },
+      {
+        label: "本人の出演まとめ（X）",
+        url: "https://x.com/frecam2025_0306/status/2104759725665714184",
+        kind: "info"
       }
     ],
     isImportant: true

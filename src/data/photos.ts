@@ -169,8 +169,237 @@ const miyabiCredit = {
   url: "https://x.com/miyabidayo_o/status/2087112482506920007"
 };
 
+// 2026.9.7 KAIGYAC STAGE（@kaigyacstage）の稽古場集合写真。第三者投稿のため credit を付ける
+const kaigyacRehearsalCredit = {
+  label: "写真: KAIGYAC STAGE（@kaigyacstage）の投稿",
+  url: "https://x.com/kaigyacstage/status/2096736729747407040"
+};
+
+const aitokiRehearsalSelfiePhoto: GalleryPhoto = {
+  src: "/images/gallery/g133.jpg",
+  alt: "白い壁の廊下で、グレーのスウェットに黒いリュック姿の夏凪里季さんがピースサインをしながら自撮りしている稽古場の集合写真。手前左には白いセーラー風ブラウスの共演者、奥には絵画とベージュの扉",
+  credit: kaigyacRehearsalCredit
+};
+
+const aitokiRehearsalGroupPhoto: GalleryPhoto = {
+  src: "/images/gallery/g134.jpg",
+  alt: "白い部屋でキャストが集まっている稽古場の集合写真。手前の男性がサムズアップの自撮り。奥の列、前髪のある夏凪里季さんがピースサインをしている",
+  credit: kaigyacRehearsalCredit
+};
+
+// 2026.9.5 06:24 JST 本人X「トイストーリーに囲まれた夏🦖🏀🐖🧸」
+// 出典: https://x.com/frecam2025_0306/status/2095986258497491400
+// 画像ファイルは依頼者提供待ち。SNS画像は自動保存しないため、ギャラリーへは埋め込まない。
+
+
+// 2026.9.7 オーナー提供5枚（引用元由来。SNSスクレイプではない。本人のため credit なし）。
+// 公開ポスト status/2096882906488865090 に載っているのは g135 のみ。g136〜g139 は同ポスト由来と断定しない。
+const mondayGanbattaThumbsUpPhoto: GalleryPhoto = {
+  src: "/images/gallery/g135.jpg",
+  alt: "白いシャッター前でサムズアップを手前に出し、明るく笑う夏凪里季さんの自撮り（X『月曜日頑張ったね』より）"
+};
+
+const mondayGanbattaEscalatorPhoto: GalleryPhoto = {
+  src: "/images/gallery/g136.jpg",
+  alt: "エスカレーターで黒いパーカー姿の夏凪里季さんがこちらを見つめる自撮り（引用元・本人X）"
+};
+
+const mondayGanbattaGroupHallPhoto: GalleryPhoto = {
+  src: "/images/gallery/g137.jpg",
+  alt: "廊下で共演者たちとピースサインをする夏凪里季さんを含む集合写真。奥には鯉のぼりの絵（引用元・本人X）"
+};
+
+const mondayGanbattaGroupStudioAPhoto: GalleryPhoto = {
+  src: "/images/gallery/g138.jpg",
+  alt: "白い部屋でキャストが集まってピースやサムズアップをする集合写真。夏凪里季さんも写っている（引用元・本人X）"
+};
+
+const mondayGanbattaGroupStudioBPhoto: GalleryPhoto = {
+  src: "/images/gallery/g139.jpg",
+  alt: "白い部屋でキャストが集まってピースサインをする集合写真。手前の男性が自撮り（引用元・本人X）"
+};
+
+// 2026.9.8 本人X「ベストショット🐶📸✨️」オーナー提供1枚。SNSスクレイプではない。creditなし
+// 出典: https://x.com/frecam2025_0306/status/2097069395478512041
+const bestShotDogPhoto: GalleryPhoto = {
+  src: "/images/gallery/g140.jpg",
+  alt: "白いTシャツ姿の夏凪里季さんが、舌を出したふわふわの小型犬を抱えて微笑む室内の自撮り（X『ベストショット』より）"
+};
+
+// 2026.9.12 本人Instagram Story「公演2日目⭐」。オーナー提供動画のposterをギャラリーにも掲載。
+const aitokiSecondDayStoryPhoto: GalleryPhoto = {
+  src: "/images/gallery/g141.jpg",
+  alt: "Instagram Story『公演2日目⭐』の縦写真。白いトップス姿の女性2人がカメラに向かってポーズを取り、下部に『明日以降のチケット』の案内が表示されている"
+};
+
+// 2026.9.17 11:49 JST 本人X「#月シア #アイトキ ツーショたち」。元投稿の写真順。
+// https://x.com/frecam2025_0306/status/2100416833283395875
+const aitokiTwoShotPhotos: GalleryPhoto[] = [
+  {
+    src: "/images/gallery/g142.jpg",
+    alt: "黒いカーテンを背景に、白いTシャツ姿の2人が笑顔でピースサインをする横向きのツーショット（9月17日のX投稿・1枚目）"
+  },
+  {
+    src: "/images/gallery/g143.jpg",
+    alt: "白いTシャツ姿の2人が顔を寄せ、ピースサインをする縦向きのツーショット（9月17日のX投稿・2枚目）"
+  },
+  {
+    src: "/images/gallery/g144.jpg",
+    alt: "白いTシャツ姿の人物と薄いピンクの上着を着た人物が並び、奥の人物がピースサインをする縦向きのツーショット（9月17日のX投稿・3枚目）"
+  },
+  {
+    src: "/images/gallery/g145.jpg",
+    alt: "白いTシャツ姿の2人が並び、左の人物が目を閉じて顔の近くでピースサインをする横向きのツーショット（9月17日のX投稿・4枚目）"
+  }
+];
+
+// 2026.9.18 06:04 JST 本人X「旅に出ます🚃」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2100692267787018739
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const tabiNiDemasuPhoto: GalleryPhoto = {
+  src: "/images/gallery/g146.jpg",
+  alt: "青いチェック柄の座席に座り、水色のシャツに白いインナー、白いイヤホンとネックレスをつけてカメラを見る夏凪里季さん。窓の外に緑が見える車内の自撮り（X『旅に出ます』より）"
+};
+
+// 2026.9.19 08:28 JST 本人X「ホイップもりもりパンケーキ🥞」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2101091051188699341
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const whipMoriMoriPancakePhoto: GalleryPhoto = {
+  src: "/images/gallery/g147.jpg",
+  alt: "白い丸皿にホイップクリームを盛ったパンケーキが2枚。手前には粉砂糖、奥には赤いベリー。水色の半袖シャツを着た夏凪里季さんが、左手のフォークをパンケーキに向けてカメラを見ている店内の自撮り（X『ホイップもりもりパンケーキ』より）"
+};
+
+// 2026.9.20 06:33 JST 本人X「今さら夏ディズニー投稿は許されない？」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2101424453523767699
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const natsuDisneyPhoto: GalleryPhoto = {
+  src: "/images/gallery/g149.jpg",
+  alt: "暗い室内で、ピンクのリボン付きの黒いミニーマウスの耳カチューシャをつけ、いちご柄の白いトップスを着た夏凪里季さん。長い髪でカメラのほうを見ている（X『今さら夏ディズニー投稿は許されない？』より）"
+};
+
+// 2026.9.21 09:23 JST 本人X「シルバーウィークENJOYしてる？」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2101829630894456910
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const silverWeekEnjoyPhoto: GalleryPhoto = {
+  src: "/images/gallery/g150.jpg",
+  alt: "窓際の座席に座り、ピンクの半袖カーディガンに白いインナー、紺のストライプパンツ姿の夏凪里季さん。右手を髪に添え、青い格子柄の座席に座ってカメラを見ている。窓の外は曇り空（X『シルバーウィークENJOYしてる？』より）"
+};
+
+// 2026.9.24 06:14 JST 本人X「徒歩よりも車よりもチャリがすき」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2102869111386558788
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const chariGaSukiPhoto: GalleryPhoto = {
+  src: "/images/gallery/g151.jpg",
+  alt: "芝生の公園で、ピンクの半袖カーディガンに紺のストライプパンツ、白い厚底スニーカー姿の夏凪里季さんが、カゴ付きの自転車にまたがって笑っている。カゴには淡いピンクのバッグとHELLO CYCLINGの案内。背景は住宅と木々（X『徒歩よりも車よりもチャリがすき』より）"
+};
+
+// 2026.9.28 14:15 JST 本人X『天竺生地』vol.28出演告知。本人アカウントの写真入り告知画像のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2104439788191568330
+// 引用元: https://x.com/tenjikukiji/status/2103473180778348795
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。既存フライヤーは差し替えない。
+const tenjikuVol28AnnouncePhoto: GalleryPhoto = {
+  src: "/images/gallery/g153.jpg",
+  alt: "白いレース襟のブラウス姿でほほえむ夏凪里季さんの写真入り告知。『天竺生地』vol.28、2026年10月11日（日）池袋西口GEKIBA。第1回「半知半解」、第2回「二者択一」、第3回「取捨選択」。チケット・ソロチェキ・応援メッセージポストカードの案内付き（X『出演情報』より）"
+};
+
+// 2026.9.27 09:41 JST 本人X「一日に2個もクレープ食べた🤍」。本人アカウントの本人写真のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2104008576729829754
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const crepeTwoPhoto: GalleryPhoto = {
+  src: "/images/gallery/g154.jpg",
+  alt: "ピンクと白のストライプのカウンター前で、ピンクと白の縞模様の紙に包んだクレープを両手で持って笑う夏凪里季さん。黒いパーカーに細いネックレス。背景にはクレープのポスターとぬいぐるみ（X『一日に2個もクレープ食べた』より）"
+};
+
+// 2026.9.25 07:07 JST 本人X「矢場とん！ご飯大盛りにした😋✨️」。本人アカウントの本人写真のため credit なし
+// 出典: https://x.com/frecam2025_0306/status/2103244907800649999
+// 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
+const yabatonOmoriPhoto: GalleryPhoto = {
+  src: "/images/gallery/g152.jpg",
+  alt: "矢場とんの店内で、大盛りの白いご飯と味噌カツ、味噌汁を前に、両手でご飯を指さして笑う夏凪里季さん。ネイビーのトップスにデニム。背景は街並みと野球のユニフォームが並ぶモノクロ写真（X『矢場とん！ご飯大盛りにした』より）"
+};
+
+// 2026.9.29 07:27 JST 本人X「やっとさつまいもフラペ飲めた🍠💜」。本人写真のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2104699548216242600
+// 指定投稿の画像を取得する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
+const sweetPotatoFrappePhoto: GalleryPhoto = {
+  src: "/images/gallery/g155.jpg",
+  alt: "店内の茶色い座席で、ホイップとオレンジ色のソースがのったスターバックスの飲み物を顔の横に掲げる夏凪里季さん。グレーのリブニットにデニム、白いシュシュで長い髪を結んでいる（X『やっとさつまいもフラペ飲めた』より）"
+};
+
+// 2026.10.3 11:13 JST 本人X「青学から徒歩3分くらいのお店、空きコマに行けた幸(^-^)/」。本人写真のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2106205883349008812
+// 指定投稿の写真を掲載する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
+const campusLunchPhoto: GalleryPhoto = {
+  src: "/images/gallery/g158.jpg",
+  alt: "レンガの壁と緑の植物を背景に、ハンバーガーとフライドポテトがのった白い皿を両手で持って笑う夏凪里季さん。黒いトップス姿で屋外の席に座っている（2026年10月3日の本人X投稿より）"
+};
+
+// 2026.10.4 06:19 JST 本人Xのチキンとアボカドのエピソード。本人写真のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2106494249520787508
+// 指定投稿の写真を掲載する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
+const avocadoLunchPhoto: GalleryPhoto = {
+  src: "/images/gallery/g159.jpg",
+  alt: "えんじ色のパーカーとデニム姿でソファに座り、ナイフとフォークを持って笑う夏凪里季さん。手前のテーブルにアボカドをのせた料理の器とトーストの皿がある（2026年10月4日の本人X投稿より）"
+};
+
+// 2026.10.5 08:58 JST 本人X「どーーこだ！？」。本人写真のため credit なし。
+// 出典: https://x.com/frecam2025_0306/status/2106896786174664898
+// 指定投稿の写真を掲載する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
+const whereIsThisPhoto: GalleryPhoto = {
+  src: "/images/gallery/g160.jpg",
+  alt: "紺色のジップアップのトップスに白い肩掛けバッグを身につけ、髪を二つの三つ編みにした夏凪里季さん。小さな絵柄入りの紙を顔の横に持って笑っている。背景に石段、赤い柵、瓦屋根の建物と木々が見える（2026年10月5日の本人X投稿より）"
+};
+
 // メイソンリー（写真をそのまま全体表示）で並べるギャラリー写真
 export const galleryPhotos: GalleryPhoto[] = [
+  whereIsThisPhoto,
+  avocadoLunchPhoto,
+  campusLunchPhoto,
+  // 2026.9.29 11:26 JST 本人Xの出演まとめ。依頼に基づき告知画像2枚を原本のまま取得。
+  {
+    src: "/images/gallery/g156.jpg",
+    alt: "第3回あゆどん大運動会の出演者告知。高橋あゆみさん、響・長友光弘さん、夏凪里季さんらの写真と、11月8日（日）12:00〜16:00・東京某所の案内",
+    credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" }
+  },
+  {
+    src: "/images/gallery/g157.jpg",
+    alt: "第3回あゆどん大運動会の応援チケット案内。1枚2,000円、当日来場できない方も応援可能。赤と黄色の背景に高橋あゆみさんの写真",
+    credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" }
+  },
+  // 2026.9.29 07:27 JST 本人X「やっとさつまいもフラペ飲めた🍠💜」
+  sweetPotatoFrappePhoto,
+  // 2026.9.28 本人X『天竺生地』vol.28出演告知
+  tenjikuVol28AnnouncePhoto,
+  // 2026.9.27 本人X「一日に2個もクレープ食べた🤍」
+  crepeTwoPhoto,
+  // 2026.9.25 本人X「矢場とん！ご飯大盛りにした😋✨️」
+  yabatonOmoriPhoto,
+  // 2026.9.24 本人X「徒歩よりも車よりもチャリがすき」
+  chariGaSukiPhoto,
+  // 2026.9.21 本人X「シルバーウィークENJOYしてる？」
+  silverWeekEnjoyPhoto,
+  // 2026.9.20 本人X「今さら夏ディズニー投稿は許されない？」
+  natsuDisneyPhoto,
+  // 2026.9.19 本人X「ホイップもりもりパンケーキ🥞」
+  whipMoriMoriPancakePhoto,
+  // 2026.9.18 本人X「旅に出ます🚃」
+  tabiNiDemasuPhoto,
+  // 2026.9.17 本人X「#月シア #アイトキ ツーショたち」
+  ...aitokiTwoShotPhotos,
+  // 2026.9.12 本人Instagram Story「公演2日目⭐」
+  aitokiSecondDayStoryPhoto,
+  // 2026.9.8 本人X「ベストショット🐶📸✨️」オーナー提供1枚
+  bestShotDogPhoto,
+  // 2026.9.7 オーナー提供5枚（g135のみ公開ポスト「月曜日頑張ったね」。他は引用元・本人X）
+  mondayGanbattaThumbsUpPhoto,
+  mondayGanbattaEscalatorPhoto,
+  mondayGanbattaGroupHallPhoto,
+  mondayGanbattaGroupStudioAPhoto,
+  mondayGanbattaGroupStudioBPhoto,
+  // 2026.9.7 KAIGYAC STAGE X「稽古順調に進んでおります」稽古場の集合写真2枚
+  aitokiRehearsalSelfiePhoto,
+  aitokiRehearsalGroupPhoto,
+  // 2026.9.5 本人X「トイストーリーに囲まれた夏」は出典URLのみ（上記）。画像は依頼者提供待ちのため未掲載。
   // 2026.9.1 12:32 X「山梨上陸した！これは鍋焼きうどん🍲」本人投稿。creditなし
   yamanashiNabeyakiPhoto,
   // 2026.8.30 00:32 X「#ピッパラの樹 A班千秋楽ありがとうございました！」菜花はなさん(@flefiore_)の投稿
@@ -383,9 +612,10 @@ export const galleryUpdate: {
   platform: "X" | "Instagram" | "TikTok";
   note: string;
   url: string;
+  linkLabel?: string;
 } = {
-  date: "2026.9.1",
+  date: "2026.10.5",
   platform: "X",
-  note: "山梨上陸。鍋焼きうどんを前に両手を広げて笑う1枚",
-  url: "https://x.com/frecam2025_0306/status/2094629557819285798"
+  note: "「どーーこだ！？」の投稿から、小さな絵柄入りの紙を顔の横に持つ写真を追加",
+  url: "https://x.com/frecam2025_0306/status/2106896786174664898"
 };

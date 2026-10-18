@@ -27,7 +27,12 @@ export const venues: Record<string, VenueInfo> = {
       "池袋駅西口より徒歩12分／池袋駅西口地下通路 1a、C3番出口 徒歩約2分",
     source: "『天竺生地』vol.28 公演フライヤー"
   },
-  // 以下は公演フライヤーに住所の記載がないため会場名のみで検索する。
+  下北沢RBLCAFE: {
+    address: "東京都世田谷区代沢5-32-12",
+    access: "下北沢駅中央口 徒歩約5分",
+    source: "RBL CAFE 公式サイト https://rblcafe.jp/"
+  },
+  // 公演フライヤーに住所の記載がないため会場名のみで検索する。
   // 住所を確認できたら address を追記すると地図のピンが正確になる。
   "西荻窪 遊空間がざびぃ": {
     source: "月シア別冊第2集『I'm talking about Homin'』フライヤー（場所の記載のみ）"
