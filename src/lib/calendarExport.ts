@@ -24,7 +24,19 @@ const nextDateStamp = (date: string) => {
     .replace(/-/g, "");
 };
 
-const eventLines = (event: ScheduleEvent) => {
+const eventLines = (event: ScheduleEvent): string[] => {
+  // datesより個別の確認済み日時を優先し、同日の公演にも固有のUIDを付ける。
+  if (event.occurrences?.length) {
+    return event.occurrences.flatMap((occurrence) => eventLines({
+      ...event,
+      id: `${event.id}-${utcStamp(occurrence.startAt)}`,
+      title: occurrence.label ? `${event.title}（${occurrence.label}）` : event.title,
+      startAt: occurrence.startAt,
+      endAt: occurrence.endAt,
+      dates: undefined,
+      occurrences: undefined,
+    }));
+  }
   const common = [
     `SUMMARY:${escapeText(event.title)}`,
     `DESCRIPTION:${escapeText(`${event.summary}\n${event.displayDate}`)}`,
@@ -49,15 +61,15 @@ const eventLines = (event: ScheduleEvent) => {
     `UID:${event.id}@riri-schedule-2026.vercel.app`,
     `DTSTAMP:${utcStamp(new Date().toISOString())}`,
     `DTSTART:${utcStamp(event.startAt)}`,
-    `DTEND:${utcStamp(event.endAt ?? event.startAt)}`,
+    ...(event.endAt ? [`DTEND:${utcStamp(event.endAt)}`] : []),
     ...common,
     "END:VEVENT"
   ];
 };
 
-export function downloadScheduleCalendar(events: ScheduleEvent[]) {
-  const upcoming = sortEventsAsc(events.filter((event) => !isEventPast(event)));
-  const content = [
+export function createScheduleCalendar(events: ScheduleEvent[], now = new Date()) {
+  const upcoming = sortEventsAsc(events.filter((event) => !isEventPast(event, now)));
+  return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
     "PRODID:-//Riri Schedule 2026//Fan Schedule//JA",
@@ -67,7 +79,10 @@ export function downloadScheduleCalendar(events: ScheduleEvent[]) {
     ...upcoming.flatMap(eventLines),
     "END:VCALENDAR"
   ].join("\r\n");
+}
 
+export function downloadScheduleCalendar(events: ScheduleEvent[]) {
+  const content = createScheduleCalendar(events);
   const blob = new Blob([content], { type: "text/calendar;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
