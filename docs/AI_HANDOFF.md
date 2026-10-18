@@ -36,14 +36,13 @@ CI / guard: `ci.yml`（typecheck / build / test）、`site-guard.yml`（Site Ide
 
 ## 3. 現在地点（2026-10-18 時点）
 
-- 直近のmerge: CIの実行環境更新（#159 / #161、2026-10-07〜08）。コンテンツの最終追加は 10/5 本人Xの写真（#157）。
-- 10月に入ってからの更新頻度は低め。Open PR に 10/6 の本人X投稿（#158）、10/7 配信予定（#160 Draft）などが残っている。
+- 2026年10月に入ってからは更新頻度が低め。直近のmerge・未処理の投稿は着手時に GitHub の main と Open PR で確認する。
 - `profile.ts` の学年・活動状況など時間で変わる値は、**最新の本人公式情報で確認してから**更新する（記憶で直さない）。
 
 ## 4. 未完了・次にやること
 
-- Open / Draft PR 12本前後（2026-10-18 時点）。Cursor 由来の古い NEWS 追加 Draft（9月分）が多い。**同じファイルを触る前に確認**し、統合・closeはオーナーに提案する（勝手に close しない）。
-- #158（10/6 本人X）の状態確認 → 条件を満たしていればmerge判断。
+- Cursor 由来の古い NEWS 追加 Draft などが積み上がっている。本数・番号は変わるので**着手時に GitHub で確認**し、同じファイルを触る前に方針を見る。統合・closeはオーナーに提案する（勝手に close しない）。
+- 未マージのまま残っている本人投稿のPRがあれば、出典と条件を確認してmerge判断。
 - 新しい出演情報が出たら `events.ts` と `venues.ts`（住所は出典つき）を更新。
 
 ## 5. 日々の更新の型
@@ -59,7 +58,9 @@ CI / guard: `ci.yml`（typecheck / build / test）、`site-guard.yml`（Site Ide
 pnpm install --frozen-lockfile
 pnpm run typecheck && pnpm test && pnpm run build
 node scripts/check-site-identity.mjs main
-git diff --check
+git diff --check                      # 未ステージの変更
+git diff --cached --check             # ステージ済みの変更
+git diff --check origin/main...HEAD   # コミット済みのPR差分（最新のbaseを取得後）
 ```
 
 ## 6. ハマりどころ（実際に踏んだもの）
