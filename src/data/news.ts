@@ -124,6 +124,30 @@ export const news: NewsItem[] = [
     url: "https://x.com/frecam2025_0306/status/2100416833283395875"
   },
   {
+    date: "2026.9.16",
+    label: "X",
+    text: "「ままが舞台お疲れ様ってケーキ用意してくれてた🍰愛だなぁ」と投稿",
+    url: "https://x.com/frecam2025_0306/status/2099997859504660641"
+  },
+  {
+    date: "2026.9.15",
+    label: "X",
+    text: "「無事に千秋楽を終えました✨️」#月シア #アイトキ #ホーミン。ご来場・応援・関係者の皆さまへのお礼。「アイネとして、祥子として、凛音として生きれてとっても幸せでした」",
+    url: "https://x.com/frecam2025_0306/status/2099874533775949839"
+  },
+  {
+    date: "2026.9.15",
+    label: "X",
+    text: "「おはよう☀️ついに千秋楽！当日券あります！」A sideは当日18:00開演、西荻窪・遊空間がざびぃ。当日券販売17:30〜、開場17:40と案内",
+    url: "https://x.com/frecam2025_0306/status/2099614716675105165"
+  },
+  {
+    date: "2026.9.14",
+    label: "X",
+    text: "「#アイトキ 明日はついに千秋楽！」A sideは9/15 18:00、西荻窪・遊空間がざびぃ。チケット https://livepocket.jp/t/aitokihomin",
+    url: "https://x.com/frecam2025_0306/status/2099360329822265576"
+  },
+  {
     date: "2026.9.13",
     label: "X",
     text: "「#アイトキ」本日12:00回。当日券が若干あり、開場11:40・当日券販売11:30と案内。西荻窪・遊空間がざびぃ。出演は「れんあいじょうず」「風に吹かれて」",
@@ -135,6 +159,12 @@ export const news: NewsItem[] = [
     text: "「公演2日目⭐」のStory。『I'm talking about Homin'』公演2日目の様子と、以降の公演チケットを案内。Short Movieに動画を保存",
     url: "https://riri-schedule-2026.vercel.app/#clips",
     linkLabel: "Short Movieで見る"
+  },
+  {
+    date: "2026.9.12",
+    label: "X",
+    text: "「アイトキ2公演目終了」A side後半戦は9/13 12:00 西荻窪、当日券あり。千秋楽チケット https://livepocket.jp/t/aitokihomin",
+    url: "https://x.com/frecam2025_0306/status/2098766967612280945"
   },
   {
     date: "2026.9.12",
