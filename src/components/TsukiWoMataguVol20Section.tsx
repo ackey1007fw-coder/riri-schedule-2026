@@ -16,6 +16,7 @@ const ririPostUrl =
 const organizerPostUrl =
   "https://x.com/kaigyacstage/status/2101234845632364882";
 const ticketUrl = "https://livepocket.jp/t/20matagu";
+const eventDayPostUrl = "https://x.com/kaigyacstage/status/2113758692575473921";
 
 const shows = [
   {
@@ -85,7 +86,7 @@ export function TsukiWoMataguVol20Section() {
                 昼・夕両部出演
               </span>
               <span className="border border-rosefog/45 bg-blush/35 px-3 py-1.5 text-xs font-bold text-ink/72">
-                9/21 18:00 チケ発
+                当日案内は主催者Xへ
               </span>
             </div>
 
@@ -132,7 +133,7 @@ export function TsukiWoMataguVol20Section() {
                   className="mt-0.5 h-4 w-4 shrink-0 text-champagne"
                   aria-hidden="true"
                 />
-                <span>チケット販売開始は9月21日（月）18:00。お席数は限られています</span>
+                <span>10月24日朝の主催告知では両回とも若干数の当日券を案内。現在の空席を保証するものではありません。最新状況は主催者へご確認ください。</span>
               </p>
               <p className="flex items-start gap-2">
                 <Gift
@@ -192,7 +193,7 @@ export function TsukiWoMataguVol20Section() {
             </div>
 
             <p className="mt-6 leading-8 text-ink/72">
-              舞台に来られなかった人、もう一度見たい人、見れていない作品や裏話が気になる人に向けた上映イベントです。チケットは9月21日（月）18:00から LivePocket で販売開始です。
+              開場は開演20分前。当日券希望者は開場時に入口へ向かって左側で待機し、スタッフの案内に従ってください。終演後にはグッズ販売の予定です（10月22日の主催告知）。
             </p>
 
             <div className="mt-auto flex flex-col gap-3 pt-7 sm:flex-row sm:flex-wrap">
@@ -202,7 +203,16 @@ export function TsukiWoMataguVol20Section() {
                 rel="noopener noreferrer"
                 className="riri-button riri-button-gold min-h-12 px-5 py-3 text-sm"
               >
-                チケット販売ページ（9/21 18:00〜）
+                チケット販売ページ（最新状況を確認）
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a
+                href={eventDayPostUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="riri-button riri-button-soft min-h-12 px-5 py-3 text-sm"
+              >
+                10/24朝の当日券・入場案内
                 <ExternalLink className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
