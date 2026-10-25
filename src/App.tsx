@@ -202,7 +202,7 @@ function App() {
       />
       <ScrollToTop />
       <MobileActionDock nextEvent={nextEvent} socialLinks={socialLinks} />
-      <StructuredData />
+      <StructuredData events={events} />
       <Analytics />
     </div>
   );

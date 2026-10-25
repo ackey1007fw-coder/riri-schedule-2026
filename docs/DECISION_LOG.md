@@ -17,3 +17,4 @@
 | D-10 | 2026-08 | `news / photos / clips` は元投稿の日時順。未確認の時刻を推測しない。いいね数等の変動値は保存しない | 時系列の正確さ | `AGENTS.md` 時系列 |
 | D-11 | 2026-09-07 | サブエージェントは原則自動起動しない（最大2・再帰禁止） | 使用枠の節約（#118） | `AGENTS.md` |
 | D-12 | 2026-10-18 | オーナーの明示依頼により Project Memory（HANDOFF / DECISION_LOG / SKILL）を導入 | 複数AI・複数チャットで説明し直しなく引き継ぐ | `docs/` |
+| D-13 | 2026-10-25 | イベントJSON-LDは表示中の予定を使い、主催・住所・入場Offerは根拠付きの値だけ出力。非公開会場・無料・在庫・未確認の終了時刻を補完しない。警告削減とGoogleイベント機能の適格性を区別する | Search Console改善推奨への対応で虚偽の情報や販売条件を生成しない | `src/lib/eventStructuredData.ts` / `docs/EVENT_STRUCTURED_DATA.md` / 回帰テスト |
