@@ -3,6 +3,14 @@ import type { ScheduleEvent } from "../types";
 export const events: ScheduleEvent[] = [
   {
     id: "stage-ogikubo-2026-08",
+    structuredData: {
+      organizer: {
+        type: "Organization",
+        name: "劇団ココア",
+        url: "https://x.com/gekidan_cocoa",
+        source: "https://x.com/gekidan_cocoa/status/2093694275230085363"
+      }
+    },
     title: "劇団ココア『ピッパラの樹』",
     shortTitle: "ピッパラの樹",
     category: "stage",
@@ -116,6 +124,11 @@ export const events: ScheduleEvent[] = [
   },
   {
     id: "aitoki-homin-twitcasting-2026-09-08",
+    structuredData: {
+      enabled: true,
+      attendanceMode: "online",
+      virtualLocationUrl: "https://twitcasting.tv/kaigyacstage"
+    },
     title: "月シア『Homin'』ツイキャス配信",
     shortTitle: "アイトキ ツイキャス",
     subtitle: "里季さん出演・稽古の気持ちを話す短め配信",
@@ -355,6 +368,14 @@ export const events: ScheduleEvent[] = [
   },
   {
     id: "tsuki-wo-matagu-vol20-2026-10",
+    structuredData: {
+      organizer: {
+        type: "Organization",
+        name: "KAIGYAC STAGE",
+        url: "https://x.com/kaigyacstage",
+        source: "https://x.com/kaigyacstage/status/2113758692575473921"
+      }
+    },
     title: "月シア上映イベント『月を跨ぐ』vol.20",
     shortTitle: "月を跨ぐ vol.20",
     subtitle: "アイトキホーミンを一緒に見て、裏話を語る",
@@ -429,6 +450,21 @@ export const events: ScheduleEvent[] = [
   },
   {
     id: "ayudon-sports-day-2026-11-08",
+    structuredData: {
+      organizer: {
+        type: "Person",
+        name: "高橋あゆみ",
+        url: "https://ayudon.base.shop/",
+        source: "https://ayudon.base.shop/items/153484411"
+      },
+      offers: [{
+        url: "https://ayudon.base.shop/items/153484411",
+        price: 5500,
+        priceCurrency: "JPY",
+        source: "https://ayudon.base.shop/ （来場チケ商品説明・2026-10-25確認）",
+        validThrough: "2026-11-07T23:59:00+09:00"
+      }]
+    },
     title: "第3回あゆどん大運動会",
     shortTitle: "あゆどん大運動会",
     category: "event",
@@ -443,7 +479,7 @@ export const events: ScheduleEvent[] = [
     imageAlt: "第3回あゆどん大運動会の出演者告知。夏凪里季さんを含む出演者と、11月8日12:00〜16:00・東京某所の案内",
     gallery: [{ src: "/images/gallery/g157.jpg", alt: "第3回あゆどん大運動会の応援チケット案内。1枚2,000円、来場できない方も応援可能。高橋あゆみさんの写真入り", credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" } }],
     summary:
-      "高橋あゆみさん主催の第3回あゆどん大運動会に出演。11月8日（日）12:00〜16:00、11:30開場。会場は東京某所で、詳細は購入者に主催から案内されます。来場は完全予約制。本人の出演まとめでは「遠隔応援チケもあります✨️」と案内。会場へ行けない方も、応援チケットで応援できます。来場・応援チケットの詳細は主催の販売ページをご確認ください。",
+      "高橋あゆみさん主催の第3回あゆどん大運動会に出演。11月8日（日）12:00〜16:00、11:30開場。会場は東京某所で、詳細は購入者に主催から案内されます。来場は完全予約制。参加費は1名5,500円（税込、決済方法により別途手数料）。来場予約は11月7日（土）23:59まで（主催販売ページ・10月25日確認）。本人の出演まとめでは「遠隔応援チケもあります✨️」と案内。会場へ行けない方も、応援チケットで応援できます。来場・応援チケットの詳細は主催の販売ページをご確認ください。",
     badges: ["運動会", "完全予約制", "応援チケットあり"],
     links: [
       {
@@ -764,6 +800,10 @@ export const events: ScheduleEvent[] = [
   },
   {
     id: "showroom-dreamisland-2026-06-04",
+    structuredData: {
+      attendanceMode: "online",
+      virtualLocationUrl: "https://www.showroom-live.com/event/dreamisland6"
+    },
     title: "SHOWROOM「夢の国に遊びに行こう！テーマパークペアチケット＆駅中広告ポスター掲載権獲得イベント！」",
     shortTitle: "夢の国イベント",
     category: "event",

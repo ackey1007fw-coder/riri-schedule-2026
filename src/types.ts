@@ -29,6 +29,29 @@ export type EventOccurrence = {
   label?: string;
 };
 
+/** 公開済みの告知・販売ページと照合した値だけを登録する。 */
+export type EventSchemaMetadata = {
+  /** 記事・記念写真など、参加する催しではない項目は false。 */
+  enabled?: boolean;
+  attendanceMode?: "offline" | "online" | "mixed";
+  /** オンライン参加先。links の kind: stream と一致する公開URLのみ。 */
+  virtualLocationUrl?: string;
+  organizer?: {
+    type: "Person" | "Organization";
+    name: string;
+    url?: string;
+    source: string;
+  };
+  /** 入場用チケットのみ。応援券・物販・価格不明のリンクを入れない。 */
+  offers?: {
+    url: string;
+    price: number;
+    priceCurrency: string;
+    source: string;
+    validThrough?: string;
+  }[];
+};
+
 export type ScheduleEvent = {
   id: string;
   title: string;
@@ -53,6 +76,7 @@ export type ScheduleEvent = {
   summary: string;
   badges: string[];
   links: EventLink[];
+  structuredData?: EventSchemaMetadata;
   isImportant?: boolean;
   isNextFocus?: boolean;
   /** SNS投稿の開催後レポートなどで、カバー画像に加えて添える写真（任意） */

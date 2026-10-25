@@ -93,7 +93,7 @@ function normalizeEvent(event: ScheduleApiEvent): ScheduleEvent | null {
     shortTitle: event.shortTitle || event.title,
     category,
     startAt: event.startAt,
-    endAt: event.endAt || event.startAt,
+    endAt: event.endAt || undefined,
     displayDate: event.displayDate || event.startAt,
     venue: event.venue || event.location || undefined,
     image: resolveEventImage(event.id, event.image, category),

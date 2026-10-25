@@ -1,40 +1,15 @@
 import { useEffect } from "react";
-import { events } from "../data/events";
+import type { ScheduleEvent } from "../types";
+import { createEventGraph, SITE_BASE } from "../lib/eventStructuredData";
 import { searchFaqs } from "../data/searchFaq";
 
-// events.ts の内容を schema.org Event の構造化データ(JSON-LD)として
-// 実行時に <head> へ出力する。データを足すだけで検索向けにも反映される。
-const BASE = "https://riri-schedule-2026.vercel.app";
-const PERSON_ID = `${BASE}/#person`;
+// 表示中の予定から、根拠のある Event 情報を実行時に <head> へ出力する。
+const BASE = SITE_BASE;
 const SCRIPT_ID = "riri-events-jsonld";
 
-const toAbsolute = (path: string) =>
-  path.startsWith("http") ? path : `${BASE}${path}`;
-
-export function StructuredData() {
+export function StructuredData({ events }: { events: ScheduleEvent[] }) {
   useEffect(() => {
-    const graph = events.map((event) => {
-      const dateOnly = Boolean(event.dates?.length) && !event.occurrences?.length;
-      const node: Record<string, unknown> = {
-        "@type": "Event",
-        "@id": `${BASE}/#event-${event.id}`,
-        name: event.title,
-        startDate: dateOnly ? event.startAt.slice(0, 10) : event.startAt,
-        endDate: dateOnly
-          ? (event.endAt ?? event.startAt).slice(0, 10)
-          : event.endAt ?? event.startAt,
-        eventStatus: "https://schema.org/EventScheduled",
-        eventAttendanceMode: event.venue
-          ? "https://schema.org/OfflineEventAttendanceMode"
-          : "https://schema.org/OnlineEventAttendanceMode",
-        description: event.summary,
-        performer: { "@id": PERSON_ID },
-        url: `${BASE}/#schedule`,
-      };
-      if (event.image) node.image = [toAbsolute(event.image)];
-      if (event.venue) node.location = { "@type": "Place", name: event.venue };
-      return node;
-    });
+    const graph = createEventGraph(events);
 
     const faqPage = {
       "@type": "FAQPage",
@@ -65,7 +40,7 @@ export function StructuredData() {
     return () => {
       document.getElementById(SCRIPT_ID)?.remove();
     };
-  }, []);
+  }, [events]);
 
   return null;
 }
