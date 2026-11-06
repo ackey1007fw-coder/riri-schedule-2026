@@ -49,7 +49,7 @@ const events = [
     "https://tiget.net/events/481711",
     "",
     "https://www.wallop.tv/",
-    "https://x.com/frecam2025_0306",
+    "https://x.com/Riri_Natsunagi",
     "",
     "2026-05-02"
   ],
@@ -71,7 +71,7 @@ const events = [
     "https://www.quartet-online.net/ticket/sankyou2026?m=03hggeh",
     "https://twitcasting.tv/",
     "https://yorozu-s.com/",
-    "https://x.com/frecam2025_0306",
+    "https://x.com/Riri_Natsunagi",
     "",
     "2026-05-02"
   ],
@@ -93,7 +93,7 @@ const events = [
     "https://livepocket.jp/t/aitoki",
     "",
     "https://x.com/kaigyacstage",
-    "https://x.com/frecam2025_0306",
+    "https://x.com/Riri_Natsunagi",
     "",
     "2026-05-02"
   ],
@@ -115,7 +115,7 @@ const events = [
     "",
     "https://www.showroom-live.com/room/profile?room_id=550336",
     "",
-    "https://x.com/frecam2025_0306",
+    "https://x.com/Riri_Natsunagi",
     "",
     "2026-05-02"
   ],
@@ -137,7 +137,7 @@ const events = [
     "",
     "",
     "https://fukurowfm.co.jp/",
-    "https://x.com/frecam2025_0306",
+    "https://x.com/Riri_Natsunagi",
     "",
     "2026-05-02"
   ],
@@ -233,7 +233,7 @@ const events = [
 
 const links = [
   ["表示", "ラベル", "種別", "ハンドル", "URL", "説明"],
-  [true, "X", "SNS", "@frecam2025_0306", "https://x.com/frecam2025_0306", "出演告知と当日の更新をチェック"],
+  [true, "X", "SNS", "@Riri_Natsunagi", "https://x.com/Riri_Natsunagi", "出演告知と当日の更新をチェック"],
   [true, "Instagram", "SNS", "@__ririri__24", "https://www.instagram.com/__ririri__24", "写真と日常の投稿を見る"],
   [true, "TikTok", "SNS", "@ririchannel__", "https://www.tiktok.com/@ririchannel__", "短い動画で近況を追う"],
   [true, "SHOWROOM", "配信", "夏凪里季", "https://www.showroom-live.com/room/profile?room_id=550336", "ライブ配信で応援する"],

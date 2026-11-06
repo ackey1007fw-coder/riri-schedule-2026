@@ -143,7 +143,7 @@ export const galleryFeatures = [
     heading: "家族で浴衣。カルアちゃんも一緒👘",
     title: "お姉ちゃんと一緒に浴衣👘 実はカルアさんも着てるの✨️",
     copy: "花柄の浴衣で並んだ里季さんとお姉さん、その真ん中には浴衣風ウェアのカルアちゃん。姉妹と愛犬で夏を楽しむ、明るくあたたかな家族ショットです。",
-    url: "https://x.com/frecam2025_0306/status/2084028970237083833",
+    url: "https://x.com/Riri_Natsunagi/status/2084028970237083833",
     photo: familyYukataPhoto
   },
   {
@@ -152,7 +152,7 @@ export const galleryFeatures = [
     heading: "2026年、最初の浴衣",
     title: "今年初めての浴衣👘",
     copy: "白地にピンクと紫の花が咲く浴衣と、アップヘアに添えた赤い花飾り。明るい髪色にも映える、2026年夏の初浴衣ショットです。",
-    url: "https://x.com/frecam2025_0306/status/2083666581314519466",
+    url: "https://x.com/Riri_Natsunagi/status/2083666581314519466",
     photo: summerYukataPhoto
   }
 ];
@@ -188,7 +188,7 @@ const aitokiRehearsalGroupPhoto: GalleryPhoto = {
 };
 
 // 2026.9.5 06:24 JST 本人X「トイストーリーに囲まれた夏🦖🏀🐖🧸」
-// 出典: https://x.com/frecam2025_0306/status/2095986258497491400
+// 出典: https://x.com/Riri_Natsunagi/status/2095986258497491400
 // 画像ファイルは依頼者提供待ち。SNS画像は自動保存しないため、ギャラリーへは埋め込まない。
 
 
@@ -220,7 +220,7 @@ const mondayGanbattaGroupStudioBPhoto: GalleryPhoto = {
 };
 
 // 2026.9.8 本人X「ベストショット🐶📸✨️」オーナー提供1枚。SNSスクレイプではない。creditなし
-// 出典: https://x.com/frecam2025_0306/status/2097069395478512041
+// 出典: https://x.com/Riri_Natsunagi/status/2097069395478512041
 const bestShotDogPhoto: GalleryPhoto = {
   src: "/images/gallery/g140.jpg",
   alt: "白いTシャツ姿の夏凪里季さんが、舌を出したふわふわの小型犬を抱えて微笑む室内の自撮り（X『ベストショット』より）"
@@ -233,7 +233,7 @@ const aitokiSecondDayStoryPhoto: GalleryPhoto = {
 };
 
 // 2026.9.17 11:49 JST 本人X「#月シア #アイトキ ツーショたち」。元投稿の写真順。
-// https://x.com/frecam2025_0306/status/2100416833283395875
+// https://x.com/Riri_Natsunagi/status/2100416833283395875
 const aitokiTwoShotPhotos: GalleryPhoto[] = [
   {
     src: "/images/gallery/g142.jpg",
@@ -254,7 +254,7 @@ const aitokiTwoShotPhotos: GalleryPhoto[] = [
 ];
 
 // 2026.9.18 06:04 JST 本人X「旅に出ます🚃」。本人アカウントの本人写真のため credit なし
-// 出典: https://x.com/frecam2025_0306/status/2100692267787018739
+// 出典: https://x.com/Riri_Natsunagi/status/2100692267787018739
 // 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
 const tabiNiDemasuPhoto: GalleryPhoto = {
   src: "/images/gallery/g146.jpg",
@@ -262,7 +262,7 @@ const tabiNiDemasuPhoto: GalleryPhoto = {
 };
 
 // 2026.9.19 08:28 JST 本人X「ホイップもりもりパンケーキ🥞」。本人アカウントの本人写真のため credit なし
-// 出典: https://x.com/frecam2025_0306/status/2101091051188699341
+// 出典: https://x.com/Riri_Natsunagi/status/2101091051188699341
 // 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
 const whipMoriMoriPancakePhoto: GalleryPhoto = {
   src: "/images/gallery/g147.jpg",
@@ -270,7 +270,7 @@ const whipMoriMoriPancakePhoto: GalleryPhoto = {
 };
 
 // 2026.9.20 06:33 JST 本人X「今さら夏ディズニー投稿は許されない？」。本人アカウントの本人写真のため credit なし
-// 出典: https://x.com/frecam2025_0306/status/2101424453523767699
+// 出典: https://x.com/Riri_Natsunagi/status/2101424453523767699
 // 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
 const natsuDisneyPhoto: GalleryPhoto = {
   src: "/images/gallery/g149.jpg",
@@ -278,7 +278,7 @@ const natsuDisneyPhoto: GalleryPhoto = {
 };
 
 // 2026.9.21 09:23 JST 本人X「シルバーウィークENJOYしてる？」。本人アカウントの本人写真のため credit なし
-// 出典: https://x.com/frecam2025_0306/status/2101829630894456910
+// 出典: https://x.com/Riri_Natsunagi/status/2101829630894456910
 // 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
 const silverWeekEnjoyPhoto: GalleryPhoto = {
   src: "/images/gallery/g150.jpg",
@@ -286,7 +286,7 @@ const silverWeekEnjoyPhoto: GalleryPhoto = {
 };
 
 // 2026.9.24 06:14 JST 本人X「徒歩よりも車よりもチャリがすき」。本人アカウントの本人写真のため credit なし
-// 出典: https://x.com/frecam2025_0306/status/2102869111386558788
+// 出典: https://x.com/Riri_Natsunagi/status/2102869111386558788
 // 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
 const chariGaSukiPhoto: GalleryPhoto = {
   src: "/images/gallery/g151.jpg",
@@ -294,7 +294,7 @@ const chariGaSukiPhoto: GalleryPhoto = {
 };
 
 // 2026.9.28 14:15 JST 本人X『天竺生地』vol.28出演告知。本人アカウントの写真入り告知画像のため credit なし。
-// 出典: https://x.com/frecam2025_0306/status/2104439788191568330
+// 出典: https://x.com/Riri_Natsunagi/status/2104439788191568330
 // 引用元: https://x.com/tenjikukiji/status/2103473180778348795
 // 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。既存フライヤーは差し替えない。
 const tenjikuVol28AnnouncePhoto: GalleryPhoto = {
@@ -303,7 +303,7 @@ const tenjikuVol28AnnouncePhoto: GalleryPhoto = {
 };
 
 // 2026.9.27 09:41 JST 本人X「一日に2個もクレープ食べた🤍」。本人アカウントの本人写真のため credit なし。
-// 出典: https://x.com/frecam2025_0306/status/2104008576729829754
+// 出典: https://x.com/Riri_Natsunagi/status/2104008576729829754
 // 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
 const crepeTwoPhoto: GalleryPhoto = {
   src: "/images/gallery/g154.jpg",
@@ -311,7 +311,7 @@ const crepeTwoPhoto: GalleryPhoto = {
 };
 
 // 2026.9.25 07:07 JST 本人X「矢場とん！ご飯大盛りにした😋✨️」。本人アカウントの本人写真のため credit なし
-// 出典: https://x.com/frecam2025_0306/status/2103244907800649999
+// 出典: https://x.com/Riri_Natsunagi/status/2103244907800649999
 // 今回指定された投稿の画像も取得して掲載する、という依頼に基づく単発の取得。
 const yabatonOmoriPhoto: GalleryPhoto = {
   src: "/images/gallery/g152.jpg",
@@ -319,7 +319,7 @@ const yabatonOmoriPhoto: GalleryPhoto = {
 };
 
 // 2026.9.29 07:27 JST 本人X「やっとさつまいもフラペ飲めた🍠💜」。本人写真のため credit なし。
-// 出典: https://x.com/frecam2025_0306/status/2104699548216242600
+// 出典: https://x.com/Riri_Natsunagi/status/2104699548216242600
 // 指定投稿の画像を取得する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
 const sweetPotatoFrappePhoto: GalleryPhoto = {
   src: "/images/gallery/g155.jpg",
@@ -327,7 +327,7 @@ const sweetPotatoFrappePhoto: GalleryPhoto = {
 };
 
 // 2026.10.3 11:13 JST 本人X「青学から徒歩3分くらいのお店、空きコマに行けた幸(^-^)/」。本人写真のため credit なし。
-// 出典: https://x.com/frecam2025_0306/status/2106205883349008812
+// 出典: https://x.com/Riri_Natsunagi/status/2106205883349008812
 // 指定投稿の写真を掲載する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
 const campusLunchPhoto: GalleryPhoto = {
   src: "/images/gallery/g158.jpg",
@@ -335,7 +335,7 @@ const campusLunchPhoto: GalleryPhoto = {
 };
 
 // 2026.10.4 06:19 JST 本人Xのチキンとアボカドのエピソード。本人写真のため credit なし。
-// 出典: https://x.com/frecam2025_0306/status/2106494249520787508
+// 出典: https://x.com/Riri_Natsunagi/status/2106494249520787508
 // 指定投稿の写真を掲載する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
 const avocadoLunchPhoto: GalleryPhoto = {
   src: "/images/gallery/g159.jpg",
@@ -343,7 +343,7 @@ const avocadoLunchPhoto: GalleryPhoto = {
 };
 
 // 2026.10.5 08:58 JST 本人X「どーーこだ！？」。本人写真のため credit なし。
-// 出典: https://x.com/frecam2025_0306/status/2106896786174664898
+// 出典: https://x.com/Riri_Natsunagi/status/2106896786174664898
 // 指定投稿の写真を掲載する依頼に基づく単発の取得。元投稿画面と原本を目視確認済み。
 const whereIsThisPhoto: GalleryPhoto = {
   src: "/images/gallery/g160.jpg",
@@ -351,7 +351,7 @@ const whereIsThisPhoto: GalleryPhoto = {
 };
 
 // 2026.10.6 06:26 JST 本人X「寿司！！なんのネタがすき？」。本人写真のため credit なし。
-// 出典: https://x.com/frecam2025_0306/status/2107220785555234999
+// 出典: https://x.com/Riri_Natsunagi/status/2107220785555234999
 // 指定された1投稿1枚の単発取得。元投稿画面と写真を目視確認済み。
 const sushiPhoto: GalleryPhoto = {
   src: "/images/gallery/g161.jpg",
@@ -368,12 +368,12 @@ export const galleryPhotos: GalleryPhoto[] = [
   {
     src: "/images/gallery/g156.jpg",
     alt: "第3回あゆどん大運動会の出演者告知。高橋あゆみさん、響・長友光弘さん、夏凪里季さんらの写真と、11月8日（日）12:00〜16:00・東京某所の案内",
-    credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" }
+    credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/Riri_Natsunagi/status/2104759725665714184" }
   },
   {
     src: "/images/gallery/g157.jpg",
     alt: "第3回あゆどん大運動会の応援チケット案内。1枚2,000円、当日来場できない方も応援可能。赤と黄色の背景に高橋あゆみさんの写真",
-    credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" }
+    credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/Riri_Natsunagi/status/2104759725665714184" }
   },
   // 2026.9.29 07:27 JST 本人X「やっとさつまいもフラペ飲めた🍠💜」
   sweetPotatoFrappePhoto,
@@ -626,5 +626,5 @@ export const galleryUpdate: {
   date: "2026.10.6",
   platform: "X",
   note: "「寿司！！なんのネタがすき？」の投稿から、寿司の皿を持つ写真を追加",
-  url: "https://x.com/frecam2025_0306/status/2107220785555234999"
+  url: "https://x.com/Riri_Natsunagi/status/2107220785555234999"
 };
