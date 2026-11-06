@@ -13,173 +13,173 @@ export const news: NewsItem[] = [
     date: "2026.10.29",
     label: "X",
     text: "11/8『第3回あゆどん大運動会』は、夏凪名義で予約すると応援・来場のどちらでもお名前入り写真の特典があると本人が案内しています🎁 購入締切はコンビニ払い・銀行振込が10/31、クレカ・キャリア決済が11/7（主催の案内）。",
-    url: "https://x.com/frecam2025_0306/status/2115587051219566847"
+    url: "https://x.com/Riri_Natsunagi/status/2115587051219566847"
   },
   // 2026.10.24 08:37 JST 本人X。07:25 JSTの主催告知も原文照合済み。
   {
     date: "2026.10.24",
     label: "X",
     text: "『月を跨ぐ vol.20』昼13:00・夜17:00に出演。10/24朝の本人・主催告知では両回とも若干数の当日券を案内。現在の空席を保証するものではありません。最新状況は主催者へご確認ください。",
-    url: "https://x.com/frecam2025_0306/status/2113776926506856622"
+    url: "https://x.com/Riri_Natsunagi/status/2113776926506856622"
   },
   // 2026.10.22 21:33 JST 本人X。夕方17時回の残席・終演後物販案内（情報は10/22時点）。
   {
     date: "2026.10.22",
     label: "X",
     text: "10/24『月を跨ぐ vol.20』夕方17:00回は、10/22時点で残席数席。終演後にグッズ販売の案内も🌻 最新の残席はチケット販売ページでご確認ください。",
-    url: "https://x.com/frecam2025_0306/status/2113247252898894217"
+    url: "https://x.com/Riri_Natsunagi/status/2113247252898894217"
   },
   // 2026.10.22 11:45 JST 本人X。写真の無断保存・転載はしない。
   {
     date: "2026.10.22",
     label: "X",
     text: "before／afterの写真2枚を本人Xで公開📷 写真は元投稿からどうぞ。",
-    url: "https://x.com/frecam2025_0306/status/2113099362851258766"
+    url: "https://x.com/Riri_Natsunagi/status/2113099362851258766"
   },
   // 2026.10.6 06:26 JST 本人X。元投稿の日時・本文・写真1枚を実画面で確認。
   {
     date: "2026.10.6",
     label: "X",
     text: "「寿司！！なんのネタがすき？」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2107220785555234999"
+    url: "https://x.com/Riri_Natsunagi/status/2107220785555234999"
   },
   {
     date: "2026.10.5",
     label: "X",
     text: "「どーーこだ！？」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2106896786174664898"
+    url: "https://x.com/Riri_Natsunagi/status/2106896786174664898"
   },
   {
     date: "2026.10.4",
     label: "X",
     text: "チキンを食べた際、写真を撮るために友達のアボカドを借りたエピソードを写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2106494249520787508"
+    url: "https://x.com/Riri_Natsunagi/status/2106494249520787508"
   },
   {
     date: "2026.10.3",
     label: "X",
     text: "「青学から徒歩3分くらいのお店、空きコマに行けた幸(^-^)/」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2106205883349008812"
+    url: "https://x.com/Riri_Natsunagi/status/2106205883349008812"
   },
   {
     date: "2026.9.29",
     label: "X",
     text: "出演まとめで11/8（日）『あゆどん運動会』への出演を告知。12:00〜16:00、東京某所。「遠隔応援チケもあります✨️」と案内。",
-    url: "https://x.com/frecam2025_0306/status/2104759725665714184"
+    url: "https://x.com/Riri_Natsunagi/status/2104759725665714184"
   },
   {
     date: "2026.9.29",
     label: "X",
     text: "「やっとさつまいもフラペ飲めた🍠💜」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2104699548216242600"
+    url: "https://x.com/Riri_Natsunagi/status/2104699548216242600"
   },
   {
     date: "2026.9.28",
     label: "X",
     text: "『天竺生地』vol.28の出演を告知。10/11（日）池袋西口GEKIBA、全3公演（12:00「半知半解」／15:30「二者択一」／18:30「取捨選択」）。チケット・ソロチェキ（10/10 23:59締切）・応援メッセージポストカードあり。天竺生地のイラスト解禁投稿 https://x.com/tenjikukiji/status/2103473180778348795 を引用",
-    url: "https://x.com/frecam2025_0306/status/2104439788191568330"
+    url: "https://x.com/Riri_Natsunagi/status/2104439788191568330"
   },
   {
     date: "2026.9.27",
     label: "X",
     text: "「一日に2個もクレープ食べた🤍」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2104008576729829754"
+    url: "https://x.com/Riri_Natsunagi/status/2104008576729829754"
   },
   {
     date: "2026.9.25",
     label: "X",
     text: "「矢場とん！ご飯大盛りにした😋✨️」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2103244907800649999"
+    url: "https://x.com/Riri_Natsunagi/status/2103244907800649999"
   },
   {
     date: "2026.9.24",
     label: "X",
     text: "「徒歩よりも車よりもチャリがすき」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2102869111386558788"
+    url: "https://x.com/Riri_Natsunagi/status/2102869111386558788"
   },
   {
     date: "2026.9.23",
     label: "X",
     text: "「露出と明るさ変えただけで」と、明るさを比べる写真2枚を投稿",
-    url: "https://x.com/frecam2025_0306/status/2102581603189010785"
+    url: "https://x.com/Riri_Natsunagi/status/2102581603189010785"
   },
   {
     date: "2026.9.22",
     label: "X",
     text: "「朝はパン派？ごはん派？」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2102153147879919882"
+    url: "https://x.com/Riri_Natsunagi/status/2102153147879919882"
   },
   {
     date: "2026.9.21",
     label: "X",
     text: "『月を跨ぐ vol.20』チケット発売開始。1部・2部どちらも出演し、「お席少ないです」と案内。チケット https://livepocket.jp/t/20matagu",
-    url: "https://x.com/frecam2025_0306/status/2101970906658783484"
+    url: "https://x.com/Riri_Natsunagi/status/2101970906658783484"
   },
   {
     date: "2026.9.21",
     label: "X",
     text: "「シルバーウィークENJOYしてる？」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2101829630894456910"
+    url: "https://x.com/Riri_Natsunagi/status/2101829630894456910"
   },
   {
     date: "2026.9.20",
     label: "X",
     text: "「今さら夏ディズニー投稿は許されない？」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2101424453523767699"
+    url: "https://x.com/Riri_Natsunagi/status/2101424453523767699"
   },
   {
     date: "2026.9.19",
     label: "X",
     text: "「#月シア 上映イベント『月を跨ぐvol20』出演いたします！」10月24日（土）下北沢RBLCAFE。昼の部13:00・夕方の部17:00どちらも出演。チケット販売は9/21 18:00から https://livepocket.jp/t/20matagu",
-    url: "https://x.com/frecam2025_0306/status/2101244304979329158"
+    url: "https://x.com/Riri_Natsunagi/status/2101244304979329158"
   },
   {
     date: "2026.9.19",
     label: "X",
     text: "「ホイップもりもりパンケーキ🥞」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2101091051188699341"
+    url: "https://x.com/Riri_Natsunagi/status/2101091051188699341"
   },
   {
     date: "2026.9.18",
     label: "X",
     text: "「旅に出ます🚃」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2100692267787018739"
+    url: "https://x.com/Riri_Natsunagi/status/2100692267787018739"
   },
   {
     date: "2026.9.17",
     label: "X",
     text: "「#月シア #アイトキ ツーショたち📸ありがとうございます🥰」と、ツーショット写真4枚を投稿",
-    url: "https://x.com/frecam2025_0306/status/2100416833283395875"
+    url: "https://x.com/Riri_Natsunagi/status/2100416833283395875"
   },
   {
     date: "2026.9.16",
     label: "X",
     text: "「ままが舞台お疲れ様ってケーキ用意してくれてた🍰愛だなぁ」と投稿",
-    url: "https://x.com/frecam2025_0306/status/2099997859504660641"
+    url: "https://x.com/Riri_Natsunagi/status/2099997859504660641"
   },
   {
     date: "2026.9.15",
     label: "X",
     text: "「無事に千秋楽を終えました✨️」#月シア #アイトキ #ホーミン。ご来場・応援・関係者の皆さまへのお礼。「アイネとして、祥子として、凛音として生きれてとっても幸せでした」",
-    url: "https://x.com/frecam2025_0306/status/2099874533775949839"
+    url: "https://x.com/Riri_Natsunagi/status/2099874533775949839"
   },
   {
     date: "2026.9.15",
     label: "X",
     text: "「おはよう☀️ついに千秋楽！当日券あります！」A sideは当日18:00開演、西荻窪・遊空間がざびぃ。当日券販売17:30〜、開場17:40と案内",
-    url: "https://x.com/frecam2025_0306/status/2099614716675105165"
+    url: "https://x.com/Riri_Natsunagi/status/2099614716675105165"
   },
   {
     date: "2026.9.14",
     label: "X",
     text: "「#アイトキ 明日はついに千秋楽！」A sideは9/15 18:00、西荻窪・遊空間がざびぃ。チケット https://livepocket.jp/t/aitokihomin",
-    url: "https://x.com/frecam2025_0306/status/2099360329822265576"
+    url: "https://x.com/Riri_Natsunagi/status/2099360329822265576"
   },
   {
     date: "2026.9.13",
     label: "X",
     text: "「#アイトキ」本日12:00回。当日券が若干あり、開場11:40・当日券販売11:30と案内。西荻窪・遊空間がざびぃ。出演は「れんあいじょうず」「風に吹かれて」",
-    url: "https://x.com/frecam2025_0306/status/2098930122145591351"
+    url: "https://x.com/Riri_Natsunagi/status/2098930122145591351"
   },
   {
     date: "2026.9.12",
@@ -192,19 +192,19 @@ export const news: NewsItem[] = [
     date: "2026.9.12",
     label: "X",
     text: "「アイトキ2公演目終了」A side後半戦は9/13 12:00 西荻窪、当日券あり。千秋楽チケット https://livepocket.jp/t/aitokihomin",
-    url: "https://x.com/frecam2025_0306/status/2098766967612280945"
+    url: "https://x.com/Riri_Natsunagi/status/2098766967612280945"
   },
   {
     date: "2026.9.12",
     label: "X",
     text: "『本日2ステ目！』A sideは12:00開演。当日券あり、開場11:40・当日券販売11:30と案内",
-    url: "https://x.com/frecam2025_0306/status/2098561013679624620"
+    url: "https://x.com/Riri_Natsunagi/status/2098561013679624620"
   },
   {
     date: "2026.9.11",
     label: "X",
     text: "「#アイトキ #月シア ついにA班初日✨️ 当日券あるよ！19時から西荻窪で待ってます🤲🏻(開場は18時40分！)」19:00開演・西荻窪、開場18:40。翌日以降のチケットは https://livepocket.jp/t/aitokihomin",
-    url: "https://x.com/frecam2025_0306/status/2098201505715376507"
+    url: "https://x.com/Riri_Natsunagi/status/2098201505715376507"
   },
   {
     date: "2026.9.10",
@@ -216,31 +216,31 @@ export const news: NewsItem[] = [
     date: "2026.9.10",
     label: "X",
     text: "「君と夏の終わり☆。.:＊・゜」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2097834370082172967"
+    url: "https://x.com/Riri_Natsunagi/status/2097834370082172967"
   },
   {
     date: "2026.9.9",
     label: "X",
     text: "「仕込み中」。金曜日から『I'm talking about Homin'』が始まることを伝え、来場を呼びかけ。チケット https://livepocket.jp/t/aitokihomin",
-    url: "https://x.com/frecam2025_0306/status/2097549024903696614"
+    url: "https://x.com/Riri_Natsunagi/status/2097549024903696614"
   },
   {
     date: "2026.9.8",
     label: "X",
     text: "「ベストショット🐶📸✨️」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2097069395478512041"
+    url: "https://x.com/Riri_Natsunagi/status/2097069395478512041"
   },
   {
     date: "2026.9.7",
     label: "X",
     text: "「月曜日頑張ったね」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2096882906488865090"
+    url: "https://x.com/Riri_Natsunagi/status/2096882906488865090"
   },
   {
     date: "2026.9.7",
     label: "X",
     text: "「明日9/8(火)17:00～17:20ツイキャス配信します～❣️」配信は KAIGYAC STAGE（@kaigyacstage）のツイキャス。約10〜20分",
-    url: "https://x.com/frecam2025_0306/status/2096826234915480002"
+    url: "https://x.com/Riri_Natsunagi/status/2096826234915480002"
   },
   {
     date: "2026.9.7",
@@ -258,37 +258,37 @@ export const news: NewsItem[] = [
     date: "2026.9.6",
     label: "X",
     text: "「#月シア #アイトキ 今日も稽古だよ🌟みんなチケット予約してくれた？🥺」里季が稽古を伝えました。チケット https://livepocket.jp/t/aitokihomin",
-    url: "https://x.com/frecam2025_0306/status/2096353175989273024"
+    url: "https://x.com/Riri_Natsunagi/status/2096353175989273024"
   },
   {
     date: "2026.9.5",
     label: "X",
     text: "「#月シア #アイトキ 9月12日の12時回残席少ないです！！ご予約お早めに！！！！！」A side 9/12(土)12:00回の残席少案内。制作Xは残り4席と案内（2026-09-05確認）。席数は変動するので販売ページを正とする",
-    url: "https://x.com/frecam2025_0306/status/2096140971528552544"
+    url: "https://x.com/Riri_Natsunagi/status/2096140971528552544"
   },
   {
     date: "2026.9.5",
     label: "X",
     text: "「トイストーリーに囲まれた夏🦖🏀🐖🧸」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2095986258497491400"
+    url: "https://x.com/Riri_Natsunagi/status/2095986258497491400"
   },
   {
     date: "2026.9.4",
     label: "X",
     text: "「おはよう華金だね☀️」と投稿",
-    url: "https://x.com/frecam2025_0306/status/2095626890396786873"
+    url: "https://x.com/Riri_Natsunagi/status/2095626890396786873"
   },
   {
     date: "2026.9.3",
     label: "X",
     text: "「野菜たっぷりうどん」と写真付きで投稿",
-    url: "https://x.com/frecam2025_0306/status/2095331683516162311"
+    url: "https://x.com/Riri_Natsunagi/status/2095331683516162311"
   },
   {
     date: "2026.9.3",
     label: "X",
     text: "「【🌟出演情報🌟】天竺生地vol.28 出演させていただきます！ 🗓10月11日(日)📍池袋西口GEKIBA 稽古なしの即興劇！初挑戦でドキドキですが頑張ります」即興劇ユニット『天竺生地』vol.28に出演",
-    url: "https://x.com/frecam2025_0306/status/2095174102634168752"
+    url: "https://x.com/Riri_Natsunagi/status/2095174102634168752"
   },
   {
     date: "2026.9.2",
@@ -300,31 +300,31 @@ export const news: NewsItem[] = [
     date: "2026.9.1",
     label: "X",
     text: "「山梨上陸した！これは鍋焼きうどん🍲」山梨で鍋焼きうどんを前に両手を広げて笑う1枚",
-    url: "https://x.com/frecam2025_0306/status/2094629557819285798"
+    url: "https://x.com/Riri_Natsunagi/status/2094629557819285798"
   },
   {
     date: "2026.9.1",
     label: "X",
     text: "「#アイトキ #ホーミン 本日顔合わせ読み合わせでした✨️ オムニバス形式の公演となるので色んなりりが見れちゃいますよ👀」月シア別冊第2集『I'm talking about Homin'』の顔合わせ・読み合わせ。里季さんは A side に出演。",
-    url: "https://x.com/frecam2025_0306/status/2094452561462108436"
+    url: "https://x.com/Riri_Natsunagi/status/2094452561462108436"
   },
   {
     date: "2026.8.31",
     label: "X",
     text: "「9月の舞台 #アイトキ デジタル花の販売が明日までとなっております！！ 現地に来られない方も応援できるシステムです✨️ 夏凪がんばれって思ってくれてるそこの貴方！とってもとっても力になるのでよければご検討ください🙇🏻‍♀️ こちらから⬇️(2種類あるよ)」月シア別冊第2集のデジタル花リマインド。購入・入金は9月1日(火)23:59まで",
-    url: "https://x.com/frecam2025_0306/status/2094405178514612675"
+    url: "https://x.com/Riri_Natsunagi/status/2094405178514612675"
   },
   {
     date: "2026.8.31",
     label: "X",
     text: "「#ピッパラの樹 推し花ありがとうございました🙇🏻‍♀️💖（3枚目スライドしてね） 裏で待機中のときもこの推し花みて頑張ろうって思えたよ！ とっても嬉しかったですありがとう🥰🥰」推し花受付終了後の感謝",
-    url: "https://x.com/frecam2025_0306/status/2094077682309083629"
+    url: "https://x.com/Riri_Natsunagi/status/2094077682309083629"
   },
   {
     date: "2026.8.30",
     label: "X",
     text: "「#ピッパラの樹 改めまして、全6ステージ走り切りました！ 関わってくださった全ての皆様、本当にありがとうございました✨️ 頼もしい座組の皆様に支えられて、毎日がとても楽しかったし新しい学びが沢山ありました。 アナスタジーとして生きれて、私は本当に幸せ！みんなまた会おうね！ アナスタジー・ド・ブロワ役／夏凪里季」A班全6公演完走の感謝",
-    url: "https://x.com/frecam2025_0306/status/2094044795928719369"
+    url: "https://x.com/Riri_Natsunagi/status/2094044795928719369"
   },
   {
     date: "2026.8.30",
@@ -336,7 +336,7 @@ export const news: NewsItem[] = [
     date: "2026.8.29",
     label: "X",
     text: "「#ピッパラの樹 A班千秋楽終えました！ ご来場いただいた皆さん、祝い花を送ってくださった皆さん、遠くからでも応援してくださった皆さん、ありがとうございました✨️💖 とっても楽しかったです！またあげるね🙏」A班千秋楽終演後の感謝。舞台衣装での自撮りも公開",
-    url: "https://x.com/frecam2025_0306/status/2093698550974812255"
+    url: "https://x.com/Riri_Natsunagi/status/2093698550974812255"
   },
   {
     date: "2026.8.29",
@@ -348,7 +348,7 @@ export const news: NewsItem[] = [
     date: "2026.8.29",
     label: "X",
     text: "「#ピッパラの樹 A班本日千秋楽です✨️ 出し切ってくるぞーーー❣️❣️ チェリッシュ役kkさんと♡(@catkkact )」A班千秋楽（8/29 19:30）の当日告知。ブロマイドとチェキの郵送対応も案内。衣装姿のkkさんとの2ショットも公開",
-    url: "https://x.com/frecam2025_0306/status/2093597005444726999"
+    url: "https://x.com/Riri_Natsunagi/status/2093597005444726999"
   },
   {
     date: "2026.8.29",
@@ -360,13 +360,13 @@ export const news: NewsItem[] = [
     date: "2026.8.28",
     label: "X",
     text: "「今日はポール様に完全にやられました。とてもニヤケました。許しません😊😊😊😊😊😊😊」『ピッパラの樹』A班5ステ目・前楽後、ポール役のミヤビさん(@miyabidayo_o)の投稿を引用。衣装姿の2ショット2枚",
-    url: "https://x.com/frecam2025_0306/status/2093351347320160629"
+    url: "https://x.com/Riri_Natsunagi/status/2093351347320160629"
   },
   {
     date: "2026.8.28",
     label: "X",
     text: "「#ピッパラの樹 本日5ステ目！ 明日はついに千秋楽✨️有難いことに満席ということで、飛び込み可能なのは今日のみです！ 19時半から荻窪小劇場にてお待ちしております❣️(開場は19時ね〜) 推し花での応援もお待ちしております🤲🏻」A班5ステ目（8/28 19:30）を当日告知。8/29千秋楽は満席、飛び込みは本日のみ。衣装姿の共演者との2ショットも公開",
-    url: "https://x.com/frecam2025_0306/status/2093237598143893726"
+    url: "https://x.com/Riri_Natsunagi/status/2093237598143893726"
   },
   {
     date: "2026.8.28",
@@ -384,13 +384,13 @@ export const news: NewsItem[] = [
     date: "2026.8.23",
     label: "X",
     text: "「#ピッパラの樹 3ステ終了いたしましたー！！ 今日も楽しかったです🎶 次は8/25(火)14時からお待ちしております❣️」A班3ステ目の終了を報告。次回は8/25（火）14:00。オルガ役の雪乃さん、ガイヤール夫人役のとむさんとの舞台衣装3ショットも公開",
-    url: "https://x.com/frecam2025_0306/status/2091512301216301350"
+    url: "https://x.com/Riri_Natsunagi/status/2091512301216301350"
   },
   {
     date: "2026.8.23",
     label: "X",
     text: "「#ピッパラの樹 本日3ステ目！ A班は15時半から荻窪小劇場にてお待ちしております✨️」『ピッパラの樹』A班3ステ目（8/23 15:30）を当日告知。チケット・推し花の案内と、雨の中で傘を差した自撮り写真を公開",
-    url: "https://x.com/frecam2025_0306/status/2091342109060260135"
+    url: "https://x.com/Riri_Natsunagi/status/2091342109060260135"
   },
   {
     date: "2026.8.22",
@@ -402,7 +402,7 @@ export const news: NewsItem[] = [
     date: "2026.8.21",
     label: "X",
     text: "「明日8/22(土)12時から #ピッパラの樹 2公演目です✨️ お昼公演！元気いっぱい頑張ります🔥」A班2公演目を告知。8/21投稿時点ではまだ空席があるとして来場を呼びかけ、チケットと推し花も案内。ガイヤール夫人役のとむさん、ルワン役のせいかさんとの舞台衣装3ショットも公開",
-    url: "https://x.com/frecam2025_0306/status/2090799310481076374"
+    url: "https://x.com/Riri_Natsunagi/status/2090799310481076374"
   },
   {
     date: "2026.8.19",
@@ -414,13 +414,13 @@ export const news: NewsItem[] = [
     date: "2026.8.18",
     label: "X",
     text: "「#ピッパラの樹 公演1日目終了しました！ ご来場いただき、ありがとうございました💖 A班は次8/22(土)12時！空席あるよ👀待ってます✨️」『ピッパラの樹』A班初日終了。次回は8/22（土）12:00（8/18投稿時点で空席あり）",
-    url: "https://x.com/frecam2025_0306/status/2089706405683188098"
+    url: "https://x.com/Riri_Natsunagi/status/2089706405683188098"
   },
   {
     date: "2026.8.18",
     label: "X",
     text: "「#ピッパラの樹 注意事項です〜！ ビジュアルも公開されているのでチェックしてみてね👀」差し入れは、既製品ではないもの・要冷蔵のもの・個包装ではないもの・役者の持ち帰りが困難なもの以外は大丈夫、と案内（劇団ココア公式Xの注意事項を引用）",
-    url: "https://x.com/frecam2025_0306/status/2089509845796073503"
+    url: "https://x.com/Riri_Natsunagi/status/2089509845796073503"
   },
   // 8/17 の2件だけは投稿時刻の順（16:44 → 13:54）ではなく、初日直前で急ぎたい
   // 「明日初日・まだお席あり」を先に置いている（8/18追加後も、この2件の相対順は維持）。
@@ -428,13 +428,13 @@ export const news: NewsItem[] = [
     date: "2026.8.17",
     label: "X",
     text: "「A班最終通し稽古終わりました✨️ ついに明日が初日です！ まだお席空いています！今一度ご予定の確認よろしくお願いいたします😊」劇団ココア公式Xの最終通し稽古の投稿を引用して、『ピッパラの樹』A班 初日（8/18 19:30・荻窪小劇場）を報告。チケットと推し花の案内も（ご予約は備考欄に「夏凪里季」と記入）",
-    url: "https://x.com/frecam2025_0306/status/2089214229576585512"
+    url: "https://x.com/Riri_Natsunagi/status/2089214229576585512"
   },
   {
     date: "2026.8.17",
     label: "X",
     text: "「#ピッパラの樹 コラボチェキのオススメはこちらです」ジョセフ役 松浦寧々さん／ジュリアン役 小笠原里緒さん／ポール役 ミヤビさん／C班 アナスタジー役 鳴島萌華さんを挙げ、他班とのコラボもできると案内。完全受注生産、予約はコラボチェキ受付アカウントへのDM（全予約締切 8/27 22:00）",
-    url: "https://x.com/frecam2025_0306/status/2089256985061621949"
+    url: "https://x.com/Riri_Natsunagi/status/2089256985061621949"
   },
   {
     date: "2026.8.16",
@@ -446,13 +446,13 @@ export const news: NewsItem[] = [
     date: "2026.8.15",
     label: "X",
     text: "「9月の舞台#アイトキ メインビジュアルAが解禁されました✨️ 短編集なので色んなりりが見れますよ👀」月シア別冊第2集『I'm talking about Homin'』のメインビジュアルAを公開。A side全4公演の日程とともに予約を呼びかけ",
-    url: "https://x.com/frecam2025_0306/status/2088596575849533937"
+    url: "https://x.com/Riri_Natsunagi/status/2088596575849533937"
   },
   {
     date: "2026.8.15",
     label: "X",
     text: "「ノリで滝行してきた」滝を背景に、白いTシャツと黒いサングラス姿で笑顔のピースショット",
-    url: "https://x.com/frecam2025_0306/status/2088377624980803925"
+    url: "https://x.com/Riri_Natsunagi/status/2088377624980803925"
   },
   {
     date: "2026.8.14",
@@ -464,7 +464,7 @@ export const news: NewsItem[] = [
     date: "2026.8.14",
     label: "X",
     text: "「#ピッパラの樹 イケメンすぎるねねさん(@nene_matu)とお写真撮らせていただきました」普段は可愛らしいのにお芝居になるとギャップがすごい、とジョセフとアナスタジーの関係に注目を呼びかけ。チケットと推し花の案内も",
-    url: "https://x.com/frecam2025_0306/status/2088209691122036893"
+    url: "https://x.com/Riri_Natsunagi/status/2088209691122036893"
   },
   {
     date: "2026.8.14",
@@ -476,7 +476,7 @@ export const news: NewsItem[] = [
     date: "2026.8.13",
     label: "X",
     text: "サンリオピューロランドでの1枚を公開。黒い垂れ耳のキャラクターカチューシャをつけ、キャラクターカレーやラーメン、ポテトなどが並ぶテーブルで笑顔のショット",
-    url: "https://x.com/frecam2025_0306/status/2087690108640379078"
+    url: "https://x.com/Riri_Natsunagi/status/2087690108640379078"
   },
   {
     date: "2026.8.12",
@@ -494,37 +494,37 @@ export const news: NewsItem[] = [
     date: "2026.8.11",
     label: "X",
     text: "「阿佐ヶ谷祭りに参戦した🍧」色とりどりの吹き流しが天井いっぱいに下がる夜の商店街アーケードで、黒の透かし編みカーディガンにデニムを合わせた夏祭りショット",
-    url: "https://x.com/frecam2025_0306/status/2086956093406863781"
+    url: "https://x.com/Riri_Natsunagi/status/2086956093406863781"
   },
   {
     date: "2026.8.10",
     label: "X",
     text: "「#ピッパラの樹 みんな予約してくれたかな？？ 満席が増えて来ていますが、まだ空席あります！ そこの貴方！！ぜひ会場に足を運んでくださると嬉しいです。」A班「アナスタジー・ド・ブロワ」の衣装姿で改めて予約を呼びかけ。日程が合わない方に向けて「推し花」（応援広告）の案内も（ご予約は備考欄に「夏凪里季」と記入）",
-    url: "https://x.com/frecam2025_0306/status/2086687668155695183"
+    url: "https://x.com/Riri_Natsunagi/status/2086687668155695183"
   },
   {
     date: "2026.8.8",
     label: "X",
     text: "「一緒にプール行く？」黒のフリルワンピース水着に防水ケースのスマホを下げて、大きなミニーマウスの浮き輪を抱えた夏のプールショット。奥には観覧車と青空",
-    url: "https://x.com/frecam2025_0306/status/2085848460692238515"
+    url: "https://x.com/Riri_Natsunagi/status/2085848460692238515"
   },
   {
     date: "2026.8.7",
     label: "X",
     text: "「かわいいパン屋さんを見つけた(☆ω☆)」白いフリルのトップスにデニムを合わせて、砂糖をまぶしたツイストドーナツとクリームをはさんだパン、アイスラテをのせたプレートを手に笑顔の朝の1枚",
-    url: "https://x.com/frecam2025_0306/status/2085489844877414537"
+    url: "https://x.com/Riri_Natsunagi/status/2085489844877414537"
   },
   {
     date: "2026.8.6",
     label: "X",
     text: "「トイストーリー展に行ってそのままトイストーリー5も見てきた🤖 リリーって沢山呼ばれました🙋‍♀️」グリーンのティアードワンピースで、トイ・ストーリーのキャラクターが並ぶ「THE FIRST FAN」のフォトスポットにて",
-    url: "https://x.com/frecam2025_0306/status/2085212136968712240"
+    url: "https://x.com/Riri_Natsunagi/status/2085212136968712240"
   },
   {
     date: "2026.8.5",
     label: "X",
     text: "「#ピッパラの樹 みんな予約してくれた？ もっとたくさんの人に見に来て欲しい🥺 私はA班だよ！6公演あるからどこかお時間合う時来て欲しいな〜🌀🍃」A班「アナスタジー・ド・ブロワ」の衣装ビジュアルとともに予約を呼びかけ。満席・残りわずかの回も出ています（ご予約は備考欄に「夏凪里季」と記入）",
-    url: "https://x.com/frecam2025_0306/status/2084776732289388564"
+    url: "https://x.com/Riri_Natsunagi/status/2084776732289388564"
   },
   {
     date: "2026.8.4",
@@ -536,37 +536,37 @@ export const news: NewsItem[] = [
     date: "2026.8.3",
     label: "X",
     text: "「お姉ちゃんと一緒に浴衣👘 実はカルアさんも着てるの✨️」姉妹と愛犬カルアちゃんが浴衣姿で並んだ、夏らしい家族ショット",
-    url: "https://x.com/frecam2025_0306/status/2084028970237083833"
+    url: "https://x.com/Riri_Natsunagi/status/2084028970237083833"
   },
   {
     date: "2026.8.2",
     label: "X",
     text: "「今年初めての浴衣👘」白地にピンクと紫の花柄の浴衣、アップヘアに赤い花飾りを合わせた、2026年夏の初浴衣ショット",
-    url: "https://x.com/frecam2025_0306/status/2083666581314519466"
+    url: "https://x.com/Riri_Natsunagi/status/2083666581314519466"
   },
   {
     date: "2026.8.1",
     label: "応援案内",
     text: "月シア別冊第2集『I'm talking about Homin\'』のデジタル花が販売開始。会場に行けない方も、劇場のスクリーンへ夏凪里季さんへの応援を届けられます。購入・入金は9月1日(火)23:59まで",
-    url: "https://x.com/frecam2025_0306/status/2083525044479664564"
+    url: "https://x.com/Riri_Natsunagi/status/2083525044479664564"
   },
   {
     date: "2026.8.1",
     label: "X",
     text: "「なおちゃんがお祝いしてくれた😭✨️💞 だいすき！」お友達のなおさん(@iito_nya)の投稿を引用してお祝いに感謝を伝えた投稿。2ショットとイタリアンのお料理の写真4枚",
-    url: "https://x.com/frecam2025_0306/status/2083419789717053843"
+    url: "https://x.com/Riri_Natsunagi/status/2083419789717053843"
   },
   {
     date: "2026.8.1",
     label: "X",
     text: "「ハタチの誕生日は何ヶ月引っ張ってもいいって聞きました おめでとうください！(6月生まれ)」カフェで「リリちゃん 誕生日おめでとう。舞台頑張ってね」のメッセージ入りデザートプレートを前に笑顔の1枚",
-    url: "https://x.com/frecam2025_0306/status/2083311744899051750"
+    url: "https://x.com/Riri_Natsunagi/status/2083311744899051750"
   },
   {
     date: "2026.7.31",
     label: "X",
     text: "「夏だね>  ̫<」イルミネーションが灯る夜の階段で撮影された1枚。白いレースのスクエアネックトップスにライトブルーのデニムを合わせた、夏の夜らしい涼しげなショット",
-    url: "https://x.com/frecam2025_0306/status/2083030504925012290"
+    url: "https://x.com/Riri_Natsunagi/status/2083030504925012290"
   },
   {
     date: "2026.7.30",
@@ -584,7 +584,7 @@ export const news: NewsItem[] = [
     date: "2026.7.28",
     label: "X",
     text: "「みてみて！ニュース載ってた🎶」7/27に投稿したブルーグレーのキラキラネイルが、Xのトレンドまとめ「Xで夏らしい新ネイル投稿が続々 キラキラデザインが人気」で紹介されたことを報告",
-    url: "https://x.com/frecam2025_0306/status/2082080818881814932"
+    url: "https://x.com/Riri_Natsunagi/status/2082080818881814932"
   },
   {
     date: "2026.7.28",
@@ -596,7 +596,7 @@ export const news: NewsItem[] = [
     date: "2026.7.28",
     label: "X",
     text: "「デジカメをGETしてから写真撮るのが楽しくて仕方ない📸」手に入れたばかりのコンパクトデジカメを掲げた、いちご柄トップスのお出かけショット（ディズニーシーにて）",
-    url: "https://x.com/frecam2025_0306/status/2082028292434014320"
+    url: "https://x.com/Riri_Natsunagi/status/2082028292434014320"
   },
   {
     date: "2026.7.27",
@@ -608,7 +608,7 @@ export const news: NewsItem[] = [
     date: "2026.7.27",
     label: "X",
     text: "「ネイル変えた🎶」くすんだブルーグレーで統一したロングのアーモンド型ネイル。アクセントにシルバーラメの一本を添えた、涼しげで大人っぽいデザイン",
-    url: "https://x.com/frecam2025_0306/status/2081572553349619757"
+    url: "https://x.com/Riri_Natsunagi/status/2081572553349619757"
   },
   {
     date: "2026.7.27",
@@ -620,7 +620,7 @@ export const news: NewsItem[] = [
     date: "2026.7.26",
     label: "X",
     text: "「#ピッパラの樹 A班本日稽古初日でした✨️ 改善点は山々ですが良い作品になる予感！」稽古初日を報告。「いつもと違うりりが見れますヨ」とチケットの早めの確保を呼びかけ",
-    url: "https://x.com/frecam2025_0306/status/2081372754612486194"
+    url: "https://x.com/Riri_Natsunagi/status/2081372754612486194"
   },
   {
     date: "2026.7.26",
@@ -632,13 +632,13 @@ export const news: NewsItem[] = [
     date: "2026.7.11",
     label: "X",
     text: "【8月9月の出演予定】劇団ココア『ピッパラの樹』(A班・荻窪小劇場)全6公演と、月シア別冊第2集『I'm talking about Homin'』(A side・西荻窪 遊空間がざびぃ)全4公演の日程をまとめて告知",
-    url: "https://x.com/frecam2025_0306/status/2075931870681063715"
+    url: "https://x.com/Riri_Natsunagi/status/2075931870681063715"
   },
   {
     date: "2026.6.28",
     label: "X",
     text: "【出演情報】劇団ココア『ピッパラの樹』A班で出演決定🎭 8/18〜29・荻窪小劇場、チケットは6/29 21:00発売",
-    url: "https://x.com/frecam2025_0306/status/2071212422107721835"
+    url: "https://x.com/Riri_Natsunagi/status/2071212422107721835"
   },
   {
     date: "2026.6.28",
@@ -650,7 +650,7 @@ export const news: NewsItem[] = [
     date: "2026.6.28",
     label: "お知らせ",
     text: "8月舞台情報解禁🎭 劇団ココア『ピッパラの樹』A班出演（8/18〜29・荻窪小劇場）チケット6/29 21:00〜予約開始",
-    url: "https://x.com/frecam2025_0306/status/2071126356952588633"
+    url: "https://x.com/Riri_Natsunagi/status/2071126356952588633"
   },
   {
     date: "2026.6.27",
@@ -668,7 +668,7 @@ export const news: NewsItem[] = [
     date: "2026.6.27",
     label: "X",
     text: "「初めてのお酒🍻1杯で赤くなった🙂‍↕️」居酒屋で人生初のお酒を楽しむセルフィー2枚",
-    url: "https://x.com/frecam2025_0306/status/2070815544035651856"
+    url: "https://x.com/Riri_Natsunagi/status/2070815544035651856"
   },
   {
     date: "2026.6.26",
@@ -692,7 +692,7 @@ export const news: NewsItem[] = [
     date: "2026.6.25",
     label: "X",
     text: "「たくさんのお祝いありがとうございます🥹💕 幸せな1年になりそうです」お礼＆20歳バルーンの後ろ姿",
-    url: "https://x.com/frecam2025_0306/status/2069937553705419224"
+    url: "https://x.com/Riri_Natsunagi/status/2069937553705419224"
   },
   {
     date: "2026.6.24",
@@ -704,7 +704,7 @@ export const news: NewsItem[] = [
     date: "2026.6.24",
     label: "X",
     text: "「ハタチになりました㊗️🎂✨️」振袖姿で20歳の記念ポートレート🎉",
-    url: "https://x.com/frecam2025_0306/status/2069622787602538770"
+    url: "https://x.com/Riri_Natsunagi/status/2069622787602538770"
   },
   {
     date: "2026.6.23",
@@ -722,13 +722,13 @@ export const news: NewsItem[] = [
     date: "2026.6.23",
     label: "X",
     text: "「今日まではノンアルだよ🍸」20歳前日のセルフィー",
-    url: "https://x.com/frecam2025_0306/status/2069259662399357205"
+    url: "https://x.com/Riri_Natsunagi/status/2069259662399357205"
   },
   {
     date: "2026.6.22",
     label: "X",
     text: "「1年ぶりくらいにネイルした💅🎶」久しぶりのネイルを見せるセルフィー",
-    url: "https://x.com/frecam2025_0306/status/2068981048361595335"
+    url: "https://x.com/Riri_Natsunagi/status/2068981048361595335"
   },
   {
     date: "2026.6.21",
@@ -740,19 +740,19 @@ export const news: NewsItem[] = [
     date: "2026.6.21",
     label: "X",
     text: "「今日の夏凪☀️🍉🌻🏊」夏コーデのセルフィー",
-    url: "https://x.com/frecam2025_0306/status/2068651822282408298"
+    url: "https://x.com/Riri_Natsunagi/status/2068651822282408298"
   },
   {
     date: "2026.6.20",
     label: "X",
     text: "「JRさん頑張りすぎてない⁉️」過剰謝罪にゆるっとツッコミ",
-    url: "https://x.com/frecam2025_0306/status/2068251058242240805"
+    url: "https://x.com/Riri_Natsunagi/status/2068251058242240805"
   },
   {
     date: "2026.6.19",
     label: "X",
     text: "「麻辣湯に野菜は要らない🥬」笑顔のセルフィー",
-    url: "https://x.com/frecam2025_0306/status/2067775746735820830"
+    url: "https://x.com/Riri_Natsunagi/status/2067775746735820830"
   },
   {
     date: "2026.6.18",
@@ -764,6 +764,6 @@ export const news: NewsItem[] = [
     date: "2026.6.16",
     label: "X",
     text: "7/19 小峰萌楓ちゃんと合同生誕祭！20歳＆23歳のお祝い・予約受付中",
-    url: "https://x.com/frecam2025_0306/status/2067054398493343769"
+    url: "https://x.com/Riri_Natsunagi/status/2067054398493343769"
   }
 ];

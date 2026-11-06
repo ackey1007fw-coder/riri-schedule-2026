@@ -43,17 +43,17 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "推し花ありがとうございました（8/31）",
-        url: "https://x.com/frecam2025_0306/status/2094077682309083629",
+        url: "https://x.com/Riri_Natsunagi/status/2094077682309083629",
         kind: "sns"
       },
       {
         label: "全6ステージ走り切りました（8/30）",
-        url: "https://x.com/frecam2025_0306/status/2094044795928719369",
+        url: "https://x.com/Riri_Natsunagi/status/2094044795928719369",
         kind: "sns"
       },
       {
         label: "A班千秋楽終えました（8/29）",
-        url: "https://x.com/frecam2025_0306/status/2093698550974812255",
+        url: "https://x.com/Riri_Natsunagi/status/2093698550974812255",
         kind: "sns"
       },
       {
@@ -63,7 +63,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "千秋楽当日（8/29）",
-        url: "https://x.com/frecam2025_0306/status/2093597005444726999",
+        url: "https://x.com/Riri_Natsunagi/status/2093597005444726999",
         kind: "sns"
       },
       {
@@ -73,12 +73,12 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "5ステ目・前楽後の2ショット（8/28）",
-        url: "https://x.com/frecam2025_0306/status/2093351347320160629",
+        url: "https://x.com/Riri_Natsunagi/status/2093351347320160629",
         kind: "sns"
       },
       {
         label: "5ステ目当日告知（8/28）",
-        url: "https://x.com/frecam2025_0306/status/2093237598143893726",
+        url: "https://x.com/Riri_Natsunagi/status/2093237598143893726",
         kind: "sns"
       },
       {
@@ -88,22 +88,22 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "予約の呼びかけ（8/10）",
-        url: "https://x.com/frecam2025_0306/status/2086687668155695183",
+        url: "https://x.com/Riri_Natsunagi/status/2086687668155695183",
         kind: "sns"
       },
       {
         label: "予約の呼びかけ（8/5）",
-        url: "https://x.com/frecam2025_0306/status/2084776732289388564",
+        url: "https://x.com/Riri_Natsunagi/status/2084776732289388564",
         kind: "sns"
       },
       {
         label: "稽古初日レポート（7/26）",
-        url: "https://x.com/frecam2025_0306/status/2081372754612486194",
+        url: "https://x.com/Riri_Natsunagi/status/2081372754612486194",
         kind: "sns"
       },
       {
         label: "夏凪里季さんの出演告知",
-        url: "https://x.com/frecam2025_0306/status/2071212422107721835",
+        url: "https://x.com/Riri_Natsunagi/status/2071212422107721835",
         kind: "sns"
       },
       {
@@ -159,7 +159,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "里季さんの告知",
-        url: "https://x.com/frecam2025_0306/status/2096826234915480002",
+        url: "https://x.com/Riri_Natsunagi/status/2096826234915480002",
         kind: "sns"
       },
       {
@@ -203,7 +203,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "A班初日・当日券あり（9/11）",
-        url: "https://x.com/frecam2025_0306/status/2098201505715376507",
+        url: "https://x.com/Riri_Natsunagi/status/2098201505715376507",
         kind: "sns"
       },
       {
@@ -213,7 +213,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "里季さんのツイキャス告知（9/7）",
-        url: "https://x.com/frecam2025_0306/status/2096826234915480002",
+        url: "https://x.com/Riri_Natsunagi/status/2096826234915480002",
         kind: "sns"
       },
       {
@@ -228,7 +228,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "9/12 12:00回 残席少（9/5）",
-        url: "https://x.com/frecam2025_0306/status/2096140971528552544",
+        url: "https://x.com/Riri_Natsunagi/status/2096140971528552544",
         kind: "sns"
       },
       {
@@ -238,7 +238,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "メインビジュアルA解禁（8/15）",
-        url: "https://x.com/frecam2025_0306/status/2088596575849533937",
+        url: "https://x.com/Riri_Natsunagi/status/2088596575849533937",
         kind: "sns"
       },
       {
@@ -253,7 +253,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "デジタル花のお知らせ",
-        url: "https://x.com/frecam2025_0306/status/2083525044479664564",
+        url: "https://x.com/Riri_Natsunagi/status/2083525044479664564",
         kind: "sns"
       },
       {
@@ -263,7 +263,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "夏凪里季さんの出演告知",
-        url: "https://x.com/frecam2025_0306/status/2075931870681063715",
+        url: "https://x.com/Riri_Natsunagi/status/2075931870681063715",
         kind: "sns"
       },
       {
@@ -332,12 +332,12 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "本人の出演告知（9/28）",
-        url: "https://x.com/frecam2025_0306/status/2104439788191568330",
+        url: "https://x.com/Riri_Natsunagi/status/2104439788191568330",
         kind: "sns"
       },
       {
         label: "夏凪里季さんの出演告知",
-        url: "https://x.com/frecam2025_0306/status/2095174102634168752",
+        url: "https://x.com/Riri_Natsunagi/status/2095174102634168752",
         kind: "sns"
       },
       {
@@ -396,7 +396,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "10/24朝の本人告知（昼・夜両部出演）",
-        url: "https://x.com/frecam2025_0306/status/2113776926506856622",
+        url: "https://x.com/Riri_Natsunagi/status/2113776926506856622",
         kind: "sns"
       },
       {
@@ -406,12 +406,12 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "10/22本人告知（夕方の部の残席）",
-        url: "https://x.com/frecam2025_0306/status/2113247252898894217",
+        url: "https://x.com/Riri_Natsunagi/status/2113247252898894217",
         kind: "sns"
       },
       {
         label: "夏凪里季さんの出演告知",
-        url: "https://x.com/frecam2025_0306/status/2101244304979329158",
+        url: "https://x.com/Riri_Natsunagi/status/2101244304979329158",
         kind: "sns"
       },
       {
@@ -439,9 +439,9 @@ export const events: ScheduleEvent[] = [
     image: "/images/gallery/g156.jpg",
     imageDisplay: "full",
     galleryPurpose: "announcement",
-    imageCredit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" },
+    imageCredit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/Riri_Natsunagi/status/2104759725665714184" },
     imageAlt: "第3回あゆどん大運動会の出演者告知。夏凪里季さんを含む出演者と、11月8日12:00〜16:00・東京某所の案内",
-    gallery: [{ src: "/images/gallery/g157.jpg", alt: "第3回あゆどん大運動会の応援チケット案内。1枚2,000円、来場できない方も応援可能。高橋あゆみさんの写真入り", credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/frecam2025_0306/status/2104759725665714184" } }],
+    gallery: [{ src: "/images/gallery/g157.jpg", alt: "第3回あゆどん大運動会の応援チケット案内。1枚2,000円、来場できない方も応援可能。高橋あゆみさんの写真入り", credit: { label: "主催告知画像（夏凪里季さんのX掲載）", url: "https://x.com/Riri_Natsunagi/status/2104759725665714184" } }],
     summary:
       "高橋あゆみさん主催の第3回あゆどん大運動会に出演。11月8日（日）12:00〜16:00、11:30開場。会場は東京某所で、詳細は購入者に主催から案内されます。来場は完全予約制。本人の出演まとめでは「遠隔応援チケもあります✨️」と案内。会場へ行けない方も、応援チケットで応援できます。来場・応援チケットの詳細は主催の販売ページをご確認ください。夏凪名義で予約した方には、応援・来場のどちらでもお名前入り写真の特典があると本人が案内しています。購入締切は、コンビニ払い・銀行振込が10/31、クレカ・キャリア決済が11/7（主催の案内）。",
     badges: ["運動会", "完全予約制", "応援チケットあり"],
@@ -458,7 +458,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "本人の出演まとめ（X）",
-        url: "https://x.com/frecam2025_0306/status/2104759725665714184",
+        url: "https://x.com/Riri_Natsunagi/status/2104759725665714184",
         kind: "info"
       },
       {
@@ -468,7 +468,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "本人のお名前入り写真特典の案内（X）",
-        url: "https://x.com/frecam2025_0306/status/2115587051219566847",
+        url: "https://x.com/Riri_Natsunagi/status/2115587051219566847",
         kind: "sns"
       }
     ],
@@ -642,7 +642,7 @@ export const events: ScheduleEvent[] = [
     links: [
       {
         label: "Xで元投稿を見る",
-        url: "https://x.com/frecam2025_0306/status/2081137416518214075",
+        url: "https://x.com/Riri_Natsunagi/status/2081137416518214075",
         kind: "sns"
       }
     ]
@@ -812,7 +812,7 @@ export const events: ScheduleEvent[] = [
     links: [
       {
         label: "Xでお祝いを見る",
-        url: "https://x.com/frecam2025_0306",
+        url: "https://x.com/Riri_Natsunagi",
         kind: "sns"
       },
       {
@@ -843,7 +843,7 @@ export const events: ScheduleEvent[] = [
       },
       {
         label: "Xで詳細",
-        url: "https://x.com/frecam2025_0306",
+        url: "https://x.com/Riri_Natsunagi",
         kind: "sns"
       }
     ]

@@ -16,15 +16,15 @@ import { getResponsiveImageProps } from "../lib/responsiveImage";
 import { SectionHeader } from "./SectionHeader";
 
 const ticketUrl = "https://livepocket.jp/t/aitokihomin";
-const postUrl = "https://x.com/frecam2025_0306/status/2083525044479664564";
+const postUrl = "https://x.com/Riri_Natsunagi/status/2083525044479664564";
 const organizerPostUrl = "https://x.com/kaigyacstage/status/2083523150080315892";
 const twitcastUrl = "https://twitcasting.tv/kaigyacstage";
 const ririTwitcastPostUrl =
-  "https://x.com/frecam2025_0306/status/2096826234915480002";
+  "https://x.com/Riri_Natsunagi/status/2096826234915480002";
 const castAnnounceUrl = "https://x.com/kaigyacstage/status/2096825431978828249";
 const rehearsalPostUrl = "https://x.com/kaigyacstage/status/2096736729747407040";
 const sceneRelayPostUrl = "https://x.com/kaigyacstage/status/2098018651362168990";
-const secondShowPostUrl = "https://x.com/frecam2025_0306/status/2098561013679624620";
+const secondShowPostUrl = "https://x.com/Riri_Natsunagi/status/2098561013679624620";
 const X_WIDGET_SCRIPT_ID = "x-widgets-js";
 
 const twitcastSlots = [

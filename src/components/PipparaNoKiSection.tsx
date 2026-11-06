@@ -212,7 +212,7 @@ const snsPosts: SnsPost[] = [
   {
     id: "x-2026-08-30-all-six-stages",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月30日（日）21:49",
     headline: "「#ピッパラの樹 改めまして、全6ステージ走り切りました！」",
     body: `#ピッパラの樹 改めまして、全6ステージ走り切りました！
@@ -226,7 +226,7 @@ const snsPosts: SnsPost[] = [
     quote: `#ピッパラの樹 改めまして、全6ステージ走り切りました！
 アナスタジーとして生きれて、私は本当に幸せ！みんなまた会おうね！`,
     note: "2026年8月30日21:49の本人投稿です。A班全6公演を走り切ったあとの感謝です。劇団ココア公式XのA班千秋楽終了投稿を引用しています。",
-    url: "https://x.com/frecam2025_0306/status/2094044795928719369",
+    url: "https://x.com/Riri_Natsunagi/status/2094044795928719369",
     quotedPost: {
       label: "劇団ココア公式X（2026年8月29日 22:36）",
       text: `【#ピッパラの樹】
@@ -266,7 +266,7 @@ https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81
   {
     id: "x-2026-08-29-senshuraku-thanks",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月29日（土）22:53",
     headline: "「#ピッパラの樹 A班千秋楽終えました！」",
     body: `#ピッパラの樹 A班千秋楽終えました！
@@ -277,7 +277,7 @@ https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81
     quote: `#ピッパラの樹 A班千秋楽終えました！
 とっても楽しかったです！またあげるね🙏`,
     note: "2026年8月29日22:53の本人投稿です。A班千秋楽（8/29（土）19:30・荻窪小劇場）終演後の感謝です。",
-    url: "https://x.com/frecam2025_0306/status/2093698550974812255",
+    url: "https://x.com/Riri_Natsunagi/status/2093698550974812255",
     photo: pipparaSenshurakuSelfiePhoto
   },
   {
@@ -313,7 +313,7 @@ https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81
   {
     id: "x-2026-08-29-senshuraku-riri",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月29日（土）16:09",
     headline: "「#ピッパラの樹 A班本日千秋楽です✨️」",
     body: `#ピッパラの樹 A班本日千秋楽です✨️
@@ -324,7 +324,7 @@ https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81
     quote: `#ピッパラの樹 A班本日千秋楽です✨️
 出し切ってくるぞーーー❣️❣️`,
     note: "2026年8月29日16:09の本人投稿です。A班千秋楽（8/29（土）19:30・荻窪小劇場）の当日告知です。ブロマイドとチェキの郵送は本人XのDMへ、との案内です。同じ2ショットはKKさん(@catkkact)も14:59に投稿しています。",
-    url: "https://x.com/frecam2025_0306/status/2093597005444726999",
+    url: "https://x.com/Riri_Natsunagi/status/2093597005444726999",
     photo: pipparaSenshurakuKkTwoShotPhoto
   },
   {
@@ -370,7 +370,7 @@ https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81
   {
     id: "x-2026-08-28-miyabi-two-shot",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月28日（金）23:53",
     headline: "A班5ステ目・前楽後、ポール役ミヤビさんとの2ショット",
     body: `今日はポール様に完全にやられました。
@@ -378,7 +378,7 @@ https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81
     quote: `今日はポール様に完全にやられました。
 とてもニヤケました。許しません😊😊😊😊😊😊😊`,
     note: "2026年8月28日23:53の本人投稿です。ポール役のミヤビさん(@miyabidayo_o)のA班5ステ目・前楽の報告を引用しています。写真はミヤビさんの投稿のものです。",
-    url: "https://x.com/frecam2025_0306/status/2093351347320160629",
+    url: "https://x.com/Riri_Natsunagi/status/2093351347320160629",
     photos: [pipparaFifthShowMiyabiCheekPhoto, pipparaFifthShowMiyabiPointPhoto],
     quotedPost: {
       label: "ミヤビさん（@miyabidayo_o／2026年8月28日 22:57）",
@@ -399,7 +399,7 @@ https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81
   {
     id: "x-2026-08-28-fifth-show-notice",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月28日（金）16:21",
     headline: "「#ピッパラの樹 本日5ステ目！」",
     body: `#ピッパラの樹 本日5ステ目！
@@ -411,13 +411,13 @@ https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81
     quote: `#ピッパラの樹 本日5ステ目！
 明日はついに千秋楽✨️有難いことに満席ということで、飛び込み可能なのは今日のみです！`,
     note: "2026年8月28日16:21に投稿された、A班5ステ目（8/28（金）19:30・荻窪小劇場）の当日告知です。「本日5ステ目」「飛び込み可能なのは今日のみ」「明日は千秋楽・満席」は投稿時点の案内です。次のA班公演は8/29（土）19:30です。",
-    url: "https://x.com/frecam2025_0306/status/2093237598143893726",
+    url: "https://x.com/Riri_Natsunagi/status/2093237598143893726",
     photo: pipparaFifthShowTwoShotPhoto
   },
   {
     id: "x-2026-08-23-third-show-end",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月23日（日）22:06",
     headline: "「#ピッパラの樹 3ステ終了いたしましたー！！」",
     body: `#ピッパラの樹 3ステ終了いたしましたー！！
@@ -429,7 +429,7 @@ https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81
     quote: `#ピッパラの樹 3ステ終了いたしましたー！！
 今日も楽しかったです🎶次は8/25(火)14時からお待ちしております❣️`,
     note: "2026年8月23日、A班3ステ目終了後の本人投稿です。「今日も」「次は」などの表現は投稿時点のものです。引用元の「ほぼ満席でした」は終了した8/23公演についての報告です。",
-    url: "https://x.com/frecam2025_0306/status/2091512301216301350",
+    url: "https://x.com/Riri_Natsunagi/status/2091512301216301350",
     photo: pipparaThirdShowEndThreeShotPhoto,
     quotedPost: {
       label: "劇団ココア公式X（2026年8月23日 17:35）",
@@ -453,7 +453,7 @@ https://tiget.net/events?q%5Bwords%5D=%E3%83%94%E3%83%83%E3%83%91%E3%83%A9%E3%81
   {
     id: "x-2026-08-23-third-show-notice",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月23日（日）10:49",
     headline: "「#ピッパラの樹 本日3ステ目！」",
     body: `#ピッパラの樹 本日3ステ目！
@@ -463,7 +463,7 @@ A班は15時半から荻窪小劇場にてお待ちしております✨️
     quote: `#ピッパラの樹 本日3ステ目！
 A班は15時半から荻窪小劇場にてお待ちしております✨️`,
     note: "2026年8月23日10:49に投稿された、A班3ステ目（8/23（日）15:30・荻窪小劇場）の当日告知です。「本日3ステ目」「15時半から」は投稿時点の案内です。",
-    url: "https://x.com/frecam2025_0306/status/2091342109060260135",
+    url: "https://x.com/Riri_Natsunagi/status/2091342109060260135",
     photo: pipparaThirdShowUmbrellaPhoto
   },
   {
@@ -489,7 +489,7 @@ A班は15時半から荻窪小劇場にてお待ちしております✨️`,
   {
     id: "x-2026-08-21-second-show-notice",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月21日（金）22:52",
     headline: "「明日8/22(土)12時から #ピッパラの樹 2公演目です」",
     body: `明日8/22(土)12時から #ピッパラの樹 2公演目です✨️
@@ -508,13 +508,13 @@ https://oshibana.shop/theater/oshibana/24950033
 元気いっぱい頑張ります`,
     note: "空席の案内は2026年8月21日22:52の投稿時点の情報です。8/22（土）12:00のA班2公演目は終了しています。",
     showSeatStatusHistory: true,
-    url: "https://x.com/frecam2025_0306/status/2090799310481076374",
+    url: "https://x.com/Riri_Natsunagi/status/2090799310481076374",
     photo: pipparaSecondShowPhoto
   },
   {
     id: "x-2026-08-18-first-day",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月18日（火）22:30",
     headline: "「公演1日目終了しました！ A班は次8/22(土)12時！」",
     body: `#ピッパラの樹 公演1日目終了しました！
@@ -527,7 +527,7 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
 推し花💐 https://oshibana.shop/theater/oshibana/24950033`,
     quote: `公演1日目終了しました！
 ご来場いただき、ありがとうございました`,
-    url: "https://x.com/frecam2025_0306/status/2089706405683188098",
+    url: "https://x.com/Riri_Natsunagi/status/2089706405683188098",
     photo: pipparaFirstDayPhoto,
     quotedPost: {
       label: "劇団ココア公式X（2026年8月18日）",
@@ -547,7 +547,7 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
   {
     id: "x-2026-08-18-notices",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月18日（火）9:29",
     headline: "「注意事項です〜！ ビジュアルも公開されているのでチェックしてみてね」",
     body: `#ピッパラの樹 注意事項です〜！
@@ -561,7 +561,7 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
 以外は大丈夫でした🙏🙏✨️✨️`,
     quote: `注意事項です〜！
 ビジュアルも公開されているのでチェックしてみてね`,
-    url: "https://x.com/frecam2025_0306/status/2089509845796073503",
+    url: "https://x.com/Riri_Natsunagi/status/2089509845796073503",
     quotedPost: {
       label: "劇団ココア公式X（2026年8月18日）",
       text: "【#劇団ココア 注意事項】入待ち・出待ちの禁止、上演中の携帯電話、差し入れの条件、支払い（現金のみ）、入場（年齢制限なし／未就学児連れは周囲への配慮）などを案内。",
@@ -572,7 +572,7 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
   {
     id: "x-2026-08-17-collab-cheki",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月17日（月）16:44",
     headline: "「コラボチェキのオススメはこちらです」",
     body: `#ピッパラの樹 コラボチェキのオススメはこちらです⬇️
@@ -586,12 +586,12 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
 
 完全受注生産だから引用元のアカウントにdmしてね！`,
     quote: "完全受注生産だから引用元のアカウントにdmしてね！",
-    url: "https://x.com/frecam2025_0306/status/2089256985061621949"
+    url: "https://x.com/Riri_Natsunagi/status/2089256985061621949"
   },
   {
     id: "x-2026-08-17-final-rehearsal",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月17日（月）13:54",
     headline: "「ついに明日が初日です！」",
     body: `A班最終通し稽古終わりました✨️
@@ -603,7 +603,7 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
 推し花→（下の「推し花で応援を届ける」からご覧いただけます）`,
     quote: `A班最終通し稽古終わりました✨️
 ついに明日が初日です！`,
-    url: "https://x.com/frecam2025_0306/status/2089214229576585512",
+    url: "https://x.com/Riri_Natsunagi/status/2089214229576585512",
     quotedPost: {
       label: "劇団ココア公式X（2026年8月16日）",
       text: "【#ピッパラの樹】Ａ班の最終通し稽古も無事に終わりましたー！ Ａ班は8/18(火)からです！🗓️ ※ご予約は備考欄に応援されている演者の明記をお願い致します。（最終通し稽古を終えたA班メンバーの動画つき）",
@@ -614,7 +614,7 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
   {
     id: "x-2026-08-14",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月14日（金）19:22",
     headline: "「ジョセフとアナスタジーの関係にもご注目」",
     body: `#ピッパラの樹 イケメンすぎるねねさん(@nene_matu )とお写真撮らせていただきました𓂃◌𓈒𓐍
@@ -625,12 +625,12 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
 チケット→（りりはA班、備考欄に夏凪里季と記入お願いします）
 推し花→（下の「推し花で応援を届ける」からご覧いただけます）`,
     quote: "普段は可愛らしいのにお芝居になるとギャップがすごい",
-    url: "https://x.com/frecam2025_0306/status/2088209691122036893"
+    url: "https://x.com/Riri_Natsunagi/status/2088209691122036893"
   },
   {
     id: "x-2026-08-10",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月10日（月）14:34",
     headline: "「まだ空席あります！ そこの貴方！！」",
     body: `#ピッパラの樹 みんな予約してくれたかな？？
@@ -643,12 +643,12 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
 チケット→（りりはA班、備考欄に夏凪里季と記入お願いします）
 推し花→（下の「推し花で応援を届ける」からご覧いただけます）`,
     quote: "満席が増えて来ていますが、まだ空席あります！",
-    url: "https://x.com/frecam2025_0306/status/2086687668155695183"
+    url: "https://x.com/Riri_Natsunagi/status/2086687668155695183"
   },
   {
     id: "x-2026-08-05",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年8月5日（水）08:01",
     headline: "「もっとたくさんの人に見に来て欲しい」",
     body: `#ピッパラの樹 みんな予約してくれた？
@@ -656,12 +656,12 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
 私はA班だよ！6公演あるからどこかお時間合う時来て欲しいな〜🌀🍃
 （備考欄に夏凪里季と書いてね）`,
     quote: "6公演あるからどこかお時間合う時来て欲しいな〜",
-    url: "https://x.com/frecam2025_0306/status/2084776732289388564"
+    url: "https://x.com/Riri_Natsunagi/status/2084776732289388564"
   },
   {
     id: "x-2026-07-26",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年7月26日（日）22:35",
     headline: "A班、稽古初日レポート",
     body: `#ピッパラの樹 A班本日稽古初日でした✨️
@@ -670,7 +670,7 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
 チケット目標まだ届いてないのに売り切れちゃいそうだから今すぐゲットして欲しいな🥹💖
 いつもと違うりりが見れますヨ🫶🏻`,
     quote: "改善点は山々ですが良い作品になる予感！",
-    url: "https://x.com/frecam2025_0306/status/2081372754612486194"
+    url: "https://x.com/Riri_Natsunagi/status/2081372754612486194"
   },
   {
     id: "x-2026-07-26-pippara-kaoawase",
@@ -690,7 +690,7 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
   {
     id: "x-2026-07-11",
     platform: "X",
-    handle: "@frecam2025_0306",
+    handle: "@Riri_Natsunagi",
     datetime: "2026年7月11日（土）22:15",
     headline: "8月・9月の出演予定をまとめて告知",
     body: `【8月9月の出演予定】
@@ -717,7 +717,7 @@ A班は次8/22(土)12時！空席あるよ👀待ってます✨️
 
 見に行ってよかったと思ってもらえるように頑張りますので、
 皆様ご検討よろしくお願いします`,
-    url: "https://x.com/frecam2025_0306/status/2075931870681063715"
+    url: "https://x.com/Riri_Natsunagi/status/2075931870681063715"
   },
   {
     id: "instagram-role",
@@ -775,20 +775,20 @@ const latestTopic: LatestTopic = {
   headline: "「#ピッパラの樹 推し花ありがとうございました」",
   datetime: "2026年8月31日（月）00:00",
   sourceLabel: "X",
-  handle: "@frecam2025_0306",
+  handle: "@Riri_Natsunagi",
   body: `#ピッパラの樹 推し花ありがとうございました🙇🏻‍♀️💖（3枚目スライドしてね）
 裏で待機中のときもこの推し花みて頑張ろうって思えたよ！
 とっても嬉しかったですありがとう🥰🥰`,
   quote: `#ピッパラの樹 推し花ありがとうございました🙇🏻‍♀️💖
 とっても嬉しかったですありがとう🥰🥰`,
   note: "2026年8月31日0:00の本人投稿です。推し花受付終了（8/29（土）18:00）後の感謝です。",
-  url: "https://x.com/frecam2025_0306/status/2094077682309083629"
+  url: "https://x.com/Riri_Natsunagi/status/2094077682309083629"
 };
 
 /** 8/18 本人X：劇団ココア公式の注意事項を引用した案内。長文は転載せず要点だけ。 */
 const audienceNotes = {
   companyUrl: "https://x.com/gekidan_cocoa/status/2089479953473822805",
-  ririUrl: "https://x.com/frecam2025_0306/status/2089509845796073503",
+  ririUrl: "https://x.com/Riri_Natsunagi/status/2089509845796073503",
   recordLabel: "2026年8月18日、A班初日の朝に案内",
   giftNg: [
     "既製品ではないもの",
@@ -810,7 +810,7 @@ const collabCheki: {
   quote: string;
   recommends: { role: string; name: string }[];
 } = {
-  postUrl: "https://x.com/frecam2025_0306/status/2089256985061621949",
+  postUrl: "https://x.com/Riri_Natsunagi/status/2089256985061621949",
   dmUrl: "https://x.com/cocoa__collab",
   deadline: "8月27日（木）22:00",
   price: "人数 × 1,500円",

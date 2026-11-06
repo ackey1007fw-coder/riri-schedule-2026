@@ -5,7 +5,7 @@ import { profile } from "../data/profile";
 // 当日の大きな演出は終わり、余韻として軽いひと言だけ残す状態。期間が過ぎると自動で消える。
 const CELEBRATION_DAYS = 7; // 当日(6/24)を含めて7日間 → 6/30まで
 const BIRTHDAY_POST_URL =
-  "https://x.com/frecam2025_0306/status/2069622787602538770";
+  "https://x.com/Riri_Natsunagi/status/2069622787602538770";
 
 const birthYear = Number(profile.birthday.slice(0, 4));
 

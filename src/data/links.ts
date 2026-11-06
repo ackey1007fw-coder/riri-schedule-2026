@@ -3,8 +3,8 @@ import type { SocialLink } from "../types";
 export const socialLinks: SocialLink[] = [
   {
     label: "X",
-    handle: "@frecam2025_0306",
-    url: "https://x.com/frecam2025_0306",
+    handle: "@Riri_Natsunagi",
+    url: "https://x.com/Riri_Natsunagi",
     description: "出演告知と当日の更新をチェック",
     kind: "x"
   },

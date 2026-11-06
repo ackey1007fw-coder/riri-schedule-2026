@@ -12,7 +12,7 @@ import { SectionHeader } from "./SectionHeader";
 import { VenueMap } from "./VenueMap";
 
 const ririPostUrl =
-  "https://x.com/frecam2025_0306/status/2101244304979329158";
+  "https://x.com/Riri_Natsunagi/status/2101244304979329158";
 const organizerPostUrl =
   "https://x.com/kaigyacstage/status/2101234845632364882";
 const ticketUrl = "https://livepocket.jp/t/20matagu";
